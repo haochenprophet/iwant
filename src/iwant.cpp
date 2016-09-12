@@ -7,14 +7,14 @@ Ciwant::Ciwant()
 {
 #if IWANT_TEST	
 	printf("Ciwant::Ciwant()\n");
-#ednif	
+#endif	
 }
 
 Ciwant::~Ciwant()
 {
 #if IWANT_TEST
 	printf("Ciwant::~Ciwant()\n");
-#ednif	
+#endif
 }
 
 #if IWANT_TEST
@@ -24,4 +24,4 @@ int main(int argc ,char *argv[])
 	printf("Hello iwant APP .\n");
 	return 0;
 }
-#ednif
+#endif
