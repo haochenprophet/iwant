@@ -21,7 +21,7 @@ Ciwant::~Ciwant()
 int main(int argc ,char *argv[])
 {
 	Ciwant i;
-	
+	printf("Hello iwant APP .\n");
 	return 0;
 }
 #ednif
