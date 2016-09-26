@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "iwant.h"
 #define IWANT_TEST	1
-#define WINDOWS_IWANT	1
 
 Ciwant::Ciwant()
 {
