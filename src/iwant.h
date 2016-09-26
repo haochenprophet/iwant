@@ -1,11 +1,16 @@
 #ifndef IWANT_H
 #define IWANT_H
 
-class Ciwant
-{
-public:
+#include "object.h"
+
+namespace n_iwant {
+	class Ciwant:public Object
+	{
+	public:
 		Ciwant();
 		~Ciwant();
-};
+	};
 
+}
+using namespace n_iwant;
 #endif
