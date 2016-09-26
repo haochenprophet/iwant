@@ -3,3 +3,6 @@ winIwant/winIwant/Debug*/*
 winIwant/.vs/*
 *VC.db
 *VC.VC.opendb
+src/iwant
+src/*.o
+
