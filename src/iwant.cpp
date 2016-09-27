@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "iwant.h"
+#include "object_home.h"
+
 #define IWANT_TEST	1
 
 Ciwant::Ciwant()
@@ -21,9 +23,14 @@ Ciwant::~Ciwant()
 int main(int argc ,char *argv[])
 {
 	Ciwant i;
+	Cobjecthome oh;
+	oh.myName();
+
 	Ciwant *p = (Ciwant *) i.getClass(); //test ok
 	p->myName();
+	
 	cout<<"Hello iwant APP .\n";
+
 	return 0;
 }
 #endif//IWANT_TEST

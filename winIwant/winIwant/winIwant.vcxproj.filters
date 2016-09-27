@@ -21,12 +21,18 @@
     <ClCompile Include="..\..\src\object.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\object_home.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\object.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\object_home.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

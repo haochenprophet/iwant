@@ -144,10 +144,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
+    <ClCompile Include="..\..\src\object_home.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\object.h" />
+    <ClInclude Include="..\..\src\object_home.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
