@@ -1,17 +1,16 @@
 #include "object.h"
 
-#if OBJECT_DEBUG
-#include <stdio.h>
-int main()
+Object::Object()
 {
-	return 0;
+	this->name = "Object";
 }
-#endif
+
+void Object::myName()
+{
+	cout << this->name << endl;
+}
 
 void * Object::getClass()
 {
-#if OBJECT_DEBUG
-	printf("Object::getCalss() not available for base type.\n");
-#endif
 	return this;
 }

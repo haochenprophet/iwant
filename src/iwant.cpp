@@ -5,14 +5,15 @@
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	
-	printf("Ciwant::Ciwant()\n");
-#endif	
+	cout << "Ciwant::Ciwant()\n";
+#endif
+	this->name = "Ciwant";
 }
 
 Ciwant::~Ciwant()
 {
 #if IWANT_TEST
-	printf("Ciwant::~Ciwant()\n");
+	cout << "Ciwant::~Ciwant()\n";
 #endif
 }
 
@@ -20,7 +21,9 @@ Ciwant::~Ciwant()
 int main(int argc ,char *argv[])
 {
 	Ciwant i;
-	printf("Hello iwant APP .\n");
+	Ciwant *p = (Ciwant *) i.getClass(); //test ok
+	p->myName();
+	cout<<"Hello iwant APP .\n";
 	return 0;
 }
-#endif
+#endif//IWANT_TEST
