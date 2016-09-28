@@ -26,9 +26,15 @@ int main(int argc ,char *argv[])
 	Cobjecthome oh;
 	oh.myName();
 
+	string s("Cobjecthome"); 
+	cout << s << endl;
+	cout << oh.isMe(s) << endl;	//test
+
 	Ciwant *p = (Ciwant *) i.getClass(); //test ok
 	p->myName();
-	
+	cout << p->isMe("Ciwant") << endl;
+	cout << p->isMe("Object") << endl;
+
 	cout<<"Hello iwant APP .\n";
 
 	return 0;

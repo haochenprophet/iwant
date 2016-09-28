@@ -10,6 +10,11 @@ void Object::myName()
 	cout << this->name << endl;
 }
 
+bool Object::isMe(string identifier)
+{
+	return this->name == identifier;
+}
+
 void * Object::getClass()
 {
 	return this;

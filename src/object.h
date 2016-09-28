@@ -13,6 +13,7 @@ namespace n_object {
 	public:
 		Object();//set object name
 		void myName();
+		bool isMe(string identifier);
 		virtual void * getClass();//object address
 	};
 }
