@@ -19,9 +19,16 @@ Ciwant::~Ciwant()
 #endif
 }
 
+void * Ciwant::who_am_i()
+{
+	cout << "I am iwant  APP.\n";
+	return this;
+}
+
 #if IWANT_TEST
 int main(int argc ,char *argv[])
 {
+	Object o;
 	Ciwant i;
 	Cobjecthome oh;
 	oh.myName();
@@ -34,6 +41,10 @@ int main(int argc ,char *argv[])
 	p->myName();
 	cout << p->isMe("Ciwant") << endl;
 	cout << p->isMe("Object") << endl;
+
+	o.who_am_i();
+	oh.who_am_i();
+	p->who_am_i();
 
 	cout<<"Hello iwant APP .\n";
 

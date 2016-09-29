@@ -19,3 +19,9 @@ void * Object::i_am_here()
 {
 	return this;
 }
+
+void * Object::who_am_i()
+{
+	this->myName();
+	return this;
+}
