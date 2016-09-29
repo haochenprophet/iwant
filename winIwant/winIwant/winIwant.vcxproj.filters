@@ -38,5 +38,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
+    <None Include="..\..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\doc\think.txt" />
   </ItemGroup>
 </Project>

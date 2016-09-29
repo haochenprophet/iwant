@@ -14,7 +14,7 @@ namespace n_object {
 		Object();//set object name
 		void myName();
 		bool isMe(string identifier);
-		virtual void * getClass();//object address
+		virtual void * i_am_here();//object address
 	};
 }
 

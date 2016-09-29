@@ -30,7 +30,7 @@ int main(int argc ,char *argv[])
 	cout << s << endl;
 	cout << oh.isMe(s) << endl;	//test
 
-	Ciwant *p = (Ciwant *) i.getClass(); //test ok
+	Ciwant *p = (Ciwant *) i.i_am_here(); //test ok
 	p->myName();
 	cout << p->isMe("Ciwant") << endl;
 	cout << p->isMe("Object") << endl;

@@ -15,7 +15,7 @@ bool Object::isMe(string identifier)
 	return this->name == identifier;
 }
 
-void * Object::getClass()
+void * Object::i_am_here()
 {
 	return this;
 }
