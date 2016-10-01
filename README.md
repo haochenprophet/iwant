@@ -12,9 +12,9 @@ I will be reduced to ashes, I will be everywhere .
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
-[Code Rule]:
+[Coding rule]:
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
-2.callback ,extern ,execute , thread , function rule £º typedef int(*MyFunc)(void *p);  
+2.callback ,extern ,execute , thread , function rule : typedef int(*MyFunc)(void *p);  
 
 [Building]:
 request :Need C + + compiler
