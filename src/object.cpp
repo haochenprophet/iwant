@@ -11,6 +11,17 @@ bool Cmyfunc::isMe(string identifier)
 	return this->name == identifier;
 }
 
+int Cmyfunc::runMe(void *p, bool new_thread)
+{
+	if (!this->p_func)	return -1;
+	if (new_thread == false)
+		return this->p_func(p);
+	//cout << "Cmyfunc::runMe->thread\n"; //test ok
+	thread t(this->p_func, p);
+	t.join();
+	return 0;
+}
+
 int object_func(void *p)//this ext function for object class
 {
 	char *cp =(char *) p;
@@ -65,14 +76,18 @@ int Object::execute(void *p)
 {
 	return this->func(p);
 }
-
-int Object::execute(MyFunc func, void * p) //execute input func 
+//if new_thread==true  run function on new thread .
+int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func 
 {
-	if (func) return func(p);
-	return -1;
+	if (!func) return -1;
+	if (new_thread == false) return func(p);
+
+	thread t(func, p);
+	t.join();
+	return 0;
 }
 
-int Object::execute(string fun_name, void * p) //execute this->ex_func 
+int Object::execute(string fun_name, void * p, bool new_thread) //execute this->ex_func 
 {
 	int ret=-1;
 	LIST_CMYFUNC::iterator it;
@@ -80,7 +95,7 @@ int Object::execute(string fun_name, void * p) //execute this->ex_func
 	{
 		if (it->isMe(fun_name))
 		{
-			ret = it->p_func(p);
+			ret = it->runMe(p, new_thread);
 		}
 	}
 	return ret;

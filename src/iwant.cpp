@@ -28,16 +28,18 @@ void * Ciwant::who_am_i()
 #if IWANT_TEST
 #if THREAD_TEST
 #include <thread>         // std::thread
-void foo()
+int foo()
 {
 	// do stuff...
 	cout << "void foo()\n";
+	return 0;
 }
 
-void bar(int x)
+int bar(int x)
 {
 	// do stuff...
 	cout << "void bar(int x)"<<x<<endl;
+	return 0;
 }
 
 int thread_test()
@@ -84,7 +86,7 @@ int main(int argc ,char *argv[])
 	char cp[] = "int main(int argc ,char *argv[])";
 	o.execute("objec_func", cp);
 	o.execute();
-
+	i.execute("objec_func", cp,true);
 #if THREAD_TEST
 	thread_test();
 #endif
