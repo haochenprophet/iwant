@@ -3,7 +3,7 @@
 #include "object_home.h"
 
 #define IWANT_TEST	1
-#define THREAD_TEST 0
+#define THREAD_TEST 1
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	
@@ -72,15 +72,23 @@ int main(int argc ,char *argv[])
 	p->myName();
 	cout << p->isMe("Ciwant") << endl;
 	cout << p->isMe("Object") << endl;
+	cout << "isMe(id)\n"<<p->isMe(2) << endl;//test ok
+	cout << p->isMe(3) << endl;
 
 	o.who_am_i();
 	oh.who_am_i();
 	p->who_am_i();
 
 	cout<<"Hello iwant APP .\n";
+
+	char cp[] = "int main(int argc ,char *argv[])";
+	o.execute("objec_func", cp);
+	o.execute();
+
 #if THREAD_TEST
 	thread_test();
 #endif
+
 	return 0;
 }
 #endif//IWANT_TEST

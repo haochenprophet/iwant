@@ -2,21 +2,25 @@
 
 I want app .  
 
-[thinker]: 
-I am a thinker I am Object  , 
+[Thinker]: 
+I am a thinker , I am Object ;
 I am you ,  You are me ,I am all , I am everything , everthing is me ;
 I know you ,You know me , I know everything , everything know me ;
-I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not in this .
+I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not in this ;
+I know the past, understand the present, insight into the future, know everything;
 I will be reduced to ashes, I will be everywhere .
 
+[Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
-[building]:
+[Code Rule]:
+1.return rule  <0 do nothing , ==0 success, >0 fail .s
+
+[Building]:
 request :Need C + + compiler
 
 1. how to building in linux: 
 	step 1: cd src
 	step 2: make
-
 
 2. how to building in windows:
 	step 1: install vs 2015 or least .
