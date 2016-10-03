@@ -25,6 +25,13 @@ void * Ciwant::who_am_i()
 	return this;
 }
 
+int iwant_func(void *p)//this ext function for object class
+{
+	string *s = (string *)p;
+	cout << "iwant_func:" << s->data() << endl;//test
+	return 0;
+}
+
 #if IWANT_TEST
 #if THREAD_TEST
 #include <thread>         // std::thread
@@ -69,6 +76,9 @@ int main(int argc ,char *argv[])
 	string s("Cobjecthome"); 
 	cout << s << endl;
 	cout << oh.isMe(s) << endl;	//test
+	cout <<"Object::isMe(string * identifier):"<< oh.isMe(&s) << endl;
+	s = "Cobjecthome1";
+	cout << "Cobjecthome1:" << oh.isMe(&s) << endl;
 
 	Ciwant *p = (Ciwant *) i.i_am_here(); //test ok
 	p->myName();
@@ -87,6 +97,9 @@ int main(int argc ,char *argv[])
 	o.execute("objec_func", cp);
 	o.execute();
 	i.execute("objec_func", cp,true);
+	i.add_ex_func("iwant_func", iwant_func);
+	string fun_name = "iwant_func";
+	i.execute(&i, NULL, &fun_name,(void *)&s);
 #if THREAD_TEST
 	thread_test();
 #endif
