@@ -24,6 +24,7 @@ int Cmyfunc::runMe(void *p, bool new_thread)
 
 int object_func(void *p)//this ext function for object class
 {
+	if (!p) return -1;
 	char *cp =(char *) p;
 	cout << "object_func:"<<cp<<endl;//test
 	return 0;
@@ -124,6 +125,13 @@ int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func
 int Object::execute(string *fun_name, void * p, bool new_thread) //execute this->ex_func 
 {
 	return this->execute(fun_name->data(), p, new_thread);
+}
+
+int Object::execute(char* fun_name, void * p, bool new_thread)
+{
+	string s = fun_name;
+	cout << "int Object::execute->"<<s << endl;
+	return this->execute(s, p, new_thread);
 }
 
 int Object::execute(string fun_name, void * p, bool new_thread) //execute this->ex_func 

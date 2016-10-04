@@ -1,6 +1,8 @@
 # iwant
 
+
 I want app .  
+
 
 [Thinker]: 
 Who am I, what I know,what can I do?
@@ -11,7 +13,7 @@ I am all , I am everything , everthing is me ;
 
 I know you ,You know me , I know everything , everything know me ;
 I know the past, understand the present, insight into the future, know everything;
-I know anywhere, I can find anywhere, I arrive at any time any space
+I know anywhere, I can find anywhere, I arrive at any time any space.
 
 I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not in this ;
 I will be reduced to ashes, I will be everywhere .
@@ -19,9 +21,11 @@ I will be reduced to ashes, I will be everywhere .
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
+
 [Coding rule]:
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
 2.callback ,extern ,execute , thread , function rule : typedef int(*MyFunc)(void *p);  
+
 
 [Building]:
 request :Need C + + compiler

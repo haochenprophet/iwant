@@ -47,6 +47,7 @@ namespace n_object {
 		int execute(void * p = NULL);//execute this->func 
 		int execute(MyFunc func, void * p = NULL, bool new_thread = false); //execute input func 
 		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		virtual void * i_am_here();//object address
 		virtual void * who_am_i();//object introduces

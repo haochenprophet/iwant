@@ -3,7 +3,7 @@
 #include "object_home.h"
 
 #define IWANT_TEST	1
-#define THREAD_TEST 1
+#define THREAD_TEST 0
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	
@@ -27,6 +27,7 @@ void * Ciwant::who_am_i()
 
 int iwant_func(void *p)//this ext function for object class
 {
+	if (!p) return -1;
 	string *s = (string *)p;
 	cout << "iwant_func:" << s->data() << endl;//test
 	return 0;
@@ -73,6 +74,8 @@ int main(int argc ,char *argv[])
 	Cobjecthome oh;
 	oh.myName();
 
+	for (int n = 0; n < argc; n++)	cout << "argc=" << n << ":" << argv[n] << endl;
+
 	string s("Cobjecthome"); 
 	cout << s << endl;
 	cout << oh.isMe(s) << endl;	//test
@@ -100,6 +103,10 @@ int main(int argc ,char *argv[])
 	i.add_ex_func("iwant_func", iwant_func);
 	string fun_name = "iwant_func";
 	i.execute(&i, NULL, &fun_name,(void *)&s);
+
+	char str[] = "iwant_func";
+	i.execute(str, (void *)&s, false);
+
 #if THREAD_TEST
 	thread_test();
 #endif
