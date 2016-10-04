@@ -17,9 +17,12 @@ namespace n_object {
 	class Cmyfunc {
 	public:
 		string name; //function name
+		string alias;//Alias function name
 		MyFunc p_func;
 	public:
 		Cmyfunc(string fun_name, MyFunc func);
+		bool isMe(char *identifier);
+		bool isMe(string * identifier);
 		bool isMe(string identifier);
 		int runMe(void *p, bool new_thread=false);
 	};
@@ -32,6 +35,7 @@ namespace n_object {
 	public:
 		int id;//object id
 		string name; //object name
+		string alias;//Alias object name
 		list<void *> family;//class list
 		list<Cmyfunc> ex_func;//extern function list 
 	public:
@@ -39,6 +43,7 @@ namespace n_object {
 		~Object();//clears
 		void myName();
 		void addMe(void * obj = NULL);//add obj to family
+		bool isMe(char *identifier);
 		bool isMe(string * identifier);
 		bool isMe(string identifier);
 		bool isMe(int id);

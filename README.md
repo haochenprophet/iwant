@@ -24,7 +24,17 @@ I will be reduced to ashes, I will be everywhere .
 
 [Coding rule]:
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
+
 2.callback ,extern ,execute , thread , function rule : typedef int(*MyFunc)(void *p);  
+
+3.All classes inherit from the 'Object' class. For example : class Ciwant:public Object  
+  All class constructor must set the class name and alias .Class Id is automatically set .
+ An example of a subclass constructor : 
+ Ciwant::Ciwant()
+{
+	this->name = "Ciwant";
+	this->alias = this->name; 
+}
 
 
 [Building]:

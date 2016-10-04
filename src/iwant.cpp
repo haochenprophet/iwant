@@ -10,6 +10,7 @@ Ciwant::Ciwant()
 	cout << "Ciwant::Ciwant()\n";
 #endif
 	this->name = "Ciwant";
+	this->alias = this->name; 
 }
 
 Ciwant::~Ciwant()
@@ -106,6 +107,11 @@ int main(int argc ,char *argv[])
 
 	char str[] = "iwant_func";
 	i.execute(str, (void *)&s, false);
+	cout << (fun_name == str) << endl; //test
+
+	char identifier[] = "Object";
+	cout<<o.isMe(identifier)<<endl;
+	cout<< i.isMe(identifier)<<endl;
 
 #if THREAD_TEST
 	thread_test();

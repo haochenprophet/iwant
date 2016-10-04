@@ -3,12 +3,23 @@
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 {
 	this->name = fun_name;
+	this->alias = this->name;
 	this->p_func = func;
+}
+
+bool Cmyfunc::isMe(char *identifier)
+{
+	return this->name == identifier || this->alias == identifier;
+}
+
+bool Cmyfunc::isMe(string * identifier)
+{
+	return this->name == *identifier || this->alias == *identifier;
 }
 
 bool Cmyfunc::isMe(string identifier)
 {
-	return this->name == identifier;
+	return this->name == identifier||this->alias==identifier;
 }
 
 int Cmyfunc::runMe(void *p, bool new_thread)
@@ -35,6 +46,7 @@ Object::Object()
 {
 	this->id = ++current_id;
 	this->name = "Object";
+	this->alias = this->name;
 	this->add_ex_func("objec_func", object_func);
 	this->addMe();
 }
@@ -47,7 +59,7 @@ Object::~Object()
 
 void Object::myName()
 {
-	cout << this->name <<this->id<< endl;
+	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << endl;
 }
 
 void Object::addMe(void *obj)
@@ -56,14 +68,19 @@ void Object::addMe(void *obj)
 	else this->family.push_back(this);
 }
 
+bool Object::isMe(char *identifier)
+{
+	return this->name == identifier || this->alias == identifier;
+}
+
 bool Object::isMe(string * identifier)
 {
-	return this->name == *identifier;
+	return this->name == *identifier||this->alias==*identifier;
 }
 
 bool Object::isMe(string identifier)
 {
-	return this->name == identifier;
+	return this->name == identifier || this->alias == identifier;
 }
 
 bool Object::isMe(int id)
