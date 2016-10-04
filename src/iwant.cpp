@@ -3,7 +3,7 @@
 #include "object_home.h"
 
 #define IWANT_TEST	1
-#define THREAD_TEST 0
+#define THREAD_TEST 1
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	
@@ -101,6 +101,7 @@ int main(int argc ,char *argv[])
 	o.execute("objec_func", cp);
 	o.execute();
 	i.execute("objec_func", cp,true);
+
 	i.add_ex_func("iwant_func", iwant_func);
 	string fun_name = "iwant_func";
 	i.execute(&i, NULL, &fun_name,(void *)&s);
@@ -116,7 +117,7 @@ int main(int argc ,char *argv[])
 #if THREAD_TEST
 	thread_test();
 #endif
-
+	i.execute("runcmd", "dir", true);//test ok
 	return 0;
 }
 #endif//IWANT_TEST

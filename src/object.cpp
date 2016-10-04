@@ -41,6 +41,11 @@ int object_func(void *p)//this ext function for object class
 	return 0;
 }
 
+int  runcmd(void *cmd)
+{
+	return system((char *)cmd);
+}
+
 int current_id = 0;
 Object::Object()
 {
@@ -48,6 +53,7 @@ Object::Object()
 	this->name = "Object";
 	this->alias = this->name;
 	this->add_ex_func("objec_func", object_func);
+	this->add_ex_func("runcmd", runcmd);
 	this->addMe();
 }
 
@@ -147,7 +153,7 @@ int Object::execute(string *fun_name, void * p, bool new_thread) //execute this-
 int Object::execute(char* fun_name, void * p, bool new_thread)
 {
 	string s = fun_name;
-	cout << "int Object::execute->"<<s << endl;
+	cout << "int Object::execute->"<<s << endl;//test
 	return this->execute(s, p, new_thread);
 }
 

@@ -6,11 +6,13 @@
 #include <string>
 #include <list>
 #include <array>
+#include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
 
 using namespace std;
 typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);
+int  runcmd(void *cmd);
 
 namespace n_object {
 
