@@ -16,6 +16,7 @@ I know the past, understand the present, insight into the future, know everythin
 I know anywhere, I can find anywhere, I arrive at any time any space.
 
 I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not in this ;
+I will use the most positive mind to perceive the power of the code.
 I will be reduced to ashes, I will be everywhere .
 
 
