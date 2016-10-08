@@ -1,4 +1,6 @@
 winIwant/Debug*/*
+winIwant/winIwant/x64/*
+winIwant/x64/*
 winIwant/winIwant/Debug*/*
 winIwant/.vs/*
 *VC.db
