@@ -2,10 +2,10 @@ src := $(shell ls *.cpp)
 objs := $(patsubst %.cpp , %.o ,$(src))
 
 iwant : $(objs)
-	g++ -o $@ $^
+	g++ -std=gnu++11 -o $@ $^ -lpthread
 
 %.o : %.cpp
-	g++ -c -o $@ $<
+	g++ -std=gnu++11 -o $@ $< -lpthread
 
 clean :
 	rm -f iwant *.o 

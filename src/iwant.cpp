@@ -37,6 +37,7 @@ int iwant_func(void *p)//this ext function for object class
 #if IWANT_TEST
 #if THREAD_TEST
 #include <thread>         // std::thread
+
 int foo()
 {
 	// do stuff...
@@ -117,7 +118,8 @@ int main(int argc ,char *argv[])
 #if THREAD_TEST
 	thread_test();
 #endif
-	i.execute("runcmd", "dir", true);//test ok
+	char cmd[]="dir";
+	i.execute("runcmd", cmd, true);//test ok
 	return 0;
 }
 #endif//IWANT_TEST
