@@ -120,6 +120,9 @@ int main(int argc ,char *argv[])
 #endif
 	char cmd[]="dir";
 	i.execute("runcmd", cmd, true);//test ok
+	string obj_name = "Object";
+	i.execute((Object *)&i, obj_name, cmd, NULL, true);
+	i.execute((Object *)&i, obj_name, "objec_func", cmd, true);
 	return 0;
 }
 #endif//IWANT_TEST

@@ -102,6 +102,11 @@ bool Object::add_ex_func(string fun_name, MyFunc func)
 	return true;
 }
 
+int Object::execute(Object *o, string obj_name, string fun_name, void * p, bool new_thread)
+{
+	return this->execute(o, &obj_name, &fun_name, p, new_thread);
+}
+
 int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bool new_thread)
 {
 	int ret = -1;
@@ -113,7 +118,7 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 
 	for (it = o->family.begin(); it != o->family.end(); ++it)
 	{
-		op =(Object *) *it;
+		op = (Object *)*it;
 		if (obj_name&&obj_name->empty() == false&& op->isMe(obj_name)) {
 			if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
 			else ret = op->execute();
@@ -123,10 +128,8 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 			if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
 			else ret = op->execute();
 		}
-
-		if(ret==-1) ret=op->execute(op);
 	}
-
+	if (ret == -1 && fun_name&&fun_name->empty() == false) ret = this->execute("runcmd", (void *)fun_name->c_str(), new_thread); //auto run extern commant
 	return ret;
 }
 
@@ -162,6 +165,7 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	int ret=-1;
 	if (this->ex_func.empty()) return -1;
 	LIST_CMYFUNC::iterator it;
+
 	for (it = this->ex_func.begin(); it != this->ex_func.end(); ++it)
 	{
 		if (it->isMe(fun_name))
