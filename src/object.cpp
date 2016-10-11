@@ -120,6 +120,7 @@ bool Object::isMe(int id)
 bool Object::add_ex_func(string fun_name, MyFunc func)
 {
 	Cmyfunc *f= new Cmyfunc(fun_name, func);
+	if (!f) return false;
 	this->ex_func.push_back(*f);
 	return true;
 }
