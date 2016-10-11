@@ -61,6 +61,8 @@ Object::~Object()
 {
 	this->family.clear();
 	this->ex_func.clear();
+	this->remove_exist_family();
+	this->exist_family.clear();
 }
 
 void Object::myName()
@@ -70,8 +72,28 @@ void Object::myName()
 
 void Object::addMe(void *obj)
 {
-	if(obj) this->family.push_back(obj);
+	Object *o = (Object *)obj;
+	if (obj) {
+		this->family.push_back(obj);
+		o->exist_family.push_back(this);
+	}
 	else this->family.push_back(this);
+}
+
+void Object::removeMe(void * item)
+{
+	this->family.remove(item);
+}
+
+void Object::remove_exist_family()
+{
+	Object *o;
+	while (!this->exist_family.empty())
+	{
+		o=(Object *)this->exist_family.back();
+		o->removeMe(this);
+		this->exist_family.pop_back();
+	}
 }
 
 bool Object::isMe(char *identifier)
@@ -100,6 +122,32 @@ bool Object::add_ex_func(string fun_name, MyFunc func)
 	Cmyfunc *f= new Cmyfunc(fun_name, func);
 	this->ex_func.push_back(*f);
 	return true;
+}
+
+int Object::my_family()
+{
+	int count = 0;
+	LIST_FAMILY::iterator it;
+	Object *op;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		op = (Object *)*it;
+		cout << this->name << ":"<<++count <<":"<< op->name << op->i_am_here() << endl;
+	}
+	cout << this->name << " my_family count : " << count << endl;
+	return count;
+}
+
+int Object::my_ex_func()
+{
+	int count = 0;
+	LIST_CMYFUNC::iterator it;
+	for (it = this->ex_func.begin(); it != this->ex_func.end(); ++it)
+	{
+		cout <<this->name<<":"<<++count << ":" << it->name << it->p_func << endl;
+	}
+	cout << this->name << " my_ex_func count : " << count << endl;
+	return count;
 }
 
 int Object::execute(Object *o, string obj_name, string fun_name, void * p, bool new_thread)

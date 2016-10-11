@@ -1,4 +1,4 @@
-#ifndef OBJECT_H
+﻿#ifndef OBJECT_H
 #define OBJECT_H
 
 #include <iostream>
@@ -39,17 +39,22 @@ namespace n_object {
 		string name; //object name
 		string alias;//Alias object name
 		list<void *> family;//class list
+		list<void *> exist_family;//class exust other family for removeMe frome other class 。
 		list<Cmyfunc> ex_func;//extern function list 
 	public:
 		Object();//set object name
 		~Object();//clears
 		void myName();
 		void addMe(void * obj = NULL);//add obj to family
+		void removeMe(void * item); //frome other class
+		void remove_exist_family();
 		bool isMe(char *identifier);
 		bool isMe(string * identifier);
 		bool isMe(string identifier);
 		bool isMe(int id);
 		bool add_ex_func(string fun_name, MyFunc func);
+		int my_family();//list my_family
+		int my_ex_func();//list my_ex_func
 		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
 		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);
 		int execute(void * p = NULL);//execute this->func 

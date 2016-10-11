@@ -69,6 +69,18 @@ int thread_test()
 }
 #endif//THREAD_TEST
 
+void add_me_test(Object *p)
+{
+	Object o;
+	Ciwant i;
+	Cobjecthome oh;
+	cout << "void add_me_test(Object *p)\n";
+	p->addMe(o.i_am_here());
+	p->addMe(i.i_am_here());
+	p->addMe(oh.i_am_here());
+	p->my_family();
+}
+
 int main(int argc ,char *argv[])
 {
 	Object o;
@@ -122,7 +134,29 @@ int main(int argc ,char *argv[])
 	i.execute("runcmd", cmd, true);//test ok
 	string obj_name = "Object";
 	i.execute((Object *)&i, obj_name, cmd, NULL, true);
+	cout << "test: Object->objec_func(cmd)->";//test ok
+	i.execute((Object *)&i, obj_name, "objec_func", (void *)cmd, true);
 	i.execute((Object *)&i, obj_name, "objec_func", cmd, true);
+
+	o.my_family();
+	oh.my_family();
+	p->my_family();
+
+	o.addMe(p);
+	o.my_family();
+
+	cout << "test ok:"<<o.i_am_here()<<"="<< &o <<endl;
+	p->addMe(&o);
+	p->addMe(&oh);
+
+	p->my_family();
+	add_me_test(p);
+	p->my_family();
+
+	o.my_ex_func();
+	oh.my_ex_func();
+	p->my_ex_func();
+
 	return 0;
 }
 #endif//IWANT_TEST
