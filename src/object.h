@@ -39,13 +39,13 @@ namespace n_object {
 		string name; //object name
 		string alias;//Alias object name
 		list<void *> family;//class list
-		list<void *> exist_family;//class exust other family for removeMe frome other class 。
+		list<void *> exist_family;//class exist other family for removeMe frome other class 。
 		list<Cmyfunc> ex_func;//extern function list 
 	public:
 		Object();//set object name
 		~Object();//clears
 		void myName();
-		void addMe(void * obj = NULL);//add obj to family
+		void addMe(Object * o = NULL);//add obj to family
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();
 		bool isMe(char *identifier);
@@ -62,8 +62,8 @@ namespace n_object {
 		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
-		virtual void * i_am_here();//object address
-		virtual void * who_am_i();//object introduces
+		virtual Object * i_am_here();//object address
+		virtual Object * who_am_i();//object introduces
 		virtual int func(void *p = NULL); // callback function
 	};
 }

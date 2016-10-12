@@ -70,11 +70,10 @@ void Object::myName()
 	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << endl;
 }
 
-void Object::addMe(void *obj)
+void Object::addMe(Object * o)
 {
-	Object *o = (Object *)obj;
-	if (obj) {
-		this->family.push_back(obj);
+	if (o) {
+		this->family.push_back(o);
 		o->exist_family.push_back(this);
 	}
 	else this->family.push_back(this);
@@ -119,9 +118,8 @@ bool Object::isMe(int id)
 
 bool Object::add_ex_func(string fun_name, MyFunc func)
 {
-	Cmyfunc *f= new Cmyfunc(fun_name, func);
-	if (!f) return false;
-	this->ex_func.push_back(*f);
+	Cmyfunc f(fun_name, func);
+	this->ex_func.push_back(f);
 	return true;
 }
 
@@ -225,12 +223,12 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	return ret;
 }
 
-void * Object::i_am_here()
+Object * Object::i_am_here()
 {
 	return this;
 }
 
-void * Object::who_am_i()
+Object * Object::who_am_i()
 {
 	this->myName();
 	return this;

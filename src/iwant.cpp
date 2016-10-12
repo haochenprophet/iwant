@@ -20,7 +20,7 @@ Ciwant::~Ciwant()
 #endif
 }
 
-void * Ciwant::who_am_i()
+Object * Ciwant::who_am_i()
 {
 	cout << "I am iwant  APP.\n";
 	return this;
