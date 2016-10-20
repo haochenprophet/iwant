@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "iwant.h"
-#include "object_home.h"
+#include "home.h"
 
 #define IWANT_TEST	0//1
 
