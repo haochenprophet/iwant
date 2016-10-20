@@ -2,8 +2,8 @@
 #include "iwant.h"
 #include "object_home.h"
 
-#define IWANT_TEST	1
-#define THREAD_TEST 1
+#define IWANT_TEST	0//1
+
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	

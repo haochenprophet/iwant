@@ -3,4 +3,5 @@
 Cobjecthome::Cobjecthome()
 {
 	this->name = "Cobjecthome";
+	this->alias = this->name;
 }
