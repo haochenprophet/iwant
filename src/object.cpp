@@ -28,8 +28,7 @@ int Cmyfunc::runMe(void *p, bool new_thread)
 	if (new_thread == false)
 		return this->p_func(p);
 	//cout << "Cmyfunc::runMe->thread\n"; //test ok
-	thread t(this->p_func, p);
-	t.join();
+	std::thread(this->p_func, p).detach();
 	return 0;
 }
 
@@ -190,8 +189,8 @@ int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func
 	if (!func) return -1;
 	if (new_thread == false) return func(p);
 
-	thread t(func, p);
-	t.join();
+	std::thread(func, p).detach();
+
 	return 0;
 }
 

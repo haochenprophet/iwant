@@ -35,40 +35,6 @@ int iwant_func(void *p)//this ext function for object class
 }
 
 #if IWANT_TEST
-#if THREAD_TEST
-#include <thread>         // std::thread
-
-int foo()
-{
-	// do stuff...
-	cout << "void foo()\n";
-	return 0;
-}
-
-int bar(int x)
-{
-	// do stuff...
-	cout << "void bar(int x)"<<x<<endl;
-	return 0;
-}
-
-int thread_test()
-{
-	std::thread first(foo);     // spawn new thread that calls foo()
-	std::thread second(bar, 99);  // spawn new thread that calls bar(0)
-
-	std::cout << "main, foo and bar now execute concurrently...\n";
-
-	// synchronize threads:
-	first.join();                // pauses until first finishes
-	second.join();               // pauses until second finishes
-
-	std::cout << "foo and bar completed.\n";
-
-	return 0;
-}
-#endif//THREAD_TEST
-
 void add_me_test(Object *p)
 {
 	Object o;
@@ -127,9 +93,6 @@ int main(int argc ,char *argv[])
 	cout<<o.isMe(identifier)<<endl;
 	cout<< i.isMe(identifier)<<endl;
 
-#if THREAD_TEST
-	thread_test();
-#endif
 	char cmd[]="dir";
 	i.execute("runcmd", cmd, true);//test ok
 	string obj_name = "Object";
