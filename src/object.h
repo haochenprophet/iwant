@@ -64,6 +64,7 @@ namespace n_object {
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
+		virtual are_you_ok();
 		virtual int func(void *p = NULL); // callback function
 	};
 }

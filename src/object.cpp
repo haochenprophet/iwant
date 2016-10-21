@@ -233,6 +233,11 @@ Object * Object::who_am_i()
 	return this;
 }
 
+int Object::are_you_ok()
+{
+	return 0; //normal, success, OK ,Pass!  and so on
+}
+
 int Object::func(void *p)
 {
 	cout << this->name << "Object::func\n";
