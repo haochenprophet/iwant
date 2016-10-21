@@ -49,6 +49,7 @@ int current_id = 0;
 Object::Object()
 {
 	this->id = ++current_id;
+	this->status=0;
 	this->name = "Object";
 	this->alias = this->name;
 	this->add_ex_func("objec_func", object_func);
@@ -222,6 +223,11 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	return ret;
 }
 
+int Object::my_id()
+{
+	return this->id;
+}
+
 Object * Object::i_am_here()
 {
 	return this;
@@ -235,7 +241,7 @@ Object * Object::who_am_i()
 
 int Object::are_you_ok()
 {
-	return 0; //normal, success, OK ,Pass!  and so on
+	return this->status; //normal, success, OK ,Pass!  and so on
 }
 
 int Object::func(void *p)

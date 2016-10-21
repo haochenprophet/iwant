@@ -34,8 +34,10 @@ namespace n_object {
 
 	class Object
 	{
-	public:
+	private:
 		int id;//object id
+	public:
+		int status;
 		string name; //object name
 		string alias;//Alias object name
 		list<void *> family;//class list
@@ -62,9 +64,10 @@ namespace n_object {
 		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int my_id();
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
-		virtual are_you_ok();
+		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
 		virtual int func(void *p = NULL); // callback function
 	};
 }
