@@ -1,21 +1,74 @@
-#ifndef OBJECT_H
+﻿#ifndef OBJECT_H
 #define OBJECT_H
 
 #include <iostream>
+#include <thread>
 #include <string>
+#include <list>
+#include <array>
+#include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
+
 using namespace std;
+typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
+
+int object_func(void *p);
+int  runcmd(void *cmd);
 
 namespace n_object {
+
+	class Cmyfunc {
+	public:
+		string name; //function name
+		string alias;//Alias function name
+		MyFunc p_func;
+	public:
+		Cmyfunc(string fun_name, MyFunc func);
+		bool isMe(char *identifier);
+		bool isMe(string * identifier);
+		bool isMe(string identifier);
+		int runMe(void *p, bool new_thread=false);
+	};
+
+	typedef list<Cmyfunc> LIST_CMYFUNC;
+	typedef list<void *> LIST_FAMILY;//family list type
+
 	class Object
 	{
+	private:
+		int id;//object id
 	public:
+		int status;
 		string name; //object name
+		string alias;//Alias object name
+		list<void *> family;//class list
+		list<void *> exist_family;//class exist other family for removeMe frome other class 。
+		list<Cmyfunc> ex_func;//extern function list 
 	public:
 		Object();//set object name
+		~Object();//clears
 		void myName();
+		void addMe(Object * o = NULL);//add obj to family
+		void removeMe(void * item); //frome other class
+		void remove_exist_family();
+		bool isMe(char *identifier);
+		bool isMe(string * identifier);
 		bool isMe(string identifier);
-		virtual void *  i_am_here();//object address
-		virtual void * who_am_i();//object introduce
+		bool isMe(int id);
+		bool add_ex_func(string fun_name, MyFunc func);
+		int my_family();//list my_family
+		int my_ex_func();//list my_ex_func
+		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
+		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);
+		int execute(void * p = NULL);//execute this->func 
+		int execute(MyFunc func, void * p = NULL, bool new_thread = false); //execute input func 
+		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int my_id();
+		virtual Object * i_am_here();//object address
+		virtual Object * who_am_i();//object introduces
+		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
+		virtual int func(void *p = NULL); // callback function
 	};
 }
 
