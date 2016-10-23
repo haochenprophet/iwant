@@ -1,4 +1,11 @@
 #include "main.h"
+#include "iwant.h"
+#include "net.h"
+#include "home.h"
+#include "socket.h"
+#include "task.h"
+#include "url.h"
+#include "new.h"
 
 Cmain::Cmain()
 {
