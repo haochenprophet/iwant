@@ -16,6 +16,16 @@ int  runcmd(void *cmd);
 
 namespace n_object {
 
+	class Cparameter
+	{
+	public:
+		void *in;
+		void *out;
+		int size;
+	public:
+		Cparameter();
+	};
+
 	class Cmyfunc {
 	public:
 		string name; //function name

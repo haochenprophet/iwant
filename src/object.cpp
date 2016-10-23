@@ -1,5 +1,12 @@
 #include "object.h"
 
+Cparameter::Cparameter()
+{
+	this->in=NULL;
+	this->out=NULL;
+	this->size=0;
+}
+
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 {
 	this->name = fun_name;

@@ -4,10 +4,12 @@
 #include "object.h"
 
 namespace n_new {
+
 	class Cnew :public Object
 	{
 	public:
 		Cnew();
+		int func(void *p); 
 	};
 
 }
