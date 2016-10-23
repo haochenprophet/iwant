@@ -48,6 +48,7 @@ namespace n_object {
 		int id;//object id
 	public:
 		int status;
+		int action;
 		string name; //object name
 		string alias;//Alias object name
 		list<void *> family;//class list

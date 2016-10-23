@@ -57,6 +57,7 @@ Object::Object()
 {
 	this->id = ++current_id;
 	this->status=0;
+	this->action=0;
 	this->name = "Object";
 	this->alias = this->name;
 	this->add_ex_func("objec_func", object_func);
