@@ -1,10 +1,90 @@
 #include "object.h"
+#define OBJECT_TEST	1
 
 Cparameter::Cparameter()
 {
 	this->in=NULL;
 	this->out=NULL;
 	this->size=0;
+}
+
+long my_memory_id = 0;
+CmyMemory::CmyMemory()
+{
+	this->name = "CmyMemory";
+	this->id = ++my_memory_id;
+	this->name += std::to_string(this->id);
+	this->allot();//call for init 
+}
+
+CmyMemory::CmyMemory(int size)
+{
+	this->name = "CmyMemory";
+	this->id = ++my_memory_id;
+	this->name += std::to_string(this->id);
+	this->allot(size);
+}
+
+CmyMemory::~CmyMemory()
+{
+	this->delete_me();
+	this->clear_exist();
+	this->exist_list.clear();
+}
+
+void * CmyMemory::allot(int size, int type)
+{
+	this->size = 0;
+	this->addr = NULL;
+
+	if (size) {
+		try {
+			this->addr = new char[size];//
+			this->size = size;
+		}
+		catch (...)//fail
+		{
+			cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
+		}
+	}
+
+	this->type =type;
+
+	return (void *)this->addr;
+}
+
+bool CmyMemory::isMe(void * addr,  long id,string name)
+{
+	return ((addr&&addr == (void *)this->addr) || (id&&this->id == id) || (name.length() && this->name == name));
+}
+
+void CmyMemory::clear_exist()
+{
+	Object *o;
+	while (!this->exist_list.empty())
+	{
+		o = (Object *)this->exist_list.back();
+		o->my_mem.remove(this);
+		this->exist_list.pop_back();
+	}
+}
+
+void CmyMemory::delete_me()
+{
+	if (this->addr) {
+		delete[](char*) this->addr;
+		this->addr = NULL;
+	}
+}
+
+CmyMemory* CmyMemory::i_am_here()
+{
+	return this;
+}
+
+int CmyMemory::deal(void *p)
+{
+	return 0;
 }
 
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
@@ -52,14 +132,15 @@ int  runcmd(void *cmd)
 	return system((char *)cmd);
 }
 
-int current_id = 0;
+long object_id = 0;
 Object::Object()
 {
-	this->id = ++current_id;
+	this->id = ++object_id;
 	this->status=0;
 	this->action=0;
 	this->name = "Object";
 	this->alias = this->name;
+	this->name += std::to_string(object_id);//change name for nam +=id
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	this->addMe();
@@ -71,6 +152,8 @@ Object::~Object()
 	this->ex_func.clear();
 	this->remove_exist_family();
 	this->exist_family.clear();
+	this->clear_my_memory();//clear my memory
+	this->my_mem.clear();
 }
 
 void Object::myName()
@@ -129,6 +212,30 @@ bool Object::add_ex_func(string fun_name, MyFunc func)
 	Cmyfunc f(fun_name, func);
 	this->ex_func.push_back(f);
 	return true;
+}
+
+void Object::add_memory(CmyMemory *m)
+{
+	this->my_mem.push_back(m);
+	m->exist_list.push_back(this);//this Object 
+}
+
+void Object::clear_my_memory(CmyMemory *m)
+{
+	if (m)
+	{
+		m->exist_list.remove(this);
+		this->my_mem.remove(m);
+		return;
+	}
+
+	CmyMemory *p;
+	while (!this->my_mem.empty())
+	{
+		p=this->my_mem.back();
+		p->exist_list.remove(this);
+		this->my_mem.pop_back();
+	}
 }
 
 int Object::my_family()
@@ -192,6 +299,7 @@ int Object::execute(void *p)
 {
 	return this->func(p);
 }
+
 //if new_thread==true  run function on new thread .
 int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func 
 {
@@ -231,7 +339,7 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	return ret;
 }
 
-int Object::my_id()
+long Object::my_id()
 {
 	return this->id;
 }
@@ -257,3 +365,22 @@ int Object::func(void *p)
 	cout << this->name << "Object::func\n";
 	return 0;
 }
+
+#if OBJECT_TEST
+int main()
+{
+	cout << "Object main !\n";
+	CmyMemory m1;
+	CmyMemory m2;
+	CmyMemory m3;
+	CmyMemory m4;
+
+	Object o;
+
+	o.add_memory(m1.i_am_here());
+	o.add_memory(m2.i_am_here());
+	o.add_memory(m3.i_am_here());
+	o.add_memory(m4.i_am_here());
+	return 0;
+}
+#endif

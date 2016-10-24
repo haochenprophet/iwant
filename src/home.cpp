@@ -3,5 +3,5 @@
 Chome::Chome()
 {
 	this->name = "Chome";
-	this->alias = this->name;
+	this->alias = "home";
 }

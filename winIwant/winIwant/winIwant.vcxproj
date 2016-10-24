@@ -146,6 +146,7 @@
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
+    <ClCompile Include="..\..\src\new.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
     <ClCompile Include="..\..\src\socket.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\net.h" />
+    <ClInclude Include="..\..\src\new.h" />
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\socket.h" />
     <ClInclude Include="..\..\src\task.h" />

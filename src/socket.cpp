@@ -3,5 +3,5 @@
 Csocket::Csocket()
 {
 	this->name = "Csocket";
-	this->alias = this->name;
+	this->alias = "socket";
 }

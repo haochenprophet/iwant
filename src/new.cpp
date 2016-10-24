@@ -3,7 +3,7 @@
 Cnew::Cnew()
 {
 	this->name = "Cnew";
-	this->alias = this->name;
+	this->alias = "new";
 }
 
 int Cnew::func(void *p)//p->in --want new size  out ,is *// 
