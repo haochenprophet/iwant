@@ -42,6 +42,9 @@
     <ClCompile Include="..\..\src\new.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\myMemory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -69,6 +72,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\new.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\myMemory.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

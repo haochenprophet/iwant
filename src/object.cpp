@@ -8,85 +8,6 @@ Cparameter::Cparameter()
 	this->size=0;
 }
 
-long my_memory_id = 0;
-CmyMemory::CmyMemory()
-{
-	this->name = "CmyMemory";
-	this->id = ++my_memory_id;
-	this->name += std::to_string(this->id);
-	this->allot();//call for init 
-}
-
-CmyMemory::CmyMemory(int size)
-{
-	this->name = "CmyMemory";
-	this->id = ++my_memory_id;
-	this->name += std::to_string(this->id);
-	this->allot(size);
-}
-
-CmyMemory::~CmyMemory()
-{
-	this->delete_me();
-	this->clear_exist();
-	this->exist_list.clear();
-}
-
-void * CmyMemory::allot(int size, int type)
-{
-	this->size = 0;
-	this->addr = NULL;
-
-	if (size) {
-		try {
-			this->addr = new char[size];//
-			this->size = size;
-		}
-		catch (...)//fail
-		{
-			cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
-		}
-	}
-
-	this->type =type;
-
-	return (void *)this->addr;
-}
-
-bool CmyMemory::isMe(void * addr,  long id,string name)
-{
-	return ((addr&&addr == (void *)this->addr) || (id&&this->id == id) || (name.length() && this->name == name));
-}
-
-void CmyMemory::clear_exist()
-{
-	Object *o;
-	while (!this->exist_list.empty())
-	{
-		o = (Object *)this->exist_list.back();
-		o->my_mem.remove(this);
-		this->exist_list.pop_back();
-	}
-}
-
-void CmyMemory::delete_me()
-{
-	if (this->addr) {
-		delete[](char*) this->addr;
-		this->addr = NULL;
-	}
-}
-
-CmyMemory* CmyMemory::i_am_here()
-{
-	return this;
-}
-
-int CmyMemory::deal(void *p)
-{
-	return 0;
-}
-
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 {
 	this->name = fun_name;
@@ -154,6 +75,8 @@ Object::~Object()
 	this->exist_family.clear();
 	this->clear_my_memory();//clear my memory
 	this->my_mem.clear();
+	this->clear_exist();
+	this->exist_list.clear();
 }
 
 void Object::myName()
@@ -214,13 +137,13 @@ bool Object::add_ex_func(string fun_name, MyFunc func)
 	return true;
 }
 
-void Object::add_memory(CmyMemory *m)
+void Object::add_memory(Object *m)
 {
 	this->my_mem.push_back(m);
 	m->exist_list.push_back(this);//this Object 
 }
 
-void Object::clear_my_memory(CmyMemory *m)
+void Object::clear_my_memory(Object *m)
 {
 	if (m)
 	{
@@ -229,12 +152,23 @@ void Object::clear_my_memory(CmyMemory *m)
 		return;
 	}
 
-	CmyMemory *p;
+	Object *p;
 	while (!this->my_mem.empty())
 	{
 		p=this->my_mem.back();
 		p->exist_list.remove(this);
 		this->my_mem.pop_back();
+	}
+}
+
+void Object::clear_exist()
+{
+	Object *o;
+	while (!this->exist_list.empty())
+	{
+		o = (Object *)this->exist_list.back();
+		o->my_mem.remove(this);
+		this->exist_list.pop_back();
 	}
 }
 
@@ -370,17 +304,6 @@ int Object::func(void *p)
 int main()
 {
 	cout << "Object main !\n";
-	CmyMemory m1;
-	CmyMemory m2;
-	CmyMemory m3;
-	CmyMemory m4;
-
-	Object o;
-
-	o.add_memory(m1.i_am_here());
-	o.add_memory(m2.i_am_here());
-	o.add_memory(m3.i_am_here());
-	o.add_memory(m4.i_am_here());
 	return 0;
 }
 #endif

@@ -28,28 +28,6 @@ namespace n_object {
 		Cparameter();
 	};
 
-	class CmyMemory
-	{
-	public:
-		string name; //memory name for recode 
-		long id;//this auto set ,do not change 
-		char *addr;//by byte memory 
-		int size;
-		int type;//0 is no type
-
-		list<void *> exist_list; //for list<CmyMemory> my_mem;  where exist me ,for remove me;
-	public:
-		CmyMemory();
-		CmyMemory(int size); 
-		~CmyMemory();
-		void *allot(int size=0,int type=0);
-		bool isMe(void * addr = NULL, long id = 0,string name="");
-		void clear_exist();//clear me in exsit list; 
-		void delete_me();
-		CmyMemory * i_am_here();
-		virtual int deal(void *p);
-	};
-
 	class Cmyfunc {
 	public:
 		string name; //function name
@@ -65,7 +43,6 @@ namespace n_object {
 
 	typedef list<Cmyfunc> LIST_CMYFUNC;
 	typedef list<void *> LIST_FAMILY;//family list type
-	typedef list<CmyMemory*> LIST_CMYMEMORY; //define list  type
 
 	class Object
 	{
@@ -74,28 +51,41 @@ namespace n_object {
 	public:
 		int status;
 		int action;
+
 		string name; //object name
 		string alias;//Alias object name
+
 		list<void *> family;//class list
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
+
 		list<Cmyfunc> ex_func;//extern function list 
-		list<CmyMemory *> my_mem;//list for  memory address 
+		
+		list<Object *> my_mem;//list for  memory address 
+		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
+
 	public:
 		Object();//set object name
 		~Object();//clears
+
 		void myName();
 		void addMe(Object * o = NULL);//add obj to family
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();
+
 		bool isMe(char *identifier);
 		bool isMe(string * identifier);
 		bool isMe(string identifier);
 		bool isMe(int id);
+
 		bool add_ex_func(string fun_name, MyFunc func);
-		void add_memory(CmyMemory *m);
-		void clear_my_memory(CmyMemory *m=NULL);//if null clear all item in my_mem list
+		void add_memory(Object *m);
+		void clear_my_memory(Object *m=NULL);//if null clear all item in my_mem list
+		void clear_exist();//clear me in exsit list;
+
+		long my_id();
 		int my_family();//list my_family
 		int my_ex_func();//list my_ex_func
+
 		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
 		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);
 		int execute(void * p = NULL);//execute this->func 
@@ -103,7 +93,7 @@ namespace n_object {
 		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
-		long my_id();
+
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 

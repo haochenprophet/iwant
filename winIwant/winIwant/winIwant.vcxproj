@@ -145,6 +145,7 @@
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\myMemory.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
     <ClCompile Include="..\..\src\new.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\myMemory.h" />
     <ClInclude Include="..\..\src\net.h" />
     <ClInclude Include="..\..\src\new.h" />
     <ClInclude Include="..\..\src\object.h" />
