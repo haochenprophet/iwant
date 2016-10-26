@@ -46,7 +46,7 @@ namespace n_object {
 
 	class Object
 	{
-	private:
+	protected:
 		long id;//object id
 	public:
 		int status;

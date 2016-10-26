@@ -3,7 +3,7 @@
 CmyMemory::CmyMemory()
 {
 	this->name = "CmyMemory";
-	this->name += std::to_string(this->my_id());
+	this->name += std::to_string(this->id);
 	this->alias = "myMemory";
 	this->allot();//call for init 
 }
@@ -11,7 +11,7 @@ CmyMemory::CmyMemory()
 CmyMemory::CmyMemory(int size)
 {
 	this->name = "CmyMemory";
-	this->name += std::to_string(this->my_id());
+	this->name += std::to_string(this->id);
 	this->alias = "myMemory";
 	this->allot(size);
 }
@@ -25,6 +25,7 @@ void * CmyMemory::allot(int size, int type)
 {
 	this->size = 0;
 	this->addr = NULL;
+	this->type = type;
 
 	if (size) {
 		try {
@@ -36,8 +37,6 @@ void * CmyMemory::allot(int size, int type)
 			cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
 		}
 	}
-
-	this->type =type;
 
 	return (void *)this->addr;
 }
