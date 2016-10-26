@@ -915,3 +915,167 @@ To connect to a socket
 	        
 	        return 0;
 	}
+
+
+7. Winsock Functions
+
+	The following list provides concise descriptions of each Winsock function. 
+	For additional information on any function, click the function name.
+
+Function			Description
+accept				Permits an incoming connection attempt on a socket.
+AcceptEx			Accepts a new connection, returns the local and remote address, and receives the first block of data sent by the client application.
+bind				Associates a local address with a socket.
+closesocket			Closes an existing socket.
+connect			Establishes a connection to a specified socket.
+ConnectEx			Establishes a connection to a specified socket, and optionally sends data once the connection is established. Only supported on connection-oriented sockets.
+DisconnectEx			Closes a connection on a socket, and allows the socket handle to be reused.
+EnumProtocols		Retrieves information about a specified set of network protocols that are active on a local host.
+freeaddrinfo			Frees address information that the getaddrinfo function dynamically allocates in addrinfo structures.
+FreeAddrInfoEx		Frees address information that the GetAddrInfoEx function dynamically allocates in addrinfoex structures.
+FreeAddrInfoW		Frees address information that the GetAddrInfoW function dynamically allocates in addrinfoW structures.
+gai_strerror			Assists in printing error messages based on the EAI_* errors returned by the getaddrinfo function.
+GetAcceptExSockaddrs	Parses the data obtained from a call to the AcceptEx function.
+GetAddressByName		Queries a namespace, or a set of default namespaces, to retrieve network address information for a specified network service. 
+				This process is known as service name resolution. 
+				A network service can also use the function to obtain local address information that it can use with the bind function.
+getaddrinfo			Provides protocol-independent translation from an ANSI host name to an address.
+GetAddrInfoEx		Provides protocol-independent name resolution with additional parameters to qualify which name space providers should handle the request.
+GetAddrInfoExCancel	Cancels an asynchronous operation by the GetAddrInfoEx function.
+GetAddrInfoExOverlappedResult	Gets the return code for an OVERLAPPED structure used by an asynchronous operation for the GetAddrInfoEx function.
+GetAddrInfoW		Provides protocol-independent translation from a Unicode host name to an address.
+gethostbyaddr			Retrieves the host information corresponding to a network address.
+gethostbyname		Retrieves host information corresponding to a host name from a host database. Deprecated: use getaddrinfo instead.
+gethostname			Retrieves the standard host name for the local computer.
+GetHostNameW		Retrieves the standard host name for the local computer as a Unicode string.
+getipv4sourcefilter		Retrieves the multicast filter state for an IPv4 socket.
+GetNameByType		Retrieves the name of a network service for the specified service type.
+getnameinfo			Provides name resolution from an IPv4 or IPv6 address to an ANSI host name and from a port number to the ANSI service name.
+GetNameInfoW		Provides name resolution from an IPv4 or IPv6 address to a Unicode host name and from a port number to the Unicode service name.
+getpeername			Retrieves the address of the peer to which a socket is connected.
+getprotobyname		Retrieves the protocol information corresponding to a protocol name.
+getprotobynumber		Retrieves protocol information corresponding to a protocol number.
+getservbyname		Retrieves service information corresponding to a service name and protocol.
+getservbyport			Retrieves service information corresponding to a port and protocol.
+GetService			Retrieves information about a network service in the context of a set of default namespaces or a specified namespace.
+getsockname			Retrieves the local name for a socket.
+getsockopt			Retrieves a socket option.
+getsourcefilter			Retrieves the multicast filter state for an IPv4 or IPv6 socket.
+GetTypeByName		Retrieves a service type GUID for a network service specified by name.
+htond				Converts a double from host to TCP/IP network byte order (which is big-endian).
+htonf				Converts a float from host to TCP/IP network byte order (which is big-endian).
+htonl				Converts a u_long from host to TCP/IP network byte order (which is big-endian).
+htonll				Converts an unsigned __int64 from host to TCP/IP network byte order (which is big-endian).
+htons				Converts a u_short from host to TCP/IP network byte order (which is big-endian).
+inet_addr			Converts a string containing an (Ipv4) Internet Protocol dotted address into a proper address for the in_addr structure.
+inet_ntoa			Converts an (IPv4) Internet network address into a string in Internet standard dotted format.
+InetNtop			converts an IPv4 or IPv6 Internet network address into a string in Internet standard format. The ANSI version of this function is inet_ntop.
+InetPton			Converts an IPv4 or IPv6 Internet network address in its standard text presentation form into its numeric binary form. 
+				The ANSI version of this function is inet_pton.
+ioctlsocket			Controls the I/O mode of a socket.
+listen				Places a socket a state where it is listening for an incoming connection.
+ntohd				Converts an unsigned __int64 from TCP/IP network order to host byte order (which is little-endian on Intel processors) and returns a double.
+ntohf				Converts an unsigned __int32 from TCP/IP network order to host byte order (which is little-endian on Intel processors) and returns a float.
+ntohl				Converts a u_long from TCP/IP network order to host byte order (which is little-endian on Intel processors).
+ntohll				Converts an unsigned __int64 from TCP/IP network order to host byte order (which is little-endian on Intel processors).
+ntohs				Converts a u_short from TCP/IP network byte order to host byte order (which is little-endian on Intel processors).
+recv				Receives data from a connected or bound socket.
+recvfrom			Receives a datagram and stores the source address.
+RIOCloseCompletionQueue		Closes an existing completion queue used for I/O completion notification by send and receive requests with the Winsock registered I/O extensions.
+RIOCreateCompletionQueue	Creates an I/O completion queue of a specific size for use with the Winsock registered I/O extensions.
+RIOCreateRequestQueue		Creates a registered I/O socket descriptor using a specified socket and I/O completion queues for use with the Winsock registered I/O extensions.
+RIODequeueCompletion		Removes entries from an I/O completion queue for use with the Winsock registered I/O extensions.
+RIODeregisterBuffer			Deregisters a registered buffer used with the Winsock registered I/O extensions.
+RIONotify				Registers the method to use for notification behavior with an I/O completion queue for use with the Winsock registered I/O extensions.
+RIOReceive				Receives network data on a connected registered I/O TCP socket or a bound registered I/O UDP
+					 socket for use with the Winsock registered I/O extensions.
+RIOReceiveEx			Receives network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket with additional options 
+					for use with the Winsock registered I/O extensions.
+RIORegisterBuffer			Registers a RIO_BUFFERID, a registered buffer descriptor, with a specified buffer for use with the Winsock registered I/O extensions.
+RIOResizeCompletionQueue	Resizes an I/O completion queue to be either larger or smaller for use with the Winsock registered I/O extensions.
+RIOResizeRequestQueue		Resizes a request queue to be either larger or smaller for use with the Winsock registered I/O extensions.
+RIOSend				Sends network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket for use with the Winsock registered I/O extensions.
+RIOSendEx				Sends network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket with additional options 
+					for use with the Winsock registered I/O extensions.
+select					Determines the status of one or more sockets, waiting if necessary, to perform synchronous I/O.
+send					Sends data on a connected socket.
+sendto					Sends data to a specific destination.
+SetAddrInfoEx			Registers a host and service name along with associated addresses with a specific namespace provider.
+setipv4sourcefilter			Sets the multicast filter state for an IPv4 socket.
+SetService				Registers or removes from the registry a network service within one or more namespaces. 
+					Can also add or remove a network service type within one or more namespaces.
+SetSocketMediaStreamingMode	Indicates whether the network is to be used for transferring streaming media that requires quality of service.
+setsockopt				Sets a socket option.
+setsourcefilter				Sets the multicast filter state for an IPv4 or IPv6 socket.
+shutdown				Disables sends or receives on a socket.
+socket					Creates a socket that is bound to a specific service provider.
+TransmitFile				Transmits file data over a connected socket handle.
+TransmitPackets			Transmits in-memory data or file data over a connected socket.
+WSAAccept				Conditionally accepts a connection based on the return value of a condition function, 
+					provides quality of service flow specifications, and allows the transfer of connection data.
+WSAAddressToString		Converts all components of a sockaddr structure into a human-readable string representation of the address.
+WSAAsyncGetHostByAddr		Asynchronously retrieves host information that corresponds to an address.
+WSAAsyncGetHostByName	Asynchronously retrieves host information that corresponds to a host name.
+WSAAsyncGetProtoByName	Asynchronously retrieves protocol information that corresponds to a protocol name.
+WSAAsyncGetProtoByNumber	Asynchronously retrieves protocol information that corresponds to a protocol number.
+WSAAsyncGetServByName	Asynchronously retrieves service information that corresponds to a service name and port.
+WSAAsyncGetServByPort		Asynchronously retrieves service information that corresponds to a port and protocol.
+WSAAsyncSelect			Requests Windows message-based notification of network events for a socket.
+WSACancelAsyncRequest		Cancels an incomplete asynchronous operation.
+WSACleanup				Terminates use of the Ws2_32.DLL.
+WSACloseEvent			Closes an open event object handle.
+WSAConnect	Establishes 		a connection to another socket application, exchanges connect data, and specifies needed quality of service based on the specified FLOWSPEC structure.
+WSAConnectByList			Establishes a connection to one out of a collection of possible endpoints represented by a set of destination addresses (host names and ports).
+WSAConnectByName		Establishes a connection to another socket application on a specified host and port
+WSACreateEvent			Creates a new event object.
+WSADeleteSocketPeerTargetName	Removes the association between a peer target name and an IP address for a socket.
+WSADuplicateSocket			Returns a structure that can be used to create a new socket descriptor for a shared socket.
+WSAEnumNameSpaceProviders		Retrieves information about available namespaces.
+WSAEnumNameSpaceProvidersEx		Retrieves information about available namespaces.
+WSAEnumNetworkEvents			Discovers occurrences of network events for the indicated socket, clear internal network event records, and reset event objects (optional).
+WSAEnumProtocols				Retrieves information about available transport protocols.
+WSAEventSelect				Specifies an event object to be associated with the specified set of FD_XXX network events.
+__WSAFDIsSet				Specifies whether a socket is included in a set of socket descriptors.
+WSAGetLastError				Returns the error status for the last operation that failed.
+WSAGetOverlappedResult			Retrieves the results of an overlapped operation on the specified socket.
+WSAGetQOSByName			Initializes a QOS structure based on a named template, or it supplies a buffer to retrieve an enumeration of the available template names.
+WSAGetServiceClassInfo			Retrieves the class information (schema) pertaining to a specified service class from a specified namespace provider.
+WSAGetServiceClassNameByClassId	Retrieves the name of the service associated with the specified type.
+WSAHtonl					Converts a u_long from host byte order to network byte order.
+WSAHtons					Converts a u_short from host byte order to network byte order.
+WSAImpersonateSocketPeer		Used to impersonate the security principal corresponding to a socket peer in order to perform application-level authorization.
+WSAInstallServiceClass			Registers a service class schema within a namespace.
+WSAIoctl					Controls the mode of a socket.
+WSAJoinLeaf	Joins				 a leaf node into a multipoint session, exchanges connect data, and specifies needed quality of service based on the specified structures.
+WSALookupServiceBegin			Initiates a client query that is constrained by the information contained within a WSAQUERYSET structure.
+WSALookupServiceEnd			Frees the handle used by previous calls to WSALookupServiceBegin and WSALookupServiceNext.
+WSALookupServiceNext			Retrieve the requested service information.
+WSANSPIoctl				Developers to make I/O control calls to a registered namespace.
+WSANtohl					Converts a u_long from network byte order to host byte order.
+WSANtohs					Converts a u_short from network byte order to host byte order.
+WSAPoll					Determines status of one or more sockets.
+WSAProviderConfigChange			Notifies the application when the provider configuration is changed.
+WSAQuerySocketSecurity			Queries information about the security applied to a connection on a socket.
+WSARecv					Receives data from a connected socket.
+WSARecvDisconnect			Terminates reception on a socket, and retrieves the disconnect data if the socket is connection oriented.
+WSARecvEx					Receives data from a connected socket.
+WSARecvFrom				Receives a datagram and stores the source address.
+WSARecvMsg				Receives data and optional control information from connected and unconnected sockets.
+WSARemoveServiceClass			Permanently removes the service class schema from the registry.
+WSAResetEvent				Resets the state of the specified event object to nonsignaled.
+WSARevertImpersonation			Terminates the impersonation of a socket peer.
+WSASend					Sends data on a connected socket.
+WSASendDisconnect			Initiates termination of the connection for the socket and sends disconnect data.
+WSASendMsg				Sends data and optional control information from connected and unconnected sockets.
+WSASendTo					Sends data to a specific destination, using overlapped I/O where applicable.
+WSASetEvent				Sets the state of the specified event object to signaled.
+WSASetLastError				Sets the error code.
+WSASetService				Registers or removes from the registry a service instance within one or more namespaces.
+WSASetSocketPeerTargetName		Used to specify the peer target name (SPN) that corresponds to a peer IP address. 
+						This target name is meant to be specified by client applications to securely identify the peer that should be authenticated.
+WSASetSocketSecurity			Enables and applies security for a socket.
+WSASocket					Creates a socket that is bound to a specific transport-service provider.
+WSAStartup					Initiates use of WS2_32.DLL by a process.
+WSAStringToAddress			Converts a numeric string to a sockaddr structure.
+WSAWaitForMultipleEvents	Returns 	either when one or all of the specified event objects are in the signaled state, or when the time-out interval expires.
+ 
