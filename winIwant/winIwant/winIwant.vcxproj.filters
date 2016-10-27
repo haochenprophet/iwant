@@ -45,6 +45,9 @@
     <ClCompile Include="..\..\src\myMemory.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\os.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -75,6 +78,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\myMemory.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

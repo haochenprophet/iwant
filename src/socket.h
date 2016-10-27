@@ -2,12 +2,14 @@
 #define SOCKET_H
 
 #include "object.h"
+#include "os.h"
 
 namespace n_socket{
-	class Csocket:public Object
+	class Csocket:public Cos
 	{
 	public:
 		Csocket();
+		~Csocket();
 	};
 
 }

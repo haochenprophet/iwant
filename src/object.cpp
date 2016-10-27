@@ -1,5 +1,5 @@
 #include "object.h"
-#define OBJECT_TEST	1
+#define OBJECT_TEST	0//1
 
 Cparameter::Cparameter()
 {

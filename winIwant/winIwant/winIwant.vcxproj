@@ -101,10 +101,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D WINDOWS_OS=1 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions> "Ws2_32.lib" "Mswsock.lib" "AdvApi32.lib" %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -152,6 +154,7 @@
     <ClCompile Include="..\..\src\socket.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
+    <ClCompile Include="..\..\src\os.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\home.h" />
@@ -164,6 +167,7 @@
     <ClInclude Include="..\..\src\socket.h" />
     <ClInclude Include="..\..\src\task.h" />
     <ClInclude Include="..\..\src\url.h" />
+    <ClInclude Include="..\..\src\os.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
