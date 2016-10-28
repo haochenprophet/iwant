@@ -8,7 +8,12 @@
 #include <array>
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
 
-using namespace std;
+//using namespace std; //remove fixed std::bind  conflict socket bind
+using std::string;
+using std::list;
+using std::cout;
+using std::endl;
+
 typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);

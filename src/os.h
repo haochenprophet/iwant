@@ -2,7 +2,9 @@
 #define OS_H 
 
 #if WINDOWS_OS
+#include <winsock2.h>
 #include <windows.h>
+
 #endif//WINDOWS_OS
 
 #if LINUX_OS
@@ -10,7 +12,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
-#endif
+#endif//LINUX_OS
 
 #include "object.h"
 
