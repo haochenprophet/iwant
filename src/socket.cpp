@@ -42,7 +42,7 @@ int Csocket::s_listen(int sock, int backlog)
 	return listen(sock, backlog);
 }
 
-int Csocket::s_accept(int sock, sockaddr *o_addr, int * io_size)
+int Csocket::s_accept(int sock, sockaddr *o_addr, socklen_t * io_size)
 {
 	return (int)accept(sock, o_addr, io_size);
 }
@@ -52,13 +52,13 @@ int Csocket::s_shutdown(int sock, int how )
 	return shutdown(sock, how);
 }
 
-int Csocket::s_closesocket(int sock, int how )
+int Csocket::s_close(int sock, int how )
 {
 	int ret = 0;
 	ret=shutdown(sock, how);
-//#if WINDOWS_OS
+#if WINDOWS_OS
 	ret=closesocket(sock);
-//#endif
+#endif
 	return ret;
 }
 
