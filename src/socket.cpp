@@ -12,52 +12,52 @@ Csocket::~Csocket()
 
 }
 
-int  Csocket::s_socket(int af, int type, int protocol)
+SOCKET  Csocket::s_socket(int af, int type, int protocol)
 {
-	return (int) socket(af, type, protocol);
+	return  socket(af, type, protocol);
 }
 
-int Csocket::s_connect(int sock,sockaddr *sockaddr, int size)
+int Csocket::s_connect(SOCKET s,sockaddr *sockaddr, int size)
 {
-	return connect(sock, sockaddr, size);
+	return connect(s, sockaddr, size);
 }
 
-int Csocket::s_bind(int sock, sockaddr *sockaddr, int size)
+int Csocket::s_bind(SOCKET s, sockaddr *sockaddr, int size)
 {
-	return bind(sock, sockaddr,size);
+	return bind(s, sockaddr,size);
 }
 
-int Csocket::s_send(int sock, const char *buf, int size, int flags)
+int Csocket::s_send(SOCKET s, const char *buf, int size, int flags)
 {
-	return send(sock, buf, size, flags);
+	return send(s, buf, size, flags);
 }
 
-int Csocket::s_recv(int sock, char *buf, int  len, int  flags)
+int Csocket::s_recv(SOCKET s, char *buf, int  len, int  flags)
 {
-	return recv(sock, buf, len, flags);
+	return recv(s, buf, len, flags);
 }
 
-int Csocket::s_listen(int sock, int backlog)
+int Csocket::s_listen(SOCKET s, int backlog)
 {
-	return listen(sock, backlog);
+	return listen(s, backlog);
 }
 
-int Csocket::s_accept(int sock, sockaddr *o_addr, socklen_t * io_size)
+SOCKET Csocket::s_accept(SOCKET s, sockaddr *o_addr, socklen_t * io_size)
 {
-	return (int)accept(sock, o_addr, io_size);
+	return accept(s, o_addr, io_size);
 }
 
-int Csocket::s_shutdown(int sock, int how )
+int Csocket::s_shutdown(SOCKET s, int how )
 {
-	return shutdown(sock, how);
+	return shutdown(s, how);
 }
 
-int Csocket::s_close(int sock, int how,int run_sd )
+int Csocket::s_close(SOCKET s, int how,int run_sd )
 {
 	int ret=0;
-	if(run_sd) ret= shutdown(sock, how);
+	if(run_sd) ret= shutdown(s, how);
 #if WINDOWS_OS
-	ret=closesocket(sock);
+	ret=closesocket(s);
 #endif
 	return ret;
 }

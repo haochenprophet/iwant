@@ -7,6 +7,7 @@
 #include <list>
 #include <array>
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
+#include<string.h>
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
