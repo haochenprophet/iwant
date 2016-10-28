@@ -2,9 +2,7 @@
 #define OS_H 
 
 #if WINDOWS_OS
-#include <winsock2.h>
 #include <windows.h>
-
 #endif//WINDOWS_OS
 
 #if LINUX_OS
