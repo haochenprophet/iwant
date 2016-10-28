@@ -2,6 +2,7 @@
 #define OS_H 
 
 #if WINDOWS_OS
+#include "Ws2tcpip.h"
 #include <windows.h>
 #endif//WINDOWS_OS
 

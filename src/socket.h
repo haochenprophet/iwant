@@ -22,7 +22,8 @@ namespace n_socket{
 		int s_listen(int sock,int backlog= SOMAXCONN);
 		int s_accept(int sock, sockaddr *o_addr= NULL, socklen_t * io_size= NULL);
 		int s_shutdown(int sock, int how=2);
-		int s_close(int sock, int how = 2);
+		int s_close(int sock, int how = 2, int run_sd = 1);
+		int client(const char *hostname, const char *service, char *sendbuf, int size);
 	};
 }
 using namespace n_socket;
