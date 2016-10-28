@@ -10,6 +10,7 @@ namespace n_socket{
 	public:
 		Csocket();
 		~Csocket();
+		int  socket( int af,int type,int protocol);
 	};
 
 }

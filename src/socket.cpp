@@ -12,6 +12,11 @@ Csocket::~Csocket()
 
 }
 
+int  Csocket::socket(int af, int type, int protocol)
+{
+	return 0;
+}
+
 #if SOCKET_TEST
 int main()
 {

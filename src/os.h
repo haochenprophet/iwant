@@ -5,6 +5,13 @@
 #include <windows.h>
 #endif//WINDOWS_OS
 
+#if LINUX_OS
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#endif
+
 #include "object.h"
 
 class Cos:public Object

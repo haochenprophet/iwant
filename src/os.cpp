@@ -6,7 +6,6 @@ Cos::Cos()
 	this->name = "Cos";
 	this->alias = "os";
 #if WINDOWS_OS
-	cout << "Cos::Cos()\n";
 	this->init_winsock();
 #endif
 }
