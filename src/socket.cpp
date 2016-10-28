@@ -118,7 +118,7 @@ int Csocket::client(const char *hostname, const char *service,char *sendbuf, int
 		return 1;
 	}
 
-	printf("Bytes Sent: %ld\n", i_ret);
+	printf("Bytes Sent: %d\n", i_ret);//test
 
 	return 0;
 }
