@@ -12,6 +12,14 @@ typedef SOCKET slen_t;
 typedef int  SOCKET;
 #endif
 
+#ifndef INVALID_SOCKET
+#define INVALID_SOCKET  -1
+#endif //INVALID_SOCKET
+
+#ifndef SOCKET_ERROR
+#define SOCKET_ERROR    -1
+#endif // !SOCKET_ERROR
+
 namespace n_socket{
 	class Csocket:public Cos
 	{
