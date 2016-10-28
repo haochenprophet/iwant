@@ -4,10 +4,6 @@
 #include "object.h"
 #include "os.h"
 
-#if WINDOWS_OS
-typedef SOCKET slen_t;
-#endif
-
 #if LINUX_OS
 typedef int  SOCKET;
 #endif
