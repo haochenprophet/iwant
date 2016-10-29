@@ -73,7 +73,7 @@ namespace n_object {
 		Object();//set object name
 		~Object();//clears
 
-		void myName();
+		void myName(Object *o=NULL);
 		void addMe(Object * o = NULL);//add obj to family
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();

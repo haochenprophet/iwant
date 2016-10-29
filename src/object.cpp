@@ -79,8 +79,13 @@ Object::~Object()
 	this->exist_list.clear();
 }
 
-void Object::myName()
+void Object::myName(Object *o)
 {
+	if(o)
+	{
+		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id << endl;
+		return;
+	}
 	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << endl;
 }
 
