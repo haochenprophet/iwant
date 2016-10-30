@@ -28,6 +28,8 @@ typedef int  SOCKET;
 #define SD_BOTH 2	//Shutdown both send and receive operations.
 #endif
 
+#define BUF_SIZE 0x1000 //default buf size
+
 namespace n_socket{
 
 	class Csocket:public Cos
@@ -53,6 +55,7 @@ namespace n_socket{
 		int s_shutdown(SOCKET s, int how=2);
 		int s_close(SOCKET s, int how = 2, int run_sd = 1);
 		int client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);
+		int server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);
 	};
 }
 using namespace n_socket;

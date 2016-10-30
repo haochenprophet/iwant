@@ -3,21 +3,20 @@
 
 Csocket::Csocket()
 {
-	this->sendbuf=NULL;
-	this->recvbuf=NULL;
-	this->s_buf_size=0;
-	this->r_buf_size=0;
-
 	this->name = "Csocket";
 	this->alias = "socket";
+
+	this->s_buf_size=this->allot(BUF_SIZE,this->sendbuf);
+	this->r_buf_size=this->allot(BUF_SIZE,this->recvbuf);
 }
 
 Csocket::~Csocket()
 {
-
+	this->delete_allot(this->sendbuf);
+	this->delete_allot(this->recvbuf);
 }
 
-SOCKET  Csocket::s_socket(int af, int type, int protocol)
+SOCKET Csocket::s_socket(int af, int type, int protocol)
 {
 	return  socket(af, type, protocol);
 }
@@ -60,7 +59,10 @@ int Csocket::s_shutdown(SOCKET s, int how )
 int Csocket::s_close(SOCKET s, int how,int run_sd )
 {
 	int ret=0;
-	if(run_sd) ret= shutdown(s, how);
+#if LINUX_OS
+	ret= shutdown(s, how);
+#endif
+
 #if WINDOWS_OS
 	ret=closesocket(s);
 #endif
@@ -131,9 +133,7 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 		// shutdown the connection since no more data will be sent
 		if(SOCKET_ERROR==shutdown(connect_socket, SD_SEND))
 		{
-	#if WINDOWS_OS
-			closesocket(connect_socket);
-	#endif
+			this->s_close(connect_socket);
 			return 1;
 		}
 	}
@@ -151,6 +151,119 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 	}while(i_ret>0);
 
 	if(i_ret>0) *io_r_size=i_ret;
+
+	this->s_close(connect_socket);
+	return 0;
+}
+
+
+int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
+{
+	int i_ret;
+	SOCKET listen_socket = INVALID_SOCKET;
+	SOCKET client_socket = INVALID_SOCKET;
+	struct addrinfo *result = NULL;
+	struct addrinfo hints;
+	int send_result;
+
+	memset(&hints, 0, sizeof(hints));
+	hints.ai_family = AF_INET;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_protocol = IPPROTO_TCP;
+	hints.ai_flags = AI_PASSIVE;
+
+	// Resolve the server address and port
+	i_ret = getaddrinfo(NULL, service, &hints, &result);
+	if (i_ret != 0 ) 
+	{
+		cout<<"error:getaddrinfo failed with error:"<<i_ret<<endl;
+		return 1;
+	}
+
+	// Create a SOCKET for connecting to server
+	listen_socket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+	if(listen_socket == INVALID_SOCKET) 
+	{
+		cout<<"error:socket failed with error.\n";
+		freeaddrinfo(result);
+		return 1;
+	}
+
+	// Setup the TCP listening socket
+	i_ret = bind( listen_socket, result->ai_addr, (int)result->ai_addrlen);
+	if (i_ret == SOCKET_ERROR) 
+	{
+		cout<<"error:bind failed with error.\n";
+		freeaddrinfo(result);
+		this->s_close(listen_socket);
+		return 1;
+	}
+
+	freeaddrinfo(result);
+
+	i_ret = listen(listen_socket, SOMAXCONN);
+	if (i_ret == SOCKET_ERROR) 
+	{
+		cout<<"error:listen failed with error.\n";
+		this->s_close(listen_socket);
+		return 1;
+	}
+
+	// Accept a client socket
+	client_socket = accept(listen_socket, NULL, NULL);
+	if (client_socket == INVALID_SOCKET) 
+	{
+		cout<<"error:accept failed with error.\n";
+		this->s_close(listen_socket);
+		return 1;
+	}
+
+	// No longer need server socket
+	this->s_close(listen_socket);
+
+	if(recvbuf&&*io_r_size>0)
+	{
+		// Receive until the peer shuts down the connection
+		do 
+		{
+			i_ret = recv(client_socket, recvbuf, *io_r_size, 0);
+			if (i_ret > 0)
+			{
+				cout<<"Bytes received:"<<i_ret<<endl;
+				// Echo the buffer back to the sender
+				send_result = send( client_socket, recvbuf, i_ret, 0 );
+				if (send_result == SOCKET_ERROR)
+				{
+					cout<<"error:send failed with error.\n";
+					this->s_close(client_socket);
+					return 1;
+				}
+				cout<<"Bytes sent:"<< send_result<<endl;
+			}
+			else if (i_ret == 0)
+				cout<<"Connection closing...\n";
+			else
+			{
+				cout<<"error:recv failed with error.\n";
+				this->s_close(client_socket);
+				return 1;
+			}
+
+		} while (i_ret > 0);
+		if(i_ret > 0) *io_r_size=i_ret;
+	}
+
+	// shutdown the connection since we're done
+	i_ret = shutdown(client_socket, SD_SEND);
+	if (i_ret == SOCKET_ERROR) 
+	{
+		cout<<"error:shutdown failed with error.\n";
+		this->s_close(client_socket);
+		return 1;
+	}
+
+	// cleanup
+	this->s_close(client_socket);
 
 	return 0;
 }

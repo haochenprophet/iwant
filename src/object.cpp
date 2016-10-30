@@ -278,6 +278,29 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	return ret;
 }
 
+int Object::allot(int size,void * o_addr)
+{
+	if (size) {
+		try {
+			o_addr = new char[size];//
+		}
+		catch (...)//fail
+		{
+			cout<< "error:Object::allot size=" << size << endl;
+		}
+	}
+
+	return size;
+}
+
+void Object::delete_allot(void *addr)
+{
+	if (addr) {
+		delete[](char*) addr;
+		addr = NULL;
+	}
+}
+
 long Object::my_id()
 {
 	return this->id;
