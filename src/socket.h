@@ -16,9 +16,30 @@ typedef int  SOCKET;
 #define SOCKET_ERROR    -1
 #endif // !SOCKET_ERROR
 
+#ifndef SD_RECEIVE
+#define SD_RECEIVE	0	//Shutdown receive operations.
+#endif
+
+#ifndef SD_SEND
+#define SD_SEND 1	//Shutdown send operations.
+#endif
+
+#ifndef SD_BOTH
+#define SD_BOTH 2	//Shutdown both send and receive operations.
+#endif
+
 namespace n_socket{
+
 	class Csocket:public Cos
 	{
+	private:
+		int s_buf_size;//sendbuf size
+		int r_buf_size;//recvbuf size
+	public:
+		char *hostname;
+		char *service;
+		char *sendbuf;
+		char *recvbuf;
 	public:
 		Csocket();
 		~Csocket();
@@ -31,7 +52,7 @@ namespace n_socket{
 		SOCKET s_accept(SOCKET s, sockaddr *o_addr= NULL, socklen_t * io_size= NULL);
 		int s_shutdown(SOCKET s, int how=2);
 		int s_close(SOCKET s, int how = 2, int run_sd = 1);
-		int client(const char *hostname, const char *service, char *sendbuf, int size);
+		int client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);
 	};
 }
 using namespace n_socket;

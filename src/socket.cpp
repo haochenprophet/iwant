@@ -3,6 +3,11 @@
 
 Csocket::Csocket()
 {
+	this->sendbuf=NULL;
+	this->recvbuf=NULL;
+	this->s_buf_size=0;
+	this->r_buf_size=0;
+
 	this->name = "Csocket";
 	this->alias = "socket";
 }
@@ -62,7 +67,7 @@ int Csocket::s_close(SOCKET s, int how,int run_sd )
 	return ret;
 }
 
-int Csocket::client(const char *hostname, const char *service,char *sendbuf, int size)
+int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
 	struct addrinfo hints, *result = NULL, *ptr = NULL;
 	SOCKET connect_socket = INVALID_SOCKET;
@@ -91,8 +96,7 @@ int Csocket::client(const char *hostname, const char *service,char *sendbuf, int
 		}
 
 		// Connect to server.
-		i_ret = connect(connect_socket, ptr->ai_addr, (int)ptr->ai_addrlen);
-		if (i_ret == SOCKET_ERROR)
+		if(SOCKET_ERROR == connect(connect_socket,ptr->ai_addr,(int)ptr->ai_addrlen))
 		{
 			this->s_close(connect_socket);
 			connect_socket = INVALID_SOCKET;
@@ -110,15 +114,43 @@ int Csocket::client(const char *hostname, const char *service,char *sendbuf, int
 	}
 
 	// Send an initial buffer
-	i_ret = send(connect_socket, sendbuf, size, 0);
-	if (i_ret == SOCKET_ERROR)
+	if(sendbuf&&*io_s_size)
 	{
-		cout<<"error:send failed with error.\n";
-		this->s_close(connect_socket);
-		return 1;
-	}
 
-	printf("Bytes Sent: %d\n", i_ret);//test
+		i_ret = send(connect_socket, sendbuf,*io_s_size, 0);
+		if (i_ret == SOCKET_ERROR)
+		{
+			cout<<"error:send failed with error.\n";
+			this->s_close(connect_socket);
+			return 1;
+		}
+
+		cout<<"Bytes Sent:"<<i_ret<<endl;//test
+		*io_s_size=i_ret;
+
+		// shutdown the connection since no more data will be sent
+		if(SOCKET_ERROR==shutdown(connect_socket, SD_SEND))
+		{
+	#if WINDOWS_OS
+			closesocket(connect_socket);
+	#endif
+			return 1;
+		}
+	}
+	// Receive until the peer closes the connection
+	if(!recvbuf||*io_r_size==0)	return 0;
+
+	do{
+		i_ret = recv(connect_socket, recvbuf,*io_r_size, 0);
+		if(i_ret > 0)
+			cout<<"Bytes received:"<<i_ret<<endl;
+		else if(i_ret == 0 )
+			cout<<"Connection closed\n";
+		else
+			cout<<"recv failed with error: %d\n";
+	}while(i_ret>0);
+
+	if(i_ret>0) *io_r_size=i_ret;
 
 	return 0;
 }
