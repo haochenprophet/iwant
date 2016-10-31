@@ -5,15 +5,18 @@ Csocket::Csocket()
 {
 	this->name = "Csocket";
 	this->alias = "socket";
-
-	this->s_buf_size=this->allot(BUF_SIZE,this->sendbuf);
-	this->r_buf_size=this->allot(BUF_SIZE,this->recvbuf);
+	this->sendbuf = NULL;
+	this->recvbuf = NULL;
+	this->s_buf_size=this->allot(BUF_SIZE,(void **)&this->sendbuf);
+	this->r_buf_size=this->allot(BUF_SIZE, (void **)&this->recvbuf);
+	this->sendbuf[0] = 0;
+	this->recvbuf[0] = 0;
 }
 
 Csocket::~Csocket()
 {
-	this->delete_allot(this->sendbuf);
-	this->delete_allot(this->recvbuf);
+	this->delete_allot((void **)&this->sendbuf);
+	this->delete_allot((void**)&this->recvbuf);
 }
 
 SOCKET Csocket::s_socket(int af, int type, int protocol)

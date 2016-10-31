@@ -99,8 +99,8 @@ namespace n_object {
 		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
-		int allot(int size,void * o_addr);
-		void delete_allot(void *addr);
+		int allot(int size,void ** o_addr);
+		void delete_allot(void **addr);
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 

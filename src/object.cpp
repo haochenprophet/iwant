@@ -278,11 +278,11 @@ int Object::execute(string fun_name, void * p, bool new_thread) //execute this->
 	return ret;
 }
 
-int Object::allot(int size,void * o_addr)
+int Object::allot(int size,void * *o_addr)
 {
 	if (size) {
 		try {
-			o_addr = new char[size];//
+			*o_addr = new char[size];//
 		}
 		catch (...)//fail
 		{
@@ -293,11 +293,11 @@ int Object::allot(int size,void * o_addr)
 	return size;
 }
 
-void Object::delete_allot(void *addr)
+void Object::delete_allot(void **addr)
 {
 	if (addr) {
-		delete[](char*) addr;
-		addr = NULL;
+		delete[](char*) (*addr);
+		*addr = NULL;
 	}
 }
 
