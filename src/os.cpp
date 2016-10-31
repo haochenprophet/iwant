@@ -33,6 +33,7 @@ int Cos::init_winsock() //!=0 init fail
 	win_wsa_startup = 1;
 	return 0;
 }
+
 void Cos::exit_winsock()
 {
 	if(win_wsa_startup) WSACleanup();

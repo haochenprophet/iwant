@@ -16,7 +16,7 @@ Csocket::Csocket()
 Csocket::~Csocket()
 {
 	this->delete_allot((void **)&this->sendbuf);
-	this->delete_allot((void**)&this->recvbuf);
+	this->delete_allot((void **)&this->recvbuf);
 }
 
 SOCKET Csocket::s_socket(int af, int type, int protocol)
