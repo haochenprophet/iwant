@@ -277,10 +277,17 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 }
 
 #if SOCKET_TEST
+#include "all_h_include.h"
 int main()
 {
 	Csocket s;
 	cout << "Csocket main !\n";
+	
+	Ccout o;
+	o.func("Ccout test !");
+
+	Cecho e;
+	e.func("Cecho test!");
 
 	return 0;
 }
