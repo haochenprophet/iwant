@@ -2,6 +2,6 @@
 
 Csys::Csys()
 {
-	this->name = "system";
+	this->name = "Csys";
 	this->alias = "sys";
 }
