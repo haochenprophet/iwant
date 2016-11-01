@@ -284,10 +284,10 @@ int main()
 	cout << "Csocket main !\n";
 	
 	Ccout o;
-	o.func("Ccout test !");
+	o.func((void *)"Ccout test !");
 
 	Cecho e;
-	e.func("Cecho test!");
+	e.func((void *)"Cecho test!");
 
 	return 0;
 }
