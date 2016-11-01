@@ -140,20 +140,22 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 			return 1;
 		}
 	}
+
 	// Receive until the peer closes the connection
-	if(!recvbuf||*io_r_size==0)	return 0;
+	if(recvbuf&&*io_r_size)
+	{
+		do{
+			i_ret = recv(connect_socket, recvbuf,*io_r_size, 0);
+			if(i_ret > 0)
+				cout<<"Bytes received:"<<i_ret<<endl;
+			else if(i_ret == 0 )
+				cout<<"Connection closed\n";
+			else
+				cout<<"recv failed with error: %d\n";
+		}while(i_ret>0);
 
-	do{
-		i_ret = recv(connect_socket, recvbuf,*io_r_size, 0);
-		if(i_ret > 0)
-			cout<<"Bytes received:"<<i_ret<<endl;
-		else if(i_ret == 0 )
-			cout<<"Connection closed\n";
-		else
-			cout<<"recv failed with error: %d\n";
-	}while(i_ret>0);
-
-	if(i_ret>0) *io_r_size=i_ret;
+		if(i_ret>0) *io_r_size=i_ret;
+	}
 
 	this->s_close(connect_socket);
 	return 0;
@@ -244,7 +246,6 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 			}
 
 		} while (i_ret > 0);
-
 	}
 
 	if (sendbuf&&*io_s_size)
