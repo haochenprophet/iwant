@@ -1,4 +1,4 @@
-#define BUILD_ME  01
+#define BUILD_ME  0//1
 #if BUILD_ME	// this define for buuid the file
 
 #define WIN32_LEAN_AND_MEAN

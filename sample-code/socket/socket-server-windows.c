@@ -1,4 +1,4 @@
-#define BUILD_ME  0//1
+#define BUILD_ME  01
 #if BUILD_ME	// this define for buuid the file
 
 #undef UNICODE

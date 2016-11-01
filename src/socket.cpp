@@ -159,7 +159,6 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 	return 0;
 }
 
-
 int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
 	int i_ret;
@@ -233,15 +232,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 			if (i_ret > 0)
 			{
 				cout<<"Bytes received:"<<i_ret<<endl;
-				// Echo the buffer back to the sender
-				send_result = send( client_socket, recvbuf, i_ret, 0 );
-				if (send_result == SOCKET_ERROR)
-				{
-					cout<<"error:send failed with error.\n";
-					this->s_close(client_socket);
-					return 1;
-				}
-				cout<<"Bytes sent:"<< send_result<<endl;
+				*io_r_size = i_ret;
 			}
 			else if (i_ret == 0)
 				cout<<"Connection closing...\n";
@@ -253,7 +244,20 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 			}
 
 		} while (i_ret > 0);
-		if(i_ret > 0) *io_r_size=i_ret;
+
+	}
+
+	if (sendbuf&&*io_s_size)
+	{
+		send_result = send(client_socket, sendbuf, *io_s_size, 0);
+		if (send_result == SOCKET_ERROR)
+		{
+			cout << "error:send failed with error.\n";
+			this->s_close(client_socket);
+			return 1;
+		}
+		cout << "Bytes sent:" << send_result << endl;
+		*io_s_size = send_result;
 	}
 
 	// shutdown the connection since we're done
