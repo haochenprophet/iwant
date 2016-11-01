@@ -1,3 +1,6 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
+
 #ifndef UNICODE
 #define UNICODE
 #endif
@@ -63,3 +66,5 @@ int main()
     WSACleanup();
     return 0;
 }
+
+#endif

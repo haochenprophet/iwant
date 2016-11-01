@@ -1,3 +1,6 @@
+#define BUILD_ME  01
+#if BUILD_ME	// this define for buuid the file
+
 #define WIN32_LEAN_AND_MEAN
 
 #include <windows.h>
@@ -123,3 +126,5 @@ int __cdecl main(int argc, char **argv)
 
     return 0;
 }
+
+#endif

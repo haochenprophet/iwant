@@ -1,3 +1,6 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
+
 #undef UNICODE
 
 #define WIN32_LEAN_AND_MEAN
@@ -135,3 +138,5 @@ int __cdecl main(void)
 
     return 0;
 }
+
+#endif

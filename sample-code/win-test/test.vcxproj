@@ -146,7 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\socket\socket-windows.c" />
+    <ClCompile Include="..\socket\socket-client-windows.c" />
+    <ClCompile Include="..\socket\socket-send-windows.c" />
+    <ClCompile Include="..\socket\socket-server-windows.c" />
+    <ClCompile Include="..\socket\socket-windows-bind.c" />
+    <ClCompile Include="..\socket\socket-windows.c" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
