@@ -299,6 +299,7 @@ int Object::allot(int size,void * *o_addr)
 		catch (...)//fail
 		{
 			cout<< "error:Object::allot size=" << size << endl;
+			return 0;
 		}
 	}
 
