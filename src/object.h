@@ -41,9 +41,9 @@ namespace n_object {
 		MyFunc p_func;
 	public:
 		Cmyfunc(string fun_name, MyFunc func);
-		bool isMe(char *identifier);
-		bool isMe(string * identifier);
-		bool isMe(string identifier);
+		int isMe(char *identifier);
+		int isMe(string * identifier);
+		int isMe(string identifier);
 		int runMe(void *p, bool new_thread=false);
 	};
 
@@ -78,10 +78,10 @@ namespace n_object {
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();
 
-		bool isMe(char *identifier);
-		bool isMe(string * identifier);
-		bool isMe(string identifier);
-		bool isMe(int id);
+		int isMe(char *identifier);
+		int isMe(string * identifier);
+		int isMe(string identifier);
+		int isMe(int id);
 
 		bool add_ex_func(string fun_name, MyFunc func);
 		void add_memory(Object *m);

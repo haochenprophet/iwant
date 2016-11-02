@@ -10,7 +10,7 @@ Csocket::Csocket()
 	this->s_buf_size=this->allot(BUF_SIZE,(void **)&this->sendbuf);
 	this->r_buf_size=this->allot(BUF_SIZE, (void **)&this->recvbuf);
 	if (this->sendbuf) memset(this->sendbuf, 0, this->s_buf_size);//clear buf
-	if(this->recvbuf)  memset(this->recvbuf, 0, this->r_buf_size);
+	if (this->recvbuf) memset(this->recvbuf, 0, this->r_buf_size);
 	this->io_s_size = this->s_buf_size;
 	this->io_r_size = this->r_buf_size;
 	this->service = DEFAULT_PORT;

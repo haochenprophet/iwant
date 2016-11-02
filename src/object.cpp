@@ -15,19 +15,25 @@ Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 	this->p_func = func;
 }
 
-bool Cmyfunc::isMe(char *identifier)
+int Cmyfunc::isMe(char *identifier)
 {
-	return this->name == identifier || this->alias == identifier;
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
 }
 
-bool Cmyfunc::isMe(string * identifier)
+int Cmyfunc::isMe(string * identifier)
 {
-	return this->name == *identifier || this->alias == *identifier;
+	if (this->name == *identifier) return (int)this->name.length();
+	if (this->alias == *identifier) return (int)this->alias.length();
+	return 0;
 }
 
-bool Cmyfunc::isMe(string identifier)
+int Cmyfunc::isMe(string identifier)
 {
-	return this->name == identifier||this->alias==identifier;
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
 }
 
 int Cmyfunc::runMe(void *p, bool new_thread)
@@ -114,25 +120,31 @@ void Object::remove_exist_family()
 	}
 }
 
-bool Object::isMe(char *identifier)
+int Object::isMe(char *identifier)
 {
-	return this->name == identifier || this->alias == identifier;
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
 }
 
-bool Object::isMe(string * identifier)
+int Object::isMe(string * identifier)
 {
-	return this->name == *identifier||this->alias==*identifier;
+	if (this->name ==* identifier) return (int)this->name.length();
+	if (this->alias == *identifier) return (int)this->alias.length();
+	return 0;
 }
 
-bool Object::isMe(string identifier)
+int Object::isMe(string identifier)
 {
-	return this->name == identifier || this->alias == identifier;
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
 }
 
-bool Object::isMe(int id)
+int Object::isMe(int id)
 {
-	if (this->id == id) return true;
-	return false;
+	if (this->id == id) return (int)this->name.length();
+	return 0;
 }
 
 bool Object::add_ex_func(string fun_name, MyFunc func)
