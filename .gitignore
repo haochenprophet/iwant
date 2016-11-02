@@ -6,6 +6,8 @@ winIwant/.vs/*
 *VC.db
 *VC.VC.opendb
 src/iwant
+src/server
+src/client
 src/*.o
 sample-code/win-test/Debug*/*
 sample-code/win-test/x64/*

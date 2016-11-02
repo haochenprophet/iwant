@@ -298,7 +298,7 @@ void Csocket::display()
 #if SOCKET_TEST
 #include "all_h_include.h"
 
-#define SERVER_SOCKET 0//1
+#define SERVER_SOCKET 01
 
 #if SERVER_SOCKET
 	#define CLIENT_SOCKET 0
