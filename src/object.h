@@ -100,6 +100,7 @@ namespace n_object {
 		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
 		int allot(int size,void ** o_addr);
+		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
 		void delete_allot(void **addr);
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
