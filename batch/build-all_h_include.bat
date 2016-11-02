@@ -14,4 +14,4 @@ for /F " eol=;" %%s in (dir.log) do @echo #include "%%s" >>..\src\all_h_include.
 @echo. >>..\src\all_h_include.h
 @echo #endif >>..\src\all_h_include.h
 
-@if exist dir.log del/F dir.log
+@if exist dir.log del /F dir.log
