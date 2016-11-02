@@ -311,15 +311,15 @@ int Object::allot(int old_size, void ** o_addr, int new_size, bool mem_cpy)
 	if (old_size >= new_size) return old_size;
 	new_size=this->allot(new_size,(void **)&n_addr);
 	if (!n_addr||new_size<=old_size) return old_size;
-	if(mem_cpy) memcpy(n_addr, *o_addr, old_size);
-	this->delete_allot(o_addr);//free  old addr memory
+	if(mem_cpy&&*o_addr) memcpy(n_addr, *o_addr, old_size);
+	this->delete_allot(o_addr);//free  old o_addr memory
 	*o_addr = n_addr;
 	return new_size;
 }
 
 void Object::delete_allot(void **addr)
 {
-	if (addr) {
+	if (addr&&*addr) {
 		delete[](char*) (*addr);
 		*addr = NULL;
 	}
