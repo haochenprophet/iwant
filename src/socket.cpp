@@ -9,8 +9,11 @@ Csocket::Csocket()
 	this->recvbuf = NULL;
 	this->s_buf_size=this->allot(BUF_SIZE,(void **)&this->sendbuf);
 	this->r_buf_size=this->allot(BUF_SIZE, (void **)&this->recvbuf);
-	this->sendbuf[0] = 0;
-	this->recvbuf[0] = 0;
+	if (this->sendbuf) memset(this->sendbuf, 0, this->s_buf_size);//clear buf
+	if(this->recvbuf)  memset(this->recvbuf, 0, this->r_buf_size);
+	this->io_s_size = this->s_buf_size;
+	this->io_r_size = this->r_buf_size;
+	this->service = DEFAULT_PORT;
 }
 
 Csocket::~Csocket()
@@ -161,6 +164,11 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 	return 0;
 }
 
+int Csocket::client()
+{
+	return this->client(this->hostname, this->service, this->sendbuf, &this->io_s_size, this->recvbuf, &this->io_r_size);
+}
+
 int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
 	int i_ret;
@@ -276,18 +284,61 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	return 0;
 }
 
+int Csocket::server()
+{
+	return this->server(this->service, this->sendbuf, &this->io_s_size, this->recvbuf, &this->io_r_size);
+}
+
+void Csocket::display()
+{
+	cout <<"sendbuf="<<this->sendbuf << endl;
+	cout << "recvbuf=" << this->recvbuf << endl;
+}
+
 #if SOCKET_TEST
 #include "all_h_include.h"
+
+#define SERVER_SOCKET 0//1
+
+#if SERVER_SOCKET
+	#define CLIENT_SOCKET 0
+#else
+	#define CLIENT_SOCKET 1
+#endif
+
 int main()
 {
 	Csocket s;
+	Csocket c;
 	cout << "Csocket main !\n";
-	
-	Ccout o;
-	o.func((void *)"Ccout test !");
 
-	Cecho e;
-	e.func((void *)"Cecho test!");
+#if SERVER_SOCKET
+	s.sendbuf[0] = 'S';
+	s.sendbuf[1] = 'E';
+	s.sendbuf[2] = 'R';
+	s.sendbuf[3] = 'V';
+	s.sendbuf[4] = 'E';
+	s.sendbuf[5] = 'R';
+	s.sendbuf[6] = '\0';
+	s.io_s_size = (int)strlen(s.sendbuf);
+	s.server();
+	s.display();
+#endif
+
+#if CLIENT_SOCKET
+	char hostname[] = "127.0.0.1";
+	c.hostname = hostname;
+	c.sendbuf[0] = 'C';
+	c.sendbuf[1] = 'L';
+	c.sendbuf[2] = 'I';
+	c.sendbuf[3] = 'E';
+	c.sendbuf[4] = 'N';
+	c.sendbuf[5] = 'T';
+	c.sendbuf[6] = '\0';
+	c.io_s_size = (int)strlen(c.sendbuf);
+	c.client();
+	c.display();
+#endif
 
 	return 0;
 }

@@ -29,7 +29,7 @@ typedef int  SOCKET;
 #endif
 
 #define BUF_SIZE 0x1000 //default buf size
-
+#define DEFAULT_PORT "66666"
 namespace n_socket{
 
 	class Csocket:public Cos
@@ -42,6 +42,8 @@ namespace n_socket{
 		char *service;
 		char *sendbuf;
 		char *recvbuf;
+		int io_s_size;//input /output send size
+		int io_r_size;//input /output recv size
 	public:
 		Csocket();
 		~Csocket();
@@ -55,7 +57,10 @@ namespace n_socket{
 		int s_shutdown(SOCKET s, int how=2);
 		int s_close(SOCKET s, int how = 2, int run_sd = 1);
 		int client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);
+		int client();
 		int server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);
+		int server();
+		void display();
 	};
 }
 using namespace n_socket;
