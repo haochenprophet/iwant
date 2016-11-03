@@ -146,7 +146,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\echo.cpp" />
+    <ClCompile Include="..\..\src\esc.cpp" />
     <ClCompile Include="..\..\src\exec.cpp" />
+    <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
@@ -165,7 +167,9 @@
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\echo.h" />
+    <ClInclude Include="..\..\src\esc.h" />
     <ClInclude Include="..\..\src\exec.h" />
+    <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />

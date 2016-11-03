@@ -312,6 +312,8 @@ int main()
 	Csocket c;
 	cout << "Csocket main !\n";
 
+	//	Cexit e;e.func();//test Cexit ok
+
 #if SERVER_SOCKET
 	s.sendbuf[0] = 'S';
 	s.sendbuf[1] = 'E';

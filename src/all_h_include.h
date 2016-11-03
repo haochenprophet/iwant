@@ -3,7 +3,9 @@
 
 #include "cout.h" 
 #include "echo.h" 
+#include "esc.h" 
 #include "exec.h" 
+#include "exit.h" 
 #include "home.h" 
 #include "iwant.h" 
 #include "main.h" 
