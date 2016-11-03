@@ -13,7 +13,7 @@ Csocket::Csocket()
 	if (this->recvbuf) memset(this->recvbuf, 0, this->r_buf_size);
 	this->io_s_size = this->s_buf_size;
 	this->io_r_size = this->r_buf_size;
-	this->service = DEFAULT_PORT;
+	this->service = (char *)DEFAULT_PORT;
 }
 
 Csocket::~Csocket()
