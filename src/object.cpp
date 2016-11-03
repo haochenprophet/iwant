@@ -242,7 +242,7 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 			else ret = op->execute();
 		}
 	}
-	if (ret == -1 && fun_name&&fun_name->empty() == false) ret = this->execute("runcmd", (void *)fun_name->c_str(), new_thread); //auto run extern commant
+	if (ret == -1 && fun_name&&fun_name->empty() == false) ret = this->execute((char*)"runcmd", (void *)fun_name->c_str(), new_thread); //auto run extern commant
 	return ret;
 }
 
