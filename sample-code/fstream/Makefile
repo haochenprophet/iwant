@@ -1,11 +1,11 @@
-src := $(shell ls *.cpp)
-objs := $(patsubst %.cpp ,%.o , $(src) )
+ 
+all:filebuf-open.out  fstream.out
 
-fstream: $(objs)
-	g++ -O -o $@ $^
+fstream.out: fstream.cpp 
+	g++ -o $@ $^
 
-%.O:%.cpp
-	g++ -O -c -o $@ $< 
+filebuf-open.out:filebuf-open.cpp 
+	g++ -o $@ $^
 	
 clean:
-	rm -f fstream *.o *~*
+	rm -f fstream *.o *~* *.txt *.out
