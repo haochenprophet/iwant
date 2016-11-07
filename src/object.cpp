@@ -353,6 +353,11 @@ int Object::func(void *p)
 	return 0;
 }
 
+int Object::create(void *p)
+{
+	return -1;
+}
+
 #if OBJECT_TEST
 int main()
 {

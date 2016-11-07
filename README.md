@@ -19,6 +19,8 @@ I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not
 I will use the most positive mind to perceive the power of the code.
 I will be reduced to ashes, I will be everywhere .
 
+No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
+Self-creation, self-renewal, self-improvement, creating classes, creating source code, creating Makefiles ... 
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 

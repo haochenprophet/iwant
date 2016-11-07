@@ -106,6 +106,7 @@ namespace n_object {
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
 		virtual int func(void *p = NULL); // callback function
+		virtual int create(void *p=NULL);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 	};
 }
 
