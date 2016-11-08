@@ -65,6 +65,7 @@ Object::Object()
 	this->id = ++object_id;
 	this->status=0;
 	this->action=0;
+	this->locate = 0;
 	this->name = "Object";
 	this->alias = this->name;
 	this->name += std::to_string(object_id);//change name for nam +=id
@@ -213,6 +214,16 @@ int Object::my_ex_func()
 	}
 	cout << this->name << " my_ex_func count : " << count << endl;
 	return count;
+}
+
+void Object::my_temp()
+{
+	if (this->temp.length())	cout << this->temp << endl;
+}
+
+void Object::my_syntax()
+{
+	if (this->syntax.length())	cout << this->syntax << endl;
 }
 
 int Object::execute(Object *o, string obj_name, string fun_name, void * p, bool new_thread)

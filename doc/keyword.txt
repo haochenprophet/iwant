@@ -1,8 +1,9 @@
 keyword:  class
 
- [template-spec]   
- class [ms-decl-spec] [tag [: base-list ]]  
-{  
-   member-list  
+ [template_spec]   
+ class [decl_spec] [tag [: base_list ]]  
+{
+	[member_list]
+	[func_list]
 } [declarators];  
 [ class ] tag declarators;

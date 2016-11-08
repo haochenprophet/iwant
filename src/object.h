@@ -9,6 +9,9 @@
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
 #include<string.h>
 
+#include "temp_def.h"
+#include "syntax_def.h"
+
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::list;
@@ -61,6 +64,10 @@ namespace n_object {
 		string name; //object name
 		string alias;//Alias object name
 
+		string syntax;//this for keyword object
+		string temp;//keyword template 
+		long locate;//0 start , -1 end , n :locate value 
+
 		list<void *> family;//class list
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
 
@@ -91,6 +98,8 @@ namespace n_object {
 		long my_id();
 		int my_family();//list my_family
 		int my_ex_func();//list my_ex_func
+		void my_temp();
+		void my_syntax();
 
 		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
 		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);

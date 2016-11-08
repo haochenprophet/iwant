@@ -159,8 +159,10 @@
     <ClCompile Include="..\..\src\object.cpp" />
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\socket.cpp" />
+    <ClCompile Include="..\..\src\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
+    <ClCompile Include="..\..\src\temp.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\os.cpp" />
   </ItemGroup>
@@ -181,8 +183,12 @@
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\socket.h" />
+    <ClInclude Include="..\..\src\syntax.h" />
+    <ClInclude Include="..\..\src\syntax_def.h" />
     <ClInclude Include="..\..\src\sys.h" />
     <ClInclude Include="..\..\src\task.h" />
+    <ClInclude Include="..\..\src\temp.h" />
+    <ClInclude Include="..\..\src\temp_def.h" />
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\os.h" />
   </ItemGroup>

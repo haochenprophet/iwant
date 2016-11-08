@@ -6,6 +6,7 @@ Cmain::Cmain()
 {
 	this->name = "Cmain";
 	this->alias ="main";
+	this->temp = MAIN_TEMP;
 }
 
 #if MAIN_TEST

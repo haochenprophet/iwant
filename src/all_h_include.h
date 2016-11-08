@@ -17,8 +17,12 @@
 #include "os.h" 
 #include "run.h" 
 #include "socket.h" 
+#include "syntax.h" 
+#include "syntax_def.h" 
 #include "sys.h" 
 #include "task.h" 
+#include "temp.h" 
+#include "temp_def.h" 
 #include "url.h" 
  
 #endif 
