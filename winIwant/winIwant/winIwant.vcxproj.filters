@@ -69,6 +69,9 @@
     <ClCompile Include="..\..\src\exit.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\class.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -126,6 +129,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\exit.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\class.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

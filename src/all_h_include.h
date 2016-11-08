@@ -1,6 +1,7 @@
 #ifndef ALL_H_INCLUDE 
 #define ALL_H_INCLUDE 
 
+#include "class.h" 
 #include "cout.h" 
 #include "echo.h" 
 #include "esc.h" 

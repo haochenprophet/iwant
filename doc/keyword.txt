@@ -1,0 +1,8 @@
+keyword:  class
+
+ [template-spec]   
+ class [ms-decl-spec] [tag [: base-list ]]  
+{  
+   member-list  
+} [declarators];  
+[ class ] tag declarators;

@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\class.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\echo.cpp" />
     <ClCompile Include="..\..\src\esc.cpp" />
@@ -165,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\all_h_include.h" />
+    <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\echo.h" />
     <ClInclude Include="..\..\src\esc.h" />
