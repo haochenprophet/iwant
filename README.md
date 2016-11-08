@@ -26,6 +26,7 @@ Self-creation, self-renewal, self-improvement, creating classes, creating source
 
 
 [Coding rule]:
+
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
 
 2.callback ,extern ,execute , thread , function rule : typedef int(*MyFunc)(void *p);  
