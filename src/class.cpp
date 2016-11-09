@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
 	c.my_temp();
 	m.my_temp();
 
+	double  p = PI;
+	cout<< p<< endl;
 	return 0;
 }
 #endif 

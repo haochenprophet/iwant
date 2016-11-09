@@ -65,7 +65,7 @@ Object::Object()
 	this->id = ++object_id;
 	this->status=0;
 	this->action=0;
-	this->locate = 0;
+	this->locate = -1;
 	this->name = "Object";
 	this->alias = this->name;
 	this->name += std::to_string(object_id);//change name for nam +=id

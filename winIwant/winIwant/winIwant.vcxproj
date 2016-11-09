@@ -153,6 +153,8 @@
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\make.cpp" />
+    <ClCompile Include="..\..\src\math.cpp" />
     <ClCompile Include="..\..\src\myMemory.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
     <ClCompile Include="..\..\src\new.cpp" />
@@ -178,6 +180,8 @@
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\make.h" />
+    <ClInclude Include="..\..\src\math.h" />
     <ClInclude Include="..\..\src\myMemory.h" />
     <ClInclude Include="..\..\src\net.h" />
     <ClInclude Include="..\..\src\new.h" />
