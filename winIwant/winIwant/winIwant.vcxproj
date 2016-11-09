@@ -161,6 +161,7 @@
     <ClCompile Include="..\..\src\socket.cpp" />
     <ClCompile Include="..\..\src\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
+    <ClCompile Include="..\..\src\tag.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
     <ClCompile Include="..\..\src\temp.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="..\..\src\syntax.h" />
     <ClInclude Include="..\..\src\syntax_def.h" />
     <ClInclude Include="..\..\src\sys.h" />
+    <ClInclude Include="..\..\src\tag.h" />
     <ClInclude Include="..\..\src\task.h" />
     <ClInclude Include="..\..\src\temp.h" />
     <ClInclude Include="..\..\src\temp_def.h" />

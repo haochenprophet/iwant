@@ -5,6 +5,7 @@ Cclass::Cclass()
 	this->name = "Cclass";
 	this->alias = "class";
 	this->syntax = CLASS_SYNTAX;
+	this->temp = CLASS_H_TEMP;
 }
 
 int Cclass::func(void *p)
@@ -20,10 +21,22 @@ int Cclass::create(void *p)
 	return 0;
 }
 
-#define CLASS_TEST 0//1
+#ifndef CLASS_TEST
+#define CLASS_TEST 01
+#endif
+
 #if CLASS_TEST
+#include "all_h_include.h"
 int main(int argc, char *argv[])
 {
+	cout << "CLASS_TEST\n";
+
+	Cclass c;
+	Cmain m;
+
+	c.my_syntax();
+	c.my_temp();
+	m.my_temp();
 
 	return 0;
 }

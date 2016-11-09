@@ -1,4 +1,6 @@
-keyword:  class
+1. [Escape ]: like c language use \ ,% .
+
+2.[keyword]:  class
 
  [template_spec]   
  class [decl_spec] [tag [: base_list ]]  
@@ -7,3 +9,6 @@ keyword:  class
 	[func_list]
 } [declarators];  
 [ class ] tag declarators;
+
+3.[keyword]:  TAG[%d]
+ [TAG];TAG%d;

@@ -1,5 +1,7 @@
 #include "socket.h"
-#define SOCKET_TEST	01
+#ifndef SOCKET_TEST
+#define SOCKET_TEST	0//1
+#endif // !SOCKET_TEST
 
 Csocket::Csocket()
 {
