@@ -51,3 +51,6 @@ request :Need C + + compiler
 2. how to building in windows:
 	step 1: install vs 2015 or least .
 	step 2: using the vs 2015 open "winIwant.sln"
+
+[sample-code ] :
+1.The sample-code for learning, reference and testing purposes only,do not use for other purposes .
