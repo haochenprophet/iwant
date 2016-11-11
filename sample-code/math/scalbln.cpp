@@ -11,6 +11,6 @@ int main ()
   param = 1.50;
   n = 4L;
   result = scalbln (param , n);
-  printf ("%f * %d^%d = %f\n", param, FLT_RADIX, n, result);
+  printf ("%f * %d^%ld = %f\n", param, FLT_RADIX, n, result);
   return 0;
 }
