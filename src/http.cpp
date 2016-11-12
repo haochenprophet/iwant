@@ -4,5 +4,5 @@ Chttp::Chttp()
 {
 	this->name = "Chttp";
 	this->alias = "http";
-	this->uri.
+	this->uri.syntax =HTTP_URI_SYNTAX;
 }
