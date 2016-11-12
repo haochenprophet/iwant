@@ -8,6 +8,7 @@
 #include "exec.h" 
 #include "exit.h" 
 #include "home.h" 
+#include "http.h" 
 #include "iwant.h" 
 #include "main.h" 
 #include "make.h" 
@@ -26,6 +27,7 @@
 #include "task.h" 
 #include "temp.h" 
 #include "temp_def.h" 
+#include "uri.h" 
 #include "url.h" 
  
 #endif 
