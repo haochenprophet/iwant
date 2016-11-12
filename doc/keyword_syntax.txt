@@ -4,7 +4,12 @@
 
 2.Keywords
 
-2.1 class syntax:
+2.1 make syntax:
+	target:[dependencies] [...]
+		commands
+		[...]
+
+2.2 class syntax:
 
 	 [template_spec]   
 	 class [decl_spec] [tag [: base_list ]]  
@@ -14,6 +19,6 @@
 	} [declarators];  
 	[ class ] tag declarators;
 
-2.2 TAG[%d] syntax:
+2.3 TAG[%d] syntax:
 
- 	[TAG];TAG%d;
+ 	[TAG];TAG%d;tag;tag%d

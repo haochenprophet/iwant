@@ -33,13 +33,19 @@ int main(int argc, char *argv[])
 
 	Cclass c;
 	Cmain m;
+	Cmake mk;
+	Ctag t;
 
 	c.my_syntax();
 	c.my_temp();
 	m.my_temp();
 
+	mk.my_syntax();
+	t.my_syntax();
+
 	double  p = PI;
 	cout<< p<< endl;
+	
 	return 0;
 }
 #endif 
