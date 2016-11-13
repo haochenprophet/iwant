@@ -1,0 +1,1712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head><title>Writing I-Ds and RFCs using XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Writing I-Ds and RFCs using XML">
+<meta name="keywords" content="RFC, Request for Comments, I-D, Internet-Draft, XML, Extensible Markup Language">
+<meta name="generator" content="xml2rfc v1.36 (http://xml.resource.org/)">
+<style type="text/css"><!--
+        body {
+                font-family: verdana, charcoal, helvetica, arial, sans-serif;
+                font-size: small; color: #000; background-color: #FFF;
+                margin: 2em;
+        }
+        h1, h2, h3, h4, h5, h6 {
+                font-family: helvetica, monaco, "MS Sans Serif", arial, sans-serif;
+                font-weight: bold; font-style: normal;
+        }
+        h1 { color: #900; background-color: transparent; text-align: right; }
+        h3 { color: #333; background-color: transparent; }
+
+        td.RFCbug {
+                font-size: x-small; text-decoration: none;
+                width: 30px; height: 30px; padding-top: 2px;
+                text-align: justify; vertical-align: middle;
+                background-color: #000;
+        }
+        td.RFCbug span.RFC {
+                font-family: monaco, charcoal, geneva, "MS Sans Serif", helvetica, verdana, sans-serif;
+                font-weight: bold; color: #666;
+        }
+        td.RFCbug span.hotText {
+                font-family: charcoal, monaco, geneva, "MS Sans Serif", helvetica, verdana, sans-serif;
+                font-weight: normal; text-align: center; color: #FFF;
+        }
+
+        table.TOCbug { width: 30px; height: 15px; }
+        td.TOCbug {
+                text-align: center; width: 30px; height: 15px;
+                color: #FFF; background-color: #900;
+        }
+        td.TOCbug a {
+                font-family: monaco, charcoal, geneva, "MS Sans Serif", helvetica, sans-serif;
+                font-weight: bold; font-size: x-small; text-decoration: none;
+                color: #FFF; background-color: transparent;
+        }
+
+        td.header {
+                font-family: arial, helvetica, sans-serif; font-size: x-small;
+                vertical-align: top; width: 33%;
+                color: #FFF; background-color: #666;
+        }
+        td.author { font-weight: bold; font-size: x-small; margin-left: 4em; }
+        td.author-text { font-size: x-small; }
+
+        /* info code from SantaKlauss at http://www.madaboutstyle.com/tooltip2.html */
+        a.info {
+                /* This is the key. */
+                position: relative;
+                z-index: 24;
+                text-decoration: none;
+        }
+        a.info:hover {
+                z-index: 25;
+                color: #FFF; background-color: #900;
+        }
+        a.info span { display: none; }
+        a.info:hover span.info {
+                /* The span will display just on :hover state. */
+                display: block;
+                position: absolute;
+                font-size: smaller;
+                top: 2em; left: -5em; width: 15em;
+                padding: 2px; border: 1px solid #333;
+                color: #900; background-color: #EEE;
+                text-align: left;
+        }
+
+        a { font-weight: bold; }
+        a:link    { color: #900; background-color: transparent; }
+        a:visited { color: #633; background-color: transparent; }
+        a:active  { color: #633; background-color: transparent; }
+
+        p { margin-left: 2em; margin-right: 2em; }
+        p.copyright { font-size: x-small; }
+        p.toc { font-size: small; font-weight: bold; margin-left: 3em; }
+        table.toc { margin: 0 0 0 3em; padding: 0; border: 0; vertical-align: text-top; }
+        td.toc { font-size: small; font-weight: bold; vertical-align: text-top; }
+
+        ol.text { margin-left: 2em; margin-right: 2em; }
+        ul.text { margin-left: 2em; margin-right: 2em; }
+        li      { margin-left: 3em; }
+
+        /* RFC-2629 <spanx>s and <artwork>s. */
+        em     { font-style: italic; }
+        strong { font-weight: bold; }
+        dfn    { font-weight: bold; font-style: normal; }
+        cite   { font-weight: normal; font-style: normal; }
+        tt     { color: #036; }
+        tt, pre, pre dfn, pre em, pre cite, pre span {
+                font-family: "Courier New", Courier, monospace; font-size: small;
+        }
+        pre {
+                text-align: left; padding: 4px;
+                color: #000; background-color: #CCC;
+        }
+        pre dfn  { color: #900; }
+        pre em   { color: #66F; background-color: #FFC; font-weight: normal; }
+        pre .key { color: #33C; font-weight: bold; }
+        pre .id  { color: #900; }
+        pre .str { color: #000; background-color: #CFF; }
+        pre .val { color: #066; }
+        pre .rep { color: #909; }
+        pre .oth { color: #000; background-color: #FCF; }
+        pre .err { background-color: #FCC; }
+
+        /* RFC-2629 <texttable>s. */
+        table.all, table.full, table.headers, table.none {
+                font-size: small; text-align: center; border-width: 2px;
+                vertical-align: top; border-collapse: collapse;
+        }
+        table.all, table.full { border-style: solid; border-color: black; }
+        table.headers, table.none { border-style: none; }
+        th {
+                font-weight: bold; border-color: black;
+                border-width: 2px 2px 3px 2px;
+        }
+        table.all th, table.full th { border-style: solid; }
+        table.headers th { border-style: none none solid none; }
+        table.none th { border-style: none; }
+        table.all td {
+                border-style: solid; border-color: #333;
+                border-width: 1px 2px;
+        }
+        table.full td, table.headers td, table.none td { border-style: none; }
+
+        hr { height: 1px; }
+        hr.insert {
+                width: 80%; border-style: none; border-width: 0;
+                color: #CCC; background-color: #CCC;
+        }
+--></style>
+</head>
+<body>
+
+<table width="30" align="right" cellspacing="2" cellpadding="0" border="0">
+    <tbody><tr>
+        <td class="RFCbug">
+                <span class="RFC">&nbsp;RFC&nbsp;</span><br><span class="hotText">&nbsp;2629&nbsp;</span>
+        </td>
+    </tr>
+    <tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a><br></td></tr>
+</tbody></table>
+<table summary="layout" width="66%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><table summary="layout" width="100%" cellspacing="1" cellpadding="2" border="0">
+<tbody><tr><td class="header">Network Working Group</td><td class="header">M. Rose</td></tr>
+<tr><td class="header">Request for Comments: 2629</td><td class="header">Invisible Worlds, Inc.</td></tr>
+<tr><td class="header">Category: Informational</td><td class="header">June 1999</td></tr>
+</tbody></table></td></tr></tbody></table>
+<h1><br>Writing I-Ds and RFCs using XML</h1>
+
+<h3>Status of this Memo</h3>
+<p>
+This memo provides information for the Internet community.
+It does not specify an Internet standard of any kind.
+Distribution of this memo is unlimited.</p>
+
+<h3>Copyright Notice</h3>
+<p>
+Copyright © The Internet Society (1999). All Rights Reserved.</p>
+
+<h3>Abstract</h3>
+
+<p>This memo presents a technique for using XML
+(Extensible Markup Language)
+as a source format for documents in the Internet-Drafts (I-Ds) and
+Request for Comments (RFC) series.
+</p><a name="toc"></a><hr>
+
+<table width="30" align="right" cellspacing="2" cellpadding="0" border="0">
+    <tbody><tr>
+        <td class="RFCbug">
+                <span class="RFC">&nbsp;RFC&nbsp;</span><br><span class="hotText">&nbsp;2629&nbsp;</span>
+        </td>
+    </tr>
+    <tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a><br></td></tr>
+</tbody></table>
+<h3>Table of Contents</h3>
+<p class="toc">
+<a href="#anchor1">1.</a>&nbsp;
+Introduction<br>
+<a href="#anchor2">2.</a>&nbsp;
+Using the DTD to Write I-Ds and RFCs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#xml_basics">2.1.</a>&nbsp;
+XML basics<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#front_matter">2.2.</a>&nbsp;
+Front matter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor3">2.2.1.</a>&nbsp;
+The title Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#author">2.2.2.</a>&nbsp;
+The author Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#date">2.2.3.</a>&nbsp;
+The date Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor4">2.2.4.</a>&nbsp;
+Meta Data Elements<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor5">2.2.5.</a>&nbsp;
+The abstract Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor6">2.2.6.</a>&nbsp;
+The note Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor7">2.2.7.</a>&nbsp;
+Status, Copyright Notice, Table of Contents<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor8">2.2.8.</a>&nbsp;
+Everything in the Front<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor9">2.3.</a>&nbsp;
+The Middle<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section">2.3.1.</a>&nbsp;
+The section Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#back_matter">2.4.</a>&nbsp;
+Back matter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#references">2.4.1.</a>&nbsp;
+The references Element<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor12">2.4.2.</a>&nbsp;
+Appendices<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor13">2.4.3.</a>&nbsp;
+Copyright Status<br>
+<a href="#anchor14">3.</a>&nbsp;
+Processing the XML Source File<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor15">3.1.</a>&nbsp;
+Editing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor16">3.1.1.</a>&nbsp;
+Checking<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#xml2rfc">3.2.</a>&nbsp;
+Converting to Text Format<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor17">3.3.</a>&nbsp;
+Converting to HTML Format<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor18">3.4.</a>&nbsp;
+Viewing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#anchor19">3.5.</a>&nbsp;
+Searching<br>
+<a href="#anchor20">4.</a>&nbsp;
+Security Considerations<br>
+<a href="#rfc.references1">5.</a>&nbsp;
+References<br>
+<a href="#rfc">Appendix&nbsp;A.</a>&nbsp;
+The rfc Element<br>
+<a href="#rfc.dtd">Appendix&nbsp;B.</a>&nbsp;
+The RFC DTD<br>
+<a href="#anchor22">Appendix&nbsp;C.</a>&nbsp;
+Acknowledgements<br>
+<a href="#rfc.index">§</a>&nbsp;
+Index<br>
+<a href="#rfc.authors">§</a>&nbsp;
+Author's Address<br>
+<a href="#rfc.copyright">§</a>&nbsp;
+Intellectual Property and Copyright Statements<br>
+</p>
+<br clear="all">
+
+<a name="anchor1"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.1"></a><h3>1.&nbsp;
+Introduction</h3>
+
+<p>This memo describes how to write a document for the I-D and RFC series
+using <a class="info" href="#XML">the Extensible Markup Language<span> (</span><span class="info">World Wide Web Consortium, “Extensible Markup Language (XML) 1.0,” February&nbsp;1998.</span><span>)</span></a> [XML] (XML).
+This memo has three goals:
+</p>
+<ol class="text">
+<li>To describe a simple XML Document Type Definition (DTD) that is
+powerful enough to handle the simple formatting requirements of RFC-like
+documents whilst allowing for meaningful markup of descriptive
+qualities.
+</li>
+<li>To describe software that processes XML source files,
+including a tool that produces documents
+conforming to <a class="info" href="#refs.RFC2223">RFC 2223<span> (</span><span class="info">Postel, J. and J. Reynolds, “Instructions to RFC Authors,” October&nbsp;1997.</span><span>)</span></a> [refs.RFC2223],
+HTML format, and so on.
+</li>
+<li>To provide the proof-of-concept for the first two goals
+(this memo was written using this DTD and produced using that
+software).
+</li>
+</ol><p>
+
+</p>
+<p>It is beyond the scope of this memo to discuss the political
+ramifications of using XML as a source format for RFC-like documents.
+Rather,
+it is simply noted that adding minimal markup to plain text:
+</p>
+<ul class="text">
+<li>allows the traditional production of textual RFC-like documents using
+familiar editors;
+</li>
+<li>requires some, albeit minimal, additions to existing software
+environments; and,
+</li>
+<li>permits information to be organized, searched, and retrieved
+using both unstructured and structured mechanisms.
+</li>
+</ul><p>
+
+</p>
+<a name="anchor2"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2"></a><h3>2.&nbsp;
+Using the DTD to Write I-Ds and RFCs</h3>
+
+<p>We do not provide a formal or comprehensive description of XML.
+Rather,
+this section discusses just enough XML to use a Document Type
+Declaration (DTD) to write RFC-like documents.
+</p>
+<p>If you're already familiar with XML,
+skip to <a class="info" href="#rfc.dtd">Appendix&nbsp;B<span> (</span><span class="info">The RFC DTD</span><span>)</span></a> to look at the DTD.
+</p>
+<a name="xml_basics"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.1"></a><h3>2.1.&nbsp;
+XML basics</h3>
+
+<p>There are very few rules when writing in XML,
+as the syntax is simple.
+There are five terms you'll need to know:
+</p>
+<ol class="text">
+<li>An "element" usually refers to a start tag, an end tag, and all the
+characters in between,
+e.g.,
+"&lt;example&gt;text and/or nested elements&lt;/example&gt;"
+</li>
+<li>An "empty element" combines the start tag and the end tag,
+e.g.,
+"&lt;empty/&gt;".
+You don't find these in HTML.
+</li>
+<li>An "attribute" is part of an element.
+If present, they occur in the start tag, e.g.,
+"&lt;example name='value'&gt;".
+Of course,
+they can also appear in empty elements, e.g.,
+"&lt;empty name='value'/&gt;".
+</li>
+<li>An "entity" is a textual macro that starts with "&amp;".
+Don't worry about these,
+you'll only use them whenever you want to put a "&amp;" or a "&lt;" in
+your text.
+</li>
+<li>A "token" is a string of characters.
+The first character is either a letter or an underscore ("_").
+Any characters that follow are either letters, numbers, an
+underscore, or a period (".").
+</li>
+</ol><p>
+
+</p>
+<p style="text-align: left">First,
+start your source file with an XML declaration,
+a reference to the DTD,
+and the "rfc" element:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;?xml version="1.0"?&gt;
+    &lt;!DOCTYPE rfc SYSTEM "rfcXXXX.dtd"&gt;
+    &lt;rfc&gt;
+        ...
+    &lt;/rfc&gt;
+</pre></div>
+<p style="text-align: left">Ignore the first two lines
+-- the declaration and the reference --
+and simply treat them as opaque strings.
+Nothing else should be present after the "&lt;/rfc&gt;" tag.
+</p>
+<p>Second,
+make sure that all elements are properly matched and nested.
+A properly matched element that starts with
+"&lt;example&gt;" is eventually followed with "&lt;/example&gt;".
+(Empty elements are always matched.)
+Elements are properly nested when they don't overlap.
+</p>
+<p style="text-align: left">For example,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;outer&gt;
+        ...
+        &lt;inner&gt;
+            ...
+        &lt;/inner&gt;
+        ...
+    &lt;/outer&gt;
+</pre></div>
+<p style="text-align: left">is properly nested.
+</p>
+<p style="text-align: left">However,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;outer&gt;
+        ...
+        &lt;inner&gt;
+            ...
+        &lt;/outer&gt;
+        ...
+    &lt;/inner&gt;
+</pre></div>
+<p style="text-align: left">overlaps, so the elements aren't properly nested.
+</p>
+<p>Third,
+never use "&lt;" or "&amp;" in your text.
+Instead, use either "&amp;lt;" or "&amp;amp;", respectively.
+</p>
+<p>Fourth,
+there are two quoting characters in XML, 'apostrophe' and "quotation".
+Make sure that all attributes values are quoted,
+e.g., "&lt;example name='value'&gt;",
+If the value contains one of the quoting characters,
+then use the other to quote the value,
+e.g., "&lt;example name='"'&gt;",
+If the value contains both quoting characters,
+then use one of them to quote the value,
+and replace occurrances of that character in the attribute value with
+either '&amp;apos;' (apostrophe) or "&amp;quot;" (quotation),
+e.g., "&lt;example name='"&amp;apos;"'&gt;".
+</p>
+<p style="text-align: left">If you want to put a comment in your source file,
+here's the syntax:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+        &lt;!-- comments can be multiline,
+         if you wish --&gt;
+</pre></div>
+<p>Finally,
+XML is case sensitive.
+</p>
+<a name="front_matter"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2"></a><h3>2.2.&nbsp;
+Front matter</h3>
+
+<p style="text-align: left">Immediately following the "&lt;rfc&gt;" tag is the "front"
+element:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;?xml version="1.0"?&gt;
+    &lt;!DOCTYPE rfc SYSTEM "rfcXXXX.dtd"&gt;
+    &lt;rfc&gt;
+        &lt;front&gt;
+            &lt;title ...&gt;
+            &lt;author ...&gt;
+            &lt;author ...&gt;
+            &lt;date ...&gt;
+            &lt;area ...&gt;
+            &lt;workgroup ...&gt;
+            &lt;keyword ...&gt;
+            &lt;keyword ...&gt;
+            &lt;abstract ...&gt;
+            &lt;note ...&gt;
+        &lt;/front&gt;
+        ...
+    &lt;/rfc&gt;
+</pre></div>
+<p style="text-align: left">(Note that in all examples,
+indentation is used only for expository purposes.)
+</p>
+<p>The "front" element consists of a "title" element,
+one or more "author" elements,
+a "date" element,
+one or more optional "area" elements,
+one or more optional "workgroup" elements,
+one or more optional "keyword" elements,
+an optional "abstract" element.
+and,
+one or more optional "note" elements.
+</p>
+<a name="anchor3"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.1"></a><h3>2.2.1.&nbsp;
+The title Element</h3>
+
+<p style="text-align: left">The "title" element identifies the title of the document.
+Because the title will be used in the headers of the document when formatted
+according to <a class="info" href="#refs.RFC2223">[refs.RFC2223]<span> (</span><span class="info">Postel, J. and J. Reynolds, “Instructions to RFC Authors,” October&nbsp;1997.</span><span>)</span></a>,
+if the title is more than 42 characters,
+then an abbreviation should also be provided,
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;title abbrev="Much Ado about Nothing"&gt;
+    The IETF's Discussion on "Source Format of RFC Documents"
+    &lt;/title&gt;
+</pre></div>
+<a name="author"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.2"></a><h3>2.2.2.&nbsp;
+The author Element</h3>
+
+<p style="text-align: left">Each "author" element identifies a document author.
+Since a document may have more than one author,
+more than one "author" element may be present.
+If the author is a person,
+then three attributes must be present in the "&lt;author&gt;" tag,
+"initials", "surname", and "fullname",
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;author initials="M.T." surname="Rose"
+            fullname="Marshall T. Rose"&gt;
+</pre></div>
+<p>The "author" element itself consists of an "organization" element,
+and,
+an optional "address" element.
+</p>
+<p style="text-align: left">The "organization" element is similar to the "title"
+element,
+in that an abbreviation may be paired with a long organization name
+using the "abbrev" attribute, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;organization abbrev="ISI"&gt;
+        USC/Information Sciences Institute
+    &lt;/organization&gt;
+</pre></div>
+<p>The "address" element consists of an optional "postal" element,
+an optional "phone" element,
+an optional "facsimile" element,
+an optional "email" element,
+and,
+an optional "uri" element.
+</p>
+<p style="text-align: left">The "postal" element contains one or more "street" elements,
+followed by any combination of "city", "region" (state or province),
+"code" (zipcode or postal code), and "country" elements, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;postal&gt;
+        &lt;street&gt;660 York Street&lt;/street&gt;
+        &lt;street&gt;M/S 40&lt;/street&gt;
+        &lt;city&gt;San Francisco&lt;/city&gt; &lt;region&gt;CA&lt;/region&gt;
+        &lt;code&gt;94110&lt;/code&gt;
+        &lt;country&gt;US&lt;/country&gt;
+    &lt;/postal&gt;
+</pre></div>
+<p style="text-align: left">This flexibility is provided to allow for different national
+formats for postal addresses.
+Note however,
+that although the order of the "city", "region", "code", and "country"
+elements isn't specified,
+at most one of each may be present.
+Regardless,
+these elements must not be re-ordered during processing by an XML
+application
+(e.g., display applications must preserve the ordering of the
+information contained in these elements).
+Finally,
+the value of the "country" element should be a two-letter
+code from ISO 3166.
+</p>
+<p style="text-align: left">The "phone", "facsimile", "email", and "uri" elements are
+simple, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;phone&gt;+1 415 695 3975&lt;/phone&gt;
+    &lt;email&gt;mrose@not.invisible.net&lt;/email&gt;
+    &lt;uri&gt;http://invisible.net/&lt;/uri&gt;
+</pre></div>
+<a name="date"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.3"></a><h3>2.2.3.&nbsp;
+The date Element</h3>
+
+<p style="text-align: left">The "date" element identifies the publication date of the
+document.
+It consists of a month and a year, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;date month="February" year="1999" /&gt;
+</pre></div>
+<p style="text-align: left">The "date" element also has an optional day attribute.
+</p>
+<a name="anchor4"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.4"></a><h3>2.2.4.&nbsp;
+Meta Data Elements</h3>
+
+<p>The "front" element may contain meta data --
+the content of these elements does not appear in printed versions of
+the document.
+</p>
+<p style="text-align: left">A document has one or more optional "area",
+"workgroup" and "keyword" elements, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;area&gt;General&lt;/area&gt;
+    &lt;workgroup&gt;RFC Beautification Working Group&lt;/workgroup&gt;
+    &lt;keyword&gt;RFC&lt;/keyword&gt;
+    &lt;keyword&gt;Request for Comments&lt;/keyword&gt;
+    &lt;keyword&gt;I-D&lt;/keyword&gt;
+    &lt;keyword&gt;Internet-Draft&lt;/keyword&gt;
+    &lt;keyword&gt;XML&lt;/keyword&gt;
+    &lt;keyword&gt;Extensible Markup Language&lt;/keyword&gt;
+</pre></div>
+<p style="text-align: left">The "area" elements identify a general category for the
+document
+(e.g., one of "Applications", "General", "Internet", "Management",
+"Operations", "Routing", "Security", "Transport", or "User"),
+while the "workgroup" elements identify the IETF working groups that
+produced the document,
+and the "keyword" elements identify useful search terms.
+</p>
+<a name="anchor5"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.5"></a><h3>2.2.5.&nbsp;
+The abstract Element</h3>
+
+<p style="text-align: left">A document may have an "abstract" element,
+which contains one or more <a class="info" href="#t">"t" elements<span> (</span><span class="info">The t Element</span><span>)</span></a>.
+In general,
+only a single "t" element is present,
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;abstract&gt;
+        &lt;t&gt;This memo presents a technique for using XML
+        (Extensible Markup Language) as a source format
+        for documents in the Internet-Drafts (I-Ds) and
+        Request for Comments (RFC) series.&lt;/t&gt;
+    &lt;/abstract&gt;
+</pre></div>
+<a name="anchor6"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.6"></a><h3>2.2.6.&nbsp;
+The note Element</h3>
+
+<p style="text-align: left">A document may have one or more "note" elements,
+each of which contains one or more <a class="info" href="#t">"t" elements<span> (</span><span class="info">The t Element</span><span>)</span></a>.
+There is a mandatory "title" attribute.
+In general,
+the "note" element contains text from the IESG, 
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;note title="IESG Note"&gt;
+        &lt;t&gt;The IESG has something to say.&lt;/t&gt;
+    &lt;/note&gt;
+</pre></div>
+<a name="anchor7"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.7"></a><h3>2.2.7.&nbsp;
+Status, Copyright Notice, Table of Contents</h3>
+
+<p>Note that text relating to the memo's status, copyright notice, or
+table of contents is not included in the document's markup -- this is
+automatically inserted by an XML application when it produces either
+a text or HTML version of the document.
+</p>
+<a name="ipr"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.7.1"></a><h3>2.2.7.1.&nbsp;
+Conformance with RFC 2026</h3>
+
+<p>If an Internet-Draft is being produced,
+then the "ipr" attribute should be present in the "&lt;rfc&gt;"
+tag at the beginning of the file.
+The value of the attribute should be one of:
+</p>
+<blockquote class="text"><dl>
+<dt>full2026:</dt>
+<dd>indicating that the document is in full conformance with all
+the provisions of Section 10 of RFC 2026;
+</dd>
+<dt>noDerivativeWorks2026:</dt>
+<dd>indicating that the document is in full
+conformance with all the provisions of Section 10 of RFC 2026 except that the
+right to produce derivative works is not granted; or,
+</dd>
+<dt>none:</dt>
+<dd>indicating that the document is NOT offered in accordance with
+Section 10 of RFC 2026, and the author does not provide the IETF with any rights
+other than to publish as an Internet-Draft.
+</dd>
+</dl></blockquote><p>
+In the latter case,
+a copyright notice will not be automatically inserted during
+processing by an XML application.
+</p>
+<p>Consult <a class="info" href="#refs.RFC2026">[refs.RFC2026]<span> (</span><span class="info">Bradner, S., “The Internet Standards Process -- Revision 3,” October&nbsp;1996.</span><span>)</span></a> for further details.
+</p>
+<p style="text-align: left">Finally,
+if the Internet-Draft is being submitted to an automated process,
+then the "docName" attribute should be present in the "&lt;rfc&gt;"
+tag at the beginning of the file.
+The value of this attribute contains the document (not file) name
+associated with this Internet-Draft, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;rfc ipr="full" docName="draft-mrose-writing-rfcs-01"&gt;
+        ...
+    &lt;/rfc&gt;
+</pre></div>
+<p style="text-align: left">
+</p>
+<a name="anchor8"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.2.8"></a><h3>2.2.8.&nbsp;
+Everything in the Front</h3>
+
+<p style="text-align: left">So,
+putting it all together, we have, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;front&gt;
+        &lt;title&gt;Writing I-Ds and RFCs using XML&lt;/title&gt;
+
+        &lt;author initials="M.T." surname="Rose"
+                fullname="Marshall T. Rose"&gt;
+            &lt;organization&gt;Invisible Worlds, Inc.&lt;/organization&gt;
+
+            &lt;address&gt;
+                &lt;postal&gt;
+                    &lt;street&gt;660 York Street&lt;/street&gt;
+                    &lt;street&gt;M/S 40&lt;/street&gt;
+                    &lt;city&gt;San Francisco&lt;/city&gt; &lt;region&gt;CA&lt;/region&gt;
+                    &lt;code&gt;94110&lt;/code&gt;
+                    &lt;country&gt;US&lt;/country&gt;
+                &lt;/postal&gt;
+
+                &lt;phone&gt;+1 415 695 3975&lt;/phone&gt;
+                &lt;email&gt;mrose@not.invisible.net&lt;/email&gt;
+                &lt;uri&gt;http://invisible.net/&lt;/uri&gt;
+            &lt;/address&gt;
+        &lt;/author&gt;
+
+        &lt;date month="February" year="1999" /&gt;
+
+        &lt;area&gt;General&lt;/area&gt;
+        &lt;workgroup&gt;RFC Beautification Working Group&lt;/workgroup&gt;
+        &lt;keyword&gt;RFC&lt;/keyword&gt;
+        &lt;keyword&gt;Request for Comments&lt;/keyword&gt;
+        &lt;keyword&gt;I-D&lt;/keyword&gt;
+        &lt;keyword&gt;Internet-Draft&lt;/keyword&gt;
+        &lt;keyword&gt;XML&lt;/keyword&gt;
+        &lt;keyword&gt;Extensible Markup Language&lt;/keyword&gt;
+        &lt;abstract&gt;
+            &lt;t&gt;This memo presents a technique for using XML
+            (Extensible Markup Language) as a source format
+            for documents in the Internet-Drafts (I-Ds) and
+            Request for Comments (RFC) series.&lt;/t&gt;
+        &lt;/abstract&gt;
+    &lt;/front&gt;
+</pre></div>
+<a name="anchor9"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3"></a><h3>2.3.&nbsp;
+The Middle</h3>
+
+<p style="text-align: left">The "middle" element contains all the sections of the document
+except for the bibliography and appendices:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    ...
+    &lt;/front&gt;
+    &lt;middle&gt;
+        &lt;section ...&gt;
+        &lt;section ...&gt;
+        &lt;section ...&gt;
+    &lt;/middle&gt;
+    &lt;back&gt;
+    ...
+</pre></div>
+<p style="text-align: left">The "middle" element consists of one or more "section"
+elements.
+</p>
+<a name="section"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1"></a><h3>2.3.1.&nbsp;
+The section Element</h3>
+
+<p style="text-align: left">Each "section" element contains a section of the document.
+There is a mandatory attribute,
+"title",
+that identifies the title of the section.
+There is also an optional attribute,
+"anchor",
+that is used for cross-referencing with
+<a class="info" href="#xref">the "xref" element<span> (</span><span class="info">The xref Element</span><span>)</span></a>,
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;section anchor="intro" title="Introduction"&gt;
+        ...
+    &lt;/section&gt;
+</pre></div>
+<p style="text-align: left">The "section" element is recursive --
+each contains any number and combination of "t", "figure", and "section"
+elements, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;section title="The Middle"&gt;
+        ...
+        &lt;section title="The section Element"&gt;
+            ...
+            &lt;section title="The t Element"&gt;...&lt;/section&gt;
+            &lt;section title="The list Element"&gt;...&lt;/section&gt;
+            &lt;section title="The figure Element"&gt;...&lt;/section&gt;
+            &lt;section title="The xref Element"&gt;...&lt;/section&gt;
+            &lt;section title="The eref Element"&gt;...&lt;/section&gt;
+            &lt;section title="The iref Element"&gt;...&lt;/section&gt;
+        &lt;/section&gt;
+    &lt;/section&gt;
+</pre></div>
+<a name="t"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.1"></a><h3>2.3.1.1.&nbsp;
+The t Element</h3>
+
+<p>The "t" element contains any number and combination of
+paragraphs, lists, and figures.
+If a cross-reference is needed to a section, figure, or reference,
+<a class="info" href="#xref">the "xref" element<span> (</span><span class="info">The xref Element</span><span>)</span></a> is used;
+similarly,
+if an external-reference is needed,
+<a class="info" href="#eref">the "eref" element<span> (</span><span class="info">The eref Element</span><span>)</span></a> is used.
+Indexing of text is provided by the
+<a class="info" href="#iref">the "iref" element<span> (</span><span class="info">The iref Element</span><span>)</span></a>.
+</p>
+<a name="anchor10"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.2"></a><h3>2.3.1.2.&nbsp;
+The list Element</h3>
+
+<p style="text-align: left">The "list" element contains one or more items.
+Each item is a "t" element,
+allowing for recursion, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;list style="numbers"&gt;
+        &lt;t&gt;The first item.&lt;/t&gt;
+        &lt;t&gt;The second item, which contains two bulleted sub-items:
+            &lt;list style="symbols"&gt;
+                &lt;t&gt;The first sub-item.&lt;/t&gt;
+                &lt;t&gt;The second sub-item.&lt;/t&gt;
+            &lt;/list&gt;
+        &lt;/t&gt;
+    &lt;/list&gt;
+</pre></div>
+<p style="text-align: left">The "list" element has an optional attribute,
+"style",
+having the value "numbers" (for numeric lists),
+"symbols" (for bulleted lists),
+"hanging" (for hanging lists),
+or,
+"empty" (for indented text).
+If a "list" element is nested,
+the default value is taken from its closest parent;
+otherwise,
+the default value is "empty".
+
+</p>
+<p style="text-align: left">When nested within a "hanging list" element,
+the "t" element has an optional attribute,
+"hangText" that specifies the text to be inserted, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;list style="hanging"&gt;
+        &lt;t hangText="full2026:"&gt;indicating that the document is in
+        full conformance with all the provisions of Section 10 of
+        RFC 2026;&lt;/t&gt;
+
+        &lt;t hangText="noDerivativeWorks2026:"&gt;indicating that the
+        document is in full conformance with all the provisions of
+        Section 10 of RFC 2026 except that the right to produce
+        derivative works is not granted; or,&lt;/t&gt;
+
+        &lt;t hangText="none:"&gt;indicating that the document is NOT
+        offered in accordance with Section 10 of RFC 2026, and
+        the author does not provide the IETF with any rights other
+        than to publish as an Internet-Draft.&lt;/t&gt;
+    &lt;/list&gt;
+</pre></div>
+<a name="figure"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.3"></a><h3>2.3.1.3.&nbsp;
+The figure Element</h3>
+
+<p>The "figure" element groups an optional "preamble" element,
+an "artwork" element,
+and an optional "postamble" element together.
+The "figure" element also has an optional "anchor" attribute that is
+used for cross-referencing with
+<a class="info" href="#xref">the "xref" element<span> (</span><span class="info">The xref Element</span><span>)</span></a>.
+There is also an optional "title" attribute that identifies the title
+of the figure.
+
+</p>
+<p>The "preamble" and "postamble" elements,
+if present,
+are simply text.
+If a cross-reference is needed to a section, figure, or reference,
+<a class="info" href="#xref">the "xref" element<span> (</span><span class="info">The xref Element</span><span>)</span></a> is used;
+similarly,
+if an external-reference is needed,
+<a class="info" href="#eref">the "eref" element<span> (</span><span class="info">The eref Element</span><span>)</span></a> is used.
+Indexing of text is provided by the
+<a class="info" href="#iref">the "iref" element<span> (</span><span class="info">The iref Element</span><span>)</span></a>.
+</p>
+<p>The "artwork" element,
+which must be present,
+contains "ASCII artwork".
+Unlike text contained in the "t", "preamble", or "postamble" elements,
+both horizontal and vertical whitespace is significant in the "artwork"
+element.
+</p>
+<p style="text-align: left">So,
+putting it all together, we have, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;figure anchor="figure_example"&gt;
+        &lt;preamble&gt;So,
+        putting it all together, we have, e.g.,&lt;/preamble&gt;
+        &lt;artwork&gt;
+            ascii artwork goes here...
+
+            be sure to use "&amp;lt;" or "&amp;amp;" instead of "&lt;" and "&amp;",
+            respectively!
+        &lt;/artwork&gt;
+        &lt;postamble&gt;which is a very simple example.&lt;/postamble&gt;
+    &lt;/figure&gt;
+</pre></div>
+<p style="text-align: left">which is a very simple example.
+</p>
+<p style="text-align: left">If you have artwork with a lot of "&lt;" characters,
+then there's an XML trick you can use:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;figure&gt;
+        &lt;preamble&gt;If you have artwork with a lot of "&amp;lt;"
+        characters, then there's an XML trick you can
+        use:&lt;/preamble&gt;
+        &lt;artwork&gt;&lt;![CDATA[
+            ascii artwork goes here...
+
+            just don't use "]]" in your artwork!
+        ]]&gt;&lt;/artwork&gt;
+        &lt;postamble&gt;The "&amp;lt;![CDATA[ ... ]]&gt;" construct is called
+        a CDATA block -- everything between the innermost brackets
+        is left alone by the XML application.&lt;/postamble&gt;
+    &lt;/figure&gt;
+</pre></div>
+<p style="text-align: left">The "&lt;![CDATA[ ... ]]&gt;" construct is called a CDATA
+block -- everything between the innermost brackets is left alone by
+the XML application.
+</p>
+<p>Because the "figure" element represents a logical grouping of text
+and artwork,
+an XML application producing a text version of the document should
+attempt to keep these elements on the same page.
+Because <a class="info" href="#refs.RFC2223">RFC 2223<span> (</span><span class="info">Postel, J. and J. Reynolds, “Instructions to RFC Authors,” October&nbsp;1997.</span><span>)</span></a> [refs.RFC2223] allows no more than 69
+characters by 49 lines of content on each page,
+XML applications should be prepared to prematurely introduce page
+breaks to allow for better visual grouping.
+</p>
+<p>Finally,
+the "artwork" element has two optional attributes:
+"name" and "type".
+The former is used to suggest a filename to use when storing the
+content of the "artwork" element,
+whilst the latter contains a suggestive data-typing for the content.
+
+</p>
+<a name="xref"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.4"></a><h3>2.3.1.4.&nbsp;
+The xref Element</h3>
+
+<p>The "xref" element is used to cross-reference sections, figures, and
+references.
+The mandatory "target" attribute is used to link back to the "anchor"
+attribute of the "section", "figure", and "reference" elements.
+The value of the "anchor" and "target" attributes should be formatted
+according to the token syntax in <a class="info" href="#xml_basics">Section&nbsp;2.1<span> (</span><span class="info">XML basics</span><span>)</span></a>.
+</p>
+<p style="text-align: left">If used as an empty element,
+e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    according to the token syntax in &lt;xref target="xml_basics" /&gt;.
+</pre></div>
+<p style="text-align: left">then the XML application inserts an appropriate phrase
+during processing,
+such as "Section 2.1" or
+"&lt;a href="#xml_basics"&gt;XML Basics&lt;/a&gt;".
+</p>
+<p style="text-align: left">If used with content, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    conforming to &lt;xref target="refs.RFC2223"&gt;RFC 2223&lt;/xref&gt;.
+</pre></div>
+<p style="text-align: left">then the XML application inserts an appropriate
+designation during processing,
+such as "RFC 2223[2]" or
+"&lt;a href="#refs.RFC2223"&gt;RFC 2223&lt;/a&gt;".
+Although the XML application decides what "an appropriate designation"
+might be,
+its choice is consistent throughout the processing of the document.
+
+</p>
+<a name="eref"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.5"></a><h3>2.3.1.5.&nbsp;
+The eref Element</h3>
+
+<p style="text-align: left">The "eref" element is used to reference external documents.
+The mandatory "target" attribute is a
+<a class="info" href="#URI">URI<span> (</span><span class="info">Berners-Lee, T., Fielding, R., and L. Masinter, “Uniform Resource Identifiers (URI): Generic Syntax,” August&nbsp;1998.</span><span>)</span></a> [URI], e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;eref target="http://metalab.unc.edu/xml/"&gt;Cafe con Leche&lt;/eref&gt;
+</pre></div>
+<p style="text-align: left">Note that while the "target" attribute is always present,
+the "eref" element may be empty, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;eref target="http://invisible.net/" /&gt;
+</pre></div>
+<p style="text-align: left">and the XML application inserts an appropriate designation during
+processing such as "[9]" or
+"&lt;a href="http://invisible.net/"&gt;http://invisible.net/&lt;/a&gt;".
+</p>
+<a name="iref"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.6"></a><h3>2.3.1.6.&nbsp;
+The iref Element</h3>
+
+<p style="text-align: left"><a name="anchor23"></a>The "iref" element
+is used to add information to an index.
+The mandatory "item" attribute is the primary key the information is stored
+under,
+whilst the optional "subitem" attribute is the secondary key, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;iref item="indexing" subitem="how to" /&gt;
+</pre></div>
+<p>Finally, note that the "iref" element is always empty -- it never
+contains any text.
+</p>
+<a name="anchor11"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.3.1.7"></a><h3>2.3.1.7.&nbsp;
+The vspace Element</h3>
+
+<p>The "vspace" element,
+which may occur only inside the "t" element,
+is used by the author to provide formatting guidance to the XML
+application.
+There is an attribute,
+"blankLines",
+that indicates the number of blank lines that should be inserted.
+A physical linebreak is specified by using the default value, "0".
+</p>
+<p style="text-align: left">In addition,
+the "vspace" element can be used to force a new physical paragraph
+within a list item, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;list style="numbers"&gt;
+        &lt;t&gt;This is list item.
+           &lt;vspace blankLines="1" /&gt;
+           This is part of the same list item,
+           although when displayed, it appears
+           as a separate physical paragraph.&lt;/t&gt;
+    &lt;/list&gt;
+</pre></div>
+<p>An XML application producing a text version of the document should
+exercise care when encountering a value for "blankLines" that causes a
+pagebreak --
+in particular,
+if a "vspace" element causes a pagebreak,
+then no further blank lines should be inserted.
+This allows authors to "force" a pagebreak by using an arbitrarily
+large value, e.g., "blankLines='100'".
+</p>
+<p>Finally, note that the "vspace" element is always empty -- it never
+contains any text.
+</p>
+<a name="back_matter"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.4"></a><h3>2.4.&nbsp;
+Back matter</h3>
+
+<p style="text-align: left">Finally,
+the "back" element is used for references and
+appendices:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+        ...
+        &lt;/middle&gt;
+        &lt;back&gt;
+            &lt;references&gt;
+                &lt;reference ...&gt;
+                &lt;reference ...&gt;
+            &lt;/references&gt;
+            &lt;section ...&gt;
+            &lt;section ...&gt;
+        &lt;/back&gt;
+    &lt;/rfc&gt;
+</pre></div>
+<p style="text-align: left">The "back" element consists of an optional "references" element,
+and,
+one or more optional "section" elements.
+The "back" element itself is optional,
+if your document doesn't have any references or appendices,
+you don't have to include it.
+</p>
+<a name="references"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.4.1"></a><h3>2.4.1.&nbsp;
+The references Element</h3>
+
+<p>The "references" element contains the document's bibliography.
+It contains one or more "reference" elements.
+</p>
+<p>Each "reference" element contains a "front" element and one or more
+optional "seriesInfo" elements.
+</p>
+<p>We've already discussed the "front" element back in
+<a class="info" href="#front_matter">Section&nbsp;2.2<span> (</span><span class="info">Front matter</span><span>)</span></a>.
+</p>
+<p>The "seriesInfo" element has two attributes,
+"name" and "value" that identify the document series and series entry,
+respectively.
+</p>
+<p style="text-align: left">The "reference" element has an optional "anchor"
+attribute that is used for cross-referencing with
+<a class="info" href="#xref">the "xref" element<span> (</span><span class="info">The xref Element</span><span>)</span></a>, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;reference anchor="refs.RFC2200"&gt;
+        &lt;front&gt;
+            &lt;title&gt;Internet Official Protocol Standards&lt;/title&gt;
+            &lt;author initials="J." surname="Postel"
+                    fullname="Jon Postel"&gt;
+                &lt;organization abbrev="ISI"&gt;
+                USC/Information Sciences Institute
+                &lt;/organization&gt;
+            &lt;/author&gt;
+
+            &lt;date month="June" year="1997" /&gt;
+        &lt;/front&gt;
+        &lt;seriesInfo name="RFC" value="2200" /&gt;
+        &lt;seriesInfo name="STD" value="1" /&gt;
+    &lt;/reference&gt;
+</pre></div>
+<p>The "reference" element also has an optional "target"
+attribute that is used for external references
+(c.f., <a class="info" href="#eref">Section&nbsp;2.3.1.5<span> (</span><span class="info">The eref Element</span><span>)</span></a>).
+The XML application,
+if producing an HTML version of the document will use the "target"
+attribute accordingly;
+however, if the "name" attribute of the "seriesInfo" element has the value
+"RFC",
+then the XML application should automatically provide an appropriate
+default for the "target" attribute
+(e.g., "http://example.com/rfcs/rfc2200.txt").
+</p>
+<a name="anchor12"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.4.2"></a><h3>2.4.2.&nbsp;
+Appendices</h3>
+
+<p>To include appendices after the bibliography,
+simply add more "section" elements.
+(For an example,
+look at the example at the beginning of <a class="info" href="#back_matter">Section&nbsp;2.4<span> (</span><span class="info">Back matter</span><span>)</span></a>.)
+</p>
+<a name="anchor13"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.2.4.3"></a><h3>2.4.3.&nbsp;
+Copyright Status</h3>
+
+<p>The copyright status for the document is not included in the
+document's markup -- this is automatically inserted by an XML
+application that produces either a text or HTML version of the document.
+</p>
+<a name="anchor14"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3"></a><h3>3.&nbsp;
+Processing the XML Source File</h3>
+
+<p>This section concerns itself with applications that operate on
+an XML source file.
+A lot of XML tools are available,
+as are many lists of XML resources,
+e.g.,
+<a href="http://metalab.unc.edu/xml/">Cafe con Leche</a>.
+</p>
+<p>There are two kinds of XML tools: validating and non-validating.
+Both check that the source file conforms to the rules given in
+<a class="info" href="#xml_basics">Section&nbsp;2.1<span> (</span><span class="info">XML basics</span><span>)</span></a>.
+However,
+in addition to making sure that the source file is well-formed,
+a validating tool also reads the DTD referenced by the source file
+to make sure that they match.
+There are a number of both validating and non-validating tools available.
+</p>
+<a name="anchor15"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.1"></a><h3>3.1.&nbsp;
+Editing</h3>
+
+<p>There are several XML editors available.
+Ideally,
+you want an editor that validates.
+This has two advantages:
+</p>
+<ul class="text">
+<li>the editor provides guidance in fleshing-out the document structure;
+and,
+</li>
+<li>the editor validates that the source file matches the rules in the DTD.
+</li>
+</ul><p>
+
+</p>
+<p style="text-align: left">There are two major modes in Emacs that support XML:
+<a href="http://www.mulberrytech.com/tdtd/">tdtd</a> and
+<a href="http://www.inria.fr/koala/plh/sxml.html">psgml</a>.
+The latter mode allows you to validate the source file
+(by calling an external program).
+If you visit the source file in Emacs and the major mode isn't
+"SGML" or "XML", 
+then usually all it takes is adding these lines to your ".emacs"
+file:
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    (setq auto-mode-alist
+          (cons (cons "\\.xml$" 'sgml-mode) auto-mode-alist))
+</pre></div>
+<p style="text-align: left">and then restarting Emacs.
+If this doesn't work,
+try one of the sources above.
+</p>
+<p>The author uses both sgml-mode in Emacs,
+and a commercial validating editor,
+<a href="http://www.t2000-usa.com/">Clip! version 1.5</a>,
+when editing source
+files.
+</p>
+<a name="anchor16"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.1.1"></a><h3>3.1.1.&nbsp;
+Checking</h3>
+
+<p>If your editor doesn't validate,
+then you should run a program to validate the source file.
+</p>
+<p>The author uses
+<a href="http://www.alphaworks.ibm.com/formula/xml/">the
+AlphaWorks XML parser</a> for this purpose.
+It requires that your system have a Java virtual machine.
+In addition to Java,
+there are validating parsers written in C, Perl, Python, and Tcl.
+</p>
+<a name="xml2rfc"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.2"></a><h3>3.2.&nbsp;
+Converting to Text Format</h3>
+
+<p>The author has written
+<a href="http://memory.palace.org/authoring/">the xml2rfc tool</a>,
+which reads the source file and produces both a text and HTML version
+of the document.
+(This memo was produced using the xml2rfc tool.)
+Note that xml2rfc isn't a validating tool,
+so it's a good idea to use either a validating editor or run a stand-alone
+validating parser prior to using the tool.
+</p>
+<a name="anchor17"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.3"></a><h3>3.3.&nbsp;
+Converting to HTML Format</h3>
+
+<p>The XML Style Language (XSL) is used to describe transformations
+from the source file into some other structured file.
+So,
+ideally you should use an XSL-capable formatter to convert an XML source
+file to HTML.
+</p>
+<p>However,
+as of this writing XSL is still in considerable flux.
+(Hence,
+no reference was included in this memo,
+as by the time you read this section,
+the reference would be outdated.)
+So,
+in the interim,
+the author uses the xml2rfc tool for this purpose,
+even though this tool doesn't provide much flexibility in its HTML layout.
+</p>
+<a name="anchor18"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.4"></a><h3>3.4.&nbsp;
+Viewing</h3>
+
+<p>Browsers that support either XSL or Cascading Style Sheets (CSS)
+are able to view the source file directly.
+</p>
+<p>At present,
+the author doesn't use any of these browsers,
+instead converting source files to either text or HTML.
+</p>
+<a name="anchor19"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.3.5"></a><h3>3.5.&nbsp;
+Searching</h3>
+
+<p>As with text editors,
+any text-oriented search tool (e.g., grep) can be used on the source file.
+However,
+there are search tools available that understand structured source.
+</p>
+<p style="text-align: left">The author uses 
+<a href="http://www.cs.helsinki.fi/%7Ejjaakkol/sgrep.html">sgrep
+version 1.9</a>
+for this purpose,
+e.g.
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    sgrep -g xml 'ELEMENTS("title") not in ELEMENTS("back")' \
+        writing-rfcs.xml
+</pre></div>
+<p style="text-align: left">which extracts the title element from the source file.
+</p>
+<a name="anchor20"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.4"></a><h3>4.&nbsp;
+Security Considerations</h3>
+
+<p style="text-align: left">This memo raises no security issues;
+however,
+according to <a class="info" href="#refs.RFC2223">[refs.RFC2223]<span> (</span><span class="info">Postel, J. and J. Reynolds, “Instructions to RFC Authors,” October&nbsp;1997.</span><span>)</span></a>,
+your document should contain a section near the end that discusses the
+security considerations of the protocol or procedures that are the
+main topic of your document, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;middle&gt;
+        ...
+        &lt;section title="Security Considerations"&gt;
+            &lt;t&gt;This memo raises no security issues;
+            however,
+            according to &lt;xref target="refs.RFC2223" /&gt;,
+            your document should contain a section near the end
+            that discusses the security considerations of the
+            protocol or procedures that are the main topic of your
+            document.&lt;/t&gt;
+        &lt;/section&gt;
+    &lt;/middle&gt;
+</pre></div>
+<a name="rfc.references1"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<h3>5.&nbsp;References</h3>
+<table width="99%" border="0">
+<tbody><tr><td class="author-text" valign="top"><a name="XML">[XML]</a></td>
+<td class="author-text"><a href="http://www.w3c.org/">World Wide Web Consortium</a>, “<a href="http://www.w3.org/TR/1998/REC-xml-19980210">Extensible Markup Language (XML) 1.0</a>,” W3C&nbsp;XML, February&nbsp;1998.</td></tr>
+<tr><td class="author-text" valign="top"><a name="refs.RFC2223">[refs.RFC2223]</a></td>
+<td class="author-text"><a href="mailto:Postel@ISI.EDU">Postel, J.</a> and <a href="mailto:jkrey@isi.edu">J. Reynolds</a>, “<a href="http://tools.ietf.org/html/rfc2223">Instructions to RFC Authors</a>,” RFC&nbsp;2223, October&nbsp;1997.</td></tr>
+<tr><td class="author-text" valign="top"><a name="refs.RFC2026">[refs.RFC2026]</a></td>
+<td class="author-text"><a href="mailto:sob@harvard.edu">Bradner, S.</a>, “<a href="http://tools.ietf.org/html/rfc2026">The Internet Standards Process -- Revision 3</a>,” RFC&nbsp;2026, BCP&nbsp;9, October&nbsp;1996.</td></tr>
+<tr><td class="author-text" valign="top"><a name="URI">[URI]</a></td>
+<td class="author-text"><a href="mailto:timbl@w3.org">Berners-Lee, T.</a>, <a href="mailto:fielding@ics.uci.edu">Fielding, R.</a>, and <a href="mailto:masinter@parc.xerox.com">L. Masinter</a>, “<a href="http://tools.ietf.org/html/rfc2396">Uniform Resource Identifiers (URI): Generic Syntax</a>,” RFC&nbsp;2396, August&nbsp;1998.</td></tr>
+</tbody></table>
+
+<a name="rfc"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.A"></a><h3>Appendix A.&nbsp;
+The rfc Element</h3>
+
+<p style="text-align: left">The "&lt;rfc&gt;" tag at the beginning of the file,
+with only <a class="info" href="#ipr">an "ipr" attribute<span> (</span><span class="info">Conformance with RFC 2026</span><span>)</span></a>,
+produces an Internet-Draft.
+However,
+when other attributes are added to this tag by the RFC editor,
+an RFC is produced, e.g.,
+</p><div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+    &lt;rfc number="2200"
+         obsoletes="2000, 1920, 1880, 1800, ..."
+         category="std"
+         seriesNo="1"&gt;
+</pre></div>
+<p style="text-align: left">At a minimum,
+the "number" attribute should be present.
+</p>
+<p>The other attributes are:
+</p>
+<ul class="text">
+<li>"obsoletes",
+having a comma-separated list of RFC numbers,
+that the document obsoletes;
+</li>
+<li>"updates",
+having a comma-separated list of RFC numbers,
+that the document updates;
+</li>
+<li>"category",
+having one of these values:
+    
+<ol class="text">
+<li>"std", for a Standards-Track document;
+</li>
+<li>"bcp", "for a Best Current Practices document;
+</li>
+<li>"exp", for an Experimental Protocol document;
+</li>
+<li>"historic", for a historic document; or,
+</li>
+<li>"info", the default, for an Informational document.
+</li>
+</ol>
+
+</li>
+<li>"seriesNo",
+having the corresponding number in the STD (std), BCP (bcp), or FYI (info)
+series.
+</li>
+</ul><p>
+
+</p>
+<p>Finally,
+a special entity, "&amp;rfc.number;", is available.
+Authors preparing an RFC should use this entity whenever they want to 
+reference the number of the RFC within the document itself.
+In printed versions of the document,
+the appropriate substitution (or "XXXX") will occur.
+</p>
+<a name="rfc.dtd"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.B"></a><h3>Appendix B.&nbsp;
+The RFC DTD</h3>
+<div style="display: table; width: 0; margin-left: 3em; margin-right: auto"><pre>
+&lt;!--
+  DTD for the RFC document series, draft of 99-01-30
+  --&gt;
+
+
+&lt;!--
+  Contents
+
+    DTD data types
+
+    The top-level
+
+    Front matter
+
+    The Body
+
+    Back matter
+  --&gt;
+
+
+&lt;!--
+  DTD data types:
+
+        entity        description
+        ======        ===============================================
+        NUMBER        [0-9]+
+        NUMBERS       a comma-separated list of NUMBER
+
+        DAY           the day of the month, e.g., "1"
+        MONTH         the month of the year, e.g., "January"
+        YEAR          a four-digit year, e.g., "1999"
+
+        URI           e.g., "http://invisible.net/"
+
+        ATEXT/CTEXT   printable ASCII text (no line-terminators)
+
+        TEXT          character data
+  --&gt;
+
+
+&lt;!ENTITY % NUMBER     "CDATA"&gt;
+&lt;!ENTITY % NUMBERS    "CDATA"&gt;
+
+&lt;!ENTITY % DAY        "CDATA"&gt;
+&lt;!ENTITY % MONTH      "CDATA"&gt;
+&lt;!ENTITY % YEAR       "CDATA"&gt;
+
+&lt;!ENTITY % URI        "CDATA"&gt;
+
+&lt;!ENTITY % ATEXT      "CDATA"&gt;
+&lt;!ENTITY % CTEXT      "#PCDATA"&gt;
+
+&lt;!ENTITY % TEXT       "#PCDATA"&gt;
+
+&lt;!ENTITY   rfc.number "XXXX"&gt;
+
+
+&lt;!--
+  The top-level
+  --&gt;
+
+
+&lt;!--
+  attributes for the "rfc" element are supplied by the RFC
+  editor. when preparing drafts, authors should leave them blank.
+
+  the "seriesNo" attribute is used if the category is, e.g., BCP.
+  --&gt;
+&lt;!ELEMENT rfc         (front,middle,back?)&gt;
+&lt;!ATTLIST rfc
+          number      %NUMBER;           #IMPLIED
+          obsoletes   %NUMBERS;          ""
+          updates     %NUMBERS;          ""
+          category    (std|bcp|info|exp|historic)
+                                         "info"
+          seriesNo    %NUMBER;           #IMPLIED
+          ipr         (full2026|noDerivativeWorks2026|none)
+                                         #IMPLIED
+          docName     %ATEXT;            #IMPLIED&gt;
+
+&lt;!--
+  Front matter
+  --&gt;
+
+
+&lt;!ELEMENT front       (title,author+,date,area*,workgroup*,keyword*,
+                       abstract?,note*)&gt;
+
+&lt;!-- the "abbrev" attribute is used for headers, etc. --&gt;
+&lt;!ELEMENT title       (%CTEXT;)&gt;
+&lt;!ATTLIST title
+          abbrev      %ATEXT;            #IMPLIED&gt;
+
+&lt;!ELEMENT author      (organization,address?)&gt;
+&lt;!ATTLIST author
+          initials    %ATEXT;            #IMPLIED
+          surname     %ATEXT;            #IMPLIED
+          fullname    %ATEXT;            #IMPLIED&gt;
+
+&lt;!ELEMENT organization
+                      (%CTEXT;)&gt;
+&lt;!ATTLIST organization
+          abbrev      %ATEXT;            #IMPLIED&gt;
+
+&lt;!ELEMENT address     (postal?,phone?,facsimile?,email?,uri?)&gt;
+
+&lt;!-- at most one of each the city, region, code, and country
+     elements may be present --&gt;
+&lt;!ELEMENT postal      (street+,(city|region|code|country)*)&gt;
+&lt;!ELEMENT street      (%CTEXT;)&gt;
+&lt;!ELEMENT city        (%CTEXT;)&gt;
+&lt;!ELEMENT region      (%CTEXT;)&gt;
+&lt;!ELEMENT code        (%CTEXT;)&gt;
+&lt;!ELEMENT country     (%CTEXT;)&gt;
+&lt;!ELEMENT phone       (%CTEXT;)&gt;
+&lt;!ELEMENT facsimile   (%CTEXT;)&gt;
+&lt;!ELEMENT email       (%CTEXT;)&gt;
+&lt;!ELEMENT uri         (%CTEXT;)&gt;
+
+&lt;!ELEMENT date        EMPTY&gt;
+&lt;!ATTLIST date
+          day         %DAY;              #IMPLIED
+          month       %MONTH;            #REQUIRED
+          year        %YEAR;             #REQUIRED&gt;
+
+&lt;!-- meta-data... --&gt;
+&lt;!ELEMENT area        (%CTEXT;)&gt;
+&lt;!ELEMENT workgroup   (%CTEXT;)&gt;
+&lt;!ELEMENT keyword     (%CTEXT;)&gt;
+
+&lt;!ELEMENT abstract    (t)+&gt;
+&lt;!ELEMENT note        (t)+&gt;
+&lt;!ATTLIST note
+          title       %ATEXT;            #REQUIRED&gt;
+
+
+&lt;!--
+  The body
+  --&gt;
+
+
+&lt;!ELEMENT middle      (section)+&gt;
+
+&lt;!ELEMENT section     (t|figure|section)*&gt;
+&lt;!ATTLIST section
+          anchor      ID                 #IMPLIED
+          title       %ATEXT;            #REQUIRED&gt;
+
+&lt;!ELEMENT t           (%TEXT;|list|figure|xref|eref|iref|vspace)*&gt;
+&lt;!ATTLIST t
+          hangText    %ATEXT;            #IMPLIED&gt;
+
+&lt;!-- the value of the style attribute is inherited from the closest
+     parent --&gt;
+&lt;!ELEMENT list        (t+)&gt;
+&lt;!ATTLIST list
+          style       (numbers|symbols|hanging|empty)
+                                         "empty"&gt;
+
+&lt;!ELEMENT xref        (%CTEXT;)&gt;
+&lt;!ATTLIST xref
+          target      IDREF              #REQUIRED
+          pageno      (true|false)       "false"&gt;
+
+&lt;!ELEMENT eref        (%CTEXT;)&gt;
+&lt;!ATTLIST eref
+          target      %URI;              #REQUIRED&gt;
+
+&lt;!ELEMENT iref        EMPTY&gt;
+&lt;!ATTLIST iref
+          item        %ATEXT;            #REQUIRED
+          subitem     %ATEXT;            ""&gt;
+
+&lt;!ELEMENT vspace      EMPTY&gt;
+&lt;!ATTLIST vspace
+          blankLines  %NUMBER;           "0"&gt;
+
+&lt;!ELEMENT figure      (preamble?,artwork,postamble?)&gt;
+&lt;!ATTLIST figure
+          anchor      ID                 #IMPLIED
+          title       %ATEXT;            ""&gt;
+
+&lt;!ELEMENT preamble    (%TEXT;|xref|eref|iref)*&gt;
+&lt;!ELEMENT artwork     (%TEXT;)*&gt;
+&lt;!ATTLIST artwork
+          xml:space   (default|preserve) "preserve"&gt;
+&lt;!ELEMENT postamble   (%TEXT;|xref|eref|iref)*&gt;
+
+
+&lt;!--
+  Back matter
+  --&gt;
+
+
+&lt;!-- sections, if present, are appendices --&gt;
+&lt;!ELEMENT back        (references?,section*)&gt;
+
+&lt;!ELEMENT references  (reference+)&gt;
+&lt;!ELEMENT reference   (front,seriesInfo*)&gt;
+&lt;!ATTLIST reference
+          anchor      ID                 #IMPLIED
+          target      %URI;              #IMPLIED&gt;
+&lt;!ELEMENT seriesInfo  EMPTY&gt;
+&lt;!ATTLIST seriesInfo
+          name        %ATEXT;            #REQUIRED
+          value       %ATEXT;            #REQUIRED&gt;
+</pre></div>
+<a name="anchor22"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<a name="rfc.section.C"></a><h3>Appendix C.&nbsp;
+Acknowledgements</h3>
+
+<p>The author gratefully acknowledges the contributions of:
+Alan Barrett,
+Brad Burdick,
+Brian Carpenter,
+Steve Deering,
+Patrik Faltstrom,
+Jim Gettys,
+Carl Malamud,
+Chris Newman,
+Kurt Starsinic,
+and,
+Frank Strauss.
+</p><a name="rfc.index"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<h3>Index</h3>
+<table>
+<tbody><tr><td><strong>I</strong></td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>indexing</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;&nbsp;<a href="#anchor23">how to</a></td></tr>
+</tbody></table>
+
+<a name="rfc.authors"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<h3>Author's Address</h3>
+<table width="99%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr><td class="author-text">&nbsp;</td>
+<td class="author-text">Marshall T. Rose</td></tr>
+<tr><td class="author-text">&nbsp;</td>
+<td class="author-text">Invisible Worlds, Inc.</td></tr>
+<tr><td class="author-text">&nbsp;</td>
+<td class="author-text">660 York Street</td></tr>
+<tr><td class="author-text">&nbsp;</td>
+<td class="author-text">San Francisco, CA  94110</td></tr>
+<tr><td class="author-text">&nbsp;</td>
+<td class="author-text">US</td></tr>
+<tr><td class="author" align="right">Phone:&nbsp;</td>
+<td class="author-text">+1 415 695 3975</td></tr>
+<tr><td class="author" align="right">Email:&nbsp;</td>
+<td class="author-text"><a href="mailto:mrose@not.invisible.net">mrose@not.invisible.net</a></td></tr>
+<tr><td class="author" align="right">URI:&nbsp;</td>
+<td class="author-text"><a href="http://invisible.net/">http://invisible.net/</a></td></tr>
+</tbody></table>
+<a name="rfc.copyright"></a><br><hr>
+<table summary="layout" class="TOCbug" align="right" cellspacing="2" cellpadding="0"><tbody><tr><td class="TOCbug"><a href="#toc">&nbsp;TOC&nbsp;</a></td></tr></tbody></table>
+<h3>Full Copyright Statement</h3>
+<p class="copyright">
+Copyright © The Internet Society (1999). All Rights Reserved.</p>
+<p class="copyright">
+This document and translations of it may be copied and furnished to
+others, and derivative works that comment on or otherwise explain it
+or assist in its implementation may be prepared, copied, published and
+distributed, in whole or in part, without restriction of any kind,
+provided that the above copyright notice and this paragraph are
+included on all such copies and derivative works. However, this
+document itself may not be modified in any way, such as by removing
+the copyright notice or references to the Internet Society or other
+Internet organizations, except as needed for the purpose of
+developing Internet standards in which case the procedures for
+copyrights defined in the Internet Standards process must be
+followed, or as required to translate it into languages other than
+English.</p>
+<p class="copyright">
+The limited permissions granted above are perpetual and will not be
+revoked by the Internet Society or its successors or assigns.</p>
+<p class="copyright">
+This document and the information contained herein is provided on an
+“AS IS” basis and THE INTERNET SOCIETY AND THE INTERNET ENGINEERING
+TASK FORCE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h3>Intellectual Property</h3>
+<p class="copyright">
+The IETF takes no position regarding the validity or scope of
+any intellectual property or other rights that might be claimed
+to  pertain to the implementation or use of the technology
+described in this document or the extent to which any license
+under such rights might or might not be available; neither does
+it represent that it has made any effort to identify any such
+rights. Information on the IETF's procedures with respect to
+rights in standards-track and standards-related documentation
+can be found in BCP&nbsp;11. Copies of claims of rights made
+available for publication and any assurances of licenses to
+be made available, or the result of an attempt made
+to obtain a general license or permission for the use of such
+proprietary rights by implementors or users of this
+specification can be obtained from the IETF Secretariat.</p>
+<p class="copyright">
+The IETF invites any interested party to bring to its
+attention any copyrights, patents or patent applications, or
+other proprietary rights which may cover technology that may be
+required to practice this standard. Please address the
+information to the IETF Executive Director.</p>
+<h3>Acknowledgment</h3>
+<p class="copyright">
+Funding for the RFC Editor function is currently provided by
+the Internet Society.</p>
+
+</body></html>

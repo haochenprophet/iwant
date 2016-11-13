@@ -29,5 +29,6 @@
 #include "temp_def.h" 
 #include "uri.h" 
 #include "url.h" 
+#include "xml.h" 
  
 #endif 

@@ -5,6 +5,11 @@
 #define MAKE_SYNTAX	"target:[dependencies] [...]\n\tcommands\n\t[...]"
 #define TAG_SYNTAX "[TAG];TAG%d;tag;tag%d"
 
-#define HTTP_URI_SYNTAX "\"http:\" \"//\" authority path-abempty [ \"?\" query ] [ \"#\" fragment ]"
-#define HTTPS_URI_SYNTAX "\"https:\" \"//\" authority path-abempty [ \"?\" query ] [ \"#\" fragment ]"
+
+#define URI_SYNTAX "scheme:hier-part[?query][#fragment]"
+#define URI_HIER_PART_SYNTAX "//authority-path-abempty/path-absolute/path-rootless/path-empty"
+
+#define HTTP_URI_SYNTAX "http://authority-path-abempty[?query][#fragment]"
+#define HTTPS_URI_SYNTAX "https://authority-path-abempty[?query][#fragment]"
+
 #endif
