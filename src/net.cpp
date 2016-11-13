@@ -3,5 +3,5 @@
 Cnet::Cnet()
 {
 	this->name = "Cnet";
-	this->alias = this->name;
+	this->alias = "net";
 }

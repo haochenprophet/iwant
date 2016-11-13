@@ -1,11 +1,12 @@
 src := $(shell ls *.cpp)
 objs := $(patsubst %.cpp , %.o ,$(src))
+CFLAGS += -std=gnu++11 -DLINUX_OS -o 
 
 iwant : $(objs)
-	g++ -std=gnu++11 -o $@ $^ -lpthread
+	g++ $(CFLAGS) $@ $^ -lpthread
 
 %.o : %.cpp
-	g++ -std=gnu++11 -o $@ $< -lpthread
+	g++ $(CFLAGS) $@ $< -lpthread
 
 clean :
 	rm -f iwant *.o *~

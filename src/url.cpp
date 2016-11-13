@@ -3,5 +3,5 @@
 Curl::Curl()
 {
 	this->name = "Curl";
-	this->alias = this->name;
+	this->alias = "url";
 }

@@ -19,11 +19,14 @@ I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not
 I will use the most positive mind to perceive the power of the code.
 I will be reduced to ashes, I will be everywhere .
 
+No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
+Self-creation, self-renewal, self-improvement, creating classes, creating source code, creating Makefiles ... 
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
 
 [Coding rule]:
+
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
 
 2.callback ,extern ,execute , thread , function rule : typedef int(*MyFunc)(void *p);  
@@ -48,3 +51,6 @@ request :Need C + + compiler
 2. how to building in windows:
 	step 1: install vs 2015 or least .
 	step 2: using the vs 2015 open "winIwant.sln"
+
+[sample-code ] :
+1.The sample-code for learning, reference and testing purposes only,do not use for other purposes .

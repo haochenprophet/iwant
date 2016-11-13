@@ -1,0 +1,24 @@
+1. Special symbols
+	1.1 [Escape ]: like c language use \ ,% .
+	1.2 The option identifier the <> is required , the [] is  optional . 
+
+2.Keywords
+
+2.1 make syntax:
+	target:[dependencies] [...]
+		commands
+		[...]
+
+2.2 class syntax:
+
+	 [template_spec]   
+	 class [decl_spec] [tag [: base_list ]]  
+	{
+		[member_list]
+		[func_list]
+	} [declarators];  
+	[ class ] tag declarators;
+
+2.3 TAG[%d] syntax:
+
+ 	[TAG];TAG%d;tag;tag%d

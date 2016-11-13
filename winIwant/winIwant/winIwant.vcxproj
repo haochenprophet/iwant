@@ -101,10 +101,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D WINDOWS_OS=1 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions> "Ws2_32.lib" "Mswsock.lib" "AdvApi32.lib" %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,24 +144,59 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\class.cpp" />
+    <ClCompile Include="..\..\src\cout.cpp" />
+    <ClCompile Include="..\..\src\echo.cpp" />
+    <ClCompile Include="..\..\src\esc.cpp" />
+    <ClCompile Include="..\..\src\exec.cpp" />
+    <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\make.cpp" />
+    <ClCompile Include="..\..\src\math.cpp" />
+    <ClCompile Include="..\..\src\myMemory.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
+    <ClCompile Include="..\..\src\new.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
+    <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\socket.cpp" />
+    <ClCompile Include="..\..\src\syntax.cpp" />
+    <ClCompile Include="..\..\src\sys.cpp" />
+    <ClCompile Include="..\..\src\tag.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
+    <ClCompile Include="..\..\src\temp.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
+    <ClCompile Include="..\..\src\os.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\all_h_include.h" />
+    <ClInclude Include="..\..\src\class.h" />
+    <ClInclude Include="..\..\src\cout.h" />
+    <ClInclude Include="..\..\src\echo.h" />
+    <ClInclude Include="..\..\src\esc.h" />
+    <ClInclude Include="..\..\src\exec.h" />
+    <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\make.h" />
+    <ClInclude Include="..\..\src\math.h" />
+    <ClInclude Include="..\..\src\myMemory.h" />
     <ClInclude Include="..\..\src\net.h" />
+    <ClInclude Include="..\..\src\new.h" />
     <ClInclude Include="..\..\src\object.h" />
+    <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\socket.h" />
+    <ClInclude Include="..\..\src\syntax.h" />
+    <ClInclude Include="..\..\src\syntax_def.h" />
+    <ClInclude Include="..\..\src\sys.h" />
+    <ClInclude Include="..\..\src\tag.h" />
     <ClInclude Include="..\..\src\task.h" />
+    <ClInclude Include="..\..\src\temp.h" />
+    <ClInclude Include="..\..\src\temp_def.h" />
     <ClInclude Include="..\..\src\url.h" />
+    <ClInclude Include="..\..\src\os.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />

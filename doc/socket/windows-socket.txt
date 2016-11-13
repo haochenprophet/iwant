@@ -1,0 +1,1081 @@
+How to Using Winsock 
+
+1.About Servers and Clients
+
+1.1Server
+
+    Initialize Winsock.
+    Create a socket.
+    Bind the socket.
+    Listen on the socket for a client.
+    Accept a connection from a client.
+    Receive and send data.
+    Disconnect.
+
+1.2Client
+
+    Initialize Winsock.
+    Create a socket.
+    Connect to the server.
+    Send and receive data.
+    Disconnect.
+
+
+2. Creating a Basic Winsock Application
+
+    Create a new empty project.
+    Add an empty C++ source file to the project.
+    Ensure that the build environment refers to the Include, Lib, and Src directories of 
+    the Microsoft Windows Software Development Kit (SDK) or the earlier Platform Software Development Kit (SDK).
+
+    Ensure that the build environment links to the Winsock Library file Ws2_32.lib. 
+    Applications that use Winsock must be linked with the Ws2_32.lib library file. 
+    The #pragma comment indicates to the linker that the Ws2_32.lib file is needed.
+    Begin programming the Winsock application. Use the Winsock API by including the Winsock 2 header files. 
+    The Winsock2.h header file contains most of the Winsock functions, structures, and definitions. 
+    The Ws2tcpip.h header file contains definitions introduced in the 
+    WinSock 2 Protocol-Specific Annex document for TCP/IP that includes newer functions and structures used to retrieve IP addresses.
+    
+    Note  Stdio.h is used for standard input and output, specifically the printf() function.
+     
+2.1 code 1
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <stdio.h>
+
+	#pragma comment(lib, "Ws2_32.lib")
+
+	int main() {
+	  return 0;
+	}
+
+
+	Note  
+
+	The Iphlpapi.h header file is required if an application is using the IP Helper APIs. 
+	When the Iphlpapi.h header file is required, 
+	the #include line for the Winsock2.h header this file should be placed before the #include line for the Iphlpapi.h header file.
+
+	The Winsock2.h header file internally includes core elements from the Windows.h header file, 
+	so there is not usually an #include line for the Windows.h header file in Winsock applications. 
+	If an #include line is needed for the Windows.h header file, this should be preceded with the #define WIN32_LEAN_AND_MEAN macro.
+
+	 For historical reasons, the Windows.h header defaults to including the Winsock.h header file for Windows Sockets 1.1. 
+	 The declarations in the Winsock.h header file will conflict with the declarations in the 
+	 Winsock2.h header file required by Windows Sockets 2.0. The WIN32_LEAN_AND_MEAN macro prevents the 
+	 Winsock.h from being included by the Windows.h header. 
+
+
+	 An example illustrating this is shown below.
+
+	#ifndef WIN32_LEAN_AND_MEAN
+	#define WIN32_LEAN_AND_MEAN
+	#endif
+
+	#include <windows.h>
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <iphlpapi.h>
+	#include <stdio.h>
+
+	#pragma comment(lib, "Ws2_32.lib")
+
+	int main() {
+	  return 0;
+	}
+
+
+
+3. Initializing Winsock
+
+3.1 Initialize Winsock
+	All processes (applications or DLLs) that call Winsock functions must initialize the use of the Windows Sockets DLL before making other Winsock functions calls. 
+	This also makes certain that Winsock is supported on the system.
+
+	    Create a WSADATA object called wsaData.
+
+	    WSADATA wsaData;
+
+	    Call WSAStartup and return its value as an integer and check for errors.
+	    int iResult;
+
+	    // Initialize Winsock
+	    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+	    if (iResult != 0) {
+	        printf("WSAStartup failed: %d\n", iResult);
+	        return 1;
+	    }
+
+
+	The WSAStartup function is called to initiate use of WS2_32.dll.
+
+	The WSADATA structure contains information about the Windows Sockets implementation. 
+	The MAKEWORD(2,2) parameter of WSAStartup makes a request for version 2.2 of 
+	Winsock on the system, and sets the passed version as the highest version of Windows Sockets support that the caller can use.
+
+
+4.Creating a Socket for the Server
+
+	After initialization, a SOCKET object must be instantiated for use by the server.
+
+4.1 To create a socket for the server
+
+	    The getaddrinfo function is used to determine the values in the sockaddr structure:
+	        AF_INET is used to specify the IPv4 address family.
+	        SOCK_STREAM is used to specify a stream socket.
+	        IPPROTO_TCP is used to specify the TCP protocol .
+
+	        AI_PASSIVE flag indicates the caller intends to use the returned socket address structure in a call to the bind function. 
+
+	        When the AI_PASSIVE flag is set and nodename parameter to the getaddrinfo function is a NULL pointer,
+	         the IP address portion of the socket address structure is set to INADDR_ANY for IPv4 addresses or IN6ADDR_ANY_INIT for IPv6 addresses.
+	        
+	        27015 is the port number associated with the server that the client will connect to.
+
+	    The addrinfo structure is used by the getaddrinfo function.
+
+	    #define DEFAULT_PORT "27015"
+
+	    struct addrinfo *result = NULL, *ptr = NULL, hints;
+
+	    ZeroMemory(&hints, sizeof (hints));
+	    hints.ai_family = AF_INET;
+	    hints.ai_socktype = SOCK_STREAM;
+	    hints.ai_protocol = IPPROTO_TCP;
+	    hints.ai_flags = AI_PASSIVE;
+
+	    // Resolve the local address and port to be used by the server
+
+	    iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
+	    if (iResult != 0) {
+	        printf("getaddrinfo failed: %d\n", iResult);
+	        WSACleanup();
+	        return 1;
+	    }
+
+
+	    Create a SOCKET object called ListenSocket for the server to listen for client connections.
+
+
+	    SOCKET ListenSocket = INVALID_SOCKET;
+
+
+	    Call the socket function and return its value to the ListenSocket variable. 
+	    For this server application, use the first IP address returned by the call to getaddrinfo that matched the address family, socket type, and protocol specified in the hints parameter. 
+	    In this example, a TCP stream socket for IPv4 was requested with an address family of IPv4, 
+	    a socket type of SOCK_STREAM and a protocol of IPPROTO_TCP. 
+	    So an IPv4 address is requested for the ListenSocket.
+
+	    If the server application wants to listen on IPv6, 
+	    then the address family needs to be set to AF_INET6 in the hints parameter.
+	     If a server wants to listen on both IPv6 and IPv4, two listen sockets must be created, one for IPv6 and one for IPv4. 
+	     These two sockets must be handled separately by the application.
+
+	    Windows Vista and later offer the ability to create a single IPv6 socket that is put in dual stack mode to listen on both IPv6 and IPv4. 
+	    For more information on this feature, see Dual-Stack Sockets.
+
+
+	    // Create a SOCKET for the server to listen for client connections
+
+	    ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+
+
+	    Check for errors to ensure that the socket is a valid socket.
+
+	    if (ListenSocket == INVALID_SOCKET) {
+	        printf("Error at socket(): %ld\n", WSAGetLastError());
+	        freeaddrinfo(result);
+	        WSACleanup();
+	        return 1;
+	    }
+
+
+4.2 Binding a Socket
+
+	For a server to accept client connections, it must be bound to a network address within the system. 
+	The following code demonstrates how to bind a socket that has already been created to an IP address and port. 
+	Client applications use the IP address and port to connect to the host network.
+
+	To bind a socket
+
+	The sockaddr structure holds information regarding the address family, IP address, and port number.
+
+	Call the bind function, passing the created socket and sockaddr structure returned from the getaddrinfo function as parameters. Check for general errors.
+
+
+	    // Setup the TCP listening socket
+	    iResult = bind( ListenSocket, result->ai_addr, (int)result->ai_addrlen);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("bind failed with error: %d\n", WSAGetLastError());
+	        freeaddrinfo(result);
+	        closesocket(ListenSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+
+	Once the bind function is called, the address information returned by the getaddrinfo function is no longer needed. 
+	The freeaddrinfo function is called to free the memory allocated by the getaddrinfo function for this address information.
+
+	    freeaddrinfo(result);
+
+4.3 Listening on a Socket
+
+	After the socket is bound to an IP address and port on the system, the server must then listen on that IP address and port for incoming connection requests.
+
+	To listen on a socket
+
+	Call the listen function, passing as parameters the created socket and a value for the backlog, maximum length of the queue of pending connections to accept. 
+	In this example, the backlog parameter was set to SOMAXCONN. 
+	This value is a special constant that instructs the Winsock provider for this socket to allow a maximum reasonable number of pending connections in the queue. 
+
+	Check the return value for general errors.
+
+
+	if ( listen( ListenSocket, SOMAXCONN ) == SOCKET_ERROR ) {
+	    printf( "Listen failed with error: %ld\n", WSAGetLastError() );
+	    closesocket(ListenSocket);
+	    WSACleanup();
+	    return 1;
+	}
+
+
+4.4 Accepting a Connection
+
+	Once the socket is listening for a connection, the program must handle connection requests on that socket.
+
+   4.4.1 Create a temporary SOCKET object called ClientSocket for accepting connections from clients.
+
+    	SOCKET ClientSocket;
+
+   4.4.2 Normally a server application would be designed to listen for connections from multiple clients. 
+	    For high-performance servers, multiple threads are commonly used to handle the multiple client connections.
+
+	    There are several different programming techniques using Winsock that can be used to listen for multiple client connections. 
+	    One programming technique is to create a continuous loop that checks for connection requests using the listen function (see Listening on a Socket). 
+	    If a connection request occurs, the application calls the accept, AcceptEx, or WSAAccept function and passes the work to another thread to handle the request. 
+	    Several other programming techniques are possible.
+
+	    Note that this basic example is very simple and does not use multiple threads. 
+	    The example also just listens for and accepts only a single connection.
+
+
+
+	    ClientSocket = INVALID_SOCKET;
+
+	    // Accept a client socket
+	    ClientSocket = accept(ListenSocket, NULL, NULL);
+	    if (ClientSocket == INVALID_SOCKET) {
+	        printf("accept failed: %d\n", WSAGetLastError());
+	        closesocket(ListenSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+     
+
+
+  4.4.3  When the client connection has been accepted, a server application would normally pass the accepted client socket 
+	    (the ClientSocket variable in the above sample code) to a worker thread or an I/O completion port and continue accepting additional connections. 
+	    In this basic example, the server continues to the next step.
+
+	    There are a number of other programming techniques that can be used to listen for and accept multiple connections. 
+	    These include using the select or WSAPoll functions. 
+	    Examples of some of these various programming techniques are illustrated in the Advanced Winsock Samples included with the Microsoft Windows Software Development Kit (SDK).
+
+
+Note  	On Unix systems, a common programming technique for servers was for an application to listen for connections. 
+	    When a connection was accepted, the parent process would call the fork function to create a new child process to handle the client connection, 
+	    inheriting the socket from the parent. This programming technique is not supported on Windows, since the fork function is not supported. 
+	    This technique is also not usually suitable for high-performance servers, 
+	    since the resources needed to create a new process are much greater than those needed for a thread. 
+
+4.5 To receive and send data on a socket
+
+
+	#define DEFAULT_BUFLEN 512
+
+	char recvbuf[DEFAULT_BUFLEN];
+	int iResult, iSendResult;
+	int recvbuflen = DEFAULT_BUFLEN;
+
+	// Receive until the peer shuts down the connection
+	do {
+
+	    iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+	    if (iResult > 0) {
+	        printf("Bytes received: %d\n", iResult);
+
+	        // Echo the buffer back to the sender
+	        iSendResult = send(ClientSocket, recvbuf, iResult, 0);
+	        if (iSendResult == SOCKET_ERROR) {
+	            printf("send failed: %d\n", WSAGetLastError());
+	            closesocket(ClientSocket);
+	            WSACleanup();
+	            return 1;
+	        }
+	        printf("Bytes sent: %d\n", iSendResult);
+	    } else if (iResult == 0)
+	        printf("Connection closing...\n");
+	    else {
+	        printf("recv failed: %d\n", WSAGetLastError());
+	        closesocket(ClientSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	} while (iResult > 0);
+
+
+	The send and recv functions both return an integer value of the number of bytes sent or received, respectively, or an error. 
+	Each function also takes the same parameters: the active socket, a char buffer, the number of bytes to send or receive, and any flags to use.
+
+
+4.6 Disconnecting the Server
+
+	Once the server is completed receiving data from the client and sending data back to the client, the server disconnects from the client and shutdowns the socket.
+
+	  To disconnect and shutdown a socket
+
+	    When the server is done sending data to the client, the shutdown function can be called specifying SD_SEND to shutdown the sending side of the socket. 
+	    This allows the client to release some of the resources for this socket. The server application can still receive data on the socket.
+
+	    // shutdown the send half of the connection since no more data will be sent
+	    iResult = shutdown(ClientSocket, SD_SEND);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("shutdown failed: %d\n", WSAGetLastError());
+	        closesocket(ClientSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+
+	   When the client application is done receiving data, the closesocket function is called to close the socket.
+
+	   When the client application is completed using the Windows Sockets DLL, the WSACleanup function is called to release resources.
+
+
+	    // cleanup
+	    closesocket(ClientSocket);
+	    WSACleanup();
+
+	    return 0;
+
+4.7 Complete Winsock Server Code
+
+	The following is the complete source code for the basic Winsock TCP/IP Server application.
+            
+            Winsock Server Source Code
+
+
+	#undef UNICODE
+
+	#define WIN32_LEAN_AND_MEAN
+
+	#include <windows.h>
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <stdlib.h>
+	#include <stdio.h>
+
+	// Need to link with Ws2_32.lib
+	#pragma comment (lib, "Ws2_32.lib")
+	// #pragma comment (lib, "Mswsock.lib")
+
+	#define DEFAULT_BUFLEN 512
+	#define DEFAULT_PORT "27015"
+
+	int __cdecl main(void) 
+	{
+	    WSADATA wsaData;
+	    int iResult;
+
+	    SOCKET ListenSocket = INVALID_SOCKET;
+	    SOCKET ClientSocket = INVALID_SOCKET;
+
+	    struct addrinfo *result = NULL;
+	    struct addrinfo hints;
+
+	    int iSendResult;
+	    char recvbuf[DEFAULT_BUFLEN];
+	    int recvbuflen = DEFAULT_BUFLEN;
+	    
+	    // Initialize Winsock
+	    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+	    if (iResult != 0) {
+	        printf("WSAStartup failed with error: %d\n", iResult);
+	        return 1;
+	    }
+
+	    ZeroMemory(&hints, sizeof(hints));
+	    hints.ai_family = AF_INET;
+	    hints.ai_socktype = SOCK_STREAM;
+	    hints.ai_protocol = IPPROTO_TCP;
+	    hints.ai_flags = AI_PASSIVE;
+
+	    // Resolve the server address and port
+	    iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
+	    if ( iResult != 0 ) {
+	        printf("getaddrinfo failed with error: %d\n", iResult);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Create a SOCKET for connecting to server
+	    ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+	    if (ListenSocket == INVALID_SOCKET) {
+	        printf("socket failed with error: %ld\n", WSAGetLastError());
+	        freeaddrinfo(result);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Setup the TCP listening socket
+	    iResult = bind( ListenSocket, result->ai_addr, (int)result->ai_addrlen);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("bind failed with error: %d\n", WSAGetLastError());
+	        freeaddrinfo(result);
+	        closesocket(ListenSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    freeaddrinfo(result);
+
+	    iResult = listen(ListenSocket, SOMAXCONN);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("listen failed with error: %d\n", WSAGetLastError());
+	        closesocket(ListenSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Accept a client socket
+	    ClientSocket = accept(ListenSocket, NULL, NULL);
+	    if (ClientSocket == INVALID_SOCKET) {
+	        printf("accept failed with error: %d\n", WSAGetLastError());
+	        closesocket(ListenSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // No longer need server socket
+	    closesocket(ListenSocket);
+
+	    // Receive until the peer shuts down the connection
+	    do {
+
+	        iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+	        if (iResult > 0) {
+	            printf("Bytes received: %d\n", iResult);
+
+	        // Echo the buffer back to the sender
+	            iSendResult = send( ClientSocket, recvbuf, iResult, 0 );
+	            if (iSendResult == SOCKET_ERROR) {
+	                printf("send failed with error: %d\n", WSAGetLastError());
+	                closesocket(ClientSocket);
+	                WSACleanup();
+	                return 1;
+	            }
+	            printf("Bytes sent: %d\n", iSendResult);
+	        }
+	        else if (iResult == 0)
+	            printf("Connection closing...\n");
+	        else  {
+	            printf("recv failed with error: %d\n", WSAGetLastError());
+	            closesocket(ClientSocket);
+	            WSACleanup();
+	            return 1;
+	        }
+
+	    } while (iResult > 0);
+
+	    // shutdown the connection since we're done
+	    iResult = shutdown(ClientSocket, SD_SEND);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("shutdown failed with error: %d\n", WSAGetLastError());
+	        closesocket(ClientSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // cleanup
+	    closesocket(ClientSocket);
+	    WSACleanup();
+
+	    return 0;
+	}
+
+
+5.Creating a Socket for the Client
+
+5.1After initialization, a SOCKET object must be instantiated for use by the client.
+
+	    To create a socket
+
+	   5.1.1 Declare an addrinfo object that contains a sockaddr structure and initialize these values. 
+		    For this application, the Internet address family is unspecified so that either an IPv6 or IPv4 address can be returned. 
+		    The application requests the socket type to be a stream socket for the TCP protocol.
+
+
+		    struct addrinfo *result = NULL,
+		                    *ptr = NULL,
+		                    hints;
+
+		    ZeroMemory( &hints, sizeof(hints) );
+		    hints.ai_family = AF_UNSPEC;
+		    hints.ai_socktype = SOCK_STREAM;
+		    hints.ai_protocol = IPPROTO_TCP;
+
+
+	   5.1.2 Call the getaddrinfo function requesting the IP address for the server name passed on the command line. 
+		    The TCP port on the server that the client will connect to is defined by DEFAULT_PORT as 27015 in this sample. 
+		    The getaddrinfo function returns its value as an integer that is checked for errors.
+
+
+		    #define DEFAULT_PORT "27015"
+
+		    // Resolve the server address and port
+		    iResult = getaddrinfo(argv[1], DEFAULT_PORT, &hints, &result);
+		    if (iResult != 0) {
+		        printf("getaddrinfo failed: %d\n", iResult);
+		        WSACleanup();
+		        return 1;
+		    }
+
+
+	   5.1.3 Create a SOCKET object called ConnectSocket.
+
+
+	    	SOCKET ConnectSocket = INVALID_SOCKET;
+
+
+	   5.1.4 Call the socket function and return its value to the ConnectSocket variable. 
+		    For this application, use the first IP address returned by the call to getaddrinfo that matched the address family, socket type, and protocol specified in the hints parameter. 
+		    In this example, a TCP stream socket was specified with a socket type of SOCK_STREAM and a protocol of IPPROTO_TCP. 
+		    The address family was left unspecified (AF_UNSPEC), so the returned IP address could be either an IPv6 or IPv4 address for the server.
+
+		    If the client application wants to connect using only IPv6 or IPv4, then the address family needs to be set to AF_INET6 for IPv6 or AF_INET for IPv4 in the hints parameter.
+
+
+		    // Attempt to connect to the first address returned by
+		    // the call to getaddrinfo
+		    ptr=result;
+
+		    // Create a SOCKET for connecting to server
+		    ConnectSocket = socket(ptr->ai_family, ptr->ai_socktype, 
+		        ptr->ai_protocol);
+
+
+	  5.1.5 Check for errors to ensure that the socket is a valid socket.
+
+
+		    if (ConnectSocket == INVALID_SOCKET) {
+		        printf("Error at socket(): %ld\n", WSAGetLastError());
+		        freeaddrinfo(result);
+		        WSACleanup();
+		        return 1;
+		    }
+
+
+		The parameters passed to the socket function can be changed for different implementations.
+
+		Error detection is a key part of successful networking code. If the socket call fails, it returns INVALID_SOCKET. 
+		The if statement in the previous code is used to catch any errors that may have occurred while creating the socket. 
+		WSAGetLastError returns an error number associated with the last error that occurred.
+
+	Note  More extensive error checking may be necessary depending on the application.
+	 
+
+	WSACleanup is used to terminate the use of the WS2_32 DLL.
+
+5.2Connecting to a Socket
+
+	For a client to communicate on a network, it must connect to a server.
+
+To connect to a socket
+
+	Call the connect function, passing the created socket and the sockaddr structure as parameters. Check for general errors.
+
+
+	// Connect to server.
+	iResult = connect( ConnectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+	if (iResult == SOCKET_ERROR) {
+	    closesocket(ConnectSocket);
+	    ConnectSocket = INVALID_SOCKET;
+	}
+
+	// Should really try the next address returned by getaddrinfo
+	// if the connect call failed
+	// But for this simple example we just free the resources
+	// returned by getaddrinfo and print an error message
+
+	freeaddrinfo(result);
+
+	if (ConnectSocket == INVALID_SOCKET) {
+	    printf("Unable to connect to server!\n");
+	    WSACleanup();
+	    return 1;
+	}
+
+
+	The getaddrinfo function is used to determine the values in the sockaddr structure. 
+	In this example, the first IP address returned by the getaddrinfo function is used to specify the sockaddr structure passed to the connect. 
+	If the connect call fails to the first IP address, then try the next addrinfo structure in the linked list returned from the getaddrinfo function.
+
+	The information specified in the sockaddr structure includes:
+
+	    the IP address of the server that the client will try to connect to.
+	    the port number on the server that the client will connect to. 
+	    This port was specified as port 27015 when the client called the getaddrinfo function.
+
+
+5.3 Sending and Receiving Data on the Client
+
+	The following code demonstrates the send and recv functions used by the client once a connection is established.
+
+	Client
+
+
+	#define DEFAULT_BUFLEN 512
+
+	int recvbuflen = DEFAULT_BUFLEN;
+
+	char *sendbuf = "this is a test";
+	char recvbuf[DEFAULT_BUFLEN];
+
+	int iResult;
+
+	// Send an initial buffer
+	iResult = send(ConnectSocket, sendbuf, (int) strlen(sendbuf), 0);
+	if (iResult == SOCKET_ERROR) {
+	    printf("send failed: %d\n", WSAGetLastError());
+	    closesocket(ConnectSocket);
+	    WSACleanup();
+	    return 1;
+	}
+
+	printf("Bytes Sent: %ld\n", iResult);
+
+	// shutdown the connection for sending since no more data will be sent
+	// the client can still use the ConnectSocket for receiving data
+	iResult = shutdown(ConnectSocket, SD_SEND);
+	if (iResult == SOCKET_ERROR) {
+	    printf("shutdown failed: %d\n", WSAGetLastError());
+	    closesocket(ConnectSocket);
+	    WSACleanup();
+	    return 1;
+	}
+
+	// Receive data until the server closes the connection
+	do {
+	    iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
+	    if (iResult > 0)
+	        printf("Bytes received: %d\n", iResult);
+	    else if (iResult == 0)
+	        printf("Connection closed\n");
+	    else
+	        printf("recv failed: %d\n", WSAGetLastError());
+	} while (iResult > 0);
+
+
+	The send and recv functions both return an integer value of the number of bytes sent or received, respectively, or an error. 
+	Each function also takes the same parameters: the active socket, a char buffer, the number of bytes to send or receive, and any flags to use.
+
+
+5.4 Disconnecting the Client
+
+	Once the client is completed sending and receiving data, the client disconnects from the server and shutdowns the socket.
+
+	To disconnect and shutdown a socket
+
+	   When the client is done sending data to the server, the shutdown function can be called specifying SD_SEND to shutdown the sending side of the socket. 
+	   This allows the server to release some of the resources for this socket. The client application can still receive data on the socket.
+
+
+	    // shutdown the send half of the connection since no more data will be sent
+	    iResult = shutdown(ConnectSocket, SD_SEND);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("shutdown failed: %d\n", WSAGetLastError());
+	        closesocket(ConnectSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+
+	    When the client application is done receiving data, the closesocket function is called to close the socket.
+
+	    When the client application is completed using the Windows Sockets DLL, the WSACleanup function is called to release resources.
+
+
+	    // cleanup
+	    closesocket(ConnectSocket);
+	    WSACleanup();
+
+	    return 0;
+
+5.5 Complete Winsock Client Code
+
+	The following is the complete source code for the basic Winsock TCP/IP Client Application.
+	Winsock Client Source Code
+
+
+	#define WIN32_LEAN_AND_MEAN
+
+	#include <windows.h>
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <stdlib.h>
+	#include <stdio.h>
+
+
+	// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
+	#pragma comment (lib, "Ws2_32.lib")
+	#pragma comment (lib, "Mswsock.lib")
+	#pragma comment (lib, "AdvApi32.lib")
+
+
+	#define DEFAULT_BUFLEN 512
+	#define DEFAULT_PORT "27015"
+
+	int __cdecl main(int argc, char **argv) 
+	{
+	    WSADATA wsaData;
+	    SOCKET ConnectSocket = INVALID_SOCKET;
+	    struct addrinfo *result = NULL,
+	                    *ptr = NULL,
+	                    hints;
+	    char *sendbuf = "this is a test";
+	    char recvbuf[DEFAULT_BUFLEN];
+	    int iResult;
+	    int recvbuflen = DEFAULT_BUFLEN;
+	    
+	    // Validate the parameters
+	    if (argc != 2) {
+	        printf("usage: %s server-name\n", argv[0]);
+	        return 1;
+	    }
+
+	    // Initialize Winsock
+	    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+	    if (iResult != 0) {
+	        printf("WSAStartup failed with error: %d\n", iResult);
+	        return 1;
+	    }
+
+	    ZeroMemory( &hints, sizeof(hints) );
+	    hints.ai_family = AF_UNSPEC;
+	    hints.ai_socktype = SOCK_STREAM;
+	    hints.ai_protocol = IPPROTO_TCP;
+
+	    // Resolve the server address and port
+	    iResult = getaddrinfo(argv[1], DEFAULT_PORT, &hints, &result);
+	    if ( iResult != 0 ) {
+	        printf("getaddrinfo failed with error: %d\n", iResult);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Attempt to connect to an address until one succeeds
+	    for(ptr=result; ptr != NULL ;ptr=ptr->ai_next) {
+
+	        // Create a SOCKET for connecting to server
+	        ConnectSocket = socket(ptr->ai_family, ptr->ai_socktype, 
+	            ptr->ai_protocol);
+	        if (ConnectSocket == INVALID_SOCKET) {
+	            printf("socket failed with error: %ld\n", WSAGetLastError());
+	            WSACleanup();
+	            return 1;
+	        }
+
+	        // Connect to server.
+	        iResult = connect( ConnectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+	        if (iResult == SOCKET_ERROR) {
+	            closesocket(ConnectSocket);
+	            ConnectSocket = INVALID_SOCKET;
+	            continue;
+	        }
+	        break;
+	    }
+
+	    freeaddrinfo(result);
+
+	    if (ConnectSocket == INVALID_SOCKET) {
+	        printf("Unable to connect to server!\n");
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Send an initial buffer
+	    iResult = send( ConnectSocket, sendbuf, (int)strlen(sendbuf), 0 );
+	    if (iResult == SOCKET_ERROR) {
+	        printf("send failed with error: %d\n", WSAGetLastError());
+	        closesocket(ConnectSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    printf("Bytes Sent: %ld\n", iResult);
+
+	    // shutdown the connection since no more data will be sent
+	    iResult = shutdown(ConnectSocket, SD_SEND);
+	    if (iResult == SOCKET_ERROR) {
+	        printf("shutdown failed with error: %d\n", WSAGetLastError());
+	        closesocket(ConnectSocket);
+	        WSACleanup();
+	        return 1;
+	    }
+
+	    // Receive until the peer closes the connection
+	    do {
+
+	        iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
+	        if ( iResult > 0 )
+	            printf("Bytes received: %d\n", iResult);
+	        else if ( iResult == 0 )
+	            printf("Connection closed\n");
+	        else
+	            printf("recv failed with error: %d\n", WSAGetLastError());
+
+	    } while( iResult > 0 );
+
+	    // cleanup
+	    closesocket(ConnectSocket);
+	    WSACleanup();
+
+	    return 0;
+	}
+
+6. IPv6 Guide for Windows Sockets Applications
+
+6.1Changing Data Structures for IPv6 Winsock Appications
+
+	When adding support for IPv6, you must ensure that your application defines properly sized data structures. 
+	The size of an IPv6 address is much larger than an IPv4 address. 
+	Structures that are hard-coded to handle the size of an IPv4 address when storing an IP address will cause problems in your application, and must be modified.
+
+	Best Practice
+
+	The best approach to ensuring that your structures are properly sized is to use the SOCKADDR_STORAGE structure. 
+	The SOCKADDR_STORAGE structure is agnostic to IP address version. 
+	When the SOCKADDR_STORAGE structure is used to store IP addresses, IPv4 and IPv6 addresses can be properly handled with one code base.
+
+	The following example, which is an excerpt taken from the Server.c file found in Appendix B, 
+	identifies an appropriate use of the SOCKADDR_STORAGE structure. Notice that the structure, 
+	when used properly as this example shows, gracefully handles either an IPv4 or IPv6 address.
+
+
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	#include <stdio.h>
+
+	#pragma comment(lib, "Ws2_32.lib")
+
+	#define BUFFER_SIZE 512
+	#define DEFAULT_PORT "27015"
+
+	int main(int argc, char **argv)
+	{
+	    char Buffer[BUFFER_SIZE] = {0};
+
+	    char *Hostname;
+
+	    int Family = AF_UNSPEC;
+	    int SocketType = SOCK_STREAM;
+	    char *Port = DEFAULT_PORT;
+	    char *Address = NULL;
+
+	    int i = 0;
+	    DWORD dwRetval = 0;
+	    int iResult = 0;
+	    int FromLen = 0;
+	    int AmountRead = 0;
+
+	    SOCKADDR_STORAGE From;
+
+	    WSADATA wsaData;
+
+	    ADDRINFO *AddrInfo = NULL;
+	    ADDRINFO *AI = NULL;
+
+	    // Parse arguments
+	    if (argc >= 1) {
+	        Hostname = argv[1];
+	    }    
+
+	   // Initialize Winsock
+	    iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	    if (iResult != 0) {
+	        printf("WSAStartup failed: %d\n", iResult);
+	        return 1;
+	    }
+
+	    From.ss_family = (ADDRESS_FAMILY) Family;
+	    
+	    //...
+	        
+	        return 0;
+	}
+
+
+7. Winsock Functions
+
+	The following list provides concise descriptions of each Winsock function. 
+	For additional information on any function, click the function name.
+
+Function			Description
+accept				Permits an incoming connection attempt on a socket.
+AcceptEx			Accepts a new connection, returns the local and remote address, and receives the first block of data sent by the client application.
+bind				Associates a local address with a socket.
+closesocket			Closes an existing socket.
+connect			Establishes a connection to a specified socket.
+ConnectEx			Establishes a connection to a specified socket, and optionally sends data once the connection is established. Only supported on connection-oriented sockets.
+DisconnectEx			Closes a connection on a socket, and allows the socket handle to be reused.
+EnumProtocols		Retrieves information about a specified set of network protocols that are active on a local host.
+freeaddrinfo			Frees address information that the getaddrinfo function dynamically allocates in addrinfo structures.
+FreeAddrInfoEx		Frees address information that the GetAddrInfoEx function dynamically allocates in addrinfoex structures.
+FreeAddrInfoW		Frees address information that the GetAddrInfoW function dynamically allocates in addrinfoW structures.
+gai_strerror			Assists in printing error messages based on the EAI_* errors returned by the getaddrinfo function.
+GetAcceptExSockaddrs	Parses the data obtained from a call to the AcceptEx function.
+GetAddressByName		Queries a namespace, or a set of default namespaces, to retrieve network address information for a specified network service. 
+				This process is known as service name resolution. 
+				A network service can also use the function to obtain local address information that it can use with the bind function.
+getaddrinfo			Provides protocol-independent translation from an ANSI host name to an address.
+GetAddrInfoEx		Provides protocol-independent name resolution with additional parameters to qualify which name space providers should handle the request.
+GetAddrInfoExCancel	Cancels an asynchronous operation by the GetAddrInfoEx function.
+GetAddrInfoExOverlappedResult	Gets the return code for an OVERLAPPED structure used by an asynchronous operation for the GetAddrInfoEx function.
+GetAddrInfoW		Provides protocol-independent translation from a Unicode host name to an address.
+gethostbyaddr			Retrieves the host information corresponding to a network address.
+gethostbyname		Retrieves host information corresponding to a host name from a host database. Deprecated: use getaddrinfo instead.
+gethostname			Retrieves the standard host name for the local computer.
+GetHostNameW		Retrieves the standard host name for the local computer as a Unicode string.
+getipv4sourcefilter		Retrieves the multicast filter state for an IPv4 socket.
+GetNameByType		Retrieves the name of a network service for the specified service type.
+getnameinfo			Provides name resolution from an IPv4 or IPv6 address to an ANSI host name and from a port number to the ANSI service name.
+GetNameInfoW		Provides name resolution from an IPv4 or IPv6 address to a Unicode host name and from a port number to the Unicode service name.
+getpeername			Retrieves the address of the peer to which a socket is connected.
+getprotobyname		Retrieves the protocol information corresponding to a protocol name.
+getprotobynumber		Retrieves protocol information corresponding to a protocol number.
+getservbyname		Retrieves service information corresponding to a service name and protocol.
+getservbyport			Retrieves service information corresponding to a port and protocol.
+GetService			Retrieves information about a network service in the context of a set of default namespaces or a specified namespace.
+getsockname			Retrieves the local name for a socket.
+getsockopt			Retrieves a socket option.
+getsourcefilter			Retrieves the multicast filter state for an IPv4 or IPv6 socket.
+GetTypeByName		Retrieves a service type GUID for a network service specified by name.
+htond				Converts a double from host to TCP/IP network byte order (which is big-endian).
+htonf				Converts a float from host to TCP/IP network byte order (which is big-endian).
+htonl				Converts a u_long from host to TCP/IP network byte order (which is big-endian).
+htonll				Converts an unsigned __int64 from host to TCP/IP network byte order (which is big-endian).
+htons				Converts a u_short from host to TCP/IP network byte order (which is big-endian).
+inet_addr			Converts a string containing an (Ipv4) Internet Protocol dotted address into a proper address for the in_addr structure.
+inet_ntoa			Converts an (IPv4) Internet network address into a string in Internet standard dotted format.
+InetNtop			converts an IPv4 or IPv6 Internet network address into a string in Internet standard format. The ANSI version of this function is inet_ntop.
+InetPton			Converts an IPv4 or IPv6 Internet network address in its standard text presentation form into its numeric binary form. 
+				The ANSI version of this function is inet_pton.
+ioctlsocket			Controls the I/O mode of a socket.
+listen				Places a socket a state where it is listening for an incoming connection.
+ntohd				Converts an unsigned __int64 from TCP/IP network order to host byte order (which is little-endian on Intel processors) and returns a double.
+ntohf				Converts an unsigned __int32 from TCP/IP network order to host byte order (which is little-endian on Intel processors) and returns a float.
+ntohl				Converts a u_long from TCP/IP network order to host byte order (which is little-endian on Intel processors).
+ntohll				Converts an unsigned __int64 from TCP/IP network order to host byte order (which is little-endian on Intel processors).
+ntohs				Converts a u_short from TCP/IP network byte order to host byte order (which is little-endian on Intel processors).
+recv				Receives data from a connected or bound socket.
+recvfrom			Receives a datagram and stores the source address.
+RIOCloseCompletionQueue		Closes an existing completion queue used for I/O completion notification by send and receive requests with the Winsock registered I/O extensions.
+RIOCreateCompletionQueue	Creates an I/O completion queue of a specific size for use with the Winsock registered I/O extensions.
+RIOCreateRequestQueue		Creates a registered I/O socket descriptor using a specified socket and I/O completion queues for use with the Winsock registered I/O extensions.
+RIODequeueCompletion		Removes entries from an I/O completion queue for use with the Winsock registered I/O extensions.
+RIODeregisterBuffer			Deregisters a registered buffer used with the Winsock registered I/O extensions.
+RIONotify				Registers the method to use for notification behavior with an I/O completion queue for use with the Winsock registered I/O extensions.
+RIOReceive				Receives network data on a connected registered I/O TCP socket or a bound registered I/O UDP
+					 socket for use with the Winsock registered I/O extensions.
+RIOReceiveEx			Receives network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket with additional options 
+					for use with the Winsock registered I/O extensions.
+RIORegisterBuffer			Registers a RIO_BUFFERID, a registered buffer descriptor, with a specified buffer for use with the Winsock registered I/O extensions.
+RIOResizeCompletionQueue	Resizes an I/O completion queue to be either larger or smaller for use with the Winsock registered I/O extensions.
+RIOResizeRequestQueue		Resizes a request queue to be either larger or smaller for use with the Winsock registered I/O extensions.
+RIOSend				Sends network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket for use with the Winsock registered I/O extensions.
+RIOSendEx				Sends network data on a connected registered I/O TCP socket or a bound registered I/O UDP socket with additional options 
+					for use with the Winsock registered I/O extensions.
+select					Determines the status of one or more sockets, waiting if necessary, to perform synchronous I/O.
+send					Sends data on a connected socket.
+sendto					Sends data to a specific destination.
+SetAddrInfoEx			Registers a host and service name along with associated addresses with a specific namespace provider.
+setipv4sourcefilter			Sets the multicast filter state for an IPv4 socket.
+SetService				Registers or removes from the registry a network service within one or more namespaces. 
+					Can also add or remove a network service type within one or more namespaces.
+SetSocketMediaStreamingMode	Indicates whether the network is to be used for transferring streaming media that requires quality of service.
+setsockopt				Sets a socket option.
+setsourcefilter				Sets the multicast filter state for an IPv4 or IPv6 socket.
+shutdown				Disables sends or receives on a socket.
+socket					Creates a socket that is bound to a specific service provider.
+TransmitFile				Transmits file data over a connected socket handle.
+TransmitPackets			Transmits in-memory data or file data over a connected socket.
+WSAAccept				Conditionally accepts a connection based on the return value of a condition function, 
+					provides quality of service flow specifications, and allows the transfer of connection data.
+WSAAddressToString		Converts all components of a sockaddr structure into a human-readable string representation of the address.
+WSAAsyncGetHostByAddr		Asynchronously retrieves host information that corresponds to an address.
+WSAAsyncGetHostByName	Asynchronously retrieves host information that corresponds to a host name.
+WSAAsyncGetProtoByName	Asynchronously retrieves protocol information that corresponds to a protocol name.
+WSAAsyncGetProtoByNumber	Asynchronously retrieves protocol information that corresponds to a protocol number.
+WSAAsyncGetServByName	Asynchronously retrieves service information that corresponds to a service name and port.
+WSAAsyncGetServByPort		Asynchronously retrieves service information that corresponds to a port and protocol.
+WSAAsyncSelect			Requests Windows message-based notification of network events for a socket.
+WSACancelAsyncRequest		Cancels an incomplete asynchronous operation.
+WSACleanup				Terminates use of the Ws2_32.DLL.
+WSACloseEvent			Closes an open event object handle.
+WSAConnect	Establishes 		a connection to another socket application, exchanges connect data, and specifies needed quality of service based on the specified FLOWSPEC structure.
+WSAConnectByList			Establishes a connection to one out of a collection of possible endpoints represented by a set of destination addresses (host names and ports).
+WSAConnectByName		Establishes a connection to another socket application on a specified host and port
+WSACreateEvent			Creates a new event object.
+WSADeleteSocketPeerTargetName	Removes the association between a peer target name and an IP address for a socket.
+WSADuplicateSocket			Returns a structure that can be used to create a new socket descriptor for a shared socket.
+WSAEnumNameSpaceProviders		Retrieves information about available namespaces.
+WSAEnumNameSpaceProvidersEx		Retrieves information about available namespaces.
+WSAEnumNetworkEvents			Discovers occurrences of network events for the indicated socket, clear internal network event records, and reset event objects (optional).
+WSAEnumProtocols				Retrieves information about available transport protocols.
+WSAEventSelect				Specifies an event object to be associated with the specified set of FD_XXX network events.
+__WSAFDIsSet				Specifies whether a socket is included in a set of socket descriptors.
+WSAGetLastError				Returns the error status for the last operation that failed.
+WSAGetOverlappedResult			Retrieves the results of an overlapped operation on the specified socket.
+WSAGetQOSByName			Initializes a QOS structure based on a named template, or it supplies a buffer to retrieve an enumeration of the available template names.
+WSAGetServiceClassInfo			Retrieves the class information (schema) pertaining to a specified service class from a specified namespace provider.
+WSAGetServiceClassNameByClassId	Retrieves the name of the service associated with the specified type.
+WSAHtonl					Converts a u_long from host byte order to network byte order.
+WSAHtons					Converts a u_short from host byte order to network byte order.
+WSAImpersonateSocketPeer		Used to impersonate the security principal corresponding to a socket peer in order to perform application-level authorization.
+WSAInstallServiceClass			Registers a service class schema within a namespace.
+WSAIoctl					Controls the mode of a socket.
+WSAJoinLeaf	Joins				 a leaf node into a multipoint session, exchanges connect data, and specifies needed quality of service based on the specified structures.
+WSALookupServiceBegin			Initiates a client query that is constrained by the information contained within a WSAQUERYSET structure.
+WSALookupServiceEnd			Frees the handle used by previous calls to WSALookupServiceBegin and WSALookupServiceNext.
+WSALookupServiceNext			Retrieve the requested service information.
+WSANSPIoctl				Developers to make I/O control calls to a registered namespace.
+WSANtohl					Converts a u_long from network byte order to host byte order.
+WSANtohs					Converts a u_short from network byte order to host byte order.
+WSAPoll					Determines status of one or more sockets.
+WSAProviderConfigChange			Notifies the application when the provider configuration is changed.
+WSAQuerySocketSecurity			Queries information about the security applied to a connection on a socket.
+WSARecv					Receives data from a connected socket.
+WSARecvDisconnect			Terminates reception on a socket, and retrieves the disconnect data if the socket is connection oriented.
+WSARecvEx					Receives data from a connected socket.
+WSARecvFrom				Receives a datagram and stores the source address.
+WSARecvMsg				Receives data and optional control information from connected and unconnected sockets.
+WSARemoveServiceClass			Permanently removes the service class schema from the registry.
+WSAResetEvent				Resets the state of the specified event object to nonsignaled.
+WSARevertImpersonation			Terminates the impersonation of a socket peer.
+WSASend					Sends data on a connected socket.
+WSASendDisconnect			Initiates termination of the connection for the socket and sends disconnect data.
+WSASendMsg				Sends data and optional control information from connected and unconnected sockets.
+WSASendTo					Sends data to a specific destination, using overlapped I/O where applicable.
+WSASetEvent				Sets the state of the specified event object to signaled.
+WSASetLastError				Sets the error code.
+WSASetService				Registers or removes from the registry a service instance within one or more namespaces.
+WSASetSocketPeerTargetName		Used to specify the peer target name (SPN) that corresponds to a peer IP address. 
+						This target name is meant to be specified by client applications to securely identify the peer that should be authenticated.
+WSASetSocketSecurity			Enables and applies security for a socket.
+WSASocket					Creates a socket that is bound to a specific transport-service provider.
+WSAStartup					Initiates use of WS2_32.DLL by a process.
+WSAStringToAddress			Converts a numeric string to a sockaddr structure.
+WSAWaitForMultipleEvents	Returns 	either when one or all of the specified event objects are in the signaled state, or when the time-out interval expires.
+ 

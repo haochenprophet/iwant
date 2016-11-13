@@ -1,10 +1,10 @@
 #ifndef URL_H
 #define URL_H
 
-#include "object.h"
+#include "uri.h"
 
 namespace n_url {
-	class Curl :public Object
+	class Curl :public Curi
 	{
 	public:
 		Curl();

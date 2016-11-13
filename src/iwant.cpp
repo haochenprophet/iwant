@@ -10,7 +10,7 @@ Ciwant::Ciwant()
 	cout << "Ciwant::Ciwant()\n";
 #endif
 	this->name = "Ciwant";
-	this->alias = this->name; 
+	this->alias = "iwant";
 }
 
 Ciwant::~Ciwant()

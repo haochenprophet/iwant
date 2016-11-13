@@ -3,5 +3,5 @@
 Ctask::Ctask()
 {
 	this->name = "Ctask";
-	this->alias = this->name;
+	this->alias = "task";
 }
