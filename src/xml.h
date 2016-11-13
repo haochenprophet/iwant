@@ -1,16 +1,16 @@
-#ifndef XML_H
-#define XML_H
+#ifndef SQL_H
+#define SQL_H
 
 #include "object.h"
 
-namespace n_xml {
-	class Cxml :public Object
+namespace n_sql {
+	class Csql :public Object
 	{
 	public:
-		Cxml();
+		Csql();
 	};
 
 }
-using namespace n_xml;
+using namespace n_sql;
 
 #endif
