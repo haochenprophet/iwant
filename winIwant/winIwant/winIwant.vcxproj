@@ -151,6 +151,7 @@
     <ClCompile Include="..\..\src\exec.cpp" />
     <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
+    <ClCompile Include="..\..\src\http.cpp" />
     <ClCompile Include="..\..\src\iwant.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\make.cpp" />
@@ -161,13 +162,16 @@
     <ClCompile Include="..\..\src\object.cpp" />
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\socket.cpp" />
+    <ClCompile Include="..\..\src\sql.cpp" />
     <ClCompile Include="..\..\src\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
     <ClCompile Include="..\..\src\tag.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
     <ClCompile Include="..\..\src\temp.cpp" />
+    <ClCompile Include="..\..\src\uri.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\os.cpp" />
+    <ClCompile Include="..\..\src\xml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\all_h_include.h" />
@@ -178,6 +182,7 @@
     <ClInclude Include="..\..\src\exec.h" />
     <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\home.h" />
+    <ClInclude Include="..\..\src\http.h" />
     <ClInclude Include="..\..\src\iwant.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\make.h" />
@@ -188,6 +193,7 @@
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\socket.h" />
+    <ClInclude Include="..\..\src\sql.h" />
     <ClInclude Include="..\..\src\syntax.h" />
     <ClInclude Include="..\..\src\syntax_def.h" />
     <ClInclude Include="..\..\src\sys.h" />
@@ -195,8 +201,10 @@
     <ClInclude Include="..\..\src\task.h" />
     <ClInclude Include="..\..\src\temp.h" />
     <ClInclude Include="..\..\src\temp_def.h" />
+    <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\os.h" />
+    <ClInclude Include="..\..\src\xml.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />

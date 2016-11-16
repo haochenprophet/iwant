@@ -20,6 +20,7 @@
 #include "os.h" 
 #include "run.h" 
 #include "socket.h" 
+#include "sql.h" 
 #include "syntax.h" 
 #include "syntax_def.h" 
 #include "sys.h" 
