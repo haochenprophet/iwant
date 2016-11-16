@@ -8,6 +8,19 @@ Cclass::Cclass()
 	this->temp = CLASS_H_TEMP;
 }
 
+Cclass::Cclass(string tag)
+{
+	Cclass::Cclass();
+	this->tag = tag;
+}
+
+Cclass::~Cclass()
+{
+	this->base_list.clear();
+	this->member_list.clear();
+	this->func_list.clear();
+}
+
 int Cclass::func(void *p)
 {
 	cout << this->syntax;
@@ -29,23 +42,25 @@ int Cclass::create(void *p)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "CLASS_TEST\n";
+	cout << "CLASS_TEST\n\n";
 
 	Cclass c;
-	Cmain m;
-	Cmake mk;
-	Ctag t;
-
 	c.my_syntax();
-	c.my_temp();
+//	c.my_temp();
+
+	Ctag t;
+	t.my_syntax();
+
+/*
+	Cmain m;
 	m.my_temp();
 
+	Cmake mk;
 	mk.my_syntax();
-	t.my_syntax();
 
 	double  p = PI;
 	cout<< p<< endl;
-	
+	*/
 	return 0;
 }
 #endif 

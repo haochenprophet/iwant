@@ -99,6 +99,9 @@
     <ClCompile Include="..\..\src\xml.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\brackets.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -192,6 +195,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\xml.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\brackets.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
