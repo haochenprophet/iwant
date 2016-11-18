@@ -1,16 +1,22 @@
 #include "class.h"
 
-Cclass::Cclass()
+int Cclass::my_init(void *p)
 {
 	this->name = "Cclass";
 	this->alias = "class";
 	this->syntax = CLASS_SYNTAX;
-	this->temp = CLASS_H_TEMP;
+	this->temp = CLASS_H_TEMP;	
+	return 0;
+}
+
+Cclass::Cclass()
+{
+	this->my_init();
 }
 
 Cclass::Cclass(string tag)
 {
-	Cclass::Cclass();
+	this->my_init();
 	this->tag = tag;
 }
 
@@ -20,6 +26,7 @@ Cclass::~Cclass()
 	this->member_list.clear();
 	this->func_list.clear();
 }
+
 
 int Cclass::func(void *p)
 {

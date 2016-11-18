@@ -31,6 +31,7 @@ namespace n_class {
 		Cclass();
 		Cclass(string tag);
 		~Cclass();
+		int my_init(void *p=NULL);
 		int func(void *p=NULL);
 		int create(void *p);//Cclass *p
 		

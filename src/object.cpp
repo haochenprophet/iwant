@@ -366,7 +366,17 @@ int Object::func(void *p)
 
 int Object::create(void *p)
 {
-	return -1;
+	return -1;//do nothing
+}
+
+int Object::my_init(void *p)
+{
+	return 0;
+}
+
+int Object::my_exit(void *p)
+{
+	return 0;
 }
 
 #if OBJECT_TEST
