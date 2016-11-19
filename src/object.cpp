@@ -72,6 +72,8 @@ Object::Object()
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	this->addMe();
+	time (&this->at_time);
+	this->at_clock=clock();
 }
 
 Object::~Object()

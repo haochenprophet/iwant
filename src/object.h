@@ -7,7 +7,8 @@
 #include <list>
 #include <array>
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
-#include<string.h>
+#include <string.h>
+#include <time.h>       /* time_t, time */
 
 #include "temp_def.h"
 #include "syntax_def.h"
@@ -63,6 +64,8 @@ namespace n_object {
 
 		string name; //object name
 		string alias;//Alias object name
+		time_t at_time;
+		clock_t at_clock;
 
 		string syntax;//this for keyword object
 		string temp;//keyword template 
