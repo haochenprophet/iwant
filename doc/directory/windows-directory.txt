@@ -1,0 +1,100 @@
+1.Directory Management
+
+	A directory is a hierarchical collection of directories and files. 
+	The only constraint on the number of files that can be contained in 
+	a single directory is the physical size of the disk on which the directory is located.
+
+	A directory that contains one or more directories is the parent of the contained directory or directories, and each contained directory is a child of the parent directory. 
+	The hierarchical structure of directories is referred to as a directory tree.
+
+
+
+	The NTFS file system implements the logical link between a directory and the files it contains as a 
+	directory entry table. When a file is moved into a directory, an entry is created in the table for the 
+	moved file and the name of the file is placed in the entry. When a file contained in a directory is 
+	deleted, the name and entry corresponding to the deleted file is also deleted from the table. More than 
+	one entry for a single file can exist in a directory entry table. If an additional entry is created in 
+	the table for a file, that entry is referred to as a hard link to that file. There is no limit to the 
+	number of hard links that can be created for a single file.
+	Directories can also contain junctions and reparse points.
+
+2.Creating and Deleting Directories
+
+	An application can programmatically create and delete directories.
+
+	To create a new directory, use the CreateDirectory, CreateDirectoryEx, or CreateDirectoryTransacted function. 
+	A directory is given the name specified when it is created. The conventions for naming a directory follow the 
+	conventions for naming a file. For a description of these conventions, see Naming a File.
+
+	To delete an existing directory, use the RemoveDirectory or RemoveDirectoryTransacted function. Before removing 
+	a directory, you must ensure that the directory is empty and that you have the delete access privilege for the 
+	directory. To do the latter, call the GetSecurityInfo function.
+
+
+3.Changing the Current Directory
+
+	The directory at the end of the active path is called the current directory; it is the directory in which the active application started, unless it has been explicitly changed. An application can determine which directory is current by calling the GetCurrentDirectory function. It is sometimes necessary to use the GetFullPathName function to ensure the drive letter is included if the application requires it.
+	Note  Although each process can have only one current directory, if the application switches volumes by using the SetCurrentDirectory function, the system remembers the last current path for each volume (drive letter). This behavior will manifest itself only when specifying a drive letter without a fully qualified path when changing the current directory point of reference to a different volume. This applies to either Get or Set operations.
+	 
+
+	An application can change the current directory by calling the SetCurrentDirectory function.
+
+
+4.Moving Directories
+
+	To move a directory to another location, along with the files and subdirectories contained within it, 
+	call the MoveFileEx, MoveFileWithProgress, or MoveFileTransacted function. The MoveFileWithProgress 
+	function has the same functionality as MoveFileEx, except that MoveFileWithProgress enables you to 
+	specify a callback routine that receives notifications on the progress of the operation. 
+	The MoveFileTransacted function enables you to perform the operation as a transacted operation.
+
+5.Obtaining Directory Change Notifications
+
+	An application can monitor the contents of a directory and its subdirectories by using change notifications. 
+	Waiting for a change notification is similar to having a read operation pending against a directory and, if 
+	necessary, its subdirectories. When something changes within the directory being watched, the read operation 
+	is completed. For example, an application can use these functions to update a directory listing whenever a 
+	file name within the monitored directory changes.
+
+	An application can specify a set of conditions that trigger a change notification by using the 
+	FindFirstChangeNotification function. The conditions include changes to file names, directory names, 
+	attributes, file size, time of last write, and security. This function also returns a handle that can be 
+	waited on by using the wait functions. If the wait condition is satisfied, FindNextChangeNotification can be 
+	used to provide a notification handle to wait on subsequent changes. However, these functions do not indicate 
+	the actual change that satisfied the wait condition.
+
+	Use FindCloseChangeNotification to close the notification handle.
+
+	To retrieve information about the specific change as part of the notification, 
+	use the ReadDirectoryChangesW function. This function also enables you to provide a completion routine.
+
+	To track changes on a volume, see change journals.
+
+
+6. Directory Management Functions
+
+The following functions are used in directory management.
+
+In this section
+Function	                      Description
+
+CreateDirectory                  Creates a new directory.
+CreateDirectoryEx                 Creates a new directory with the attributes of a specified template directory.
+CreateDirectoryTransacted    
+            Creates a new directory as a transacted operation, with the attributes of a specified template directory.
+
+FindCloseChangeNotification       Stops change notification handle monitoring.
+
+FindFirstChangeNotification
+             Creates a change notification handle and sets up initial change notification filter conditions.
+
+FindNextChangeNotification
+          Requests that the operating system signal a change notification handle the next time it detects an appropriate change.
+
+GetCurrentDirectory             Retrieves the current directory for the current process.
+ReadDirectoryChangesW
+                                 Retrieves information that describes the changes within the specified directory.
+
+RemoveDirectory                  Deletes an existing empty directory.
+RemoveDirectoryTransacted        Deletes an existing empty directory as a transacted operation.
+SetCurrentDirectory              Changes the current directory for the current process.
