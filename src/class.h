@@ -7,7 +7,7 @@
 keyword:  class
 
  [template_spec]   
- class [decl_spec] [tag [: base_list ]]  
+ class [decl_spec] tag [: base_list ]  
 {
 	[member_list]
 	[func_list]
@@ -23,14 +23,18 @@ namespace n_class {
 		string decl_spec;
 		string tag;
 		string declarators;
-		list<char *> base_list;//base class list 
+		list<string *> base_list;//base class list 
 
-		list<char *> member_list;//base class list 
-		list<char *> func_list;//base class list 
+		list<string *> member_list;//base class list 
+		list<string *> func_list;//base class list 
 	public:
 		Cclass();
+		Cclass(string tag);
+		~Cclass();
+		int my_init(void *p=NULL);
 		int func(void *p=NULL);
 		int create(void *p);//Cclass *p
+		
 	};
 
 }

@@ -72,6 +72,8 @@ Object::Object()
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	this->addMe();
+	time (&this->at_time);
+	this->at_clock=clock();
 }
 
 Object::~Object()
@@ -366,7 +368,17 @@ int Object::func(void *p)
 
 int Object::create(void *p)
 {
-	return -1;
+	return -1;//do nothing
+}
+
+int Object::my_init(void *p)
+{
+	return 0;
+}
+
+int Object::my_exit(void *p)
+{
+	return 0;
 }
 
 #if OBJECT_TEST

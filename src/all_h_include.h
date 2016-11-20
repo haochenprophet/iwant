@@ -1,6 +1,7 @@
 #ifndef ALL_H_INCLUDE 
 #define ALL_H_INCLUDE 
 
+#include "brackets.h" 
 #include "class.h" 
 #include "cout.h" 
 #include "echo.h" 
@@ -20,6 +21,7 @@
 #include "os.h" 
 #include "run.h" 
 #include "socket.h" 
+#include "sql.h" 
 #include "syntax.h" 
 #include "syntax_def.h" 
 #include "sys.h" 

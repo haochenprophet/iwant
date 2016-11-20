@@ -1,0 +1,336 @@
+How to: Enumerate Directories and Files
+ 
+
+You can enumerate directories and files by using methods that return an enumerable collection of strings of their names. You can also use methods that return an enumerable collection of DirectoryInfo, FileInfo, or FileSystemInfo objects. Enumerable collections provide better performance than arrays when you work with large collections of directories and files.
+
+You can also use enumerable collections obtained from these methods to supply the IEnumerable parameter for constructors of collection classes such as the List class.
+
+If you want to obtain only the names of directories or files, use the enumeration methods of the Directory class. If you want to obtain other properties of directories or files, use the DirectoryInfo and FileSystemInfo classes.
+
+The following table provides a guide to the methods that return enumerable collections.
+
+To enumerate
+	
+
+Enumerable collection to return
+	
+
+Method to use
+
+Directories
+	
+
+Directory names
+	
+
+DirectoryEnumerateDirectories
+
+   
+	
+
+Directory information ( DirectoryInfo)
+	
+
+DirectoryInfoEnumerateDirectories
+
+Files
+	
+
+File names
+	
+
+DirectoryEnumerateFiles
+
+   
+	
+
+File information ( FileInfo)
+	
+
+DirectoryInfoEnumerateFiles
+
+File system information
+	
+
+File system entries
+	
+
+DirectoryEnumerateFileSystemEntries
+	
+
+File system information ( FileSystemInfo)
+	
+
+DirectoryInfoEnumerateFileSystemInfos
+
+Although you can immediately enumerate all the files in the subdirectories of a parent directory by using the AllDirectories search option provided by the SearchOption enumeration, unauthorized access exceptions ( UnauthorizedAccessException) may cause the enumeration to be incomplete. If these exceptions are possible, you can catch them and continue by first enumerating directories and then enumerating files.
+To enumerate directory names
+
+    Use the DirectoryEnumerateDirectories method to obtain a list of the top-level directory names in a specified path.
+
+    using System; 
+    using System.Collections.Generic; 
+    using System.IO; 
+    using System.Linq; 
+     
+    class Program 
+    { 
+        private static void Main(string[] args) 
+        { 
+            try 
+            { 
+                string dirPath = @"\\archives\2009\reports"; 
+     
+                List<string> dirs = new List<string>(Directory.EnumerateDirectories(dirPath)); 
+     
+                foreach (var dir in dirs) 
+                { 
+                    Console.WriteLine("{0}", dir.Substring(dir.LastIndexOf("\\") + 1)); 
+                } 
+                Console.WriteLine("{0} directories found.",  dirs.Count); 
+            } 
+            catch (UnauthorizedAccessException UAEx) 
+            { 
+                Console.WriteLine(UAEx.Message); 
+            } 
+            catch (PathTooLongException PathEx) 
+            { 
+                Console.WriteLine(PathEx.Message); 
+            } 
+        } 
+    }
+
+    Imports System.Collections.Generic
+    Imports System.IO
+    Imports System.Linq
+
+    Module Module1
+
+        Sub Main()
+            Try
+                Dim dirPath As String = "\\archives\2009\reports"
+
+                Dim dirs As List(Of String) = New List(Of String)(Directory.EnumerateDirectories(dirPath))
+
+                For Each folder In dirs
+                    Console.WriteLine("{0}", folder.Substring(folder.LastIndexOf("\") + 1))
+                Next
+                Console.WriteLine("{0} directories found.", dirs.Count)
+            Catch UAEx As UnauthorizedAccessException
+                Console.WriteLine(UAEx.Message)
+            Catch PathEx As PathTooLongException
+                Console.WriteLine(PathEx.Message)
+            End Try
+
+        End Sub
+    End Module
+
+ 
+To enumerate file names in a directory and subdirectories
+
+    Use the DirectoryEnumerateFiles method to search a directory and (optionally) its subdirectories, and to obtain a list of file names that match a specified search pattern.
+
+    using System; 
+    using System.IO; 
+    using System.Linq; 
+     
+    class Program 
+    { 
+        static void Main(string[] args) 
+        { 
+            try 
+            { 
+                var files = from file in Directory.EnumerateFiles(@"c:\", "*.txt", SearchOption.AllDirectories) 
+                            from line in File.ReadLines(file) 
+                            where line.Contains("Microsoft") 
+                            select new 
+                            { 
+                                File = file, 
+                                Line = line 
+                            }; 
+     
+                foreach (var f in files) 
+                { 
+                    Console.WriteLine("{0}\t{1}", f.File, f.Line); 
+                } 
+                Console.WriteLine("{0} files found.", files.Count().ToString()); 
+            } 
+            catch (UnauthorizedAccessException UAEx) 
+            { 
+                Console.WriteLine(UAEx.Message); 
+            } 
+            catch (PathTooLongException PathEx) 
+            { 
+                Console.WriteLine(PathEx.Message); 
+            } 
+        } 
+    }
+
+    Imports System.IO
+    Imports System.Xml.Linq
+    Module Module1
+
+        Sub Main()
+            Try
+                Dim files = From chkFile In Directory.EnumerateFiles("c:\", "*.txt", SearchOption.AllDirectories)
+                            From line In File.ReadLines(chkFile)
+                            Where line.Contains("Microsoft")
+                            Select New With {.curFile = chkFile, .curLine = line}
+
+                For Each f In files
+                    Console.WriteLine("{0}\t{1}", f.curFile, f.curLine)
+                Next
+                Console.WriteLine("{0} files found.", files.Count.ToString())
+            Catch UAEx As UnauthorizedAccessException
+                Console.WriteLine(UAEx.Message)
+            Catch PathEx As PathTooLongException
+                Console.WriteLine(PathEx.Message)
+            End Try
+        End Sub
+    End Module
+
+To enumerate a collection of DirectoryInfo objects
+
+    Use the DirectoryInfoEnumerateDirectories method to obtain a collection of top-level directories.
+
+    DirectoryInfo dirPrograms = new DirectoryInfo(@"c:\program files"); 
+    DateTime StartOf2009 = new DateTime(2009, 01, 01); 
+     
+    var dirs = from dir in dirPrograms.EnumerateDirectories() 
+                where dir.CreationTimeUtc < StartOf2009 
+                select new 
+                { 
+                    ProgDir = dir, 
+                }; 
+     
+    foreach (var di in dirs) 
+    { 
+        Console.WriteLine("{0}", di.ProgDir.Name); 
+    }
+
+    Dim dirPrograms As New DirectoryInfo("c:\program files")
+    Dim StartOf2009 As New DateTime(2009, 1, 1)
+
+    Dim dirs = From dir In dirPrograms.EnumerateDirectories()
+                Where dir.CreationTimeUtc < StartOf2009
+
+    For Each di As DirectoryInfo In dirs
+        Console.WriteLine("{0}", di.Name)
+    Next
+
+To enumerate a collection of FileInfo objects in all directories
+
+    Use the DirectoryInfoEnumerateFiles method to obtain a collection of files that match a specified search pattern in all directories. This example first enumerates the top-level directories to catch possible unauthorized access exceptions, and then enumerates the files.
+
+    using System; 
+    using System.IO; 
+     
+    class Program 
+    { 
+        static void Main(string[] args) 
+        { 
+            DirectoryInfo diTop = new DirectoryInfo(@"d:\"); 
+            try 
+            { 
+                foreach (var fi in diTop.EnumerateFiles()) 
+                { 
+                    try 
+                    { 
+                        // Display each file over 10 MB; 
+                        if (fi.Length > 10000000) 
+                        { 
+                            Console.WriteLine("{0}\t\t{1}", fi.FullName, fi.Length.ToString("N0")); 
+                        } 
+                    } 
+                    catch (UnauthorizedAccessException UnAuthTop) 
+                    { 
+                        Console.WriteLine("{0}", UnAuthTop.Message); 
+                    } 
+                } 
+     
+                foreach (var di in diTop.EnumerateDirectories("*")) 
+                { 
+                    try 
+                    { 
+                        foreach (var fi in di.EnumerateFiles("*", SearchOption.AllDirectories)) 
+                        { 
+                            try 
+                            { 
+                                // Display each file over 10 MB; 
+                                if (fi.Length > 10000000) 
+                                { 
+                                    Console.WriteLine("{0}\t\t{1}",  fi.FullName, fi.Length.ToString("N0")); 
+                                } 
+                            } 
+                            catch (UnauthorizedAccessException UnAuthFile) 
+                            { 
+                                Console.WriteLine("UnAuthFile: {0}", UnAuthFile.Message); 
+                            } 
+                        } 
+                    } 
+                    catch (UnauthorizedAccessException UnAuthSubDir) 
+                    { 
+                        Console.WriteLine("UnAuthSubDir: {0}", UnAuthSubDir.Message); 
+                    } 
+                } 
+            } 
+            catch (DirectoryNotFoundException DirNotFound) 
+            { 
+                Console.WriteLine("{0}", DirNotFound.Message); 
+            } 
+            catch (UnauthorizedAccessException UnAuthDir) 
+            { 
+                Console.WriteLine("UnAuthDir: {0}", UnAuthDir.Message); 
+            } 
+            catch (PathTooLongException LongPath) 
+            { 
+                Console.WriteLine("{0}", LongPath.Message); 
+            } 
+        } 
+    }
+
+    Imports System
+    Imports System.IO
+
+    Class Program
+        Public Shared Sub Main(ByVal args As String())
+            Dim diTop As New DirectoryInfo("d:\")
+            Try
+                For Each fi In diTop.EnumerateFiles()
+                    Try
+                        ' Display each file over 10 MB;
+                        If fi.Length > 10000000 Then
+                            Console.WriteLine("{0}" & vbTab & vbTab & "{1}", fi.FullName, fi.Length.ToString("N0"))
+                        End If
+                    Catch UnAuthTop As UnauthorizedAccessException
+                        Console.WriteLine("{0}", UnAuthTop.Message)
+                    End Try
+                Next
+
+                For Each di In diTop.EnumerateDirectories("*")
+                    Try
+                        For Each fi In di.EnumerateFiles("*", SearchOption.AllDirectories)
+                            Try
+                                ' // Display each file over 10 MB;
+                                If fi.Length > 10000000 Then
+                                    Console.WriteLine("{0}" & vbTab &
+                                    vbTab & "{1}", fi.FullName, fi.Length.ToString("N0"))
+                                End If
+                            Catch UnAuthFile As UnauthorizedAccessException
+                                Console.WriteLine("UnAuthFile: {0}", UnAuthFile.Message)
+                            End Try
+                        Next
+                    Catch UnAuthSubDir As UnauthorizedAccessException
+                        Console.WriteLine("UnAuthSubDir: {0}", UnAuthSubDir.Message)
+                    End Try
+                Next
+            Catch DirNotFound As DirectoryNotFoundException
+                Console.WriteLine("{0}", DirNotFound.Message)
+            Catch UnAuthDir As UnauthorizedAccessException
+                Console.WriteLine("UnAuthDir: {0}", UnAuthDir.Message)
+            Catch LongPath As PathTooLongException
+                Console.WriteLine("{0}", LongPath.Message)
+            End Try
+        End Sub
+    End Class
+

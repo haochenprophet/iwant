@@ -1,7 +1,7 @@
-#include "sql.h"
+#include "xml.h"
 
-Csql::Csql()
+Cxml::Cxml()
 {
-	this->name = "Csql";
-	this->alias = "sql";
+	this->name = "Cxml";
+	this->alias = "xml";
 }
