@@ -98,3 +98,18 @@ ReadDirectoryChangesW
 RemoveDirectory                  Deletes an existing empty directory.
 RemoveDirectoryTransacted        Deletes an existing empty directory as a transacted operation.
 SetCurrentDirectory              Changes the current directory for the current process.
+
+7.WIN32_FIND_DATA structure
+
+typedef struct _WIN32_FIND_DATA {
+  DWORD    dwFileAttributes;
+  FILETIME ftCreationTime;
+  FILETIME ftLastAccessTime;
+  FILETIME ftLastWriteTime;
+  DWORD    nFileSizeHigh;
+  DWORD    nFileSizeLow;
+  DWORD    dwReserved0;
+  DWORD    dwReserved1;
+  TCHAR    cFileName[MAX_PATH];
+  TCHAR    cAlternateFileName[14];
+} WIN32_FIND_DATA, *PWIN32_FIND_DATA, *LPWIN32_FIND_DATA;

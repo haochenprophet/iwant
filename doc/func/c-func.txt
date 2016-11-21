@@ -1,0 +1,83 @@
+1. C:stdio.h function
+
+1.1 Operations on files:
+    remove    Remove file.
+    rename    Rename file.
+    tmpfile   Open a temporary file.
+    tmpnam    Generate temporary filename.
+
+
+1.2 File access:
+    fclose    Close file.
+    fflush    Flush stream.
+    fopen     Open file.
+    freopen   Reopen stream with different file or mode.
+    setbuf    Set stream buffer.
+    setvbuf   Change stream buffering.
+
+
+1.3 Formatted input/output:
+    fprintf   Write formatted data to stream.
+    fscanf    Read formatted data from stream.
+    printf    Print formatted data to stdout.
+    scanf     Read formatted data from stdin.
+    snprintf  Write formatted output to sized buffer.
+    sprintf   Write formatted data to string.
+    sscanf    Read formatted data from string.
+    vfprintf  Write formatted data from variable argument list to stream.
+    vfscanf   Read formatted data from stream into variable argument list.
+    vprintf   Print formatted data from variable argument list to stdout.
+    vscanf    Read formatted data into variable argument list.
+    vsnprintf Write formatted data from variable argument list to sized buffer.
+    vsprintf  Write formatted data from variable argument list to string.
+    vsscanf   Read formatted data from string into variable argument list.
+
+
+1.4 Character input/output:
+    fgetc     Get character from stream.
+    fgets     Get string from stream.
+    fputc     Write character to stream.
+    fputs     Write string to stream.
+    getc      Get character from stream.
+    getchar   Get character from stdin.
+    gets      Get string from stdin.
+    putc      Write character to stream.
+    putchar   Write character to stdout.
+    puts      Write string to stdout.
+    ungetc    Unget character from stream.
+
+
+1.5 Direct input/output:
+    fread     Read block of data from stream.
+    fwrite    Write block of data to stream.
+
+
+1.6 File positioning:
+    fgetpos   Get current position in stream.
+    fseek     Reposition stream position indicator.
+    fsetpos   Set position indicator of stream.
+    ftell     Get current position in stream.
+    rewind    Set position of stream to the beginning.
+
+
+1.7 Error-handling:
+    clearerr  Clear error indicators.
+    feof      Check end-of-file indicator.
+    ferror    Check error indicator.
+    perror    Print error message.
+
+2. time.h
+
+2.1Time manipulation
+    clock     Clock program.
+    difftime  Return difference between two times.
+    mktime    Convert tm structure to time_t.
+    time      Get current time.
+
+
+2.2Conversion
+    asctime   Convert tm structure to string.
+    ctime     Convert time_t value to string.
+    gmtime    Convert time_t to tm as UTC time.
+    localtime Convert time_t to tm as local time.
+    strftime  Format time as string.
