@@ -296,9 +296,82 @@
     ispunct       Check if character is a punctuation character.
     isspace       Check if character is a white-space.
     isupper       Check if character is uppercase letter.
-    isxdigit      Check if character is hexadecimal digit.
+    isxdigit       Check if character is hexadecimal digit.
     tolower       Convert uppercase letter to lowercase.
     toupper       Convert lowercase letter to uppercase.
 
 7.<cerrno> (errno.h)
     errno        Last error number (macro )
+
+8.<cwchar> (wchar.h)
+Wide characters
+This header file defines several functions to work with C wide strings.
+
+Functions
+8.1 Input/Output: (mostly wide versions of <cstdio> functions)
+    fgetwc      Get wide character from stream.
+    fgetws      Get wide string from stream.
+    fputwc      Write wide character to stream.
+    fputws       Write wide string to stream.
+    fwide
+
+8.2Stream orientation.
+    fwprintf    Write formatted data to stream.
+    fwscanf     Read formatted data from stream.
+    getwc       Get wide character from stream.
+    getwchar   Get wide character from stdin.
+    putwc       Write wide character to stream.
+    putwchar   Write wide character to stdout.
+    swprintf     Write formatted data to wide string.
+    swscanf     Read formatted data from string.
+    ungetwc    Unget wide character from stream.
+    vfwprintf    Write formatted data from variable argument list to stream.
+    vfwscanf    Read formatted data from stream into variable argument list.
+    vswprintf    Write formatted data from variable argument list to sized buffer.
+    vswscanf     Read formatted data from wide string into variable argument list.
+    vwprintf      Print formatted data from variable argument list to stdout.
+    vwscanf     Read formatted data into variable argument list.
+    wprintf     Print formatted data to stdout.
+    wscanf     Read formatted data from stdin.
+
+8.3General utilities: (wide versions of <cstdlib> functions)
+    wcstod    Convert wide string to double.
+    wcstof     Convert wide string to float.
+    wcstol      Convert wide string to long integer.
+    wcstold    Convert wide string to long double.
+    wcstoll     Convert wide string to long long integer.
+    wcstoul    Convert wide string to unsigned long integer.
+    wcstoull    Convert wide string to unsigned long long integer.
+
+8.4 Character/string conversion: (mostly extended versions of <cstdlib> functions)
+    btowc          Convert single byte character to wide character.
+    mbrlen         Get length of multibyte character.
+    mbrtowc      Convert multibyte sequence to wide character.
+    mbsinit         Check if initial conversion state.
+    mbsrtowcs   Convert multibyte string to wide-character string.
+    wcrtomb      Convert wide character to multibyte sequence.
+    wctob          Convert wide character to single byte.
+    wcsrtombs   Convert wide-character string to multibyte string.
+
+ 8.5 Strings: (wide versions of <cstring> functions)
+    wcscat      Concatenate wide strings.
+    wcschr      Locate first occurrence of character in wide string.
+    wcscmp    Compare two strings.
+    wcscoll      Compare two wide strings using locale.
+    wcscpy      Copy wide string.
+    wcscspn     Get span until character in wide string.
+    wcslen         Get wide string length.
+    wcsncat       Append characters from wide string.
+    wcsncmp     Compare characters of two wide strings.
+    wcsncpy     Copy characters from wide string.
+    wcspbrk      Locate characters in wide string.
+    wcsrchr       Locate last occurrence of character in wide string.
+    wcsspn       Get span of character set in wide string.
+    wcsstr        Locate substring of wide string.
+    wcstok       Split wide string into tokens.
+    wcsxfrm     Transform wide string using locale.
+    wmemchr     Locate character in block of wide characters.
+    wmemcmp    Compare two blocks of wide characters.
+    wmemcpy     Copy block of wide characters.
+    wmemmove   Move block of wide characters.
+    wmemset       Fill array of wide characters.

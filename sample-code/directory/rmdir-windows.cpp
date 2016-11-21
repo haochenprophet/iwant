@@ -1,3 +1,5 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
 
 #include <windows.h>
 #include <tchar.h>
@@ -28,3 +30,4 @@ void __cdecl _tmain(int argc, TCHAR *argv[])
     }
     else _tprintf(TEXT("%s has been moved to %s\n"), argv[1], argv[2]);
 }
+#endif

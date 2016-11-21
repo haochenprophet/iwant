@@ -146,6 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\directory\attr-windows.cpp" />
+    <ClCompile Include="..\directory\cd-windows.cpp" />
+    <ClCompile Include="..\directory\find-windows.cpp" />
+    <ClCompile Include="..\directory\ls-windows.cpp" />
+    <ClCompile Include="..\directory\rmdir-windows.cpp" />
+    <ClCompile Include="..\directory\sys-hw-info-windows.cpp" />
+    <ClCompile Include="..\directory\sys-info-windows.cpp" />
     <ClCompile Include="..\socket\socket-client-windows.c" />
     <ClCompile Include="..\socket\socket-send-windows.c" />
     <ClCompile Include="..\socket\socket-server-windows.c" />

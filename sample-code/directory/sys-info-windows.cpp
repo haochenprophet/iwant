@@ -1,3 +1,5 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
 //Getting System Information
 /*
 The following example uses the 
@@ -90,3 +92,5 @@ void printError( TCHAR* msg )
   // Display the message
   _tprintf( TEXT("\n\t%s failed with error %d (%s)"), msg, eNum, sysMsg );
 }
+
+#endif

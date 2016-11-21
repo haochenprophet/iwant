@@ -7,5 +7,12 @@
     <ClCompile Include="..\socket\socket-server-windows.c" />
     <ClCompile Include="..\socket\socket-windows.c" />
     <ClCompile Include="..\socket\socket-windows-bind.c" />
+    <ClCompile Include="..\directory\attr-windows.cpp" />
+    <ClCompile Include="..\directory\cd-windows.cpp" />
+    <ClCompile Include="..\directory\ls-windows.cpp" />
+    <ClCompile Include="..\directory\rmdir-windows.cpp" />
+    <ClCompile Include="..\directory\sys-hw-info-windows.cpp" />
+    <ClCompile Include="..\directory\sys-info-windows.cpp" />
+    <ClCompile Include="..\directory\find-windows.cpp" />
   </ItemGroup>
 </Project>

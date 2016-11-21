@@ -1,3 +1,5 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
 /*
 Getting Hardware Information
 
@@ -31,3 +33,5 @@ void main()
    printf("  Active processor mask: %u\n", 
       siSysInfo.dwActiveProcessorMask); 
 }
+
+#endif

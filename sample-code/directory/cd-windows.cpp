@@ -1,3 +1,5 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
 
 #include <windows.h> 
 #include <stdio.h>
@@ -43,3 +45,4 @@ void _tmain(int argc, TCHAR **argv)
    }
    _tprintf(TEXT("Restored previous directory (%s)\n"), Buffer);
 }
+#endif

@@ -1,3 +1,6 @@
+#define BUILD_ME  0//1
+#if BUILD_ME	// this define for buuid the file
+
 //Retrieving and Changing File Attributes
 
 #include <windows.h>
@@ -80,4 +83,5 @@ void _tmain(int argc, TCHAR* argv[])
  
    FindClose(hSearch);
 }
+#endif
 

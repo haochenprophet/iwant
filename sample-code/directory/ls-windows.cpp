@@ -1,3 +1,5 @@
+#define BUILD_ME  01
+#if BUILD_ME	// this define for buuid the file
 
 //Listing the Files in a Directory
 
@@ -116,3 +118,4 @@ void DisplayErrorBox(LPTSTR lpszFunction)
     LocalFree(lpDisplayBuf);
 }
 
+#endif
