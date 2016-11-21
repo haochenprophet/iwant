@@ -42,7 +42,7 @@ int Cclass::create(void *p)
 }
 
 #ifndef CLASS_TEST
-#define CLASS_TEST 01
+#define CLASS_TEST 0//1
 #endif
 
 #if CLASS_TEST
