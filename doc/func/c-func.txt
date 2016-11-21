@@ -81,3 +81,224 @@
     gmtime    Convert time_t to tm as UTC time.
     localtime Convert time_t to tm as local time.
     strftime  Format time as string.
+
+
+
+3. header <cstdlib> (stdlib.h)
+    C Standard General Utilities Library
+    This header defines several general purpose functions, 
+    including dynamic memory management, random number generation, 
+    communication with the environment, integer arithmetics, 
+    searching, sorting and converting.
+
+
+3.1 Functions  String conversion
+    atof     Convert string to double.
+    atoi     Convert string to integer.
+    atol     Convert string to long integer.
+    atoll    Convert string to long long integer.
+    strtod   Convert string to double.
+    strtof   Convert string to float.
+    strtol   Convert string to long integer.
+    strtold  Convert string to long double.
+    strtoll  Convert string to long long integer.
+    strtoul  Convert string to unsigned long integer.
+    strtoull Convert string to unsigned long long integer.
+
+
+3.2 Pseudo-random sequence generation
+    rand     Generate random number.
+    srand    Initialize random number generator.
+
+
+3.3 Dynamic memory management
+    alloc    Allocate and zero-initialize array.
+    free     Deallocate memory block.
+    malloc   Allocate memory block.
+    realloc  Reallocate memory block.
+
+
+3.4 Environment
+    abort    Abort current process.
+    atexit   Set function to be executed on exit.
+    at_quick_exit    Set function to be executed on quick exit.
+    exit     Terminate calling process.
+    getenv   Get environment string.
+    quick_exit    Terminate calling process quick.
+    system    Execute system command.
+    _Exit     Terminate calling process.
+
+
+3.5 Searching and sorting
+    bsearch  Binary search in array.
+    qsort    Sort elements of array.
+
+
+3.6 Integer arithmetics
+    abs     Absolute value.
+    div     Integral division.
+    labs    Absolute value.
+    ldiv    Integral division.
+    llabs   Absolute value.
+    lldiv   Integral division.
+
+
+3.7 Multibyte characters
+    mblen   Get length of multibyte character.
+    mbtowc  Convert multibyte sequence to wide character.
+    wctomb  Convert wide character to multibyte sequence.
+
+
+3.8 Multibyte strings
+    mbstowcs  Convert multibyte string to wide-character string.
+    wcstombs  Convert wide-character string to multibyte strings.
+
+4 <cmath> 
+
+4.1 Trigonometric functions
+    cos      Compute cosine.
+    sin      Compute sine.
+    tan      Compute tangent.
+    acos     Compute arc cosine.
+    asin     Compute arc sine.
+    atan     Compute arc tangent.
+    atan2    Compute arc tangent with two parameters.
+
+4.2 Hyperbolic functions
+    cosh     Compute hyperbolic cosine.
+    sinh     Compute hyperbolic sine.
+    tanh     Compute hyperbolic tangent.
+    acosh    Compute area hyperbolic cosine.
+    asinh    Compute area hyperbolic sine.
+    atanh    Compute area hyperbolic tangent.
+
+
+4.3 Exponential and logarithmic functions
+    exp      Compute exponential function.
+    frexp    Get significand and exponent.
+    ldexp    Generate value from significand and exponent.
+    log      Compute natural logarithm.
+    log10    Compute common logarithm.
+    modf     Break into fractional and integral parts.
+    exp2     Compute binary exponential function.
+    expm1    Compute exponential minus one.
+    ilogb    Integer binary logarithm.
+    log1p    Compute logarithm plus one.
+    log2     Compute binary logarithm.
+    logb     Compute floating-point base logarithm.
+    scalbn   Scale significand using floating-point base exponent.
+    scalbln  Scale significand using floating-point base exponent (long).
+
+
+4.4 ower functions
+    pow      Raise to power.
+    sqrt     Compute square root.
+    cbrt     Compute cubic root.
+    hypot    Compute hypotenuse.
+
+
+4.5 Error and gamma functions
+    erf      Compute error function.
+    erfc     Compute complementary error function.
+    tgamma   Compute gamma function.
+    lgamma   Compute log-gamma function.
+
+
+4.6 Rounding and remainder functions
+    ceil     Round up value.
+    floor    Round down value.
+    fmod     Compute remainder of division.
+    trunc    Truncate value.
+    round    Round to nearest.
+    lround   Round to nearest and cast to long integer.
+    llround  Round to nearest and cast to long long integer.
+    rint     Round to integral value.
+    lrint    Round and cast to long integer.
+    llrint   Round and cast to long long integer.
+    nearbyint   Round to nearby integral value.
+    remainder   Compute remainder (IEC 60559).
+    remquo    Compute remainder and quotient.
+
+
+4.7 Floating-point manipulation functions
+    copysign  Copy sign.
+    nan       Generate quiet NaN.
+    nextafter  Next representable value.
+    nexttoward Next representable value toward precise value.
+
+
+4.8 Minimum, maximum, difference functions
+    fdim     Positive difference.
+    fmax     Maximum value.
+    fmin     Minimum value.
+
+
+4.9 Other functions
+    fabs    Compute absolute value.
+    abs     Compute absolute value.
+    fma     Multiply-add.
+
+
+4.10Macros / Functions
+    These are implemented as macros in C and as functions in C++:
+    Classification macro / functions
+
+    fpclassify   Classify floating-point value.
+    isfinite     Is finite value.
+    isinf        Is infinity.
+    isnan        Is Not-A-Number.
+    isnormal     Is normal.
+    signbit      Sign bit.
+
+
+4.11Comparison macro / functions
+    isgreater       Is greater.
+    isgreaterequal    Is greater or equal.
+    isless          Is less.
+    islessequal     Is less or equal.
+    islessgreater   Is less or greater.
+    isunordered     Is unordered.
+
+
+
+5. <cfenv> (fenv.h)
+    The floating-point environment maintains a series of status flags and specific control modes. 
+    Specific about the contents of the floating-point environment depend on the implementation,
+    but the status flags generally include the floating-point exceptions and their associated information,
+    and the control modes include at least the rounding direction.
+
+5.1 Floating-point exceptions
+    feclearexcept     Clear floating-point exceptions.
+    feraiseexcept     Raise floating-point exception.
+    fegetexceptflag   Get floating-point exception flags.
+    fesetexceptflag   Set floating-point exception flags.
+
+5.2 Rounding direction
+    fegetround      Get rounding direction mode.
+    fesetround      Set rounding direction mode.
+
+5.3 Entire environment
+    fegetenv       Get floating-point environment.
+    fesetenv       Set floating-point environment.
+    feholdexcept   Hold floating-point exceptions.
+    feupdateenv    Update floating-point environment.
+    fetestexcept   Test for floating-point exceptions.
+
+6. <cctype> (ctype.h)
+    isalnum       Check if character is alphanumeric.
+    isalpha       Check if character is alphabetic.
+    isblank       Check if character is blank.
+    iscntrl       Check if character is a control character.
+    isdigit       Check if character is decimal digit.
+    isgraph       Check if character has graphical representation.
+    islower       Check if character is lowercase letter.
+    isprint       Check if character is printable.
+    ispunct       Check if character is a punctuation character.
+    isspace       Check if character is a white-space.
+    isupper       Check if character is uppercase letter.
+    isxdigit      Check if character is hexadecimal digit.
+    tolower       Convert uppercase letter to lowercase.
+    toupper       Convert lowercase letter to uppercase.
+
+7.<cerrno> (errno.h)
+    errno        Last error number (macro )
