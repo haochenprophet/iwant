@@ -6,6 +6,7 @@
 #include "cout.h" 
 #include "echo.h" 
 #include "esc.h" 
+#include "ex_func.h" 
 #include "exec.h" 
 #include "exit.h" 
 #include "home.h" 

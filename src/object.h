@@ -12,6 +12,7 @@
 
 #include "temp_def.h"
 #include "syntax_def.h"
+#include "ex_func.h"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;

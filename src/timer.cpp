@@ -4,6 +4,7 @@ Ctimer::Ctimer()
 {
 	this->name = "Ctimer";
 	this->alias = "timer";
+	this->add_ex_func("time", time_cmd);
 }
 
 clock_t Ctimer::t_clock()

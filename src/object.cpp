@@ -54,11 +54,6 @@ int object_func(void *p)//this ext function for object class
 	return 0;
 }
 
-int  runcmd(void *cmd)
-{
-	return system((char *)cmd);
-}
-
 long object_id = 0;
 Object::Object()
 {
