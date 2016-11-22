@@ -5,6 +5,13 @@ Ctimer::Ctimer()
 	this->name = "Ctimer";
 	this->alias = "timer";
 	this->add_ex_func("time", time_cmd);
+	time (&this->t);
+	this->clk=clock();
+}
+
+int Ctimer::func(void *p)
+{
+	return time_cmd(p);
 }
 
 clock_t Ctimer::t_clock()
@@ -51,3 +58,25 @@ size_t Ctimer::t_strftime (char* ptr, size_t maxsize, const char* format,const s
 {
 	return strftime (ptr,maxsize,format,timeptr);
 }
+
+#ifndef TIMER_TEST
+#define TIMER_TEST 0//1
+#endif
+
+#if TIMER_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	cout << "TIMER_TEST\n\n";
+
+	Ctimer t;
+	//test time cmd
+	t.execute((Object *)&t,t.name,(char *)"time",(char *)"%T");//test ok
+	t.execute((Object *)&t,t.name,(char *)"time");//test ok
+	t.execute((char *)"time",(void *)"%T");//test ok
+	t.execute((char *)"time");//test ok
+	t.execute((void *)"%T");//test ok
+
+	return 0;
+}
+#endif 

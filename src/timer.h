@@ -7,7 +7,11 @@ namespace n_timer {
 	class Ctimer :public Object
 	{
 	public:
+		  clock_t clk;
+		  time_t t;//time
+	public:
 		Ctimer();
+		int func(void *p);
 		clock_t t_clock();
 		double  t_difftime (time_t end, time_t beginning);
 		time_t  t_mktime (struct tm * timeptr);

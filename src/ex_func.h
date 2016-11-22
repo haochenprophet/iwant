@@ -9,6 +9,6 @@ typedef int(*ex_func)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
  //extern function 
 int runcmd(void *cmd);
-int time_cmd(void *p);
+int time_cmd(void *format);
 
 #endif

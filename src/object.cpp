@@ -281,7 +281,9 @@ int Object::execute(string *fun_name, void * p, bool new_thread) //execute this-
 int Object::execute(char* fun_name, void * p, bool new_thread)
 {
 	string s = fun_name;
-	cout << "int Object::execute->"<<s << endl;//test
+#if OBJECT_TEST
+	cout << "int Object::execute->"<<s << endl;//test ok
+#endif
 	return this->execute(s, p, new_thread);
 }
 
