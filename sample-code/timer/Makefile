@@ -4,6 +4,9 @@ localtime \
 gmtime \
 clock \
 ctime \
+difftime \
+mktime \
+strftime \
 
 
 timer:timer.cpp
@@ -21,6 +24,16 @@ clock:clock.cpp
 ctime:ctime.cpp
 	g++ -o $@ $^
 
+difftime:difftime.cpp
+	g++ -o $@ $^
+
+mktime::mktime.cpp
+	g++ -o $@ $^
+
+strftime::strftime.cpp
+	g++ -o $@ $^
+
+	
 clean:
 	rm -f *.o *~* *.txt *.out \
 timer \
@@ -28,3 +41,6 @@ localtime \
 gmtime \
 clock \
 ctime \
+difftime \
+mktime \
+strftime \

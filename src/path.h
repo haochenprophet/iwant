@@ -4,8 +4,14 @@
 #include "object.h"
 #include "os.h"
 
-typedef list<void *> NAME_LIST;
+#if WINDOWS_OS
+typedef TCHAR DIR_T;//for class Cpath
+#endif//WINDOWS_OS
 
+#if LINUX_OS
+typedef char DIR_T;
+#endif//LINUX_OS
+typedef list<void *> NAME_LIST;
 
 namespace n_path {
 	class Cpath :public Object
@@ -13,7 +19,7 @@ namespace n_path {
 	public:
 		Cpath();
 		~Cpath();
-		bool is_dir();
+		bool is_dir(DIR_T *name);
 		bool is_file();
 		int list(DIR_T *dir_name);//get list to name_list
 	};
