@@ -106,6 +106,7 @@ namespace n_object {
 		void my_syntax();
 
 		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
+		int execute(Object *o, char  *obj_name , char * fun_name , void * p = NULL, bool new_thread = false);
 		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);
 		int execute(void * p = NULL);//execute this->func 
 		int execute(MyFunc func, void * p = NULL, bool new_thread = false); //execute input func 

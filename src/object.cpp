@@ -257,6 +257,13 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 	return ret;
 }
 
+int Object::execute(Object *o, char *obj_name , char * fun_name , void * p, bool new_thread)
+{
+	string n= obj_name;
+	string f= fun_name;	
+	return this->execute(o,n,f,p,new_thread);
+}
+
 int Object::execute(void *p)
 {
 	return this->func(p);

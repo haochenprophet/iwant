@@ -72,6 +72,7 @@ int main(int argc, char *argv[])
 	Ctimer t;
 	//test time cmd
 	t.execute((Object *)&t,t.name,(char *)"time",(char *)"%T");//test ok
+	t.execute((Object *)&t,(char*)"Ctimer",(char *)"time",(char *)"%T");//test ok
 	t.execute((Object *)&t,t.name,(char *)"time");//test ok
 	t.execute((char *)"time",(void *)"%T");//test ok
 	t.execute((char *)"time");//test ok
