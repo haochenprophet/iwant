@@ -1,5 +1,9 @@
 #include "path.h"
 
+#ifndef PATH_TEST
+#define PATH_TEST 0//1
+#endif
+
 Cpath::Cpath()
 {
 	this->name = "Cpath";
@@ -80,11 +84,6 @@ int Cpath::list(DIR_T *dir_name)
 	FindClose(hFind);
 	return 0;
 }
-#endif
-
-
-#ifndef PATH_TEST
-#define PATH_TEST 01
 #endif
 
 #if PATH_TEST

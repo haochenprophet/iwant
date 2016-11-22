@@ -1,8 +1,14 @@
 
-CFLAGS += -std=gnu++11 -DLINUX_OS -o 
+TAG = iwant
+
+CFLAGS +=\
+	-std=gnu++11 \
+	-DLINUX_OS -D$(main)_TEST=1\
+	-o $(TAG) *.cpp \
+	-lpthread \
 
 all : 
-	g++ $(CFLAGS) iwant *.cpp -lpthread
+	g++ $(CFLAGS)
 
 clean :
-	rm -f iwant *.o *~
+	rm -f $(TAG) *.o *~

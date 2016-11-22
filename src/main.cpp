@@ -1,6 +1,8 @@
 #include "all_h_include.h"
 
-#define MAIN_TEST 0
+#ifndef MAIN_TEST
+#define MAIN_TEST 0//1
+#endif
 
 Cmain::Cmain()
 {
@@ -9,7 +11,8 @@ Cmain::Cmain()
 	this->temp = MAIN_TEMP;
 }
 
-#if MAIN_TEST
+
+#if MAIN_TEST||_TEST
 int main(int argc, char *argv[])
 {
 	cout << "Hello main!\n";
