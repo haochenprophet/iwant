@@ -14,6 +14,8 @@
 #include "syntax_def.h"
 #include "ex_func.h"
 
+#include <stack> 
+
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::list;
@@ -35,8 +37,10 @@ namespace n_object {
 		void *in;
 		void *out;
 		int size;
+		std::stack<void *> s; //parameter stack
 	public:
 		Cparameter();
+		~Cparameter();
 	};
 
 	class Cmyfunc {

@@ -11,6 +11,11 @@ Cparameter::Cparameter()
 	this->size=0;
 }
 
+Cparameter::~Cparameter()
+{
+	while (!this->s.empty()) this->s.pop(); //exit clear stack 
+}
+
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 {
 	this->name = fun_name;
