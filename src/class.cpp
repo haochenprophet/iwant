@@ -58,16 +58,14 @@ int main(int argc, char *argv[])
 	Ctag t;
 	t.my_syntax();
 
-/*
+
 	Cmain m;
 	m.my_temp();
 
 	Cmake mk;
 	mk.my_syntax();
+	
 
-	double  p = PI;
-	cout<< p<< endl;
-	*/
 	return 0;
 }
 #endif 

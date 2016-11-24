@@ -8,6 +8,7 @@ namespace n_tag {
 	{
 	public:
 		Ctag();
+		int func(void *p = NULL); // callback function
 	};
 
 }
