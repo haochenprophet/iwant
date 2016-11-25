@@ -1,3 +1,41 @@
 
 1.C++ access database 
   http://www.codeproject.com/Articles/34646/Accessing-MySQL-data-base-using-MySQL-C-API
+
+2.install mysql
+	[ubuntu] sudo apt-get install mysql-server
+	https://dev.mysql.com/doc/refman/5.7/en/installing.html
+
+
+[MySQL 5.7 Reference Manual]
+
+
+
+Chapter 1 General Information
+
+
+Chapter 2 Installing and Upgrading MySQL
+
+
+Chapter 3 Using MySQL as a Document Store
+
+
+3.Connecting 
+	shell> mysql -h host -u user -p
+
+Chapter 4 Tutorial  
+		shell> mysql --help
+
+	4.1 Connecting to and Disconnecting from the Server
+		shell> mysql -h host -u user -p
+			Enter password: ********
+		mysql> QUIT
+
+	4.2 Entering Queries
+		mysql> SELECT VERSION(), CURRENT_DATE;
+	4.3 Creating and Using a Database     
+	4.4 Getting Information About Databases and Tables
+	4.5 Using mysql in Batch Mode
+	4.6 Examples of Common Queries     
+	4.7 Using MySQL with Apache
+
