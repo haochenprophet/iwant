@@ -14,16 +14,16 @@ INSERT INTO `iwant`.`demand`
 ) 
 VALUES
  (
- 	'2', 
- 	'hao', 
- 	'pen', 
- 	'paik-666', 
- 	'shang hai', 
- 	'666666', 
- 	'666', 
- 	'2016-11-27 18:00:00', 
- 	'2016-11-27 18:00:00', 
- 	NOW(),  
- 	''
+	'3', 
+	'lulu', 
+	'hource', 
+	'paik-666', 
+	'shang hai', 
+	'99999', 
+	'999', 
+	NOW(), 
+	NOW(), 
+	NOW(), 
+	''
  );
 
