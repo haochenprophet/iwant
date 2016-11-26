@@ -1,0 +1,1 @@
+gedit /etc/apache2/apache2.conf &
