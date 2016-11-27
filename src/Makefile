@@ -1,14 +1,14 @@
 
-TAG = iwant
+MK_TAG = iwant
 
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1\
-	-o $(TAG) *.cpp \
+	-o $(MK_TAG) *.cpp \
 	-lpthread \
 
 all : 
 	g++ $(CFLAGS)
 
 clean :
-	rm -f $(TAG) *.o *~
+	rm -f $(MK_TAG) *.o *~
