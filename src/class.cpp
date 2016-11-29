@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 	c.create((void *)"do");
 	c.my_temp();
 
-/*
+
 	Ctag t;
 	t.my_syntax();
 
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 	Cmake mk;
 	mk.my_syntax();
 	
-*/
+
 	return 0;
 }
 #endif 
