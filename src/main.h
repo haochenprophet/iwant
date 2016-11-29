@@ -8,6 +8,7 @@ namespace n_main {
 	{
 	public:
 		Cmain();
+		int my_init(void *p=NULL);
 	};
 
 }

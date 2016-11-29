@@ -132,6 +132,7 @@ namespace n_object {
 		int replace_temp(string *tag,string *rep);
 		int replace_syntax(int upper_s=0);
 		int replace_temp(int upper_s=0);
+		int tag_temp(char *tag_value,int upper_s);
 
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces

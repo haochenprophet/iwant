@@ -4,11 +4,18 @@
 #define MAIN_TEST 0//1
 #endif
 
-Cmain::Cmain()
+int Cmain::my_init(void *p)
 {
 	this->name = "Cmain";
 	this->alias ="main";
 	this->temp = MAIN_TEMP;
+	this->s_tag="[tag]";
+	return 0;
+}
+
+Cmain::Cmain()
+{
+	this->my_init();
 }
 
 

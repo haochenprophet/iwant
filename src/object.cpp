@@ -361,12 +361,7 @@ void Object::s_toupper(string & str)
 
 int Object::s_replace(string *base,string *tag,string *rep)
 {
-	if(base->empty()||tag->empty()||rep->empty())
-	{
-		cout<<"if(base->empty()||tag->empty()||rep->empty())\n";
-		if(tag->empty()) cout<<"tag->empty\n";
-		return -1;//check empty
-	}
+	if(base->empty()||tag->empty()||rep->empty()) return -1;//check empty
 
 	while(1)
 	{
@@ -412,6 +407,15 @@ int Object::replace_temp(int upper_s)
 	return this->s_replace(&this->temp,&this->s_tag,&this->s_rep);
 }
 
+int Object::tag_temp(char *tag_value,int upper_s)
+{
+	if (!tag_value) return -1;
+	this->my_init();
+	this->s_rep=tag_value;
+	this->replace_temp(upper_s);
+	return 0;
+}
+
 long Object::my_id()
 {
 	return this->id;
@@ -446,7 +450,7 @@ int Object::create(void *p)
 
 int Object::my_init(void *p)
 {
-	return 0;
+	return -1;
 }
 
 int Object::my_exit(void *p)
