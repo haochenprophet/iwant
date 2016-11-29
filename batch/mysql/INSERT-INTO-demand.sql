@@ -1,6 +1,5 @@
 INSERT INTO `iwant`.`demand` 
 (
-	`id`,
 	`who`,
 	`type`, 
 	`object`,
@@ -14,7 +13,6 @@ INSERT INTO `iwant`.`demand`
 ) 
 VALUES
  (
- 	'2', 
  	'hao', 
  	'pen', 
  	'paik-666', 

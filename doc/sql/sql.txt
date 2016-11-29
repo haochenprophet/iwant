@@ -6,6 +6,7 @@
 	[ubuntu] sudo apt-get install mysql-server
 	https://dev.mysql.com/doc/refman/5.7/en/installing.html
 
+[Update mql blob] http://www.mysqltutorial.org/php-mysql-blob/	
 
 [MySQL 5.7 Reference Manual]
 

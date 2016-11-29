@@ -5,7 +5,8 @@ int Cclass::my_init(void *p)
 	this->name = "Cclass";
 	this->alias = "class";
 	this->syntax = CLASS_SYNTAX;
-	this->temp = CLASS_H_TEMP;	
+	this->temp = CLASS_H_TEMP;
+	this->s_tag="[tag]";
 	return 0;
 }
 
@@ -38,6 +39,10 @@ int Cclass::create(void *p)
 {
 	if (!p) return -1;
 
+	this->temp = CLASS_H_TEMP;
+	char * str_class =(char *)p;
+	this->s_rep=str_class;
+	this->replace_temp(1);
 	return 0;
 }
 
@@ -52,9 +57,18 @@ int main(int argc, char *argv[])
 	cout << "CLASS_TEST\n\n";
 
 	Cclass c;
-	c.my_syntax();
-//	c.my_temp();
+//	c.my_syntax();
+	c.my_temp();
 
+	c.s_tag="[tag]";
+	c.s_rep="while";
+	c.replace_temp(1);
+	c.my_temp();
+
+	c.create((void *)"do");
+	c.my_temp();
+
+/*
 	Ctag t;
 	t.my_syntax();
 
@@ -62,10 +76,12 @@ int main(int argc, char *argv[])
 	Cmain m;
 	m.my_temp();
 
+
+
 	Cmake mk;
 	mk.my_syntax();
 	
-
+*/
 	return 0;
 }
 #endif 

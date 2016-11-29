@@ -71,6 +71,7 @@ Object::Object()
 	this->locate = -1;
 	this->name = "Object";
 	this->alias = this->name;
+	this->s_tag="[tag]";
 	this->name += std::to_string(object_id);//change name for nam +=id
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
@@ -349,6 +350,66 @@ void Object::delete_allot(void **addr)
 		delete[](char*) (*addr);
 		*addr = NULL;
 	}
+}
+
+void Object::s_toupper(string & str)
+{
+	std::locale loc;
+	for (std::string::size_type i=0; i<str.length(); ++i)
+		str[i]=std::toupper(str[i],loc);
+}
+
+int Object::s_replace(string *base,string *tag,string *rep)
+{
+	if(base->empty()||tag->empty()||rep->empty())
+	{
+		cout<<"if(base->empty()||tag->empty()||rep->empty())\n";
+		if(tag->empty()) cout<<"tag->empty\n";
+		return -1;//check empty
+	}
+
+	while(1)
+	{
+		std::string::size_type found = base->find(tag->data());
+		if (found==std::string::npos) break;
+		base->replace(found,tag->length(),rep->data());
+	}
+
+	return 0;
+}
+
+int Object::toupper_replace(string *base,string *tag,string *rep)
+{
+	string us_tag=tag->data();
+	string us_rep=rep->data();
+	this->s_toupper(us_tag);
+	this->s_toupper(us_rep);
+
+	//cout<<"toupper_replace:"<<us_tag<<"="<<us_rep<<endl;//test ok
+	this->s_replace(base,&us_tag,&us_rep);
+	return 0;
+}
+
+int Object::replace_syntax(string *tag,string *rep)
+{
+	return this->s_replace(&this->syntax,tag,rep);
+}
+
+int Object::replace_temp(string *tag,string *rep)
+{
+	return this->s_replace(&this->temp,tag,rep);
+}
+
+int Object::replace_syntax(int upper_s)
+{
+	if(upper_s) this->toupper_replace(&this->syntax,&this->s_tag,&this->s_rep);
+	return this->s_replace(&this->syntax,&this->s_tag,&this->s_rep);
+}
+
+int Object::replace_temp(int upper_s)
+{
+	if(upper_s) this->toupper_replace(&this->temp,&this->s_tag,&this->s_rep);
+	return this->s_replace(&this->temp,&this->s_tag,&this->s_rep);
 }
 
 long Object::my_id()

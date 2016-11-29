@@ -74,6 +74,9 @@ namespace n_object {
 
 		string syntax;//this for keyword object
 		string temp;//keyword template 
+		string s_tag;
+		string s_rep;
+
 		long locate;//0 start , -1 end , n :locate value 
 
 		list<void *> family;//class list
@@ -121,6 +124,15 @@ namespace n_object {
 		int allot(int size,void ** o_addr);
 		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
 		void delete_allot(void **addr);
+
+		void s_toupper(string & str);
+		int s_replace(string *base,string *tag,string *rep);
+		int toupper_replace(string *base,string *tag,string *rep);
+		int replace_syntax(string *tag,string *rep);
+		int replace_temp(string *tag,string *rep);
+		int replace_syntax(int upper_s=0);
+		int replace_temp(int upper_s=0);
+
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
