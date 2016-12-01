@@ -13,6 +13,7 @@ pop_back \
 push_back \
 substr \
 stof \
+strstr \
 
 replace:replace.cpp
 	g++ $(CFLAGS)-o $@ $^  
@@ -39,6 +40,9 @@ substr:substr.cpp
 stof:stof.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+strstr::strstr.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 clean:
 	rm -f *.o *~* *.txt *.out \
 replace \
@@ -46,3 +50,7 @@ rfind \
 find \
 insert \
 pop_back \
+push_back \
+substr \
+stof \
+strstr \
