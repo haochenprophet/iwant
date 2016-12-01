@@ -68,7 +68,6 @@ int main(int argc, char *argv[])
 	c.replace_temp(1);
 	c.my_temp();
 
-
 	c.create((void *)"do");
 	c.my_temp();
 	cout<<c.cpp_temp<<endl;	
@@ -76,15 +75,11 @@ int main(int argc, char *argv[])
 	Ctag t;
 	t.my_syntax();
 
-
 	Cmain m;
 	m.my_temp();
 
-
-
 	Cmake mk;
 	mk.my_syntax();
-	
 
 	return 0;
 }

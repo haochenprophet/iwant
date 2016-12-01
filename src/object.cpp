@@ -363,11 +363,19 @@ int Object::s_replace(string *base,string *tag,string *rep)
 {
 	if(base->empty()||tag->empty()||rep->empty()) return -1;//check empty
 
+	std::string::size_type found=0;
+	std::string::size_type tag_len=tag->length();
+	std::string::size_type rep_len=rep->length();
+
+	const char * t =tag->data();
+	const char * r =rep->data();
+
 	while(1)
 	{
-		std::string::size_type found = base->find(tag->data());
+		found = base->find(t,found);
 		if (found==std::string::npos) break;
-		base->replace(found,tag->length(),rep->data());
+		base->replace(found,tag_len,r);
+		found+=rep_len;
 	}
 
 	return 0;
