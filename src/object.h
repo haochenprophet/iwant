@@ -2,6 +2,7 @@
 #define OBJECT_H
 
 #include <iostream>
+#include <fstream>
 #include <thread>
 #include <string>
 #include <list>
@@ -28,6 +29,7 @@ int object_func(void *p);
 int  runcmd(void *cmd);
 
 #define PAGE_4K	(4*1024) 
+#define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
 
 namespace n_object {
 
@@ -132,7 +134,7 @@ namespace n_object {
 		int replace_temp(string *tag,string *rep);
 		int replace_syntax(int upper_s=0);
 		int replace_temp(int upper_s=0);
-		int tag_temp(char *tag_value,int upper_s);
+		int tag_temp(char *tag_value,int upper_s=1);
 
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
@@ -141,6 +143,7 @@ namespace n_object {
 		virtual int create(void *p=NULL);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 		virtual int my_init(void *p=NULL);//object init
 		virtual int my_exit(void *p=NULL);//object exit
+		virtual int deal_cmd(int argc, char *argv[]);
 	};
 }
 

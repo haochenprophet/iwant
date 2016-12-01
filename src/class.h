@@ -1,8 +1,7 @@
 #ifndef CLASS_H
 #define CLASS_H
 
-#include "object.h"
-
+#include "file.h"
 /*
 keyword:  class
 
@@ -16,7 +15,7 @@ keyword:  class
 */
 
 namespace n_class {
-	class Cclass :public Object
+	class Cclass :public Cfile
 	{
 	public:
 		string template_spec;
@@ -33,10 +32,12 @@ namespace n_class {
 		Cclass();
 		Cclass(string tag);
 		~Cclass();
+
 		int my_init(void *p=NULL);
 		int func(void *p=NULL);
 		int create(void *p);//Cclass *p
-		
+
+		int deal_cmd(int argc, char *argv[]);	
 	};
 
 }

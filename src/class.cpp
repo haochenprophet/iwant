@@ -49,6 +49,34 @@ int Cclass::create(void *p)
 	return 0;
 }
 
+int Cclass::deal_cmd(int argc, char *argv[])
+{
+
+	do{
+		argc--;
+		AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+		if(argc<1)	break;
+
+		this->create((void *)argv[argc]);//creat h cpp temp
+
+		this->f_name=argv[argc];
+		this->f_name+=".h";
+		if(0==this->is_exist())
+		{
+			this->f_append((char *)this->temp.c_str());
+		}	
+
+		this->f_name=argv[argc];
+		this->f_name+=".cpp";
+		if(0==this->is_exist())
+		{	
+			this->f_append((char *)this->cpp_temp.c_str());
+		}
+		
+	}while(argc>0);
+	return -1;
+}
+
 #ifndef CLASS_TEST
 #define CLASS_TEST 0//1
 #endif
@@ -60,6 +88,8 @@ int main(int argc, char *argv[])
 	cout << "CLASS_TEST\n\n";
 
 	Cclass c;
+	c.deal_cmd(argc,argv);
+/*
 //	c.my_syntax();
 	c.my_temp();
 
@@ -76,11 +106,17 @@ int main(int argc, char *argv[])
 	t.my_syntax();
 
 	Cmain m;
+	m.tag_temp((char *)"main");
 	m.my_temp();
 
 	Cmake mk;
 	mk.my_syntax();
 
+	Cfile f;
+	m.tag_temp((char *)"file");
+	m.my_temp();
+//	f.f_append((char *)"file.cpp",(char *)m.temp.c_str());
+*/
 	return 0;
 }
 #endif 

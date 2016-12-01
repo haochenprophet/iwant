@@ -466,6 +466,15 @@ int Object::my_exit(void *p)
 	return 0;
 }
 
+int Object::deal_cmd(int argc, char *argv[])
+{
+	do{
+		argc--;
+		AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+	}while(argc>0);
+	return -1;
+}
+
 #if OBJECT_TEST
 int main()
 {

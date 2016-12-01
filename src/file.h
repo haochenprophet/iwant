@@ -7,7 +7,13 @@ namespace n_file {
 	class Cfile :public Object
 	{
 	public:
+		string f_name;
+	public:
 		Cfile();
+		int is_exist(char *filename);
+		int is_exist();
+		int f_append(char *filename,char * ap_str);
+		int f_append(char * ap_str);
 	};
 
 }

@@ -9,6 +9,7 @@
 #include "ex_func.h" 
 #include "exec.h" 
 #include "exit.h" 
+#include "file.h" 
 #include "home.h" 
 #include "http.h" 
 #include "iwant.h" 
