@@ -1,10 +1,10 @@
 #ifndef FILE_H
 #define FILE_H
 
-#include "object.h"
+#include "myMemory.h"
 
 namespace n_file {
-	class Cfile :public Object
+	class Cfile :public CmyMemory
 	{
 	public:
 		string f_name;
@@ -14,6 +14,8 @@ namespace n_file {
 		int is_exist();
 		int f_append(char *filename,char * ap_str);
 		int f_append(char * ap_str);
+		int f_read(char *f_name);
+		int f_read();
 	};
 
 }

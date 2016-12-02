@@ -1,14 +1,38 @@
- 
-all:filebuf-open.out  fstream.out fsize.out
 
-fstream.out: fstream.cpp 
-	g++ -o $@ $^
+CFLAGS +=\
+	-std=gnu++11 \
+	-DLINUX_OS -D$(main)_TEST=1\
+	-lpthread \
 
-filebuf-open.out:filebuf-open.cpp 
-	g++ -o $@ $^
 
-fsize.out : fsize.cpp
-	g++ -o $@ $^
+all:\
+filebuf-open \
+fsize \
+fstream \
+open \
+read \
+
+filebuf-open:filebuf-open.cpp
+	g++ $(CFLAGS)-o $@ $^  
+	
+fsize:fsize.cpp
+	g++ $(CFLAGS)-o $@ $^  
+
+
+fstream:fstream.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+open:open.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+read:read.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 
 clean:
-	rm -f fstream *.o *~* *.txt *.out
+	rm -f *.o *~* *.txt *.out \
+filebuf-open \
+fsize \
+fstream \
+open \
+read \

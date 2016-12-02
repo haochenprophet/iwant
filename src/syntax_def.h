@@ -12,4 +12,5 @@
 #define HTTP_URI_SYNTAX "http://authority-path-abempty[?query][#fragment]"
 #define HTTPS_URI_SYNTAX "https://authority-path-abempty[?query][#fragment]"
 
+#define ENUM_SYNTAX "enum [identifier] [: type]  {enum-list}; enum [class|struct]   [identifier] [: type] {enum-list};" 
 #endif

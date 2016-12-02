@@ -68,6 +68,7 @@ namespace n_object {
 	public:
 		int status;
 		int action;
+		int error; //error count >0 error
 
 		string name; //object name
 		string alias;//Alias object name
@@ -113,6 +114,10 @@ namespace n_object {
 		int my_ex_func();//list my_ex_func
 		void my_temp();
 		void my_syntax();
+
+		int inc_error();
+		int is_error();
+		int get_error();
 
 		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void * p = NULL, bool new_thread = false);

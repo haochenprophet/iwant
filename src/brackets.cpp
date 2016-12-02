@@ -102,10 +102,7 @@ int Cbrackets::detect(char *cp)
 	return ret;
 }
 
-int Cbrackets::getError()
-{
-	return this->error;
-}
+
 //get {xxx}  ie. xxx{...abc...{...def...}...ghi...}
 char *Cbrackets::getblock(char * start,char* end,char c,char *buf,int *pLen,int skip)//this function can not return null
 {

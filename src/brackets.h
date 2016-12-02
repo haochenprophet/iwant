@@ -7,7 +7,6 @@ namespace n_brackets {
 	class Cbrackets :public Object
 	{
 	public:
-		int error;
 		int leftRoundBracketCount;//'(', 
 		int rightRoundBracketCount;//')',
 

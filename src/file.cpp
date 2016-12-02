@@ -38,6 +38,40 @@ int Cfile::f_append(char *filename,char * ap_str)
 	return 0;
 }
 
+int Cfile::f_read(char *f_name) 
+{
+	std::ifstream is (f_name, std::ifstream::binary);
+	if (is) return -1;
+
+	is.seekg (0, is.end);
+	int len=is.tellg();
+
+	this->allot(len+1,FileData_T);	// get size of file for allot memory
+	if(NULL==this->addr)
+	{
+		is.close();
+		return -1;
+	}
+
+	is.seekg (0, is.beg);
+	is.read (this->addr,this->size);// read data as a block:
+
+	if (!is)
+	{
+		std::cout << "error: only " << is.gcount() << " could be read";
+		this->error++;
+	}
+	this->addr[this->size]='\0';
+	is.close();
+
+	return 0;
+}
+
+int Cfile::f_read()
+{
+	return this->f_read((char *)this->f_name.c_str());
+}
+
 int Cfile::f_append(char * ap_str)
 {
 	if(this->f_name.empty()) return -1;
@@ -50,9 +84,12 @@ int Cfile::f_append(char * ap_str)
 #endif
 
 #if FILE_TEST
+#include "all_h_include.h"
 int main(int argc, char *argv[])
 {
 	cout << "FILE_TEST\n\n";
+	Cfile f;
+
 	return 0;
 }
 #endif 

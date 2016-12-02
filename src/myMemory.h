@@ -3,6 +3,13 @@
 
 #include "object.h"
 
+enum MyMemoryType  
+{
+	None_T,
+	Data_T,
+	FileData_T,
+};
+
 namespace n_my_memory {
 	class CmyMemory:public Object
 	{

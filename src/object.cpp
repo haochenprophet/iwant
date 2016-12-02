@@ -68,6 +68,7 @@ Object::Object()
 	this->id = ++object_id;
 	this->status=0;
 	this->action=0;
+	this->error=0;
 	this->locate = -1;
 	this->name = "Object";
 	this->alias = this->name;
@@ -225,6 +226,21 @@ int Object::my_ex_func()
 void Object::my_temp()
 {
 	if (this->temp.length())	cout << this->temp << endl;
+}
+
+int Object::inc_error()
+{
+	this->error++;
+}
+
+int Object::is_error()
+{
+	return this->error;
+}
+
+int Object::get_error()
+{
+	return this->error;
 }
 
 void Object::my_syntax()
