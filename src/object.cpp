@@ -230,7 +230,7 @@ void Object::my_temp()
 
 int Object::inc_error()
 {
-	this->error++;
+	return this->error++;
 }
 
 int Object::is_error()
@@ -370,9 +370,9 @@ void Object::delete_allot(void **addr)
 
 void Object::s_toupper(string & str)
 {
-	std::locale loc;
-	for (std::string::size_type i=0; i<str.length(); ++i)
-		str[i]=std::toupper(str[i],loc);
+	std::string::size_type i,len= str.length();
+	for ( i=0; i<len; ++i)
+		str[i]=toupper(str[i]);
 }
 
 int Object::s_replace(string *base,string *tag,string *rep)
