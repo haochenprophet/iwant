@@ -38,10 +38,27 @@ int Cfile::f_append(char *filename,char * ap_str)
 	return 0;
 }
 
-int Cfile::f_read(char *f_name) 
+int Cfile::f_size(char *f_name)
 {
 	std::ifstream is (f_name, std::ifstream::binary);
-	if (is) return -1;
+	if (!is) return -1;	
+	is.seekg (0, is.end);
+	int len=is.tellg();
+	is.close();
+	return len;
+}
+
+int Cfile::f_size()
+{
+	if(this->size>0) return this->size-1;
+	if(this->f_name.empty()) return -1;
+	return this->f_size((char *)this->f_name.c_str());
+}
+
+int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
+{
+	std::ifstream is (f_name, std::ifstream::binary);
+	if (!is) return -1;
 
 	is.seekg (0, is.end);
 	int len=is.tellg();
@@ -54,7 +71,7 @@ int Cfile::f_read(char *f_name)
 	}
 
 	is.seekg (0, is.beg);
-	is.read (this->addr,this->size);// read data as a block:
+	is.read (this->addr,len);// read data as a block:
 
 	if (!is)
 	{
@@ -69,6 +86,7 @@ int Cfile::f_read(char *f_name)
 
 int Cfile::f_read()
 {
+	if(this->f_name.empty()) return -1;
 	return this->f_read((char *)this->f_name.c_str());
 }
 
@@ -87,8 +105,11 @@ int Cfile::f_append(char * ap_str)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "FILE_TEST\n\n";
+	cout << "FILE_TEST!\n\n";
 	Cfile f;
+	f.f_name="file.cpp";
+	f.f_read();
+	cout<<f.addr<<endl;
 
 	return 0;
 }

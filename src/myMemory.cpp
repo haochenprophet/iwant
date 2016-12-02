@@ -1,18 +1,27 @@
 #include "myMemory.h"
 
-CmyMemory::CmyMemory()
+int CmyMemory::my_init(void *p)
 {
 	this->name = "CmyMemory";
 	this->name += std::to_string(this->id);
 	this->alias = "myMemory";
-	this->allot();//call for init 
+	return 0;
+}
+
+CmyMemory::CmyMemory()
+{
+	this->size = 0;
+	this->addr = NULL;
+	this->type = 0;
+	this->my_init();
 }
 
 CmyMemory::CmyMemory(int size)
 {
-	this->name = "CmyMemory";
-	this->name += std::to_string(this->id);
-	this->alias = "myMemory";
+	this->size = 0;
+	this->addr = NULL;
+	this->type = 0;
+	this->my_init();
 	this->allot(size);
 }
 
@@ -23,19 +32,14 @@ CmyMemory::~CmyMemory()
 
 void * CmyMemory::allot(int size, int type)
 {
-	this->size = 0;
-	this->addr = NULL;
-	this->type = type;
-
-	if (size) {
-		try {
-			this->addr = new char[size];//
-			this->size = size;
-		}
-		catch (...)//fail
-		{
-			cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
-		}
+	if (size<1) return NULL;
+	try {
+		this->addr = new char[size];//
+		this->size = size;
+	}
+	catch (...)//fail
+	{
+		cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
 	}
 
 	return (void *)this->addr;

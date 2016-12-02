@@ -18,6 +18,7 @@ namespace n_my_memory {
 		int size;
 		int type;//0 is no type
 	public:
+		int my_init(void *p=NULL);
 		CmyMemory();
 		CmyMemory(int size); 
 		~CmyMemory();

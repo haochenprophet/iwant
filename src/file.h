@@ -14,8 +14,11 @@ namespace n_file {
 		int is_exist();
 		int f_append(char *filename,char * ap_str);
 		int f_append(char * ap_str);
+		int f_size(char *f_name);
+		int f_size();
 		int f_read(char *f_name);
 		int f_read();
+
 	};
 
 }
