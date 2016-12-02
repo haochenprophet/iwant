@@ -54,7 +54,7 @@ int Cclass::deal_cmd(int argc, char *argv[])
 
 	do{
 		argc--;
-		AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 		if(argc<1)	break;
 
 		this->create((void *)argv[argc]);//creat h cpp temp

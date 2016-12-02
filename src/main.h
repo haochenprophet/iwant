@@ -1,14 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "object.h"
+#include "file.h"
 
 namespace n_main {
-	class Cmain :public Object
+	class Cmain :public Cfile
 	{
 	public:
 		Cmain();
 		int my_init(void *p=NULL);
+		int deal_cmd(int argc, char *argv[]);
 	};
 
 }
