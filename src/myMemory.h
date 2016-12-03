@@ -26,9 +26,8 @@ namespace n_my_memory {
 		void *allot(int size=0,int type=0);
 		bool isMe(void * addr = NULL, long id = 0,string name=""); 
 		void delete_me();
-		int set_addr(char *start,char *end);
-		int set_addr(char *start,int size);
-
+		int set_addr(char *start,char *end,int type=0);
+		int set_addr(char *start,int size,int type=0);
 	};
 }
 using namespace n_my_memory;

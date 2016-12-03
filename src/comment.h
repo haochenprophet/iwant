@@ -3,12 +3,25 @@
 
 #include "object.h"
 
+
+enum CommentType  
+{
+	NotComment_T,
+	C_TypeCommentLine_T,
+	C_TypeCommentBlockStart_T,
+	C_TypeCommentBlockEnd_T,
+	BatchComment_T,
+};
+
+
 namespace n_comment {
 	class Ccomment :public Object
 	{
 	public:
 		Ccomment();
 		int my_init(void *p=NULL);
+		int isMe(char *identifier);
+
 	};
 }
 

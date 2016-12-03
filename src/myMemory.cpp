@@ -62,7 +62,7 @@ void CmyMemory::delete_me()
 	}
 }
 
-int set_addr(char *start,char *end,int type)
+int CmyMemory::set_addr(char *start,char *end,int type)
 {
 	if(this->allot_flag) return -1;
 	if(end>start){
@@ -78,11 +78,11 @@ int set_addr(char *start,char *end,int type)
 	return 0;
 }
 
-int set_addr(char *start,int size,int type)
+int CmyMemory::set_addr(char *start,int size,int type)
 {
 	if(this->allot_flag) return -1;
 	this->addr=start;
 	this->size=size;
 	this->type=type;
-	return;
+	return 0;
 }

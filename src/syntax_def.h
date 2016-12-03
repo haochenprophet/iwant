@@ -5,7 +5,7 @@
 #define MAKE_SYNTAX	"target:[dependencies] [...]\n\tcommands\n\t[...]"
 #define TAG_SYNTAX "[TAG];[TAG%d];[tag];[tag%d]"
 #define BRACKET_SYNTAX "[...];{...};(...);<...>"
-
+#define C_CPP_SYNTAX "//;/*,*/"
 #define URI_SYNTAX "schema://host[:port#]/path/.../[;url-params][?query-string][#anchor]"
 #define URI_HIER_PART_SYNTAX "//authority-path-abempty/path-absolute/path-rootless/path-empty"
 
