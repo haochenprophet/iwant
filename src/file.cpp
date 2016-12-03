@@ -96,6 +96,11 @@ int Cfile::f_append(char * ap_str)
 	return this->f_append((char *)this->f_name.c_str(),ap_str);
 }
 
+int Cfile::func(void *p)
+{
+	if(!p) return -1;
+	return this->f_read((char *) p);
+}
 
 #ifndef FILE_TEST
 #define FILE_TEST 0//1

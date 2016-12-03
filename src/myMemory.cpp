@@ -2,6 +2,7 @@
 
 int CmyMemory::my_init(void *p)
 {
+	this->allot_flag=0;
 	this->name = "CmyMemory";
 	this->name += std::to_string(this->id);
 	this->alias = "myMemory";
@@ -36,6 +37,7 @@ void * CmyMemory::allot(int size, int type)
 	try {
 		this->addr = new char[size];//
 		this->size = size;
+		this->allot_flag=1;
 	}
 	catch (...)//fail
 	{
@@ -52,8 +54,35 @@ bool CmyMemory::isMe(void * addr,  long id,string name)
 
 void CmyMemory::delete_me()
 {
-	if (this->addr) {
+	if (this->addr&&this->allot_flag)
+	{
 		delete[](char*) this->addr;
 		this->addr = NULL;
+		this->allot_flag=0;
 	}
+}
+
+int set_addr(char *start,char *end,int type)
+{
+	if(this->allot_flag) return -1;
+	if(end>start){
+		this->addr=start;
+		this->size=(end-start);
+	}
+	else
+	{
+		this->addr=end;
+		this->size=(start-end);	
+	}
+	this->type=type;
+	return 0;
+}
+
+int set_addr(char *start,int size,int type)
+{
+	if(this->allot_flag) return -1;
+	this->addr=start;
+	this->size=size;
+	this->type=type;
+	return;
 }

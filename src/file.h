@@ -18,7 +18,7 @@ namespace n_file {
 		int f_size();
 		int f_read(char *f_name);
 		int f_read();
-
+		int func(void *p = NULL);
 	};
 
 }
