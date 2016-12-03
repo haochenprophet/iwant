@@ -21,7 +21,7 @@ namespace n_path {
 		~Cpath();
 		bool is_dir(DIR_T *name);
 		bool is_file();
-		int list(DIR_T *dir_name);//get list to name_list
+		int list(DIR_T *dir_name,DIR_T *term=NULL);//get list to name_list
 	};
 
 }

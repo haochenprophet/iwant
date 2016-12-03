@@ -15,7 +15,7 @@ Cpath::~Cpath()
 }
 
 #if LINUX_OS
-int Cpath::list(DIR_T *dir_name)
+int Cpath::list(DIR_T *dir_name,DIR_T *term)
 {
 	DIR *p_dir;
 	struct dirent *p_dirent;
@@ -24,6 +24,7 @@ int Cpath::list(DIR_T *dir_name)
 
 	while((p_dirent=readdir(p_dir)))
 	{
+		if(term&&!strstr(p_dirent->d_name,term)) continue;
 		cout<<p_dirent->d_name<<endl;
 	}
 
@@ -33,7 +34,7 @@ int Cpath::list(DIR_T *dir_name)
 #endif
 
 #if WINDOWS_OS
-int Cpath::list(DIR_T *dir_name)
+int Cpath::list(DIR_T *dir_name,DIR_T *term)
 {
 	WIN32_FIND_DATA ffd;//FindFileData
 	LARGE_INTEGER filesize;
@@ -92,8 +93,9 @@ int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
 	Cpath p;
+	p.list((DIR_T *)".",(DIR_T*)".cpp");
+	p.list((DIR_T *)".",(DIR_T*)".h");
 	p.list((DIR_T *)".");
-
 	return 0;
 }
 #endif 
