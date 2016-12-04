@@ -148,6 +148,7 @@ namespace n_object {
 		virtual int create(void *p=NULL);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 		virtual int my_init(void *p=NULL);//object init
 		virtual int my_exit(void *p=NULL);//object exit
+		virtual int my_clear(void *p=NULL);
 		virtual int deal_cmd(int argc, char *argv[]);
 	};
 }

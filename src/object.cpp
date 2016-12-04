@@ -482,6 +482,11 @@ int Object::my_exit(void *p)
 	return 0;
 }
 
+int Object::my_clear(void *p)
+{	
+	return 0;
+}
+
 int Object::deal_cmd(int argc, char *argv[])
 {
 	do{

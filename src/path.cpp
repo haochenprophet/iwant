@@ -12,10 +12,11 @@ Cpath::Cpath()
 
 Cpath::~Cpath()
 {
+	this->my_clear();
 }
 
 #if LINUX_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
 {
 	DIR *p_dir;
 	struct dirent *p_dirent;
@@ -25,7 +26,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term)
 	while((p_dirent=readdir(p_dir)))
 	{
 		if(term&&!strstr(p_dirent->d_name,term)) continue;
-		cout<<p_dirent->d_name<<endl;
+		if(display) cout<<p_dirent->d_name<<endl;
 	}
 
 	closedir(p_dir);
@@ -34,7 +35,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term)
 #endif
 
 #if WINDOWS_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
 {
 	WIN32_FIND_DATA ffd;//FindFileData
 	LARGE_INTEGER filesize;
@@ -66,19 +67,22 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term)
 	hFind = FindFirstFile(szDir, &ffd);
 	if (hFind == INVALID_HANDLE_VALUE) return -1;
 
-	_tprintf(TEXT("The first file found is %s\n"), ffd.cFileName);
+	if(display) _tprintf(TEXT("The first file found is %s\n"), ffd.cFileName);
 
 	do
 	{
-		if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+		if(NULL==term||(term&&!_tcsstr(ffd.cFileName,term))
 		{
-			_tprintf(TEXT("  %s   <DIR>\n"), ffd.cFileName);
-		}
-		else
-		{
-			filesize.LowPart = ffd.nFileSizeLow;
-			filesize.HighPart = ffd.nFileSizeHigh;
-			_tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
+			if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+			{
+				if(display) _tprintf(TEXT("  %s   <DIR>\n"), ffd.cFileName);
+			}
+			else
+			{
+				filesize.LowPart = ffd.nFileSizeLow;
+				filesize.HighPart = ffd.nFileSizeHigh;
+				if(display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
+			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
 
@@ -86,6 +90,19 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term)
 	return 0;
 }
 #endif
+
+int Cpath::my_clear(void *p)
+{	
+	DIR_T * p;
+	while (!name_list.empty())
+	{
+		p=name_list.back();
+		if(p)delete[](p);
+		name_list.pop_back();
+	}
+	this->name_list.clear();
+	return 0;
+}
 
 #if PATH_TEST
 #include "all_h_include.h"
