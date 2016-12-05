@@ -21,7 +21,8 @@ Cpath::~Cpath()
 #if LINUX_OS
 int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 {
-	DIR *p_dir,	*p_name;
+	DIR *p_dir;	
+	DIR_T *p_name;
 	struct dirent *p_dirent;
 	int size;
 
@@ -55,6 +56,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	TCHAR szDir[MAX_PATH];
 	size_t length_of_arg;
 
+	DIR_T *p_name;
 	// Check that the input path plus 3 is not longer than MAX_PATH.
 	// Three characters are for the "\*" plus NULL appended below.
 
@@ -94,6 +96,15 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 				filesize.LowPart = ffd.nFileSizeLow;
 				filesize.HighPart = ffd.nFileSizeHigh;
 				if(display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
+			}
+
+			if(to_list)
+			{
+				size=_tcslen(ffd.cFileName);
+				size+=sizeof(DIR_T);
+				this->allot(size,(void **)&p_name);
+				_tcscpy((DIR_T *)p_name,(DIR_T *)p_dirent->d_name);
+				this->name_list.push_back((DIR_T *)p_name);
 			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
