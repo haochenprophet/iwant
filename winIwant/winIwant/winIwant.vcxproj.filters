@@ -123,6 +123,12 @@
     <ClCompile Include="..\..\src\symbol.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\build.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\comment.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -240,6 +246,12 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\symbol.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\comment.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #include "path.h"
 
 #ifndef PATH_TEST
-#define PATH_TEST 0//1
+#define PATH_TEST 01
 #endif
 
 Cpath::Cpath()
@@ -57,6 +57,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	size_t length_of_arg;
 
 	DIR_T *p_name;
+	size_t size;
 	// Check that the input path plus 3 is not longer than MAX_PATH.
 	// Three characters are for the "\*" plus NULL appended below.
 
@@ -68,14 +69,14 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 		return (-1);
 	}
 
-	_tprintf(TEXT("\nTarget directory is %s\n\n"), dir_name);
+	if (display) _tprintf(TEXT("\nTarget directory is %s\n\n"), dir_name);
 
 	// Prepare string for use with FindFile functions.  First, copy the
 	// string to a buffer, then append '\*' to the directory name.
 
 	StringCchCopy(szDir, MAX_PATH, dir_name);
 	StringCchCat(szDir, MAX_PATH, TEXT("\\*"));
-	_tprintf(TEXT("szDir=%s\n"), szDir);//test
+	if (display) _tprintf(TEXT("szDir=%s\n"), szDir);//test
 	// Find the first file in the directory.
 
 	hFind = FindFirstFile(szDir, &ffd);
@@ -85,8 +86,19 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	this->my_clear();
 	do
 	{
-		if(NULL==term||(term&&!_tcsstr(ffd.cFileName,term))
+		if(NULL==term||(term&&_tcsstr(ffd.cFileName,term)))
 		{
+
+			if (to_list)
+			{
+				size = _tcslen(ffd.cFileName);
+				size += sizeof(DIR_T);
+				size*= sizeof(DIR_T);
+				this->allot(size, (void **)&p_name);
+				wcscpy((DIR_T *)p_name, (DIR_T *)ffd.cFileName);
+				this->name_list.push_back((DIR_T *)p_name);
+			}
+
 			if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 			{
 				if(display) _tprintf(TEXT("  %s   <DIR>\n"), ffd.cFileName);
@@ -98,14 +110,6 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 				if(display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
 			}
 
-			if(to_list)
-			{
-				size=_tcslen(ffd.cFileName);
-				size+=sizeof(DIR_T);
-				this->allot(size,(void **)&p_name);
-				_tcscpy((DIR_T *)p_name,(DIR_T *)p_dirent->d_name);
-				this->name_list.push_back((DIR_T *)p_name);
-			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
 
@@ -114,15 +118,25 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 }
 #endif
 
+int Cpath::display(void *p)
+{
+	if (!p) return -1;
+
+#if WINDOWS_OS
+	_tprintf(TEXT("%s\n"), (TCHAR *)p);
+#else
+	cout << (DIR_T *)p << endl;	//display the name_list
+#endif
+	return 0;
+}
+
 int Cpath::my_clear(void *p)
 {	
 	DIR_T * i;
 	while (!name_list.empty())
 	{
 		i=name_list.back();
-#if PATH_TEST
-		cout<<i<<endl;	//display the name_list
-#endif
+		if (PATH_TEST) this->display(i);
 		if(i)delete[](i);
 		name_list.pop_back();
 	}
@@ -136,7 +150,9 @@ int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
 	Cpath p;
-	p.list((DIR_T *)".",(DIR_T*)".cpp",0);
+//	p.list((DIR_T *)".",(DIR_T*)".cpp",0);
+//	p.list((DIR_T *)".", L".vc", 1); 
+	p.list((DIR_T *)".", NULL, 0);
 //	p.list((DIR_T *)".",(DIR_T*)".h");
 //	p.list((DIR_T *)".");
 	return 0;

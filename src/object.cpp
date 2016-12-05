@@ -495,7 +495,12 @@ int Object::deal_cmd(int argc, char *argv[])
 	}while(argc>0);
 	return -1;
 }
-
+int Object::display(void *p)
+{
+	if (!p) return -1;
+	cout << p << endl;	
+	return 0;
+}
 #if OBJECT_TEST
 int main()
 {

@@ -147,7 +147,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\brackets.cpp" />
+    <ClCompile Include="..\..\src\build.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
+    <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\echo.cpp" />
     <ClCompile Include="..\..\src\enum.cpp" />
@@ -186,7 +188,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\brackets.h" />
+    <ClInclude Include="..\..\src\build.h" />
     <ClInclude Include="..\..\src\class.h" />
+    <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\echo.h" />
     <ClInclude Include="..\..\src\enum.h" />

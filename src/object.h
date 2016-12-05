@@ -10,6 +10,7 @@
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
 #include <string.h>
 #include <time.h>       /* time_t, time */
+#include <wchar.h>
 
 #include "temp_def.h"
 #include "syntax_def.h"
@@ -150,6 +151,7 @@ namespace n_object {
 		virtual int my_exit(void *p=NULL);//object exit
 		virtual int my_clear(void *p=NULL);
 		virtual int deal_cmd(int argc, char *argv[]);
+		virtual int display(void * p = NULL);
 	};
 }
 
