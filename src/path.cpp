@@ -12,21 +12,33 @@ Cpath::Cpath()
 
 Cpath::~Cpath()
 {
+#if PATH_TEST
+	cout<<"Cpath::~Cpath()\n";
+#endif
 	this->my_clear();
 }
 
 #if LINUX_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 {
-	DIR *p_dir;
+	DIR *p_dir,	*p_name;
 	struct dirent *p_dirent;
-	
-	if((p_dir=opendir(dir_name))==NULL) return -1;
+	int size;
 
+	if((p_dir=opendir(dir_name))==NULL) return -1;
+	this->my_clear();
 	while((p_dirent=readdir(p_dir)))
 	{
 		if(term&&!strstr(p_dirent->d_name,term)) continue;
 		if(display) cout<<p_dirent->d_name<<endl;
+		if(to_list)
+		{
+			size=strlen(p_dirent->d_name);
+			size+=sizeof(DIR_T);
+			this->allot(size,(void **)&p_name);
+			strcpy((char*)p_name,(char*)p_dirent->d_name);
+			this->name_list.push_back((char *)p_name);
+		}
 	}
 
 	closedir(p_dir);
@@ -35,7 +47,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
 #endif
 
 #if WINDOWS_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 {
 	WIN32_FIND_DATA ffd;//FindFileData
 	LARGE_INTEGER filesize;
@@ -68,7 +80,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
 	if (hFind == INVALID_HANDLE_VALUE) return -1;
 
 	if(display) _tprintf(TEXT("The first file found is %s\n"), ffd.cFileName);
-
+	this->my_clear();
 	do
 	{
 		if(NULL==term||(term&&!_tcsstr(ffd.cFileName,term))
@@ -93,11 +105,14 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display)
 
 int Cpath::my_clear(void *p)
 {	
-	DIR_T * p;
+	DIR_T * i;
 	while (!name_list.empty())
 	{
-		p=name_list.back();
-		if(p)delete[](p);
+		i=name_list.back();
+#if PATH_TEST
+		cout<<i<<endl;	//display the name_list
+#endif
+		if(i)delete[](i);
 		name_list.pop_back();
 	}
 	this->name_list.clear();
@@ -110,9 +125,9 @@ int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
 	Cpath p;
-	p.list((DIR_T *)".",(DIR_T*)".cpp");
-	p.list((DIR_T *)".",(DIR_T*)".h");
-	p.list((DIR_T *)".");
+	p.list((DIR_T *)".",(DIR_T*)".cpp",0);
+//	p.list((DIR_T *)".",(DIR_T*)".h");
+//	p.list((DIR_T *)".");
 	return 0;
 }
 #endif 

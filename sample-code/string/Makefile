@@ -14,6 +14,7 @@ push_back \
 substr \
 stof \
 strstr \
+strcpy \
 
 replace:replace.cpp
 	g++ $(CFLAGS)-o $@ $^  
@@ -40,7 +41,10 @@ substr:substr.cpp
 stof:stof.cpp
 	g++ $(CFLAGS) -o $@ $^
 
-strstr::strstr.cpp
+strstr:strstr.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+strcpy:strcpy.cpp
 	g++ $(CFLAGS) -o $@ $^
 
 clean:
@@ -54,3 +58,4 @@ push_back \
 substr \
 stof \
 strstr \
+strcpy \
