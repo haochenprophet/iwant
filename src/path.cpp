@@ -1,7 +1,7 @@
 #include "path.h"
 
 #ifndef PATH_TEST
-#define PATH_TEST 01
+#define PATH_TEST 0//1
 #endif
 
 Cpath::Cpath()
