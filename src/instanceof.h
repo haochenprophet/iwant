@@ -1,0 +1,17 @@
+#ifndef INSTANCEOF_H
+#define INSTANCEOF_H
+
+#include "object.h"
+
+namespace n_instanceof {
+	class Cinstanceof :public Object
+	{
+	public:
+		Cinstanceof();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_instanceof;
+
+#endif

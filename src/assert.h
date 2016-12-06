@@ -1,0 +1,17 @@
+#ifndef ASSERT_H
+#define ASSERT_H
+
+#include "object.h"
+
+namespace n_assert {
+	class Cassert :public Object
+	{
+	public:
+		Cassert();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_assert;
+
+#endif
