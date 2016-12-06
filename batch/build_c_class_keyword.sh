@@ -31,3 +31,5 @@ make main=CLASS
 ./iwant void
 ./iwant volatile
 ./iwant while 
+
+make main=CLASS
