@@ -154,9 +154,9 @@ int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
 	Cpath p;
-//	p.list((DIR_T *)".",(DIR_T*)".cpp",0);
+	p.list((DIR_T *)".",(DIR_T*)".h",0);
 //	p.list((DIR_T *)".", L".vc", 1); 
-	p.list((DIR_T *)".", NULL, 0);
+//	p.list((DIR_T *)".", NULL, 0);
 //	p.list((DIR_T *)".",(DIR_T*)".h");
 //	p.list((DIR_T *)".");
 	return 0;
