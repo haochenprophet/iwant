@@ -31,5 +31,20 @@ make main=CLASS
 ./iwant void
 ./iwant volatile
 ./iwant while 
+#
+./iwant _define	
+./iwant _error	
+./iwant _import	
+./iwant _undef
+./iwant _elif	
+./iwant _if	
+./iwant _include	
+./iwant _using
+./iwant _else	
+./iwant _ifdef	
+./iwant _line	
+./iwant _endif
+./iwant _ifndef	
+./iwant _pragma		
 
 make main=CLASS

@@ -1,0 +1,17 @@
+#ifndef _INCLUDE_H
+#define _INCLUDE_H
+
+#include "object.h"
+
+namespace n__include {
+	class C_include :public Object
+	{
+	public:
+		C_include();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n__include;
+
+#endif
