@@ -1,0 +1,12 @@
+#include "sql_SEMANTICSIMILARITYTABLE.h"
+int Csql_SEMANTICSIMILARITYTABLE::my_init(void *p)
+{
+	this->name = "Csql_SEMANTICSIMILARITYTABLE";
+	this->alias = "sql_SEMANTICSIMILARITYTABLE";
+	return 0;
+}
+
+Csql_SEMANTICSIMILARITYTABLE::Csql_SEMANTICSIMILARITYTABLE()
+{
+	this->my_init();
+}
