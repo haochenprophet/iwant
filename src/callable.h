@@ -1,0 +1,17 @@
+#ifndef CALLABLE_H
+#define CALLABLE_H
+
+#include "object.h"
+
+namespace n_callable {
+	class Ccallable :public Object
+	{
+	public:
+		Ccallable();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_callable;
+
+#endif
