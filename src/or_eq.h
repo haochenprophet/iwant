@@ -1,0 +1,17 @@
+#ifndef OR_EQ_H
+#define OR_EQ_H
+
+#include "object.h"
+
+namespace n_or_eq {
+	class Cor_eq :public Object
+	{
+	public:
+		Cor_eq();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_or_eq;
+
+#endif

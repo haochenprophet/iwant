@@ -1,0 +1,17 @@
+#ifndef CONSTEXPR_H
+#define CONSTEXPR_H
+
+#include "object.h"
+
+namespace n_constexpr {
+	class Cconstexpr :public Object
+	{
+	public:
+		Cconstexpr();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_constexpr;
+
+#endif
