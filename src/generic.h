@@ -1,0 +1,17 @@
+#ifndef GENERIC_H
+#define GENERIC_H
+
+#include "object.h"
+
+namespace n_generic {
+	class Cgeneric :public Object
+	{
+	public:
+		Cgeneric();
+		int my_init(void *p=NULL);
+	};
+}
+
+using namespace n_generic;
+
+#endif
