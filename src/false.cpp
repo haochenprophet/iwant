@@ -1,12 +1,12 @@
-#include "false.h"
-int Cfalse::my_init(void *p)
+#include "False.h"
+int CFalse::my_init(void *p)
 {
-	this->name = "Cfalse";
-	this->alias = "false";
+	this->name = "CFalse";
+	this->alias = "False";
 	return 0;
 }
 
-Cfalse::Cfalse()
+CFalse::CFalse()
 {
 	this->my_init();
 }

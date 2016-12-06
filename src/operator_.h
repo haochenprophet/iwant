@@ -3,15 +3,15 @@
 
 #include "object.h"
 
-namespace n_Operator {
-	class COperator :public Object
+namespace n_operator {
+	class Coperator :public Object
 	{
 	public:
-		COperator();
+		Coperator();
 		int my_init(void *p=NULL);
 	};
 }
 
-using namespace n_Operator;
+using namespace n_operator;
 
 #endif

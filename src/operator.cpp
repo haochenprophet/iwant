@@ -1,12 +1,12 @@
-#include "operator.h"
-int Coperator::my_init(void *p)
+#include "Operator.h"
+int COperator::my_init(void *p)
 {
-	this->name = "Coperator";
-	this->alias = "operator";
+	this->name = "COperator";
+	this->alias = "Operator";
 	return 0;
 }
 
-Coperator::Coperator()
+COperator::COperator()
 {
 	this->my_init();
 }

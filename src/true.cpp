@@ -1,12 +1,12 @@
-#include "true.h"
-int Ctrue::my_init(void *p)
+#include "True.h"
+int CTrue::my_init(void *p)
 {
-	this->name = "Ctrue";
-	this->alias = "true";
+	this->name = "CTrue";
+	this->alias = "True";
 	return 0;
 }
 
-Ctrue::Ctrue()
+CTrue::CTrue()
 {
 	this->my_init();
 }
