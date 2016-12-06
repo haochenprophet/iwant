@@ -36,9 +36,11 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 		{
 			size=strlen(p_dirent->d_name);
 			size+=sizeof(DIR_T);
-			this->allot(size,(void **)&p_name);
-			strcpy((char*)p_name,(char*)p_dirent->d_name);
-			this->name_list.push_back((char *)p_name);
+			if(this->allot(size,(void **)&p_name)>=size)
+			{
+				strcpy((char*)p_name,(char*)p_dirent->d_name);
+				this->name_list.push_back((char *)p_name);
+			}
 		}
 	}
 
@@ -92,11 +94,13 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 			if (to_list)
 			{
 				size = _tcslen(ffd.cFileName);
-				size += sizeof(DIR_T);
 				size*= sizeof(DIR_T);
-				this->allot(size, (void **)&p_name);
-				wcscpy((DIR_T *)p_name, (DIR_T *)ffd.cFileName);
-				this->name_list.push_back((DIR_T *)p_name);
+				size += sizeof(DIR_T);
+				if(this->allot(size, (void **)&p_name)>=size)
+				{
+					wcscpy((DIR_T *)p_name, (DIR_T *)ffd.cFileName);
+					this->name_list.push_back((DIR_T *)p_name);
+				}
 			}
 
 			if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
