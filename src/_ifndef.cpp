@@ -2,7 +2,7 @@
 int C_ifndef::my_init(void *p)
 {
 	this->name = "C_ifndef";
-	this->alias = "_ifndef";
+	this->alias = "#ifndef";
 	return 0;
 }
 

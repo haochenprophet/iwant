@@ -2,7 +2,7 @@
 int C_endif::my_init(void *p)
 {
 	this->name = "C_endif";
-	this->alias = "_endif";
+	this->alias = "#endif";
 	return 0;
 }
 
