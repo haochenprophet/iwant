@@ -3,15 +3,15 @@
 
 #include "object.h"
 
-namespace n_True {
-	class CTrue :public Object
+namespace n_true {
+	class Ctrue :public Object
 	{
 	public:
-		CTrue();
+		Ctrue();
 		int my_init(void *p=NULL);
 	};
 }
 
-using namespace n_True;
+using namespace n_true;
 
 #endif

@@ -3,15 +3,15 @@
 
 #include "object.h"
 
-namespace n_None {
-	class CNone :public Object
+namespace n_none {
+	class Cnone :public Object
 	{
 	public:
-		CNone();
+		Cnone();
 		int my_init(void *p=NULL);
 	};
 }
 
-using namespace n_None;
+using namespace n_none;
 
 #endif

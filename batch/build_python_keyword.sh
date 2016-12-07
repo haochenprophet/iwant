@@ -1,17 +1,20 @@
 
 make main=CLASS
 
-./iwant False
+#./iwant False
+./iwant false
 ./iwant class
 ./iwant finally
 ./iwant is
 ./iwant return
-./iwant None
+#./iwant None
+./iwant none
 ./iwant continue
 ./iwant for
 ./iwant lambda
 ./iwant try
-./iwant True
+#./iwant True
+./iwant true
 ./iwant def
 ./iwant from
 ./iwant nonlocal
