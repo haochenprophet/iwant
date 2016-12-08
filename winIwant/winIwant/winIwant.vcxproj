@@ -226,7 +226,6 @@
     <ClCompile Include="..\..\src\extern.cpp" />
     <ClCompile Include="..\..\src\ex_func.cpp" />
     <ClCompile Include="..\..\src\false.cpp" />
-    <ClCompile Include="..\..\src\false_.cpp" />
     <ClCompile Include="..\..\src\file.cpp" />
     <ClCompile Include="..\..\src\final.cpp" />
     <ClCompile Include="..\..\src\finally.cpp" />
@@ -280,7 +279,7 @@
     <ClCompile Include="..\..\src\new.cpp" />
     <ClCompile Include="..\..\src\new_noinline.cpp" />
     <ClCompile Include="..\..\src\noexcept.cpp" />
-    <ClCompile Include="..\..\src\None.cpp" />
+    <ClCompile Include="..\..\src\none.cpp" />
     <ClCompile Include="..\..\src\nonlocal.cpp" />
     <ClCompile Include="..\..\src\noreturn.cpp" />
     <ClCompile Include="..\..\src\not.cpp" />
@@ -290,7 +289,6 @@
     <ClCompile Include="..\..\src\nullptr.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
     <ClCompile Include="..\..\src\operator.cpp" />
-    <ClCompile Include="..\..\src\operator_.cpp" />
     <ClCompile Include="..\..\src\or.cpp" />
     <ClCompile Include="..\..\src\or_eq.cpp" />
     <ClCompile Include="..\..\src\package.cpp" />
@@ -528,7 +526,6 @@
     <ClCompile Include="..\..\src\trait.cpp" />
     <ClCompile Include="..\..\src\transient.cpp" />
     <ClCompile Include="..\..\src\true.cpp" />
-    <ClCompile Include="..\..\src\true_.cpp" />
     <ClCompile Include="..\..\src\try.cpp" />
     <ClCompile Include="..\..\src\typedef.cpp" />
     <ClCompile Include="..\..\src\typeid.cpp" />
@@ -768,7 +765,7 @@
     <ClInclude Include="..\..\src\new.h" />
     <ClInclude Include="..\..\src\new_noinline.h" />
     <ClInclude Include="..\..\src\noexcept.h" />
-    <ClInclude Include="..\..\src\None.h" />
+    <ClInclude Include="..\..\src\none.h" />
     <ClInclude Include="..\..\src\nonlocal.h" />
     <ClInclude Include="..\..\src\noreturn.h" />
     <ClInclude Include="..\..\src\not.h" />
@@ -778,7 +775,6 @@
     <ClInclude Include="..\..\src\nullptr.h" />
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\operator.h" />
-    <ClInclude Include="..\..\src\operator_.h" />
     <ClInclude Include="..\..\src\or.h" />
     <ClInclude Include="..\..\src\or_eq.h" />
     <ClInclude Include="..\..\src\package.h" />

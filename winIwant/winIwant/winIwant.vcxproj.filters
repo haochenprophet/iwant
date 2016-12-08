@@ -558,9 +558,6 @@
     <ClCompile Include="..\..\src\false.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\false_.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\final.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -687,9 +684,6 @@
     <ClCompile Include="..\..\src\noexcept.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\None.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\nonlocal.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -712,9 +706,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\operator.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\operator_.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\or.cpp">
@@ -1395,9 +1386,6 @@
     <ClCompile Include="..\..\src\true.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\true_.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\try.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1468,6 +1456,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\yield.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\none.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -2153,9 +2144,6 @@
     <ClInclude Include="..\..\src\noexcept.h">
       <Filter>header</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\None.h">
-      <Filter>header</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\nonlocal.h">
       <Filter>header</Filter>
     </ClInclude>
@@ -2178,9 +2166,6 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\operator.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\operator_.h">
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\or.h">
@@ -2934,6 +2919,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\yield.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\none.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
