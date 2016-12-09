@@ -27,7 +27,7 @@ using std::endl;
 typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);
-int  runcmd(void *cmd);
+int runcmd(void *cmd);
 
 #define PAGE_4K	(4*1024) 
 #define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
