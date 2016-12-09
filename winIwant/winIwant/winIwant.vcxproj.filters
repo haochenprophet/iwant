@@ -9,9 +9,8 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="source">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="sql">
+      <UniqueIdentifier>{b8cf7354-5301-4a4b-a95e-6127c54e61ab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -780,561 +779,6 @@
     <ClCompile Include="..\..\src\sizeof.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\sql_ADD.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ALL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ALTER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_AND.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ANY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_AS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ASC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_AUTHORIZATION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BACKUP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BEGIN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BETWEEN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BREAK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BROWSE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BULK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_BY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CASCADE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CASE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CHECK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CHECKPOINT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CLOSE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CLUSTERED.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_COALESCE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_COLLATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_COLUMN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_COMMIT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_COMPUTE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CONSTRAINT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CONTAINS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CONTAINSTABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CONTINUE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CONVERT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CREATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CROSS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURRENT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURRENT_DATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURRENT_TIME.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURRENT_TIMESTAMP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURRENT_USER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_CURSOR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DATABASE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DBCC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DEALLOCATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DECLARE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DEFAULT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DELETE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DENY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DESC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DISK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DISTINCT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DISTRIBUTED.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DOUBLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DROP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_DUMP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ELSE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_END.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ERRLVL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ESCAPE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXCEPT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXEC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXECUTE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXISTS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXIT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_EXTERNAL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FETCH.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FILE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FILLFACTOR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FOR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FOREIGN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FREETEXT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FREETEXTTABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FROM.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FULL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_FUNCTION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_GOTO.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_GRANT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_GROUP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_HAVING.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_HOLDLOCK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IDENTITY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IDENTITY_INSERT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IDENTITYCOL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IF.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_INDEX.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_INNER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_INSERT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_INTERSECT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_INTO.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_IS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_JOIN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_KEY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_KILL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_LEFT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_LIKE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_LINENO.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_LOAD.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_MERGE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NATIONAL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NOCHECK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NONCLUSTERED.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NOT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NULL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_NULLIF.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OF.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OFF.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OFFSETS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ON.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPEN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPENDATASOURCE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPENQUERY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPENROWSET.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPENXML.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OPTION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ORDER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OUTER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_OVER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PERCENT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PIVOT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PLAN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PRECISION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PRIMARY.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PRINT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PROC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PROCEDURE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_PUBLIC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RAISERROR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_READ.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_READTEXT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RECONFIGURE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_REFERENCES.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_REPLICATION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RESTORE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RESTRICT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RETURN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_REVERT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_REVOKE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RIGHT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ROLLBACK.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ROWCOUNT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_ROWGUIDCOL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_RULE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SAVE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SCHEMA.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SECURITYAUDIT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SELECT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SEMANTICKEYPHRASETABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SEMANTICSIMILARITYDETAILSTABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SEMANTICSIMILARITYTABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SESSION_USER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SET.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SETUSER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SHUTDOWN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SOME.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_STATISTICS.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_SYSTEM_USER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TABLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TABLESAMPLE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TEXTSIZE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_THEN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TO.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TOP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TRAN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TRANSACTION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TRIGGER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TRUNCATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TRY_CONVERT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_TSEQUAL.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_UNION.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_UNIQUE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_UNPIVOT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_UPDATE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_UPDATETEXT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_USE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_USER.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_VALUES.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_VARYING.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_VIEW.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WAITFOR.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WHEN.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WHERE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WHILE.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WITH.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WITHIN_GROUP.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql_WRITETEXT.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\static.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1460,6 +904,561 @@
     </ClCompile>
     <ClCompile Include="..\..\src\none.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ALL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ALTER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_AND.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ANY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_AS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ASC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_AUTHORIZATION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BACKUP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BEGIN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BETWEEN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BREAK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BROWSE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BULK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_BY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CASCADE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CASE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CHECK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CHECKPOINT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CLOSE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CLUSTERED.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_COALESCE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_COLLATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_COLUMN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_COMMIT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_COMPUTE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CONSTRAINT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CONTAINS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CONTAINSTABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CONTINUE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CONVERT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CREATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CROSS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURRENT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURRENT_DATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURRENT_TIME.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURRENT_TIMESTAMP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURRENT_USER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_CURSOR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DATABASE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DBCC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DEALLOCATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DECLARE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DEFAULT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DELETE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DENY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DESC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DISK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DISTINCT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DISTRIBUTED.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DOUBLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DROP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_DUMP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ELSE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_END.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ERRLVL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ESCAPE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXCEPT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXEC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXECUTE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXISTS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXIT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_EXTERNAL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FETCH.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FILE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FILLFACTOR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FOR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FOREIGN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FREETEXT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FREETEXTTABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FROM.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FULL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_FUNCTION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_GOTO.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_GRANT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_GROUP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_HAVING.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_HOLDLOCK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IDENTITY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IDENTITY_INSERT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IDENTITYCOL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IF.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_INDEX.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_INNER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_INSERT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_INTERSECT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_INTO.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_IS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_JOIN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_KEY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_KILL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_LEFT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_LIKE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_LINENO.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_LOAD.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_MERGE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NATIONAL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NOCHECK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NONCLUSTERED.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NOT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NULL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_NULLIF.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OF.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OFF.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OFFSETS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ON.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPEN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPENDATASOURCE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPENQUERY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPENROWSET.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPENXML.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OPTION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ORDER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OUTER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_OVER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PERCENT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PIVOT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PLAN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PRECISION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PRIMARY.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PRINT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PROC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PROCEDURE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_PUBLIC.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RAISERROR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_READ.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_READTEXT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RECONFIGURE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_REFERENCES.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_REPLICATION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RESTORE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RESTRICT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RETURN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_REVERT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_REVOKE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RIGHT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ROLLBACK.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ROWCOUNT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_ROWGUIDCOL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_RULE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SAVE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SCHEMA.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SECURITYAUDIT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SELECT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SEMANTICKEYPHRASETABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SEMANTICSIMILARITYDETAILSTABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SEMANTICSIMILARITYTABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SESSION_USER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SET.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SETUSER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SHUTDOWN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SOME.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_STATISTICS.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_SYSTEM_USER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TABLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TABLESAMPLE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TEXTSIZE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_THEN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TO.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TOP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TRAN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TRANSACTION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TRIGGER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TRUNCATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TRY_CONVERT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_TSEQUAL.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_UNION.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_UNIQUE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_UNPIVOT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_UPDATE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_UPDATETEXT.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_USE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_USER.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_VALUES.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_VARYING.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_VIEW.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WAITFOR.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WHEN.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WHERE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WHILE.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WITH.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WITHIN_GROUP.cpp">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp">
+      <Filter>sql</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -2240,561 +2239,6 @@
     <ClInclude Include="..\..\src\sizeof.h">
       <Filter>header</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\sql_ADD.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ALL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ALTER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_AND.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ANY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_AS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ASC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_AUTHORIZATION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BACKUP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BEGIN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BETWEEN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BREAK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BROWSE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BULK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_BY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CASCADE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CASE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CHECK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CHECKPOINT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CLOSE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CLUSTERED.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_COALESCE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_COLLATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_COLUMN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_COMMIT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_COMPUTE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CONSTRAINT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CONTAINS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CONTAINSTABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CONTINUE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CONVERT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CREATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CROSS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURRENT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURRENT_DATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURRENT_TIME.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURRENT_TIMESTAMP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURRENT_USER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_CURSOR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DATABASE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DBCC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DEALLOCATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DECLARE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DEFAULT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DELETE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DENY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DESC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DISK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DISTINCT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DISTRIBUTED.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DOUBLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DROP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_DUMP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ELSE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_END.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ERRLVL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ESCAPE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXCEPT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXEC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXECUTE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXISTS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXIT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_EXTERNAL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FETCH.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FILE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FILLFACTOR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FOR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FOREIGN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FREETEXT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FREETEXTTABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FROM.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FULL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_FUNCTION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_GOTO.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_GRANT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_GROUP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_HAVING.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_HOLDLOCK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IDENTITY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IDENTITY_INSERT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IDENTITYCOL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IF.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_INDEX.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_INNER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_INSERT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_INTERSECT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_INTO.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_IS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_JOIN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_KEY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_KILL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_LEFT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_LIKE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_LINENO.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_LOAD.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_MERGE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NATIONAL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NOCHECK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NONCLUSTERED.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NOT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NULL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_NULLIF.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OF.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OFF.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OFFSETS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ON.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPEN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPENDATASOURCE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPENQUERY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPENROWSET.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPENXML.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OPTION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ORDER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OUTER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_OVER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PERCENT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PIVOT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PLAN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PRECISION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PRIMARY.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PRINT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PROC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PROCEDURE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_PUBLIC.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RAISERROR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_READ.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_READTEXT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RECONFIGURE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_REFERENCES.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_REPLICATION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RESTORE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RESTRICT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RETURN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_REVERT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_REVOKE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RIGHT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ROLLBACK.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ROWCOUNT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_ROWGUIDCOL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_RULE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SAVE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SCHEMA.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SECURITYAUDIT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SELECT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SEMANTICKEYPHRASETABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SEMANTICSIMILARITYDETAILSTABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SEMANTICSIMILARITYTABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SESSION_USER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SET.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SETUSER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SHUTDOWN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SOME.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_STATISTICS.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_SYSTEM_USER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TABLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TABLESAMPLE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TEXTSIZE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_THEN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TO.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TOP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TRAN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TRANSACTION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TRIGGER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TRUNCATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TRY_CONVERT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_TSEQUAL.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_UNION.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_UNIQUE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_UNPIVOT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_UPDATE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_UPDATETEXT.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_USE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_USER.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_VALUES.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_VARYING.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_VIEW.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WAITFOR.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WHEN.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WHERE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WHILE.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WITH.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WITHIN_GROUP.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql_WRITETEXT.h">
-      <Filter>header</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\static.h">
       <Filter>header</Filter>
     </ClInclude>
@@ -2924,10 +2368,568 @@
     <ClInclude Include="..\..\src\none.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ADD.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ALL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ALTER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_AND.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ANY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_AS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ASC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_AUTHORIZATION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BACKUP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BEGIN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BETWEEN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BREAK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BROWSE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BULK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_BY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CASCADE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CASE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CHECK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CHECKPOINT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CLOSE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CLUSTERED.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_COALESCE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_COLLATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_COLUMN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_COMMIT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_COMPUTE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CONSTRAINT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CONTAINS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CONTAINSTABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CONTINUE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CONVERT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CREATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CROSS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURRENT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURRENT_DATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURRENT_TIME.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURRENT_TIMESTAMP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURRENT_USER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_CURSOR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DATABASE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DBCC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DEALLOCATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DECLARE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DEFAULT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DELETE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DENY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DESC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DISK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DISTINCT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DISTRIBUTED.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DOUBLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DROP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_DUMP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ELSE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_END.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ERRLVL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ESCAPE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXCEPT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXEC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXECUTE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXISTS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXIT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_EXTERNAL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FETCH.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FILE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FILLFACTOR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FOR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FOREIGN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FREETEXT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FREETEXTTABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FROM.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FULL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_FUNCTION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_GOTO.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_GRANT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_GROUP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_HAVING.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_HOLDLOCK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IDENTITY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IDENTITY_INSERT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IDENTITYCOL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IF.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_INDEX.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_INNER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_INSERT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_INTERSECT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_INTO.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_IS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_JOIN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_KEY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_KILL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_LEFT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_LIKE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_LINENO.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_LOAD.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_MERGE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NATIONAL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NOCHECK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NONCLUSTERED.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NOT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NULL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_NULLIF.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OF.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OFF.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OFFSETS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ON.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPEN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPENDATASOURCE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPENQUERY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPENROWSET.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPENXML.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OPTION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ORDER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OUTER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_OVER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PERCENT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PIVOT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PLAN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PRECISION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PRIMARY.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PRINT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PROC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PROCEDURE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_PUBLIC.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RAISERROR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_READ.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_READTEXT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RECONFIGURE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_REFERENCES.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_REPLICATION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RESTORE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RESTRICT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RETURN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_REVERT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_REVOKE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RIGHT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ROLLBACK.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ROWCOUNT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_ROWGUIDCOL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_RULE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SAVE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SCHEMA.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SECURITYAUDIT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SELECT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SEMANTICKEYPHRASETABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SEMANTICSIMILARITYDETAILSTABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SEMANTICSIMILARITYTABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SESSION_USER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SET.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SETUSER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SHUTDOWN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SOME.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_STATISTICS.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_SYSTEM_USER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TABLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TABLESAMPLE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TEXTSIZE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_THEN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TO.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TOP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TRAN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TRANSACTION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TRIGGER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TRUNCATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TRY_CONVERT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_TSEQUAL.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_UNION.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_UNIQUE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_UNPIVOT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_UPDATE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_UPDATETEXT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_USE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_USER.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_VALUES.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_VARYING.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_VIEW.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WAITFOR.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WHEN.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WHERE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WHILE.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WITH.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WITHIN_GROUP.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h">
+      <Filter>sql</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
     <None Include="..\..\README.md" />
+    <None Include="..\..\src\sql\Makefile">
+      <Filter>sql</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\doc\think.txt" />
