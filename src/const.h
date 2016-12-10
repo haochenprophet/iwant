@@ -9,6 +9,8 @@ namespace n_const {
 	public:
 		Cconst();
 		int my_init(void *p=NULL);
+		static bool isHex(char *cp);
+		static bool isDec(char *cp);
 	};
 }
 
