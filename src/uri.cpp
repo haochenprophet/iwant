@@ -6,7 +6,7 @@ Curi::Curi()
 	this->alias = "uri";
 }
 
-int Curi::func(void *p = NULL)
+int Curi::func(void *p)
 {
 	this->s_uri="";
 	this->s_uri+=this->scheme;
