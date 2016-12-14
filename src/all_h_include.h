@@ -173,6 +173,7 @@
 #include "__m128i.h"
 #include "__m64.h"
 #include "main.h"
+#include "makefile.h"
 #include "make.h"
 #include "math.h"
 #include "__METHOD__.h"

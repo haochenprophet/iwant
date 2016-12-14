@@ -18,6 +18,8 @@ namespace n_file {
 		int f_size();
 		int f_read(char *f_name);
 		int f_read();
+		char * f_find(char *f_name,char * str);
+		char * f_find(char * str);
 		int func(void *p = NULL);
 	};
 

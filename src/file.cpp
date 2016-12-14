@@ -96,6 +96,24 @@ int Cfile::f_append(char * ap_str)
 	return this->f_append((char *)this->f_name.c_str(),ap_str);
 }
 
+
+char * Cfile::f_find(char *f_name,char * str)
+{
+	if(this->size>0&&this->f_name==f_name) goto FIND_STR;
+	if(this->f_read(f_name)) return NULL;
+FIND_STR:
+	return strstr(this->addr,str);
+	
+}
+
+char * Cfile::f_find(char * str)
+{
+	if(!this->addr){
+		if(this->f_read()) return NULL;
+	}
+	return strstr(this->addr,str);
+}
+
 int Cfile::func(void *p)
 {
 	if(!p) return -1;
