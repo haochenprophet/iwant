@@ -3,6 +3,7 @@
 
 #include "object.h"
 
+//[scheme:] scheme-specific-part
 /*
 	The following are two example URIs and their component parts:
          foo://example.com:8042/over/there?name=ferret#nose
@@ -18,8 +19,16 @@
 namespace n_uri {
 	class Curi :public Object
 	{
+  public:
+  	string s_uri;
+  	string scheme;
+  	string authority;
+  	string path;
+  	string query;
+  	string fragment;
 	public:
 		Curi();
+    int func(void *p = NULL);
 	};
 
 }
