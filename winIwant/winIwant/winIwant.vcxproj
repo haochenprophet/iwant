@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\abstract.cpp" />
+    <ClCompile Include="..\..\src\action.cpp" />
     <ClCompile Include="..\..\src\alignas.cpp" />
     <ClCompile Include="..\..\src\alignof.cpp" />
     <ClCompile Include="..\..\src\and.cpp" />
@@ -239,6 +240,7 @@
     <ClCompile Include="..\..\src\function.cpp" />
     <ClCompile Include="..\..\src\gcnew.cpp" />
     <ClCompile Include="..\..\src\generic.cpp" />
+    <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\global.cpp" />
     <ClCompile Include="..\..\src\goto.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
@@ -268,6 +270,7 @@
     <ClCompile Include="..\..\src\long.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\make.cpp" />
+    <ClCompile Include="..\..\src\makefile.cpp" />
     <ClCompile Include="..\..\src\math.cpp" />
     <ClCompile Include="..\..\src\module.cpp" />
     <ClCompile Include="..\..\src\mutable.cpp" />
@@ -311,6 +314,7 @@
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\safecast.cpp" />
     <ClCompile Include="..\..\src\sealed.cpp" />
+    <ClCompile Include="..\..\src\search.cpp" />
     <ClCompile Include="..\..\src\selectany.cpp" />
     <ClCompile Include="..\..\src\short.cpp" />
     <ClCompile Include="..\..\src\signed.cpp" />
@@ -631,6 +635,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\abstract.h" />
+    <ClInclude Include="..\..\src\action.h" />
     <ClInclude Include="..\..\src\alignas.h" />
     <ClInclude Include="..\..\src\alignof.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
@@ -725,10 +730,12 @@
     <ClInclude Include="..\..\src\function.h" />
     <ClInclude Include="..\..\src\gcnew.h" />
     <ClInclude Include="..\..\src\generic.h" />
+    <ClInclude Include="..\..\src\get.h" />
     <ClInclude Include="..\..\src\global.h" />
     <ClInclude Include="..\..\src\goto.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\http.h" />
+    <ClInclude Include="..\..\src\http_def.h" />
     <ClInclude Include="..\..\src\if.h" />
     <ClInclude Include="..\..\src\implements.h" />
     <ClInclude Include="..\..\src\import.h" />
@@ -754,6 +761,7 @@
     <ClInclude Include="..\..\src\long.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\make.h" />
+    <ClInclude Include="..\..\src\makefile.h" />
     <ClInclude Include="..\..\src\math.h" />
     <ClInclude Include="..\..\src\module.h" />
     <ClInclude Include="..\..\src\mutable.h" />
@@ -797,6 +805,7 @@
     <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\safecast.h" />
     <ClInclude Include="..\..\src\sealed.h" />
+    <ClInclude Include="..\..\src\search.h" />
     <ClInclude Include="..\..\src\selectany.h" />
     <ClInclude Include="..\..\src\short.h" />
     <ClInclude Include="..\..\src\signed.h" />
@@ -1025,6 +1034,7 @@
     <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\os.h" />
+    <ClInclude Include="..\..\src\url_def.h" />
     <ClInclude Include="..\..\src\use.h" />
     <ClInclude Include="..\..\src\using.h" />
     <ClInclude Include="..\..\src\using_declaration.h" />

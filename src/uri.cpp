@@ -14,4 +14,5 @@ int Curi::func(void *p)
 	this->s_uri+=this->path;
 	this->s_uri+=this->query;
 	this->s_uri+=this->fragment;
+	return 0;
 }

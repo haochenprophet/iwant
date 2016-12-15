@@ -1460,6 +1460,18 @@
     <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp">
       <Filter>sql</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\action.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\get.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\makefile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\search.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\iwant.h">
@@ -2922,6 +2934,24 @@
     </ClInclude>
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h">
       <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\action.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\get.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\http_def.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\makefile.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\search.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\url_def.h">
+      <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
