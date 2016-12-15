@@ -10,6 +10,8 @@ enum MyMemoryType
 	FileData_T,
 };
 
+#define MY_MEMORY_REALLOT	1
+
 namespace n_my_memory {
 	class CmyMemory:public Object
 	{
@@ -23,7 +25,7 @@ namespace n_my_memory {
 		CmyMemory();
 		CmyMemory(int size); 
 		~CmyMemory();
-		void *allot(int size=0,int type=0);
+		void *allot(int size=0,int type=0,int re_allot=0);//MY_MEMORY_REALLOT
 		bool isMe(void * addr = NULL, long id = 0,string name=""); 
 		void delete_me();
 		int set_addr(char *start,char *end,int type=0);

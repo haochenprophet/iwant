@@ -31,9 +31,17 @@ CmyMemory::~CmyMemory()
 	this->delete_me();
 }
 
-void * CmyMemory::allot(int size, int type)
+void * CmyMemory::allot(int size, int type,int re_allot)
 {
 	if (size<1) return NULL;
+
+	if(this->allot_flag)//exist memory
+	{
+		if(!re_allot) return NULL;
+		if(size==this->size) return (void *)this->addr;
+		this->delete_me();//delete me for re_allot
+	}
+
 	try {
 		this->addr = new char[size];//
 		this->size = size;

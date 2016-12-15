@@ -9,6 +9,7 @@ namespace n_main {
 	public:
 		Cmain();
 		int my_init(void *p=NULL);
+		int is_exist_main(char *f_name);
 		int deal_cmd(int argc, char *argv[]);
 	};
 

@@ -229,6 +229,7 @@
 #include "safecast.h"
 #include "__sealed.h"
 #include "sealed.h"
+#include "search.h"
 #include "selectany.h"
 #include "short.h"
 #include "signed.h"

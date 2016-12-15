@@ -63,7 +63,7 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 	is.seekg (0, is.end);
 	int len=is.tellg();
 
-	this->allot(len+1,FileData_T);	// get size of file for allot memory
+	this->allot(len+1,FileData_T,MY_MEMORY_REALLOT); // get size of file for allot memory
 	if(NULL==this->addr)
 	{
 		is.close();
@@ -97,21 +97,45 @@ int Cfile::f_append(char * ap_str)
 }
 
 
-char * Cfile::f_find(char *f_name,char * str)
+char * Cfile::f_find(char *f_name,char * str,char *start)
 {
 	if(this->size>0&&this->f_name==f_name) goto FIND_STR;
 	if(this->f_read(f_name)) return NULL;
+	//AT_LINE cout<<this->addr<<endl;//test
 FIND_STR:
-	return strstr(this->addr,str);
-	
+	if(start==NULL) start=this->addr;
+	return strstr(start,str);
 }
 
-char * Cfile::f_find(char * str)
+char * Cfile::f_find(char * str,char *start)
 {
-	if(!this->addr){
-		if(this->f_read()) return NULL;
+	return this->f_find((char *)this->f_name.c_str(),str,start);
+}
+
+// c/c++ function : return_type [space] <func_name> [space] (...)
+
+int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
+{
+	char *cp=NULL;
+	int len=strlen(func_name);
+
+	while(1)
+	{
+		cp=this->f_find(f_name,func_name,cp);
+		if(!cp) return 0;
+		if( *(cp-1)!=' '&&*(cp-1)!='\t' )
+		{
+			cp+=len;continue;
+		}
+
+		if(dispaly) cout<<cp<<endl;
+
+		cp+=len;
+		if(*(cp)=='(') return 1;//c/c++ function
+		for(;*cp==' '||*cp=='\t';cp++);
+		if(*cp=='(') return 1;
 	}
-	return strstr(this->addr,str);
+	return 0; 
 }
 
 int Cfile::func(void *p)

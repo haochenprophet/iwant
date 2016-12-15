@@ -2,6 +2,7 @@
 #define FILE_H
 
 #include "myMemory.h"
+#include "search.h"
 
 namespace n_file {
 	class Cfile :public CmyMemory
@@ -18,8 +19,9 @@ namespace n_file {
 		int f_size();
 		int f_read(char *f_name);
 		int f_read();
-		char * f_find(char *f_name,char * str);
-		char * f_find(char * str);
+		char * f_find(char *f_name,char * str,char *start);
+		char * f_find(char * str,char *start);
+		int is_exist_func(char *f_name,char *func_name,int dispaly=0);//[space] <func_name> [space] (
 		int func(void *p = NULL);
 	};
 

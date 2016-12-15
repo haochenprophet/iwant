@@ -10,3 +10,17 @@ Cmakefile::Cmakefile()
 {
 	this->my_init();
 }
+
+#ifndef MAKEFILE_TEST
+#define MAKEFILE_TEST 0//1
+#endif
+
+#if MAKEFILE_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	cout << "MAKEFILE_TEST\n\n";
+
+	return 0;
+}
+#endif 
