@@ -501,6 +501,12 @@ int Object::display(void *p)
 	cout << p << endl;	
 	return 0;
 }
+
+int Object::question(void * p)
+{
+	return 0;
+}
+
 #if OBJECT_TEST
 int main()
 {
