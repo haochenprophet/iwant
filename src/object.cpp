@@ -80,6 +80,7 @@ Object::Object()
 	time (&this->at_time);
 	this->at_clock=clock();
 	this->language=EnglishLanguage;
+	this->count=0;
 }
 
 Object::~Object()

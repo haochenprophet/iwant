@@ -76,12 +76,12 @@ namespace n_object {
 		int status;
 		int action;
 		int error; //error count >0 error
+		int count;
 
 		string name; //object name
 		string alias;//Alias object name
 		time_t at_time;
 		clock_t at_clock;
-		int language;
 
 		string syntax;//this for keyword object
 		string temp;//keyword template 
@@ -89,6 +89,7 @@ namespace n_object {
 		string s_rep;
 
 		long locate;//0 start , -1 end , n :locate value 
+		int language;
 
 		list<void *> family;//class list
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
