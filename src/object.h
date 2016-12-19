@@ -90,7 +90,9 @@ namespace n_object {
 
 		long locate;//0 start , -1 end , n :locate value 
 		int language;
-
+		int direction;
+		int velocity;
+		
 		list<void *> family;//class list
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
 
