@@ -79,6 +79,7 @@ Object::Object()
 	this->addMe();
 	time (&this->at_time);
 	this->at_clock=clock();
+	this->language=EnglishLanguage;
 }
 
 Object::~Object()

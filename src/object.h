@@ -24,6 +24,12 @@ using std::list;
 using std::cout;
 using std::endl;
 
+enum UsingLanguage
+{
+	EnglishLanguage,
+	SimplifiedChinese,
+};
+
 typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);
@@ -75,6 +81,7 @@ namespace n_object {
 		string alias;//Alias object name
 		time_t at_time;
 		clock_t at_clock;
+		int language;
 
 		string syntax;//this for keyword object
 		string temp;//keyword template 
