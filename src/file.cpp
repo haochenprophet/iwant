@@ -62,8 +62,10 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 
 	is.seekg (0, is.end);
 	int len=is.tellg();
+	cout<<"len="<<len<<endl;
 
 	this->allot(len+1,FileData_T,MY_MEMORY_REALLOT); // get size of file for allot memory
+
 	if(NULL==this->addr)
 	{
 		is.close();
@@ -78,7 +80,8 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 		std::cout << "error: only " << is.gcount() << " could be read";
 		this->error++;
 	}
-	this->addr[this->size]='\0';
+
+	this->addr[len]='\0';
 	is.close();
 
 	return 0;
@@ -99,11 +102,15 @@ int Cfile::f_append(char * ap_str)
 
 char * Cfile::f_find(char *f_name,char * str,char *start)
 {
-	if(this->size>0&&this->f_name==f_name) goto FIND_STR;
-	if(this->f_read(f_name)) return NULL;
-	//AT_LINE cout<<this->addr<<endl;//test
-FIND_STR:
+	if(this->size==0||this->f_name!=f_name)
+	{
+		if(this->f_read(f_name)) return NULL;
+		AT_LINE cout<<this->addr<<endl;//test
+	}
+
 	if(start==NULL) start=this->addr;
+	if(start>=(this->addr+this->size)) return NULL;
+	cout<<"return strstr(start,str);"<<endl;
 	return strstr(start,str);
 }
 
@@ -123,14 +130,15 @@ int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
 	{
 		cp=this->f_find(f_name,func_name,cp);
 		if(!cp) return 0;
+
 		if( *(cp-1)!=' '&&*(cp-1)!='\t' )
 		{
 			cp+=len;continue;
 		}
 
 		if(dispaly) cout<<cp<<endl;
-
 		cp+=len;
+
 		if(*(cp)=='(') return 1;//c/c++ function
 		for(;*cp==' '||*cp=='\t';cp++);
 		if(*cp=='(') return 1;
@@ -154,7 +162,8 @@ int main(int argc, char *argv[])
 {
 	cout << "FILE_TEST!\n\n";
 	Cfile f;
-	f.f_name="file.cpp";
+	f.f_name="question.cpp";
+
 	f.f_read();
 	cout<<f.addr<<endl;
 
