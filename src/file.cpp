@@ -62,7 +62,6 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 
 	is.seekg (0, is.end);
 	int len=is.tellg();
-	cout<<"len="<<len<<endl;
 
 	this->allot(len+1,FileData_T,MY_MEMORY_REALLOT); // get size of file for allot memory
 

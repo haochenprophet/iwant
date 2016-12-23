@@ -248,6 +248,17 @@ int Object::get_error()
 	return this->error;
 }
 
+int Object::set_count(int ct)
+{
+	this->count=ct;
+	return this->count;
+}
+
+int Object::get_count()
+{
+	return this->count;
+}
+
 void Object::my_syntax()
 {
 	if (this->syntax.length())	cout << this->syntax << endl;
