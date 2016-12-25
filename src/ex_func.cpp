@@ -46,7 +46,8 @@ int wait_char_abcd(void * cp)
 		if(c=='B'||c=='b')	return 2;
 		if(c=='C'||c=='c')	return 3;
 		if(c=='D'||c=='d')	return 4;
-		cout<<"press: A B C D for select.\n";
+		if(c=='Q'||c=='q')	exit(0);		
+		//cout<<"press: A B C D for select.\n";
 	}
 	return 0;
 }
