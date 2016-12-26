@@ -28,7 +28,7 @@ namespace n_uri {
   	string fragment;
 	public:
 		Curi();
-    int func(void *p = NULL);
+    int func(void *p=nullptr);
 	};
 
 }

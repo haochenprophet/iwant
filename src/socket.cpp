@@ -7,8 +7,8 @@ Csocket::Csocket()
 {
 	this->name = "Csocket";
 	this->alias = "socket";
-	this->sendbuf = NULL;
-	this->recvbuf = NULL;
+	this->sendbuf = nullptr;
+	this->recvbuf = nullptr;
 	this->s_buf_size=this->allot(BUF_SIZE,(void **)&this->sendbuf);
 	this->r_buf_size=this->allot(BUF_SIZE, (void **)&this->recvbuf);
 	if (this->sendbuf) memset(this->sendbuf, 0, this->s_buf_size);//clear buf
@@ -79,7 +79,7 @@ int Csocket::s_close(SOCKET s, int how,int run_sd )
 
 int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
-	struct addrinfo hints, *result = NULL, *ptr = NULL;
+	struct addrinfo hints, *result = nullptr, *ptr = nullptr;
 	SOCKET connect_socket = INVALID_SOCKET;
 	int i_ret;
 	memset(&hints, 0, sizeof(hints));
@@ -95,7 +95,7 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 	}
 
 	// Attempt to connect to an address until one succeeds
-	for (ptr = result; ptr != NULL;ptr = ptr->ai_next)
+	for (ptr = result; ptr != nullptr;ptr = ptr->ai_next)
 	{
 		// Create a SOCKET for connecting to server
 		connect_socket = socket(ptr->ai_family, ptr->ai_socktype,ptr->ai_protocol);
@@ -176,7 +176,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	int i_ret;
 	SOCKET listen_socket = INVALID_SOCKET;
 	SOCKET client_socket = INVALID_SOCKET;
-	struct addrinfo *result = NULL;
+	struct addrinfo *result = nullptr;
 	struct addrinfo hints;
 	int send_result;
 

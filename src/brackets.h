@@ -29,7 +29,7 @@ namespace n_brackets {
 		int detectR(char *cp);//right detect
 		int detect(char *cp);
 		int isHalf(char *cp,char *cp1);
-		char * getblock(char * start,char* end,char c='{',char *buf=NULL,int *pLen=0,int skip=0);//0: error // other true
+		char * getblock(char * start,char* end,char c='{',char *buf=nullptr,int *pLen=0,int skip=0);//0: error // other true
 		char * getend(char * start,char* end,char *e);
 		char * getstart(char* start,char *end,char *s);
 		int getError();

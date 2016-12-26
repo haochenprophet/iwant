@@ -6,8 +6,8 @@
 
 Cparameter::Cparameter()
 {
-	this->in=NULL;
-	this->out=NULL;
+	this->in=nullptr;
+	this->out=nullptr;
 	this->size=0;
 }
 
@@ -366,7 +366,7 @@ int Object::allot(int size,void * *o_addr)
 
 int Object::allot(int old_size, void ** o_addr, int new_size, bool mem_cpy)
 {
-	void * n_addr=NULL;
+	void * n_addr=nullptr;
 	if (old_size >= new_size) return old_size;
 	new_size=this->allot(new_size,(void **)&n_addr);
 	if (!n_addr||new_size<=old_size) return old_size;
@@ -380,7 +380,7 @@ void Object::delete_allot(void **addr)
 {
 	if (addr&&*addr) {
 		delete[](char*) (*addr);
-		*addr = NULL;
+		*addr = nullptr;
 	}
 }
 

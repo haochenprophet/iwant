@@ -65,7 +65,7 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 
 	this->allot(len+1,FileData_T,MY_MEMORY_REALLOT); // get size of file for allot memory
 
-	if(NULL==this->addr)
+	if(nullptr==this->addr)
 	{
 		is.close();
 		return -1;
@@ -103,11 +103,11 @@ char * Cfile::f_find(char *f_name,char * str,char *start)
 {
 	if(this->size==0||this->f_name!=f_name)
 	{
-		if(this->f_read(f_name)) return NULL;
+		if(this->f_read(f_name)) return nullptr;
 	}
 
-	if(start==NULL) start=this->addr;
-	if(start>=(this->addr+this->size)) return NULL;
+	if(start==nullptr) start=this->addr;
+	if(start>=(this->addr+this->size)) return nullptr;
 
 	return strstr(start,str);
 }
@@ -121,7 +121,7 @@ char * Cfile::f_find(char * str,char *start)
 
 int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
 {
-	char *cp=NULL;
+	char *cp=nullptr;
 	int len=strlen(func_name);
 
 	while(1)

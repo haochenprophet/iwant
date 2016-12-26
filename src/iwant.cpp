@@ -85,7 +85,7 @@ int main(int argc ,char *argv[])
 
 	i.add_ex_func("iwant_func", iwant_func);
 	string fun_name = "iwant_func";
-	i.execute(&i, NULL, &fun_name,(void *)&s);
+	i.execute(&i, nullptr, &fun_name,(void *)&s);
 
 	char str[] = "iwant_func";
 	i.execute(str, (void *)&s, false);
@@ -98,7 +98,7 @@ int main(int argc ,char *argv[])
 	char cmd[]="dir";
 	i.execute((char *)"runcmd", cmd, true);//test ok
 	string obj_name = "Object";
-	i.execute((Object *)&i, obj_name, cmd, NULL, true);
+	i.execute((Object *)&i, obj_name, cmd, nullptr, true);
 	cout << "test: Object->objec_func(cmd)->";//test ok
 	i.execute((Object *)&i, obj_name, "objec_func", (void *)cmd, true);
 	i.execute((Object *)&i, obj_name, "objec_func", cmd, true);

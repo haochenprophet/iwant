@@ -15,7 +15,7 @@ int Cnew::func(void *p)//p->in --want new size  out ,is *//
 	}
 	catch(...)//fail
 	{
-		pm->out=NULL;
+		pm->out=nullptr;
 		return 0;
 	}
 

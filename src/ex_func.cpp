@@ -26,9 +26,9 @@ int rename_cmd(void * p_Cparameter) //point calss Cparameter
 {
 	Cparameter *p=(Cparameter *)p_Cparameter;
 
-	if(NULL==p->in||NULL==p->out)
+	if(nullptr==p->in||nullptr==p->out)
 	{
-		cout<<"error:rename_cmd->if(NULL==p->in||NULL==p->out)\n";
+		cout<<"error:rename_cmd->if(nullptr==p->in||nullptr==p->out)\n";
 		return -1;
 	} 
 	

@@ -12,7 +12,7 @@ int CmyMemory::my_init(void *p)
 CmyMemory::CmyMemory()
 {
 	this->size = 0;
-	this->addr = NULL;
+	this->addr = nullptr;
 	this->type = 0;
 	this->my_init();
 }
@@ -20,7 +20,7 @@ CmyMemory::CmyMemory()
 CmyMemory::CmyMemory(int size)
 {
 	this->size = 0;
-	this->addr = NULL;
+	this->addr = nullptr;
 	this->type = 0;
 	this->my_init();
 	this->allot(size);
@@ -33,11 +33,11 @@ CmyMemory::~CmyMemory()
 
 void * CmyMemory::allot(int size, int type,int re_allot)
 {
-	if (size<1) return NULL;
+	if (size<1) return nullptr;
 
 	if(this->allot_flag)//exist memory
 	{
-		if(!re_allot) return NULL;
+		if(!re_allot) return nullptr;
 		if(size==this->size) return (void *)this->addr;
 		this->delete_me();//delete me for re_allot
 	}
@@ -65,7 +65,7 @@ void CmyMemory::delete_me()
 	if (this->addr&&this->allot_flag)
 	{
 		delete[](char*) this->addr;
-		this->addr = NULL;
+		this->addr = nullptr;
 		this->allot_flag=0;
 	}
 }

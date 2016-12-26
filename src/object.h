@@ -106,8 +106,8 @@ namespace n_object {
 		Object();//set object name
 		~Object();//clears
 
-		void myName(Object *o=NULL);
-		void addMe(Object * o = NULL);//add obj to family
+		void myName(Object *o=nullptr);
+		void addMe(Object *o=nullptr);//add obj to family
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();
 
@@ -118,7 +118,7 @@ namespace n_object {
 
 		bool add_ex_func(string fun_name, MyFunc func);
 		void add_memory(Object *m);
-		void clear_my_memory(Object *m=NULL);//if null clear all item in my_mem list
+		void clear_my_memory(Object *m=nullptr);//if null clear all item in my_mem list
 		void clear_exist();//clear me in exsit list;
 
 		long my_id();
@@ -133,14 +133,14 @@ namespace n_object {
 		int set_count(int ct);
 		int get_count();
 
-		int execute(Object *o, string obj_name , string fun_name , void * p = NULL, bool new_thread = false);
-		int execute(Object *o, char  *obj_name , char * fun_name , void * p = NULL, bool new_thread = false);
-		int execute(Object *o, string *obj_name = NULL, string * fun_name = NULL, void * p = NULL, bool new_thread = false);
-		int execute(void * p = NULL);//execute this->func 
-		int execute(MyFunc func, void * p = NULL, bool new_thread = false); //execute input func 
-		int execute(string *fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
-		int execute(char * fun_name, void * p = NULL, bool new_thread = false); //execute this->ex_func 
-		int execute(string fun_name,void * p = NULL, bool new_thread = false); //execute this->ex_func 
+		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
+		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
+		int execute(Object *o, string *obj_name=nullptr, string * fun_name = NULL, void *p=nullptr, bool new_thread = false);
+		int execute(void *p=nullptr);//execute this->func 
+		int execute(MyFunc func, void *p=nullptr, bool new_thread = false); //execute input func 
+		int execute(string *fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
+		int execute(char * fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
+		int execute(string fun_name,void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		
 		int allot(int size,void ** o_addr);
 		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
@@ -158,14 +158,14 @@ namespace n_object {
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
-		virtual int func(void *p = NULL); // callback function
+		virtual int func(void *p=nullptr); // callback function
 		virtual int create(void *p=nullptr);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 		virtual int my_init(void *p=nullptr);//object init
 		virtual int my_exit(void *p=nullptr);//object exit
 		virtual int my_clear(void *p=nullptr);
 		virtual int deal_cmd(int argc, char *argv[]);
-		virtual int display(void * p = NULL);
-		virtual int question(void * p = NULL);
+		virtual int display(void *p=nullptr);
+		virtual int question(void *p=nullptr);
 	};
 }
 

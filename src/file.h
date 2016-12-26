@@ -22,7 +22,7 @@ namespace n_file {
 		char * f_find(char *f_name,char * str,char *start);
 		char * f_find(char * str,char *start);
 		int is_exist_func(char *f_name,char *func_name,int dispaly=0);//[space] <func_name> [space] (
-		int func(void *p = NULL);
+		int func(void *p=nullptr);
 	};
 
 }

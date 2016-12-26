@@ -18,7 +18,7 @@ int Cquestion::q_question(char * sQ,char *sA ,char *sR)
 	char *cp;
 	cout<<++this->count<<": "<<sQ<<endl;
 	cout<<sA<<endl;
-	ret=wait_char_abcd(NULL);
+	ret=wait_char_abcd(nullptr);
 
 	cp=this->get_result((char*)sR,ret,1);
 	if(cp) 
@@ -56,7 +56,7 @@ char * Cquestion::get_result(char *strR,int abcd,int index)
 			c='D';
 			break;
 		default:
-			return NULL;
+			return nullptr;
 	}
 
 	for(cp=strR;*cp!='\0';cp++)
@@ -64,13 +64,13 @@ char * Cquestion::get_result(char *strR,int abcd,int index)
 		if(*cp==c||*cp==(c+0x20))//
 		{
 			for(;*cp!='('&&*cp!='\0';cp++);
-			if(*cp=='\0') return NULL;
+			if(*cp=='\0') return nullptr;
 			if(*cp=='(') cp++;
 			for(;*cp==' '||*cp=='\t';cp++);
 			if(index<2)return cp;
 			
 			for(;*cp!=','&&*cp!=')'&&*cp!='\0';cp++);
-			if(*cp==')'||*cp=='\0')	return NULL;
+			if(*cp==')'||*cp=='\0')	return nullptr;
 			if(*cp==',') cp++;
 			
 			for(;*cp==' '||*cp=='\t';cp++);
@@ -78,5 +78,5 @@ char * Cquestion::get_result(char *strR,int abcd,int index)
 		}
 
 	}
-	return NULL;
+	return nullptr;
 }

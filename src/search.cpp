@@ -24,7 +24,7 @@ char * Csearch::searchString(char string[],char *start,char *end,int retStart)
 	
 	if(*cp=='\0'&&retStart==0) return current;
 	if(*cp=='\0'&&retStart){start;return start;}
-	return NULL;
+	return nullptr;
 }
 
 char * Csearch::searchString(char string[],char *start,long end,int retStart)
@@ -41,7 +41,7 @@ char * Csearch::searchString(char string[],char *start,long end,int retStart)
 	
 	if(*cp=='\0'&&retStart==0) return current;
 	if(*cp=='\0'&&retStart){start;return start;}
-	return NULL;
+	return nullptr;
 }
 
 char * Csearch::searchKmp(char *start,char *str,long len,int retStart) //KMP Search return 0:no match other:match
@@ -68,7 +68,7 @@ char * Csearch::searchKmp(char *start,char *str,long len,int retStart) //KMP Sea
 		if(!retStart) return start+i-tlen;//match
 		return start+i;
 	}
-	else return NULL; //no match	
+	else return nullptr; //no match	
 } 
 
 void Csearch::get_next(char *t,int *next) 
