@@ -108,7 +108,7 @@ char * Cfile::f_find(char *f_name,char * str,char *start)
 
 	if(start==NULL) start=this->addr;
 	if(start>=(this->addr+this->size)) return NULL;
-	cout<<"return strstr(start,str);"<<endl;
+
 	return strstr(start,str);
 }
 
