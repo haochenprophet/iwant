@@ -8,7 +8,7 @@ namespace n___property {
 	{
 	public:
 		C__property();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

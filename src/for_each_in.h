@@ -8,7 +8,7 @@ namespace n_for_each_in {
 	{
 	public:
 		Cfor_each_in();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

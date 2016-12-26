@@ -8,7 +8,7 @@ namespace n_sql_TRY_CONVERT {
 	{
 	public:
 		Csql_TRY_CONVERT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

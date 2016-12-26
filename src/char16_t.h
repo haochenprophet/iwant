@@ -8,7 +8,7 @@ namespace n_char16_t {
 	{
 	public:
 		Cchar16_t();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

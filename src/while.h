@@ -8,7 +8,7 @@ namespace n_while {
 	{
 	public:
 		Cwhile();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

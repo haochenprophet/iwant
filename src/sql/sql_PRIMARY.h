@@ -8,7 +8,7 @@ namespace n_sql_PRIMARY {
 	{
 	public:
 		Csql_PRIMARY();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

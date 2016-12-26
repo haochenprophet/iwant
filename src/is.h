@@ -8,7 +8,7 @@ namespace n_is {
 	{
 	public:
 		Cis();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

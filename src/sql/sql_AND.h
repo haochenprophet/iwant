@@ -8,7 +8,7 @@ namespace n_sql_AND {
 	{
 	public:
 		Csql_AND();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

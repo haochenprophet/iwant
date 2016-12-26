@@ -8,7 +8,7 @@ namespace n_sql_SEMANTICSIMILARITYTABLE {
 	{
 	public:
 		Csql_SEMANTICSIMILARITYTABLE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

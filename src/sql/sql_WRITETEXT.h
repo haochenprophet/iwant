@@ -8,7 +8,7 @@ namespace n_sql_WRITETEXT {
 	{
 	public:
 		Csql_WRITETEXT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

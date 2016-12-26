@@ -8,7 +8,7 @@ namespace n_sql_ELSE {
 	{
 	public:
 		Csql_ELSE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

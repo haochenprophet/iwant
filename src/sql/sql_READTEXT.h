@@ -8,7 +8,7 @@ namespace n_sql_READTEXT {
 	{
 	public:
 		Csql_READTEXT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

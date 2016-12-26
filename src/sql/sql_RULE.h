@@ -8,7 +8,7 @@ namespace n_sql_RULE {
 	{
 	public:
 		Csql_RULE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

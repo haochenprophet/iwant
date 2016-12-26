@@ -8,7 +8,7 @@ namespace n_sql_COALESCE {
 	{
 	public:
 		Csql_COALESCE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

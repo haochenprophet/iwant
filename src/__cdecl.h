@@ -8,7 +8,7 @@ namespace n___cdecl {
 	{
 	public:
 		C__cdecl();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

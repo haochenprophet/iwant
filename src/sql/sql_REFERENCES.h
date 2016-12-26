@@ -8,7 +8,7 @@ namespace n_sql_REFERENCES {
 	{
 	public:
 		Csql_REFERENCES();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

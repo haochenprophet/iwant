@@ -8,7 +8,7 @@ namespace n_sql_EXCEPT {
 	{
 	public:
 		Csql_EXCEPT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

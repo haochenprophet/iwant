@@ -8,7 +8,7 @@ namespace n_sql_OFF {
 	{
 	public:
 		Csql_OFF();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

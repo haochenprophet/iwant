@@ -8,7 +8,7 @@ namespace n_static_assert {
 	{
 	public:
 		Cstatic_assert();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

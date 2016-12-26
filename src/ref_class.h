@@ -8,7 +8,7 @@ namespace n_ref_class {
 	{
 	public:
 		Cref_class();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

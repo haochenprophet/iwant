@@ -8,7 +8,7 @@ namespace n_sql_OPENDATASOURCE {
 	{
 	public:
 		Csql_OPENDATASOURCE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_MERGE {
 	{
 	public:
 		Csql_MERGE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

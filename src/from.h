@@ -8,7 +8,7 @@ namespace n_from {
 	{
 	public:
 		Cfrom();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

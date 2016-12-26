@@ -8,7 +8,7 @@ namespace n_sql_IF {
 	{
 	public:
 		Csql_IF();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

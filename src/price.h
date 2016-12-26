@@ -8,7 +8,7 @@ namespace n_price {
 	{
 	public:
 		Cprice();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

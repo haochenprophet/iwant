@@ -8,7 +8,7 @@ namespace n_sql_TABLESAMPLE {
 	{
 	public:
 		Csql_TABLESAMPLE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___raise {
 	{
 	public:
 		C__raise();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

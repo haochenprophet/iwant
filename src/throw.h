@@ -8,7 +8,7 @@ namespace n_throw {
 	{
 	public:
 		Cthrow();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

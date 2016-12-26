@@ -8,7 +8,7 @@ namespace n_static_cast {
 	{
 	public:
 		Cstatic_cast();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

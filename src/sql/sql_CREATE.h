@@ -8,7 +8,7 @@ namespace n_sql_CREATE {
 	{
 	public:
 		Csql_CREATE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

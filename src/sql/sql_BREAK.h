@@ -8,7 +8,7 @@ namespace n_sql_BREAK {
 	{
 	public:
 		Csql_BREAK();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

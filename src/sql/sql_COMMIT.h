@@ -8,7 +8,7 @@ namespace n_sql_COMMIT {
 	{
 	public:
 		Csql_COMMIT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

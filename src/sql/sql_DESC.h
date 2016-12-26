@@ -8,7 +8,7 @@ namespace n_sql_DESC {
 	{
 	public:
 		Csql_DESC();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

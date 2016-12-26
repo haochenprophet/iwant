@@ -8,7 +8,7 @@ namespace n_wchar_t {
 	{
 	public:
 		Cwchar_t();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

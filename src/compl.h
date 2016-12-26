@@ -8,7 +8,7 @@ namespace n_compl {
 	{
 	public:
 		Ccompl();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

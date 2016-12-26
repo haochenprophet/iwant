@@ -8,7 +8,7 @@ namespace n_true {
 	{
 	public:
 		Ctrue();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

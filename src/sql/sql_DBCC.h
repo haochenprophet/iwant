@@ -8,7 +8,7 @@ namespace n_sql_DBCC {
 	{
 	public:
 		Csql_DBCC();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

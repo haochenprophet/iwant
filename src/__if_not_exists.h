@@ -8,7 +8,7 @@ namespace n___if_not_exists {
 	{
 	public:
 		C__if_not_exists();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

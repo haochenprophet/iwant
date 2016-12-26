@@ -8,7 +8,7 @@ namespace n_using_directive {
 	{
 	public:
 		Cusing_directive();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

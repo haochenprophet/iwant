@@ -8,7 +8,7 @@ namespace n_sql_TRANSACTION {
 	{
 	public:
 		Csql_TRANSACTION();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

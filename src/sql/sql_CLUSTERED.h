@@ -8,7 +8,7 @@ namespace n_sql_CLUSTERED {
 	{
 	public:
 		Csql_CLUSTERED();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_INDEX {
 	{
 	public:
 		Csql_INDEX();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

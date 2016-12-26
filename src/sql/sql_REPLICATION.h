@@ -8,7 +8,7 @@ namespace n_sql_REPLICATION {
 	{
 	public:
 		Csql_REPLICATION();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

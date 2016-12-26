@@ -8,7 +8,7 @@ namespace n_sql_BULK {
 	{
 	public:
 		Csql_BULK();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

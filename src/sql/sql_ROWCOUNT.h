@@ -8,7 +8,7 @@ namespace n_sql_ROWCOUNT {
 	{
 	public:
 		Csql_ROWCOUNT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

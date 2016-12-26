@@ -8,7 +8,7 @@ namespace n_alignof {
 	{
 	public:
 		Calignof();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

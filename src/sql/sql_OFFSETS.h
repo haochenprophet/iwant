@@ -8,7 +8,7 @@ namespace n_sql_OFFSETS {
 	{
 	public:
 		Csql_OFFSETS();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___m64 {
 	{
 	public:
 		C__m64();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

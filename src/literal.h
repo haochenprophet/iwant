@@ -8,7 +8,7 @@ namespace n_literal {
 	{
 	public:
 		Cliteral();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

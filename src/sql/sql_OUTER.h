@@ -8,7 +8,7 @@ namespace n_sql_OUTER {
 	{
 	public:
 		Csql_OUTER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

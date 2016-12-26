@@ -8,7 +8,7 @@ namespace n_bool {
 	{
 	public:
 		Cbool();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

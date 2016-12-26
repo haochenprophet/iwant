@@ -8,7 +8,7 @@ namespace n_sql_OR {
 	{
 	public:
 		Csql_OR();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

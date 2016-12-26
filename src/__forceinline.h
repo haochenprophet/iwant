@@ -8,7 +8,7 @@ namespace n___forceinline {
 	{
 	public:
 		C__forceinline();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

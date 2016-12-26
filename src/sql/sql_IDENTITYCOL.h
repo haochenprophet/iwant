@@ -8,7 +8,7 @@ namespace n_sql_IDENTITYCOL {
 	{
 	public:
 		Csql_IDENTITYCOL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

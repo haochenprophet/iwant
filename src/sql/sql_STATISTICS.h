@@ -8,7 +8,7 @@ namespace n_sql_STATISTICS {
 	{
 	public:
 		Csql_STATISTICS();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___int32 {
 	{
 	public:
 		C__int32();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

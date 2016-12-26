@@ -8,7 +8,7 @@ namespace n_new_noinline {
 	{
 	public:
 		Cnew_noinline();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_HOLDLOCK {
 	{
 	public:
 		Csql_HOLDLOCK();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_CASE {
 	{
 	public:
 		Csql_CASE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

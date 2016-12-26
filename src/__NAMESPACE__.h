@@ -8,7 +8,7 @@ namespace n___NAMESPACE__ {
 	{
 	public:
 		C__NAMESPACE__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

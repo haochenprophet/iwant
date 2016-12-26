@@ -8,7 +8,7 @@ namespace n_value_class {
 	{
 	public:
 		Cvalue_class();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

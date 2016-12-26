@@ -8,7 +8,7 @@ namespace n___asm {
 	{
 	public:
 		C__asm();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

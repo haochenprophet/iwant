@@ -8,7 +8,7 @@ namespace n_sql_DENY {
 	{
 	public:
 		Csql_DENY();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

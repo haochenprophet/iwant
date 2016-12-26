@@ -8,7 +8,7 @@ namespace n_sql_DISTINCT {
 	{
 	public:
 		Csql_DISTINCT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_ASC {
 	{
 	public:
 		Csql_ASC();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

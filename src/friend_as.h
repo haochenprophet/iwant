@@ -8,7 +8,7 @@ namespace n_friend_as {
 	{
 	public:
 		Cfriend_as();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

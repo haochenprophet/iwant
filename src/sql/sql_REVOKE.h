@@ -8,7 +8,7 @@ namespace n_sql_REVOKE {
 	{
 	public:
 		Csql_REVOKE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

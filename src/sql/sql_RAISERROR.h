@@ -8,7 +8,7 @@ namespace n_sql_RAISERROR {
 	{
 	public:
 		Csql_RAISERROR();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

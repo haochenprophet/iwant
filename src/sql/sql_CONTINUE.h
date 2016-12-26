@@ -8,7 +8,7 @@ namespace n_sql_CONTINUE {
 	{
 	public:
 		Csql_CONTINUE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

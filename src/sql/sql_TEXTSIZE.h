@@ -8,7 +8,7 @@ namespace n_sql_TEXTSIZE {
 	{
 	public:
 		Csql_TEXTSIZE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

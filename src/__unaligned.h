@@ -8,7 +8,7 @@ namespace n___unaligned {
 	{
 	public:
 		C__unaligned();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

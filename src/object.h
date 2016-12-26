@@ -159,10 +159,10 @@ namespace n_object {
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
 		virtual int func(void *p = NULL); // callback function
-		virtual int create(void *p=NULL);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
-		virtual int my_init(void *p=NULL);//object init
-		virtual int my_exit(void *p=NULL);//object exit
-		virtual int my_clear(void *p=NULL);
+		virtual int create(void *p=nullptr);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
+		virtual int my_init(void *p=nullptr);//object init
+		virtual int my_exit(void *p=nullptr);//object exit
+		virtual int my_clear(void *p=nullptr);
 		virtual int deal_cmd(int argc, char *argv[]);
 		virtual int display(void * p = NULL);
 		virtual int question(void * p = NULL);

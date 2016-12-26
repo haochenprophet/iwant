@@ -8,7 +8,7 @@ namespace n___unhook {
 	{
 	public:
 		C__unhook();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_CROSS {
 	{
 	public:
 		Csql_CROSS();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

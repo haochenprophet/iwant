@@ -8,7 +8,7 @@ namespace n_sql_FUNCTION {
 	{
 	public:
 		Csql_FUNCTION();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

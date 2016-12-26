@@ -8,7 +8,7 @@ namespace n_sql_PROCEDURE {
 	{
 	public:
 		Csql_PROCEDURE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

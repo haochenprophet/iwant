@@ -8,7 +8,7 @@ namespace n___int8 {
 	{
 	public:
 		C__int8();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

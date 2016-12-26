@@ -8,7 +8,7 @@ namespace n__undef {
 	{
 	public:
 		C_undef();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_SAVE {
 	{
 	public:
 		Csql_SAVE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

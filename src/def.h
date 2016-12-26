@@ -8,7 +8,7 @@ namespace n_def {
 	{
 	public:
 		Cdef();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

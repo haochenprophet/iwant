@@ -8,7 +8,7 @@ namespace n___virtual_inheritance {
 	{
 	public:
 		C__virtual_inheritance();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

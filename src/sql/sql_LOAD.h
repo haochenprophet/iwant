@@ -8,7 +8,7 @@ namespace n_sql_LOAD {
 	{
 	public:
 		Csql_LOAD();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

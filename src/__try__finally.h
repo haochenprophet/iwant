@@ -8,7 +8,7 @@ namespace n___try__finally {
 	{
 	public:
 		C__try__finally();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

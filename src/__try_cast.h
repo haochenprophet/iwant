@@ -8,7 +8,7 @@ namespace n___try_cast {
 	{
 	public:
 		C__try_cast();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

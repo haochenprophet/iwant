@@ -8,7 +8,7 @@ namespace n___value {
 	{
 	public:
 		C__value();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

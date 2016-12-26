@@ -8,7 +8,7 @@ namespace n_sql_BACKUP {
 	{
 	public:
 		Csql_BACKUP();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

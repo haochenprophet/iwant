@@ -13,7 +13,7 @@ namespace n_http {
 		string version;// HTTP-Version   = "HTTP" "/" 1*DIGIT "." 1*DIGIT
 	public:
 		Chttp();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 
 	};
 

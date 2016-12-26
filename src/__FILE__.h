@@ -8,7 +8,7 @@ namespace n___FILE__ {
 	{
 	public:
 		C__FILE__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

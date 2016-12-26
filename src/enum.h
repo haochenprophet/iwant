@@ -8,7 +8,7 @@ namespace n_enum {
 	{
 	public:
 		Cenum();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

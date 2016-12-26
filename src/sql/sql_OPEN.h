@@ -8,7 +8,7 @@ namespace n_sql_OPEN {
 	{
 	public:
 		Csql_OPEN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

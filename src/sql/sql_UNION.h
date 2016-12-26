@@ -8,7 +8,7 @@ namespace n_sql_UNION {
 	{
 	public:
 		Csql_UNION();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

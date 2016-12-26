@@ -19,7 +19,7 @@ namespace n_comment {
 	{
 	public:
 		Ccomment();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 		int isMe(char *identifier);
 
 	};

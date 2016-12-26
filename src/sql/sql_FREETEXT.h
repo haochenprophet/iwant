@@ -8,7 +8,7 @@ namespace n_sql_FREETEXT {
 	{
 	public:
 		Csql_FREETEXT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

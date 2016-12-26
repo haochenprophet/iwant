@@ -8,7 +8,7 @@ namespace n_sql_OPENXML {
 	{
 	public:
 		Csql_OPENXML();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

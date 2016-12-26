@@ -8,7 +8,7 @@ namespace n_sql_TRAN {
 	{
 	public:
 		Csql_TRAN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

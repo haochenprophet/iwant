@@ -8,7 +8,7 @@ namespace n___interface {
 	{
 	public:
 		C__interface();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_IDENTITY_INSERT {
 	{
 	public:
 		Csql_IDENTITY_INSERT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

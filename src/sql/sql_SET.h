@@ -8,7 +8,7 @@ namespace n_sql_SET {
 	{
 	public:
 		Csql_SET();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

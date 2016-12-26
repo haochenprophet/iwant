@@ -8,7 +8,7 @@ namespace n___halt_compiler {
 	{
 	public:
 		C__halt_compiler();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

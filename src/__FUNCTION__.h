@@ -8,7 +8,7 @@ namespace n___FUNCTION__ {
 	{
 	public:
 		C__FUNCTION__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

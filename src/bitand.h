@@ -8,7 +8,7 @@ namespace n_bitand {
 	{
 	public:
 		Cbitand();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

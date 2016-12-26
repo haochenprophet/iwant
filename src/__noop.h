@@ -8,7 +8,7 @@ namespace n___noop {
 	{
 	public:
 		C__noop();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

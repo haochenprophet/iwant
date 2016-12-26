@@ -8,7 +8,7 @@ namespace n___abstract {
 	{
 	public:
 		C__abstract();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

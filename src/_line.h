@@ -8,7 +8,7 @@ namespace n__line {
 	{
 	public:
 		C_line();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

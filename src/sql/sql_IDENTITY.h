@@ -8,7 +8,7 @@ namespace n_sql_IDENTITY {
 	{
 	public:
 		Csql_IDENTITY();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

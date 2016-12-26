@@ -8,7 +8,7 @@ namespace n_sql_GOTO {
 	{
 	public:
 		Csql_GOTO();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

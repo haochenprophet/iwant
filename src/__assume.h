@@ -8,7 +8,7 @@ namespace n___assume {
 	{
 	public:
 		C__assume();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

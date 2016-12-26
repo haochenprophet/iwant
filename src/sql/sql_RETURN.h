@@ -8,7 +8,7 @@ namespace n_sql_RETURN {
 	{
 	public:
 		Csql_RETURN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

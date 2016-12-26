@@ -8,7 +8,7 @@ namespace n_atomic_noexcept {
 	{
 	public:
 		Catomic_noexcept();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

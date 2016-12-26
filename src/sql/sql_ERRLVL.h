@@ -8,7 +8,7 @@ namespace n_sql_ERRLVL {
 	{
 	public:
 		Csql_ERRLVL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

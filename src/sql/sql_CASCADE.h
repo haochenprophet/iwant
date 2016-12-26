@@ -8,7 +8,7 @@ namespace n_sql_CASCADE {
 	{
 	public:
 		Csql_CASCADE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

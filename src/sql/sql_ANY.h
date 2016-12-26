@@ -8,7 +8,7 @@ namespace n_sql_ANY {
 	{
 	public:
 		Csql_ANY();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

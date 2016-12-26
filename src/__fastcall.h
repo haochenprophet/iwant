@@ -8,7 +8,7 @@ namespace n___fastcall {
 	{
 	public:
 		C__fastcall();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

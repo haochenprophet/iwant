@@ -8,7 +8,7 @@ namespace n___nogc {
 	{
 	public:
 		C__nogc();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

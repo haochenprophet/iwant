@@ -8,7 +8,7 @@ namespace n___m128i {
 	{
 	public:
 		C__m128i();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

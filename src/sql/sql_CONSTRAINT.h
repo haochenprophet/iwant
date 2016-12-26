@@ -8,7 +8,7 @@ namespace n_sql_CONSTRAINT {
 	{
 	public:
 		Csql_CONSTRAINT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

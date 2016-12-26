@@ -8,7 +8,7 @@ namespace n___DIR__ {
 	{
 	public:
 		C__DIR__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

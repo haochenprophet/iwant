@@ -8,7 +8,7 @@ namespace n_sql_NATIONAL {
 	{
 	public:
 		Csql_NATIONAL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_search {
 	{
 	public:
 		Csearch();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 		static char * searchString(char string[],char *start,char *end,int retStart=0);
 		static char * searchString(char string[],char *start,long  end,int retStart=0);
 		static void get_next(char *t,int *next);

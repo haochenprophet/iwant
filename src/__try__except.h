@@ -8,7 +8,7 @@ namespace n___try__except {
 	{
 	public:
 		C__try__except();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

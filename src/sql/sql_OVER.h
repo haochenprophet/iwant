@@ -8,7 +8,7 @@ namespace n_sql_OVER {
 	{
 	public:
 		Csql_OVER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

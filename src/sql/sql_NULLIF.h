@@ -8,7 +8,7 @@ namespace n_sql_NULLIF {
 	{
 	public:
 		Csql_NULLIF();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

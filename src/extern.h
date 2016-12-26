@@ -8,7 +8,7 @@ namespace n_extern {
 	{
 	public:
 		Cextern();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

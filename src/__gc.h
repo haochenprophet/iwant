@@ -8,7 +8,7 @@ namespace n___gc {
 	{
 	public:
 		C__gc();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

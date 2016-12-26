@@ -8,7 +8,7 @@ namespace n_sql_GRANT {
 	{
 	public:
 		Csql_GRANT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

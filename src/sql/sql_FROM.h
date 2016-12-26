@@ -8,7 +8,7 @@ namespace n_sql_FROM {
 	{
 	public:
 		Csql_FROM();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

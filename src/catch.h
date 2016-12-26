@@ -8,7 +8,7 @@ namespace n_catch {
 	{
 	public:
 		Ccatch();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

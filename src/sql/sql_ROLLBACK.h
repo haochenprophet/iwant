@@ -8,7 +8,7 @@ namespace n_sql_ROLLBACK {
 	{
 	public:
 		Csql_ROLLBACK();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_run {
 	{
 	public:
 		Crun();
-		int func(void *p=NULL);
+		int func(void *p=nullptr);
 	};
 
 }

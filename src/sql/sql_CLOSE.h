@@ -8,7 +8,7 @@ namespace n_sql_CLOSE {
 	{
 	public:
 		Csql_CLOSE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_FULL {
 	{
 	public:
 		Csql_FULL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

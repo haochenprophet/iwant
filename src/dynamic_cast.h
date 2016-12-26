@@ -8,7 +8,7 @@ namespace n_dynamic_cast {
 	{
 	public:
 		Cdynamic_cast();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

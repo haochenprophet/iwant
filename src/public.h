@@ -8,7 +8,7 @@ namespace n_public {
 	{
 	public:
 		Cpublic();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

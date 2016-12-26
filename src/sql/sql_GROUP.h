@@ -8,7 +8,7 @@ namespace n_sql_GROUP {
 	{
 	public:
 		Csql_GROUP();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

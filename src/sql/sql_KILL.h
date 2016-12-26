@@ -8,7 +8,7 @@ namespace n_sql_KILL {
 	{
 	public:
 		Csql_KILL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___super {
 	{
 	public:
 		C__super();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_EXIT {
 	{
 	public:
 		Csql_EXIT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

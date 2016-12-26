@@ -8,7 +8,7 @@ namespace n__error {
 	{
 	public:
 		C_error();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

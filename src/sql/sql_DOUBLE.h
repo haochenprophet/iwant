@@ -8,7 +8,7 @@ namespace n_sql_DOUBLE {
 	{
 	public:
 		Csql_DOUBLE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

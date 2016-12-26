@@ -8,7 +8,7 @@ namespace n_asm {
 	{
 	public:
 		Casm();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

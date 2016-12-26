@@ -8,7 +8,7 @@ namespace n_display {
 	{
 	public:
 		Cdisplay();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

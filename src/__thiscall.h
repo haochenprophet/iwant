@@ -8,7 +8,7 @@ namespace n___thiscall {
 	{
 	public:
 		C__thiscall();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_char32_t {
 	{
 	public:
 		Cchar32_t();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

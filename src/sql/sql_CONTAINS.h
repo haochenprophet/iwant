@@ -8,7 +8,7 @@ namespace n_sql_CONTAINS {
 	{
 	public:
 		Csql_CONTAINS();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

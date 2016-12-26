@@ -8,7 +8,7 @@ namespace n_sql_FOREIGN {
 	{
 	public:
 		Csql_FOREIGN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

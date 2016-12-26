@@ -8,7 +8,7 @@ namespace n_interior_ptr {
 	{
 	public:
 		Cinterior_ptr();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

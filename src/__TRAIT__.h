@@ -8,7 +8,7 @@ namespace n___TRAIT__ {
 	{
 	public:
 		C__TRAIT__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

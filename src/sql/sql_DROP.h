@@ -8,7 +8,7 @@ namespace n_sql_DROP {
 	{
 	public:
 		Csql_DROP();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n__pragma {
 	{
 	public:
 		C_pragma();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

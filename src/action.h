@@ -8,7 +8,7 @@ namespace n_action {
 	{
 	public:
 		Caction();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

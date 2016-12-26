@@ -8,7 +8,7 @@ namespace n_exit {
 	{
 	public:
 		Cexit();
-		int func(void *p=NULL);
+		int func(void *p=nullptr);
 	};
 
 }

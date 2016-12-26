@@ -8,7 +8,7 @@ namespace n_sql_TOP {
 	{
 	public:
 		Csql_TOP();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

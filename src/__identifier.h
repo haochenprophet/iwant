@@ -8,7 +8,7 @@ namespace n___identifier {
 	{
 	public:
 		C__identifier();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

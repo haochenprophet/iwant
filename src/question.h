@@ -9,7 +9,7 @@ namespace n_question {
 	{
 	public:
 		Cquestion();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 		int q_question(char * sQ,char *sA ,char *sR);//return abcd
 		char * get_result(char *strR,int abcd,int index);
 	};

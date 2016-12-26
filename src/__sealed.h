@@ -8,7 +8,7 @@ namespace n___sealed {
 	{
 	public:
 		C__sealed();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

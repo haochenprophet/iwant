@@ -8,7 +8,7 @@ namespace n_sql_SECURITYAUDIT {
 	{
 	public:
 		Csql_SECURITYAUDIT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

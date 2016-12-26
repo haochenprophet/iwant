@@ -8,7 +8,7 @@ namespace n___based {
 	{
 	public:
 		C__based();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

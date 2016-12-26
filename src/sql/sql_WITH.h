@@ -8,7 +8,7 @@ namespace n_sql_WITH {
 	{
 	public:
 		Csql_WITH();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

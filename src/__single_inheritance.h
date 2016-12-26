@@ -8,7 +8,7 @@ namespace n___single_inheritance {
 	{
 	public:
 		C__single_inheritance();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

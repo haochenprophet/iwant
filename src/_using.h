@@ -8,7 +8,7 @@ namespace n__using {
 	{
 	public:
 		C_using();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

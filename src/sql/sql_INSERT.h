@@ -8,7 +8,7 @@ namespace n_sql_INSERT {
 	{
 	public:
 		Csql_INSERT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

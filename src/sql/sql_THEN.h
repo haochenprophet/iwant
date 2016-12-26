@@ -8,7 +8,7 @@ namespace n_sql_THEN {
 	{
 	public:
 		Csql_THEN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

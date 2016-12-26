@@ -8,7 +8,7 @@ namespace n_sql_COLUMN {
 	{
 	public:
 		Csql_COLUMN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

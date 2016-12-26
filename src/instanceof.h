@@ -8,7 +8,7 @@ namespace n_instanceof {
 	{
 	public:
 		Cinstanceof();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

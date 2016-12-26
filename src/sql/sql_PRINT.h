@@ -8,7 +8,7 @@ namespace n_sql_PRINT {
 	{
 	public:
 		Csql_PRINT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

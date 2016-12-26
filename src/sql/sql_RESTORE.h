@@ -8,7 +8,7 @@ namespace n_sql_RESTORE {
 	{
 	public:
 		Csql_RESTORE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sizeof {
 	{
 	public:
 		Csizeof();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

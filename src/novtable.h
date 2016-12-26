@@ -8,7 +8,7 @@ namespace n_novtable {
 	{
 	public:
 		Cnovtable();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

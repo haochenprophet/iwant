@@ -8,7 +8,7 @@ namespace n_sql_PIVOT {
 	{
 	public:
 		Csql_PIVOT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

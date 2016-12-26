@@ -8,7 +8,7 @@ namespace n_sql_WHILE {
 	{
 	public:
 		Csql_WHILE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___finally {
 	{
 	public:
 		C__finally();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

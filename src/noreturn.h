@@ -8,7 +8,7 @@ namespace n_noreturn {
 	{
 	public:
 		Cnoreturn();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

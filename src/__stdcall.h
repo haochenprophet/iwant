@@ -8,7 +8,7 @@ namespace n___stdcall {
 	{
 	public:
 		C__stdcall();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

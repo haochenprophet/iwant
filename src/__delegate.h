@@ -8,7 +8,7 @@ namespace n___delegate {
 	{
 	public:
 		C__delegate();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

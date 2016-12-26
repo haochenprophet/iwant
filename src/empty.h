@@ -8,7 +8,7 @@ namespace n_empty {
 	{
 	public:
 		Cempty();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

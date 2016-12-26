@@ -8,7 +8,7 @@ namespace n_sql_RECONFIGURE {
 	{
 	public:
 		Csql_RECONFIGURE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

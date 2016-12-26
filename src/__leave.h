@@ -8,7 +8,7 @@ namespace n___leave {
 	{
 	public:
 		C__leave();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

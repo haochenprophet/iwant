@@ -8,7 +8,7 @@ namespace n_byte {
 	{
 	public:
 		Cbyte();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

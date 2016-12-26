@@ -8,7 +8,7 @@ namespace n_get {
 	{
 	public:
 		Cget();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

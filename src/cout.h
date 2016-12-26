@@ -8,7 +8,7 @@ namespace n_cout {
 	{
 	public:
 		Ccout();
-		int func(void *p=NULL);
+		int func(void *p=nullptr);
 	};
 
 }

@@ -8,7 +8,7 @@ namespace n_virtual {
 	{
 	public:
 		Cvirtual();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

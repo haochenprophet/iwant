@@ -8,7 +8,7 @@ namespace n__else {
 	{
 	public:
 		C_else();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

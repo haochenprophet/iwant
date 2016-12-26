@@ -8,7 +8,7 @@ namespace n_sql_SHUTDOWN {
 	{
 	public:
 		Csql_SHUTDOWN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

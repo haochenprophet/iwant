@@ -8,7 +8,7 @@ namespace n___pin {
 	{
 	public:
 		C__pin();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

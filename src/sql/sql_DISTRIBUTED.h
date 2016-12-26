@@ -8,7 +8,7 @@ namespace n_sql_DISTRIBUTED {
 	{
 	public:
 		Csql_DISTRIBUTED();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

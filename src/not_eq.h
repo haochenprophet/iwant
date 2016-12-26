@@ -8,7 +8,7 @@ namespace n_not_eq {
 	{
 	public:
 		Cnot_eq();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

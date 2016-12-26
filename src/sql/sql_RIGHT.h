@@ -8,7 +8,7 @@ namespace n_sql_RIGHT {
 	{
 	public:
 		Csql_RIGHT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

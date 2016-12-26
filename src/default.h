@@ -8,7 +8,7 @@ namespace n_default {
 	{
 	public:
 		Cdefault();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

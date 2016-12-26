@@ -8,7 +8,7 @@ namespace n_sql_TRIGGER {
 	{
 	public:
 		Csql_TRIGGER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

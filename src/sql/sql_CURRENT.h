@@ -8,7 +8,7 @@ namespace n_sql_CURRENT {
 	{
 	public:
 		Csql_CURRENT();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

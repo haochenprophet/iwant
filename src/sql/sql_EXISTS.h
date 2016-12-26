@@ -8,7 +8,7 @@ namespace n_sql_EXISTS {
 	{
 	public:
 		Csql_EXISTS();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

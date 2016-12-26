@@ -8,7 +8,7 @@ namespace n_value_struct {
 	{
 	public:
 		Cvalue_struct();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_INNER {
 	{
 	public:
 		Csql_INNER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

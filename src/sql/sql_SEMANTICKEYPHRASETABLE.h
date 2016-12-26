@@ -8,7 +8,7 @@ namespace n_sql_SEMANTICKEYPHRASETABLE {
 	{
 	public:
 		Csql_SEMANTICKEYPHRASETABLE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n___CLASS__ {
 	{
 	public:
 		C__CLASS__();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

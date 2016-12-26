@@ -8,7 +8,7 @@ namespace n_sql_OPTION {
 	{
 	public:
 		Csql_OPTION();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

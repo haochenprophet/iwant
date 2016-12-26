@@ -8,7 +8,7 @@ namespace n_sql_DUMP {
 	{
 	public:
 		Csql_DUMP();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

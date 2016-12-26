@@ -8,7 +8,7 @@ namespace n_sql_ROWGUIDCOL {
 	{
 	public:
 		Csql_ROWGUIDCOL();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

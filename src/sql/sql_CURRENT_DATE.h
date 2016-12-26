@@ -8,7 +8,7 @@ namespace n_sql_CURRENT_DATE {
 	{
 	public:
 		Csql_CURRENT_DATE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

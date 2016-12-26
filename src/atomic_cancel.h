@@ -8,7 +8,7 @@ namespace n_atomic_cancel {
 	{
 	public:
 		Catomic_cancel();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

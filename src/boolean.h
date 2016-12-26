@@ -8,7 +8,7 @@ namespace n_boolean {
 	{
 	public:
 		Cboolean();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

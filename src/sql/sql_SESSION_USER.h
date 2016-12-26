@@ -8,7 +8,7 @@ namespace n_sql_SESSION_USER {
 	{
 	public:
 		Csql_SESSION_USER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_TO {
 	{
 	public:
 		Csql_TO();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

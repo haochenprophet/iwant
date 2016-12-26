@@ -8,7 +8,7 @@ namespace n___multiple_inheritance {
 	{
 	public:
 		C__multiple_inheritance();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

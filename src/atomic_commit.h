@@ -8,7 +8,7 @@ namespace n_atomic_commit {
 	{
 	public:
 		Catomic_commit();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

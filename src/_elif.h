@@ -8,7 +8,7 @@ namespace n__elif {
 	{
 	public:
 		C_elif();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_NONCLUSTERED {
 	{
 	public:
 		Csql_NONCLUSTERED();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

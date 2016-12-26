@@ -8,7 +8,7 @@ namespace n_sql_EXECUTE {
 	{
 	public:
 		Csql_EXECUTE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

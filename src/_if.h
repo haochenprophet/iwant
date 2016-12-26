@@ -8,7 +8,7 @@ namespace n__if {
 	{
 	public:
 		C_if();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_ORDER {
 	{
 	public:
 		Csql_ORDER();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

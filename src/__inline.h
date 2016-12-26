@@ -8,7 +8,7 @@ namespace n___inline {
 	{
 	public:
 		C__inline();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

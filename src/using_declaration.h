@@ -8,7 +8,7 @@ namespace n_using_declaration {
 	{
 	public:
 		Cusing_declaration();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

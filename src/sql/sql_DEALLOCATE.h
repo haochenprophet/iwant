@@ -8,7 +8,7 @@ namespace n_sql_DEALLOCATE {
 	{
 	public:
 		Csql_DEALLOCATE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

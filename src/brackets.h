@@ -21,7 +21,7 @@ namespace n_brackets {
 
 		char braceket;
 	public:
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 		Cbrackets();
 		~Cbrackets();
 

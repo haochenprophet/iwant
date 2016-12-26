@@ -8,7 +8,7 @@ namespace n_sql_CONTAINSTABLE {
 	{
 	public:
 		Csql_CONTAINSTABLE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

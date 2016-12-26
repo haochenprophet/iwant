@@ -33,8 +33,8 @@ namespace n_class {
 		Cclass(string tag);
 		~Cclass();
 
-		int my_init(void *p=NULL);
-		int func(void *p=NULL);
+		int my_init(void *p=nullptr);
+		int func(void *p=nullptr);
 		int create(void *p);//Cclass *p
 
 		int deal_cmd(int argc, char *argv[]);	

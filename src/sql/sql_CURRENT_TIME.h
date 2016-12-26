@@ -8,7 +8,7 @@ namespace n_sql_CURRENT_TIME {
 	{
 	public:
 		Csql_CURRENT_TIME();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_UNIQUE {
 	{
 	public:
 		Csql_UNIQUE();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

@@ -8,7 +8,7 @@ namespace n_sql_JOIN {
 	{
 	public:
 		Csql_JOIN();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

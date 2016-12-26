@@ -8,7 +8,7 @@ namespace n_transient {
 	{
 	public:
 		Ctransient();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

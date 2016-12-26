@@ -8,7 +8,7 @@ namespace n_sql_FILLFACTOR {
 	{
 	public:
 		Csql_FILLFACTOR();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

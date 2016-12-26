@@ -8,7 +8,7 @@ namespace n_sql_OPENROWSET {
 	{
 	public:
 		Csql_OPENROWSET();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

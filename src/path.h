@@ -24,7 +24,7 @@ namespace n_path {
 		bool is_dir(DIR_T *name);
 		bool is_file();
 		int list(DIR_T *dir_name,DIR_T *term=NULL,int display=1,int to_list=1);//get list to name_list
-		int my_clear(void *p=NULL);
+		int my_clear(void *p=nullptr);
 		int display(void * p=NULL);
 	};
 

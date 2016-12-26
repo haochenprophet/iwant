@@ -8,7 +8,7 @@ namespace n___hook {
 	{
 	public:
 		C__hook();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 

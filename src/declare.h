@@ -8,7 +8,7 @@ namespace n_declare {
 	{
 	public:
 		Cdeclare();
-		int my_init(void *p=NULL);
+		int my_init(void *p=nullptr);
 	};
 }
 
