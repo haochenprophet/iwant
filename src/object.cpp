@@ -78,8 +78,18 @@ Object::Object()
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	this->addMe();
+
 	time (&this->at_time);
+	this->start_time=this->at_time;
+	this->end_time=this->at_time;
+	this->tm_start = localtime (&this->start_time);//init tm
+	this->tm_at = localtime (&this->at_time);
+	this->tm_end = localtime (&this->end_time);
+
 	this->at_clock=clock();
+	this->start_clock=at_clock;
+	this->end_clock=at_clock;
+
 	this->language=EnglishLanguage;
 	this->count=0;
 	this->direction=0;

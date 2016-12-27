@@ -81,8 +81,15 @@ namespace n_object {
 		string name; //object name
 		string alias;//Alias object name
 		string description;
+		
+		//time and clock
+		struct tm * tm_start,*tm_at,*tm_end;
+		time_t start_time;//for class memory time
 		time_t at_time;
+		time_t end_time;
+		clock_t start_clock;
 		clock_t at_clock;
+		clock_t end_clock;
 
 		string syntax;//this for keyword object
 		string temp;//keyword template 
