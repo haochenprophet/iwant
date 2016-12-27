@@ -163,6 +163,8 @@ namespace n_object {
 		int replace_temp(int upper_s=0);
 		int tag_temp(char *tag_value,int upper_s=1);
 
+		void set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0);//mon/day/year/hour/min/sec
+		//virtual
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
 		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 

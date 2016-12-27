@@ -472,6 +472,17 @@ long Object::my_id()
 	return this->id;
 }
 
+
+void Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0);//mon/day/year/hour/min/sec
+{
+	if(tm_mday) t->tm_year = tm_year - 1900;
+	t->tm_mon = tm_mon - 1;
+	t->tm_mday = tm_mday;
+	t->tm_hour=tm_hour;
+	t->tm_min=tm_min;
+	t->tm_sec=tm_sec;
+}
+
 Object * Object::i_am_here()
 {
 	return this;
