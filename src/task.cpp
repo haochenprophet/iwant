@@ -50,7 +50,7 @@ int Ctask::t_complete(Object *t)
 
 int Ctask::add_depend(Ctask * t)
 {
-	this->depend.push_back((void *)t);
+	this->depend.push_back(t);
 	return 0;
 }
 

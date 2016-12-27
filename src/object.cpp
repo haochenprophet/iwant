@@ -473,14 +473,21 @@ long Object::my_id()
 }
 
 
-void Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec)//mon/day/year/hour/min/sec
+int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec)//mon/day/year/hour/min/sec
 {
+	if(tm_mon>12||tm_mon<1\
+	|| tm_mday>31||tm_mday<1\
+	|| tm_hour>23||tm_hour<0\
+	|| tm_min>59||tm_min<0\
+	|| tm_sec>60||tm_sec<0)   return -1;
+
 	if(tm_mday) t->tm_year = tm_year - 1900;
 	t->tm_mon = tm_mon - 1;
 	t->tm_mday = tm_mday;
 	t->tm_hour=tm_hour;
 	t->tm_min=tm_min;
 	t->tm_sec=tm_sec;
+	return 0;
 }
 
 Object * Object::i_am_here()

@@ -2,7 +2,6 @@
 #define TASK_H
 
 #include "object.h"
-typedef list<void *> LIST_DEPEND;//family list type
 
 enum TaskStatus{
 	TaskPlanning,
@@ -18,7 +17,7 @@ namespace n_task {
 	class Ctask :public Object
 	{
 	public:
-		LIST_DEPEND depend;
+		list<Ctask *> depend;
 		list<Ctask *> task_list;//my create() task list
 	public:
 		Ctask();
@@ -36,5 +35,7 @@ namespace n_task {
 
 }
 using namespace n_task;
+
+typedef list<Ctask *> LIST_DEPEND;//family list type
 
 #endif
