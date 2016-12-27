@@ -520,7 +520,7 @@ int Object::cmp_time(struct tm *t1,struct tm *t2) //t1>t2 return 1 , t1==t2 retu
 	if(t1->tm_sec>t2->tm_sec) return 1;
 	if(t1->tm_sec<t2->tm_sec) return -1;
 
-	return 0
+	return 0;
 }
 
 Object * Object::i_am_here()
@@ -575,8 +575,13 @@ int Object::deal_cmd(int argc, char *argv[])
 }
 int Object::display(void *p)
 {
-	if (!p) return -1;
-	cout << p << endl;	
+	if (p)
+	{
+		cout << p << endl;
+		return 0;
+	}
+
+	cout<<this->name<<","<<this->alias<<","<<"id="<<this->id<<":"<<this->description<<endl;
 	return 0;
 }
 

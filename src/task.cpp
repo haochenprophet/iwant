@@ -10,6 +10,7 @@ Ctask::Ctask()
 Ctask::~Ctask()
 {
 	this->free_task_list();
+	this->depend.clear();
 }
 
 int Ctask::t_break(Object *t)
@@ -54,10 +55,17 @@ int Ctask::add_depend(Ctask * t)
 	return 0;
 }
 
-Ctask *Ctask::create(char *p)
+Ctask * Ctask::create(Ctask *depend,char *name,char *desp)
 {
 	Ctask *t =new Ctask();
-	if(t) this->task_list.push_back(t);
+	if(!t) return nullptr;
+
+	if(name) t->name=name;
+	if(desp) t->description=desp;
+
+	this->task_list.push_back(t);
+	if(depend) this->depend.push_back(depend);
+
 	return t;
 }
 
@@ -82,9 +90,9 @@ int main(int argc, char *argv[])
 {
 	cout << "TASK_TEST\n\n";
 	Ctask t,*p;
-	p=t.create();
-	t.myName();
-	p->myName();
+	p=t.create(&t,(char *)"sub-task",(char *) "test-sub-task");
+	t.display();
+	p->display();
 	return 0;
 }
 #endif 
