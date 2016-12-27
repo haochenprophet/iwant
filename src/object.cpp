@@ -74,6 +74,7 @@ Object::Object()
 	this->alias = this->name;
 	this->s_tag="[tag]";
 	this->name += std::to_string(object_id);//change name for nam +=id
+	this->description=this->name;
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	this->addMe();

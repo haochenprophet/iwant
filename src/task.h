@@ -27,6 +27,7 @@ namespace n_task {
 		int t_run(Object *t);
 		int t_pend(Object *t);
 		int t_complete(Object *t);
+		int add_depend(Ctask * t);
 	};
 
 }

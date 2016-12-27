@@ -3,6 +3,7 @@
 Ctask::Ctask()
 {
 	this->name = "Ctask";
+	this->name += std::to_string(this->id);
 	this->alias = "task";
 }
 
@@ -40,6 +41,12 @@ int Ctask::t_complete(Object *t)
 {
 	t->status=TaskComplete;
 	return this->status;
+}
+
+int Ctask::add_depend(Ctask * t)
+{
+	this->depend.push_back((void *)t);
+	return 0;
 }
 
 #ifndef TASK_TEST

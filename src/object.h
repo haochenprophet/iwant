@@ -80,6 +80,7 @@ namespace n_object {
 
 		string name; //object name
 		string alias;//Alias object name
+		string description;
 		time_t at_time;
 		clock_t at_clock;
 
