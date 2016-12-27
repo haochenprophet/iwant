@@ -7,6 +7,11 @@ Ctask::Ctask()
 	this->alias = "task";
 }
 
+Ctask::~Ctask()
+{
+	this->free_task_list();
+}
+
 int Ctask::t_break(Object *t)
 {
 	t->status=TaskBreak;
@@ -49,6 +54,24 @@ int Ctask::add_depend(Ctask * t)
 	return 0;
 }
 
+Ctask *Ctask::create(char *p)
+{
+	Ctask *t =new Ctask();
+	if(t) this->task_list.push_back(t);
+	return t;
+}
+
+void Ctask::free_task_list() //for delete Ctask::create(char *p) task
+{
+	Ctask *t;
+	while (!this->task_list.empty())
+	{
+		t =this->task_list.back();
+		delete t;
+		this->task_list.pop_back();
+	}
+}
+
 #ifndef TASK_TEST
 #define TASK_TEST 0//1
 #endif
@@ -58,7 +81,10 @@ int Ctask::add_depend(Ctask * t)
 int main(int argc, char *argv[])
 {
 	cout << "TASK_TEST\n\n";
-
+	Ctask t,*p;
+	p=t.create();
+	t.myName();
+	p->myName();
 	return 0;
 }
 #endif 

@@ -19,8 +19,10 @@ namespace n_task {
 	{
 	public:
 		LIST_DEPEND depend;
+		list<Ctask *> task_list;//my create() task list
 	public:
 		Ctask();
+		~Ctask();
 		int t_break(Object *t);
 		int t_continue(Object *t);
 		int t_stop(Object *t);
@@ -28,6 +30,8 @@ namespace n_task {
 		int t_pend(Object *t);
 		int t_complete(Object *t);
 		int add_depend(Ctask * t);
+		Ctask *create(char *p=nullptr);//creat and push task_list
+		void free_task_list();
 	};
 
 }
