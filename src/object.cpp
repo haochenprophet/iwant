@@ -473,13 +473,13 @@ long Object::my_id()
 }
 
 
-int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec)//mon/day/year/hour/min/sec
+int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec,int tm_wday,int tm_yday)//mon/day/year/hour/min/sec/week/yday
 {
 	if(tm_mon>12||tm_mon<1\
 	|| tm_mday>31||tm_mday<1\
 	|| tm_hour>23||tm_hour<0\
 	|| tm_min>59||tm_min<0\
-	|| tm_sec>60||tm_sec<0)   return -1;
+	|| tm_sec>60||tm_sec<0||tm_year<1900)   return -1;
 
 	if(tm_mday) t->tm_year = tm_year - 1900;
 	t->tm_mon = tm_mon - 1;
@@ -487,6 +487,15 @@ int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour
 	t->tm_hour=tm_hour;
 	t->tm_min=tm_min;
 	t->tm_sec=tm_sec;
+
+	if(tm_wday<8&&tm_wday>0)
+	{
+		if(tm_wday==7) t->tm_wday=0;
+		else t->tm_wday=tm_wday;
+	}
+
+	if(tm_yday>=0&&tm_yday<366) t->tm_yday=tm_yday;
+
 	return 0;
 }
 
