@@ -495,8 +495,32 @@ int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour
 	}
 
 	if(tm_yday>=0&&tm_yday<366) t->tm_yday=tm_yday;
-
+	
+	mktime(t);  // call mktime: tm_wday will be set 
 	return 0;
+}
+
+int Object::cmp_time(struct tm *t1,struct tm *t2) //t1>t2 return 1 , t1==t2 return 0 ,t1<t2 return -1 
+{
+	if(t1->tm_year>t2->tm_year) return 1;
+	if(t1->tm_year<t2->tm_year) return -1;
+
+	if(t1->tm_mon>t2->tm_mon) return 1;
+	if(t1->tm_mon<t2->tm_mon) return -1;
+
+	if(t1->tm_mday>t2->tm_mday) return 1;
+	if(t1->tm_mday<t2->tm_mday) return -1;
+
+	if(t1->tm_hour>t2->tm_hour) return 1;
+	if(t1->tm_hour<t2->tm_hour) return -1;
+
+	if(t1->tm_min>t2->tm_min) return 1;
+	if(t1->tm_min<t2->tm_min) return -1;
+
+	if(t1->tm_sec>t2->tm_sec) return 1;
+	if(t1->tm_sec<t2->tm_sec) return -1;
+
+	return 0
 }
 
 Object * Object::i_am_here()

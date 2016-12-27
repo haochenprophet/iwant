@@ -164,6 +164,7 @@ namespace n_object {
 		int tag_temp(char *tag_value,int upper_s=1);
 
 		int set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0,int tm_wday=-1,int tm_yday=-1);
+		int cmp_time(struct tm *t1,struct tm *t2);
 		//virtual
 		virtual Object * i_am_here();//object address
 		virtual Object * who_am_i();//object introduces
