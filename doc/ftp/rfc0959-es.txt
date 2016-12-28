@@ -1,0 +1,3699 @@
+
+
+
+
+
+
+Network Working Group                                          J. Postel
+Request for Comments: 959                                    J. Reynolds
+                                                                     ISI
+Obsoletes RFC: 765 (IEN 149)                                Octubre 1985
+Traducción al castellano:                                   Febrero 2000
+Gonzalo Paniagua Javier                           <gpanjav@jazzfree.com>
+
+              PROTOCOLO DE TRANSFERENCIA DE FICHEROS (FTP)
+
+Estado de este Documento
+
+   Este documento es la especificación oficial del Protocolo de
+   Transferencia de Ficheros (File Transfer Protocol, FTP). Se permite
+   la distribucion ilimitada de este documento.
+
+   Las siguientes nuevas órdenes opcionales se incluyen en esta edición
+   de la especificación:
+
+      CDUP (cambiar al directorio padre), SMNT (montar estructura), STOU
+      (guardar con nombre único), RMD (Borrar directorio), MKD (Make
+      Directory), PWD (mostrar directorio actual), y SYST (sistema).
+
+   Esta especificación es compatible con ediciones anteriores.
+
+1.  INTRODUCCION
+
+   Los objetivos del FTP son 1) promocionar el uso compartido de
+   ficheros (programas y/o datos), 2) animar al uso indirecto o
+   implícito (a través de programas) de servidores remotos, 3) hacer
+   transparente al usuario las variaciones entre la forma de almacenar
+   ficheros en diferentes ordenadores, y 4) transferir datos fiable y
+   eficientemente. El FTP, aunque puede ser utilizado directamente por
+   un usuario en un terminal, está diseñado principalmete para ser usado
+   por programas.
+
+   Con esta especificación se intentan satisfacer las diversas
+   necesidades de los usuarios de maxi-hosts, mini-hosts, estaciones de
+   trabajo personales y TAC's con un diseño de protocolo simple y fácil
+   de programar.
+
+   En este documento se asumen conocimientos del Protocolo de Contol de
+   Transmisión (TCP, Transmision Control Protocol) [2] y del Protocolo
+   Telnet [3]. Estos documentos se encuentras en el manual de protocolos
+   de ARPA-Internet.
+
+2.  HISTORIA, TERMINOLOGIA Y MODELO FTP
+
+   En esta sección se tratan la historia, la terminología y el modelo
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 1]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   FTP.  Los términos que se definen en esta sección son sólo aquellos
+   que tienen un significado especial en el FTP. Parte de la
+   terminología es muy específica al modelo FTP; algunos lectores pueden
+   encontrar conveniente consultar la sección sobre el modelo FTP
+   mientras revisan la terminología.
+
+   2.1.  HISTORIA
+
+      El FTP ha pasado por un larga evolución a través de los años.  El
+      apéndice III es una recopilación cronológica de los RFC que tratan
+      el FTP. Estos incluyen la primera propuesta de mecanismos para
+      transferencia de ficheros de 1971, que se desarrolló para su uso
+      en servidores del M.I.T. (RFC 114), más los comentarios y
+      discusiones del RFC 141.
+
+      El RFC 172 proporcionó un protocolo orientado al nivel de usuario
+      para transferir ficheros entre ordenadores (incluyendo IMP's
+      terminales). Una revisión de este plasmada en el RFC 265, inició
+      una revisión adicional, mientras que el RFC 281 sugirió más
+      cambios.  El uso de una transacción para elegir el tipo de datos
+      se propuso en el RFC 294 en enero de 1982.
+
+      El RFC 354 dejó obsoletos los RFCs 264 y 265. El Protocolo de
+      Transferencia de Ficheros se definió en este momento como un
+      protocolo para transferencia de ficheros entre ordenadores
+      conectados a la red ARPANET, señalando como función principal del
+      FTP la transferencia de ficheros fiable y eficiente entre
+      ordenadores y permitiendo el uso adecuado de las características
+      de almacenamiento remotas. El RFC 385 siguió comentando errores,
+      enfatizó algunos puntos y añadió características al protocolo,
+      mientras que el RFC 414 fue un informe sobre los servidores FTP
+      que estaban funcionando. El RFC 430, que salió a la luz en 1973,
+      (entre otros muchos RFCs) presentó más comentarios sobre el FTP.
+      Finalmente, se publicó un documento "oficial" sobre el FTP como
+      RFC 454.
+
+      Hacia julio de 1973, se hicieron considerables cambios a las
+      últimas versiones del FTP, pero la estructura general permaneció
+      igual.  El RFC 542 se publicó como una nueva espcificación
+      "oficial" para reflejar esos cambios. Sin embargo, muchas
+      implementaciones basadas en anterios especificaciones no se
+      actualizaron.
+
+      En 1974, los RFCs 607 y 614 continuaron los comentarios sobre el
+      FTP.  El RFC 624 propuso más cambios en el diseño y pequeñas
+      modificaciones.  En 1975, el RFC 686, titulado "Leaving Well
+      Enough Alone", trató las diferencias entre todas las primeras y
+      las últimas versiones del FTP. El RFC 691 presentó una pequeña
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 2]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      revisión del RFC 686, referente al tema de ficheros para imprimir.
+
+      Motivado por la transición del NCP al TCP como protocolo
+      subyacente, nació un fénix de todos los anteriores esfuerzos en el
+      RFC 765 como la especificación de FTP para uso sobre TCP.
+
+      Esta edición de la especificación FTP está dirigida a la
+      corrección de pequeños errores en la documentación, a mejorar la
+      explicación de algunas características del protocolo, y a añadir
+      algunas nuevas órdenes opcionales.
+
+      En particular, se incluyen las siguientes nuevas órdenes
+      opcionales en esta edición de la especificación:
+
+         CDUP - Cambiar al directorio padre (Change to Parent Directory)
+
+         SMNT - Montar estructura (Structure Mount)
+
+         STOU - Guardar con nombre único (Store Unique)
+
+         RMD - Borrar directorio (Remove Directory)
+
+         MKD - Crear directorio (Make Directory)
+
+         PWD - Mostrar directorio actual (Print Working Directory)
+
+         SYST - Sistema (System)
+
+      Esta especificación es compatible con la anterior edición. Un
+      programa implementado conforme a la especificación anterior
+      debería estar automáticamente en conformidad con esta
+      especificación.
+
+   2.2.  TERMINOLOGIA
+
+      ASCII
+
+         El conjunto de caracteres ASCII se considera tal y como está
+         definido en el manual de protocolos de ARPA-Internet. En el FTP
+         los caracteres ASCII se definen como la mitad inferior de un
+         código de 8 bits (i.e., el bit más significativo es cero).
+
+      controles de acceso
+
+         Los controles de acceso definen los privilegios de acceso del
+         usuario para el uso de un sistema y de los ficheros que hay en
+         él. Son necesarios para evitar el uso no autorizado o
+         accidental de ficheros. Es una prerrogativa para un proceso
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 3]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         servidor FTP utilizar los controles de acceso.
+
+      tamaño de byte
+
+         Hay dos tamaños de byte interesantes en el FTP: el tamaño
+         lógico de byte del fichero y el tamaño de byte usado para la
+         transmisión de los datos. El tamaño de byte utilizado para la
+         transmisión es siempre de 8 bits. Este tamaño no es
+         necesariamente el tamaño de byte con el que se guardan los
+         datos en un sistema ni el tamaño lógico de byte para la
+         interpretación de la estructura de los datos.
+
+      conexión de control
+
+         La ruta de comunicación entre el USER-PI y el SERVER-PI para el
+         intercambio de órdenes y respuestas. Esta conexión sigue el
+         Protocolo Telnet.
+
+      conexión de datos
+
+         Una conexión bidireccional sobre la que se transfieren los
+         datos en un modo y tipo especificados. Los datos transferidos
+         pueden ser una parte de un fichero, un fichero entero o un
+         cierto numero de ficheros. La conexión se puede establecer
+         entre un server-DTP y un user-DTP o entre dos server-DTP's.
+
+      puerto de datos
+
+         El proceso de transferencia pasiva de datos "escucha" en el
+         puerto de datos hasta que recibe una conexión del proceso de
+         transferencia activa para abrir la conexión de datos.
+
+      DTP
+
+         El proceso de transferencia de datos (DTP, Data Transfer
+         Process) establece y maneja la conexión de datos. Puede ser
+         activo o pasivo.
+
+      Fin-de-linea (EOL, end-of-line)
+
+         La secuencia fin-de-linea define la separación entre líneas. La
+         secuencia consiste en un retorno de carro seguido de un
+         carácter de nueva línea.
+
+      EOF (fin-de-fichero, end-of-file)
+
+         La condición fin-de-fichero que define el final de un fichero
+         en proceso de transmisión.
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 4]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      EOR (end-of-record, fin-de-registro)
+
+         La condición fin-de-registro que define el final de un registro
+         en proceso de transferencia.
+
+      recuperación de errores
+
+         Un procedimiento que permite al usuario recuperar el control a
+         partir de ciertas condiciones de error, como un fallo en el
+         servidor o en el proceso de transferencia. En el FTP, la
+         recuperación de errores puede implicar el reinicio de la
+         transferencia de un fichero a partir de un cierto punto.
+
+      órdenes FTP
+
+         Un conjunto de órdenes que abarcan la información de control
+         que va desde el proceso user-FTP al proceso server-FTP.
+
+      fichero
+
+         Un conjunto ordenado de datos del ordenador (incluyendo
+         programas), de longitud arbitraria, definido de forma única por
+         una ruta.
+
+      modo
+
+         El modo en que se tranfieren datos por la conexión de datos.
+         El modo define el formato de los datos durante la
+         transferencia, incluyendo EOR y EOF. Los modos de transferencia
+         definidos para FTP se describen en la sección Modos de
+         Transmisión.
+
+      NVT
+
+         El terminal virtual de red (Network Virtual Terminal) tal y
+         como se define en el Protocolo Telnet.
+
+      NVFS
+
+         El sistema de ficheros virtual de red (Network Virtual File
+         System). Un concepto que define un sistema de ficheros de red
+         estándar con órdenes estándar y convenciones sobre los nombres
+         de ruta [pathname].
+
+      página
+
+         Un fichero se puede estructurar como un conjunto de partes
+         independientes llamadas páginas. El FTP soporta la transmisión
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 5]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         de ficheros discontinuos como páginas indizadas independientes.
+
+      nombre de ruta [pathname]
+
+         El nombre de ruta se define como una cadena de caracteres que
+         el usuario pasa al sistema de ficheros para identificar un
+         fichero. La ruta normalmente contiene nombres de dispositivos
+         y/o directorios y un nombre de fichero. El FTP no especifica
+         aún un estándar para indicar una ruta. Cada usuario debe seguir
+         las normas que dictan los sistemas de ficheros implicados en la
+         transferencia para nombrar los ficheros.
+
+      PI
+
+         El Intérprete del Protocolo (Protocol Interpreter). La parte
+         del usuario y del servidor del protocolo tienen distintos
+         papeles que se implementan como un user-PI y un server-PI.
+
+      registro
+
+         Un fichero secuencial se puede estructurar en un número de
+         partes contiguas llamadas registros. El FTP soporta las
+         estructuras de registro, pero un fichero no tiene por qué tener
+         una estructura de registro.
+
+      respuesta
+
+         Una respuesta es un asentimiento (positivo o negativo) enviada
+         por el servidor al usuario a través de la conexión de control
+         en respuesta a una orden FTP. La forma general de una respuesta
+         es un código de terminación seguido de una cadena de texto. Los
+         códigos son usados por los programas y el texto por las
+         personas.
+
+      server-DTP (server Data Transfer Process)
+
+         El proceso de transferencia de datos (Data Transfer Process),
+         en su estado normal de "activo", establece una conexión de
+         datos con el puerto de datos que está a la espera. Prepara los
+         parámetros para transferir y almacenar y transfiere los datos
+         cuando así se requiere a través de su PI. El DTP se puede poner
+         en estado "pasivo" para esperar una conexión, en lugar de
+         iniciarla.
+
+      proceso server-FTP
+
+         Un proceso o un conjunto de ellos que realizan la función de
+         transferencia de ficheros en conjunción con el proceso user-FTP
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 6]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         y, posiblemente, otro servidor. Las funciones consisten en un
+         intérprete de protocolo (PI) y un proceso de transferencia de
+         datos (DTP).
+
+      server-PI (server Protocol Interpreter)
+
+         El intérprete de protocolo del servidor "escucha" en el puerto
+         L hasta que recibe una conexión de un user-PI y establece una
+         conexión de comunicaciones para control. Recibe órdenes FTP
+         estándar desde el user-PI, envía respuestas y controla el
+         server-DTP.
+
+      tipo
+
+         El tipo de representación de datos usado para transferir y
+         almacenar los datos. El tipo implica ciertas transformaciones a
+         la hora de almacenar y enviar los datos. Los tipos de
+         representación definidos en el FTP se describen en la sección
+         titulada "Estableciendo conexiones de datos".
+
+      usuario
+
+         Una persona o un proceso en su lugar que desea utilizar el
+         servicio de transferencia de ficheros. La persona puede
+         interactuar directamente con el proceso server-FTP, pero se
+         prefiere el uso de un proceso user-FTP ya que el diseño del
+         protocolo está orientado a su utilización por autómatas.
+
+      user-DTP (user Data Transfer Process)
+
+         El Proceso de Transferencia de Datos espera a recibir una
+         conexión en el puerto de datos desde el proceso server-FTP.  Si
+         dos servidores están transfiriendo datos entre ellos, el user-
+         DTP permanece inactivo.
+
+      proceso user-FTP
+
+         Un conjunto de funciones incluyendo un intérprete de protocolo,
+         un proceso de transferencia de datos y una interfaz de usuario
+         que juntos realizan la función de transferir ficheros en en
+         cooperación con un proceso server-FTP. La interfaz de usuario
+         permite usar un lenguaje local en el diálogo orden-respuesta
+         con el usuario.
+
+      user-PI (user Protocol Interpreter)
+
+         El intérprete de protocolo de usuario inicia la conexión de
+         control desde su puerto U hasta el proceso server-FTP, envía
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 7]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         órdenes FTP y controla el user-DTP si es necesario para la
+         transferencia de ficheros.
+
+      2.3.  EL MODELO FTP
+
+         Teniendo en cuenta las definiciones anteriores, el siguiente
+         modelo (mostrado en la Figura 1) representa un diagrama de un
+         servicio FTP.
+
+                                        ------------
+                                        |/--------\|
+                                        ||        ||   ---------
+                                        ||Interfaz|<-->|Usuario|
+                                        |\----^---/|   ---------
+              ----------                |     |    |
+              |/------\|  Ordenes FTP   |/----V---\|
+              ||Server|<---------------->|   User ||
+              ||  PI  || Respuestas FTP ||    PI  ||
+              |\--^---/|                |\----^---/|
+              |   |    |                |     |    |
+ ----------   |/--V---\|   Conexión     |/----V---\|  ----------
+ |Sistema |<-->|Server|<---------------->|  User  |<-->|Sistema|
+ |  de    |   ||      ||   de datos     ||        ||  |   de   |
+ |ficheros|   || DTP  ||                ||   DTP  ||  |ficheros|
+ ----------   |\------/|                |\--------/|  ----------
+              ----------                -------------
+                Server-FTP                   User-FTP
+
+          Figura 1: Modelo para el uso del FTP.
+
+   NOTAS: 1. La conexión de datos es bidireccional.
+         2. La conexión de datos no tiene por qué existir todo el
+         tiempo.
+
+         En el modelo descrito en la Figura 1, el intérprete de
+         protocolo de usuario (user-PI), inicia la conexión de control.
+         La conexión de control sigue el Protocolo Telnet. Las órdenes
+         FTP estándar las genera el user-PI y se transmiten al proceso
+         servidor a través de la conexión de control. (El usuario puede
+         establecer una conexión de control directa con el server-FTP,
+         desde un terminal TAC por ejemplo, y enviar órdenes FTP
+         estándar, obviando así el proceso user-FTP.)  Las respuestas
+         estándar se envían desde el server-PI al user-PI por la
+         conexión de control como contestación a las órdenes.
+
+         Las órdenes FTP especifican parámetros para la conexión de
+         datos (puerto de datos, modo de transferencia, tipo de
+         representación y estructura) y la naturaleza de la operación
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 8]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         sobre el sistema de ficheros (almacenar, recuperar, añadir,
+         borrar, etc.). El user-DTP u otro proceso en su lugar, debe
+         esperar a que el servidor inicie la conexión al puerto de datos
+         especificado y transferir los datos en función de los
+         parámetros que se hayan especificado. Se debe reseñar que el
+         puerto de datos no tiene por qué estar en el mismo ordenador
+         que envía las órdenes FTP a través de la conexión de control,
+         pero el usuario o el proceso user-FTP debe asegurarse de que se
+         espera la conexión en el puerto de datos indicado. También hay
+         que destacar que la conexión de datos se puede usar
+         simultáneamente para enviar y para recibir.
+
+         En otra situación, un usuario puede querer transferir ficheros
+         entre dos ordenadores que no son locales. El usuario prepara
+         las conexiones de control con los dos servidores y da las
+         órdenes necesarias para crear una conexión de datos entre
+         ellos. De esta forma, la información de control se envía al
+         user-PI pero los datos se transfieren entre los procesos de
+         transferencia de datos de los servidores. A continuación se
+         muestra un modelo de esta interacción servidor-servidor.
+
+               Control     ------------   Control
+                ---------->| User-FTP |<-----------
+                |          | User-PI  |           |
+                |          |   "C"    |           |
+                V          ------------           V
+         --------------                        --------------
+         | Server-FTP |   Data Connection      | Server-FTP |
+         |    "A"     |<---------------------->|    "B"     |
+         -------------- Port (A)      Port (B) --------------
+
+
+                              Figura 2
+
+      El protocolo requiere que las conexiones de control permanezcan
+      abiertas mientras se transfieren datos. Es responsabilidad del
+      usuario solicitar el cierre de las conexiones de control una vez
+      termine de usar el servicio, mientras que el servidor es el
+      encargado de cerrarlas. El servidor puede interrumpit la
+      transferencia de datos si las conexiones de control se cierran sin
+      previa solicitud.
+
+      La relación entre FTP y Telnet:
+
+         El FTP usa el protocolo Telnet en la conexión de control. Esto
+         se puede conseguir de dos formas: primera, el user-PI o el
+         server-PI pueden implementar las reglas del Protocolo Telnet
+         directamente; o, segunda, el user-PI o el server-PI pueden usar
+
+
+
+Postel & Reynolds               Estándar                        [Pág. 9]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         el módulo Telnet que exista en el sistema.
+
+         La facilidad de implementación, compartir código y la
+         programación modular, están a favor de la segunda aproximación.
+         La eficiencia y la independencia abogan por la primera
+         aproximación. En la práctica, el FTP no depende mucho del
+         protocolo Telnet, por ello la primera aproximación no
+         necesariamente implica gran cantidad de código.
+
+3.  FUNCIONES DE TRANSFERENCIA DE DATOS
+
+   Los ficheros sólo se transmiten por la conexión de datos. La conexión
+   de control se usa para enviar órdenes, que describen la función a
+   realizar, y las repuestas a estas órdenes (ver la sección "Respuestas
+   FTP"). Varias órdenes se refieren a la transferencia de datos entre
+   ordenadores. Estas órdenes incluyen MODE (modo) que especifica cómo
+   se transmiten los bits de datos y las órdenes STRU (STRUcture,
+   estructura) y TYPE, que se usan para definir la forma de
+   representación de los datos. La transmisión y la representación son
+   básicamente independientes, pero el modo de transmisión flujo depende
+   de la estructura del fichero y si se especifica el modo de
+   transmisión "comprimido", la naturaleza del byte de relleno depende
+   del tipo de representación.
+
+   3.1.  REPRESENTACION DE DATOS Y ALMACENAMIENTO
+
+      Los datos se tranfieren desde un dispositivo de almacenamiento en
+      el ordenador que envía los datos a otro en el ordenador que los
+      recibe. A menudo es necesario realizar ciertas transformaciones en
+      los datos porque la representación de los datos almacenados varía
+      de un ordenador a otro. Por ejemplo NVT-ASCII tiene diferentes
+      representaciones de los datos almacenados en diferenctes sistemas.
+
+      Los TOPS-20 de DEC generalmente almacenana NVT-ASCII como cinco
+      caracteres ASCII de 7 bits, justificados a la izquierda en una
+      palabra de 36 bits. Es conveniente convertir caracteres a la
+      representación estándar NVT-ASCII cuando se transmite texto entre
+      sistemas diferentes. Los ordenadores que intervienen en la
+      transferencia deberían realizar las transformaciones necesarias
+      entre la representación estándar y su representación interna.
+
+      Nos encontramos con un problema diferente cuando se transmiten
+      datos en forma binaria (no caracteres) entre ordenadores con
+      distinto tamaño de palabra. No siempre está claro cómo se deben
+      enviar los datos y como se deben almacenar al recibirlos. Por
+      ejemplo, cuando se transmiten bytes de 32 bits desde un sistema
+      con tamaño de palabra de 32 bits a un sistema con tamaño de
+      palabra de 36 bits, sería conveniente (por razones de eficiencia y
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 10]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      utilidad) almacenar los bytes de 32 bits justificados a la derecha
+      en una palabra de 36 bits en el sistema receptor. En cualquier
+      caso, el usuario debería tener la opción de especificar la
+      representación de los datos y las transformaciones realizadas en
+      ellos. Hay que señalar que el FTP proporciona muy limitados tipos
+      de representación. Las transformaciones necesarias más allá de
+      esta limitada capacidad las deberá realizar el usuario
+      directamente.
+
+      3.1.1.  TIPOS DE DATOS
+
+         El usuario especifica las representaciones de datos que se
+         manejarán en el FTP. Este tipo puede definir implícita (como es
+         el caso de ASCII y EBCDIC) o explícitamente (como en un tamaño
+         de byte local) un tamaño de byte para la interpretación
+         denominado "tamaño de byte lógico". Hay que tener en cuenta que
+         esto no tiene nada que ver con el tamaño de byte usado para la
+         transmisión a través de la conexión de datos, llamado "tamaño
+         de byte de transferencia", y no debería haber confusión entre
+         ambos. Por ejemplo, NVT-ASCII tiene un tamaño de byte lógico de
+         8 bits. Si el tipo es tamaño de byte local entonces la orden
+         TYPE tiene un segundo parámetro obligatorio especificando el
+         tamaño de byte lógico. El tamaño del byte de transferencia es
+         siempre de 8 bits.
+
+         3.1.1.1.  TIPO ASCII
+
+            Este es el tipo por defecto y debe ser admitido por todas
+            las implementaciones del FTP. Su principal propósito es
+            transferir ficheros de texto, excepto cuando ambos
+            ordenadores encuentran el tipo EBCDIC más conveniente.
+
+            El ordenador que envía los datos, los convierte de una
+            representación de caracteres interna a la representación
+            estándar NVT-ASCII de 8 bits (ver la especificación de
+            Telnet).  El receptor convertirá los datos del tipo estándar
+            a su propia forma interna.
+
+            De acuerdo con el estándar NVT, la secuencia <CRLF> se debe
+            usar donde sea necesario para indicar el final de una línea
+            de texto.  (Ver el tratamiento de la estructura del fichero
+            al final de la sección sobre Almacenamiento y Representación
+            de los Datos.)
+
+            Usar la representación estándar NVT-ASCII implica que los
+            datos se deben interpretar como bytes de 8 bits.
+
+            El parámetro de formato para los tipos ASCII y EBCDIC se
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 11]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            expone más adelante.
+
+         3.1.1.2.  TIPO EBCDIC
+
+            El propósito de este tipo es la transferencia eficaz entre
+            ordenadores que usan EBCDIC como su representación de
+            carácter interna.
+
+            Para la transmisión, los datos están en forma de caracteres
+            EBCDIC de 8 bits. El código de carácter es la única
+            diferencia entre la especificación funcional de los tipos
+            EBCDIC y ASCII.
+
+            Fin-de-linea (en contraposición a fin-de-registro - ver el
+            tratamiento de la estructura) probablemente apenas se usará
+            con el tipo EBCDIC para denotar la estructura, pero donde
+            sea necesario se usará el carácter <NL>.
+
+         3.1.1.3.  TIPO IMAGEN
+
+            Los datos se envían como bits contiguos que, para la
+            transferencia, están empaquetados en bytes de transferencia
+            de 8 bits. El receptor debe almacenar los datos como bits
+            contiguos.  La estructura del sistema de almacenamiento
+            puede necesitar el rellenado del fichero (o de cada
+            registro, para un fichero estructurado en registros) hasta
+            el límite pertinente (byte, palabra o bloque). Este
+            rellenado, que debe ser todo ceros, sólo puede tener lugar
+            al final del fichero (o de cada registro) y debe haber una
+            forma de identificar los bits de relleno para poder
+            eliminarlos si se obtiene el fichero. La transformación de
+            relleno debe ser conocida por el usuario para procesar el
+            fichero en el lugar de recepción.
+
+            El tipo imagen está indicado para el almacenamiento y
+            obtención de ficheros y la transferencia de datos binarios.
+            Se recomienda que todas las implementaciones del FTP acepten
+            este tipo.
+
+         3.1.1.4.  TIPO LOCAL
+
+            Los datos se transfieren en bytes lógicos del tamaño
+            especificado por el segundo parámetro obligatorio, tamaño de
+            byte. El valor del tamaño de byte debe ser un entero
+            decimal; no hay valor por defecto. El tamaño de byte lógico
+            no es necesariamente el mismo que el tamaño de byte de
+            transferencia.  Si hay diferencia entre los tamaños de byte,
+            entonces los bytes lógicos se deben empaquetar
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 12]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            contiguamente, a pesar de los límites del byte de
+            transferencia y con el relleno necesario al final.
+
+            Cuando los datos llegan al receptor, se transformarán de una
+            manera independiente del tamaño de byte lógico y del
+            ordenador en cuestión. Esta transformación debe ser
+            inversible (i.e., se obtendrá el mismo fichero si se usan
+            los mismos parámetros) y los desarrolladores de la
+            implementación deben hacerla pública.
+
+            Por ejemplo, un usuario enviando números en coma flotante de
+            36 bits a un ordenador con tamaño de palabra de 32 bits
+            puede enviar esos datos como byte local con un tamaño lógico
+            de 36.  El receptor debería almacenar los bytes lógicos de
+            forma que sea fácil su manipulación; en este ejemplo, poner
+            los bytes lógicos de 36 bits en palabras dobles de 64 bits
+            sería suficiente.
+
+            En otro ejemplo, un par de ordenadores con tamaño de palabra
+            de 36 bits, pueden enviarse datos en palabras usando "TYPE L
+            36".  Los datos se enviarían en los bytes de transmisión de
+            8 bits y empaquetados para que 9 bytes de transmisión lleven
+            dos palabras de 36 bits.
+
+         3.1.1.5.  CONTROL DE FORMATO
+
+            Los tipos ASCII y EBCDIC llevan un segundo parámetro
+            (opcional); este es para indicar qué tipo de control de
+            formato vertical, si es que lo hay, se asocia con el
+            fichero. Los siguientes tipos de representación de datos se
+            definen en el FTP:
+
+            Un fichero de texto se envía a un ordenador por uno de estos
+            tres propósitos: para su impresión, para almacenarlo y
+            posteriormente recuperarlo, o para procesarlo. Si se envía
+            un fichero para imprimirlo, el receptor debe saber cómo está
+            representado el control de formato vertical. En el segundo
+            caso, debe ser posible almacenar el fichero y después
+            recuperarlo exactamente igual. Por último, debería ser
+            posible enviar un fichero de un ordenador a otro y
+            procesarlo en el receptor sin problemas indebidos. Un
+            formato ASCII o EBCDIC por sí solo no satisface estas tres
+            condiciones. Por lo tanto, estos tipos tiene un segundo
+            parámetro especificando uno de los siguientes tres formatos:
+
+            3.1.1.5.1.  NO PARA IMPRIMIR [NON PRINT]
+
+               Este es el formato por defecto si se omite el segundo
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 13]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+               parámetro (formato). Se debe admitir en todas las
+               implementaciones del FTP.
+
+               El fichero no necesita ninguna información de formato
+               vertical. Si se pasa a un proceso para imprimir, este
+               proceso puede asumir valores estándar para espaciado y
+               márgenes.
+
+               Normalmente, este formato se usará con ficheros que van a
+               ser procesados o simplemente almacenados.
+
+             3.1.1.5.2.  CONTROLES DE FORMATO TELNET
+
+               El fichero contiene controles de formato vertical
+               ASCII/EBCDIC (i.e., <CR>, <LF>, <NL>, <VT>, <FF>) que el
+               proceso para imprimir interpretará apropiadamente.
+               <CRLF>, siguiendo exactamente este orden, también indica
+               fin-de-línea.
+
+            3.1.1.5.3.  CONTROL DE CARRO (ASA)
+
+               El fichero contiene caracteres de control de formato
+               vertical ASA (FORTRAN). (Vea el apéndice C RFC 740; y
+               Comunicaciones de la ACM, Vol. 7, No. 10, p. 606, octubre
+               1964). En una línea o registro formateado de acuerdo con
+               en estándar ASA, el primer carácter no se imprime. En su
+               lugar, se usa para determinar el movimiento vertical del
+               papel que debería tener lugar antes de que se imprima el
+               resto del registro.
+
+               El estándar ASA especifica los siguientes caracteres de
+               control:
+
+               Carácter      Espaciado vertical
+
+               espacio       Mueve el papel una línea arriba
+
+               0             Mueve el papel dos líneas arriba
+
+               1             Mueve hasta el comienzo de la sig. página
+
+               +             No se mueve, i.e., sobreescribe
+
+               Claramente, debe haber alguna manera para el proceso que
+               imprime de distinguir el final de la entidad estructural.
+               Si un fichero tiene estructura de registro (ver más
+               abajo) no hay problema; los registros se marcan
+               explícitamente durante la transferencia y el
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 14]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+               almacenamiento. Si el fichero no tiene estructura de
+               registro, la secuencia fin-de-linea <CRLF> se usa para
+               separar líneas al imprimir, pero los controles ASA tienen
+               prioridad sobre estos especificadores de formato.
+
+      3.1.2.  ESTRUCTURAS DE DATOS
+
+         Además de los diferentes tipos de representación, el FTP
+         permite especificar la estructura de un fichero. Se definen
+         tres estructuras de fichero en el FTP:
+
+         estructura de fichero, donde no hay una estructura interna y el
+         fichero se considera como una secuencia continua de bytes de
+         datos,
+
+         estructura de registro, donde el fichero está compuesto de
+         registros secuenciales,
+
+         y estructura de página, donde el fichero está compuesto de
+         páginas indizadas independientes.
+
+         Si no se usa la orden STRU (estructura), se asume por defecto
+         estructura de fichero, pero todas las implementaciones del FTP
+         deben aceptar para ficheros de "texto"  las estructuras de
+         fichero y de registro (i.e., para los TYPE ASCII y TYPE
+         EBCDIC). La estructura de un fichero afectará al modo de
+         transferencia y a la interpretación y almacenamiento del
+         fichero (vea la sección Modos de Transmisión).
+
+         La estructura "natural" de un fichero depende del ordenador que
+         almacena el fichero. Un fichero con código fuente se guardará
+         en un Mainframe de IBM, normalmente, en registros de tamaño
+         fijo pero en un TOPS-20 de DEC se guardará como un flujo de
+         caracteres particionados en líneas, separados, por ejemplo, por
+         <CRLF>. Si se quiere realizar una transferencia entre
+         odenadores tan dispares que sea útil, debe haber una forma para
+         que uno reconozca lo que el otro asume por defecto.
+
+         Con unos ordenadores orientados por naturaleza a ficheros y
+         otros orientados a registros, puede haber problemas si se envía
+         un fichero con una estructura a un ordenador orientado a la
+         otra. Si un fichero de texto se envía con estructura de
+         registros a un ordenador que está orientado a ficheros,
+         entonces éste último debería aplicar internamente una
+         transformación basada en la estructura de registros.
+         Obviamente, esta transformación debería ser adecuada, pero,
+         además, debe ser inversible para que se pueda obtener un
+         fichero identico usando estructura de registro.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 15]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         En el caso de enviar un fichero con estructura de fichero a un
+         ordenador orientado a registro, surge la cuestión de qué
+         criterio debe usar el ordenador para dividir el fichero en
+         registros que se puedan procesar localmente. Si es necesaria
+         esta división, la implementación del FTP debería usar la
+         secuencia <CRLF> para ficheros de texto ASCII o <NL> para
+         ficheros de texto EBCDIC como separador de registro. Si una
+         implementación del FTP adopta esta técnica, debe estar
+         preparada para hacer la transformación inversa si se recupera
+         el fichero con estructura de fichero.
+
+         3.1.2.1.  ESTRUCTURA DE FICHERO
+
+            La estructura de fichero se asume por defecto si no se
+            utiliza la orden STRU (eSTRUctura).
+
+            Si el fichero tiene esta estructura, se considera como una
+            secuencia continua de bytes de datos, sin ninguna estructura
+            interna.
+
+         3.1.2.2.  ESTRUCTURA DE REGISTRO
+
+            Todas las implementaciones del FTP deben aceptar la
+            estructura de registro para ficheros de texto (i.e., con
+            tipos ASCII o EBCDIC).
+
+            El fichero está formado por registros dispuestos
+            secuencialmente.
+
+         3.1.2.3.  ESTRUCTURA DE PAGINA
+
+            Para transmitir ficheros discontínuos, el FTP define una
+            estructura de página. Los fichero de este tipo también se
+            conocen como ficheros de acceso aleatorio o como ficheros
+            con huecos.  En estos ficheros hay a veces otra información
+            asociada con el fichero como un todo (por ejemplo, un
+            descriptor de fichero), o con una sección del fichero (por
+            ejemplo, controles de acceso a página) o ambos. En el FTP
+            las secciones del fichero se llaman páginas.
+
+            Para tratar con varios tamaños de página y con la
+            información asociada, cada página se envía con una cabecera
+            de página. Esta cabecera tiene definidos los siguientes
+            campos:
+
+               Longitud de la cabecera
+
+                  El número de bytes lógicos en la cabecera incluyendo
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 16]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                  este.  El tamaño mínimo de la cabecera es de 4.
+
+               Indice de página
+
+                  El número lógico de página de esta sección del
+                  fichero.  Esto no es el número de secuencia de
+                  transmisión de esta página, sino el índice usado para
+                  identifiar esta página del fichero.
+
+               Tamaño de datos
+
+                  El número de bytes lógicos que hay en los datos de la
+                  página. El mínimo es 0.
+
+               Tipo de página
+
+                  Existen los siguientes tipos de página:
+
+                     0 = Ultima página
+
+                        Se usa para indicar el final de una transmisión
+                        con estructura de página. El tamaño de cabecera
+                        debe ser 4 y el tamaño de datos debe ser 0.
+
+                     1 = Página normal
+
+                        Este es el tipo usado para ficheros paginados
+                        simples sin información de control de acceso
+                        asociada a nivel de página. El tamaño de la
+                        cabecera debe ser 4.
+
+                     2 = Página de descriptor
+
+                        Este tipo se utiliza para transmitir la
+                        información descriptiva del fichero considerado
+                        como un todo.
+
+                     3 = Página con control de acceso
+
+                        Este tipo incluye un campo adicional en la
+                        cabecera para ficheros paginados con información
+                        de control de acceso a nivel de página. El
+                        tamaño de la cabecera debe ser 5.
+
+               Campos opcionales
+
+                  Se pueden usar más campos en la cabecera para
+                  proporcionar, por ejemplo, información de control por
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 17]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                  página.
+
+                  Todos los campos miden un byte lógico. El tamaño de
+                  byte lógico se especifica por la orden TYPE. Vea el
+                  apéndice I para más detalles y un caso específico de
+                  estructura de página.
+
+      Una nota de atención sobre los parámetros: un fichero debe ser
+      almacenado y recuperado con los mismos parámetros si la versión
+      recuperada debe ser idéntica a la versión originalmente
+      transmitida. Por tanto, las implementaciones del FTP deben
+      devolver un fichero idéntico al original si los parámetros usados
+      para almacenar y recuperar el fichero son los mismos.
+
+   3.2.  ESTABLECIENDO CONEXIONES DE DATOS
+
+      La mecánica de transferir datos consiste en preparar la conexión
+      de datos en los puertos apropiados y elegir los parámetros para la
+      transferencia. El usuario y los server-DTPs tienen ambos un puerto
+      por defecto. El puerto por defecto del proceso de usuario es el
+      mismo que el puerto de la conexión de control (i.e., U). El puerto
+      por defecto del proceso servidor es el puerto adyacente al puerto
+      de la conexión de control (i.e., L-1).
+
+      El tamaño de byte para la transferencia es de 8 bits. Este tamaño
+      sólo es relevante para la transferencia de datos; no tiene nada
+      que ver con la representación de los datos dentro del sistema de
+      ficheros de un ordenador.
+
+      El proceso de transferencia de datos pasivo (que puede ser un
+      user-DTP o un segundo server-DTP) deberá "escuchar" en el puerto
+      de datos antes de enviar una orden de petición de transferencia.
+      Esta orden determina el sentido de la transferencia de los datos.
+      El servidor, una vez recibida la petición de transferencia,
+      iniciará la conexión de datos al puerto indicado. Una vez
+      establecida la conexión, la transferencia de datos comienza entre
+      los DTPs y el server-PI envía una respuesta de confirmación al
+      user-PI.
+
+      Todas las implementaciones del FTP deben soportar el uso de los
+      puertos de datos por defecto y sólo el user-PI puede solicitar un
+      cambio a un puerto diferente.
+
+      Usando la orden PORT, el usuario puede especificar un puerto
+      alternativo. Puede que el usuario quiera volcar un fichero en una
+      impresora de líneas TAC o que se obtenga el fichero de un tercer
+      ordenador. En este último caso, el user-PI establece las
+      conexiones de control con ambos ordenadores. Luego dice a un
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 18]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      servidor (mediante una orden FTP) que "escuche" hasta recibir una
+      conexión que el otro iniciará. El user-PI envía aun server-PI una
+      orden PORT indicando el puerto de datos del otro.  Finalmente, se
+      envían a ambos las órdenes apropiadas de transferencia. La
+      secuencia exacta de órdenes y respuestas entre el usuario y los
+      servidores está en la sección sobre Respuestas FTP.
+
+      En genera, es responsabilidad del servidor mantener la conexión de
+      datos (abrirla y cerrarla). La excepción a esto se produce cuando
+      el user-DTP envía los datos en un modo de transferencia que
+      requiere cerrar la conexión para indicar EOF. El servidor DEBE
+      cerrar la conexión de datos bajo las siguientes circunstancias:
+
+         1. El servidor ha terminado de enviar datos en un modo de
+         transferencia que requiere un cierre para indicar EOF.
+
+         2. El servidor recibe una orden ABORT del usuario.
+
+         3. Una orden del usuario especifica un nuevo puerto.
+
+         4. La conexión de control se cierra correctamente o de
+         cualquier otro modo.
+
+         5. Se produce una condición de error irrecuperable.
+
+      En cualquier caso, el cierre es una opción del servidor que se
+      debe indicar al proceso de usuario sólo mediante una respuesta 250
+      ó 226.
+
+   3.3.  MANEJO DE LA CONEXION DE DATOS
+
+      Puertos de la conexión de datos por defecto: Todas las
+      implementaciones del FTP deben soportar el uso de los puertos de
+      datos por defecto y sólo el user-PI puede iniciar el uso de otros
+      puertos.
+
+      Negociando puertos de datos distintos a los que hay por defecto:
+      el user-PI puede especificar un puerto de datos diferente por su
+      parte con la orden PORT. El user-PI puede solicitar al servidor la
+      localización de un puerto en el propio servidor con la orden PASV.
+      Como una conexión está definida por el par de direcciones,
+      cualquiera de estas acciones es suficiente para tener una conexión
+      de datos diferente, pero se permite usar ambas órdenes para
+      utilizar nuevos puertos en los dos lados de la conexión.
+
+      Reutilización de la conexión de datos: Cuando se usa el modo flujo
+      para transferencia de datos el final de fichero se indica cerrando
+      la conexión. Esta causa un problema si se van a transferir varios
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 19]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      ficheros en la sesión, debido a la necesidad que tiene el TCP de
+      mantener el registro de la conexión por un tiempo de espera para
+      garantizar una comunicación fiable.  Por eso la conexión no puede
+      reabrirse inmediatamente.
+
+         Hay dos soluciones a este problema. La primera es negociar un
+         puerto diferente al que hay por defecto. La segunda es usar
+         otro modo de transmisión.
+
+         Un comentario sobre los modos de transmisión. El modo flujo de
+         transferencia es implícitamente poco fiable porque no se puede
+         determinar si la conexión se ha cerrado prematuramente o no.
+         Los otros modos de transferencia (de bloque, comprimido) no
+         cierran la conexión para indicar el final de fichero. Los datos
+         que envía el FTP a través de ellos hacen que se pueda
+         determinar el final de fichero. Por eso, usando estos modos, se
+         puede dejar la conexión de datos abierta para transferir más de
+         un fichero.
+
+   3.4.  MODOS DE TRANSMISION
+
+      Otro aspecto a considerar en la transferencia de datos es la
+      elección apropiada del modo de transmisión. Hay tres modos: uno
+      que formatea los datos y permite reiniciar la transmisión; otro
+      que además comprime los datos para una transferencia eficaz; y
+      otro que pasa los datos sin apenas procesarlos. En este último
+      caso, el modo interactúa con el atributo de estructura para
+      determinar el tipo de proceso. En el modo comprimido, el tipo de
+      representación determina el byte de relleno.
+
+      Todas las transferencia de datos se deben complementar con un fin-
+      de-fichero (EOF, end-of-file) que se puede indicar explícita o
+      implícitamente cerrando la conexión de datos. Para ficheros con
+      estructura de registro, todos los indicadores de fin-de-registro
+      (EOR) son explícitos, incluyendo el último. Para ficheros
+      transmitidos con estructura de página, se usa una página con el
+      indicador de última página activado.
+
+      NOTA: en el resto de esta sección, byte significa "byte de
+      transferencia" excepto donde se indique explícitamente.
+
+      Para estandarizar la transferencia, el ordenador que envía los
+      datos trasladará sus caracteres de fin de línea o de fin de
+      registro a la representación indicada por el modo de transferencia
+      y la estructura del fichero y el receptor realizará la traducción
+      inversa a su representación interna. Un campo de contador de
+      registro de un Mainframe de IBM puede no ser reconocido por otro
+      ordenador, por eso, la información de fin-de-registro se puede
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 20]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      transferir como un código de control de dos bytes en modo flujo o
+      como un bit activado en un descriptor de modo bloque o comprimido.
+      El fin-de-línea en un fichero ASCII o EBCDIC no estructurado en
+      registros se debería indicar con <CRLF> o <NL> respectivamente.
+      Debido a que estas transformaciones implican un trabajo extra para
+      algunos sistemas, sistemas idénticos que transfieren entre ellos
+      un fichero de texto no estructurado en registros pueden preferir
+      usar una representación binaria y modo flujo para la
+      transferencia.
+
+      Se definen los siguientes modos de transmisión en el FTP:
+
+      3.4.1.  MODO FLUJO
+
+         Los datos se transmiten como un flujo de bytes. No hay ninguna
+         restricción en el tipo de representación usado; se permiten
+         estructuras de registro.
+
+         En un fichero estructurado en registros, EOR y EOF se indicarán
+         por un código de control de dos bytes. El primer byte del
+         código de control consistirá en todo unos, el carácter de
+         escape. El segundo tendrá el bit de orden más bajo activado y
+         ceros en el resto para EOR y el segundo bit de orden más bajo
+         activado para EOF; esto es, el byte valdrá 1 para EOR y 2 para
+         EOF. EOF y EOR se pueden indicar conjuntamente en el último
+         byte transmitido activando los dos bits más bajos (i.e., el
+         valor 3). Si se pretende transmitir un byte con todo unos como
+         dato, se debería repetir em el segundo byte del código de
+         control.
+
+         Si la estructura es de fichero, se indica el EOF cuando el
+         ordenador que envía los datos cierra la conexión de datos y
+         todos los bytes son bytes de datos.
+
+      3.4.2.  MODO BLOQUE
+
+         El fichero se transmite como una serie de bloques de datos
+         precedidos por uno o más bytes cabecera. Los bytes de la
+         cabecera contienen un campo contador y un código descriptor. El
+         campo contador indica la longitud total del bloque de datos en
+         bytes, indicando así el inicio del siguiente bloque de datos
+         (no hay bits de relleno). El código descriptor define: último
+         bloque del fichero (EOF), último bloque del registro (EOR),
+         indicador de reinicio (vea la sección sobre Recuperación de
+         Errores y Reinicio) o datos sospechosos (i.e., los datos
+         tranferidos pueden contener errores y no son fiables). Este
+         último código NO es para controlar errores desde el propio FTP.
+         Su uso está motivado por el deseo de ciertos sitios que
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 21]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         intercambian cierto tipo de información (por ejemplo, datos
+         sísmicos o meteorológicos) enviando y recibiendo todos los
+         datos a pesar de que pueda haber errores locales (como errores
+         leyendo una cinta magnética). Se permiten estructuras de
+         registro y se puede usar cualquier tipo de representación.
+
+         La cabecera consiste en tres bytes. De los 24 bits de
+         información, los 16 más bajos representan un contador de bytes
+         y los 8 más altos representan códigos de descripción como se
+         muestra a continuación.
+
+         Cabecera de Bloque
+
+            +----------------+----------------+----------------+
+            | Descriptor     |    Contador de Bytes            |
+            |         8 bits |                      16 bits    |
+            +----------------+----------------+----------------+
+
+         Los códigos de descripción se indican mediante bits en el byte
+         de descripción. Hay asignados 4 códigos, donde cada número de
+         código es el valor decimal del correspondiente bit en el byte.
+
+         Código     Significado
+
+            128     El final del bloque de datos es EOR
+             64     El final del bloque de datos es EOF
+             32     Puede haber errores en el bloque
+             16     El bloque de datos es un marcador de reinicio
+
+         Con esta codificación, más de una condición codificada puede
+         ocurrir para un bloque en particular. Se pueden activar tantos
+         bits como sea necesario.
+
+         El indicador de reinicio está incluído en el flujo de datos
+         como un número de 8 bits representando caracteres imprimibles
+         en el lenguaje usado en la conexión de control (por ejemplo,
+         NVT-ASCII). <SP> (espacio en el lenguaje apropiado) no se debe
+         usar DENTRO de un indicador de reinicio.
+
+         Por ejemplo, para transmitir un indicardor de seis caracteres,
+         se debería enviar lo siguiente:
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 22]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            +----------+--------+--------+
+            |Descriptor|  Byte count     |
+            |code= 16  |             = 6 |
+            +----------+--------+--------+
+
+            +-------+-------+-------+
+            | Marca | Marca | Marca |
+            | 8 bits| 8 bits| 8 bits|
+            +-------+-------+-------+
+
+            +-------+-------+-------+
+            | Marca | Marca | Marca |
+            | 8 bits| 8 bits| 8 bits|
+            +-------+-------+-------+
+
+      3.4.3.  MODO COMPRIMIDO
+
+         Hay tres clases de información a enviar: datos normales,
+         enviados en una cadena de bytes; datos comprimidos, formados
+         por repeticiones o relleno; e información de control, enviada
+         en una secuencia de escape de dos bytes. Si se envía n>0 bytes
+         (hasta 127) de datos normales, estos n bytes van precedidos de
+         un byte con el bit más a la izquierda a cero y los 7 bits más a
+         la derecha contienen el número n.
+
+                  Cadena de bytes:
+
+             1       7                8                     8
+            +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+     +-+-+-+-+-+-+-+-+
+            |0|       n     | |    d(1)       | ... |      d(n)     |
+            +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+     +-+-+-+-+-+-+-+-+
+                                          ^             ^
+                                          |---n bytes---|
+                                              de datos
+
+            Cadena de n bytes de datos d(1),..., d(n)
+            El contador n debe ser positivo.
+
+         Para comprimir una cadena de n repeticiones del byte de datos
+         d, se envían los 2 siguientes bytes:
+
+         Byte Repetido:
+
+              2       6               8
+            +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+            |1 0|     n     | |       d       |
+            +-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 23]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         Una cadena de n bytes de relleno se puede comprimir en un sólo
+         byte, donde el byte de relleno varía según el tipo de
+         representación.  Si el tipo es ASCII o EBCDIC, el byte de
+         relleno es <SP> (espacio, código ASCII 32, código EBCDIC 64).
+         Si el tipo es imagen o byte local, el relleno es un byte cero.
+
+         Cadena de Relleno:
+
+
+              2       6
+            +-+-+-+-+-+-+-+-+
+            |1 1|     n     |
+            +-+-+-+-+-+-+-+-+
+
+         La secuencia de escape está formada por dos bytes, el primero
+         de los cuales es el byte de escape (todo ceros) y el segundo
+         contiene códigos de descripción según lo definido para el modo
+         bloque. Los códigos tienen el mismo significado que
+         anteriormente y se aplican a la cadenas de bytes transmitidas
+         con éxito.
+
+         EL modo comprimido es útil para obtener un ancho de banda
+         adicicional en transmisiones muy largas con un coste extra de
+         CPU muy pequeño. Se puede usar de forma muy efectiva para
+         reducir el tamaño de ficheros para imprimir como los generados
+         por ordenadores RJE.
+
+   3.5.  RECUPERACION DE ERRORES Y REINICIO
+
+      No hay nada que detecte bits perdidos o alterados en las
+      transmisiones de datos; este nivel de control de errores lo maneja
+      el TCP. Sin embargo, se proporciona un medio para recomenzar
+      transferencia para proteger a los usuarios de fallos graves en el
+      sistema (incluyendo fallos de un ordenador, un proceso FTP o de la
+      red usada).
+
+      Sólo está definido el procedimiento de reinicio para los modos de
+      transferencia de bloque y comprimido. Requiere que el que envía
+      datos inserte un código marcador especial en el flujo de datos con
+      información que indique por dónde vamos. Esta información sólo
+      tiene significado para el ordenador que envía los datos, pero debe
+      consistir en caracteres imprimibles en el lenguaje negociado o por
+      defecto de la conexión de control (ASCII o EBCDIC). El indicador
+      puede representar una cuenta de los bits, los registros o
+      cualquier otra información por la que un sistema pueda identificar
+      un punto de control. El receptor de los datos, si implementa el
+      procedimiento de reinicio, debería guardar la correspondiente
+      posición de este marcador en el sistema receptor y devolver esta
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 24]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      información al usuario.
+
+      En el caso de un fallo del sistema, el usuario puede reiniciar la
+      transferencia de datos identificando el último marcador recibido
+      con el procedimiento de recomenzar del FTP. El siguiente ejemplo
+      ilustra el uso de este procedimiento:
+
+      El que envía datos inserta un bloque marcador apropiado en el
+      flujo de datos en un punto conveniente. El que recibe marca el
+      correspondiente punto en sus sistema de ficheros y proporciona al
+      usuario información del último marcador recibido, ya sea
+      directamente o por la conexión de control en una respuesta 110
+      (dependiendo de quién envíe el fichero). Si ocurre un error del
+      sistema, el usuario o proceso reinicia el servidor en el último
+      punto que este indicó enviando la orden recomenzar con el marcador
+      del servidor como argumento. La orden se transmite por la conexión
+      de control y es seguida inmediatamente por la orden (ya sea RETR,
+      STOR o LIST) que se estaba ejecuntado cuando ocurrió el error.
+
+4.  FUNCIONES DE TRANSFERENCIA DE FICHEROS
+
+   El canal de comunicación entre el user-PI y el server-PI se establece
+   como una conexión TCP desde el usuario al puerto estándar. El
+   intérprete de protocolo de usuario es responsable de enviar órdenes
+   FTP e interpretar las respuestas recibidas; el server-PI interpreta
+   las órdenes, envía respuestas y controla su DTP para establecer la
+   conexión de datos y transferirlos. Si el proceso de transferencia
+   pasiva es el user-DTP, entonces está controlado a través del
+   protocolo interno del ordenador donde se ejecuta el user-DTP; si es
+   otro server-DTP, está controlado a través de órdenes recibidas en su
+   PI desde el user-PI. Las respuestas FTP se tratan en la siguiente
+   sección.
+
+   Al describir algunas de las órdenes en esta sección, viene bien ser
+   explícito con las posibles respuestas.
+
+   4.1.  ORDENES FTP
+
+      4.1.1.  ORDENES DE CONTROL DE ACCESO
+
+         Las siguientes órdenes especifican identificadores de control
+         de acceso (los códigos de las órdenes están entre paréntesis).
+
+         NOMBRE DE USUARIO (USER)
+            El argumento es una cadena Telnet que identifica al usuario.
+            Esta identificación es la que requiere el servidor para
+            acceder a su sistema de ficheros. Normalmente esta será la
+            primera orden a transmitir una vez establecida la conexión
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 25]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            de control (algunos ordenadores lo pueden requerir). El
+            servidor puede requerir información adicional como una
+            contraseña y/o cuenta. Los servidores pueden permitir una
+            nueva orden USER en cualquier momento para cambiar el
+            control de acceso y/o la información de la cuenta. Esto
+            tiene el efecto de descartar cualquier información anterior
+            sobre usuario, contraseña y cuenta y comienza la secuencia
+            de acceso otra vez. Todos lo parámetros de la transferencia
+            permanecen sin cambios y cualquier transferencia de fichero
+            en curso se completa bajo los anteriores parámetros de
+            control de acceso.
+
+         CONTRASEÑA (PASS)
+            El argumento es una cadena Telnet especificando la
+            contraseña del usuario. Esta orden debe ir inmediatamente
+            precedida por la orden USER y, para algunos ordenadores,
+            completa la identificación del usuario para el control de
+            acceso. Como la información de la contraseña es un dato
+            confidencial, es preferible, en general, "enmascararla" o
+            evitar mostrarla en pantalla. Parece que el servidor no
+            tiene un medio a prueba de tontos para conseguir esto. Por
+            tanto es responsabiliad del proceso user-FTP el ocultar la
+            información sobre la contraseña.
+
+         CUENTA (ACCT)
+            El argumento es una cadena Telnet identificando la cuenta
+            del usuario. Esta orden no está necesariamente relacionada
+            con la orden USER, ya que algunos ordenadores pueden
+            requerir una cuenta para acceder y otros sólo para cierto
+            tipo de acceso, como almacenar ficheros. En este último
+            caso, la orden se puede enviar en cualquier momento.
+
+            Hay códigos de respuesta para diferenciar automáticamente
+            estos casos: cuando se requiere información de la cuenta, la
+            respuesta a una orden PASS correcta es el código 332. Por
+            otra parte, si NO se requiere esta información, la respuesta
+            a una orden PASS correcta es 230; y si la cuenta se requiere
+            para una orden enviada más tarde, el servidor debería
+            devolver una respuesta 332 o una 532 dependiendo de que
+            almacene (esté pendiente de recibir el comando ACCT) o
+            descarte la orden, respectivamente.
+
+         CAMBIO DE DIRECTORIO DE TRABAJO (CWD)
+            Esta orden permite al usuario trabajar en un directorio o
+            conjunto de datos [data set] diferente para almacenar o
+            recuperar información sin alterar su información de entrada
+            o de cuenta. Los parámetros de transferencia permanecen sin
+            cambios. El argumento es un nombre de ruta especificando el
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 26]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            directorio o alguna otra agrupación de ficheros dependiente
+            del sistema.
+
+         CAMBIAR AL DIRECTORIO PADRE (CDUP)
+            Esta orden es un caso especial de CWD y se incluye para
+            simplificar la implementación de programas para transferir
+            árboles de directorios entre sistemas operativos que tienen
+            diferentes formas de nombrar al directorio padre. Los
+            códigos de respuestas deberán ser idénticos a los de CWD.
+            Vea el Apéndice II para más detalles.
+
+         MONTAR ESTRUCTURA (SMNT)
+            Esta orden permite al usuario montar un sistema de ficheros
+            diferente sin alterar su información de entrada o de cuenta.
+            Los parámetros de transferencia permanecen sin cambios. El
+            argumento es un nombre de ruta especificando un directorio o
+            alguna otra agrupación de ficheros dependiente del sistema.
+
+         REINICIALIZAR (REIN)
+            Esta orden termina una orden USER, descargando todos los
+            datos del entrada/salida y la información de cuenta, excepto
+            que si hay alguna transferencia en proceso permite que
+            termine. Todos los parámetros se inician con sus valores por
+            defecto y la conexión de control se deja abierta. El estado
+            alcanzado es idéntico al que se tiene inmediatamente después
+            de abrir la conexión de control. Posiblemente se espere una
+            orden USER a continuación de esta.
+
+         DESCONECTAR (QUIT)
+            Esta orden termina una orden USER y si no hay en proceso
+            ninguna transferencia, cierra la conexión de control. Si hay
+            una transferencia de fichero en proceso, la conexión
+            permanecerá abierta hasta que el servidor envíe una
+            respuesta con el resultado de la transferencia y luego se
+            cierra. Si el proceso de usuario está transfiriendo ficheros
+            para varios usuarios (USERs) pero no quiere cerrar la
+            conexión y reabrirla para cada usuario, se debería usar el
+            comndo REIN en lugar de QUIT. Un cierre inesperado de la
+            conexión de control provoca que el servidor actúe como si
+            hubiera recibido las órdenes interrumpir (ABOR) y
+            desconectar (QUIT).
+
+      4.1.2.  ORDENES DE PARAMETROS DE TRANSFERENCIA
+
+         Todos los parámetros de transferencia de datos tienen valores
+         por defecto y las órdenes que especifican valores para ellos
+         sólo se deben utilizar si se van a cambiar los parámetros por
+         defecto. El valor por defecto es el último valor especificado
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 27]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         o, si no se ha especificado ninguno, el valor por defecto
+         estándar es el que se indica aquí. Esto implica que el servidor
+         debe "recordar" los valores por defecto aplicables. Las órdenes
+         pueden ir en cualquier orden, pero deben preceder a la
+         transferencia. Las siguientes órdenes especifican parámetros de
+         transferencia de datos:
+
+         PUERTO DE DATOS (PORT)
+            El argumento es una especificación ordenador-puerto para el
+            puerto que será usado en la conexión de datos. Hay valores
+            por defecto tanto para el puerto de usuario como para el del
+            servidor y, bajo circunstancias normales, esta orden y su
+            respuesta no son necesarias. Si se usa esta orden, el
+            argumento es la concatenación de una dirección IP (32 bits)
+            y un puerto TCP (16 bits). Esta información está repartida
+            en campos de 8 bits y el valor de cada campo se transmite
+            como un número decimal (representado como una cadena de
+            caracteres). Los campos están separados por comas. Una orden
+            PORT podría ser algo así:
+
+                  PORT h1,h2,h3,h4,p1,p2
+
+            donde h1 es el número decimal correspondiente a los 8 bits
+            más altos de la dirección IP del ordenador.
+
+         PASIVO (PASV)
+            Esta orden solicita al server-DTP que "escuche" en un puerto
+            de datos (que no es el puerto por defecto) y espere a
+            recibir una conexión en lugar de iniciar una al recibir una
+            orden de transferencia. La respuesta a este comando incluye
+            la dirección IP y el puerto donde este servidor está
+            esperando a recibir la conexión.
+
+         TIPO DE REPRESENTACION (TYPE)
+            El argumento especifica un tipo de representación tal y como
+            se describió en la sección Representación de Datos y
+            Almacenamiento. Algunos tipos requieren un segundo
+            parámetro. El primer parámetro es un único carácter Telnet y
+            el segundo, para ASCII y EBCDIC, también; el segundo
+            parámetro para tamaño de byte local es un entero decimal.
+            Los parámetros están separados por un <SP> (espacio, código
+            ASCII 32).
+
+            Se asignan los siguientes códigos para tipos:
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 28]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                    \    /
+          A - ASCII |    | N - No para imprimir
+                    |-><-| T - Formateo con caracteres Telnet
+          E - EBCDIC|    | C - Control de carro (ASA)
+                    /    \
+          I - Imagen
+
+          L <tamaño de byte> - Tamaño de byte local
+
+            La representación por defecto es ASCII no para imprimir. Si
+            se cambia el parámetro de formato y más tarde sólo el primer
+            argumento, el formato vuelve a ser el inicial por defecto
+            (no para imprimir).
+
+         ESTRUCTURA DEL FICHERO (STRU)
+            El argumento es un único carácter Telnet especificando una
+            estructura de fichero de las descritas en la sección
+            Representación de Datos y Almacenamiento.
+
+            Existen los siguientes códigos para la estructura:
+
+               F - Fichero (sin estructurar en registros) R -
+               Estructurado en registros P - Estruturado en páginas
+
+            La estructura por defecto es Fichero.
+
+         MODO DE TRANSFERENCIA (MODE)
+            El argumento es un único carácter Telnet especificando un
+            modo de transferencia de los descritos en la sección Modos
+            de Transmisión.
+
+            Los posibles códigos son los siguientes:
+
+               S - Flujo
+
+               B - Bloque
+
+               C - Comprimido
+
+            El modo por defecto es Flujo.
+
+      4.1.3.  ORDENES DE SERVICIO FTP
+
+         Las órdenes de servicio FTP definen la transferencia del
+         fichero o la función del sistema de ficheros que requiere el
+         usuario. El argumento normalmente será un nombre de ruta. La
+         sintaxis del nombre de ruta debe seguir las convenciones del
+         servidor (con valores estándar por defecto aplicables) y las
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 29]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         convenciones del lenguaje usado en la conexión de control.  Se
+         sugiere que por defecto se utilice el último dispositivo,
+         directorio o nombre de fichero o el valor por defecto para los
+         usuarios locales. Las órdenes pueden enviarse en cualquier
+         secuencia, excepto que la orden "renombrar" debe ir seguida por
+         una "renombrar a" y la orden "recomenzar" debe ir seguida por
+         la orden de servicio interrumpida (por ejemplo, STOR o RETR).
+         Cuando se transfieren datos se debe hacer siempre a través de
+         la conexión de datos, excepto para algunas respuestas
+         informativas. Las siguientes órdenes especifican peticiones de
+         servicio FTP:
+
+         RECUPERAR (RETR)
+            Esta orden hace que el server-DTP transfiera una copia del
+            fichero especificado en el nombre de ruta al proceso que
+            está al otro lado de la conexión de datos. El estado y el
+            contenido del fichero en el servidor debe permanecer tal y
+            como estaba.
+
+         ALMACENAR (STOR)
+            Esta orden hace que el server-DTP lea los datos transferidos
+            por la conexión de datos y los guarde en un fichero en el
+            servidor. Si el fichero especificado en el nombre de ruta
+            existe en el servidor, su contenido se debe reemplazar con
+            los datos recibidos. Se crea un fichero nuevo en el servidor
+            si el indicado no existía ya.
+
+         ALMACENAR UNICO (STOU)
+            Esta orden se comporta igual que STOR sólo que el fichero
+            resultante se crea en el directorio actual con un nombre
+            único para ese directorio. La respuesta 250 Transferencia
+            iniciada debe incluir el nombre generado.
+
+         AÑADIR (con creación) (APPE)
+            Esta orden hace que el server-DTP reciba datos a través de
+            la conexión de control y los guarde en un fichero en el
+            servidor. Si el fichero especificado en el nombre de ruta
+            existe, los datos se añaden a ese fichero; si no, se crea un
+            fichero nuevo en el servidor.
+
+         SOLICITAR ESPACIO (ALLO)
+            Esta orden puede ser necesaria para que algunos servidores
+            reserven suficiente espacio de almacenamiento para recibir
+            el nuevo fichero.  El argumento debe ser un entero decimal
+            indicando el número de bytes (usando el tamaño de byte
+            lógico) de almacenamiento que se deben reservar. Para
+            ficheros enviados con estructura en registros o páginas,
+            puede ser necesario enviar el tamaño máximo de registro o
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 30]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            página; esto se indica con un entero decimal como segundo
+            argumento de la orden. Este segundo argumento es opcional,
+            pero cuando se utilice, debe estar separado del primero por
+            los caracteres Telnet <SP> R <SP>. A continueción de esta
+            orden se deberá indicar una orden STOR o APPE. La orden ALLO
+            debería tratarse como la orden NOOP (no operación) por los
+            servidores que no necesitan conocer de antemano el tamaño
+            del fichero y aquellos servidores que sólo interpreten el
+            tamaño máximo de registro o página deberían admitir un valor
+            inutil como primer argumento e ignorarlo.
+
+         RECOMENZAR (REST)
+            El argumento representa un marcador del servidor a partir
+            del cual debe recomenzar la transferencia. La orden no
+            realiza la transferencia del fichero, pero hace que el
+            puntero de lectura o escritura del fichero se sitúe a
+            continuación del punto indicado. A continuación de esta
+            orden se debe enviar la orden de servicio FTP apropiada que
+            hará que continúe la transferencia del fichero.
+
+         RENOMBRAR DE (RNFR)
+            Esta orden indica el fichero que queremos cambiar de nombre
+            en el servidor. Debe ir inmediatamente seguida de la orden
+            "renombrar a" con el nuevo nombre para el fichero.
+
+         RENOMBRAR A (RNTO)
+            Esta orden especifica el nuevo nombre para el fichero
+            indicado mediante el comando RNFR. Las dos órdenes seguidas
+            hacen que el fichero cambie de nombre.
+
+         INTERRUMPIR (ABOR)
+            Este comando pide al servidor que interrumpa la orden de
+            servicio FTP previa y cualquier transferencia de datos
+            asociada. La orden de interrupción puede requerir alguna
+            "acción especial", tratada más adelante, para forzar el
+            reconocimiento de la orden por el servidor. No se hará nada
+            si la orden anterior ha finalizado (incluyendo la
+            transferencia de datos). El servidor no cierra la conexión
+            de control, pero puede que sí cierre la conexión de datos.
+            Hay dos posibles casos para el servidor al recibir esta
+            orden: (1) la orden de servicio FTP está ya terminada, o (2)
+            aún está en ejecución.
+
+            En el primer caso, el servidor cierra la conexión de datos
+            (si está abierta) y devuelve una respuesta 226 indicando que
+            la orden de interrumpir se ha procesado correctamente. En el
+            segundo caso, el servidor interrumpe el servicio FTP en
+            proceso y cierra la conexión de datos, devolviendo una
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 31]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            respuesta 426 para indicar que la solicitud de servicio
+            terminó anormalmente. Luego, el servidor envía una respuesta
+            226 para indicar que la orden de interrumpir se ha procesado
+            correctamente.
+
+         BORRAR (DELE)
+            Esta orden borra en el servidor el fichero indicado en el
+            nombre de ruta. Si se quiere tener un nivel extra de
+            protección (del tipo "¿Seguro qu quiere borrar el
+            fichero?"), la debería proporcionar el proceso user-FTP.
+
+         BORRAR DIRECTORIO (RMD)
+            Esta orden borra en el servidor el directorio indicado. Vea
+            el Apéndice II.
+
+         CREAR DIRECTORIO (MKD)
+            Esta orden crea el directorio indicado en el servidor. Vea
+            el Apéndice II.
+
+         MOSTRAR EL DIRECTORIO DE TRABAJO (PWD)
+            Esta orden hace que el servidor nos devuelva en la respuesta
+            el nombre del directorio actual. Vea Apéndice II.
+
+         LISTAR (LIST)
+            Esta orden hace que el servidor envíe una listado de los
+            ficheros a través del proceso de transferencia de datos
+            pasivo. Si el nombre de ruta u otra agrupación de ficheros,
+            el servidor debe transferir una lista de los ficheros en el
+            directorio indicado. Si el nombre de ruta especifica un
+            fichero, el servidor debería enviar información sobre el
+            fichero. Si no se indica argumento alguno, implica que se
+            quiere listar el directorio de trabajo actual o directorio
+            por defecto. Los datos se envían a traves de la conexión de
+            datos con tipo ASCII o EBCDIC. (El usuario se debe asegurar
+            del tipo con TYPE).  Como la información sobre un fichero
+            puede variar mucho de un sistema a otro, es muy difícil que
+            ésta pueda ser procesada automáticamente, pero puede ser
+            útil para una persona.
+
+         LISTAR NOMBRES (NLST)
+            Esta orden hace que se envíe un listado de directorio desde
+            el servidor. El nombre de ruta indica un directorio u otra
+            agrupación de ficheros específica del sistema; si no hay
+            argumento, se asume el directorio actual. Los datos se
+            transfieren en formato ASCII o EBCDIC a través de la
+            conexión de datos separados unos de otros por <CRLF> o <NL>.
+            (Una vez más el usuario se debe asegurar con TYPE). La
+            función de esta orden es devolver información que pueda ser
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 32]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            usada por un programa para procesar posteriormente los
+            ficheros automáticamente. Por ejemplo, implementando una
+            función que recupere varios ficheros.
+
+         PARAMETROS DEL SISTEMA (SITE)
+            Esta orden la usa el servidor para proporcionar servicios
+            específicos propios de su sistema que son fundamentales para
+            transferir ficheros pero no lo suficientemente universales
+            como para ser incluídos como órdenes en el protocolo. La
+            naturaleza de este servicio y la especificación de su
+            sintaxis se puede obtener como respuesta a una orden HELP
+            SITE.
+
+         SISTEMA (SYST)
+            Esta orden devuelve el tipo de sistema operativo del
+            servidor.  La respuesta debe tener como primera palabra uno
+            de los nombres de sistema listados en la versión actual del
+            documento Números Asignados [4].
+
+         ESTADO (STAT)
+            Esta orden hace que el servidor nos envía una respuesta con
+            su estado a través de la conexión de control. La orden se
+            puede enviar durante la transferencia de un fichero (junto
+            con las señales Telnet IP y Synch--vea la sección Ordenes
+            FTP) en cuyo caso el servidor responderá con el estado de la
+            operación en progreso, o se puede enviar entre
+            transferencias de ficheros. En este último caso, la orden
+            puede llevar un argumento. Si el argumento es un nombre de
+            ruta, la orden es similar a LIST, excepto que los datos se
+            devolverán por la conexión de control. Si no hay ningún
+            argumento, el servidor devolverá información general del
+            estado del proceso servidor FTP. Esto debería incluir los
+            valores actuales de los parámetros de transferencia y el
+            estado de las conexiones.
+
+         AYUDA (HELP)
+            Esta orden hace que el servidor envíe información sobre la
+            implementación del FTP a través de la conexión de control.
+            La orden puede tener un argumento que debe ser un nombre de
+            orden y así devuelve información más específica como
+            respuesta. La respuesta es de tipo 211 ó 214. Se sugiere que
+            se permita el uso de HELP antes de el comando USER. El
+            servidor puede usar esta respuesta para especificar
+            parámetros dependientes del sistema, por ejemplo, en
+            respuesta a HELP SITE.
+
+         NO OPERACION (NOOP)
+            Esta orden no afecta a ningún parámetro ni orden introducida
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 33]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            previamente. No hace nada más que provocar que el servidor
+            envíe una respuesta OK.
+
+      El Protocolo de Transferencia de Ficheros sigue la especificación
+      del Protocolo Telnet en todas las comunicaciones a través de la
+      conexión de control. Como el lenguaje usado para comunicación
+      Telnet puede ser una opción negociada, todas las referencias en
+      las siguientes dos secciones se referirán al "lenguaje Telnet" y
+      el correspondiente "código Telnet de fin-de-línea". De momento,
+      podemos entender que esto significa NVT-ASCII y <CRLF>. No se hará
+      mención a ninguna otra especificación del Protocolo Telnet.
+
+      Las órdenes FTP son "cadenas Telnet" terminadas con el "código
+      Telnet de fin de línea". Los códigos de orden son caracteres
+      alfabéticos terminados con el carácter <SP> (espacio) si tienen
+      parámetros o el carácter Telnet EOL (fin de línea) si no los
+      tienen. En esta seción se han descrito los códigos de orden y su
+      significado; la sintaxis detallada se encuentra en la sección
+      sobre Ordenes, las secuencias de respuesta se explican en la
+      sección Secuencia de Ordenes y Respuestas, y se muestran ejemplos
+      del uso de estos comandos en la sección Escenario Típico del FTP.
+
+      Las órdenes FTP se pueden dividir en aquellas que indican
+      identificadores de control de acceso, parámetros de transferencia
+      de datos y peticiones de servicio FTP. Algunas órdenes (como ABOR,
+      STAT y QUIT) se pueden enviar por la conexión de control cuando
+      hay una transferencia en proceso. Puede que algunos servidores no
+      sean capaces de gestionar las conexiones de control y de datos
+      simultáneamente, en cuyo caso puede ser necesaria alguna acción
+      especial para captar la atención del servidor. Se recomienda
+      insistentemente esta forma:
+
+         1. Se inserta la señal Telnet "Interrumpir Proceso" (IP) en la
+         conexión de control.
+
+         2. Se envía la señal Telnet "Synch".
+
+         3. Se envía el comando (p.e., ABOR) por la conexión de control.
+
+         4. El intérprete de protocolo del servidor, después de recibir
+         la señal "IP", lee de la conexión de control UNICAMENTE UN
+         COMANDO.  (Para otros servidores, puede que esto no sea
+         necesario, pero el hacerlo no tendrá ninguna repercusión.)
+
+   4.2.  RESPUESTAS FTP
+
+      Las respuestas a órdenes del FTP están pensadas para asegurar la
+      sincronización entre peticiones y acciones en el proceso de
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 34]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      transferencia de ficheros y para garantizar que el proceso de
+      usuario siempre conoce el estado del servidor. Cada orden debe
+      generar por lo menos una respuesta, aunque puede haber más de una;
+      en este último caso, las diferentes respuestas se deben distinguir
+      fácilmente. Además, algunos comandos deben ocurrir en secuencia,
+      como USER, PASS y ACCT o RNFR y RNTO. Las respuestas muestran la
+      existencia de un estado intermedio si todos los comandos
+      anteriores han ido correctamente. Un error en cualquier punto de
+      la seuencia implica que se debe iniciar de nuevo desde el
+      principio.
+
+      Los detalles de la secuencia orden-respuesta se muestran en un
+      conjunto de diagramas de estado más abajo.
+
+      Una respuesta FTP consiste en un número de tres cifras
+      (transmitido como tres caracteres alfanuméricos) seguidos de
+      texto. El número se proporciona para su uso por autómatas que
+      deben determinar el próximo estado; el texto va dirigido a las
+      personas. Se pretende que el número contenga suficiente
+      información codificada como para que el intérprete de protocolo de
+      usuario no necesite examinar el texto y pueda o bien descartarlo o
+      bien mostrarlo al usuario. En particular, el texto puede depender
+      del servidor y, por tanto, puede variar en cada código de
+      respuesta.
+
+      Una respuesta debe contener el código de 3 dígitos, seguidos de
+      espacio <SP>, seguido de una línea de texto (en la que hay
+      definido una longitud máxima), y termina con el código Telnet de
+      fin de línea. Habrá casos en los que el texto es mayor que una
+      línea. En estos casos el texto debe ir marcado para que el proceso
+      de usuario sepa cuando ha terminado la respuesta (i.e., deje de
+      leer de la conexión de control) y haga otras cosas.  Esto requiere
+      de un formato especial en la primera línea para indicar que hay
+      más y otro en la última línea para indicar lo propio. Al menos una
+      de estas debe contener el código de respuesta apropiado para
+      indicar el estado de la transacción. Para satisfacer a todos, se
+      ha decidido que ambas, la primera y la última línea, deben
+      contener el mismo código.
+
+      Por tanto, el formato para respuestas multi-línea consiste en que
+      la primera línea empieza con el código de respuesta requerido
+      seguido inmediatamente de un guión, "-" (también es el signo
+      menos), seguido de el texto. La última línea empezará con el mismo
+      código, seguido inmediatamente por un espacio <SP>, opcionalmente
+      texto, y el código Telnet de fin de línea.
+
+      Por ejemplo:
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 35]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                 123-Primera linea
+                     Segunda linea
+                 234 Una linea que comienza con numeros
+                 123 La ultima linea
+
+      El proceso de usuario sólo necesita buscar la segunda ocurrencia
+      del mismo código de respuesta, seguido de <SP> (espacio), al
+      principio de una línea. Si una línea intermedia comienza con un
+      número de tres dígitos, el servidor debe desplazar ese número para
+      evitar confusiones.
+
+      Este esquema permite permite que se usen los procedimientos
+      estándar del sistema para la información de respuesta (como, por
+      ejemplo, para STAT), con las líneas primera y última añadidas
+      "artificialmente". En casos raros en los que estos procedimientos
+      generen tres dígitos y un espacio al principio de cualquier línea,
+      el principio de cada línea de texto se debería desplazar con algún
+      texto neutral, como espacios.
+
+      Este esquema asume que las respuestas multilínea no pueden estar
+      anidadas.
+
+      Cada tres dígitos de la respuesta tienen un significado especial.
+      Se pretende permitir un rango de respuestas desde muy simple a muy
+      sofisticado para el proceso de usuario. El primer dígito denota si
+      la respuesta es buena, mala o incompleta. (Refiriendonos al
+      diagrama de estado), un proceso de usuario poco sofisticado podrá
+      determinar su próxima acción simplemente examinando el primer
+      dígito. Un proceso de usuario que quiera conocer aproximadamente
+      el tipo de error ocurrido (por ejemplo, error del sistema de
+      ficheros o error de sintaxis) puede examinar el segundo dígito,
+      reservando el tercero para una mayor precisión en la información
+      (por ejemplo, orden RNTO sin ser precedida por una RNFR).
+
+      Hay cinco valores para el primer dígito del código de respuesta:
+
+         1yz Respuesta preliminar positiva
+            Se ha iniciado la acción requerida; se espera otra respuesta
+            antes de seguir con una nueva orden. (El proceso de usuario
+            que envía otra orden antes de que la respuesta de
+            finalización llegue, estará violando el protocolo, pero el
+            proceso servidor debería encolar cualquier orden que reciba
+            mientras está ejecutando una orden anterior.) Este tipo de
+            respuesta se puede usar para indicar que se ha aceptado la
+            orden y que el proceso de usuario debería ocuparse ahora de
+            la conexión de datos, en implementaciones donde controlar
+            ambas conexiones a la vez es difícil. El proceso servidor
+            puede enviar, a lo sumo, una respuesta 1yz por orden
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 36]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            recibida.
+
+         2yz Respuesta de finalización positiva
+            La acción requerida se ha completado satisfactoriamente. Se
+            puede iniciar una nueva orden.
+
+         3yz Respuesta intermedia positiva
+            La orden se ha aceptado, pero se está pendiente de recibir
+            más información para completarla. El usuario debería enviar
+            otra orden indicando esta información. Esta respuesta se
+            utiliza en órdenes que deben ir en secuencia.
+
+         4yz Repuesta de finalización negativa transitoria
+            La orden no se ha aceptado y la acción requerida no se ha
+            llevado a cabo, pero la condición de error es temporal y se
+            puede solicitar la acción de nuevo. El usuario debería
+            volver al principio de la secuencia de comandos, si es que
+            la hay. Es difícil dar un significado a "transitoria",
+            particularmente cuando dos sistemas diferentes (el servidor
+            y el usuario) deben estar de acuerdo en la interpretación.
+            Cada respuesta la categoría 4yz puede tener un valor
+            diferente, pero se pretende con ella que el proceso de
+            usuario reintente la operación. Una regla para determinar si
+            una respuesta pertenece a la categoría 4yz o a la 5yz
+            (permanente negativa) es que las respuestas son 4yz si la
+            orden se puede repetir sin cambios en la forma o en las
+            propiedades del usuario o del servidor (por ejemplo, la
+            orden y sus argumentos son los mismos; el usuario no cambia
+            su cuenta ni su nombre; el servidor no lo interpreta de
+            diferente forma.
+
+         5yz Respuesta de finalización negativa permanente
+            La orden no se ha aceptado y la acción requerida no ha
+            tenido lugar. El proceso de usuario no debería repetir la
+            misma petición (en la misma secuencia). Incluso algunas
+            condiciones de error "permanente" se pueden corregir, por
+            eso el usuario (la persona) puede hacer posteriormente que
+            su proceso de usuario repita posteriormente la orden (por
+            ejemplo, se corrige el argumento, o el usuario cambia el
+            estado de su directorio.)
+
+      Las siguientes agrupaciones de funciones se codifican en el
+      segundo dígito:
+
+         x0z Sintaxis
+            Estas respuestas se refieren a errores de sintaxis, órdenes
+            correctas sintácticamente pero que no encajan en ninguna
+            otra categoría, órdenes no implementadas o superfluas.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 37]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         x1z Información
+            Estas son respuestas a solicitudes de información como
+            STATUS o HELP.
+
+         x2z Conexiones
+            Respuestas referidas a las conexiones de control y de datos.
+
+         x3z Autenticación y cuenta
+            Respuestas para el proceso de entrada al sistema y
+            procedimientos de cuenta.
+
+         x4z Sin especificar aún.
+
+         x5z Sistema de ficheros
+            Estas respuestas indican el estado del sistema de ficheros
+            en el servidor según se realizan transferencias u otras
+            acciones sobre el sistema de ficheros.
+
+      El tercer dígito afina más en el significado de cada una de las
+      categorías indicadas por el segundo. La lista de respuestas de la
+      siguiente sección mostrará esto. El texto asociado con cada
+      respuesta es sólo una recomendación, no una obligación, y puede
+      incluso cambiar según la orden asociada. Los códigos de respuesta,
+      por otra parte, deben seguir estrictamente las especificaciones;
+      es decir, las implementaciones de servidores no deben inventarse
+      nuevos códigos para situaciones que son ligeramente diferentes a
+      las descritas aquí, sino que deberían adaptarse a los códigos ya
+      definidos.
+
+      Una orden como TYPE o ALLO cuya correcta ejecución no proporciona
+      al usuario ninguna nueva información debería devolver un código
+      200. Si la orden no se ha implementado porque no tiene sentido
+      para un determinado sistema, por ejemplo ALLO en un TOPS-20, una
+      respuesta de finalización positiva es conveniente para no
+      confundir al proceso de usuario. En este caso se usa una respuesta
+      202 con, por ejemplo, el siguiente texto: "No es necesario
+      solicitar espacio para el fichero." Si, por otra parte, la orden
+      no es específica a ningún sistema y no está implementada, la
+      respuesta debe ser 502. Un caso particular de esto es la respuesta
+      504 para una orden que está implementada pero que se solicita con
+      un argumento no implementado.
+
+      4.2.1  Códigos de respuesta por grupos funcionales
+
+         200 Orden correcta.
+
+         500 Error de sintaxis, comando no reconocido.
+            Esto puede incluir errores como línea de orden demasiado
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 38]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            larga.
+
+         501 Error de sintaxis en parámetros o argumentos.
+
+         202 Orden no implementada, no necesaria en este sistema.
+
+         502 Orden no implementada.
+
+         503 Secuencia de órdenes incorrecta.
+
+         504 Orden no implementada para ese parámetro.
+
+
+         110 Respuesta de marcador de reinicio.
+            En este caso, el texto debe ser:
+               MARK yyyy = mmmm
+            Donde yyyy es el marcador del flujo de datos en el proceso
+            de usuario y mmmm es el equivalente en el servidor (atención
+            a los espacios entre los marcadores y el "=").
+
+         211 Estado del sistema o respuesta de ayuda del sistema.
+
+         212 Estado del directorio.
+
+         213 Estado del fichero.
+
+         214 Mensaje de ayuda.
+            Sobre como usar el servidor o el significado de una orden
+            particular no estándar. Esta respuesta sólo es útil para una
+            persona.
+
+         215 NOMBRE system type.
+            Donde NOMBRE es un nombre de sistema oficial de la lista que
+            hay en el documento Números Asignados.
+
+         120 El servicio estará en funcionamiento en nnn minutos.
+
+         220 Servicio preparado para nuevo usuario.
+
+         221 Cerrando la conexión de control.
+            Desconectado si procede.
+
+         421 Servicio no disponible, cerrando la conexión de control.
+            Esta puede ser la respuesta a cualquier comando si el
+            servidor sabe que debe finalizar.
+
+         125 La conexión de datos ya está abierta; comenzando
+         transferencia.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 39]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         225 Conexión de datos abierta; no hay transferencia en proceso.
+
+         425 No se puede abrir la conexión de datos.
+
+         226 Cerrando la conexión de datos.
+            La acción sobre fichero requerida ha sido correcta (por
+            ejemplo, una transferencia o interrupción).
+
+         426 Conexión cerrada; transferencia interrumpida.
+
+         227 Iniciando modo pasivo (h1,h2,h3,h4,p1,p2).
+
+
+         230 Usuario conectado, continúe.
+
+         530 No está conectado.
+
+         331 Usuario OK, necesita contraseña.
+
+         332 Necesita una cuenta para entrar en el sistema.
+
+         532 Necesita una cuenta para almacenar ficheros.
+
+
+         150 Estado del fichero correcto; va a abrirse la conexión de
+         datos.
+
+         250 La acción sobre fichero solicitado finalizó correctamente.
+
+         257 "NOMBRERUTA" creada.
+
+         350 La acción requiere más información
+
+         450 Acción no realizada.
+            Fichero no disponible (por ejemplo, fichero bloqueado).
+
+         550 Acción no realizada,
+            Fichero no disponible (por ejemplo, fichero no existe, no se
+            tiene acceso al mismo).
+
+         451 Acción interrumpida. Error local.
+
+         551 Acción interrumpida. Tipo de página desconocido.
+
+         452 Acción no realizada.
+            Falta de espacio en el sistema de ficheros.
+
+         552 Acción interrumpida.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 40]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            Se ha sobrepasado el espacio disponible de almacenamiento
+            (para el directorio actual).
+
+         553 Acción no realizada.
+            Nombre de fichero no permitido.
+
+      4.2.2 Códigos de respuesta por número.
+
+         110 Respuesta de marcador de reinicio.
+            En este caso, el texto debe ser:
+               MARK yyyy = mmmm
+            Donde yyyy es el marcador del flujo de datos en el proceso
+            de usuario y mmmm es el equivalente en el servidor (atención
+            a los espacios entre los marcadores y el "=").
+
+         120 El servicio estará en funcionamiento en nnn minutos.
+
+         125 La conexión de datos ya está abierta; comenzando
+         transferencia.
+
+         150 Estado del fichero correcto; va a abrirse la conexión de
+         datos.
+
+         200 Orden correcta.
+
+         211 Estado del sistema o respuesta de ayuda del sistema.
+
+         212 Estado del directorio.
+
+         213 Estado del fichero.
+
+         214 Mensaje de ayuda.
+            Sobre como usar el servidor o el significado de una orden
+            particular no estándar. Esta respuesta sólo es útil para una
+            persona.
+
+         215 NOMBRE system type.
+            Donde NOMBRE es un nombre de sistema oficial de la lista que
+            hay en el documento Números Asignados.
+
+         220 Servicio preparado para nuevo usuario.
+
+         221 Cerrando la conexión de control.
+            Desconectado si procede.
+
+         225 Conexión de datos abierta; no hay transferencia en proceso.
+
+         226 Cerrando la conexión de datos.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 41]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            La acción sobre fichero requerida ha sido correcta (por
+            ejemplo, una transferencia o interrupción).
+
+         227 Iniciando modo pasivo (h1,h2,h3,h4,p1,p2).
+
+         230 Usuario conectado, continúe.
+
+         250 La acción sobre fichero solicitado finalizó correctamente.
+
+         257 "NOMBRERUTA" creada.
+
+         331 Usuario OK, necesita contraseña.
+
+         332 Necesita una cuenta para entrar en el sistema.
+
+         532 Necesita una cuenta para almacenar ficheros.
+
+         350 La acción requiere más información.
+
+         421 Servicio no disponible, cerrando la conexión de control.
+            Esta puede ser la respuesta a cualquier comando si el
+            servidor sabe que debe finalizar.
+
+         425 No se puede abrir la conexión de datos.
+
+         426 Conexión cerrada; transferencia interrumpida.
+
+         450 Acción no realizada.
+            Fichero no disponible (por ejemplo, fichero bloqueado).
+
+         451 Acción interrumpida. Error local.
+
+         452 Acción no realizada.
+            Falta de espacio en el sistema de ficheros.
+
+         500 Error de sintaxis, comando no reconocido.
+            Esto puede incluir errores como línea de orden demasiado
+            larga.
+
+         501 Error de sintaxis en parámetros o argumentos.
+
+         202 Orden no implementada, no necesaria en este sistema.
+
+         502 Orden no implementada.
+
+         503 Secuencia de órdenes incorrecta.
+
+         504 Orden no implementada para ese parámetro.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 42]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         530 No está conectado.
+
+         550 Acción no realizada,
+            Fichero no disponible (por ejemplo, fichero no existe, no se
+            tiene acceso al mismo).
+
+         551 Acción interrumpida. Tipo de página desconocido.
+
+         552 Acción interrumpida.
+            Se ha sobrepasado el espacio disponible de almacenamiento
+            (para el directorio actual).
+
+         553 Acción no realizada.
+            Nombre de fichero no permitido.
+
+5.  ESPECIFICACIONES
+
+   5.1.  IMPLEMENTACION MINIMA
+
+      Para hacer un FTP funcional sin mensajes de error innecesarios, se
+      requiere que todos los servidores implementen como mínimo las
+      siguientes funciones:
+
+         TIPO - ASCII No para imprimir
+
+         MODO - Flujo
+
+         ESTRUCTURA - Fichero, registros
+
+         ORDENES - USER, QUIT, PORT,
+
+                  TYPE, MODE, STRU,
+
+                  para los valores por defecto
+
+                  RETR, STOR,
+
+                  NOOP.
+
+      Los valores por defecto de los parámetros de transferencia:
+
+         TYPE - ASCII No para imprimir MODE - Flujo STRU - Fichero
+
+      Todos los servidores deben aceptar los valores indicados como
+      estándar por defecto.
+
+   5.2.  CONEXIONES
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 43]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      El intérprete de protocolo del servidor debe "escuchar" en el
+      puerto L. El usuario o el intérprete de protocolo de usuario
+      iniciará la conexión de control full-duplex (bidireccional). Los
+      procesos de servidor y de usuario deberían seguir las convenciones
+      del Protocolo Telnet tal y como se especifican en el Manual de
+      Protocolos de ARPA-Internet [1]. Los servidores no tienen ninguna
+      obligación de proporcionar facilidades para la edición de la línea
+      de comandos y pueden requerir que esto se haga en el ordenador del
+      usuario. El servidor deberá cerrar la conexión a petición del
+      usuario después de que todas las transferencias y respuestas se
+      han enviado.
+
+      El user-DTP debe "escuchar" en el puerto de datos especificado;
+      este puede ser el puerto por defecto (U) u otro especificado por
+      la orden PORT.  El servidor, por defecto, iniciará las conexiones
+      de datos desde su propio puerto de datos por defecto (L-1) usando
+      el puerto de datos indicado por el usuario. El sentido de la
+      transferencia y el puerto se determinarán por la orden de servicio
+      FTP.
+
+      Todas las implementaciones del FTP deben poder transferir datos
+      usando el puerto por defecto y sólo el user-PI puede solicitar el
+      uso de puertos diferentes.
+
+      Cuando se van a transferir datos entre dos servidores, A y B (ver
+      Figura 2), el user-PI, C, establece la conexión de control entre
+      ambos server-PIs. A uno de los servidores, por ejemplo, A, se le
+      envía un comando PASV indicandole que "escuche" en su puerto de
+      datos en lugar de iniciar la conexión cuando reciba la petición de
+      transferencia. Cuando el user-PI recibe la respuesta a la orden
+      PASV, que incluye la dirección del ordenador y el puerto donde
+      está escuchando, el user-PI envía el puerto de A a B mediante un
+      comando PORT; se devuelve una respuesta. Luego el user-PI puede
+      enviar las correspondientes órdenes a A y B. El servidor B inicia
+      la conexión y comienza la transferencia de datos. La secuencia
+      orden-respuesta se muestra aquí. Los mensajes se muestran en orden
+      verticalmente, pero no horizontalmente:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 44]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         User-PI - Servidor A              User-PI - Servidor B
+         --------------------              --------------------
+
+         C->A : Conexión                   C->B : Conexión
+         C->A : PASV
+         A->C : 227 Iniciando modo pasivo. A1,A2,A3,A4,a1,a2
+                                           C->B : PORT A1,A2,A3,A4,a1,a2
+                                           B->C : 200 Orden correcta.
+         C->A : STOR                       C->B : RETR
+                    B->A : Conexión a HOST-A, PORT-a
+                                Figura 3
+
+      El servidor cerrará la conexión de datos en las condiciones
+      descritas en la sección Estableciendo Conexiones de Datos. Si se
+      va a cerrar la conexión de datos y no se necesita esto para
+      indicar el final de fichero, el servidor lo debe hacer
+      inmediatamente. No se permite que espere hasta recibir una nueva
+      orden de transferencia porque el proceso de usuario ya habrá
+      comprobado la conexión de datos para ver si necesita "escuchar"
+      (recuerde que el usuario debe "escuchar" en un puerto cerrado
+      ANTES de enviar la petición de transferencia. Para evitar fallos
+      de sincronización, el servidor envía una respuesta (226) después
+      de cerrar la conexión de datos (o, si la conexión se deja abierta,
+      una respuesta "Transferencia completada." (250) y el user-PI
+      debería esperar una de estas respuestas antes de enviar una nueva
+      orden de transferencia) .
+
+      En cualquier momento en que el servidor o el usuario vean que el
+      otro va a cerrar la conexión, debería leer inmediatamente
+      cualquier dato que permanezca encolado en la conexión y proceder
+      al cierre de la misma.
+
+   5.3.  ORDENES
+
+      Las órdenes son cadenas de caracteres Telnet transmitidas por la
+      conexión de control tal y como se describe en la sección Ordenes
+      FTP.
+
+      Las funciones y la semántica de las órdenes se describe en las
+      secciones Ordenes de Control de Acceso, Ordenes de Parámetros de
+      Transferencia, Ordenes de Sevicio FTP y Ordenes Varias. La
+      sintaxis de los comandos se detalla aquí.
+
+      Las órdenes comienzan con un código de orden seguido de unos
+      argumentos. Los códigos de orden tienen cuatro o menos carcteres
+      alfabéticos. Las letras mayúsculas y las minúsculas se tratan de
+      la misma manera. Por tanto, cualquiera de las siguientes puede
+      representar a la orden "recuperar":
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 45]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+               RETR    Retr    retr    ReTr    rETr
+
+      También se aplica esto a cualquier símbolo que represente valores
+      de los parámetros como la 'A' para el tipo ASCII. Los códigos de
+      comando y el campo de argumentos están separados por uno o más
+      espacios.
+
+      El campo de argumentos consiste en una cadena de caracteres de
+      longitud variable terminada con la secuencia de caracteres <CRLF>
+      (Retorno de carro, avance de línea) para la representación NVT-
+      ASCII; para otros lenguajes negociados puede que se use otro
+      representación para el fin de línea. El servidor no realizará
+      ninguna acción hasta recibir el código de fin de línea.
+
+      La sintaxis se especifica más abajo en NVT-ASCII. Todos los
+      caracteres del campo de argumentos son caracteres ASCII,
+      incluyendo los enteros decimales representados en ASCII. Los
+      paréntesis cuadrados indican que un argumento es opcional. Si no
+      se proporciona el argumento implica que se toma un valor por
+      defecto apropiado.
+
+      5.3.1.  ORDENES FTP
+         Las órdenes FTP son las siguientes:
+
+            USER <SP> <nombre-usuario> <CRLF>
+
+            PASS <SP> <contraseña> <CRLF>
+
+            ACCT <SP> <información-cuenta> <CRLF>
+
+            CWD  <SP> <nombre-ruta> <CRLF>
+
+            CDUP <CRLF>
+
+            SMNT <SP> <nombre-ruta> <CRLF>
+
+            QUIT <CRLF>
+
+            REIN <CRLF>
+
+            PORT <SP> <dirIP-puerto> <CRLF>
+
+            PASV <CRLF>
+
+            TYPE <SP> <código-tipo> <CRLF>
+
+            STRU <SP> <código-estructura> <CRLF>
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 46]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            MODE <SP> <código-modo> <CRLF>
+
+            RETR <SP> <nombre-ruta> <CRLF>
+
+            STOR <SP> <nombre-ruta> <CRLF>
+
+            STOU <CRLF>
+
+            APPE <SP> <nombre-ruta> <CRLF>
+
+            ALLO <SP> <entero-decimal>
+
+                [<SP> R <SP> <entero-decimal>] <CRLF>
+
+            REST <SP> <marcador> <CRLF>
+
+            RNFR <SP> <nombre-ruta> <CRLF>
+
+            RNTO <SP> <nombre-ruta> <CRLF>
+
+            ABOR <CRLF>
+
+            DELE <SP> <nombre-ruta> <CRLF>
+
+            RMD  <SP> <nombre-ruta> <CRLF>
+
+            MKD  <SP> <nombre-ruta> <CRLF>
+
+            PWD  <CRLF>
+
+            LIST [<SP> <nombre-ruta>] <CRLF>
+
+            NLST [<SP> <nombre-ruta>] <CRLF>
+
+            SITE <SP> <cadena> <CRLF>
+
+            SYST <CRLF>
+
+            STAT [<SP> <nombre-ruta>] <CRLF>
+
+            HELP [<SP> <cadena>] <CRLF>
+
+            NOOP <CRLF>
+
+
+      5.3.2.  ARGUMENTOS DE LAS ORDENES FTP
+
+         La sintaxis de los argumentos (usando la notación BNF) es:
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 47]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            <nombre-usuario> ::= <cadena>
+
+            <contraseña> ::= <cadena>
+
+            <información-cuenta> ::= <cadena>
+
+            <cadena> ::= <carácter> | <carácter><cadena>
+
+            <carácter> ::= cualquier carácter ASCII excepto <CR> y <LF>
+
+            <marcador> ::= <pr-cadena>
+
+            <pr-cadena> ::= <pr-carácter> | <pr-carácter><pr-cadena>
+
+            <pr-carácter> ::= caracteres imprimibles, cualquier código
+                              ASCII desde 33 a 126.
+
+            <tamaño-byte> ::= <número>
+
+            <dirIP-puerto> ::= <host-número>,<port-número>
+
+            <host-número> ::= <número>,<número>,<número>,<número>
+
+            <port-número> ::= <número>,<número>
+
+            <número> ::= cualquier entero decimal desde 1 a 255
+
+            <código-formateo> ::= N | T | C
+
+            <código-tipo> ::= A [<sp> <código-formateo>]
+                          | E [<sp> <código-formateo>]
+                          | I
+                          | L <sp> <tamaño-byte>
+
+            <código-estructura> ::= F | R | P
+
+            <código-modo> ::= S | B | C
+
+            <nombre-ruta> ::= <cadena>
+
+            <entero-decimal> ::= cualquier entero decimal
+
+   5.4.  SECUENCIA DE ORDENES Y RESPUESTAS
+
+      La comunicación entre el usuario y el servidor se lleva a cabo
+      mediante un diálogo. Como tal, el usuario envía una orden y el
+      servidor devuelve una respuesta. El usuario debería esperar a
+      recibir la respuesta antes de enviar más ordenes.
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 48]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      Algunas órdenes requieren una segunda respuesta a la que el
+      usuario debería también esperar. Estas respuestas informan, por
+      ejemplo, del estado o la finalización de una transferencia o del
+      cierre de la conexión de datos.  Son respuestas secundarias a
+      órdenes de transferencia de ficheros. Un grupo importante de
+      respuestas informativas son los mensajes al iniciar la conexión.
+      En circunstancias normales, un servidor enviará una respuesta 220,
+      "Esperando órdenes", cuando se completa la conexión. El usuario
+      debería esperar esta respuesta antes de enviar cualquier orden. Si
+      el servidor no puede aceptar órdenes en ese momento, se debería
+      enviar una respuesta 120 indicando el tiempo previsto de retraso y
+      una respuesta 220 cuando esté disponible. El usuario sabrá así que
+      no debe desconectar.
+
+      Respuestas espontáneas
+
+         A veces "el sistema" tiene que enviar un mensaje al usuario
+         espontáneamente (normalmente a todos los usuarios). Por
+         ejemplo, "El sistema se apagará en 15 minutos". El FTP no
+         proporciona los medios para enviar este mensaje inmediatamente
+         al usuario. Se recomienda que esa información se encole en el
+         server-PI y se envíe en la siguiente respuesta (posiblemente en
+         una respuesta multilínea).
+
+         La tabla siguiente lista las respuestas indicando la
+         finalización de cada orden correcta o incorrectamente. Se deben
+         usar estas respuestas estrictamente; el servidor puede cambiar
+         el texto en las respuestas, pero el significado y la acción que
+         implica el número de código y la secuencia de comandos no debe
+         alterarse.
+
+      Secuencias orden-respuesta
+
+         En esta sección se presenta la secuencia orden-respuesta. Cada
+         orden se muestra con sus posibles respuestas; los grupos de
+         órdenes se muestran juntos. En primer lugar aparecen las
+         respuestas preliminares (con las respuestas de ejecución
+         correcta indentadas a continuación), luego las respuestas de
+         finalización positiva y negativa y , por último, las respuestas
+         intermedias con el resto de las órdenes de la secuencia. Este
+         listado es la base de los diagramas, que se verán más tarde.
+
+            Establecimiento de conexión
+               120
+                  220
+               220
+                421
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 49]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+            Login
+               USER
+                  230
+                  530
+                  500, 501, 421
+                  331, 332
+               PASS
+                  230
+                  202
+                  530
+                  500, 501, 503, 421
+                  332
+               ACCT
+                  230
+                  202
+                  530
+                  500, 501, 503, 421
+               CWD
+                  250
+                  500, 501, 502, 421, 530, 550
+               CDUP
+                  200
+                  500, 501, 502, 421, 530, 550
+               SMNT
+                  202, 250
+                  500, 501, 502, 421, 530, 550
+            Logout
+               REIN
+                  120
+                  220
+                  421
+                  500, 502
+               QUIT
+                  221
+                  500
+
+            Parámetros de transferencia
+               PORT
+                  200
+                  500, 501, 421, 530
+               PASV
+                  227
+                  500, 501, 502, 421, 530
+               MODE
+                  200
+                  500, 501, 504, 421, 530
+               TYPE
+                  200
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 50]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                  500, 501, 504, 421, 530
+               STRU
+                  200
+                  500, 501, 504, 421, 530
+
+            Acciones sobre ficheros
+                ALLO
+                  200
+                  202
+                  500, 501, 504, 421, 530
+               REST
+                  500, 501, 502, 421, 530
+                  350
+               STOR
+                  125, 150
+                     (110)
+                     226, 250
+                     425, 426, 451, 551, 552
+                  532, 450, 452, 553
+                  500, 501, 421, 530
+               STOU
+                  125, 150
+                     (110)
+                     226, 250
+                     425, 426, 451, 551, 552
+                  532, 450, 452, 553
+                  500, 501, 421, 530
+               RETR
+                  125, 150
+                     (110)
+                     226, 250
+                     425, 426, 451
+                  450, 550
+                  500, 501, 421, 530
+               LIST
+                  125, 150
+                     226, 250
+                     425, 426, 451
+                  450
+                  500, 501, 502, 421, 530
+               NLST
+                  125, 150
+                     226, 250
+                     425, 426, 451
+                  450
+                  500, 501, 502, 421, 530
+               APPE
+                  125, 150
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 51]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                     (110)
+                     226, 250
+                     425, 426, 451, 551, 552
+                  532, 450, 550, 452, 553
+                  500, 501, 502, 421, 530
+               RNFR
+                  450, 550
+                  500, 501, 502, 421, 530
+                  350
+               RNTO
+                  250
+                  532, 553
+                  500, 501, 502, 503, 421, 530
+               DELE
+                  250
+                  450, 550
+                  500, 501, 502, 421, 530
+               RMD
+                  250
+                  500, 501, 502, 421, 530, 550
+               MKD
+                  257
+                  500, 501, 502, 421, 530, 550
+               PWD
+                  257
+                  500, 501, 502, 421, 550
+               ABOR
+                  225, 226
+                  500, 501, 502, 421
+
+            Ordenes informativas
+               SYST
+                  215
+                  500, 501, 502, 421
+               STAT
+                  211, 212, 213
+                  450
+                  500, 501, 502, 421, 530
+               HELP
+                  211, 214
+                  500, 501, 502, 421
+
+            Otras órdenes
+               SITE
+                  200
+                  202
+                  500, 501, 530
+               NOOP
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 52]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                  200
+                  500 421
+
+6.  DIAGRAMAS DE ESTADO
+
+   Aquí presentamos los diagramas de estado para una implementación FTP
+   muy simple. Sólo se tiene en cuenta el primer dígito de la respuesta.
+   Hay un diagrama de estado por cada grupo de órdenes FTP o secuencia
+   de las mismas.
+
+   La agrupación de las órdenes se ha hecho construyendo un modelo para
+   cada una de ellas y juntando las que tienen modelos idénticos
+   estructuralmente.
+
+   Para cada órden o secuencia hay tres posibles resultados: sin
+   problemas (S), fallo (F) y error (E). En los diagramas se ha usado el
+   símbolo B para "inicio" y el símbolo W para indicar "espera una
+   respuesta".
+
+   En primer lugar tenemos el diagrama que representa el grupo más
+   grande de órdenes FTP:
+
+                               1,3    +---+
+                          ----------->| E |
+                         |            +---+
+                         |
+      +---+    ord    +---+    2      +---+
+      | B |---------->| W |---------->| S |
+      +---+           +---+           +---+
+                         |
+                         |     4,5    +---+
+                          ----------->| F |
+                                      +---+
+      Este diagrama modela las órdenes:
+         ABOR, ALLO, DELE, CWD, CDUP, SMNT, HELP, MODE, NOOP, PASV,
+         QUIT, SITE, PORT, SYST, STAT, RMD, MKD, PWD, STRU y TYPE.
+
+   El otro grupo grande de órdenes se representa con un diagrama muy
+   parecido:
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 53]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                               3      +---+
+                          ----------->| E |
+                         |            +---+
+                         |
+      +---+    ord    +---+    2      +---+
+      | B |---------->| W |---------->| S |
+      +---+       --->+---+           +---+
+                 |     | |
+                 |     | |     4,5    +---+
+                 |  1  |  ----------->| F |
+                  -----               +---+
+
+      Este diagrama es para las órdenes:
+         APPE, LIST, NLST, REIN, RETR, STOR y STOU.
+
+   Como se puede ver, este segundo modelo puede usarse para representar
+   el primer grupo de órdenes; la única diferencia es que en el primer
+   grupo las respuestas que empiezan por 1 no se esperan y, por tanto,
+   se tratan como un error, mientras que el segundo grupo espera (a
+   veces necesita) las respuestas que empiezan por 1.
+
+   Recuerde que, como mucho, se permite una respuesta que empiece por 1
+   por cada orden.
+
+   El resto de los diagramas modela secuencias de órdenes; quizá el más
+   simple de ellos es la secuencia de renombrar un archivo:
+
+      +---+   RNFR    +---+    1,2    +---+
+      | B |---------->| W |---------->| E |
+      +---+           +---+        -->+---+
+                       | |        |
+                3      | | 4,5    |
+         --------------  ------   |
+        |                      |  |   +---+
+        |               ------------->| S |
+        |              |   1,3 |  |   +---+
+        |             2|  --------
+        |              | |     |
+        V              | |     |
+      +---+   RNTO    +---+ 4,5 ----->+---+
+      |   |---------->| W |---------->| F |
+      +---+           +---+           +---+
+
+   El siguiente diagrama es un modelo simple de la orden recomenzar:
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 54]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      +---+   REST    +---+    1,2    +---+
+      | B |---------->| W |---------->| E |
+      +---+           +---+        -->+---+
+                       | |        |
+                3      | | 4,5    |
+         --------------  ------   |
+        |                      |  |   +---+
+        |               ------------->| S |
+        |              |   3   |  |   +---+
+        |             2|  --------
+        |              | |     |
+        V              | |     |
+      +---+   ord     +---+ 4,5 ----->+---+
+      |   |---------->| W |---------->| F |
+      +---+        -->+---+           +---+
+                  |      |
+                  |  1   |
+                   ------
+
+         Donde "ord" es APPE, STOR o RETR.
+
+   Podemos ver que los tres modelos anteriores son similares. Recomenzar
+   difiere de renombrar sólo en el tratamiento de las respuestas tipo
+   100 en la segunda parte, mientras que el segundo grupo espera (a
+   veces necesita) respuestas tipo 100. Sólo se permite una respuesta
+   tipo 100 por cada orden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 55]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+                            1
+      +---+   USER    +---+------------->+---+
+      | B |---------->| W | 2       ---->| E |
+      +---+           +---+------  |  -->+---+
+                       | |       | | |
+                     3 | | 4,5   | | |
+         --------------   -----  | | |
+        |                      | | | |
+        |                      | | | |
+        |                 ---------  |
+        |               1|     | |   |
+        V                |     | |   |
+      +---+   PASS    +---+ 2  |  ------>+---+
+      |   |---------->| W |------------->| S |
+      +---+           +---+   ---------->+---+
+                       | |   | |     |
+                     3 | |4,5| |     |
+         --------------   --------   |
+        |                    | |  |  |
+        |                    | |  |  |
+        |                 -----------
+        |             1,3|   | |  |
+        V                |  2| |  |
+      +---+   ACCT    +---+--  |   ----->+---+
+      |   |---------->| W | 4,5 -------->| F |
+      +---+           +---+------------->+---+
+
+   Por último, mostramos un diagrama generalizado que se puede usar para
+   modelar el intercambio orden y respuesta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 56]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+               ------------------------------------
+              |                                    |
+     Inicio   |                                    |
+        |     V                                    |
+        |   +---+  ord   +---+ 2         +---+     |
+         -->|   |------->|   |---------->|   |     |
+            |   |        | W |           | S |-----|
+         -->|   |     -->|   |-----      |   |     |
+        |   +---+    |   +---+ 4,5 |     +---+     |
+        |     |      |    | |      |               |
+        |     |      |   1| |3     |     +---+     |
+        |     |      |    | |      |     |   |     |
+        |     |       ----  |       ---->| F |-----
+        |     |             |            |   |
+        |     |             |            +---+
+         -------------------
+              |
+              |
+              V
+             Fin
+
+7.  ESCENARIO TIPICO DEL FTP
+
+   El usuario del ordenador U quiere transferir ficheros a/desde el
+   ordenador S:
+
+   Generalmente, el usuario se comunicará con el servidor a través del
+   proceso user-FTP. El siguiente puede ser un escenario típico. Lo que
+   muestra el user-FTP está entre paréntesis, '---->' representa órdenes
+   de U a S y
+    '<----' representa respuestas de S a U.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 57]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   ORDENES DEL USUARIO              ACCIONES QUE IMPLICAN
+   ftp (host) multics<CR>         Conectarse a S en el puerto L
+                                  estableciendo conexiones de control.
+                                  <---- 220 Servicio preparado <CRLF>.
+   username Doe <CR>              USER Doe<CRLF>---->
+                                  <---- 331 Nombre de usuario OK,
+                                            necesita contraseña<CRLF>.
+   password mumble <CR>           PASS mumble<CRLF>---->
+                                  <---- 230 Usuario aceptado<CRLF>.
+   retrieve (local type) ASCII<CR>
+   (local pathname) test 1 <CR>   El user-FTP abre el fichero local en
+                                  modo ASCII.
+   (for. pathname) test.pl1<CR>   RETR test.pl1<CRLF> ---->
+                                  <---- 150 Fichero correcto;
+                                        se va a abrir la conexión
+                                        de datos<CRLF>.
+                                  El servidor crea la conexión de datos
+                                  al puerto U.
+                                  <---- 226 Cerrando conexión de datos,
+                                      transferencia completada<CRLF>.
+   type Image<CR>                 TYPE I<CRLF> ---->
+                                  <---- 200 Orden OK<CRLF>
+   store (local type) image<CR>
+   (local pathname) file dump<CR> El user-FTP abre el fichero local en
+                                  modo binario.
+   (for.pathname) >udd>cn>fd<CR>  STOR >udd>cn>fd<CRLF> ---->
+                                  <---- 550 Acceso denegado<CRLF>
+   terminate                      QUIT <CRLF> ---->
+                                  El servidor cierra todas las
+                                  conexiones.
+
+8.  ESTABLECIMIENTO DE LA CONEXION
+
+   La conexión de control del FTP se establece mediante FTP entre el
+   puerto del proceso de usuario U y el puerto del proceso servidor L. A
+   este protocolo se le ha asignado el puerto 21 (25 en octal), por
+   tanto L=21.
+
+APENDICE I -  ESTRUCTURA PAGINADA
+
+   La necesidad del FTP para admitir estructura paginada deriva
+   principalmente de la necesidad de admitir la transmisión eficiente de
+   ficheros entre sistemas TOPS-20, particularmente los fichero usados
+   por el NLS.
+
+   El sistema de ficheros del TOPS-20 está basado en el concepto de
+   páginas.  El sistema operativo es más eficiente manipulando páginas
+   que ficheros. El sistema operativo proporciona una interfaz con el
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 58]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   sistema de ficheros de tal forma que muchas aplicaciones ven los
+   ficheros como un flujo de caracteres secuencial. Sin embargo, algunas
+   aplicaciones usan las estructuras paginadas directamente y algunas de
+   ellas crean ficheros con huecos.
+
+   Un fichero del TOPS-20 consiste en 4 cosas: un nombre de ruta, una
+   tabla de páginas, un conjunto de páginas (posiblemente vacío) y un
+   conjunto de atributos. El nombre de ruta se especifica con la orden
+   RETR o STOR. Incluye el nombre de directorio, el nombre del fichero,
+   la extensión y el número de generación.
+
+   La tabla de páginas contiene hasta 2**18 entradas. Cada una de ellas
+   puede estar vacía o apuntar a una página. Si no está vacía, hay unos
+   bits de acceso a la página; no todas las páginas de un fichero tienen
+   por qué tener los mismos permisos de acceso.
+
+   Una página es un conjunto contiguo de 512 palabras de 36 bits cada
+   una. Los atributos del fichero, que está en el Bloque de Descripción
+   del Fichero (FDB), contienen datos como la hora de creación, de
+   escritura, de lectura,...
+
+   Las entradas de la tabla de páginas NO tienen por qué ser contiguas.
+   Puede haber páginas vacías entre otras ocupadas. Además, el puntero
+   de fin de fichero es simplemente un número. No hace falta que apunte
+   al "último" dato del fichero.
+
+   Las llamadas al sistema de entrada/salida del TOPS-20 hacen que el
+   puntero de fin de fichero quede después del último dato escrito, pero
+   otras operaciones pueden hacer que esto no sea así si un programa lo
+   requiere.
+
+   De hecho, en estos dos casos, ficheros con huecos y punteros de fin
+   de fichero que NO están al final del fichero, ocurren con los
+   ficheros de datos NLS.
+
+   Los ficheros paginados del TOPS-20 se pueden enviar con los
+   siguientes parámetros FTP:
+
+   TYPE L 36, STRU P y MODE S (de hecho, se puede usar cualquier modo).
+
+   Cada página de información tiene una cabecera. Cada campo de la
+   cabecera, que es una byte lógico, es una palabra del TOPS-20, por
+   ello el tipo es L 36.
+
+   Los campos de la cabecera son:
+      Palabra 0: Longitud de la cabecera.
+         La longitud de la cabecera es 5.
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 59]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      Palabra 1: Indice de página.
+         Si los datos son de la página de un fichero, este es el número
+         de ellas que hay en el mapa de páginas del fichero. Las páginas
+         vacías (huecos) del fichero no se envían. Tener en cuenta que
+         un hueco NO es lo mismo que una página de ceros.
+
+      Palabra 2: Longitud de datos.
+         El número de palabras de datos de esta página que van a
+         continuación de la cabecera. El número total de palabras
+         transmitidas es la longitud de la cabecera más la longitud de
+         datos.
+
+      Palabra 3: Tipo de página.
+         Un código para indicar el tipo de página. Un 3 indica una
+         página de datos; un 2 indica que es un FDB.
+
+      Palabra 4: Control de acceso a la página.
+         Los bits de control asociados a la página en el mapa de páginas
+         del fichero.
+
+   A continuación de la cabecera van los datos. La longitud de los datos
+   es o 512 para una página de datos o 31 para un FDB. Los ceros finales
+   se pueden descartar, haciendo que la longitud de datos sea inferior a
+   512.
+
+APPENDIX II -  ORDENES DE DIRECTORIO
+
+   Como UNIX tiene una estructura de directorio en forma de árbol en el
+   que los directorios se pueden manipular fácilemente como ficheros
+   normales, es conveniente ampliar los servidores FTP de estos sistemas
+   para tratar con la creación de directorios. Como hay más tipos de
+   servidores con un sistema similar, estas órdenes son tan generales
+   como es posible.
+
+      Se han añadido 4 órdenes de directorio al FTP:
+         MKD nombreruta
+            Crea un directorio con el nombre "nombreruta".
+
+         RMD nombreruta
+            Borra el directorio llamado "nombreruta".
+
+         PWD
+            Muestra el nombre del directorio de trabajo actual.
+
+         CDUP
+            Cambia el directorio actual a directorio padre.
+
+   El nombre de ruta indicado se crea (borra) como un subdirectorio del
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 60]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   directorio de trabajo actual a menos que "nombreruta" contenga
+   suficiente información que indique al servidor que es un nombre de
+   ruta absoluto.
+
+   CODIGOS DE RESPUESTA
+
+      La orden CDUP es un caso especial de CWD y se incluye para
+      simplificar la implementación de programas para transferir árboles
+      de directorios completos entre sistemas que llaman de forma
+      diferente al directorio padre.  Lo códigos de respuesta a CDUP son
+      los mismos que para CWD.
+
+      Los códigos de respuesta para RMD son los mismos que para su
+      análogo con ficheros, DELE.
+
+      Los códigos de respuesta para MKD, sin embargo, son un poco más
+      complicados. Un directorio creado recientemente será, lo más
+      seguro, el objeto de una próxima orden CWD. Desafortunadamente, el
+      argumento de MKD no siempre es apropiado para CWD. Este es el
+      caso, por ejemplo, de crear un directorio en un TOPS-20 dando sólo
+      el nombre de subdirectorio. Esto es, en un servidor FTP de un
+      TOPS-20, la secuencia
+
+         MKD DIRECTORIO
+         CWD DIRECTORIO
+
+      fallará. Sólo podemos referirnos al nuevo directorio por su nombre
+      absoluto; por ejemplo, si se realiza el comando MKD cuando estamos
+      conectados al directorio <DFRANKLIN>, sólo podemos referirnos al
+      nuevo subdirectorio como <DFRANKLIN.DIRECTORIO>.
+
+      Incluso en UNIX y Multics puede ocurrir algo similar. Si se trata
+      de un nombre de ruta relativo (al directorio actual), el usuario
+      necesita estar en el mismo directorio actual para alcanzar el
+      subdirectorio. Según qué aplicación, esto puede ser un
+      inconveniente. No es muy robusto en ningún caso.
+
+      Para solucionar estos problemas, una vez que finalice
+      correctamente una orden MKD, el servidor debería devolver una
+      respuesta de la forma:
+         257<espacio>"<nombre-directorio>"<espacio><comentario>
+
+      Así el servidor comunica al usuario la cadena que debe usar para
+      referirse al nuevo directorio. El nombre de directorio puede
+      contener cualquier carácter; si en el nombre hay comillas dobles,
+      se debería indicar usando dos veces ls comillas dobles.
+
+      Por ejemplo, un usuario se conecta al directorio /usr/dm y crea un
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 61]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+      subdirectorio llamado nombreruta:
+
+         CWD /usr/dm
+         200 directorio cambiado a /usr/dm
+         MKD nombreruta
+         257 "/usr/dm/nombreruta" directorio creado.
+
+      Un ejemplo que contiene comillas dobles:
+
+         MKD foo"bar 257 "/usr/dm/foo""bar" directorio creado.  CWD
+         /usr/dm/foo"bar 200 directorio cambiado a /usr/dm/foo"bar
+
+      Si existe un subdirectorio con el mismo nombre, se produce un
+      error y el servidor debe enviar una respuesta de error "acceso
+      denegado":
+
+         CWD /usr/dm 200 directorio cambioado a /usr/dm MKD nombreruta
+         521-"/usr/dm/nombreruta" ya existe el directorio; 521 no se
+         realizó ninguna acción.
+
+      Las respuestas indicando error para MKD son análogas a las de su
+      primo para crear ficheros, STOR. También se da una respuesta
+      "acceso denegado" si el nombre de un fichero coincide con el del
+      nuevo directorio (esto es un problema en UNIX, pero no debería
+      serlo en un TOPS-20).
+
+      Como el comando PWD devuelve el mismo tipo de información que un
+      MKD correcto, la respuesta a un comando PWD correcto usa también
+      el código 257.
+
+   SUTILEZAS
+
+      Como estos comandos serán más útiles a la hora de transferir
+      subárboles de un ordenador a otro, observe con cuidado que el
+      argumento de MKD se interpreta como un subdirectorio del
+      directorio actual a menos que contenga información suficiente que
+      indique lo contrario. Un ejemplo hipotético de su uso en un
+      TOPS-20:
+
+         CWD <algun.lugar>
+         200 Directorio de trabajo cambiado
+         MKD sobreelarcoiris
+         257 "<algun.lugar.sobreelarcoiris>" directorio creado
+         CWD sobreelarcoiris
+         431 No existe el directorio
+         CWD <algun.lugar.sobreelarcoiris>
+         200 Directorio de trabajo cambiado
+         CWD <algun.lugar>
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 62]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+         200 Directorio de trabajo cambiado a <algun.lugar>
+         MKD <absoluto>
+         257 "<absoluto>" directorio creado
+         CWD <absoluto>
+
+      El primer ejemplo da como resultado un subdirectorio del
+      directorio actual. En cambio, el segundo ejemplo le indica al
+      TOPS-20 que el directorio <absoluto> es un directorio de primer
+      nivel. Vea también que en el primer ejemplo el usuario "viola" el
+      protocolo intentando acceder al nuevo directorio con un nombre
+      diferente al devuelto por el TOPS-20. Podía haber habido problemas
+      de ambigüedad si existiera un directorio llamado
+      <sobreelarcoiris>, pero esto es una ambigüedad inherente al
+      sistema TOPS-20.  Estas consideraciones se aplican también a la
+      orden RMD. Lo que hay que tener en cuenta es: excepto cuando
+      hacerlo así viole las convenciones de un sistema para diferenciar
+      nombres de ruta absolutos y relativos, el sistema debería tratar
+      los operandos de MKD y RMD como subdirectorios. La respuesta 257
+      del MKD siempre debe contener el nombre de ruta absoluto del
+      directorio creado.
+
+APENDICE III - RFCs sobre FTP
+
+   Bhushan, Abhay, "Un protocolo de transferencia de ficheros", RFC 114
+   (NIC 5823), MIT-Project MAC, 16 de abril de 1971.
+
+   Harslem, Eric, y John Heafner, "Comentarios sobre el RFC 114 (Un
+   protocolo de transferencia de ficheros)", RFC 141 (NIC 6726), RAND,
+   29 de abril de 1971.
+
+   Bhushan, Abhay, et al, "El Protocolo de Transferencia de Ficheros",
+   RFC 172 (NIC 6794), MIT-Project MAC, 23 de junio de 1971.
+
+   Braden, Bob, "Comentarios sobre las propuestas DTP y FTP", RFC 238
+   (NIC 7663), UCLA/CCN, 29 de septiembre de 1971.
+
+   Bhushan, Abhay, et al, "El Protocolo de Transferencia de Ficheros",
+   RFC 265 (NIC 7813), MIT-Project MAC, 17 de noviembre de 1971.
+
+   McKenzie, Alex, "Una sugerencia para añadir al protocolo FTP", RFC
+   281 (NIC 8163), BBN, 8 de diciembre de 1971.
+
+   Bhushan, Abhay, "El uso de la transacción "Tipo de datos" en FTP",
+   RFC 294 (NIC 8304), MIT-Project MAC, 25 de enero de 1972.
+
+   Bhushan, Abhay, "El Protocolo de Transferencia de Ficheros", RFC 354
+   (NIC 10596), MIT-Project MAC, 8 de julio de 1972.
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 63]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   Bhushan, Abhay, "Comentarios sobre el protocolo de transferencia de
+   ficheros (RFC 354)", RFC 385 (NIC 11357), MIT-Project MAC, 18 de
+   agosto de 1972.
+
+   Hicks, Greg, "Documentación para el usuario del FTP", RFC 412 (NIC
+   12404), Utah, 27 de noviembre de 1972.
+
+   Bhushan, Abhay, "Estado del FTP y comentarios adicionales", RFC 414
+   (NIC 12406), MIT-Project MAC, 20 de noviembre de 1972.
+
+   Braden, Bob, "Comentarios sobre el FTP", RFC 430 (NIC 13299),
+   UCLA/CCN, 7 de febrero de 1973.
+
+   Thomas, Bob, and Bob Clements, "Interacción servidor-servidor en el
+   FTP", RFC 438 (NIC 13770), BBN, 15 sw enero de 1973.
+
+   Braden, Bob, "Ficheros para imprimir y FTP", RFC 448 (NIC 13299),
+   UCLA/CCN, 27 de febrero de 1973.
+
+   McKenzie, Alex, "Protocolo de Transferencia de Ficheros", RFC 454
+   (NIC 14333), BBN, 16 de febrero de 1973.
+
+   Bressler, Bob, and Bob Thomas, "Recogido de correo mediante FTP", RFC
+   458 (NIC 14378), BBN-NET and BBN-TENEX, 20 de febrero de 1973.
+
+   Neigus, Nancy, "Protocolo de Transferencia de Ficheros", RFC 542 (NIC
+   17759), BBN, 12 de julio de 1973.
+
+   Krilanovich, Mark, and George Gregg, "Comentarios sobre el FTP", RFC
+   607 (NIC 21255), UCSB, 7 de enero de 1974.
+
+   Pogran, Ken, and Nancy Neigus, "Respuesta al RFC 607 - Comentarios
+   sobre el FTP", RFC 614 (NIC 21530), BBN, 28 de enero de 1974.
+
+   Krilanovich, Mark, George Gregg, Wayne Hathaway, and Jim White,
+   "Comentarios sobre el FTP", RFC 624 (NIC 22054), UCSB, Ames Research
+   Center, SRI-ARC, 28 de febrero de 1974.
+
+   Bhushan, Abhay, "Comentarios sobre el FTP y respuesta al RFC 430",
+   RFC 463 (NIC 14573), MIT-DMCG, 21 de febrero de 1973.
+
+   Braden, Bob, "Compresión de datos en FTP", RFC 468 (NIC 14742),
+   UCLA/CCN, 8 de marzo de 1973.
+
+   Bhushan, Abhay, "FTP y el sistema de correo de red", RFC 475 (NIC
+   14919), MIT-DMCG, 6 de marzo de 1973.
+
+   Bressler, Bob, and Bob Thomas "Interacción servidor-servidor en FTP -
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 64]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   II", RFC 478 (NIC 14947), BBN-NET and BBN-TENEX, 26 de marzo de 1973.
+
+   White, Jim, "Use of FTP by the NIC Journal", RFC 479 (NIC 14948),
+   SRI-ARC, 8 marzo de 1973.
+
+   White, Jim, "Host-Dependent FTP Parameters", RFC 480 (NIC 14949),
+   SRI-ARC, 8 de marzo de 1973.
+
+   Padlipsky, Mike, "An FTP Command-Naming Problem", RFC 506 (NIC
+   16157), MIT-Multics, 26 de junio de 1973.
+
+   Day, John, "Memo to FTP Group (Proposal for File Access Protocol)",
+   RFC 520 (NIC 16819), Illinois, 25 de junio de 1973.
+
+   Merryman, Robert, "The UCSD-CC Server-FTP Facility", RFC 532 (NIC
+   17451), UCSD-CC, 22 de junio de 1973.
+
+   Braden, Bob, "TENEX FTP Problem", RFC 571 (NIC 18974), UCLA/CCN, 15
+   de noviembre de 1973.
+
+   McKenzie, Alex, and Jon Postel, "Telnet and FTP Implementation -
+   Schedule Change", RFC 593 (NIC 20615), BBN and MITRE, 29 de noviembre
+   de 1973.
+
+   Sussman, Julie, "FTP Error Code Usage for More Reliable Mail
+   Service", RFC 630 (NIC 30237), BBN, 10 de abril de 1974.
+
+   Postel, Jon, "Códigos de respuesta FTP revisados", RFC 640 (NIC
+   30843), UCLA/NMC, 5 junio de 1974.
+
+   Harvey, Brian, "Leaving Well Enough Alone", RFC 686 (NIC 32481), SU-
+   AI, 10 mayo de 1975.
+
+   Harvey, Brian, "Un intento más con el FTP", RFC 691 (NIC 32700), SU-
+   AI, 28 de mayo 1975.
+
+   Lieb, J., "La orden CWD en el FTP", RFC 697 (NIC 32963), 14 de julio
+   de 1975.
+
+   Harrenstien, Ken, "FTP Extension: XSEN", RFC 737 (NIC 42217), SRI-KL,
+   31 de octubre de 1977.
+
+   Harrenstien, Ken, "FTP Extension: XRSQ/XRCP", RFC 743 (NIC 42758),
+   SRI-KL, 30 de diciembre de 1977.
+
+   Lebling, P. David, "Survey of FTP Mail and MLFL", RFC 751, MIT, 10 de
+   diciembre de 1978.
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 65]
+
+RFC 959          Protocolo de transferencia de ficheros     Octubre 1985
+
+
+   Postel, Jon, "Especificación del protocolo de transferencia de
+   ficheros", RFC 765, ISI, junio de 1980.
+
+   Mankins, David, Dan Franklin, and Buzz Owen, "Ordenes FTP orientadas
+   a directorio", RFC 776, BBN, diciembre de 1980.
+
+   Padlipsky, Michael, "Orden de guardar con nombre único en FTP", RFC
+   949, MITRE, julio de 1985.
+
+
+REFERENCIAS
+
+   [1]  Feinler, Elizabeth, "Libro de trabajo sobre la transición de
+   protocolo en Internet",Network Information Center, SRI International,
+   marzo de 1982.
+
+   [2]  Postel, Jon, "Protocolo de control de la transmisión -
+   Especificación del protocolo del programa DARPA Internet", RFC 793,
+   DARPA, septiembre de 1981.
+
+   [3]  Postel, Jon, and Joyce Reynolds, "Especificación del Protocolo
+   Telnet", RFC 854, ISI, mayo de 1983.
+
+   [4]  Reynolds, Joyce, and Jon Postel, "Números asignados", RFC 943,
+   ISI, abril de 1985.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Postel & Reynolds               Estándar                       [Pág. 66]
+
