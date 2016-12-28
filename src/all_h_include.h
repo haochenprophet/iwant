@@ -2,7 +2,6 @@
 #define ALL_H_INCLUDE
 
 #include "action.h"
-#include "all_h_include.h"
 #include "brackets.h"
 #include "build.h"
 #include "class.h"

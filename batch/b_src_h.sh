@@ -4,7 +4,7 @@ echo \#ifndef ALL_H_INCLUDE > all_h_include.log
 echo \#define ALL_H_INCLUDE >>all_h_include.log
 echo >>all_h_include.log
 
-for i in $(ls *.h sql/*.h keywords/*.h)
+for i in $(ls *.h)
 do
 	echo \#include \"$i\" >>all_h_include.log
 done
