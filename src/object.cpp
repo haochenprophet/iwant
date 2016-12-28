@@ -590,6 +590,16 @@ int Object::question(void * p)
 	return 0;
 }
 
+int Object::is_identifier(char *str,void ** o_addr)
+{
+	return 0;
+}
+		
+int Object::is_path(char *str,void ** o_addr)
+{
+	return 0;
+}
+
 #if OBJECT_TEST
 int main()
 {

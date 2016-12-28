@@ -177,6 +177,8 @@ namespace n_object {
 		virtual int deal_cmd(int argc, char *argv[]);
 		virtual int display(void *p=nullptr);
 		virtual int question(void *p=nullptr);
+		virtual int is_identifier(char *str,void ** o_addr =nullptr); 
+		virtual int is_path(char *str,void ** o_addr=nullptr);		
 	};
 }
 
