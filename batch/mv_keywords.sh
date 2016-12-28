@@ -33,14 +33,14 @@ mv __cdecl.* keywords/
 mv char16_t.* keywords/
 mv char32_t.* keywords/
 mv char.* keywords/
-mv class.* keywords/
+	# mv class.* keywords/
 mv __CLASS__.* keywords/
 mv clone.* keywords/
-mv comment.* keywords/
+	# mv comment.* keywords/
 mv compl.* keywords/
 mv concept.* keywords/
 mv const_cast.* keywords/
-mv const.* keywords/
+	# mv const.* keywords/
 mv constexpr.* keywords/
 mv continue.* keywords/
 	# mv cout.* keywords/
