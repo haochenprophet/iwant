@@ -29,7 +29,7 @@ namespace n_task {
 		int t_pend(Object *t);
 		int t_complete(Object *t);
 		int add_depend(Ctask * t);
-		Ctask *create(Ctask *depend=nullptr,char *name=nullptr,char *desp=nullptr);
+		Ctask *create(Ctask *depend=nullptr,char *name=nullptr,char *desp=nullptr,int task_count=1);
 		void free_task_list();
 	};
 

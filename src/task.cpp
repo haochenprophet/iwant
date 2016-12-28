@@ -55,7 +55,7 @@ int Ctask::add_depend(Ctask * t)
 	return 0;
 }
 
-Ctask * Ctask::create(Ctask *depend,char *name,char *desp)
+Ctask * Ctask::create(Ctask *depend,char *name,char *desp,int task_count)
 {
 	Ctask *t =new Ctask();
 	if(!t) return nullptr;
@@ -65,6 +65,7 @@ Ctask * Ctask::create(Ctask *depend,char *name,char *desp)
 
 	this->task_list.push_back(t);
 	if(depend) this->depend.push_back(depend);
+	this->count=task_count;//Object::count
 
 	return t;
 }

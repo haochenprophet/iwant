@@ -2,6 +2,8 @@
 class Ctask{
 
 	//input: task information
+	task(start_time,end_time,request_time,count,TimeConsumption/t,progress_rate)
+
 
 	task(x) x=[0,n] n={Natural number}
 	{
@@ -27,7 +29,7 @@ class Ctask{
 		}
 	}
 
-	//output :task assembly line
+	//output :schedule / task assembly line
 	task_line(x)[0,n]
 	{
 		L[0]
