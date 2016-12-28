@@ -1,0 +1,44 @@
+
+class Ctask{
+
+	//input: task information
+
+	task(x) x=[0,n] n={Natural number}
+	{
+		T[0]
+		T[1]
+		T[2]
+		.
+		.
+		.
+		T[n]
+		{
+			task_depend(x)[0,n]
+			{
+				T[n]D[0]
+				T[n]D[1]
+				T[n]D[2]
+				.
+				.
+				.
+				T[n]D[n]
+			}
+
+		}
+	}
+
+	//output :task assembly line
+	task_line(x)[0,n]
+	{
+		L[0]
+		L[1]
+		.
+		.
+		.
+		L[n]
+		{
+			l[0] ...l[n]
+		}
+	}
+	
+};
