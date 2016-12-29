@@ -45,7 +45,9 @@ int Cclass::create(void *p)
 	{
 		if(false==this->is_path(str_class))	return -1;//check str_class is path
 		str_class=strrchr(str_class,'/');
+	#if WINDOWS_OS
 		if(!str_class) str_class=strrchr(str_class,'\\');
+	#endif
 		if(!str_class) return -1;
 		str_class++ ; //skip '/' or '\'
  	}
