@@ -39,8 +39,6 @@ int Cclass::func(void *p)
 int Cclass::create(void *p)
 {
 	if (!p) return -1;
-	this->temp = CLASS_H_TEMP;
-	this->cpp_temp=CLASS_CPP_TEMP;
 	char * str_class =(char *)p;
 	
 	if(false==this->is_identifier(str_class)) //check str_class 
@@ -53,8 +51,11 @@ int Cclass::create(void *p)
  	}
 
 	this->s_rep=str_class;
+	
+	this->temp = CLASS_H_TEMP;
+	this->cpp_temp=CLASS_CPP_TEMP;
+	
 	this->replace_temp(1);
-
 	this->s_replace(&this->cpp_temp,&this->s_tag,&this->s_rep);
 	return 0;
 }
