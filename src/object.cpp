@@ -604,7 +604,13 @@ bool Object::is_identifier(char *str,void ** o_addr)
 
 bool Object::is_path(char *str,void ** o_addr)
 {
-	return 0;
+	if(strstr(str,"/")) return true;
+
+#if WINDOWS_OS
+	if(strstr(str,"\\")) return true;
+#endif//WINDOWS_OS
+
+	return false;
 }
 
 #if OBJECT_TEST

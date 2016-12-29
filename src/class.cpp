@@ -42,6 +42,16 @@ int Cclass::create(void *p)
 	this->temp = CLASS_H_TEMP;
 	this->cpp_temp=CLASS_CPP_TEMP;
 	char * str_class =(char *)p;
+	
+	if(false==this->is_identifier(str_class)) //check str_class 
+	{
+		if(false==this->is_path(str_class))	return -1;//check str_class is path
+		str_class=strrchr(str_class,'/');
+		if(!str_class) str_class=strrchr(str_class,'\\');
+		if(!str_class) return -1;
+		str_class++ ; //skip '/' or '\'
+ 	}
+
 	this->s_rep=str_class;
 	this->replace_temp(1);
 
@@ -57,7 +67,7 @@ int Cclass::deal_cmd(int argc, char *argv[])
 		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 		if(argc<1)	break;
 
-		this->create((void *)argv[argc]);//creat h cpp temp
+		if(this->create((void *)argv[argc])) continue;//creat h cpp temp
 
 		this->f_name=argv[argc];
 		this->f_name+=".h";
