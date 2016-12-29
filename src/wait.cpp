@@ -15,3 +15,23 @@ Cwait::~Cwait()
 {
 
 }
+
+int Cwait::wait_key(void *p)
+{
+	return 0;
+}
+
+char * Cwait::wait_str(void *p)
+{
+	return nullptr;
+}
+
+long Cwait::wait_number(void *p)
+{
+	return 0;
+}
+
+double Cwait::wait_float(void *p)
+{
+	return 0;
+}
