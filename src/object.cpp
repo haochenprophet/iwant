@@ -590,12 +590,19 @@ int Object::question(void * p)
 	return 0;
 }
 
-int Object::is_identifier(char *str,void ** o_addr)
+//str[0]={_,a-z,A-z},str[n>0]={0-9,a-z,A-Z,_}
+bool Object::is_identifier(char *str,void ** o_addr)
 {
-	return 0;
+	int n;
+	if(!(str[0]=='_'||str[0]>='A'&&str[0]<='Z'||str[0]>='a'&&str[0]<='z')) return false;
+	for(n=1;str[n]!='\0';n++)
+	{
+		if(!(str[n]=='_'||str[n]>='A'&&str[n]<='Z'||str[n]>='a'&&str[n]<='z'||str[n]>='0'&&str[n]<='9')) return false;
+	}
+	return true;
 }
-		
-int Object::is_path(char *str,void ** o_addr)
+
+bool Object::is_path(char *str,void ** o_addr)
 {
 	return 0;
 }
