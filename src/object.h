@@ -140,6 +140,7 @@ namespace n_object {
 		int get_error();
 		int set_count(int ct);
 		int get_count();
+		bool get_s(char * s ,int size);
 
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);

@@ -270,6 +270,12 @@ int Object::get_count()
 	return this->count;
 }
 
+bool Object::get_s(char * s ,int size)
+{
+	std::cin.get(s,size);
+	return std::cin.good();
+}
+
 void Object::my_syntax()
 {
 	if (this->syntax.length())	cout << this->syntax << endl;
