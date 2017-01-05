@@ -36,6 +36,7 @@ int object_func(void *p);
 int runcmd(void *cmd);
 
 #define PAGE_4K	(4*1024) 
+#define O_BUF_LEN PAGE_4K
 #define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
 
 namespace n_object {
@@ -77,6 +78,8 @@ namespace n_object {
 		int action;
 		int error; //error count >0 error
 		int count;
+		int cin_buf_len;
+		char *cin_buf;
 
 		string name; //object name
 		string alias;//Alias object name
@@ -140,7 +143,8 @@ namespace n_object {
 		int get_error();
 		int set_count(int ct);
 		int get_count();
-		bool get_s(char * s ,int size);
+		bool get_s(char ** s ,int size);
+		bool wait_cin();
 
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);

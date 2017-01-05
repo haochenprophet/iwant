@@ -95,6 +95,8 @@ Object::Object()
 	this->direction=0;
 	this->value=0;
 	this->velocity=0;
+	this->cin_buf=nullptr;
+	this->cin_buf_len=O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
 }
 
 Object::~Object()
@@ -107,6 +109,7 @@ Object::~Object()
 	this->my_mem.clear();
 	this->clear_exist();
 	this->exist_list.clear();
+	if(this->cin_buf) delete[] this->cin_buf;
 }
 
 void Object::myName(Object *o)
@@ -270,10 +273,20 @@ int Object::get_count()
 	return this->count;
 }
 
-bool Object::get_s(char * s ,int size)
+bool Object::get_s(char ** s ,int size)
 {
-	std::cin.get(s,size);
+	if(size<1) return false;
+	if(*s==nullptr)
+	{
+		if(size!=this->allot(size,(void **)s)) return false;
+	}
+	std::cin.get(*s,size);
 	return std::cin.good();
+}
+
+bool Object::wait_cin()
+{
+	return this->get_s(&this->cin_buf,this->cin_buf_len);
 }
 
 void Object::my_syntax()
