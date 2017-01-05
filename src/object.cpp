@@ -284,8 +284,19 @@ bool Object::get_s(char ** s ,int size)
 	return std::cin.good();
 }
 
-bool Object::wait_cin()
+bool Object::wait_cin(int size)
 {
+	if(size <1) return false;
+	if(size>this->cin_buf_len)
+	{
+		if(this->cin_buf)
+		{
+			size=this->allot(this->cin_buf_len, (void **) &this->cin_buf,size,false);
+		}
+
+		this->cin_buf_len=size;
+	}
+
 	return this->get_s(&this->cin_buf,this->cin_buf_len);
 }
 

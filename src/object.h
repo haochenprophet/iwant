@@ -144,7 +144,7 @@ namespace n_object {
 		int set_count(int ct);
 		int get_count();
 		bool get_s(char ** s ,int size);
-		bool wait_cin();
+		bool wait_cin(int size=O_BUF_LEN);
 
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
