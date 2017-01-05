@@ -23,4 +23,24 @@ ALTER TABLE `question`.`question`
 CHANGE COLUMN `iddepend` `iddepend` INT(30) NULL DEFAULT 0 ,
 CHANGE COLUMN `status` `status` INT(30) NULL DEFAULT 0 ;
 
+ALTER TABLE `question`.`question` 
+ADD COLUMN `choice` TEXT NULL AFTER `result`;
+
+ALTER TABLE `question`.`question` 
+CHANGE COLUMN `choice` `choice` INT NULL DEFAULT NULL ;
+
+
+ALTER TABLE `question`.`question` 
+CHANGE COLUMN `choice` `result` INT(11) NULL DEFAULT NULL AFTER `depend`,
+CHANGE COLUMN `idquestion` `id` INT(30) NOT NULL ,
+CHANGE COLUMN `question` `sQ` TEXT NOT NULL ,
+CHANGE COLUMN `answer` `sA` TEXT NOT NULL ,
+CHANGE COLUMN `result` `sR` TEXT NOT NULL ,
+CHANGE COLUMN `feedback` `sF` TEXT NULL DEFAULT NULL ,
+CHANGE COLUMN `depend` `sD` TEXT NULL DEFAULT NULL ,
+CHANGE COLUMN `iddepend` `depend` INT(30) NULL DEFAULT '0' ;
+
+ALTER TABLE `question`.`question` 
+CHANGE COLUMN `result` `result` INT(11) NULL DEFAULT 0 ;
+
 SELECT * FROM question.question;
