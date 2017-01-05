@@ -300,6 +300,12 @@ bool Object::wait_cin(int size)
 	return this->get_s(&this->cin_buf,this->cin_buf_len);
 }
 
+char * Object::at_cin_buf(char * str)
+{
+	if(!this->cin_buf) return nullptr;
+	return strstr(this->cin_buf,str);
+}
+
 void Object::my_syntax()
 {
 	if (this->syntax.length())	cout << this->syntax << endl;

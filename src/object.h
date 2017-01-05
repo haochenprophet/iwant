@@ -145,6 +145,7 @@ namespace n_object {
 		int get_count();
 		bool get_s(char ** s ,int size);
 		bool wait_cin(int size=O_BUF_LEN);
+		char * at_cin_buf(char * str);//is exist
 
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
