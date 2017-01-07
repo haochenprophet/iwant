@@ -43,4 +43,7 @@ CHANGE COLUMN `iddepend` `depend` INT(30) NULL DEFAULT '0' ;
 ALTER TABLE `question`.`question` 
 CHANGE COLUMN `result` `result` INT(11) NULL DEFAULT 0 ;
 
+ALTER TABLE `question`.`question` 
+ADD COLUMN `action` INT(30) NULL DEFAULT 0 AFTER `status`;
+
 SELECT * FROM question.question;
