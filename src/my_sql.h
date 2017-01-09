@@ -2,7 +2,6 @@
 #define MY_SQL_H
 
 #include "sql.h"
-#include <mysql/mysql.h>
 
 namespace n_my_sql {
 	class Cmy_sql :public Csql
