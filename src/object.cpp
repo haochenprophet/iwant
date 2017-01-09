@@ -559,6 +559,12 @@ int Object::cmp_time(struct tm *t1,struct tm *t2) //t1>t2 return 1 , t1==t2 retu
 	return 0;
 }
 
+void Object::delay_clock(clock_t count)
+{
+	clock_t t= clock();
+	while((clock()-t)<count);
+}
+
 Object * Object::i_am_here()
 {
 	return this;
