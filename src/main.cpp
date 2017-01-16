@@ -25,12 +25,26 @@ int Cmain::is_exist_main(char *f_name)
 
 int Cmain::deal_cmd(int argc, char *argv[])
 {
+	char * str_tag;
 	do{
 		argc--;
 		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 		if(argc<1)	break;
+		
+		char * str_tag=(char *)argv[argc];
+		if(false==this->is_identifier(str_tag)) //check str_tag 
+		{
+			if(false==this->is_path(str_tag))	return -1;//check str_tag is path
+			str_tag=strrchr(str_tag,'/');
+		#if WINDOWS_OS
+			if(!str_tag) str_tag=strrchr(str_tag,'\\');
+		#endif
+			if(!str_tag) return -1;
+			str_tag++ ; //skip '/' or '\'
+	 	}
+		
+		this->tag_temp(str_tag);
 
-		this->tag_temp((char *)argv[argc]);
 		this->f_name=argv[argc];
 		this->f_name+=".cpp";
 		if(this->is_exist_main((char *) this->f_name.c_str())) continue;//exist main ()
