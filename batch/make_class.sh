@@ -8,4 +8,5 @@ make main=CLASS
 ./iwant smtp
 ./iwant step
 ./iwant test
+./iwant func
 make main=CLASS
