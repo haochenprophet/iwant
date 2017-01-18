@@ -9,8 +9,11 @@ namespace n_file {
 	{
 	public:
 		string f_name;
+		std::fstream ap_fs;//for Cfile::f_append()
+
 	public:
 		Cfile();
+		~Cfile();
 		int is_exist(char *filename);
 		int is_exist();
 		int f_append(char *filename,char * ap_str);

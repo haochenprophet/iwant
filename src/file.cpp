@@ -6,6 +6,12 @@ Cfile::Cfile()
 	this->alias = "file";
 }
 
+Cfile::~Cfile()
+{
+
+	if(this->ap_fs.is_open()) this->ap_fs.close();//Cfile::f_append
+}
+
 int Cfile::is_exist(char *filename)
 {
 	if(!filename) return -1;
@@ -29,11 +35,12 @@ int Cfile::f_append(char *filename,char * ap_str)
 {
 	if( !(filename && ap_str) ) return -1;
 
-	std::fstream fs;
-	fs.open (filename, std::fstream::in | std::fstream::out | std::fstream::app);
-	
-	fs << ap_str;
-	fs.close();
+	if(!this->ap_fs.is_open()) 
+	{
+		this->ap_fs.open (filename, std::fstream::in | std::fstream::out | std::fstream::app);
+	}
+
+	this->ap_fs << ap_str;
 
 	return 0;
 }
