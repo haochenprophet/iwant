@@ -1,7 +1,7 @@
 #ifndef STRICTFP_H
 #define STRICTFP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_strictfp {
 	class Cstrictfp :public Object

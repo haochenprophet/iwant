@@ -1,7 +1,7 @@
 #ifndef __BOX_H
 #define __BOX_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___box {
 	class C__box :public Object

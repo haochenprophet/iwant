@@ -1,7 +1,7 @@
 #ifndef GOTO_H
 #define GOTO_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_goto {
 	class Cgoto :public Object

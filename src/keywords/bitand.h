@@ -1,7 +1,7 @@
 #ifndef BITAND_H
 #define BITAND_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_bitand {
 	class Cbitand :public Object

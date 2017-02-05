@@ -1,7 +1,7 @@
 #ifndef SHORT_H
 #define SHORT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_short {
 	class Cshort :public Object

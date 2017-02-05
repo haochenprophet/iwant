@@ -1,7 +1,7 @@
 #ifndef CALLABLE_H
 #define CALLABLE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_callable {
 	class Ccallable :public Object

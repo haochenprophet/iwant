@@ -1,7 +1,7 @@
 #ifndef FROM_H
 #define FROM_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_from {
 	class Cfrom :public Object

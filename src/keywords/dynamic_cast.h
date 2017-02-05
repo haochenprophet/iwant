@@ -1,7 +1,7 @@
 #ifndef DYNAMIC_CAST_H
 #define DYNAMIC_CAST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_dynamic_cast {
 	class Cdynamic_cast :public Object

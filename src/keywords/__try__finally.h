@@ -1,7 +1,7 @@
 #ifndef __TRY__FINALLY_H
 #define __TRY__FINALLY_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___try__finally {
 	class C__try__finally :public Object

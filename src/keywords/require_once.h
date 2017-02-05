@@ -1,7 +1,7 @@
 #ifndef REQUIRE_ONCE_H
 #define REQUIRE_ONCE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_require_once {
 	class Crequire_once :public Object

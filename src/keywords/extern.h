@@ -1,7 +1,7 @@
 #ifndef EXTERN_H
 #define EXTERN_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_extern {
 	class Cextern :public Object

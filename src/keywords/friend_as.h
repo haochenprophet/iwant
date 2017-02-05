@@ -1,7 +1,7 @@
 #ifndef FRIEND_AS_H
 #define FRIEND_AS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_friend_as {
 	class Cfriend_as :public Object

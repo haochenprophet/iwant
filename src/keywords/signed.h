@@ -1,7 +1,7 @@
 #ifndef SIGNED_H
 #define SIGNED_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_signed {
 	class Csigned :public Object

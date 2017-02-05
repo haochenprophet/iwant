@@ -1,7 +1,7 @@
 #ifndef SCHEDULE_H
 #define SCHEDULE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_schedule {
 	class Cschedule :public Object

@@ -1,7 +1,7 @@
 #ifndef VAR_H
 #define VAR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_var {
 	class Cvar :public Object

@@ -1,7 +1,7 @@
 #ifndef CONSTEXPR_H
 #define CONSTEXPR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_constexpr {
 	class Cconstexpr :public Object

@@ -1,7 +1,7 @@
 #ifndef FLOAT_H
 #define FLOAT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_float {
 	class Cfloat :public Object

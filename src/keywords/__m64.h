@@ -1,7 +1,7 @@
 #ifndef __M64_H
 #define __M64_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___m64 {
 	class C__m64 :public Object

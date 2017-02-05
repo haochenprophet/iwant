@@ -1,7 +1,7 @@
 #ifndef _IMPORT_H
 #define _IMPORT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n__import {
 	class C_import :public Object

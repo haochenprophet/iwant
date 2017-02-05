@@ -1,7 +1,7 @@
 #ifndef LITERAL_H
 #define LITERAL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_literal {
 	class Cliteral :public Object

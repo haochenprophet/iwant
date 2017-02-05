@@ -1,7 +1,7 @@
 #ifndef __NAMESPACE___H
 #define __NAMESPACE___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___NAMESPACE__ {
 	class C__NAMESPACE__ :public Object

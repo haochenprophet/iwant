@@ -1,7 +1,7 @@
 #ifndef PRICE_H
 #define PRICE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_price {
 	class Cprice :public Object

@@ -1,7 +1,7 @@
 #ifndef ALIGNAS_H
 #define ALIGNAS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_alignas {
 	class Calignas :public Object

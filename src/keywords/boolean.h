@@ -1,7 +1,7 @@
 #ifndef BOOLEAN_H
 #define BOOLEAN_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_boolean {
 	class Cboolean :public Object

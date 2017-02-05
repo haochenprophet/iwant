@@ -1,7 +1,7 @@
 #ifndef NEW_H
 #define NEW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_new {
 

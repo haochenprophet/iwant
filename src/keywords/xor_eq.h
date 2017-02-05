@@ -1,7 +1,7 @@
 #ifndef XOR_EQ_H
 #define XOR_EQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_xor_eq {
 	class Cxor_eq :public Object

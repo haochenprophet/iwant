@@ -1,7 +1,7 @@
 #ifndef ASSERT_H
 #define ASSERT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_assert {
 	class Cassert :public Object

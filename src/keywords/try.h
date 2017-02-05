@@ -1,7 +1,7 @@
 #ifndef TRY_H
 #define TRY_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_try {
 	class Ctry :public Object

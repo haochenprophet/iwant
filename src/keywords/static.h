@@ -1,7 +1,7 @@
 #ifndef STATIC_H
 #define STATIC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_static {
 	class Cstatic :public Object

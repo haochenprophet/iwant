@@ -1,7 +1,7 @@
 #ifndef __NOGC_H
 #define __NOGC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___nogc {
 	class C__nogc :public Object

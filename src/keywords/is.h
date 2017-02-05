@@ -1,7 +1,7 @@
 #ifndef IS_H
 #define IS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_is {
 	class Cis :public Object

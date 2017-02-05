@@ -1,7 +1,7 @@
 #ifndef __THISCALL_H
 #define __THISCALL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___thiscall {
 	class C__thiscall :public Object

@@ -1,7 +1,7 @@
 #ifndef NONE_H
 #define NONE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_none {
 	class Cnone :public Object

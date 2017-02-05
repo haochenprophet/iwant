@@ -1,7 +1,7 @@
 #ifndef DOUBLE_H
 #define DOUBLE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_double {
 	class Cdouble :public Object

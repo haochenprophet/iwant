@@ -1,7 +1,7 @@
 #ifndef LAMBDA_H
 #define LAMBDA_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_lambda {
 	class Clambda :public Object

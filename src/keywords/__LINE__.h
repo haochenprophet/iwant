@@ -1,7 +1,7 @@
 #ifndef __LINE___H
 #define __LINE___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___LINE__ {
 	class C__LINE__ :public Object

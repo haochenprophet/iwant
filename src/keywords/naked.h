@@ -1,7 +1,7 @@
 #ifndef NAKED_H
 #define NAKED_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_naked {
 	class Cnaked :public Object

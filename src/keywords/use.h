@@ -1,7 +1,7 @@
 #ifndef USE_H
 #define USE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_use {
 	class Cuse :public Object

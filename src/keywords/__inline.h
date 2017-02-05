@@ -1,7 +1,7 @@
 #ifndef __INLINE_H
 #define __INLINE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___inline {
 	class C__inline :public Object

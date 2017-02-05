@@ -1,7 +1,7 @@
 #ifndef PASS_H
 #define PASS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_pass {
 	class Cpass :public Object

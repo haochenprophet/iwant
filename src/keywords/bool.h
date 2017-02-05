@@ -1,7 +1,7 @@
 #ifndef BOOL_H
 #define BOOL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_bool {
 	class Cbool :public Object

@@ -1,7 +1,7 @@
 #ifndef __FINALLY_H
 #define __FINALLY_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___finally {
 	class C__finally :public Object

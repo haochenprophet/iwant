@@ -1,7 +1,7 @@
 #ifndef PUBLIC_H
 #define PUBLIC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_public {
 	class Cpublic :public Object

@@ -1,7 +1,7 @@
 #ifndef ALIGNOF_H
 #define ALIGNOF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_alignof {
 	class Calignof :public Object

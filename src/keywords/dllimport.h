@@ -1,7 +1,7 @@
 #ifndef DLLIMPORT_H
 #define DLLIMPORT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_dllimport {
 	class Cdllimport :public Object

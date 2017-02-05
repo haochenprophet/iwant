@@ -1,7 +1,7 @@
 #ifndef VALUE_CLASS_H
 #define VALUE_CLASS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_value_class {
 	class Cvalue_class :public Object

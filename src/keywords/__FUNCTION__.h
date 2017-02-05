@@ -1,7 +1,7 @@
 #ifndef __FUNCTION___H
 #define __FUNCTION___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___FUNCTION__ {
 	class C__FUNCTION__ :public Object

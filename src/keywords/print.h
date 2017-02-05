@@ -1,7 +1,7 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_print {
 	class Cprint :public Object

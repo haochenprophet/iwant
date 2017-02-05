@@ -1,7 +1,7 @@
 #ifndef __UNALIGNED_H
 #define __UNALIGNED_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___unaligned {
 	class C__unaligned :public Object

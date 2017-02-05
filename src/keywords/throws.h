@@ -1,7 +1,7 @@
 #ifndef THROWS_H
 #define THROWS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_throws {
 	class Cthrows :public Object

@@ -1,910 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="header">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="sql">
       <UniqueIdentifier>{b8cf7354-5301-4a4b-a95e-6127c54e61ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{112f33a5-b1c2-4a2e-9e1b-a6b4b2a0a6bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="keywords">
+      <UniqueIdentifier>{c2939745-45c6-4f97-aabe-4523049ec3c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{7d3b75c3-6f24-4b86-88ca-13824af18806}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\iwant.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\object.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\net.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\socket.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\task.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\url.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\home.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\new.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\myMemory.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\os.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\exec.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\run.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sys.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\cout.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\echo.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\esc.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\exit.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\class.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\syntax.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\temp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tag.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\math.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\make.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\http.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sql.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\uri.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\xml.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\brackets.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\file.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\path.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\timer.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\enum.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ex_func.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\keyword.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\symbol.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\build.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\comment.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__abstract.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__alignof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__asm.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__assume.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__based.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__box.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__cdecl.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__CLASS__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__declspec.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__delegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__DIR__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__event.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__except.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__fastcall.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__FILE__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__finally.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__forceinline.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__FUNCTION__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__gc.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__halt_compiler.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__hook.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__identifier.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__if_exists.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__if_not_exists.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__inline.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__int8.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__int16.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__int32.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__int64.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__interface.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__leave.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__LINE__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__m64.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__m128.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__m128d.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__m128i.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__METHOD__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__multiple_inheritance.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__NAMESPACE__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__nogc.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__noop.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__pin.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__property.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__raise.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__sealed.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__single_inheritance.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__stdcall.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__super.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__thiscall.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__TRAIT__.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__try__except.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__try__finally.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__try_cast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__unaligned.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__unhook.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__uuidof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__value.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__virtual_inheritance.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__w64.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\__wchar_t.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_define.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_elif.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_else.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_endif.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_error.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_if.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_ifdef.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_ifndef.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_import.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_include.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_line.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_pragma.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_undef.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\_using.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\abstract.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\alignas.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\alignof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\and.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\and_eq.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\array.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\as.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\asm.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\assert.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\atomic_cancel.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\atomic_commit.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\atomic_noexcept.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\auto.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\bitand.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\bitor.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\bool.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\boolean.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\break.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\byte.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\callable.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\case.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\catch.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\char.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\char16_t.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\char32_t.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\clone.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\compl.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\concept.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\const.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\const_cast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\constexpr.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\continue.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\declare.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\decltype.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\def.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\default.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\del.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\delegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\delete.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\deprecated.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\die.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\display.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\dllexport.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\dllimport.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\do.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\double.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\dynamic_cast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\elif.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\else.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\elseif.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\empty.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\end.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\enddeclare.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\endfor.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\endforeach.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\endif.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\endswitch.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\endwhile.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\enum_class.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\enum_struct.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\eval.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\event.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\except.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\explicit.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\export.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\expressions.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\extends.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\extern.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\false.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\final.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\finally.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\float.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\for.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\for_each_in.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\foreach.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\friend.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\friend_as.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\from.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\function.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\gcnew.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\generic.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\global.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\goto.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\if.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\implements.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\import.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\in.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\include.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\include_once.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\initonly.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\inline.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\instanceof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\insteadof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\int.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\interface.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\interface_class.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\interface_struct.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\interior_ptr.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\is.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\isset.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\lambda.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\list.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\literal.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\long.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\module.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\mutable.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\naked.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\namespace.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\native.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\new_noinline.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\noexcept.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\nonlocal.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\noreturn.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\not.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\not_eq.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\nothrow.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\novtable.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\nullptr.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\operator.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\or.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\or_eq.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\package.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\pass.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\print.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\private.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\property.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\protected.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\public.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\raise.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ref_class.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ref_struct.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\register.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\reinterpret_cast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\require.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\require_once.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\requires.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\return.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\safecast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sealed.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\selectany.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\short.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\signed.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\sizeof.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\static.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\static_assert.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\static_cast.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\strictfp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\struct.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\super.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\switch.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\synchronized.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\template.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\this.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\thread.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\thread_local.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\throw.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\throws.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\trait.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\transient.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\true.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\try.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\typedef.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\typeid.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\typename.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\union.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\unset.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\unsigned.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\use.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\using.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\using_declaration.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\using_directive.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\uuid.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\value_class.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\value_struct.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\var.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\virtual.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\void.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\volatile.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\wchar_t.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\while.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\with.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\xor.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\xor_eq.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\yield.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\none.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
       <Filter>sql</Filter>
     </ClCompile>
@@ -1460,926 +570,950 @@
     <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp">
       <Filter>sql</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__abstract.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__alignof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__asm.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__assume.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__based.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__box.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__cdecl.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__CLASS__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__declspec.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__delegate.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__DIR__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__event.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__except.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__fastcall.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__FILE__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__finally.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__forceinline.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__FUNCTION__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__gc.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__halt_compiler.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__hook.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__identifier.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__if_exists.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__if_not_exists.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__inline.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__int8.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__int16.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__int32.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__int64.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__interface.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__leave.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__LINE__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__m64.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__m128.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__m128d.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__m128i.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__METHOD__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__multiple_inheritance.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__NAMESPACE__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__nogc.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__noop.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__pin.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__property.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__raise.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__sealed.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__single_inheritance.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__stdcall.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__super.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__thiscall.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__TRAIT__.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__try__except.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__try__finally.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__try_cast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__unaligned.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__unhook.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__uuidof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__value.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__virtual_inheritance.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__w64.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\__wchar_t.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_define.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_elif.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_else.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_endif.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_error.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_if.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_ifdef.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_ifndef.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_import.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_include.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_line.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_pragma.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_undef.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_using.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\abstract.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\alignas.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\alignof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\and.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\and_eq.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\array.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\as.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\asm.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\assert.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\atomic_cancel.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\atomic_commit.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\atomic_noexcept.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\auto.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\bitand.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\bitor.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\bool.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\boolean.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\break.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\byte.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\callable.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\case.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\catch.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\char.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\char16_t.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\char32_t.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\clone.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\compl.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\concept.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\const_cast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\constexpr.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\continue.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\declare.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\decltype.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\def.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\default.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\del.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\delegate.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\delete.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\deprecated.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\dllexport.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\dllimport.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\do.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\double.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\dynamic_cast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\elif.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\else.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\elseif.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\empty.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\end.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\enddeclare.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\endfor.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\endforeach.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\endif.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\endswitch.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\endwhile.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\enum.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\enum_class.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\enum_struct.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\eval.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\event.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\except.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\explicit.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\export.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\expressions.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\extends.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\extern.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\false.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\final.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\finally.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\float.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\for.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\for_each_in.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\foreach.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\friend.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\friend_as.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\from.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\function.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\gcnew.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\generic.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\global.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\goto.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\if.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\implements.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\import.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\in.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\include.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\include_once.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\initonly.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\inline.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\instanceof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\insteadof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\int.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\interface.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\interface_class.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\interface_struct.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\interior_ptr.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\is.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\isset.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\lambda.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\list.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\literal.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\long.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\module.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\mutable.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\naked.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\namespace.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\native.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\new.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\new_noinline.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\noexcept.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\none.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\nonlocal.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\noreturn.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\not.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\not_eq.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\nothrow.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\novtable.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\nullptr.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\or.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\or_eq.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\package.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\pass.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\price.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\print.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\private.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\property.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\protected.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\public.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\raise.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\ref_class.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\ref_struct.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\register.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\reinterpret_cast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\require.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\require_once.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\requires.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\return.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\safecast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\schedule.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\sealed.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\selectany.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\short.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\signed.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\sizeof.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\static.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\static_assert.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\static_cast.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\strictfp.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\struct.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\super.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\switch.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\synchronized.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\template.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\this.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\thread.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\thread_local.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\throw.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\throws.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\trait.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\transient.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\true.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\try.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\typedef.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\typeid.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\typename.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\union.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\unset.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\unsigned.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\use.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\using.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\using_declaration.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\using_directive.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\uuid.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\value_class.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\value_struct.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\var.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\virtual.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\void.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\volatile.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\wchar_t.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\while.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\with.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\xml.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\xor.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\xor_eq.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\yield.cpp">
+      <Filter>keywords</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\action.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\brackets.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\build.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\class.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\comment.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\const.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cout.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\die.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\display.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\echo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\esc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ex_func.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\exec.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\exit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\file.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ftp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\func.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\get.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\home.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\http.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\istring.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iwant.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keyword.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\make.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\makefile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\my_sql.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\myMemory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\net.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\object.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\path.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\plan.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\question.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\run.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\search.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\smtp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\socket.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\source.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sql.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\step.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\symbol.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\syntax.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sys.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tag.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\task.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\temp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\uri.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\url.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wait.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\iwant.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\object.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\main.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\net.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\socket.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\task.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\url.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\home.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\new.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\myMemory.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\os.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\exec.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\run.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sys.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\cout.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\echo.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\all_h_include.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\esc.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\exit.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\class.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\syntax.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\temp.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\syntax_def.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\temp_def.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tag.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\math.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\make.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\http.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sql.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\uri.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\xml.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\brackets.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\file.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\path.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\timer.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\enum.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ex_func.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\keyword.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\symbol.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\build.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\comment.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__abstract.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__alignof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__asm.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__assume.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__based.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__box.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__cdecl.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__CLASS__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__declspec.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__delegate.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__DIR__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__event.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__except.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__fastcall.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__FILE__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__finally.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__forceinline.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__FUNCTION__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__gc.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__halt_compiler.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__hook.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__identifier.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__if_exists.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__if_not_exists.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__inline.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__int8.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__int16.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__int32.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__int64.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__interface.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__leave.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__LINE__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__m64.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__m128.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__m128d.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__m128i.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__METHOD__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__multiple_inheritance.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__NAMESPACE__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__nogc.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__noop.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__pin.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__property.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__raise.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__sealed.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__single_inheritance.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__stdcall.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__super.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__thiscall.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__TRAIT__.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__try__except.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__try__finally.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__try_cast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__unaligned.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__unhook.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__uuidof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__value.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__virtual_inheritance.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__w64.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\__wchar_t.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_define.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_elif.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_else.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_endif.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_error.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_if.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_ifdef.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_ifndef.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_import.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_include.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_line.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_pragma.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_undef.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\_using.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\abstract.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\alignas.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\alignof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\and.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\and_eq.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\array.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\as.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\asm.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\assert.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\atomic_cancel.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\atomic_commit.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\atomic_noexcept.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\auto.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\bitand.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\bitor.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\bool.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\boolean.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\break.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\byte.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\callable.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\case.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\catch.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\char.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\char16_t.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\char32_t.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\clone.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\compl.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\concept.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\const.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\const_cast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\constexpr.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\continue.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\declare.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\decltype.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\def.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\default.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\del.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\delegate.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\delete.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\deprecated.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\die.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\display.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\dllexport.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\dllimport.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\do.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\double.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\dynamic_cast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\elif.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\else.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\elseif.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\empty.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\end.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\enddeclare.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\endfor.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\endforeach.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\endif.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\endswitch.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\endwhile.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\enum_class.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\enum_struct.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\eval.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\event.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\except.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\explicit.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\export.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\expressions.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\extends.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\extern.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\false.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\false_.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\final.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\finally.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\float.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\for.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\for_each_in.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\foreach.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\friend.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\friend_as.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\from.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\function.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\gcnew.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\generic.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\global.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\goto.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\if.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\implements.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\import.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\in.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\include.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\include_once.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\initonly.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\inline.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\instanceof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\insteadof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\int.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\interface.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\interface_class.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\interface_struct.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\interior_ptr.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\is.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\isset.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\lambda.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\list.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\literal.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\long.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\module.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\mutable.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\naked.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\namespace.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\native.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\new_noinline.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\noexcept.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\nonlocal.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\noreturn.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\not.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\not_eq.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\nothrow.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\novtable.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\nullptr.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\operator.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\or.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\or_eq.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\package.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\pass.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\print.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\private.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\property.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\protected.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\public.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\raise.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ref_class.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ref_struct.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\register.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\reinterpret_cast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\require.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\require_once.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\requires.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\return.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\safecast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sealed.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\selectany.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\short.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\signed.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\sizeof.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\static.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\static_assert.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\static_cast.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\strictfp.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\struct.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\super.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\switch.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\synchronized.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\template.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\this.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\thread.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\thread_local.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\throw.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\throws.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\trait.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\transient.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\true.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\true_.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\try.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\typedef.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\typeid.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\typename.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\union.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\unset.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\unsigned.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\use.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\using.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\using_declaration.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\using_directive.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\uuid.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\value_class.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\value_struct.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\var.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\virtual.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\void.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\volatile.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\wchar_t.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\while.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\with.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\xor.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\xor_eq.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\yield.h">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\none.h">
-      <Filter>header</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
       <Filter>sql</Filter>
     </ClInclude>
@@ -2935,23 +2069,965 @@
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h">
       <Filter>sql</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__abstract.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__alignof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__asm.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__assume.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__based.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__box.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__cdecl.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__CLASS__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__declspec.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__delegate.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__DIR__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__event.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__except.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__fastcall.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__FILE__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__finally.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__forceinline.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__FUNCTION__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__gc.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__halt_compiler.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__hook.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__identifier.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__if_exists.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__if_not_exists.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__inline.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__int8.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__int16.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__int32.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__int64.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__interface.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__leave.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__LINE__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__m64.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__m128.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__m128d.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__m128i.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__METHOD__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__multiple_inheritance.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__NAMESPACE__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__nogc.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__noop.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__pin.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__property.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__raise.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__sealed.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__single_inheritance.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__stdcall.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__super.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__thiscall.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__TRAIT__.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__try__except.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__try__finally.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__try_cast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__unaligned.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__unhook.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__uuidof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__value.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__virtual_inheritance.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__w64.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\__wchar_t.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_define.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_elif.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_else.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_endif.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_error.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_if.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_ifdef.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_ifndef.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_import.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_include.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_line.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_pragma.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_undef.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_using.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\abstract.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\alignas.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\alignof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\and.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\and_eq.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\array.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\as.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\asm.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\assert.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\atomic_cancel.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\atomic_commit.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\atomic_noexcept.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\auto.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\bitand.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\bitor.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\bool.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\boolean.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\break.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\byte.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\callable.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\case.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\catch.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\char.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\char16_t.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\char32_t.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\clone.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\compl.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\concept.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\const_cast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\constexpr.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\continue.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\declare.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\decltype.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\def.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\default.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\del.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\delegate.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\delete.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\deprecated.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\dllexport.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\dllimport.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\do.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\double.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\dynamic_cast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\elif.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\else.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\elseif.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\empty.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\end.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\enddeclare.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\endfor.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\endforeach.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\endif.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\endswitch.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\endwhile.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\enum.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\enum_class.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\enum_struct.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\eval.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\event.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\except.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\explicit.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\export.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\expressions.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\extends.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\extern.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\false.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\final.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\finally.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\float.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\for.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\for_each_in.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\foreach.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\friend.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\friend_as.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\from.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\function.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\gcnew.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\generic.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\global.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\goto.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\if.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\implements.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\import.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\in.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\include.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\include_once.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\initonly.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\inline.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\instanceof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\insteadof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\int.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\interface.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\interface_class.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\interface_struct.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\interior_ptr.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\is.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\isset.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\lambda.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\list.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\literal.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\long.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\module.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\mutable.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\naked.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\namespace.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\native.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\new.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\new_noinline.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\noexcept.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\none.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\nonlocal.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\noreturn.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\not.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\not_eq.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\nothrow.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\novtable.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\nullptr.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\or.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\or_eq.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\package.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\pass.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\price.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\print.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\private.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\property.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\protected.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\public.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\raise.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\ref_class.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\ref_struct.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\register.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\reinterpret_cast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\require.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\require_once.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\requires.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\return.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\safecast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\schedule.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\sealed.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\selectany.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\short.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\signed.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\sizeof.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\static.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\static_assert.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\static_cast.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\strictfp.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\struct.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\super.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\switch.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\synchronized.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\template.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\this.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\thread.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\thread_local.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\throw.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\throws.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\trait.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\transient.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\true.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\try.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\typedef.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\typeid.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\typename.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\union.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\unset.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\unsigned.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\use.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\using.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\using_declaration.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\using_directive.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\uuid.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\value_class.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\value_struct.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\var.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\virtual.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\void.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\volatile.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\wchar_t.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\while.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\with.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\xml.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\xor.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\xor_eq.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\yield.h">
+      <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ftp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\func.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\istring.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\my_sql.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\plan.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\question.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\question_def.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\smtp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\source.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\step.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\wait.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\action.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\all_h_include.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\brackets.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\class.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\comment.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\const.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cout.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\die.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\display.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\echo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\esc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ex_func.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\exec.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\exit.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\file.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\get.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\http.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\http_def.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\iwant.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keyword.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\main.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\make.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\makefile.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\myMemory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\net.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\object.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\path.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\run.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\search.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\socket.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sql.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\symbol.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\syntax.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\syntax_def.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sys.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tag.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\task.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\temp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\temp_def.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\timer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\uri.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\url.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\url_def.h">
-      <Filter>header</Filter>
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2963,5 +3039,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\doc\think.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\mysql-connector-c++\lib64\vs14\mysqlcppconn2-static.lib">
+      <Filter>lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>

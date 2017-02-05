@@ -1,7 +1,7 @@
 #ifndef FOR_H
 #define FOR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_for {
 	class Cfor :public Object

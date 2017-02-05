@@ -1,7 +1,7 @@
 #ifndef TRUE_H
 #define TRUE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_true {
 	class Ctrue :public Object

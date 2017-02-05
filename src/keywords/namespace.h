@@ -1,7 +1,7 @@
 #ifndef NAMESPACE_H
 #define NAMESPACE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_namespace {
 	class Cnamespace :public Object

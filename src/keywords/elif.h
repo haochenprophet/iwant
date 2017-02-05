@@ -1,7 +1,7 @@
 #ifndef ELIF_H
 #define ELIF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_elif {
 	class Celif :public Object

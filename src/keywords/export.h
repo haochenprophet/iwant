@@ -1,7 +1,7 @@
 #ifndef EXPORT_H
 #define EXPORT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_export {
 	class Cexport :public Object

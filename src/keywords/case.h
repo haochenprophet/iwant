@@ -1,7 +1,7 @@
 #ifndef CASE_H
 #define CASE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_case {
 	class Ccase :public Object

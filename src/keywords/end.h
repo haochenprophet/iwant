@@ -1,7 +1,7 @@
 #ifndef END_H
 #define END_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_end {
 	class Cend :public Object

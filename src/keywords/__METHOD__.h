@@ -1,7 +1,7 @@
 #ifndef __METHOD___H
 #define __METHOD___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___METHOD__ {
 	class C__METHOD__ :public Object

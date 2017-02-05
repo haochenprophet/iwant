@@ -1,7 +1,7 @@
 #ifndef MUTABLE_H
 #define MUTABLE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_mutable {
 	class Cmutable :public Object

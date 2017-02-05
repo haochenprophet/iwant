@@ -1,7 +1,7 @@
 #ifndef UNION_H
 #define UNION_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_union {
 	class Cunion :public Object

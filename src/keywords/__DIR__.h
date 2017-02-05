@@ -1,7 +1,7 @@
 #ifndef __DIR___H
 #define __DIR___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___DIR__ {
 	class C__DIR__ :public Object

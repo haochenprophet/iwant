@@ -1,7 +1,7 @@
 #ifndef INTERIOR_PTR_H
 #define INTERIOR_PTR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_interior_ptr {
 	class Cinterior_ptr :public Object

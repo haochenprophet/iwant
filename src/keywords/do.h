@@ -1,7 +1,7 @@
 #ifndef DO_H
 #define DO_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_do {
 	class Cdo :public Object

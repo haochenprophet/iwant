@@ -1,7 +1,7 @@
 #ifndef TRAIT_H
 #define TRAIT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_trait {
 	class Ctrait :public Object

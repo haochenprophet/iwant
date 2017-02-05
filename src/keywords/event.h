@@ -1,7 +1,7 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_event {
 	class Cevent :public Object

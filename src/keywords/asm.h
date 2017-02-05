@@ -1,7 +1,7 @@
 #ifndef ASM_H
 #define ASM_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_asm {
 	class Casm :public Object

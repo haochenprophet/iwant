@@ -1,7 +1,7 @@
 #ifndef UNSET_H
 #define UNSET_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_unset {
 	class Cunset :public Object

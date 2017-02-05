@@ -1,7 +1,7 @@
 #ifndef THREAD_H
 #define THREAD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_thread {
 	class Cthread :public Object

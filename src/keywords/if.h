@@ -1,7 +1,7 @@
 #ifndef IF_H
 #define IF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_if {
 	class Cif :public Object

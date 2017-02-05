@@ -1,7 +1,7 @@
 #ifndef __DECLSPEC_H
 #define __DECLSPEC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___declspec {
 	class C__declspec :public Object

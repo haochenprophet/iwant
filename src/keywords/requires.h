@@ -1,7 +1,7 @@
 #ifndef REQUIRES_H
 #define REQUIRES_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_requires {
 	class Crequires :public Object

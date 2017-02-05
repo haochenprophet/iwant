@@ -1,7 +1,7 @@
 #ifndef RETURN_H
 #define RETURN_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_return {
 	class Creturn :public Object

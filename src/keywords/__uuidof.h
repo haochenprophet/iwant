@@ -1,7 +1,7 @@
 #ifndef __UUIDOF_H
 #define __UUIDOF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___uuidof {
 	class C__uuidof :public Object

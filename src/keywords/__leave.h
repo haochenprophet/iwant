@@ -1,7 +1,7 @@
 #ifndef __LEAVE_H
 #define __LEAVE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___leave {
 	class C__leave :public Object

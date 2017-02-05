@@ -1,7 +1,7 @@
 #ifndef __ABSTRACT_H
 #define __ABSTRACT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___abstract {
 	class C__abstract :public Object

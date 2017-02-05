@@ -1,7 +1,7 @@
 #ifndef GCNEW_H
 #define GCNEW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_gcnew {
 	class Cgcnew :public Object

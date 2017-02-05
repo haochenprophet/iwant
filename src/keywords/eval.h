@@ -1,7 +1,7 @@
 #ifndef EVAL_H
 #define EVAL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_eval {
 	class Ceval :public Object

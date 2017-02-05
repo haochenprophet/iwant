@@ -1,7 +1,7 @@
 #ifndef __STDCALL_H
 #define __STDCALL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___stdcall {
 	class C__stdcall :public Object

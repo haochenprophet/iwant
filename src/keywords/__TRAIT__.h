@@ -1,7 +1,7 @@
 #ifndef __TRAIT___H
 #define __TRAIT___H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___TRAIT__ {
 	class C__TRAIT__ :public Object

@@ -1,7 +1,7 @@
 #ifndef __TRY_CAST_H
 #define __TRY_CAST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n___try_cast {
 	class C__try_cast :public Object

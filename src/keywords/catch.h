@@ -1,7 +1,7 @@
 #ifndef CATCH_H
 #define CATCH_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_catch {
 	class Ccatch :public Object

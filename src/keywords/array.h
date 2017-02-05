@@ -1,7 +1,7 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_array {
 	class Carray :public Object

@@ -1,7 +1,7 @@
 #ifndef ENDDECLARE_H
 #define ENDDECLARE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_enddeclare {
 	class Cenddeclare :public Object

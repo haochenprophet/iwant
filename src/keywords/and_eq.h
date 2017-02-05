@@ -1,7 +1,7 @@
 #ifndef AND_EQ_H
 #define AND_EQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_and_eq {
 	class Cand_eq :public Object

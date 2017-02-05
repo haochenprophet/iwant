@@ -1,7 +1,7 @@
 #ifndef CONST_CAST_H
 #define CONST_CAST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_const_cast {
 	class Cconst_cast :public Object

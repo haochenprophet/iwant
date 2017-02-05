@@ -1,7 +1,7 @@
 #ifndef VOID_H
 #define VOID_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_void {
 	class Cvoid :public Object

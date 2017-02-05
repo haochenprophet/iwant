@@ -1,7 +1,7 @@
 #ifndef NOTHROW_H
 #define NOTHROW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_nothrow {
 	class Cnothrow :public Object
