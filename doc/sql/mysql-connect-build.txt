@@ -1,0 +1,151 @@
+
+MySQL Connector/C++  2.0.3
+MySQL connector library for C and C++ applications
+
+    Main Page
+    X DevAPI
+    XAPI
+    Classes
+    Global Symbols
+    Files
+
+Building Connector/C++ 2.0
+Prerequisites
+
+To build Connector/C++, the following tools and libraries are required:
+
+    A C++ compiler that supports C++11. In case of gcc it must be at least version 4.8. These compilers have been tested: gcc 4.8.4, clang 7.3.0, MS Visual Studio 2013, MS Visual Studio 2015.
+    CMake 2.8.11 or later.
+    Boost library version 1.55 or higher. Tested with Boost 1.56. For MS Visual Studio 2015 Boost version 1.59 or higher is required.
+
+Build configuration
+
+Only out-of-source builds are supported. To configure a build, execute cmake in a dedicated build location (not in the source directory):
+    1 $ cmake <Connector/C++ source location>
+
+If cmake can not find the required Boost version, or if it is installed in a non-standard location, specify the correct location using the option:
+
+    -DWITH_BOOST=<Boost location>
+
+To specify the installation location (see below), use the option:
+
+    -DCMAKE_INSTALL_PREFIX=<Install location>
+
+If not specified, the install location defaults to /usr/local/mysql/connector-c++-2.0 (<User home>/MySQL/"MySQL Connector C++ 2.0" on Windows).
+
+By default a shared library is built. To build a static library, use the option:
+
+    -DBUILD_STATIC=yes
+
+Building and testing
+
+A build can be started with the following cmake invocation in the build location:
+    1 $ cmake --build . --config CCC
+
+where CCC is the build configuration to use, such as Release or Debug. It is also possible to omit --config CCC option in which case the default Debug configuration will be used.
+
+Note
+    In what follows the same build configuration CCC must be used for all the steps such as installing the connector or building the test program.
+
+After a successful build, the build location should contain the Connector/C++ shared library:
+
+    libmysqlcppconn2.so.1.0 on Unix,
+    libmysqlcppconn2.1.0.dylib on OS X,
+    CCC/mysqlcppconn2-vsXX.dll on Windows, where -vs12 or -vs14 prefix depends on the MSVC version used to build the connector.
+
+On Unix and OS X also appropriate symbolic links are created. On Windows the import library for the DLL is created at CCC/mysqlcppconn2.lib (the CCC/ subdirectory is named the same as the build configuration used).
+
+In the case of a static library build, the output library names are:
+
+    libmysqlcppconn2-static.a on Unix and OS X,
+    CCC/mysqlcppconn2-static.lib on Windows.
+
+Testing
+
+To perform basic testing of the connector functionality, build and run one of the test programs included in the testapp/ subdirectory of the source location.
+
+Before building test programs, Connector/C++ must be installed first. To install Connector/C++ to the default location (which could be set during the build configuration using CMAKE_INSTALL_PREFIX option), execute the following command in the build location:
+    1 $ cmake --build . --target install --config CCC
+
+Note
+    It is possible to change the CMAKE_INSTALL_PREFIX setting before doing the installation. To change it, issue the following command before building install target:
+        1 $ cmake -DCMAKE_INSTALL_PREFIX=<new location> .
+
+To build test programs, pick a build location and issue the following commands there:
+    1 $ cmake -DWITH_CONCPP=<Connector/C++ install location> <source location>/testapp
+    2 $ cmake --build . --config CCC
+
+This should create the devapi_test and xapi_test executables in the run/ subdirectory of the build location.
+
+Note
+    On Windows, if the connector was built with the static runtime by specifying -DSTATC_MSVCRT=yes configuration option (see below), the same option must be added to the build configuration of test programs.
+    The 32/64-bit Windows cmake generator ("Visual Studio 12 2013 Win64" vs "Visual Studio 12 2013") used to build test applications must match the one used to build the connector.
+
+Before running test programs, ensure that a MySQL Server instance is running with X Plugin loaded into it. The easiest way of arranging this is to use the mysql-test-run.pl script from the MySQL Server distribution. In the mysql-test/ subdirectory of that distribution, invoke this command:
+    1 $ perl mysql-test-run.pl --start-and-exit --mysqld=--plugin-load=mysqlx
+
+This should start a test server instance with X plugin loaded into it. This can be confirmed by looking at messages output by the server to the mysqld.1.err file found in mysql-test/var/log/ subdirectory. The log file should contain a note from the X plugin informing about it being ready to serve connections:
+    1 Plugin mysqlx reported: 'X plugin tcp connection enable at port 13009.'
+
+When started like this, the plugin will listen on port 13009 instead of the standard 33060 one.
+
+Now one can start one of the test programs and see the output similar to the one presented below. The devapi_test program accepts port number as the first argument, with the default value 33060. Thus, if the server was started as described above, run the test program as follows:
+    1 $ run/devapi_test 13009
+
+The program uses the root user account without any password and assumes that there is a test schema in the server (these assumptions hold for a server started using mysql-test-run.pl). Different user credentials can be passed as the second and the third argument of devapi_test invocation.
+
+For the xapi_test program, connection details can be given in form of an URL, as shown below:
+    1 $ run/xapi_test mysqlx://root@127.0.0.1:13009
+
+If everything goes well, devapi_test should produce output similar to this:
+    1 Creating session on localhost, port 13009 ...
+    2 Session accepted, creating collection...
+    3 Inserting documents...
+    4 - added doc with id: AA71B4BF6B72E511BD76001E684A06F0
+    5 - added doc with id: 2885B4BF6B72E511BD76001E684A06F0
+    6 - added doc with id: 3492B4BF6B72E511BD76001E684A06F0
+    7 - added doc with id: myuuid-1
+    8 Fetching documents...
+    9 
+   10 doc#0: {"_id": "AEFD9C44EB77E5116134001E684A06F0", "age": 3, "date": {"day": 20, "month": "Apr"}, "name": "baz"}
+   11  field `_id`: AEFD9C44EB77E5116134001E684A06F0
+   12  field `age`: 3
+   13  field `date`: <document>
+   14  field `name`: baz
+   15  name: baz
+   16 - date field
+   17   date `day`: 20
+   18   date `month`: Apr
+   19   month: Apr
+   20   day: 20
+   21 
+   22 doc#1: {"_id": "A0ABC08DAABAD1110C120800273BD115", "age": 2, "name": "bar", "toys": ["car", "ball"]}
+   23  field `_id`: A0ABC08DAABAD1110C120800273BD115
+   24  field `age`: 2
+   25  field `name`: bar
+   26  field `toys`: <array with 2 element(s)>
+   27  name: bar
+   28 - toys:
+   29   car
+   30   ball
+   31 
+   32 Done!
+Windows Notes
+
+Connector/C++ uses C++11 language and for that reason it is not possible to build it with Microsoft Visual Studio 2010 or earlier.
+
+On Windows one can request that Connector/C++ uses the static runtime library (The /MT* compiler option) by setting:
+
+    -DSTATIC_MSVCRT=yes
+
+This might be necessary if code which uses Connector/C++ also uses the static runtime.
+
+Selecting a cmake generator such as "Visual Studio 12 2013 Win64" vs "Visual Studio 12 2013" selects the 64 or 32 bit platform for which the connector is built. An application which uses Connector/C++ must be built for the same platform as the connector.
+
+Note that application which is built using 'Debug', 'Release' or other MSVC build configuration needs to link against Connector/C++ library built with the same configuration (as determined by the cmake option --config=CCC described above). Linker leaves library built using configuration CCC in a CCC/ subfolder of the build location. Thus, when building an application that uses the connector library, one has to point linker at the location containing a compatible build of the connector.
+OS X Notes
+
+On OS X, Connector/C++ is built using the clang compiler with the libc++ C++ runtime library. The same runtime library should be used by applications that link against Connector/C++. To arrange this, pass -stdlib=libc++ to the compiler and the linker invocations. Another option is to set the required deployment target and then the compiler defaults are changed accordingly. To define the deployment target, set the environment variable MACOSX_DEPLOYMENT_TARGET to the requested OS X version. Binary distributions of Connector/C++ are built with MACOSX_DEPLOYMENT_TARGET set to 10.9.
+
+Building Connector/C++ with gcc or its libstdc++ runtime has not been tested and there is no support in the build system for using an alternative C++ runtime library.
+Copyright (c) 2015, 2016, Oracle and/or its affiliates. All rights reserved.   Generated on Wed Oct 19 2016 12:06:02 for MySQL Connector/C++ by doxygen 1.8.9
