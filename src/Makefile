@@ -7,10 +7,11 @@ MYSQL_CONCPP_DIR=../mysql_connect
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1\
+	-DSTATIC_CONCPP \
 	-Wl,-Bdynamic \
 	-o $(MK_TAG) *.cpp $(src) $(sql) \
-	-L $(MYSQL_CONCPP_DIR)/lib64 \
-	-lmysqlcppconn2 -lpthread \
+	$(MYSQL_CONCPP_DIR)/lib64/libmysqlcppconn2-static.a \
+	-lpthread \
 	-I./ -I $(MYSQL_CONCPP_DIR)/include
 
 all : 
