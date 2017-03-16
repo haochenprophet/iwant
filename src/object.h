@@ -38,6 +38,8 @@ int runcmd(void *cmd);
 #define PAGE_4K	(4*1024) 
 #define O_BUF_LEN PAGE_4K
 #define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
+#define OUT_ERROR cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;
+
 
 namespace n_object {
 

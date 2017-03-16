@@ -22,22 +22,35 @@ Cmy_sql::~Cmy_sql()
 
 #if MY_SQL_TEST
 #include "all_h_include.h"
-int main(int argc, char *argv[])
+#include <iostream>
+#include <mysql_devapi.h>
+
+
+using ::std::cout;
+using ::std::endl;
+using namespace ::mysqlx;
+
+
+int main(int argc, const char* argv[])
 {
-	cout << "MY_SQL_TEST\n\n";
+	  unsigned short port = (argc > 1 ? atoi(argv[1]) : 0);
+	  const char    *user = (argc > 2 ? argv[2] : "root");
+	  const char    *pwd  = (argc > 3 ? argv[3] : NULL);
 
-	mysqlx_session_t  *sess;
-	const char   *url = (argc > 1 ? argv[1] : "mysqlx://root@127.0.0.1");
-	char conn_error[MYSQLX_MAX_ERROR_LEN];
-	int conn_err_code;
+	  if (0 == port)
+	  {
+	    // Default MySQL X port
+	    port = 33060;
+	  }
 
-	sess = mysqlx_get_node_session_from_url(url, conn_error, &conn_err_code);
-	if (!sess)
-	{
-		printf("\nError! %s. Error Code: %d", conn_error, conn_err_code);
-		return -1;
-	}
+	  cout << "Creating session on localhost, port " << port
+	       << " ..." << endl;
 
-	return 0;
+	  XSession sess("localhost", port, user, pwd);
+
+	  cout <<"Session accepted, creating collection..." <<endl;
+
+	  Schema sch= sess.getSchema("test");
+
 }
 #endif 
