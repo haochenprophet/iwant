@@ -41,7 +41,7 @@ int Cfile::f_append(char *filename,char * ap_str)
 	}
 
 	this->ap_fs << ap_str;
-
+	this->ap_fs.close();
 	return 0;
 }
 

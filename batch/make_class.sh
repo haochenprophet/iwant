@@ -9,4 +9,5 @@ make main=CLASS
 ./iwant step
 ./iwant test
 ./iwant func
+./iwant company
 make main=CLASS
