@@ -13,6 +13,12 @@
     <Filter Include="lib">
       <UniqueIdentifier>{7d3b75c3-6f24-4b86-88ca-13824af18806}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{35247b7a-9e2f-4e5e-8976-3808dbbc80d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\mysql">
+      <UniqueIdentifier>{019b4d21-d526-40bf-acd7-47bb65e4e88b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -3028,6 +3034,39 @@
     </ClInclude>
     <ClInclude Include="..\..\src\url_def.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\common.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\crud.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\document.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_common.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_devapi.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_xapi.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\result.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\statement.h">
+      <Filter>include\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\table_crud.h">
+      <Filter>include\mysql</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
