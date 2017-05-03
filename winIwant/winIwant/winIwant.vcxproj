@@ -102,6 +102,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/D WINDOWS_OS=1 /D _TEST=1 /I "../mysql-connector-c++/include" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include;C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include\devapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -1152,6 +1153,17 @@
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\url_def.h" />
     <ClInclude Include="..\..\src\wait.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\common.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\crud.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\document.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\result.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\statement.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\devapi\table_crud.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_common.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_devapi.h" />
+    <ClInclude Include="..\mysql-connector-c++\include\mysql_xapi.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
