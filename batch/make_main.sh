@@ -4,4 +4,5 @@ make main=MAIN
 ./iwant makefile
 ./iwant search
 ./iwant test
+./iwant register
 make main=MAIN

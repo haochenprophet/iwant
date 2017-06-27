@@ -55,7 +55,7 @@ int Cmain::deal_cmd(int argc, char *argv[])
 }
 
 #if MAIN_TEST||_TEST
-
+/*
 int my_sql_test(int argc, char *argv[])
 {
 	cout << "MY_SQL_TEST\n\n";
@@ -74,16 +74,16 @@ int my_sql_test(int argc, char *argv[])
 
 	return 0;
 }
-
+*/
 int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
 
-//	Cmain m;
-//	m.deal_cmd(argc,argv);
-//	cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
+	Cmain m;
+	m.deal_cmd(argc,argv);
+	cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
 
-	my_sql_test(argc,argv);
+//	my_sql_test(argc,argv);
 	return 0;
 }
 #endif

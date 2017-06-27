@@ -10,4 +10,5 @@ make main=CLASS
 ./iwant test
 ./iwant func
 ./iwant company
+./iwant register
 make main=CLASS
