@@ -224,7 +224,7 @@ int Object::my_family()
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << ":"<<++count <<":"<< op->name << op->i_am_here() << endl;
+		cout << this->name << ":"<<++count <<":"<< op->name << op->where() << endl;
 	}
 	cout << this->name << " my_family count : " << count << endl;
 	return count;
@@ -565,18 +565,28 @@ void Object::delay_clock(clock_t count)
 	while((clock()-t)<count);
 }
 
-Object * Object::i_am_here()
+Object * Object::get_class()//object address
+{
+	return this;	
+}
+
+Object * Object::where()
 {
 	return this;
 }
 
-Object * Object::who_am_i()
+Object * Object::who()
 {
 	this->myName();
 	return this;
 }
 
-int Object::are_you_ok()
+time_t * Object::when()
+{
+	return &this->start_time;
+}
+
+int Object::how()
 {
 	return this->status; //normal, success, OK ,Pass!  and so on
 }

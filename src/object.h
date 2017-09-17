@@ -176,9 +176,11 @@ namespace n_object {
 		void delay_clock(clock_t count);
 
 		//virtual
-		virtual Object * i_am_here();//object address
-		virtual Object * who_am_i();//object introduces
-		virtual int are_you_ok();//return current status , default is  normal ,success , pass ,OK  .... 
+		virtual Object * get_class();//object address
+		virtual Object * where();//object address
+		virtual Object * who();//object introduces
+		virtual time_t * when();
+		virtual int how();//return current status , default is  normal ,success , pass ,OK  .... 
 		virtual int func(void *p=nullptr); // callback function
 		virtual int create(void *p=nullptr);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 		virtual int my_init(void *p=nullptr);//object init
