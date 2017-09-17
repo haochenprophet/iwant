@@ -9,7 +9,7 @@ namespace n_iwant {
 	public:
 		Ciwant();
 		~Ciwant();
-		Object * who_am_i();//object introduce
+		Object * who();//object introduce
 	};
 
 }

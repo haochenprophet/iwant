@@ -22,7 +22,7 @@ Ciwant::~Ciwant()
 #endif
 }
 
-Object * Ciwant::who_am_i()
+Object * Ciwant::who()
 {
 	cout << "I am iwant  APP.\n";
 	return this;
@@ -43,9 +43,9 @@ void add_me_test(Object *p)
 	Ciwant i;
 	Chome oh;
 	cout << "void add_me_test(Object *p)\n";
-	p->addMe(o.i_am_here());
-	p->addMe(i.i_am_here());
-	p->addMe(oh.i_am_here());
+	p->addMe(o.where());
+	p->addMe(i.where());
+	p->addMe(oh.where());
 	p->my_family();
 }
 
@@ -65,16 +65,16 @@ int main(int argc ,char *argv[])
 	s = "Chome1";
 	cout << "Chome1:" << oh.isMe(&s) << endl;
 
-	Ciwant *p = (Ciwant *) i.i_am_here(); //test ok
+	Ciwant *p = (Ciwant *) i.where(); //test ok
 	p->myName();
 	cout << p->isMe((char *)"Ciwant") << endl;
 	cout << p->isMe((char *)"Object") << endl;
 	cout << "isMe(id)\n"<<p->isMe(2) << endl;//test ok
 	cout << p->isMe(3) << endl;
 
-	o.who_am_i();
-	oh.who_am_i();
-	p->who_am_i();
+	o.who();
+	oh.who();
+	p->who();
 
 	cout<<"Hello iwant APP .\n";
 
@@ -110,7 +110,7 @@ int main(int argc ,char *argv[])
 	o.addMe(p);
 	o.my_family();
 
-	cout << "test ok:"<<o.i_am_here()<<"="<< &o <<endl;
+	cout << "test ok:"<<o.where()<<"="<< &o <<endl;
 	p->addMe(&o);
 	p->addMe(&oh);
 
