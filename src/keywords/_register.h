@@ -3,15 +3,15 @@
 
 #include "../object.h"
 
-namespace n_register {
-	class Cregister :public Object
+namespace n__register {
+	class C_register :public Object
 	{
 	public:
-		Cregister();
+		C_register();
 		int my_init(void *p=nullptr);
 	};
 }
 
-using namespace n_register;
+using namespace n__register;
 
 #endif

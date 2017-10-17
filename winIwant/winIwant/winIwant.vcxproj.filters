@@ -1191,9 +1191,6 @@
     <ClCompile Include="..\..\src\keywords\ref_struct.cpp">
       <Filter>keywords</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\keywords\register.cpp">
-      <Filter>keywords</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\keywords\reinterpret_cast.cpp">
       <Filter>keywords</Filter>
     </ClCompile>
@@ -1526,6 +1523,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\stratagem.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\keywords\_register.cpp">
+      <Filter>keywords</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -2699,9 +2699,6 @@
     <ClInclude Include="..\..\src\keywords\ref_struct.h">
       <Filter>keywords</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\keywords\register.h">
-      <Filter>keywords</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\keywords\reinterpret_cast.h">
       <Filter>keywords</Filter>
     </ClInclude>
@@ -3085,6 +3082,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\stratagem.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\keywords\_register.h">
+      <Filter>keywords</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

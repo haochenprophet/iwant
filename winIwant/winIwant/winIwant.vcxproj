@@ -302,7 +302,6 @@
     <ClCompile Include="..\..\src\keywords\raise.cpp" />
     <ClCompile Include="..\..\src\keywords\ref_class.cpp" />
     <ClCompile Include="..\..\src\keywords\ref_struct.cpp" />
-    <ClCompile Include="..\..\src\keywords\register.cpp" />
     <ClCompile Include="..\..\src\keywords\reinterpret_cast.cpp" />
     <ClCompile Include="..\..\src\keywords\require.cpp" />
     <ClCompile Include="..\..\src\keywords\requires.cpp" />
@@ -369,6 +368,7 @@
     <ClCompile Include="..\..\src\keywords\_include.cpp" />
     <ClCompile Include="..\..\src\keywords\_line.cpp" />
     <ClCompile Include="..\..\src\keywords\_pragma.cpp" />
+    <ClCompile Include="..\..\src\keywords\_register.cpp" />
     <ClCompile Include="..\..\src\keywords\_undef.cpp" />
     <ClCompile Include="..\..\src\keywords\_using.cpp" />
     <ClCompile Include="..\..\src\keywords\__abstract.cpp" />
@@ -808,7 +808,6 @@
     <ClInclude Include="..\..\src\keywords\raise.h" />
     <ClInclude Include="..\..\src\keywords\ref_class.h" />
     <ClInclude Include="..\..\src\keywords\ref_struct.h" />
-    <ClInclude Include="..\..\src\keywords\register.h" />
     <ClInclude Include="..\..\src\keywords\reinterpret_cast.h" />
     <ClInclude Include="..\..\src\keywords\require.h" />
     <ClInclude Include="..\..\src\keywords\requires.h" />
@@ -875,6 +874,7 @@
     <ClInclude Include="..\..\src\keywords\_include.h" />
     <ClInclude Include="..\..\src\keywords\_line.h" />
     <ClInclude Include="..\..\src\keywords\_pragma.h" />
+    <ClInclude Include="..\..\src\keywords\_register.h" />
     <ClInclude Include="..\..\src\keywords\_undef.h" />
     <ClInclude Include="..\..\src\keywords\_using.h" />
     <ClInclude Include="..\..\src\keywords\__abstract.h" />

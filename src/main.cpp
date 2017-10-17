@@ -25,7 +25,7 @@ int Cmain::is_exist_main(char *f_name)
 
 int Cmain::deal_cmd(int argc, char *argv[])
 {
-	char * str_tag;
+	char * str_tag=nullptr;
 	do{
 		argc--;
 		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
@@ -55,7 +55,9 @@ int Cmain::deal_cmd(int argc, char *argv[])
 }
 
 #if MAIN_TEST||_TEST
-/*
+
+#define MYSQL_TEST  0//1
+#if MYSQL_TEST
 int my_sql_test(int argc, char *argv[])
 {
 	cout << "MY_SQL_TEST\n\n";
@@ -74,7 +76,8 @@ int my_sql_test(int argc, char *argv[])
 
 	return 0;
 }
-*/
+#endif
+
 int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
@@ -83,7 +86,9 @@ int main(int argc, char *argv[])
 	m.deal_cmd(argc,argv);
 	if(argc>1) cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
 
-//	my_sql_test(argc,argv);
+#if MYSQL_TEST
+	my_sql_test(argc,argv);
+#endif
 	return 0;
 }
 #endif
