@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -22,32 +22,32 @@
     <ProjectGuid>{1EA0EA20-89B8-4851-AE82-DB0376DC7DDA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winIwant</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -152,6 +152,7 @@
     <ClCompile Include="..\..\src\build.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
+    <ClCompile Include="..\..\src\company.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\die.cpp" />
@@ -443,6 +444,7 @@
     <ClCompile Include="..\..\src\path.cpp" />
     <ClCompile Include="..\..\src\plan.cpp" />
     <ClCompile Include="..\..\src\question.cpp" />
+    <ClCompile Include="..\..\src\register.cpp" />
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\search.cpp" />
     <ClCompile Include="..\..\src\smtp.cpp" />
@@ -635,6 +637,7 @@
     <ClCompile Include="..\..\src\sql\sql_WITHIN_GROUP.cpp" />
     <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp" />
     <ClCompile Include="..\..\src\step.cpp" />
+    <ClCompile Include="..\..\src\stratagem.cpp" />
     <ClCompile Include="..\..\src\symbol.cpp" />
     <ClCompile Include="..\..\src\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
@@ -654,6 +657,7 @@
     <ClInclude Include="..\..\src\build.h" />
     <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\comment.h" />
+    <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\const.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\die.h" />
@@ -947,6 +951,7 @@
     <ClInclude Include="..\..\src\plan.h" />
     <ClInclude Include="..\..\src\question.h" />
     <ClInclude Include="..\..\src\question_def.h" />
+    <ClInclude Include="..\..\src\register.h" />
     <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\search.h" />
     <ClInclude Include="..\..\src\smtp.h" />
@@ -1139,6 +1144,7 @@
     <ClInclude Include="..\..\src\sql\sql_WITHIN_GROUP.h" />
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h" />
     <ClInclude Include="..\..\src\step.h" />
+    <ClInclude Include="..\..\src\stratagem.h" />
     <ClInclude Include="..\..\src\symbol.h" />
     <ClInclude Include="..\..\src\syntax.h" />
     <ClInclude Include="..\..\src\syntax_def.h" />

@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 
 	Cmain m;
 	m.deal_cmd(argc,argv);
-	cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
+	if(argc>1) cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
 
 //	my_sql_test(argc,argv);
 	return 0;
