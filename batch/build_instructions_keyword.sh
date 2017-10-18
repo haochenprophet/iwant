@@ -273,132 +273,132 @@ make main=CLASS
 ./iwant KUNPCKBW
 ./iwant KUNPCKWD
 ./iwant KUNPCKDQ
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
+./iwant KXNORW
+./iwant KXNORB
+./iwant KXNORQ
+./iwant KXNORD
+./iwant KXORW
+./iwant KXORB
+./iwant KXORQ
+./iwant KXORD
+./iwant LAHF
+./iwant LAR
+./iwant LDDQU
+./iwant LDMXCSR
+./iwant LDS
+./iwant LES
+./iwant LFS
+./iwant LGS
+./iwant LSS
+./iwant LEA
+./iwant LEAVE
+./iwant LFENCE
+./iwant LGDT
+./iwant LIDT
+./iwant LLDT
+./iwant LMSW
+./iwant LOCK
+./iwant LODS
+./iwant LODSB
+./iwant LODSW
+./iwant LODSD
+./iwant LODSQ
+./iwant LOOP
+./iwant LOOPcc
+./iwant LSL
+./iwant LTR
+./iwant LZCNT
+./iwant MASKMOVDQU
+./iwant MASKMOVQ
+./iwant MAXPD
+./iwant MAXPS
+./iwant MAXSD
+./iwant MAXSS
+./iwant MFENCE
+./iwant MINPD
+./iwant MINPS
+./iwant MINSD
+./iwant MINSS
+./iwant MONITOR
+./iwant MOV
+./iwant MOVAPD
+./iwant MOVAPS
+./iwant MOVBE
+./iwant MOVD
+./iwant MOVQ
+./iwant MOVDDUP
+./iwant MOVDQA
+./iwant VMOVDQA32
+./iwant VMOVDQA64
+./iwant MOVDQU
+./iwant VMOVDQU8
+./iwant VMOVDQU16
+./iwant VMOVDQU32
+./iwant VMOVDQU64
+./iwant MOVDQ2Q
+./iwant MOVHLPS
+./iwant MOVHPD
+./iwant MOVHPS
+./iwant MOVLHPS
+./iwant MOVLPD
+./iwant MOVLPS
+./iwant MOVMSKPD
+./iwant MOVMSKPS
+./iwant MOVNTDQA
+./iwant MOVNTDQ
+./iwant MOVNTI
+./iwant MOVNTPD
+./iwant MOVNTPS
+./iwant MOVNTQ
+./iwant MOVQ
+./iwant MOVQ2DQ
+./iwant MOVS
+./iwant MOVSB
+./iwant MOVSW
+./iwant MOVSD
+./iwant MOVSQ
+./iwant MOVSD
+./iwant MOVSHDUP
+./iwant MOVSLDUP
+./iwant MOVSS
+./iwant MOVSX
+./iwant MOVSXD
+./iwant MOVUPD
+./iwant MOVUPS
+./iwant MOVZX
+./iwant MPSADBW
+./iwant MUL
+./iwant MULPD
+./iwant MULPS
+./iwant MULSD
+./iwant MULSS
+./iwant MULX
+./iwant MWAIT
+./iwant NEG
+./iwant NOP
+./iwant NOT
+./iwant OR
+./iwant ORPD
+./iwant ORPS
+./iwant OUT
+./iwant OUTS
+./iwant OUTSB
+./iwant OUTSW
+./iwant OUTSD
+./iwant PABSB
+./iwant PABSW
+./iwant PABSD
+./iwant PABSQ
+./iwant PACKSSWB
+./iwant PACKSSDW
+./iwant PACKUSDW
+./iwant PACKUSWB
+./iwant PADDB
+./iwant PADDW
+./iwant PADDD
+./iwant PADDQ
+./iwant PADDSB
+./iwant PADDSW
 ./iwant 
 ./iwant 
 ./iwant 
