@@ -399,269 +399,567 @@ make main=CLASS
 ./iwant PADDQ
 ./iwant PADDSB
 ./iwant PADDSW
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-./iwant 
-
+./iwant PADDUSB
+./iwant PADDUSW
+./iwant PALIGNR
+./iwant PAND
+./iwant PANDN
+./iwant PAUSE
+./iwant PAVGB
+./iwant PAVGW
+./iwant PBLENDVB
+./iwant PBLENDW
+./iwant PCLMULQDQ
+./iwant PCMPEQB
+./iwant PCMPEQW
+./iwant PCMPEQD
+./iwant PCMPEQQ
+./iwant PCMPESTRI
+./iwant PCMPESTRM
+./iwant PCMPGTB
+./iwant PCMPGTW
+./iwant PCMPGTD
+./iwant PCMPGTQ
+./iwant PCMPISTRI
+./iwant PCMPISTRM
+./iwant PDEP
+./iwant PEXT
+./iwant PEXTRB
+./iwant PEXTRD
+./iwant PEXTRQ
+./iwant PEXTRW
+./iwant PHADDW
+./iwant PHADDD
+./iwant PHADDSW
+./iwant PHMINPOSUW
+./iwant PHSUBW
+./iwant PHSUBD
+./iwant PHSUBSW
+./iwant PINSRB
+./iwant PINSRD
+./iwant PINSRQ
+./iwant PINSRW
+./iwant PMADDUBSW
+./iwant PMADDWD
+./iwant PMAXSB
+./iwant PMAXSW
+./iwant PMAXSD
+./iwant PMAXSQ
+./iwant PMAXUB
+./iwant PMAXUW
+./iwant PMAXUD
+./iwant PMAXUQ
+./iwant PMINSB
+./iwant PMINSW
+./iwant PMINSD
+./iwant PMINSQ
+./iwant PMINUB
+./iwant PMINUW
+./iwant PMINUD
+./iwant PMINUQ
+./iwant PMOVMSKB
+./iwant PMOVSX
+./iwant PMOVZX
+./iwant PMULDQ
+./iwant PMULHRSW
+./iwant PMULHUW
+./iwant PMULHW
+./iwant PMULLD
+./iwant PMULLQ
+./iwant PMULLW
+./iwant PMULUDQ
+./iwant POP
+./iwant POPA
+./iwant POPAD
+./iwant POPCNT
+./iwant POPF
+./iwant POPFD
+./iwant POPFQ
+./iwant POR
+./iwant PREFETCHh
+./iwant PREFETCHW
+./iwant PREFETCHWT1
+./iwant PSADBW
+./iwant PSHUFB
+./iwant PSHUFD
+./iwant PSHUFHW
+./iwant PSHUFLW
+./iwant PSHUFW
+./iwant PSIGNB
+./iwant PSIGNW
+./iwant PSIGND
+./iwant PSLLDQ
+./iwant PSLLW
+./iwant PSLLD
+./iwant PSLLQ
+./iwant PSRAW
+./iwant PSRAD
+./iwant PSRAQ
+./iwant PSRLDQ
+./iwant PSRLW
+./iwant PSRLD
+./iwant PSRLQ
+./iwant PSUBB
+./iwant PSUBW
+./iwant PSUBD
+./iwant PSUBQ
+./iwant PSUBSB
+./iwant PSUBSW
+./iwant PSUBUSB
+./iwant PSUBUSW
+./iwant PTEST
+./iwant PTWRITE
+./iwant PUNPCKHBW
+./iwant PUNPCKHWD
+./iwant PUNPCKHDQ
+./iwant PUNPCKHQDQ
+./iwant PUNPCKLBW
+./iwant PUNPCKLWD
+./iwant PUNPCKLDQ
+./iwant PUNPCKLQDQ
+./iwant PUSH
+./iwant PUSHA
+./iwant PUSHAD
+./iwant PUSHF
+./iwant PUSHFD
+./iwant PUSHFQ
+./iwant PXOR
+./iwant RCL
+./iwant RCR
+./iwant ROL
+./iwant ROR
+./iwant RCPPS
+./iwant RCPSS
+./iwant RDFSBASE
+./iwant RDGSBASE
+./iwant RDMSR
+./iwant RDPID
+./iwant RDPKRU
+./iwant RDPMC
+./iwant RDRAND
+./iwant RDSEED
+./iwant RDTSC
+./iwant RDTSCP
+./iwant REP
+./iwant REPE
+./iwant REPZ
+./iwant REPNE
+./iwant REPNZ
+./iwant RET
+./iwant RORX
+./iwant ROUNDPD
+./iwant ROUNDPS
+./iwant ROUNDSD
+./iwant ROUNDSS
+./iwant RSM
+./iwant RSQRTPS
+./iwant RSQRTSS
+./iwant SAHF
+./iwant SAL
+./iwant SAR
+./iwant SHL
+./iwant SHR
+./iwant SARX
+./iwant SHLX
+./iwant SHRX
+./iwant SBB
+./iwant SCAS
+./iwant SCASB
+./iwant SCASW
+./iwant SCASD
+./iwant SETcc
+./iwant SFENCE
+./iwant SGDT
+./iwant SHA1RNDS4
+./iwant SHA1NEXTE
+./iwant SHA1MSG1
+./iwant SHA1MSG2
+./iwant SHA256RNDS2
+./iwant SHA256MSG1
+./iwant SHA256MSG2
+./iwant SHLD
+./iwant SHRD
+./iwant SHUFPD
+./iwant SHUFPS
+./iwant SIDT
+./iwant SLDT
+./iwant SMSW
+./iwant SQRTPD
+./iwant SQRTPS
+./iwant SQRTSD
+./iwant SQRTSS
+./iwant STAC
+./iwant STC
+./iwant STD
+./iwant STI
+./iwant STMXCSR
+./iwant STOS
+./iwant STOSB
+./iwant STOSW
+./iwant STOSD
+./iwant STOSQ
+./iwant STR
+./iwant SUB
+./iwant SUBPD
+./iwant SUBPS
+./iwant SUBSD
+./iwant SUBSS
+./iwant SWAPGS
+./iwant SYSCALL
+./iwant SYSENTER
+./iwant SYSEXIT
+./iwant SYSRET
+./iwant TEST
+./iwant TZCNT
+./iwant UCOMISD
+./iwant UCOMISS
+./iwant UD
+./iwant UNPCKHPD
+./iwant UNPCKHPS
+./iwant UNPCKLPD
+./iwant UNPCKLPS
+./iwant VALIGND
+./iwant VALIGNQ
+./iwant VBLENDMPD
+./iwant VBLENDMPS
+./iwant VBROADCAST
+./iwant VCOMPRESSPD
+./iwant VCOMPRESSPS
+./iwant VCVTPD2QQ
+./iwant VCVTPD2UDQ
+./iwant VCVTPD2UQQ
+./iwant VCVTPH2PS
+./iwant VCVTPS2PH
+./iwant VCVTPS2UDQ
+./iwant VCVTPS2QQ
+./iwant VCVTPS2UQQ
+./iwant VCVTQQ2PD
+./iwant VCVTQQ2PS
+./iwant VCVTSD2USI
+./iwant VCVTSS2USI
+./iwant VCVTTPD2QQ
+./iwant VCVTTPD2UDQ
+./iwant VCVTTPD2UQQ
+./iwant VCVTTPS2UDQ
+./iwant VCVTTPS2QQ
+./iwant VCVTTPS2UQQ
+./iwant VCVTTSD2USI
+./iwant VCVTTSS2USI
+./iwant VCVTUDQ2PD
+./iwant VCVTUDQ2PS
+./iwant VCVTUQQ2PD
+./iwant VCVTUQQ2PS
+./iwant VCVTUSI2SD
+./iwant VCVTUSI2SS
+./iwant VDBPSADBW
+./iwant VEXPANDPD
+./iwant VEXPANDPS
+./iwant VERR
+./iwant VERW
+./iwant VEXP2PD
+./iwant VEXP2PS
+./iwant VEXTRACTF128
+./iwant VEXTRACTF32x4
+./iwant VEXTRACTF64x2
+./iwant VEXTRACTF32x8
+./iwant VEXTRACTF64x4
+./iwant VEXTRACTI128
+./iwant VEXTRACTI32x4
+./iwant VEXTRACTI64x2
+./iwant VEXTRACTI32x8
+./iwant VEXTRACTI64x4
+./iwant VFIXUPIMMPD
+./iwant VFIXUPIMMPS
+./iwant VFIXUPIMMSD
+./iwant VFIXUPIMMSS
+./iwant VFMADD132PD
+./iwant VFMADD213PD
+./iwant VFMADD231PD
+./iwant VFMADD132PS
+./iwant VFMADD213PS
+./iwant VFMADD231PS
+./iwant VFMADD132SD
+./iwant VFMADD213SD
+./iwant VFMADD231SD
+./iwant VFMADD132SS
+./iwant VFMADD213SS
+./iwant VFMADD231SS
+./iwant VFMADDSUB132PD
+./iwant VFMADDSUB213PD
+./iwant VFMADDSUB231PD
+./iwant VFMADDSUB132PS
+./iwant VFMADDSUB213PS
+./iwant VFMADDSUB231PS
+./iwant VFMSUBADD132PD
+./iwant VFMSUBADD213PD
+./iwant VFMSUBADD231PD
+./iwant VFMSUBADD132PS
+./iwant VFMSUBADD213PS
+./iwant VFMSUBADD231PS
+./iwant VFMSUB132PD
+./iwant VFMSUB213PD
+./iwant VFMSUB231PD
+./iwant VFMSUB132PS
+./iwant VFMSUB213PS
+./iwant VFMSUB231PS
+./iwant VFMSUB132SD
+./iwant VFMSUB213SD
+./iwant VFMSUB231SD
+./iwant VFMSUB132SS
+./iwant VFMSUB213SS
+./iwant VFMSUB231SS
+./iwant VFNMADD132PD
+./iwant VFNMADD213PD
+./iwant VFNMADD231PD
+./iwant VFNMADD132PS
+./iwant VFNMADD213PS
+./iwant VFNMADD231PS
+./iwant VFNMADD132SD
+./iwant VFNMADD213SD
+./iwant VFNMADD231SD
+./iwant VFNMADD132SS
+./iwant VFNMADD213SS
+./iwant VFNMADD231SS
+./iwant VFNMSUB132PD
+./iwant VFNMSUB213PD
+./iwant VFNMSUB231PD
+./iwant VFNMSUB132PS
+./iwant VFNMSUB213PS
+./iwant VFNMSUB231PS
+./iwant VFNMSUB132SD
+./iwant VFNMSUB213SD
+./iwant VFNMSUB231SD
+./iwant VFNMSUB132SS
+./iwant VFNMSUB213SS
+./iwant VFNMSUB231SS
+./iwant VFPCLASSPD
+./iwant VFPCLASSPS
+./iwant VFPCLASSSD
+./iwant VFPCLASSSS
+./iwant VGATHERDPD
+./iwant VGATHERQPD
+./iwant VGATHERDPS
+./iwant VGATHERQPS
+./iwant VGATHERDPS
+./iwant VGATHERDPD
+./iwant VGATHERPF0DPS
+./iwant VGATHERPF0QPS
+./iwant VGATHERPF0DPD
+./iwant VGATHERPF0QPD
+./iwant VGATHERPF1DPS
+./iwant VGATHERPF1QPS
+./iwant VGATHERPF1DPD
+./iwant VGATHERPF1QPD
+./iwant VGATHERQPS
+./iwant VGATHERQPD
+./iwant VPGATHERDD
+./iwant VPGATHERQD
+./iwant VPGATHERDD
+./iwant VPGATHERDQ
+./iwant VPGATHERDQ
+./iwant VPGATHERQQ
+./iwant VPGATHERQD
+./iwant VPGATHERQQ
+./iwant VGETEXPPD
+./iwant VGETEXPPS
+./iwant VGETEXPSD
+./iwant VGETEXPSS
+./iwant VGETMANTPD
+./iwant VGETMANTPS
+./iwant VGETMANTSD
+./iwant VGETMANTSS
+./iwant VINSERTF128
+./iwant VINSERTF32x4
+./iwant VINSERTF64x2
+./iwant VINSERTF32x8
+./iwant VINSERTF64x4
+./iwant VINSERTI128
+./iwant VINSERTI32x4
+./iwant VINSERTI64x2
+./iwant VINSERTI32x8
+./iwant VINSERTI64x4
+./iwant VMASKMOV
+./iwant VPBLENDD
+./iwant VPBLENDMB
+./iwant VPBLENDMW
+./iwant VPBLENDMD
+./iwant VPBLENDMQ
+./iwant VPBROADCASTB
+./iwant VPBROADCASTW
+./iwant VPBROADCASTD
+./iwant VPBROADCASTQ
+./iwant VPBROADCAST
+./iwant VPBROADCASTM
+./iwant VPCMPB
+./iwant VPCMPUB
+./iwant VPCMPD
+./iwant VPCMPUD
+./iwant VPCMPQ
+./iwant VPCMPUQ
+./iwant VPCMPW
+./iwant VPCMPUW
+./iwant VPCOMPRESSD
+./iwant VPCOMPRESSQ
+./iwant VPCONFLICTD
+./iwant VPCONFLICTQ
+./iwant VPERM2F128
+./iwant VPERM2I128
+./iwant VPERMD
+./iwant VPERMW
+./iwant VPERMI2W
+./iwant VPERMI2D
+./iwant VPERMI2Q
+./iwant VPERMI2PS
+./iwant VPERMI2PD
+./iwant VPERMILPD
+./iwant VPERMILPS
+./iwant VPERMPD
+./iwant VPERMPS
+./iwant VPERMQ
+./iwant VPERMT2W
+./iwant VPERMT2D
+./iwant VPERMT2Q
+./iwant VPERMT2PS
+./iwant VPERMT2PD
+./iwant VPEXPANDD
+./iwant VPEXPANDQ
+./iwant VPLZCNTD
+./iwant VPLZCNTQ
+./iwant VPMASKMOV
+./iwant VPMOVB2M
+./iwant VPMOVW2M
+./iwant VPMOVD2M
+./iwant VPMOVQ2M
+./iwant VPMOVDB
+./iwant VPMOVSDB
+./iwant VPMOVUSDB
+./iwant VPMOVDW
+./iwant VPMOVSDW
+./iwant VPMOVUSDW
+./iwant VPMOVM2B
+./iwant VPMOVM2W
+./iwant VPMOVM2D
+./iwant VPMOVM2Q
+./iwant VPMOVQB
+./iwant VPMOVSQB
+./iwant VPMOVUSQB
+./iwant VPMOVQD
+./iwant VPMOVSQD
+./iwant VPMOVUSQD
+./iwant VPMOVQW
+./iwant VPMOVSQW
+./iwant VPMOVUSQW
+./iwant VPMOVSWB
+./iwant VPMOVUSWB
+./iwant VPROLD
+./iwant VPROLVD
+./iwant VPROLQ
+./iwant VPROLVQ
+./iwant VPRORD
+./iwant VPRORVD
+./iwant VPRORQ
+./iwant VPRORVQ
+./iwant VPSCATTERDD
+./iwant VPSCATTERDQ
+./iwant VPSCATTERQD
+./iwant VPSCATTERQQ
+./iwant VPSLLVW
+./iwant VPSLLVD
+./iwant VPSLLVQ
+./iwant VPSRAVW
+./iwant VPSRAVD
+./iwant VPSRAVQ
+./iwant VPSRLVW
+./iwant VPSRLVD
+./iwant VPSRLVQ
+./iwant VPTERNLOGD
+./iwant VPTERNLOGQ
+./iwant VPTESTMB
+./iwant VPTESTMW
+./iwant VPTESTMD
+./iwant VPTESTMQ
+./iwant VPTESTNMB
+./iwant VPTESTNMW
+./iwant VPTESTNMD
+./iwant VPTESTNMQ
+./iwant VRANGEPD
+./iwant VRANGEPS
+./iwant VRANGESD
+./iwant VRANGESS
+./iwant VRCP14PD
+./iwant VRCP14SD
+./iwant VRCP14PS
+./iwant VRCP14SS
+./iwant VRCP28PD
+./iwant VRCP28SD
+./iwant VRCP28PS
+./iwant VRCP28SS
+./iwant VREDUCEPD
+./iwant VREDUCESD
+./iwant VREDUCEPS
+./iwant VREDUCESS
+./iwant VRNDSCALEPD
+./iwant VRNDSCALESD
+./iwant VRNDSCALEPS
+./iwant VRNDSCALESS
+./iwant VRSQRT14PD
+./iwant VRSQRT14SD
+./iwant VRSQRT14PS
+./iwant VRSQRT14SS
+./iwant VRSQRT28PD
+./iwant VRSQRT28SD
+./iwant VRSQRT28PS
+./iwant VRSQRT28SS
+./iwant VSCALEFPD
+./iwant VSCALEFSD
+./iwant VSCALEFPS
+./iwant VSCALEFSS
+./iwant VSCATTERDPS
+./iwant VSCATTERDPD
+./iwant VSCATTERQPS
+./iwant VSCATTERQPD
+./iwant VSCATTERPF0DPS
+./iwant VSCATTERPF0QPS
+./iwant VSCATTERPF0DPD
+./iwant VSCATTERPF0QPD
+./iwant VSCATTERPF1DPS
+./iwant VSCATTERPF1QPS
+./iwant VSCATTERPF1DPD
+./iwant VSCATTERPF1QPD
+./iwant VSHUFF32x4
+./iwant VSHUFF64x2
+./iwant VSHUFI32x4
+./iwant VSHUFI64x2
+./iwant VTESTPD
+./iwant VTESTPS
+./iwant VZEROALL
+./iwant VZEROUPPER
+./iwant WAIT
+./iwant FWAIT
+./iwant WBINVD
+./iwant WRFSBASE
+./iwant WRGSBASE
+./iwant WRMSR
+./iwant WRPKRU
+./iwant XACQUIRE
+./iwant XRELEASE
+./iwant XABORT
+./iwant XADD
+./iwant XBEGIN
+./iwant XCHG
+./iwant XEND
+./iwant XGETBV
+./iwant XLAT
+./iwant XLATB
+./iwant XOR
+./iwant XORPD
+./iwant XORPS
+./iwant XRSTOR
+./iwant XRSTORS
+./iwant XSAVE
+./iwant XSAVEC
+./iwant XSAVEOPT
+./iwant XSAVES
+./iwant XSETBV
+./iwant XTEST
 make main=CLASS
