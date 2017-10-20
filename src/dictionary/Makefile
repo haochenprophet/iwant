@@ -13,5 +13,5 @@ all :
 	g++ $(CFLAGS)
 
 clean :
-	rm -f $(MK_TAG) *.o *~
+	rm -f $(MK_TAG) *.o *~ .*.swp
 
