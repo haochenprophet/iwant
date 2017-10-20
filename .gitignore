@@ -9,6 +9,7 @@ src/iwant
 src/server
 src/client
 src/*.o
+src/dictionary/dictionary
 sample-code/win-test/Debug*/*
 sample-code/win-test/x64/*
 sample-code/win-test/.vs/*
