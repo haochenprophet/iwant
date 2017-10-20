@@ -11,4 +11,6 @@ make main=CLASS
 ./iwant func
 ./iwant company
 ./iwant register
+./iwant instruction
+./iwant dictionary
 make main=CLASS
