@@ -12,4 +12,5 @@ make main=CLASS
 ./iwant company
 ./iwant register
 ./iwant instruction
+./iwant dictionary
 make main=CLASS
