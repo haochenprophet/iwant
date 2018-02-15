@@ -15,7 +15,7 @@
 #include "temp_def.h"
 #include "syntax_def.h"
 #include "ex_func.h"
-
+#include "uuid.h"
 #include <stack> 
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
@@ -71,7 +71,7 @@ namespace n_object {
 	typedef list<Cmyfunc> LIST_CMYFUNC;
 	typedef list<void *> LIST_FAMILY;//family list type
 
-	class Object
+	class Object:public Cuuid
 	{
 	protected:
 		long id;//object id
