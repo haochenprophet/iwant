@@ -24,16 +24,19 @@ typedef char DIR_T;//for class Cpath
 
 #include "object.h"
 
-class Cos:public Object
-{
-public:
-	Cos();
-	~Cos();
+namespace n_os {
+	class Cos:public Object
+	{
+	public:
+		Cos();
+		~Cos();
 
-#if WINDOWS_OS
-	int init_winsock();
-	void exit_winsock();
-#endif//WINDOWS_OS	
-};
+	#if WINDOWS_OS
+		int init_winsock();
+		void exit_winsock();
+	#endif//WINDOWS_OS	
+	};
+}
+using namespace n_os;
 
 #endif//end OS_H 

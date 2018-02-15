@@ -11,7 +11,7 @@ CFLAGS +=\
 	-Wl,-Bdynamic \
 	-o $(MK_TAG) *.cpp $(src) $(sql) \
 	$(MYSQL_CONCPP_DIR)/lib64/libmysqlcppconn2-static.a \
-	-lpthread \
+	-lpthread -luuid\
 	-I./ -I $(MYSQL_CONCPP_DIR)/include
 
 all : 
