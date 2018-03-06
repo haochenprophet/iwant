@@ -597,6 +597,36 @@ int Object::func(void *p)
 	return 0;
 }
 
+int Object::url(void *p)//execute object url if exist
+{
+	return -1;//do nothing
+}
+
+int Object::style(void *p)//execute object style
+{
+	return -1;//do nothing
+}
+
+int Object::image(void *p)//execute object image if exist
+{
+	return -1;//do nothing
+}
+
+int Object::audio(void *p)//execute object audio if exist
+{
+	return -1;//do nothing
+}
+
+int Object::audio(void *p)//execute object audio if exist
+{
+	return -1;//do nothing
+}
+
+int Object::video(void *p)//execute object vedio if exist
+{
+	return -1;//do nothing
+}
+
 int Object::create(void *p)
 {
 	return -1;//do nothing

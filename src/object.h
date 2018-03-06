@@ -115,6 +115,13 @@ namespace n_object {
 		list<Object *> my_mem;//list for  memory address 
 		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
 
+		list<void *> l_url;//url list
+		list<void *> l_style;//object style list
+		list<void *> l_image;//object image list
+		list<void *> l_audio;//object audio list
+		list<void *> l_audio;//object audio list
+		list<void *> l_video;//object vedio list
+		
 	public:
 		Object();//set object name
 		~Object();//clears
@@ -190,7 +197,14 @@ namespace n_object {
 		virtual int display(void *p=nullptr);
 		virtual int question(void *p=nullptr);
 		virtual bool is_identifier(char *str,void ** o_addr =nullptr); 
-		virtual bool is_path(char *str,void ** o_addr=nullptr);		
+		virtual bool is_path(char *str,void ** o_addr=nullptr);
+		//
+		virtual int url(void *p=nullptr);//execute object url if exist
+		virtual int style(void *p=nullptr);//execute object style
+		virtual int image(void *p=nullptr);//execute object image if exist
+		virtual int audio(void *p=nullptr);//execute object audio if exist
+		virtual int audio(void *p=nullptr);//execute object audio if exist
+		virtual int video(void *p=nullptr);//execute object vedio if exist
 	};
 }
 
