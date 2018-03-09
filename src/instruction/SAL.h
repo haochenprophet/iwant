@@ -1,7 +1,7 @@
 #ifndef SAL_H
 #define SAL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SAL {
 	class CSAL :public Object

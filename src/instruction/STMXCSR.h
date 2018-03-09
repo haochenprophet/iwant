@@ -1,7 +1,7 @@
 #ifndef STMXCSR_H
 #define STMXCSR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STMXCSR {
 	class CSTMXCSR :public Object

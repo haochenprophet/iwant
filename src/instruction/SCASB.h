@@ -1,7 +1,7 @@
 #ifndef SCASB_H
 #define SCASB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SCASB {
 	class CSCASB :public Object

@@ -1,7 +1,7 @@
 #ifndef SHRD_H
 #define SHRD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SHRD {
 	class CSHRD :public Object

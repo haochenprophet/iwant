@@ -1,7 +1,7 @@
 #ifndef SHLX_H
 #define SHLX_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SHLX {
 	class CSHLX :public Object

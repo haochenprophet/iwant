@@ -1,7 +1,7 @@
 #ifndef FLDZ_H
 #define FLDZ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FLDZ {
 	class CFLDZ :public Object

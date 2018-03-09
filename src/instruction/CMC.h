@@ -1,7 +1,7 @@
 #ifndef CMC_H
 #define CMC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMC {
 	class CCMC :public Object

@@ -1,7 +1,7 @@
 #ifndef KORW_H
 #define KORW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KORW {
 	class CKORW :public Object

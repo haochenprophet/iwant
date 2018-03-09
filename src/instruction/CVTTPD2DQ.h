@@ -1,7 +1,7 @@
 #ifndef CVTTPD2DQ_H
 #define CVTTPD2DQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CVTTPD2DQ {
 	class CCVTTPD2DQ :public Object

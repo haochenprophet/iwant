@@ -1,7 +1,7 @@
 #ifndef VPCMPD_H
 #define VPCMPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPCMPD {
 	class CVPCMPD :public Object

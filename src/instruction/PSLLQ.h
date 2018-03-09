@@ -1,7 +1,7 @@
 #ifndef PSLLQ_H
 #define PSLLQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSLLQ {
 	class CPSLLQ :public Object

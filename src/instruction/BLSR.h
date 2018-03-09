@@ -1,7 +1,7 @@
 #ifndef BLSR_H
 #define BLSR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BLSR {
 	class CBLSR :public Object

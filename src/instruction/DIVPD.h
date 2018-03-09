@@ -1,7 +1,7 @@
 #ifndef DIVPD_H
 #define DIVPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_DIVPD {
 	class CDIVPD :public Object

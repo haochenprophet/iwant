@@ -1,7 +1,7 @@
 #ifndef PSIGNW_H
 #define PSIGNW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSIGNW {
 	class CPSIGNW :public Object

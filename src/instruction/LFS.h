@@ -1,7 +1,7 @@
 #ifndef LFS_H
 #define LFS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LFS {
 	class CLFS :public Object

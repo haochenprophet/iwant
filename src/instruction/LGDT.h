@@ -1,7 +1,7 @@
 #ifndef LGDT_H
 #define LGDT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LGDT {
 	class CLGDT :public Object

@@ -1,7 +1,7 @@
 #ifndef CMOVCC_H
 #define CMOVCC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMOVcc {
 	class CCMOVcc :public Object

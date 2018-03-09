@@ -1,7 +1,7 @@
 #ifndef FDIVR_H
 #define FDIVR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FDIVR {
 	class CFDIVR :public Object

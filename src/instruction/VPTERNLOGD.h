@@ -1,7 +1,7 @@
 #ifndef VPTERNLOGD_H
 #define VPTERNLOGD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPTERNLOGD {
 	class CVPTERNLOGD :public Object

@@ -1,7 +1,7 @@
 #ifndef NEG_H
 #define NEG_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_NEG {
 	class CNEG :public Object

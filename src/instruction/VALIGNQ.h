@@ -1,7 +1,7 @@
 #ifndef VALIGNQ_H
 #define VALIGNQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VALIGNQ {
 	class CVALIGNQ :public Object

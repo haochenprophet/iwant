@@ -1,7 +1,7 @@
 #ifndef FIST_H
 #define FIST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FIST {
 	class CFIST :public Object

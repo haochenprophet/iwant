@@ -1,7 +1,7 @@
 #ifndef SCASW_H
 #define SCASW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SCASW {
 	class CSCASW :public Object

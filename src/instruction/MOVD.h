@@ -1,7 +1,7 @@
 #ifndef MOVD_H
 #define MOVD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVD {
 	class CMOVD :public Object

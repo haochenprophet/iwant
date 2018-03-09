@@ -1,7 +1,7 @@
 #ifndef FINIT_H
 #define FINIT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FINIT {
 	class CFINIT :public Object

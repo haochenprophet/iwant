@@ -1,7 +1,7 @@
 #ifndef CLFLUSH_H
 #define CLFLUSH_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CLFLUSH {
 	class CCLFLUSH :public Object

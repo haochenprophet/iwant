@@ -1,7 +1,7 @@
 #ifndef VSCALEFPD_H
 #define VSCALEFPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VSCALEFPD {
 	class CVSCALEFPD :public Object

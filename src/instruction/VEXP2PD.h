@@ -1,7 +1,7 @@
 #ifndef VEXP2PD_H
 #define VEXP2PD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VEXP2PD {
 	class CVEXP2PD :public Object

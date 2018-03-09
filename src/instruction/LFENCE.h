@@ -1,7 +1,7 @@
 #ifndef LFENCE_H
 #define LFENCE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LFENCE {
 	class CLFENCE :public Object

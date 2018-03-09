@@ -1,7 +1,7 @@
 #ifndef MULSD_H
 #define MULSD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MULSD {
 	class CMULSD :public Object

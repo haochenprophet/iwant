@@ -1,7 +1,7 @@
 #ifndef JMP_H
 #define JMP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_JMP {
 	class CJMP :public Object

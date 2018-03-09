@@ -1,7 +1,7 @@
 #ifndef FCMOVCC_H
 #define FCMOVCC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCMOVcc {
 	class CFCMOVcc :public Object

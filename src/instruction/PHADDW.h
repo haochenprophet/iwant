@@ -1,7 +1,7 @@
 #ifndef PHADDW_H
 #define PHADDW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PHADDW {
 	class CPHADDW :public Object

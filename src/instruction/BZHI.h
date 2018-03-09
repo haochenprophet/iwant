@@ -1,7 +1,7 @@
 #ifndef BZHI_H
 #define BZHI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BZHI {
 	class CBZHI :public Object

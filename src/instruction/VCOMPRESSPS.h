@@ -1,7 +1,7 @@
 #ifndef VCOMPRESSPS_H
 #define VCOMPRESSPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VCOMPRESSPS {
 	class CVCOMPRESSPS :public Object

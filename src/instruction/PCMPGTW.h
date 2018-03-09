@@ -1,7 +1,7 @@
 #ifndef PCMPGTW_H
 #define PCMPGTW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PCMPGTW {
 	class CPCMPGTW :public Object

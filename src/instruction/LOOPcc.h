@@ -1,7 +1,7 @@
 #ifndef LOOPCC_H
 #define LOOPCC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LOOPcc {
 	class CLOOPcc :public Object

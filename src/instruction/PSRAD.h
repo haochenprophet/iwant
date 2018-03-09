@@ -1,7 +1,7 @@
 #ifndef PSRAD_H
 #define PSRAD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSRAD {
 	class CPSRAD :public Object

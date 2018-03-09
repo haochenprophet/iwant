@@ -1,7 +1,7 @@
 #ifndef PMAXUB_H
 #define PMAXUB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMAXUB {
 	class CPMAXUB :public Object

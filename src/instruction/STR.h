@@ -1,7 +1,7 @@
 #ifndef STR_H
 #define STR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STR {
 	class CSTR :public Object

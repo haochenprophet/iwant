@@ -1,7 +1,7 @@
 #ifndef AAM_H
 #define AAM_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AAM {
 	class CAAM :public Object

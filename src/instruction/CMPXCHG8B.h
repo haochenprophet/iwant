@@ -1,7 +1,7 @@
 #ifndef CMPXCHG8B_H
 #define CMPXCHG8B_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMPXCHG8B {
 	class CCMPXCHG8B :public Object

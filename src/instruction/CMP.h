@@ -1,7 +1,7 @@
 #ifndef CMP_H
 #define CMP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMP {
 	class CCMP :public Object

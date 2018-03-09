@@ -1,7 +1,7 @@
 #ifndef INSB_H
 #define INSB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_INSB {
 	class CINSB :public Object

@@ -1,7 +1,7 @@
 #ifndef BLSI_H
 #define BLSI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BLSI {
 	class CBLSI :public Object

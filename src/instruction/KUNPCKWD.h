@@ -1,7 +1,7 @@
 #ifndef KUNPCKWD_H
 #define KUNPCKWD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KUNPCKWD {
 	class CKUNPCKWD :public Object

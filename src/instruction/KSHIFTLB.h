@@ -1,7 +1,7 @@
 #ifndef KSHIFTLB_H
 #define KSHIFTLB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KSHIFTLB {
 	class CKSHIFTLB :public Object

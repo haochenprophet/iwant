@@ -1,7 +1,7 @@
 #ifndef KORB_H
 #define KORB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KORB {
 	class CKORB :public Object

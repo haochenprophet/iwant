@@ -1,7 +1,7 @@
 #ifndef RCL_H
 #define RCL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RCL {
 	class CRCL :public Object

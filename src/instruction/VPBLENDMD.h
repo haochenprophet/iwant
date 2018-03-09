@@ -1,7 +1,7 @@
 #ifndef VPBLENDMD_H
 #define VPBLENDMD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPBLENDMD {
 	class CVPBLENDMD :public Object

@@ -1,7 +1,7 @@
 #ifndef PUSHA_H
 #define PUSHA_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PUSHA {
 	class CPUSHA :public Object

@@ -1,7 +1,7 @@
 #ifndef VPSRLVQ_H
 #define VPSRLVQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPSRLVQ {
 	class CVPSRLVQ :public Object

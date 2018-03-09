@@ -1,7 +1,7 @@
 #ifndef PALIGNR_H
 #define PALIGNR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PALIGNR {
 	class CPALIGNR :public Object

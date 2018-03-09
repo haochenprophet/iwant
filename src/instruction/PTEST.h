@@ -1,7 +1,7 @@
 #ifndef PTEST_H
 #define PTEST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PTEST {
 	class CPTEST :public Object

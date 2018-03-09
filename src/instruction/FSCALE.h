@@ -1,7 +1,7 @@
 #ifndef FSCALE_H
 #define FSCALE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FSCALE {
 	class CFSCALE :public Object

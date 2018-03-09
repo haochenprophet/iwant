@@ -1,7 +1,7 @@
 #ifndef ADDSS_H
 #define ADDSS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ADDSS {
 	class CADDSS :public Object

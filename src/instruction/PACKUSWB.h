@@ -1,7 +1,7 @@
 #ifndef PACKUSWB_H
 #define PACKUSWB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PACKUSWB {
 	class CPACKUSWB :public Object

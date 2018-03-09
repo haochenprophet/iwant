@@ -1,7 +1,7 @@
 #ifndef MAXSS_H
 #define MAXSS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MAXSS {
 	class CMAXSS :public Object

@@ -1,7 +1,7 @@
 #ifndef FCOS_H
 #define FCOS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCOS {
 	class CFCOS :public Object

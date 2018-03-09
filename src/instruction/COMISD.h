@@ -1,7 +1,7 @@
 #ifndef COMISD_H
 #define COMISD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_COMISD {
 	class CCOMISD :public Object

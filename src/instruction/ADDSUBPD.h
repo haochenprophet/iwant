@@ -1,7 +1,7 @@
 #ifndef ADDSUBPD_H
 #define ADDSUBPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ADDSUBPD {
 	class CADDSUBPD :public Object

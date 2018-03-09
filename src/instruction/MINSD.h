@@ -1,7 +1,7 @@
 #ifndef MINSD_H
 #define MINSD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MINSD {
 	class CMINSD :public Object

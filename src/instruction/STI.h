@@ -1,7 +1,7 @@
 #ifndef STI_H
 #define STI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STI {
 	class CSTI :public Object

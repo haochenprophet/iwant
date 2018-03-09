@@ -1,7 +1,7 @@
 #ifndef VPERMI2PS_H
 #define VPERMI2PS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPERMI2PS {
 	class CVPERMI2PS :public Object

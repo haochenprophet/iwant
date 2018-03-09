@@ -1,7 +1,7 @@
 #ifndef EXTRACTPS_H
 #define EXTRACTPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_EXTRACTPS {
 	class CEXTRACTPS :public Object

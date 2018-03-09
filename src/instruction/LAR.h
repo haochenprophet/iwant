@@ -1,7 +1,7 @@
 #ifndef LAR_H
 #define LAR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LAR {
 	class CLAR :public Object

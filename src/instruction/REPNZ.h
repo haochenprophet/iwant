@@ -1,7 +1,7 @@
 #ifndef REPNZ_H
 #define REPNZ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_REPNZ {
 	class CREPNZ :public Object

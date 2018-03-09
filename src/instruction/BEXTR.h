@@ -1,7 +1,7 @@
 #ifndef BEXTR_H
 #define BEXTR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BEXTR {
 	class CBEXTR :public Object

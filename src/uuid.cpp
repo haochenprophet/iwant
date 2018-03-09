@@ -13,7 +13,7 @@ Cuuid::~Cuuid()
 int Cuuid::create(UUID_T uuid)
 {
 	#if WINDOWS_OS
-		CoCreateGuid(uuid);
+		CoCreateGuid(&uuid);
 	#endif
 
 	#if LINUX_OS
@@ -30,7 +30,7 @@ int Cuuid::create()
 
 void Cuuid::display(UUID_T uuid)
 {
-	unsigned char *cp=(unsigned char *)uuid;
+	unsigned char *cp=(unsigned char *)&uuid;
 	for(int i=sizeof(UUID_T)/sizeof(char)-1;i>0;i--)
 		printf("%02X",cp[i]);
 	printf("\n");

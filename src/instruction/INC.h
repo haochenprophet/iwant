@@ -1,7 +1,7 @@
 #ifndef INC_H
 #define INC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_INC {
 	class CINC :public Object

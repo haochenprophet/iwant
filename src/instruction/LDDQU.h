@@ -1,7 +1,7 @@
 #ifndef LDDQU_H
 #define LDDQU_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LDDQU {
 	class CLDDQU :public Object

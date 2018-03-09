@@ -1,7 +1,7 @@
 #ifndef AESENCLAST_H
 #define AESENCLAST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AESENCLAST {
 	class CAESENCLAST :public Object

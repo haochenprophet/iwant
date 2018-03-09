@@ -1,7 +1,7 @@
 #ifndef IMUL_H
 #define IMUL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_IMUL {
 	class CIMUL :public Object

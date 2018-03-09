@@ -1,7 +1,7 @@
 #ifndef F2XM1_H
 #define F2XM1_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_F2XM1 {
 	class CF2XM1 :public Object

@@ -1,7 +1,7 @@
 #ifndef PUSHAD_H
 #define PUSHAD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PUSHAD {
 	class CPUSHAD :public Object

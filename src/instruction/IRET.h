@@ -1,7 +1,7 @@
 #ifndef IRET_H
 #define IRET_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_IRET {
 	class CIRET :public Object

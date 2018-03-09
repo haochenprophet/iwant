@@ -1,7 +1,7 @@
 #ifndef KMOVD_H
 #define KMOVD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KMOVD {
 	class CKMOVD :public Object

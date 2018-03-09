@@ -1,7 +1,7 @@
 #ifndef SHL_H
 #define SHL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SHL {
 	class CSHL :public Object

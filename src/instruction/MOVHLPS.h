@@ -1,7 +1,7 @@
 #ifndef MOVHLPS_H
 #define MOVHLPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVHLPS {
 	class CMOVHLPS :public Object

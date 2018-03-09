@@ -1,7 +1,7 @@
 #ifndef MULX_H
 #define MULX_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MULX {
 	class CMULX :public Object

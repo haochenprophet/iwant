@@ -1,7 +1,7 @@
 #ifndef MOVSQ_H
 #define MOVSQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVSQ {
 	class CMOVSQ :public Object

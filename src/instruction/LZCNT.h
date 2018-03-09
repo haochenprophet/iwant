@@ -1,7 +1,7 @@
 #ifndef LZCNT_H
 #define LZCNT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LZCNT {
 	class CLZCNT :public Object

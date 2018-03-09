@@ -1,7 +1,7 @@
 #ifndef JCC_H
 #define JCC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_JCC {
 	class CJCC :public Object

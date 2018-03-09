@@ -1,7 +1,7 @@
 #ifndef VPLZCNTD_H
 #define VPLZCNTD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPLZCNTD {
 	class CVPLZCNTD :public Object

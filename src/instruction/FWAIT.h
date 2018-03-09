@@ -1,7 +1,7 @@
 #ifndef FWAIT_H
 #define FWAIT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FWAIT {
 	class CFWAIT :public Object

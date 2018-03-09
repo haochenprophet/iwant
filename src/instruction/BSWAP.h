@@ -1,7 +1,7 @@
 #ifndef BSWAP_H
 #define BSWAP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BSWAP {
 	class CBSWAP :public Object

@@ -1,7 +1,7 @@
 #ifndef XLAT_H
 #define XLAT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XLAT {
 	class CXLAT :public Object

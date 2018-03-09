@@ -1,7 +1,7 @@
 #ifndef VPERMD_H
 #define VPERMD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPERMD {
 	class CVPERMD :public Object

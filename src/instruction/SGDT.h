@@ -1,7 +1,7 @@
 #ifndef SGDT_H
 #define SGDT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SGDT {
 	class CSGDT :public Object

@@ -1,7 +1,7 @@
 #ifndef XRELEASE_H
 #define XRELEASE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XRELEASE {
 	class CXRELEASE :public Object

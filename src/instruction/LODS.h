@@ -1,7 +1,7 @@
 #ifndef LODS_H
 #define LODS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LODS {
 	class CLODS :public Object

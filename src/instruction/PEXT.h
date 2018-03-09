@@ -1,7 +1,7 @@
 #ifndef PEXT_H
 #define PEXT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PEXT {
 	class CPEXT :public Object

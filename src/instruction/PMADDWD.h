@@ -1,7 +1,7 @@
 #ifndef PMADDWD_H
 #define PMADDWD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMADDWD {
 	class CPMADDWD :public Object

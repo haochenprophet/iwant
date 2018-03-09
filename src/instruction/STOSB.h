@@ -1,7 +1,7 @@
 #ifndef STOSB_H
 #define STOSB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STOSB {
 	class CSTOSB :public Object

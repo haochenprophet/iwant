@@ -1,7 +1,7 @@
 #ifndef KANDND_H
 #define KANDND_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KANDND {
 	class CKANDND :public Object

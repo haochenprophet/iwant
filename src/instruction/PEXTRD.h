@@ -1,7 +1,7 @@
 #ifndef PEXTRD_H
 #define PEXTRD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PEXTRD {
 	class CPEXTRD :public Object

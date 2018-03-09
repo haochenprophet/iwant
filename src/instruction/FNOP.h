@@ -1,7 +1,7 @@
 #ifndef FNOP_H
 #define FNOP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FNOP {
 	class CFNOP :public Object

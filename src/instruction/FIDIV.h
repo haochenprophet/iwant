@@ -1,7 +1,7 @@
 #ifndef FIDIV_H
 #define FIDIV_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FIDIV {
 	class CFIDIV :public Object

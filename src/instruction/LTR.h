@@ -1,7 +1,7 @@
 #ifndef LTR_H
 #define LTR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LTR {
 	class CLTR :public Object

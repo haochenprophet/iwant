@@ -1,7 +1,7 @@
 #ifndef PADDQ_H
 #define PADDQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PADDQ {
 	class CPADDQ :public Object

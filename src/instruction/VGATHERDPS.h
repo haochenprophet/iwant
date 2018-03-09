@@ -1,7 +1,7 @@
 #ifndef VGATHERDPS_H
 #define VGATHERDPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VGATHERDPS {
 	class CVGATHERDPS :public Object

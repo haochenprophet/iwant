@@ -1,7 +1,7 @@
 #ifndef FSIN_H
 #define FSIN_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FSIN {
 	class CFSIN :public Object

@@ -1,7 +1,7 @@
 #ifndef TZCNT_H
 #define TZCNT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_TZCNT {
 	class CTZCNT :public Object

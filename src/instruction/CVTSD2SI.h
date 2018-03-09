@@ -1,7 +1,7 @@
 #ifndef CVTSD2SI_H
 #define CVTSD2SI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CVTSD2SI {
 	class CCVTSD2SI :public Object

@@ -1,7 +1,7 @@
 #ifndef CBW_H
 #define CBW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CBW {
 	class CCBW :public Object

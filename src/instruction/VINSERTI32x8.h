@@ -1,7 +1,7 @@
 #ifndef VINSERTI32X8_H
 #define VINSERTI32X8_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VINSERTI32x8 {
 	class CVINSERTI32x8 :public Object

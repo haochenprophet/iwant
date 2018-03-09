@@ -1,7 +1,7 @@
 #ifndef FISUBR_H
 #define FISUBR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FISUBR {
 	class CFISUBR :public Object

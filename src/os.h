@@ -2,8 +2,6 @@
 #define OS_H 
 
 #if WINDOWS_OS
-#include "Ws2tcpip.h"
-#include <windows.h>
 #include <windows.h>
 #include <tchar.h>
 #include <strsafe.h>

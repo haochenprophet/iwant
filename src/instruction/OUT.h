@@ -1,7 +1,7 @@
 #ifndef OUT_H
 #define OUT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_OUT {
 	class COUT :public Object

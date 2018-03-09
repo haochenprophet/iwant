@@ -1,7 +1,7 @@
 #ifndef STOSW_H
 #define STOSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STOSW {
 	class CSTOSW :public Object

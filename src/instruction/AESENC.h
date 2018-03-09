@@ -1,7 +1,7 @@
 #ifndef AESENC_H
 #define AESENC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AESENC {
 	class CAESENC :public Object

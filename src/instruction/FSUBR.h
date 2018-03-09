@@ -1,7 +1,7 @@
 #ifndef FSUBR_H
 #define FSUBR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FSUBR {
 	class CFSUBR :public Object

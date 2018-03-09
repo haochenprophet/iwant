@@ -1,7 +1,7 @@
 #ifndef VSHUFI64X2_H
 #define VSHUFI64X2_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VSHUFI64x2 {
 	class CVSHUFI64x2 :public Object

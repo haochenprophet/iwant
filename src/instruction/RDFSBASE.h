@@ -1,7 +1,7 @@
 #ifndef RDFSBASE_H
 #define RDFSBASE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RDFSBASE {
 	class CRDFSBASE :public Object

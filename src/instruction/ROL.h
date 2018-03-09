@@ -1,7 +1,7 @@
 #ifndef ROL_H
 #define ROL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ROL {
 	class CROL :public Object

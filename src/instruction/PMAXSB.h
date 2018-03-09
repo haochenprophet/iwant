@@ -1,7 +1,7 @@
 #ifndef PMAXSB_H
 #define PMAXSB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMAXSB {
 	class CPMAXSB :public Object

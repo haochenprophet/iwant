@@ -1,7 +1,7 @@
 #ifndef PSHUFD_H
 #define PSHUFD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSHUFD {
 	class CPSHUFD :public Object

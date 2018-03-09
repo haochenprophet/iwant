@@ -1,7 +1,7 @@
 #ifndef ENTER_H
 #define ENTER_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ENTER {
 	class CENTER :public Object

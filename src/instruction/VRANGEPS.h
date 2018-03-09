@@ -1,7 +1,7 @@
 #ifndef VRANGEPS_H
 #define VRANGEPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VRANGEPS {
 	class CVRANGEPS :public Object

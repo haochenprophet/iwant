@@ -1,7 +1,7 @@
 #ifndef FDECSTP_H
 #define FDECSTP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FDECSTP {
 	class CFDECSTP :public Object

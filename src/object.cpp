@@ -617,11 +617,6 @@ int Object::audio(void *p)//execute object audio if exist
 	return -1;//do nothing
 }
 
-int Object::audio(void *p)//execute object audio if exist
-{
-	return -1;//do nothing
-}
-
 int Object::video(void *p)//execute object vedio if exist
 {
 	return -1;//do nothing

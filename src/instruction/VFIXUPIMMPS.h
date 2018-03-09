@@ -1,7 +1,7 @@
 #ifndef VFIXUPIMMPS_H
 #define VFIXUPIMMPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VFIXUPIMMPS {
 	class CVFIXUPIMMPS :public Object

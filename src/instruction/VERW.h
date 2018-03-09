@@ -1,7 +1,7 @@
 #ifndef VERW_H
 #define VERW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VERW {
 	class CVERW :public Object

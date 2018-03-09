@@ -1,7 +1,7 @@
 #ifndef AAD_H
 #define AAD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AAD {
 	class CAAD :public Object

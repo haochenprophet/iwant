@@ -1,7 +1,7 @@
 #ifndef VGATHERQPD_H
 #define VGATHERQPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VGATHERQPD {
 	class CVGATHERQPD :public Object

@@ -1,7 +1,7 @@
 #ifndef HADDPD_H
 #define HADDPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_HADDPD {
 	class CHADDPD :public Object

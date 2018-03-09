@@ -1,7 +1,7 @@
 #ifndef CDQ_H
 #define CDQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CDQ {
 	class CCDQ :public Object

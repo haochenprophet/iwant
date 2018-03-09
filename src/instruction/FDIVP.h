@@ -1,7 +1,7 @@
 #ifndef FDIVP_H
 #define FDIVP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FDIVP {
 	class CFDIVP :public Object

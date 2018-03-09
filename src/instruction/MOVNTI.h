@@ -1,7 +1,7 @@
 #ifndef MOVNTI_H
 #define MOVNTI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVNTI {
 	class CMOVNTI :public Object

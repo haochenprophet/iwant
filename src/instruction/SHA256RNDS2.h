@@ -1,7 +1,7 @@
 #ifndef SHA256RNDS2_H
 #define SHA256RNDS2_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SHA256RNDS2 {
 	class CSHA256RNDS2 :public Object

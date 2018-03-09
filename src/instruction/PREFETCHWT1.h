@@ -1,7 +1,7 @@
 #ifndef PREFETCHWT1_H
 #define PREFETCHWT1_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PREFETCHWT1 {
 	class CPREFETCHWT1 :public Object

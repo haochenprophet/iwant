@@ -1,7 +1,7 @@
 #ifndef CMPXCHG_H
 #define CMPXCHG_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMPXCHG {
 	class CCMPXCHG :public Object

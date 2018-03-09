@@ -1,7 +1,7 @@
 #ifndef CMPSQ_H
 #define CMPSQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMPSQ {
 	class CCMPSQ :public Object

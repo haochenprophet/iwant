@@ -1,7 +1,7 @@
 #ifndef PMAXUQ_H
 #define PMAXUQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMAXUQ {
 	class CPMAXUQ :public Object

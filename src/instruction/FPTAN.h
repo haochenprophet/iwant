@@ -1,7 +1,7 @@
 #ifndef FPTAN_H
 #define FPTAN_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FPTAN {
 	class CFPTAN :public Object

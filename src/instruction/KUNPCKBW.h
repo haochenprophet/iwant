@@ -1,7 +1,7 @@
 #ifndef KUNPCKBW_H
 #define KUNPCKBW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KUNPCKBW {
 	class CKUNPCKBW :public Object

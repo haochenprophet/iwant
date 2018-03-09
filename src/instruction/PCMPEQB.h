@@ -1,7 +1,7 @@
 #ifndef PCMPEQB_H
 #define PCMPEQB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PCMPEQB {
 	class CPCMPEQB :public Object

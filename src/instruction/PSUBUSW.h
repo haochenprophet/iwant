@@ -1,7 +1,7 @@
 #ifndef PSUBUSW_H
 #define PSUBUSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSUBUSW {
 	class CPSUBUSW :public Object

@@ -1,7 +1,7 @@
 #ifndef VINSERTF128_H
 #define VINSERTF128_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VINSERTF128 {
 	class CVINSERTF128 :public Object

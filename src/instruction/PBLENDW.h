@@ -1,7 +1,7 @@
 #ifndef PBLENDW_H
 #define PBLENDW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PBLENDW {
 	class CPBLENDW :public Object

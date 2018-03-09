@@ -1,7 +1,7 @@
 #ifndef LOCK_H
 #define LOCK_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LOCK {
 	class CLOCK :public Object

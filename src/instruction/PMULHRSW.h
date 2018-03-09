@@ -1,7 +1,7 @@
 #ifndef PMULHRSW_H
 #define PMULHRSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMULHRSW {
 	class CPMULHRSW :public Object

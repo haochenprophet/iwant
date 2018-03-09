@@ -1,7 +1,7 @@
 #ifndef FNSTSW_H
 #define FNSTSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FNSTSW {
 	class CFNSTSW :public Object

@@ -1,7 +1,7 @@
 #ifndef KMOVB_H
 #define KMOVB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KMOVB {
 	class CKMOVB :public Object

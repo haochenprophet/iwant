@@ -1,7 +1,7 @@
 #ifndef PSRAQ_H
 #define PSRAQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSRAQ {
 	class CPSRAQ :public Object

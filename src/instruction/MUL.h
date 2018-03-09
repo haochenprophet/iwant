@@ -1,7 +1,7 @@
 #ifndef MUL_H
 #define MUL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MUL {
 	class CMUL :public Object

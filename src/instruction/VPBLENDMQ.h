@@ -1,7 +1,7 @@
 #ifndef VPBLENDMQ_H
 #define VPBLENDMQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPBLENDMQ {
 	class CVPBLENDMQ :public Object

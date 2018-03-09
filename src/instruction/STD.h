@@ -1,7 +1,7 @@
 #ifndef STD_H
 #define STD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STD {
 	class CSTD :public Object

@@ -1,7 +1,7 @@
 #ifndef DAS_H
 #define DAS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_DAS {
 	class CDAS :public Object

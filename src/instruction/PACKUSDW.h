@@ -1,7 +1,7 @@
 #ifndef PACKUSDW_H
 #define PACKUSDW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PACKUSDW {
 	class CPACKUSDW :public Object

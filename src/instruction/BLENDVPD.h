@@ -1,7 +1,7 @@
 #ifndef BLENDVPD_H
 #define BLENDVPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BLENDVPD {
 	class CBLENDVPD :public Object

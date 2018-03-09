@@ -1,7 +1,7 @@
 #ifndef FDIVRP_H
 #define FDIVRP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FDIVRP {
 	class CFDIVRP :public Object

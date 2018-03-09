@@ -119,7 +119,6 @@ namespace n_object {
 		list<void *> l_style;//object style list
 		list<void *> l_image;//object image list
 		list<void *> l_audio;//object audio list
-		list<void *> l_audio;//object audio list
 		list<void *> l_video;//object vedio list
 		
 	public:
@@ -202,7 +201,6 @@ namespace n_object {
 		virtual int url(void *p=nullptr);//execute object url if exist
 		virtual int style(void *p=nullptr);//execute object style
 		virtual int image(void *p=nullptr);//execute object image if exist
-		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
 	};

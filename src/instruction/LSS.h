@@ -1,7 +1,7 @@
 #ifndef LSS_H
 #define LSS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LSS {
 	class CLSS :public Object

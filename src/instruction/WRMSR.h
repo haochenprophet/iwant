@@ -1,7 +1,7 @@
 #ifndef WRMSR_H
 #define WRMSR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_WRMSR {
 	class CWRMSR :public Object

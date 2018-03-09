@@ -1,7 +1,7 @@
 #ifndef KANDD_H
 #define KANDD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KANDD {
 	class CKANDD :public Object

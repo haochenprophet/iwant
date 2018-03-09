@@ -1,7 +1,7 @@
 #ifndef PAVGW_H
 #define PAVGW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PAVGW {
 	class CPAVGW :public Object

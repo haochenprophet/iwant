@@ -1,7 +1,7 @@
 #ifndef PMINSB_H
 #define PMINSB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMINSB {
 	class CPMINSB :public Object

@@ -1,7 +1,7 @@
 #ifndef INSERTPS_H
 #define INSERTPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_INSERTPS {
 	class CINSERTPS :public Object

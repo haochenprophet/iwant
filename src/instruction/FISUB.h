@@ -1,7 +1,7 @@
 #ifndef FISUB_H
 #define FISUB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FISUB {
 	class CFISUB :public Object

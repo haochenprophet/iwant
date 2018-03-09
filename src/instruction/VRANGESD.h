@@ -1,7 +1,7 @@
 #ifndef VRANGESD_H
 #define VRANGESD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VRANGESD {
 	class CVRANGESD :public Object

@@ -1,7 +1,7 @@
 #ifndef PMOVMSKB_H
 #define PMOVMSKB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMOVMSKB {
 	class CPMOVMSKB :public Object

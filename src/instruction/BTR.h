@@ -1,7 +1,7 @@
 #ifndef BTR_H
 #define BTR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BTR {
 	class CBTR :public Object

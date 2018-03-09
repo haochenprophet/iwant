@@ -1,7 +1,7 @@
 #ifndef VPBROADCASTB_H
 #define VPBROADCASTB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPBROADCASTB {
 	class CVPBROADCASTB :public Object

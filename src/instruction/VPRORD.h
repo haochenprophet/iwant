@@ -1,7 +1,7 @@
 #ifndef VPRORD_H
 #define VPRORD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPRORD {
 	class CVPRORD :public Object

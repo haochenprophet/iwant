@@ -1,7 +1,7 @@
 #ifndef SUBPS_H
 #define SUBPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SUBPS {
 	class CSUBPS :public Object

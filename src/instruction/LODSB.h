@@ -1,7 +1,7 @@
 #ifndef LODSB_H
 #define LODSB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LODSB {
 	class CLODSB :public Object

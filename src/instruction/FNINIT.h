@@ -1,7 +1,7 @@
 #ifndef FNINIT_H
 #define FNINIT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FNINIT {
 	class CFNINIT :public Object

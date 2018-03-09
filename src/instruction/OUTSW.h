@@ -1,7 +1,7 @@
 #ifndef OUTSW_H
 #define OUTSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_OUTSW {
 	class COUTSW :public Object

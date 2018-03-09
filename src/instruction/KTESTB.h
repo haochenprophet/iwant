@@ -1,7 +1,7 @@
 #ifndef KTESTB_H
 #define KTESTB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KTESTB {
 	class CKTESTB :public Object

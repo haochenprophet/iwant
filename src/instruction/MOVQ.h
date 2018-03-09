@@ -1,7 +1,7 @@
 #ifndef MOVQ_H
 #define MOVQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVQ {
 	class CMOVQ :public Object

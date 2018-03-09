@@ -1,7 +1,7 @@
 #ifndef TEST_H
 #define TEST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_TEST {
 	class CTEST :public Object

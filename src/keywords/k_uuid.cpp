@@ -1,12 +1,12 @@
-#include "uuid.h"
-int Cuuid::my_init(void *p)
+#include "k_uuid.h"
+int CKuuid::my_init(void *p)
 {
 	this->name = "Cuuid";
 	this->alias = "uuid";
 	return 0;
 }
 
-Cuuid::Cuuid()
+CKuuid::CKuuid()
 {
 	this->my_init();
 }

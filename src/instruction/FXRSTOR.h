@@ -1,7 +1,7 @@
 #ifndef FXRSTOR_H
 #define FXRSTOR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FXRSTOR {
 	class CFXRSTOR :public Object

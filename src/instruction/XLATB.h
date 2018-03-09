@@ -1,7 +1,7 @@
 #ifndef XLATB_H
 #define XLATB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XLATB {
 	class CXLATB :public Object

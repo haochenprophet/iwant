@@ -1,7 +1,7 @@
 #ifndef POPF_H
 #define POPF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_POPF {
 	class CPOPF :public Object

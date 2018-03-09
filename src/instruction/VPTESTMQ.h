@@ -1,7 +1,7 @@
 #ifndef VPTESTMQ_H
 #define VPTESTMQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPTESTMQ {
 	class CVPTESTMQ :public Object

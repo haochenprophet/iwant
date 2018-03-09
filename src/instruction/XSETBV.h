@@ -1,7 +1,7 @@
 #ifndef XSETBV_H
 #define XSETBV_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XSETBV {
 	class CXSETBV :public Object

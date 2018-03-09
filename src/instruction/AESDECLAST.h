@@ -1,7 +1,7 @@
 #ifndef AESDECLAST_H
 #define AESDECLAST_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AESDECLAST {
 	class CAESDECLAST :public Object

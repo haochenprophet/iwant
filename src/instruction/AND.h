@@ -1,7 +1,7 @@
 #ifndef AND_H
 #define AND_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_AND {
 	class CAND :public Object

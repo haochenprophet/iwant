@@ -1,7 +1,7 @@
 #ifndef DIV_H
 #define DIV_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_DIV {
 	class CDIV :public Object

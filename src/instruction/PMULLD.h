@@ -1,7 +1,7 @@
 #ifndef PMULLD_H
 #define PMULLD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMULLD {
 	class CPMULLD :public Object

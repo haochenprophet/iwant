@@ -1,7 +1,7 @@
 #ifndef PBLENDVB_H
 #define PBLENDVB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PBLENDVB {
 	class CPBLENDVB :public Object

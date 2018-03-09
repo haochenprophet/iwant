@@ -1,7 +1,7 @@
 #ifndef VFNMSUB231PD_H
 #define VFNMSUB231PD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VFNMSUB231PD {
 	class CVFNMSUB231PD :public Object

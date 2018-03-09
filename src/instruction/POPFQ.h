@@ -1,7 +1,7 @@
 #ifndef POPFQ_H
 #define POPFQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_POPFQ {
 	class CPOPFQ :public Object

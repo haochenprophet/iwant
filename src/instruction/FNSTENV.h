@@ -1,7 +1,7 @@
 #ifndef FNSTENV_H
 #define FNSTENV_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FNSTENV {
 	class CFNSTENV :public Object

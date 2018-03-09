@@ -1,7 +1,7 @@
 #ifndef FRNDINT_H
 #define FRNDINT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FRNDINT {
 	class CFRNDINT :public Object

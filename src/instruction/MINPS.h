@@ -1,7 +1,7 @@
 #ifndef MINPS_H
 #define MINPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MINPS {
 	class CMINPS :public Object

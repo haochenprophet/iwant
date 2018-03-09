@@ -1,7 +1,7 @@
 #ifndef CVTPS2PI_H
 #define CVTPS2PI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CVTPS2PI {
 	class CCVTPS2PI :public Object

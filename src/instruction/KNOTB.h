@@ -1,7 +1,7 @@
 #ifndef KNOTB_H
 #define KNOTB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KNOTB {
 	class CKNOTB :public Object

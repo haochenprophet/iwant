@@ -1,7 +1,7 @@
 #ifndef VGATHERPF1DPD_H
 #define VGATHERPF1DPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VGATHERPF1DPD {
 	class CVGATHERPF1DPD :public Object

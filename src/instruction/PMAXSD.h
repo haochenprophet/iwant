@@ -1,7 +1,7 @@
 #ifndef PMAXSD_H
 #define PMAXSD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMAXSD {
 	class CPMAXSD :public Object

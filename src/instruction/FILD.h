@@ -1,7 +1,7 @@
 #ifndef FILD_H
 #define FILD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FILD {
 	class CFILD :public Object

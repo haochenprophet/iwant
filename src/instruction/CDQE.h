@@ -1,7 +1,7 @@
 #ifndef CDQE_H
 #define CDQE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CDQE {
 	class CCDQE :public Object

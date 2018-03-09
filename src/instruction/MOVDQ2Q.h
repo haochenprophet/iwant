@@ -1,7 +1,7 @@
 #ifndef MOVDQ2Q_H
 #define MOVDQ2Q_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVDQ2Q {
 	class CMOVDQ2Q :public Object

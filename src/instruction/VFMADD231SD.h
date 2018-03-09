@@ -1,7 +1,7 @@
 #ifndef VFMADD231SD_H
 #define VFMADD231SD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VFMADD231SD {
 	class CVFMADD231SD :public Object

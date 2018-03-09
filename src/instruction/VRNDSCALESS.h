@@ -1,7 +1,7 @@
 #ifndef VRNDSCALESS_H
 #define VRNDSCALESS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VRNDSCALESS {
 	class CVRNDSCALESS :public Object

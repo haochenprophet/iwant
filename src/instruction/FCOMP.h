@@ -1,7 +1,7 @@
 #ifndef FCOMP_H
 #define FCOMP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCOMP {
 	class CFCOMP :public Object

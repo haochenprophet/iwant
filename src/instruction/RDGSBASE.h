@@ -1,7 +1,7 @@
 #ifndef RDGSBASE_H
 #define RDGSBASE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RDGSBASE {
 	class CRDGSBASE :public Object

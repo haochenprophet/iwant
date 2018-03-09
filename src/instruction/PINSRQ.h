@@ -1,7 +1,7 @@
 #ifndef PINSRQ_H
 #define PINSRQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PINSRQ {
 	class CPINSRQ :public Object

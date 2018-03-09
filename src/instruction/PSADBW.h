@@ -1,7 +1,7 @@
 #ifndef PSADBW_H
 #define PSADBW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSADBW {
 	class CPSADBW :public Object

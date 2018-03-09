@@ -1,7 +1,7 @@
 #ifndef RCR_H
 #define RCR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RCR {
 	class CRCR :public Object

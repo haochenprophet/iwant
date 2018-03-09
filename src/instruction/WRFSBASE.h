@@ -1,7 +1,7 @@
 #ifndef WRFSBASE_H
 #define WRFSBASE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_WRFSBASE {
 	class CWRFSBASE :public Object

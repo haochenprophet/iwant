@@ -1,7 +1,7 @@
 #ifndef FCOM_H
 #define FCOM_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCOM {
 	class CFCOM :public Object

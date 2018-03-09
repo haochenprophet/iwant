@@ -1,7 +1,7 @@
 #ifndef PMAXUD_H
 #define PMAXUD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMAXUD {
 	class CPMAXUD :public Object

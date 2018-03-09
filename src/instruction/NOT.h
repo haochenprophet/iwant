@@ -1,7 +1,7 @@
 #ifndef NOT_H
 #define NOT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_NOT {
 	class CNOT :public Object

@@ -1,7 +1,7 @@
 #ifndef SAHF_H
 #define SAHF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SAHF {
 	class CSAHF :public Object

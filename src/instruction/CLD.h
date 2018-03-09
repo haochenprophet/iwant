@@ -1,7 +1,7 @@
 #ifndef CLD_H
 #define CLD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CLD {
 	class CCLD :public Object

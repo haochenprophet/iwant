@@ -1,7 +1,7 @@
 #ifndef FUCOMI_H
 #define FUCOMI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FUCOMI {
 	class CFUCOMI :public Object

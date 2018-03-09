@@ -1,7 +1,7 @@
 #ifndef KXNORD_H
 #define KXNORD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KXNORD {
 	class CKXNORD :public Object

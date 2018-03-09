@@ -1,7 +1,7 @@
 #ifndef DIVPS_H
 #define DIVPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_DIVPS {
 	class CDIVPS :public Object

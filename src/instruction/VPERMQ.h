@@ -1,7 +1,7 @@
 #ifndef VPERMQ_H
 #define VPERMQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPERMQ {
 	class CVPERMQ :public Object

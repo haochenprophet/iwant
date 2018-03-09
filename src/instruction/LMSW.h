@@ -1,7 +1,7 @@
 #ifndef LMSW_H
 #define LMSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LMSW {
 	class CLMSW :public Object

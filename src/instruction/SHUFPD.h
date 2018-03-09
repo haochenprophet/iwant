@@ -1,7 +1,7 @@
 #ifndef SHUFPD_H
 #define SHUFPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SHUFPD {
 	class CSHUFPD :public Object

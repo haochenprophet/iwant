@@ -1,7 +1,7 @@
 #ifndef VPTESTMD_H
 #define VPTESTMD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPTESTMD {
 	class CVPTESTMD :public Object

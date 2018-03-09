@@ -1,7 +1,7 @@
 #ifndef PAUSE_H
 #define PAUSE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PAUSE {
 	class CPAUSE :public Object

@@ -1,7 +1,7 @@
 #ifndef ROR_H
 #define ROR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ROR {
 	class CROR :public Object

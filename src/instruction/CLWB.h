@@ -1,7 +1,7 @@
 #ifndef CLWB_H
 #define CLWB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CLWB {
 	class CCLWB :public Object

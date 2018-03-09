@@ -1,7 +1,7 @@
 #ifndef PMULDQ_H
 #define PMULDQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMULDQ {
 	class CPMULDQ :public Object

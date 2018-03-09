@@ -1,7 +1,7 @@
 #ifndef UD_H
 #define UD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_UD {
 	class CUD :public Object

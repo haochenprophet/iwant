@@ -1,7 +1,7 @@
 #ifndef BTC_H
 #define BTC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BTC {
 	class CBTC :public Object

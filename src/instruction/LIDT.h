@@ -1,7 +1,7 @@
 #ifndef LIDT_H
 #define LIDT_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LIDT {
 	class CLIDT :public Object

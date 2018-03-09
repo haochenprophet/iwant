@@ -1,7 +1,7 @@
 #ifndef FSAVE_H
 #define FSAVE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FSAVE {
 	class CFSAVE :public Object

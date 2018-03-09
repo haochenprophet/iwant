@@ -1,7 +1,7 @@
 #ifndef FCHS_H
 #define FCHS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCHS {
 	class CFCHS :public Object

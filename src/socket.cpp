@@ -1,3 +1,7 @@
+#if WINDOWS_OS==1
+
+#else//WINDOWS_OS
+
 #include "socket.h"
 #ifndef SOCKET_TEST
 #define SOCKET_TEST	0//1
@@ -347,3 +351,5 @@ int main()
 	return 0;
 }
 #endif
+
+#endif //WINDOWS_OS

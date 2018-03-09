@@ -1,7 +1,7 @@
 #ifndef XRSTORS_H
 #define XRSTORS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XRSTORS {
 	class CXRSTORS :public Object

@@ -1,7 +1,7 @@
 #ifndef MOVNTPS_H
 #define MOVNTPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVNTPS {
 	class CMOVNTPS :public Object

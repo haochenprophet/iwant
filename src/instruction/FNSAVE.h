@@ -1,7 +1,7 @@
 #ifndef FNSAVE_H
 #define FNSAVE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FNSAVE {
 	class CFNSAVE :public Object

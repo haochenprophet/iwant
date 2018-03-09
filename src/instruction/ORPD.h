@@ -1,7 +1,7 @@
 #ifndef ORPD_H
 #define ORPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ORPD {
 	class CORPD :public Object

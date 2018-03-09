@@ -1,7 +1,7 @@
 #ifndef VRCP14PS_H
 #define VRCP14PS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VRCP14PS {
 	class CVRCP14PS :public Object

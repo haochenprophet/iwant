@@ -1,7 +1,7 @@
 #ifndef PMINSQ_H
 #define PMINSQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PMINSQ {
 	class CPMINSQ :public Object

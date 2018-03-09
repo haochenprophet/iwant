@@ -1,7 +1,7 @@
 #ifndef FCOMI_H
 #define FCOMI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FCOMI {
 	class CFCOMI :public Object

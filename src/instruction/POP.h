@@ -1,7 +1,7 @@
 #ifndef POP_H
 #define POP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_POP {
 	class CPOP :public Object

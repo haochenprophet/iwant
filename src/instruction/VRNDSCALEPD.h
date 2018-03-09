@@ -1,7 +1,7 @@
 #ifndef VRNDSCALEPD_H
 #define VRNDSCALEPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VRNDSCALEPD {
 	class CVRNDSCALEPD :public Object

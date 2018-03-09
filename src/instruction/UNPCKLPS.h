@@ -1,7 +1,7 @@
 #ifndef UNPCKLPS_H
 #define UNPCKLPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_UNPCKLPS {
 	class CUNPCKLPS :public Object

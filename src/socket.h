@@ -53,7 +53,7 @@ namespace n_socket{
 		int s_send(SOCKET s,const char *buf,  int size, int flags= 0);
 		int s_recv(SOCKET s,char *buf,int  len,int  flags);
 		int s_listen(SOCKET s,int backlog= SOMAXCONN);
-		SOCKET s_accept(SOCKET s, sockaddr *o_addr= nullptr, socklen_t * io_size= nullptr);
+//		SOCKET s_accept(SOCKET s, sockaddr *o_addr= nullptr, socklen_t * io_size= nullptr);
 		int s_shutdown(SOCKET s, int how=2);
 		int s_close(SOCKET s, int how = 2, int run_sd = 1);
 		int client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size);

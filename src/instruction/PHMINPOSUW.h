@@ -1,7 +1,7 @@
 #ifndef PHMINPOSUW_H
 #define PHMINPOSUW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PHMINPOSUW {
 	class CPHMINPOSUW :public Object

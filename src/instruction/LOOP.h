@@ -1,7 +1,7 @@
 #ifndef LOOP_H
 #define LOOP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_LOOP {
 	class CLOOP :public Object

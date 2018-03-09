@@ -1,7 +1,7 @@
 #ifndef BSF_H
 #define BSF_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BSF {
 	class CBSF :public Object

@@ -1,7 +1,7 @@
 #ifndef STOSQ_H
 #define STOSQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STOSQ {
 	class CSTOSQ :public Object

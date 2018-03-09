@@ -1,7 +1,7 @@
 #ifndef RDSEED_H
 #define RDSEED_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RDSEED {
 	class CRDSEED :public Object

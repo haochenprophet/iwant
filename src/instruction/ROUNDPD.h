@@ -1,7 +1,7 @@
 #ifndef ROUNDPD_H
 #define ROUNDPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ROUNDPD {
 	class CROUNDPD :public Object

@@ -1,7 +1,7 @@
 #ifndef BLENDVPS_H
 #define BLENDVPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BLENDVPS {
 	class CBLENDVPS :public Object

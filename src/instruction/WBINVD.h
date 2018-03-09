@@ -1,7 +1,7 @@
 #ifndef WBINVD_H
 #define WBINVD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_WBINVD {
 	class CWBINVD :public Object

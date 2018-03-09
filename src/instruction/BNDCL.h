@@ -1,7 +1,7 @@
 #ifndef BNDCL_H
 #define BNDCL_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_BNDCL {
 	class CBNDCL :public Object

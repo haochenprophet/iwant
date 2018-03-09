@@ -1,7 +1,7 @@
 #ifndef VCOMPRESSPD_H
 #define VCOMPRESSPD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VCOMPRESSPD {
 	class CVCOMPRESSPD :public Object

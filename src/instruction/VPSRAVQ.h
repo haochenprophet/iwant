@@ -1,7 +1,7 @@
 #ifndef VPSRAVQ_H
 #define VPSRAVQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPSRAVQ {
 	class CVPSRAVQ :public Object

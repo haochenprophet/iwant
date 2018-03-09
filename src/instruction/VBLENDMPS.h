@@ -1,7 +1,7 @@
 #ifndef VBLENDMPS_H
 #define VBLENDMPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VBLENDMPS {
 	class CVBLENDMPS :public Object

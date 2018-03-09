@@ -1,7 +1,7 @@
 #ifndef OR_H
 #define OR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_OR {
 	class COR :public Object

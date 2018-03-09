@@ -1,7 +1,7 @@
 #ifndef RCPPS_H
 #define RCPPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_RCPPS {
 	class CRCPPS :public Object

@@ -1,7 +1,7 @@
 #ifndef VPCMPUB_H
 #define VPCMPUB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPCMPUB {
 	class CVPCMPUB :public Object

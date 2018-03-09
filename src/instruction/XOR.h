@@ -1,7 +1,7 @@
 #ifndef XOR_H
 #define XOR_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_XOR {
 	class CXOR :public Object

@@ -1,7 +1,7 @@
 #ifndef VPSCATTERDQ_H
 #define VPSCATTERDQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPSCATTERDQ {
 	class CVPSCATTERDQ :public Object

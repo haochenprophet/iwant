@@ -1,7 +1,7 @@
 #ifndef VSCATTERPF0QPS_H
 #define VSCATTERPF0QPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VSCATTERPF0QPS {
 	class CVSCATTERPF0QPS :public Object

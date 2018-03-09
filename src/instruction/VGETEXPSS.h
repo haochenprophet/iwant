@@ -1,7 +1,7 @@
 #ifndef VGETEXPSS_H
 #define VGETEXPSS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VGETEXPSS {
 	class CVGETEXPSS :public Object

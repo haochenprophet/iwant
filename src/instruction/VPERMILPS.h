@@ -1,7 +1,7 @@
 #ifndef VPERMILPS_H
 #define VPERMILPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPERMILPS {
 	class CVPERMILPS :public Object

@@ -1,7 +1,7 @@
 #ifndef PINSRB_H
 #define PINSRB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PINSRB {
 	class CPINSRB :public Object

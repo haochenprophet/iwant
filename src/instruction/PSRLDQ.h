@@ -1,7 +1,7 @@
 #ifndef PSRLDQ_H
 #define PSRLDQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PSRLDQ {
 	class CPSRLDQ :public Object

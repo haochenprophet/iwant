@@ -1,7 +1,7 @@
 #ifndef PUSHFQ_H
 #define PUSHFQ_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PUSHFQ {
 	class CPUSHFQ :public Object

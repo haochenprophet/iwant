@@ -1,7 +1,7 @@
 #ifndef INTO_H
 #define INTO_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_INTO {
 	class CINTO :public Object

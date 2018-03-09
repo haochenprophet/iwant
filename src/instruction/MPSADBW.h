@@ -1,7 +1,7 @@
 #ifndef MPSADBW_H
 #define MPSADBW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MPSADBW {
 	class CMPSADBW :public Object

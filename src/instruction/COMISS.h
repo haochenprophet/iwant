@@ -1,7 +1,7 @@
 #ifndef COMISS_H
 #define COMISS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_COMISS {
 	class CCOMISS :public Object

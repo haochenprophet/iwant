@@ -1,7 +1,7 @@
 #ifndef SUB_H
 #define SUB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SUB {
 	class CSUB :public Object

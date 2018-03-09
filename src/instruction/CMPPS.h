@@ -1,7 +1,7 @@
 #ifndef CMPPS_H
 #define CMPPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_CMPPS {
 	class CCMPPS :public Object

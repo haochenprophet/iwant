@@ -1,7 +1,7 @@
 #ifndef PCMPISTRI_H
 #define PCMPISTRI_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PCMPISTRI {
 	class CPCMPISTRI :public Object

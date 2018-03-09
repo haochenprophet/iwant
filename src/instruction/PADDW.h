@@ -1,7 +1,7 @@
 #ifndef PADDW_H
 #define PADDW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_PADDW {
 	class CPADDW :public Object

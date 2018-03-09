@@ -1,7 +1,7 @@
 #ifndef VMOVDQA64_H
 #define VMOVDQA64_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VMOVDQA64 {
 	class CVMOVDQA64 :public Object

@@ -1,7 +1,7 @@
 #ifndef VFMSUB132PS_H
 #define VFMSUB132PS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VFMSUB132PS {
 	class CVFMSUB132PS :public Object

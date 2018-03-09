@@ -1,7 +1,7 @@
 #ifndef VPERMW_H
 #define VPERMW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VPERMW {
 	class CVPERMW :public Object

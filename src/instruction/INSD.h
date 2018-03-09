@@ -1,7 +1,7 @@
 #ifndef INSD_H
 #define INSD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_INSD {
 	class CINSD :public Object

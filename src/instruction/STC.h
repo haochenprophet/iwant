@@ -1,7 +1,7 @@
 #ifndef STC_H
 #define STC_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_STC {
 	class CSTC :public Object

@@ -1,7 +1,7 @@
 #ifndef KADDD_H
 #define KADDD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KADDD {
 	class CKADDD :public Object

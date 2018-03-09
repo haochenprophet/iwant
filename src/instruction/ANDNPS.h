@@ -1,7 +1,7 @@
 #ifndef ANDNPS_H
 #define ANDNPS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ANDNPS {
 	class CANDNPS :public Object

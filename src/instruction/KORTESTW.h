@@ -1,7 +1,7 @@
 #ifndef KORTESTW_H
 #define KORTESTW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_KORTESTW {
 	class CKORTESTW :public Object

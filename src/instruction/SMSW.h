@@ -1,7 +1,7 @@
 #ifndef SMSW_H
 #define SMSW_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_SMSW {
 	class CSMSW :public Object

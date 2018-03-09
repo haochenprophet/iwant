@@ -1,7 +1,7 @@
 #ifndef MOVSD_H
 #define MOVSD_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_MOVSD {
 	class CMOVSD :public Object

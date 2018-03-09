@@ -1,7 +1,7 @@
 #ifndef FICOMP_H
 #define FICOMP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FICOMP {
 	class CFICOMP :public Object

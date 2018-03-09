@@ -1,7 +1,7 @@
 #ifndef FSUBRP_H
 #define FSUBRP_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_FSUBRP {
 	class CFSUBRP :public Object

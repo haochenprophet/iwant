@@ -1,7 +1,7 @@
 #ifndef VSCALEFSS_H
 #define VSCALEFSS_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_VSCALEFSS {
 	class CVSCALEFSS :public Object
