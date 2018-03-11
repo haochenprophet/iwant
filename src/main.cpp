@@ -81,6 +81,8 @@ int my_sql_test(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
+	Cuuid uuid;
+	uuid.display();
 
 	Cmain m;
 	m.deal_cmd(argc,argv);
