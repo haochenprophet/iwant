@@ -1,4 +1,4 @@
-#include "OR.h"
+#include "OR_I.h"
 int COR::my_init(void *p)
 {
 	this->name = "COR";

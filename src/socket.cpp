@@ -1,6 +1,3 @@
-#if WINDOWS_OS==1
-
-#else//WINDOWS_OS
 
 #include "socket.h"
 #ifndef SOCKET_TEST
@@ -40,7 +37,14 @@ int Csocket::s_connect(SOCKET s,sockaddr *sockaddr, int size)
 
 int Csocket::s_bind(SOCKET s, sockaddr *sockaddr, int size)
 {
+#if WINDOWS_OS
+
+#endif
+
+#if LINUX_OS
 	return bind(s, sockaddr,size);
+#endif
+	return -1;
 }
 
 int Csocket::s_send(SOCKET s, const char *buf, int size, int flags)
@@ -81,6 +85,12 @@ int Csocket::s_close(SOCKET s, int how,int run_sd )
 	return ret;
 }
 
+#if WINDOWS_OS
+int Csocket::client(char *hostname, char *service, char *sendbuf, int* io_s_size, char *recvbuf, int * io_r_size)
+{
+	return 0;
+}
+#else
 int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
 	struct addrinfo hints, *result = nullptr, *ptr = nullptr;
@@ -169,12 +179,19 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 	this->s_close(connect_socket);
 	return 0;
 }
+#endif //WINDOWS_OS==0
 
 int Csocket::client()
 {
 	return this->client(this->hostname, this->service, this->sendbuf, &this->io_s_size, this->recvbuf, &this->io_r_size);
 }
 
+#if WINDOWS_OS //WINDOWS_OS=1 
+int Csocket::server(char *service, char *sendbuf, int* io_s_size, char *recvbuf, int * io_r_size)
+{
+	return 0;
+}
+#else //LINUX_OS
 int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,int * io_r_size)
 {
 	int i_ret;
@@ -289,6 +306,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 
 	return 0;
 }
+#endif //WINDOWS_OS=0
 
 int Csocket::server()
 {
@@ -351,5 +369,3 @@ int main()
 	return 0;
 }
 #endif
-
-#endif //WINDOWS_OS

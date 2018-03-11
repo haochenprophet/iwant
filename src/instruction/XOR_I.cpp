@@ -1,4 +1,4 @@
-#include "XOR.h"
+#include "XOR_I.h"
 int CXOR::my_init(void *p)
 {
 	this->name = "CXOR";

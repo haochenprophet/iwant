@@ -4,11 +4,11 @@
 #include "../object.h"
 
 namespace n_AND {
-	class CAND :public Object
+	class CAND_I :public Object
 	{
 	public:
-		CAND();
-		~CAND();
+		CAND_I();
+		~CAND_I();
 		int my_init(void *p=nullptr);
 	};
 }

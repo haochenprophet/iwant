@@ -1,4 +1,4 @@
-#include "INT.h"
+#include "INT_I.h"
 int CINT::my_init(void *p)
 {
 	this->name = "CINT";

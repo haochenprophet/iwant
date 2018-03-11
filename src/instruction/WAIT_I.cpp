@@ -1,4 +1,4 @@
-#include "WAIT.h"
+#include "WAIT_I.h"
 int CWAIT::my_init(void *p)
 {
 	this->name = "CWAIT";

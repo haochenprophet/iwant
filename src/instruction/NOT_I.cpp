@@ -1,4 +1,4 @@
-#include "NOT.h"
+#include "NOT_I.h"
 int CNOT::my_init(void *p)
 {
 	this->name = "CNOT";

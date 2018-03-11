@@ -1,4 +1,4 @@
-#include "TEST.h"
+#include "TEST_I.h"
 int CTEST::my_init(void *p)
 {
 	this->name = "CTEST";

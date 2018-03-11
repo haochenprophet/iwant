@@ -1602,9 +1602,6 @@
     <ClCompile Include="..\..\src\instruction\AESKEYGENASSIST.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\instruction\AND.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\instruction\ANDN.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
@@ -2181,9 +2178,6 @@
     <ClCompile Include="..\..\src\instruction\IMUL.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\instruction\IN.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\instruction\INC.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
@@ -2200,9 +2194,6 @@
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\INSW.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\instruction\INT.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\INT_3.cpp">
@@ -2644,12 +2635,6 @@
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\NOP.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\instruction\NOT.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\instruction\OR.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\ORPD.cpp">
@@ -3343,9 +3328,6 @@
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\SYSRET.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\instruction\TEST.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\instruction\TZCNT.cpp">
@@ -4314,9 +4296,6 @@
     <ClCompile Include="..\..\src\instruction\VZEROUPPER.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\instruction\WAIT.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\instruction\WBINVD.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
@@ -4359,9 +4338,6 @@
     <ClCompile Include="..\..\src\instruction\XLATB.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\instruction\XOR.cpp">
-      <Filter>instruction</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\instruction\XORPD.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
@@ -4400,6 +4376,30 @@
     </ClCompile>
     <ClCompile Include="..\..\src\keywords\k_uuid.cpp">
       <Filter>keywords</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\AND_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\IN_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\INT_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\NOT_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\OR_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\TEST_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\WAIT_I.cpp">
+      <Filter>instruction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\instruction\XOR_I.cpp">
+      <Filter>instruction</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -6026,9 +6026,6 @@
     <ClInclude Include="..\..\src\instruction\AESKEYGENASSIST.h">
       <Filter>instruction</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\instruction\AND.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\instruction\ANDN.h">
       <Filter>instruction</Filter>
     </ClInclude>
@@ -6605,9 +6602,6 @@
     <ClInclude Include="..\..\src\instruction\IMUL.h">
       <Filter>instruction</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\instruction\IN.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\instruction\INC.h">
       <Filter>instruction</Filter>
     </ClInclude>
@@ -6624,9 +6618,6 @@
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\INSW.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\instruction\INT.h">
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\INT_3.h">
@@ -7068,12 +7059,6 @@
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\NOP.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\instruction\NOT.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\instruction\OR.h">
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\ORPD.h">
@@ -7767,9 +7752,6 @@
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\SYSRET.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\instruction\TEST.h">
       <Filter>instruction</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\TZCNT.h">
@@ -8738,9 +8720,6 @@
     <ClInclude Include="..\..\src\instruction\VZEROUPPER.h">
       <Filter>instruction</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\instruction\WAIT.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\instruction\WBINVD.h">
       <Filter>instruction</Filter>
     </ClInclude>
@@ -8783,9 +8762,6 @@
     <ClInclude Include="..\..\src\instruction\XLATB.h">
       <Filter>instruction</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\instruction\XOR.h">
-      <Filter>instruction</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\instruction\XORPD.h">
       <Filter>instruction</Filter>
     </ClInclude>
@@ -8824,6 +8800,30 @@
     </ClInclude>
     <ClInclude Include="..\..\src\keywords\k_uuid.h">
       <Filter>keywords</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\AND_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\IN_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\INT_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\NOT_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\OR_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\TEST_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\WAIT_I.h">
+      <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\instruction\XOR_I.h">
+      <Filter>instruction</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -191,7 +191,7 @@
     <ClCompile Include="..\..\src\instruction\AESENCLAST.cpp" />
     <ClCompile Include="..\..\src\instruction\AESIMC.cpp" />
     <ClCompile Include="..\..\src\instruction\AESKEYGENASSIST.cpp" />
-    <ClCompile Include="..\..\src\instruction\AND.cpp" />
+    <ClCompile Include="..\..\src\instruction\AND_I.cpp" />
     <ClCompile Include="..\..\src\instruction\ANDN.cpp" />
     <ClCompile Include="..\..\src\instruction\ANDNPD.cpp" />
     <ClCompile Include="..\..\src\instruction\ANDNPS.cpp" />
@@ -384,14 +384,14 @@
     <ClCompile Include="..\..\src\instruction\HSUBPS.cpp" />
     <ClCompile Include="..\..\src\instruction\IDIV.cpp" />
     <ClCompile Include="..\..\src\instruction\IMUL.cpp" />
-    <ClCompile Include="..\..\src\instruction\IN.cpp" />
+    <ClCompile Include="..\..\src\instruction\IN_I.cpp" />
     <ClCompile Include="..\..\src\instruction\INC.cpp" />
     <ClCompile Include="..\..\src\instruction\INS.cpp" />
     <ClCompile Include="..\..\src\instruction\INSB.cpp" />
     <ClCompile Include="..\..\src\instruction\INSD.cpp" />
     <ClCompile Include="..\..\src\instruction\INSERTPS.cpp" />
     <ClCompile Include="..\..\src\instruction\INSW.cpp" />
-    <ClCompile Include="..\..\src\instruction\INT.cpp" />
+    <ClCompile Include="..\..\src\instruction\INT_I.cpp" />
     <ClCompile Include="..\..\src\instruction\INTO.cpp" />
     <ClCompile Include="..\..\src\instruction\INT_3.cpp" />
     <ClCompile Include="..\..\src\instruction\INVD.cpp" />
@@ -539,8 +539,8 @@
     <ClCompile Include="..\..\src\instruction\MWAIT.cpp" />
     <ClCompile Include="..\..\src\instruction\NEG.cpp" />
     <ClCompile Include="..\..\src\instruction\NOP.cpp" />
-    <ClCompile Include="..\..\src\instruction\NOT.cpp" />
-    <ClCompile Include="..\..\src\instruction\OR.cpp" />
+    <ClCompile Include="..\..\src\instruction\NOT_I.cpp" />
+    <ClCompile Include="..\..\src\instruction\OR_I.cpp" />
     <ClCompile Include="..\..\src\instruction\ORPD.cpp" />
     <ClCompile Include="..\..\src\instruction\ORPS.cpp" />
     <ClCompile Include="..\..\src\instruction\OUT.cpp" />
@@ -772,7 +772,7 @@
     <ClCompile Include="..\..\src\instruction\SYSENTER.cpp" />
     <ClCompile Include="..\..\src\instruction\SYSEXIT.cpp" />
     <ClCompile Include="..\..\src\instruction\SYSRET.cpp" />
-    <ClCompile Include="..\..\src\instruction\TEST.cpp" />
+    <ClCompile Include="..\..\src\instruction\TEST_I.cpp" />
     <ClCompile Include="..\..\src\instruction\TZCNT.cpp" />
     <ClCompile Include="..\..\src\instruction\UCOMISD.cpp" />
     <ClCompile Include="..\..\src\instruction\UCOMISS.cpp" />
@@ -1095,7 +1095,7 @@
     <ClCompile Include="..\..\src\instruction\VTESTPS.cpp" />
     <ClCompile Include="..\..\src\instruction\VZEROALL.cpp" />
     <ClCompile Include="..\..\src\instruction\VZEROUPPER.cpp" />
-    <ClCompile Include="..\..\src\instruction\WAIT.cpp" />
+    <ClCompile Include="..\..\src\instruction\WAIT_I.cpp" />
     <ClCompile Include="..\..\src\instruction\WBINVD.cpp" />
     <ClCompile Include="..\..\src\instruction\WRFSBASE.cpp" />
     <ClCompile Include="..\..\src\instruction\WRGSBASE.cpp" />
@@ -1110,7 +1110,7 @@
     <ClCompile Include="..\..\src\instruction\XGETBV.cpp" />
     <ClCompile Include="..\..\src\instruction\XLAT.cpp" />
     <ClCompile Include="..\..\src\instruction\XLATB.cpp" />
-    <ClCompile Include="..\..\src\instruction\XOR.cpp" />
+    <ClCompile Include="..\..\src\instruction\XOR_I.cpp" />
     <ClCompile Include="..\..\src\instruction\XORPD.cpp" />
     <ClCompile Include="..\..\src\instruction\XORPS.cpp" />
     <ClCompile Include="..\..\src\instruction\XRELEASE.cpp" />
@@ -1652,7 +1652,7 @@
     <ClInclude Include="..\..\src\instruction\AESENCLAST.h" />
     <ClInclude Include="..\..\src\instruction\AESIMC.h" />
     <ClInclude Include="..\..\src\instruction\AESKEYGENASSIST.h" />
-    <ClInclude Include="..\..\src\instruction\AND.h" />
+    <ClInclude Include="..\..\src\instruction\AND_I.h" />
     <ClInclude Include="..\..\src\instruction\ANDN.h" />
     <ClInclude Include="..\..\src\instruction\ANDNPD.h" />
     <ClInclude Include="..\..\src\instruction\ANDNPS.h" />
@@ -1845,14 +1845,14 @@
     <ClInclude Include="..\..\src\instruction\HSUBPS.h" />
     <ClInclude Include="..\..\src\instruction\IDIV.h" />
     <ClInclude Include="..\..\src\instruction\IMUL.h" />
-    <ClInclude Include="..\..\src\instruction\IN.h" />
+    <ClInclude Include="..\..\src\instruction\IN_I.h" />
     <ClInclude Include="..\..\src\instruction\INC.h" />
     <ClInclude Include="..\..\src\instruction\INS.h" />
     <ClInclude Include="..\..\src\instruction\INSB.h" />
     <ClInclude Include="..\..\src\instruction\INSD.h" />
     <ClInclude Include="..\..\src\instruction\INSERTPS.h" />
     <ClInclude Include="..\..\src\instruction\INSW.h" />
-    <ClInclude Include="..\..\src\instruction\INT.h" />
+    <ClInclude Include="..\..\src\instruction\INT_I.h" />
     <ClInclude Include="..\..\src\instruction\INTO.h" />
     <ClInclude Include="..\..\src\instruction\INT_3.h" />
     <ClInclude Include="..\..\src\instruction\INVD.h" />
@@ -2000,8 +2000,8 @@
     <ClInclude Include="..\..\src\instruction\MWAIT.h" />
     <ClInclude Include="..\..\src\instruction\NEG.h" />
     <ClInclude Include="..\..\src\instruction\NOP.h" />
-    <ClInclude Include="..\..\src\instruction\NOT.h" />
-    <ClInclude Include="..\..\src\instruction\OR.h" />
+    <ClInclude Include="..\..\src\instruction\NOT_I.h" />
+    <ClInclude Include="..\..\src\instruction\OR_I.h" />
     <ClInclude Include="..\..\src\instruction\ORPD.h" />
     <ClInclude Include="..\..\src\instruction\ORPS.h" />
     <ClInclude Include="..\..\src\instruction\OUT.h" />
@@ -2233,7 +2233,7 @@
     <ClInclude Include="..\..\src\instruction\SYSENTER.h" />
     <ClInclude Include="..\..\src\instruction\SYSEXIT.h" />
     <ClInclude Include="..\..\src\instruction\SYSRET.h" />
-    <ClInclude Include="..\..\src\instruction\TEST.h" />
+    <ClInclude Include="..\..\src\instruction\TEST_I.h" />
     <ClInclude Include="..\..\src\instruction\TZCNT.h" />
     <ClInclude Include="..\..\src\instruction\UCOMISD.h" />
     <ClInclude Include="..\..\src\instruction\UCOMISS.h" />
@@ -2556,7 +2556,7 @@
     <ClInclude Include="..\..\src\instruction\VTESTPS.h" />
     <ClInclude Include="..\..\src\instruction\VZEROALL.h" />
     <ClInclude Include="..\..\src\instruction\VZEROUPPER.h" />
-    <ClInclude Include="..\..\src\instruction\WAIT.h" />
+    <ClInclude Include="..\..\src\instruction\WAIT_I.h" />
     <ClInclude Include="..\..\src\instruction\WBINVD.h" />
     <ClInclude Include="..\..\src\instruction\WRFSBASE.h" />
     <ClInclude Include="..\..\src\instruction\WRGSBASE.h" />
@@ -2571,7 +2571,7 @@
     <ClInclude Include="..\..\src\instruction\XGETBV.h" />
     <ClInclude Include="..\..\src\instruction\XLAT.h" />
     <ClInclude Include="..\..\src\instruction\XLATB.h" />
-    <ClInclude Include="..\..\src\instruction\XOR.h" />
+    <ClInclude Include="..\..\src\instruction\XOR_I.h" />
     <ClInclude Include="..\..\src\instruction\XORPD.h" />
     <ClInclude Include="..\..\src\instruction\XORPS.h" />
     <ClInclude Include="..\..\src\instruction\XRELEASE.h" />
