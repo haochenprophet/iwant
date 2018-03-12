@@ -10,22 +10,17 @@ Cuuid::~Cuuid()
 
 }
 
-int Cuuid::create(UUID_T * uuid)
+int Cuuid::create()
 {
 	#if WINDOWS_OS
-		CoCreateGuid(uuid);
+		if(S_OK==CoCreateGuid(&this->uuid)) return 0;
+		return -1;
 	#endif
 
 	#if LINUX_OS
 		uuid_generate(uuid);
+		return 0;
 	#endif
-	
-	return 0;
-}
-
-int Cuuid::create()
-{
-	return this->create(&this->uuid);
 }
 
 void Cuuid::display(UUID_T * uuid)

@@ -25,7 +25,6 @@ namespace n_uuid {
 	public:
 		Cuuid();
 		~Cuuid();
-		int create(UUID_T * uuid);
 		int create();
 		void display(UUID_T * uuid);
 		void display();		
