@@ -3,40 +3,38 @@
 
 #include <stdio.h>
 #include <iostream>
-using namespace std;
-
-#define GUID_LEN 64  
+#include <string>
 
 #if LINUX_OS
 #include <uuid/uuid.h>  //sudo apt-get install uuid-dev
-typedef uuid_t UUID_T;
 #endif
 
 #if WINDOWS_OS
 #include <objbase.h>
-typedef GUID UUID_T;
 #endif
+
+#define GUID_LEN 64  
+#define UUID_FORMAT "%08X%04X%04X%02X%02X%02X%02X%02X%02X%02X%02X"
+
+typedef union{
+	struct{
+		unsigned int   Data1;
+		unsigned short Data2;
+		unsigned short Data3;
+		unsigned char  Data4[ 8 ];
+	}guid;
+	unsigned char uuid[16];
+}UUID_U;
 
 namespace n_uuid {
 	class Cuuid
 	{
 	public:
-		UUID_T uuid;
+		std::string uuid;
 	public:
 		Cuuid();
 		~Cuuid();
 		int create();
-		int cmp(UUID_T * uuid);//0 ==, -1<  1>
-		int cmp(Cuuid * uuid);//0 ==, -1<  1>
-		bool operator == (Cuuid& uuid);
-		bool operator != (Cuuid& uuid);
-		bool operator > (Cuuid& uuid);
-		bool operator < (Cuuid& uuid);
-		bool operator >= (Cuuid& uuid);
-		bool operator <= (Cuuid& uuid);
-		void display(UUID_T * uuid);
-		void display();	
-		int test();
 	};
 }
 using namespace n_uuid;
