@@ -26,8 +26,17 @@ namespace n_uuid {
 		Cuuid();
 		~Cuuid();
 		int create();
+		int cmp(UUID_T * uuid);//0 ==, -1<  1>
+		int cmp(Cuuid * uuid);//0 ==, -1<  1>
+		bool operator == (Cuuid& uuid);
+		bool operator != (Cuuid& uuid);
+		bool operator > (Cuuid& uuid);
+		bool operator < (Cuuid& uuid);
+		bool operator >= (Cuuid& uuid);
+		bool operator <= (Cuuid& uuid);
 		void display(UUID_T * uuid);
-		void display();		
+		void display();	
+		int test();
 	};
 }
 using namespace n_uuid;

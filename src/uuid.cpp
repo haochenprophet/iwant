@@ -23,6 +23,78 @@ int Cuuid::create()
 	#endif
 }
 
+int Cuuid::cmp(UUID_T * uuid)
+{
+#if WINDOWS_OS
+	if (this->uuid.Data1 > uuid->Data1) return 1;
+	if (this->uuid.Data1 < uuid->Data1) return -1;
+
+	if (this->uuid.Data2 > uuid->Data2) return 1;
+	if (this->uuid.Data2 < uuid->Data2) return -1;
+
+	if (this->uuid.Data3 > uuid->Data3) return 1;
+	if (this->uuid.Data3 < uuid->Data3) return -1;
+
+	for (int n = 7; n >=0; n--)
+	{
+		if (this->uuid.Data4[n] > uuid->Data4[n]) return 1;
+		if (this->uuid.Data4[n] < uuid->Data4[n]) return -1;
+	}
+	return 0;
+#endif
+
+#if LINUX_OS
+	unsigned char *cp = (unsigned char *)&uuid;
+	for (int i = sizeof(UUID_T) / sizeof(char) - 1; i > 0; i--)
+	{
+		if (this->uuid[i] > cp[i]) return 1;
+		if (this->uuid[i] < cp[i]) return -1;
+	}
+	return 0;
+#endif
+}
+
+int Cuuid::cmp(Cuuid * uuid)
+{
+	return this->cmp(&uuid->uuid);
+}
+
+bool Cuuid::operator == (Cuuid& uuid)
+{
+	if(0==this->cmp(&uuid.uuid)) return true;
+	return false;
+}
+
+bool Cuuid::operator != (Cuuid& uuid)
+{
+	if (0 != this->cmp(&uuid.uuid)) return true;
+	return false;
+}
+
+bool Cuuid::operator > (Cuuid& uuid)
+{
+	if (this->cmp(&uuid.uuid) > 0) return true;
+	return false;
+}
+
+bool Cuuid::operator < (Cuuid& uuid)
+{
+	if ( this->cmp(&uuid.uuid) < 0) return true;
+	return false;
+}
+
+bool Cuuid::operator >= (Cuuid& uuid)
+{
+	if ( this->cmp(&uuid.uuid)>=0) return true;
+	return false;
+}
+
+bool Cuuid::operator <= (Cuuid& uuid)
+{
+	if (this->cmp(&uuid.uuid)<=0) return true;
+	return false;
+}
+
 void Cuuid::display(UUID_T * uuid)
 {
 #if WINDOWS_OS
@@ -43,14 +115,24 @@ void Cuuid::display()
 	this->display(&this->uuid);
 }
 
+int Cuuid::test()
+{
+	Cuuid u1, u2;
+	u1.display();
+	u2.display();
+	printf("	u1.cmp(&u2); = %d\n",u1.cmp(&u2));
+	return 0;
+}
+
 #if UUID_TEST
 
 int main(int argc, char *argv[])
 {
 	cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<"\n";
 
-	Cuuid uuid;
+	Cuuid uuid, uuid2;
 	uuid.display();
+
 	return 0;
 }
 #endif

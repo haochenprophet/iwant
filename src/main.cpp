@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
 	Cuuid uuid;
-	uuid.display();
+	uuid.test();
 
 	Cmain m;
 	m.deal_cmd(argc,argv);
