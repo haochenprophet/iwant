@@ -96,7 +96,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 				size = _tcslen(ffd.cFileName);
 				size*= sizeof(DIR_T);
 				size += sizeof(DIR_T);
-				if(this->allot(size, (void **)&p_name)>=size)
+				if(this->allot((int)size, (void **)&p_name)>=size)
 				{
 					wcscpy((DIR_T *)p_name, (DIR_T *)ffd.cFileName);
 					this->name_list.push_back((DIR_T *)p_name);
@@ -153,8 +153,10 @@ int Cpath::my_clear(void *p)
 int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
+	DIR_T *dir = L"../../src";//windows dir 
 	Cpath p;
-	p.list((DIR_T *)".",(DIR_T*)".h",0);
+	//_tprintf(TEXT("\nTarget directory is %s\n\n"), dir);
+	p.list(dir,L".cpp",0);
 //	p.list((DIR_T *)".", L".vc", 1); 
 //	p.list((DIR_T *)".", NULL, 0);
 //	p.list((DIR_T *)".",(DIR_T*)".h");

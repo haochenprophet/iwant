@@ -2,15 +2,8 @@
 #define PATH_H
 
 #include "object.h"
-#include "os.h"
+#include "os.h" //DIR_T
 
-#if WINDOWS_OS
-typedef TCHAR DIR_T;//for class Cpath
-#endif//WINDOWS_OS
-
-#if LINUX_OS
-typedef char DIR_T;
-#endif//LINUX_OS
 typedef list<DIR_T *> NAME_LIST;
 
 namespace n_path {

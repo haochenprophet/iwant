@@ -75,12 +75,12 @@ int CmyMemory::set_addr(char *start,char *end,int type)
 	if(this->allot_flag) return -1;
 	if(end>start){
 		this->addr=start;
-		this->size=(end-start);
+		this->size=(int)(end-start);
 	}
 	else
 	{
 		this->addr=end;
-		this->size=(start-end);	
+		this->size=(int)(start-end);	
 	}
 	this->type=type;
 	return 0;
