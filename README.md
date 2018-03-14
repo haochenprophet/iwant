@@ -40,6 +40,7 @@ Self-creation, self-renewal, self-improvement, creating classes, creating source
 	this->alias = this->name; 
 }
 
+4.A file has a main class and the class name is cpp filename add C.  ie. class Ciwant.
 
 [Building]:
 request :Need C + + compiler
