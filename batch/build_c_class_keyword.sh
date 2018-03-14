@@ -144,5 +144,5 @@ make main=CLASS
 ./iwant while
 ./iwant xor
 ./iwant xor_eq
-
+./iwant code
 make main=CLASS

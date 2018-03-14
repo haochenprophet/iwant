@@ -5,4 +5,5 @@ make main=MAIN
 ./iwant search
 ./iwant test
 ./iwant register
+./iwant code
 make main=MAIN
