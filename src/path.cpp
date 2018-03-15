@@ -153,11 +153,19 @@ int Cpath::my_clear(void *p)
 int main(int argc, char *argv[])
 {
 	cout << "PATH_TEST\n\n";
+
+#if WINDOWS_OS
 	DIR_T *dir = L"../../src";//windows dir 
+#endif
+
+#if LINUX_OS
+	DIR_T *dir =(DIR_T *) ".";//linux dir 
+#endif
+
 	Cpath p;
 	//_tprintf(TEXT("\nTarget directory is %s\n\n"), dir);
-	p.list(dir,L".cpp",0);
-//	p.list((DIR_T *)".", L".vc", 1); 
+	p.list(dir,(DIR_T*)".cpp",0);
+//	p.list((DIR_T *)".", (DIR_T*)".vc", 1); 
 //	p.list((DIR_T *)".", NULL, 0);
 //	p.list((DIR_T *)".",(DIR_T*)".h");
 //	p.list((DIR_T *)".");
