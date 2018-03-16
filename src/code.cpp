@@ -16,6 +16,17 @@ Ccode::~Ccode()
 
 }
 
+int Ccode::create(char * cp)//cp point class name
+{
+	if(cp==nullptr) return -1;
+	
+	cout<<cp<<endl;//test
+
+
+
+	return 0;
+}
+
 #ifndef CODE_TEST
 #define CODE_TEST 0//1
 #endif

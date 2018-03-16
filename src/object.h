@@ -180,9 +180,14 @@ namespace n_object {
 		int set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0,int tm_wday=-1,int tm_yday=-1);
 		int cmp_time(struct tm *t1,struct tm *t2);
 		void delay_clock(clock_t count);
+		
+		//is func
+		bool is_identifier(char *str,void ** o_addr =nullptr); 
+		bool is_path(char *str,void ** o_addr=nullptr);
+		bool is_definable(char *s);
 
 		//virtual
-		virtual Object * get_class();//object address
+		virtual Object * get_class();//object addressS
 		virtual Object * where();//object address
 		virtual Object * who();//object introduces
 		virtual time_t * when();
@@ -195,9 +200,6 @@ namespace n_object {
 		virtual int deal_cmd(int argc, char *argv[]);
 		virtual int display(void *p=nullptr);
 		virtual int question(void *p=nullptr);
-		virtual bool is_identifier(char *str,void ** o_addr =nullptr); 
-		virtual bool is_path(char *str,void ** o_addr=nullptr);
-		//
 		virtual int url(void *p=nullptr);//execute object url if exist
 		virtual int style(void *p=nullptr);//execute object style
 		virtual int image(void *p=nullptr);//execute object image if exist

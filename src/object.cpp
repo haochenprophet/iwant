@@ -690,6 +690,20 @@ bool Object::is_path(char *str,void ** o_addr)
 	return false;
 }
 
+bool Object::is_definable(char *s)
+{
+	if(s==nullptr) return false;
+	if(false==this->is_identifier(s)) //check s 
+	{
+		if(false==this->is_path(s))	return false;//check s is path
+		s=strrchr(s,'/');
+		if(!s) s=strrchr(s,'\\');
+		if(!s) return false;
+		s++ ; //skip '/' or '\'
+ 	}
+ 	return true;
+}	
+
 #if OBJECT_TEST
 int main()
 {

@@ -3,6 +3,8 @@
 
 #include "object.h"
 
+#define GLOBAL_CLASS "global_class"
+
 namespace n_code {
 	class Ccode :public Object
 	{
@@ -10,6 +12,8 @@ namespace n_code {
 		Ccode();
 		~Ccode();
 		int my_init(void *p=nullptr);
+		int create(char * cp)//cp point class name
+
 	};
 }
 
