@@ -20,6 +20,7 @@ Cclass::Cclass(string tag)
 {
 	this->my_init();
 	this->tag = tag;
+
 }
 
 Cclass::~Cclass()
@@ -40,14 +41,8 @@ int Cclass::create(void *p)
 {
 	if (!p) return -1;
 	char * str_class =(char *)p;
-
 	if(false==this->is_definable(str_class)) return -1;
-	
 	this->s_rep=str_class;
-	
-	this->temp = CLASS_H_TEMP;
-	this->cpp_temp=CLASS_CPP_TEMP;
-	
 	this->replace_temp(1);
 	this->s_replace(&this->cpp_temp,&this->s_tag,&this->s_rep);
 	return 0;

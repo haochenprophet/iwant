@@ -4401,6 +4401,9 @@
     <ClCompile Include="..\..\src\instruction\XOR_I.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\code.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8824,6 +8827,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\instruction\XOR_I.h">
       <Filter>instruction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

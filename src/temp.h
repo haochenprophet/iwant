@@ -4,6 +4,7 @@
 #include "object.h"
 
 namespace n_temp {
+
 	class Ctemp :public Object
 	{
 	public:

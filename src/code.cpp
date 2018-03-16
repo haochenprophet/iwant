@@ -3,6 +3,8 @@ int Ccode::my_init(void *p)
 {
 	this->name = "Ccode";
 	this->alias = "code";
+	this->temp = GLOBAL_CLASS_TEMP;
+	this->s_tag = "[tag]";
 	return 0;
 }
 
@@ -23,12 +25,11 @@ int Ccode::create(char * cp)//cp point class name
 	cout<<cp<<endl;//test
 
 
-
 	return 0;
 }
 
 #ifndef CODE_TEST
-#define CODE_TEST 0//1
+#define CODE_TEST 01
 #endif
 
 #if CODE_TEST

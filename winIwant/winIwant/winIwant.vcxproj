@@ -151,6 +151,7 @@
     <ClCompile Include="..\..\src\brackets.cpp" />
     <ClCompile Include="..\..\src\build.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
+    <ClCompile Include="..\..\src\code.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\company.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
@@ -1611,6 +1612,7 @@
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
     <ClInclude Include="..\..\src\class.h" />
+    <ClInclude Include="..\..\src\code.h" />
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\const.h" />

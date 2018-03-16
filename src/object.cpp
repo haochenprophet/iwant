@@ -16,6 +16,21 @@ Cparameter::~Cparameter()
 	while (!this->s.empty()) this->s.pop(); //exit clear stack 
 }
 
+CtagItem::CtagItem()
+{
+	this->status = 0;
+}
+
+CtagItem::CtagItem(string tag,string temp,string replace)
+{
+	this->tag=tag;this->temp=temp;this->replace=replace;	this->status = 0;
+}
+
+CtagItem::CtagItem(char* tag,char* temp,char* replace)
+{
+	this->tag=tag;this->temp=temp;this->replace=replace;	this->status = 0;
+}
+
 Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 {
 	this->name = fun_name;
@@ -103,6 +118,11 @@ Object::~Object()
 {
 	this->family.clear();
 	this->ex_func.clear();
+	this->l_tag_rule.clear();
+	this->l_audio.clear();
+	this->l_image.clear();
+	this->l_url.clear();
+	this->l_style.clear();
 	this->remove_exist_family();
 	this->exist_family.clear();
 	this->clear_my_memory();//clear my memory
@@ -503,11 +523,42 @@ int Object::tag_temp(char *tag_value,int upper_s)
 	return 0;
 }
 
+int Object::add_tag_rule(CtagItem i)
+{
+	this->l_tag_rule.push_back(i);
+	return 0;
+}
+
+int Object::add_tag_rule(string tag, string temp, string replace)
+{
+	CtagItem i(tag, temp, replace);
+	this->l_tag_rule.push_back(i);
+	return 0;
+}
+
+int Object::add_tag_rule(char* tag, char* temp, char* replace)
+{
+	CtagItem i(tag, temp, replace);
+	this->l_tag_rule.push_back(i); //try catch ??
+	return 0;
+}
+
+int Object::my_tag_rule()
+{
+	int count = 0;
+	LIST_TAGITEM::iterator it;
+	for (it = this->l_tag_rule.begin(); it != this->l_tag_rule.end(); ++it)
+	{
+		cout << this->name << ":" << ++count << ":" << it->tag << it->replace << endl;
+	}
+	cout << this->name << " my_tag_rule  count : " << count << endl;
+	return count;
+}
+
 long Object::my_id()
 {
 	return this->id;
 }
-
 
 int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec,int tm_wday,int tm_yday)//mon/day/year/hour/min/sec/week/yday
 {

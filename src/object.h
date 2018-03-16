@@ -55,6 +55,20 @@ namespace n_object {
 		~Cparameter();
 	};
 
+	class CtagItem //out=temp+Temp.tag->rep
+	{
+	public:
+		string tag;
+		string temp;
+		string replace;
+		int status;//0 :enable  1:disable ,-1:not init
+	public:
+		CtagItem();
+		CtagItem(string tag,string temp,string replace);
+		CtagItem(char* tag,char* temp,char* replace);
+	};
+	typedef list<CtagItem> LIST_TAGITEM;
+
 	class Cmyfunc {
 	public:
 		string name; //function name
@@ -111,7 +125,8 @@ namespace n_object {
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
 
 		list<Cmyfunc> ex_func;//extern function list 
-		
+		list<CtagItem> l_tag_rule;//for tag rule 
+
 		list<Object *> my_mem;//list for  memory address 
 		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
 
@@ -176,6 +191,10 @@ namespace n_object {
 		int replace_syntax(int upper_s=0);
 		int replace_temp(int upper_s=0);
 		int tag_temp(char *tag_value,int upper_s=1);
+		int add_tag_rule(CtagItem i);
+		int add_tag_rule(string tag, string temp, string replace);
+		int add_tag_rule(char* tag, char* temp, char* replace);
+		int my_tag_rule();
 
 		int set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0,int tm_wday=-1,int tm_yday=-1);
 		int cmp_time(struct tm *t1,struct tm *t2);
