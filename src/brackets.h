@@ -32,7 +32,6 @@ namespace n_brackets {
 		char * getblock(char * start,char* end,char c='{',char *buf=nullptr,int *pLen=0,int skip=0);//0: error // other true
 		char * getend(char * start,char* end,char *e);
 		char * getstart(char* start,char *end,char *s);
-		int getError();
 	};
 
 }
