@@ -1,5 +1,5 @@
-#ifndef TASK_H
-#define TASK_H
+#ifndef IWANT_TASK_H
+#define IWANT_TASK_H
 
 #include "object.h"
 

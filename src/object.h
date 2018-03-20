@@ -228,6 +228,11 @@ namespace n_object {
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
 	};
+
+	class Cobject:public Object
+	{
+
+	};
 }
 
 using namespace n_object;

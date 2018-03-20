@@ -54,7 +54,7 @@ int Ccode::create(char * cp)//cp point class name
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "CODE_TEST\n\n";
+//	cout << "CODE_TEST\n\n";
 
 #if WINDOWS_OS
 	DIR_T *dir = L"../../src";//windows dir 
@@ -63,11 +63,12 @@ int main(int argc, char *argv[])
 
 #if LINUX_OS
 	DIR_T *dir = (DIR_T *) ".";//linux dir 
-	DIR_T *term = ".cpp";
+	DIR_T *term =(DIR_T *) ".cpp";
 #endif
 
 	Cpath p;
 	p.list(dir, term, 0);
+	cout<<"#include \"all_h_include.h\"\n\n";
 	p.execute(code_global_func);
 
 	return 0;

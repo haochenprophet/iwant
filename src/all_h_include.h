@@ -5,6 +5,7 @@
 #include "brackets.h" 
 #include "build.h" 
 #include "class.h" 
+#include "code.h" 
 #include "comment.h" 
 #include "company.h" 
 #include "const.h" 
