@@ -377,6 +377,7 @@ int Object::execute(void *p)
 //if new_thread==true  run function on new thread .
 int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func 
 {
+	//AT_LINE
 	if (!func) return -1;
 	if (new_thread == false) return func(p);
 
@@ -478,6 +479,11 @@ int Object::s_replace(string *base,string *tag,string *rep)
 	}
 
 	return 0;
+}
+
+int Object::s_replace(string *base)
+{
+	return this->s_replace(base, &this->s_tag, &this->s_rep);
 }
 
 int Object::toupper_replace(string *base,string *tag,string *rep)
@@ -754,6 +760,13 @@ bool Object::is_definable(char *s)
  	}
  	return true;
 }	
+
+string Object::wc_s(wchar_t* wc)
+{
+	std::wstring ws(wc);
+	string s(ws.begin(), ws.end());
+	return s;
+}
 
 #if OBJECT_TEST
 int main()

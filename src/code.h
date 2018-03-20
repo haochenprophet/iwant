@@ -2,6 +2,7 @@
 #define CODE_H
 
 #include "file.h"
+#include "path.h"
 
 #define GLOBAL_CLASS "global_class"
 

@@ -120,7 +120,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	FindClose(hFind);
 	return 0;
 }
-#endif
+#endif //WINDOWS_OS
 
 int Cpath::display(void *p)
 {
@@ -128,7 +128,9 @@ int Cpath::display(void *p)
 
 #if WINDOWS_OS
 	_tprintf(TEXT("%s\n"), (TCHAR *)p);
-#else
+#endif
+
+#if LINUX_OS
 	cout << (DIR_T *)p << endl;	//display the name_list
 #endif
 	return 0;
@@ -148,6 +150,27 @@ int Cpath::my_clear(void *p)
 	return 0;
 }
 
+int Cpath::execute(MyFunc func, void *p, bool new_thread ) //execute input func 
+{
+	if(this->name_list.empty()) return -1;
+	NAME_LIST::iterator it;
+	string s;
+	for (it = this->name_list.begin(); it != this->name_list.end(); ++it)
+	{
+
+#if WINDOWS_OS
+		s = this->wc_s((wchar_t*)*it);
+#endif
+
+#if LINUX_OS
+		s = (char*)*it;
+#endif
+		//cout <<"s="<< s << endl;//test ok
+		Object::execute(func, (void*)&s, new_thread);	//this->display(*it);//test ok
+	}
+	return 0;
+}
+
 #if PATH_TEST
 #include "all_h_include.h"
 int main(int argc, char *argv[])
@@ -156,19 +179,17 @@ int main(int argc, char *argv[])
 
 #if WINDOWS_OS
 	DIR_T *dir = L"../../src";//windows dir 
+	DIR_T *term = L".cpp";
 #endif
 
 #if LINUX_OS
-	DIR_T *dir =(DIR_T *) ".";//linux dir 
+	DIR_T *dir = (DIR_T *) ".";//linux dir 
+	DIR_T *term = ".cpp";
 #endif
 
 	Cpath p;
-	//_tprintf(TEXT("\nTarget directory is %s\n\n"), dir);
-	p.list(dir,(DIR_T*)".cpp",0);
-//	p.list((DIR_T *)".", (DIR_T*)".vc", 1); 
-//	p.list((DIR_T *)".", NULL, 0);
-//	p.list((DIR_T *)".",(DIR_T*)".h");
-//	p.list((DIR_T *)".");
+	p.list(dir, term, 1);
+
 	return 0;
 }
 #endif 

@@ -185,6 +185,7 @@ namespace n_object {
 
 		void s_toupper(string & str);
 		int s_replace(string *base,string *tag,string *rep);
+		int s_replace(string *base);
 		int toupper_replace(string *base,string *tag,string *rep);
 		int replace_syntax(string *tag,string *rep);
 		int replace_temp(string *tag,string *rep);
@@ -204,6 +205,8 @@ namespace n_object {
 		bool is_identifier(char *str,void ** o_addr =nullptr); 
 		bool is_path(char *str,void ** o_addr=nullptr);
 		bool is_definable(char *s);
+		//Convert
+		string wc_s(wchar_t* wc);
 
 		//virtual
 		virtual Object * get_class();//object addressS
