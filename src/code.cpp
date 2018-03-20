@@ -47,7 +47,7 @@ int Ccode::create(char * cp)//cp point class name
 }
 
 #ifndef CODE_TEST
-#define CODE_TEST 01
+#define CODE_TEST 0//1
 #endif
 
 #if CODE_TEST
