@@ -11,6 +11,7 @@ namespace n_code {
 	{
 	public:
 		string * sp; //string point
+		string st;//string template
 		string s_cpp_tag;// = ".cpp";
 		string s_cpp_rep;// = " ";//not empty, can use space
 	public:

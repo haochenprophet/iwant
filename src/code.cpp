@@ -7,6 +7,7 @@ int Ccode::my_init(void *p)
 	this->s_tag = "[tag]";
 	this->s_cpp_tag = ".cpp";
 	this->s_cpp_rep = " ";//not empty, can use one space
+	this->st = "";
 	return 0;
 }
 
@@ -23,11 +24,11 @@ Ccode::~Ccode()
 int Ccode::func(void *p)//this ext function for object class and should be optimization
 {
 	if (!p) return -1;
-	string st= GLOBAL_CLASS_TEMP;//global_class string template
+	this->st= GLOBAL_CLASS_TEMP;//global_class string template
 	this->sp = (string *)p;
 	this->s_replace(this->sp,&this->s_cpp_tag,&this->s_cpp_rep);//	cout << *this->sp<<endl;//test ok
-	this->s_replace(&st, &this->s_tag, this->sp);// this->sp= clas name
-	cout << st;
+	this->s_replace(&this->st, &this->s_tag, this->sp);// this->sp= clas name
+	cout << this->st;
 	return 0;
 }
 
