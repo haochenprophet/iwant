@@ -18,7 +18,7 @@ Ccode::~Ccode()
 
 }
 
-int code_global_func(void *p)//this ext function for object class and should be optimization
+int Ccode::func(void *p)//this ext function for object class and should be optimization
 {
 	if (!p) return -1;
 	Object o;
@@ -47,7 +47,7 @@ int Ccode::create(char * cp)//cp point class name
 }
 
 #ifndef CODE_TEST
-#define CODE_TEST 0//1
+#define CODE_TEST 01
 #endif
 
 #if CODE_TEST
@@ -67,9 +67,10 @@ int main(int argc, char *argv[])
 #endif
 
 	Cpath p;
+	Ccode c;
 	p.list(dir, term, 0);
 	cout<<"#include \"all_h_include.h\"\n\n";
-	p.execute(code_global_func);
+	p.execute((Object *)&c);//p->execute c->func  ,Cross-class execute method
 
 	return 0;
 }

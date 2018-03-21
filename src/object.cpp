@@ -331,6 +331,17 @@ void Object::my_syntax()
 	if (this->syntax.length())	cout << this->syntax << endl;
 }
 
+int Object::execute()
+{
+	return 0;
+}
+
+int Object::execute(Object *o)
+{
+	if (!o) return -1;
+	return o->execute();
+}
+
 int Object::execute(Object *o, string obj_name, string fun_name, void * p, bool new_thread)
 {
 	return this->execute(o, &obj_name, &fun_name, p, new_thread);
@@ -372,6 +383,12 @@ int Object::execute(Object *o, char *obj_name , char * fun_name , void * p, bool
 int Object::execute(void *p)
 {
 	return this->func(p);
+}
+
+int Object::execute(Object *o, void *p)//o->execute(void *p)
+{
+	if (!o) return -1;
+	return o->execute(p);
 }
 
 //if new_thread==true  run function on new thread .

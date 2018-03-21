@@ -14,7 +14,7 @@ namespace n_code {
 		~Ccode();
 		int my_init(void *p=nullptr);
 		int create(char * cp);//cp point class name
-
+		int func(void *p = nullptr);
 	};
 }
 

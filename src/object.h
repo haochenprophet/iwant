@@ -170,10 +170,14 @@ namespace n_object {
 		bool wait_cin(int size=O_BUF_LEN);
 		char * at_cin_buf(char * str);//is exist
 
+		//execute myfunc ,object, my_family func
+		int execute();
+		int execute(Object *o);//execute o->execute()
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, string *obj_name=nullptr, string * fun_name = NULL, void *p=nullptr, bool new_thread = false);
-		int execute(void *p=nullptr);//execute this->func 
+		int execute(void *p);//execute this->func 
+		int execute(Object *o, void *p);//o->execute(void *p)
 		int execute(MyFunc func, void *p=nullptr, bool new_thread = false); //execute input func 
 		int execute(string *fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 

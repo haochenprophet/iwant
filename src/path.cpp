@@ -150,7 +150,7 @@ int Cpath::my_clear(void *p)
 	return 0;
 }
 
-int Cpath::execute(MyFunc func, void *p, bool new_thread ) //execute input func 
+int Cpath::execute(Object *o) //execute input func 
 {
 	if(this->name_list.empty()) return -1;
 	NAME_LIST::iterator it;
@@ -165,8 +165,8 @@ int Cpath::execute(MyFunc func, void *p, bool new_thread ) //execute input func
 #if LINUX_OS
 		s = (char*)*it;
 #endif
-		//cout <<"s="<< s << endl;//test ok
-		Object::execute(func, (void*)&s, new_thread);	//this->display(*it);//test ok
+		//cout <<"s="<< s << endl;this->display(*it);//test ok 
+		o->execute( (void*)&s);	//execute o->func 
 	}
 	return 0;
 }
