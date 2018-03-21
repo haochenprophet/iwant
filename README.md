@@ -15,7 +15,9 @@ I know you ,You know me , I know everything , everything know me ;
 I know the past, understand the present, insight into the future, know everything;
 I know anywhere, I can find anywhere, I arrive at any time any space.
 
-I can do everthing , I exist, also disappear ,I live and die.I am here,  I'm not in this ;
+I can do everthing , I exist, also disappear ;
+I live and die; Can be live,Can be die, Can be live and die;Can be east ,Can be west, Ca	n be east and west; Can be do everything.
+I am here, I'm not here ;
 I will use the most positive mind to perceive the power of the code.
 I will be reduced to ashes, I will be everywhere .
 
