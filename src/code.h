@@ -10,6 +10,10 @@ namespace n_code {
 	class Ccode :public Cfile
 	{
 	public:
+		string * sp; //string point
+		string s_cpp_tag;// = ".cpp";
+		string s_cpp_rep;// = " ";//not empty, can use space
+	public:
 		Ccode();
 		~Ccode();
 		int my_init(void *p=nullptr);
