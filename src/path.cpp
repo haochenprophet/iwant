@@ -135,7 +135,7 @@ int Cpath::list(string * dir_name, string * term, int display, int to_list)//get
 #endif
 
 #if LINUX_OS
-	return this->list((DIR_T*)this->s_url.c_str(), (DIR_T*)this->s_term.c_str(), display, to_list);
+	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list);
 #endif
 }
 
