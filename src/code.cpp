@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 #endif
 
  #if LINUX_OS
-		argv[1] = ".";//linux dir
+		argv[1] = (char *)".";//linux dir
 #endif
 
 	return c.deal_cmd(argc,argv);
