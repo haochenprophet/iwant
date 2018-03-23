@@ -20,6 +20,7 @@
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
+using std::wstring;
 using std::list;
 using std::cout;
 using std::endl;
@@ -136,6 +137,13 @@ namespace n_object {
 		list<void *> l_audio;//object audio list
 		list<void *> l_video;//object vedio list
 		
+		//url can be by used class Cpath
+		string s_url; //Record a url string 
+		string s_term;
+		wstring ws_url;//Record a url wstring
+		wstring ws_term;
+		string s_cmd; //Record a url string 
+
 	public:
 		Object();//set object name
 		~Object();//clears
@@ -211,7 +219,12 @@ namespace n_object {
 		bool is_definable(char *s);
 		//Convert
 		string wc_s(wchar_t* wc);
-
+		wstring s_ws(string * sp);
+		string ws_s(wstring* ws);
+		//system command
+		int sys_cmd(char * cmd);
+		int sys_cmd(string *cmd);
+		int sys_cmd();
 		//virtual
 		virtual Object * get_class();//object addressS
 		virtual Object * where();//object address

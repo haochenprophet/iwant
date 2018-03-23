@@ -21,6 +21,7 @@ Cpath::~Cpath()
 #if LINUX_OS
 int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 {
+	if (!term) return;
 	DIR *p_dir;	
 	DIR_T *p_name;
 	struct dirent *p_dirent;
@@ -52,6 +53,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 #if WINDOWS_OS
 int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 {
+	if (!term) return -1;
 	WIN32_FIND_DATA ffd;//FindFileData
 	LARGE_INTEGER filesize;
 	HANDLE hFind = INVALID_HANDLE_VALUE;
@@ -121,6 +123,62 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	return 0;
 }
 #endif //WINDOWS_OS
+
+int Cpath::list(string * dir_name, string * term, int display, int to_list)//get list to name_list
+{
+	if (dir_name->empty() || term->empty()) return -1;
+
+#if WINDOWS_OS
+	this->ws_url = this->s_ws(dir_name);
+	this->ws_term = this->s_ws(term);
+	return this->list((DIR_T*)this->ws_url.c_str(),(DIR_T*)this->ws_term.c_str(), display, to_list);
+#endif
+
+#if LINUX_OS
+	return this->list((DIR_T*)dir_name.c_str(), (DIR_T*)term.c_str(), display, to_list);
+#endif
+}
+
+int  Cpath::list(wstring *dir_name, wstring *term, int display, int to_list )//get list to name_list
+{
+	if (dir_name->empty() || term->empty()) return -1;
+#if WINDOWS_OS
+	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list);
+#endif
+
+#if LINUX_OS
+	this->s_url = this->ws_s(dir_name);
+	this->s_term = this->ws_s(term);
+	return this->list((DIR_T*)this->s_url.c_str(), (DIR_T*)this->s_term.c_str(), display, to_list);
+#endif
+}
+
+int Cpath::list(char* dir_name, char* term, int display, int to_list)//get list to name_list
+{
+	if (!term) return -1;
+
+#if WINDOWS_OS
+	this->s_url = dir_name;
+	this->s_term = term;
+	if (this->s_url.empty() || this->s_term.empty()) return -1;
+	return this->list(&this->s_url, &this->s_term, display, to_list);
+#endif
+
+#if LINUX_OS
+	if (strlen(dir_name) < 1 || strlen(term) < 1) return -1;
+	return this->list((DIR_T*)dir_name, (DIR_T*)term, display, to_list);
+#endif
+}
+
+int Cpath::list_s(int display, int to_list)//get list to name_list
+{
+    return this->list((string *)&this->s_url, (string *)&this->s_term, display, to_list);
+}
+
+int Cpath::list_ws(int display, int to_list)//get list to name_list
+{
+	return this->list((std::wstring *) &this->ws_url, (std::wstring*)&this->ws_term, display, to_list);
+}
 
 int Cpath::display(void *p)
 {

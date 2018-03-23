@@ -8,6 +8,12 @@ int Ccode::my_init(void *p)
 	this->s_cpp_tag = ".cpp";
 	this->s_cpp_rep = " ";//not empty, can use one space
 	this->st = "";
+	this->f_name_h = GLOBAL_CODE;
+	this->f_name_h += ".h";
+	this->f_nam_cpp = GLOBAL_CODE;
+	this->f_nam_cpp += ".i";
+	this->se = EXTERN_KEYWOED;
+	this->s_term= ".cpp";
 	return 0;
 }
 
@@ -28,7 +34,12 @@ int Ccode::func(void *p)//this ext function for object class and should be optim
 	this->sp = (string *)p;
 	this->s_replace(this->sp,&this->s_cpp_tag,&this->s_cpp_rep);//	cout << *this->sp<<endl;//test ok
 	this->s_replace(&this->st, &this->s_tag, this->sp);// this->sp= clas name
-	cout << this->st;
+	cout << this->st;//test
+	this->se = EXTERN_KEYWOED;
+	this->se += this->st;
+	cout << this->se;//test
+	//this->f_append(&this->f_name_h, &this->se); //extern Cclass class; //test error
+	//this->f_append(&this->f_nam_cpp,&this->st);//Cclass class; //test error
 	return 0;
 }
 
@@ -41,6 +52,20 @@ int Ccode::create(char * cp)//cp point class name
 	return 0;
 }
 
+int Ccode::deal_cmd(int argc, char *argv[])
+{
+	Cpath p;
+	p.s_term = this->s_term;
+	//this->f_append(this->f_nam_cpp, (char *)"#include \"all_h_include.h\"\n\n");//Cclass class; //test
+	do {
+		argc--;if (argc<1)	break;
+		p.s_url = argv[argc];
+		p.list_s(0);
+		p.execute((Object *)this);//p->execute c->func  ,Cross-class execute method
+	} while (argc>0);
+	return -1;
+}
+
 #ifndef CODE_TEST
 #define CODE_TEST 01
 #endif
@@ -49,24 +74,17 @@ int Ccode::create(char * cp)//cp point class name
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-//	cout << "CODE_TEST\n\n";
-
-#if WINDOWS_OS
-	DIR_T *dir = L"../../src";//windows dir 
-	DIR_T *term = L".cpp";
-#endif
-
-#if LINUX_OS
-	DIR_T *dir = (DIR_T *) ".";//linux dir 
-	DIR_T *term =(DIR_T *) ".cpp";
-#endif
-
-	Cpath p;
+	//cout << "CODE_TEST\n\n";
 	Ccode c;
-	p.list(dir, term, 0);
-	cout<<"#include \"all_h_include.h\"\n\n";
-	p.execute((Object *)&c);//p->execute c->func  ,Cross-class execute method
+	argc = 2;
+#if WINDOWS_OS
+	argv[1] = "../../src";// windows dir //test 
+#endif
 
-	return 0;
+ #if LINUX_OS
+		argv[1] = ".";//linux dir
+#endif
+
+	return c.deal_cmd(argc,argv);
 }
 #endif 

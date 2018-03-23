@@ -16,7 +16,10 @@ namespace n_file {
 		~Cfile();
 		int is_exist(char *filename);
 		int is_exist();
-		int f_append(char *filename,char * ap_str);
+		int f_append(char *filename, char * ap_str);
+		int f_append(string filename, char * ap_str);
+		int f_append(string *filename, string *ap_str);
+		int f_append(char *filename, string ap_str);
 		int f_append(char * ap_str);
 		int f_size(char *f_name);
 		int f_size();

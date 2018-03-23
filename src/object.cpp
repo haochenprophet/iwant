@@ -780,9 +780,36 @@ bool Object::is_definable(char *s)
 
 string Object::wc_s(wchar_t* wc)
 {
-	std::wstring ws(wc);
+	wstring ws(wc);
 	string s(ws.begin(), ws.end());
 	return s;
+}
+
+wstring Object::s_ws(string * sp)
+{
+	wstring ws = wstring(sp->begin(), sp->end());
+	return ws;
+}
+
+string Object::ws_s(wstring* ws)
+{
+	string s(ws->begin(), ws->end());
+	return s;
+}
+
+int Object::sys_cmd(char *cmd)
+{
+	return system((char *)cmd);
+}
+
+int Object::sys_cmd(string *cmd)
+{
+	return system(cmd->c_str());
+}
+
+int Object::sys_cmd()
+{
+	return this->sys_cmd((string *)&this->s_cmd);
 }
 
 #if OBJECT_TEST

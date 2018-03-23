@@ -45,6 +45,25 @@ int Cfile::f_append(char *filename,char * ap_str)
 	return 0;
 }
 
+int Cfile::f_append(string *filename, string *ap_str)
+{
+	if (filename->empty()|| ap_str->empty()) return -1;
+	return this->f_append((char *)filename->c_str(), ap_str->c_str());
+}
+
+int Cfile::f_append(string filename, char * ap_str)
+{
+	if (filename.empty()) return -1;
+	return this->f_append((char *)filename.c_str(), ap_str);
+}
+
+int Cfile::f_append(char *filename, string ap_str)
+{
+	if (filename==nullptr|| ap_str.empty()) return -1;
+	return this->f_append(filename, ap_str.c_str());
+}
+
+
 int Cfile::f_size(char *f_name)
 {
 	std::ifstream is (f_name, std::ifstream::binary);
