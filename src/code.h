@@ -7,8 +7,10 @@
 #define GLOBAL_CLASS "global_class"
 #define GLOBAL_CODE "g_code" //global_code
 #define EXTERN_KEYWOED "\textern\t"
+#define G_CODE_H "#ifndef G_CODE_H\n#define G_CODE_H\n"
+
 namespace n_code {
-	class Ccode :public Cfile
+	class Ccode :public Object
 	{
 	public:
 		string * sp; //string point
@@ -16,8 +18,8 @@ namespace n_code {
 		string st;//string template
 		string s_cpp_tag;// = ".cpp";
 		string s_cpp_rep;// = " ";//not empty, can use space
-		string f_name_h;
-		string f_nam_cpp;
+		Cfile file_h;
+		Cfile file_cpp;
 	public:
 		Ccode();
 		~Ccode();

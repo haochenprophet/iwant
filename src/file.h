@@ -21,6 +21,7 @@ namespace n_file {
 		int f_append(string *filename, string *ap_str);
 		int f_append(char *filename, string ap_str);
 		int f_append(char * ap_str);
+		int f_append(string * ap_str);
 		int f_size(char *f_name);
 		int f_size();
 		int f_read(char *f_name);
@@ -29,6 +30,7 @@ namespace n_file {
 		char * f_find(char * str,char *start);
 		int is_exist_func(char *f_name,char *func_name,int dispaly=0);//[space] <func_name> [space] (
 		int func(void *p=nullptr);
+		int create(void *p = nullptr);
 	};
 
 }

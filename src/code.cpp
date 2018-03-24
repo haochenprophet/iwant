@@ -8,10 +8,10 @@ int Ccode::my_init(void *p)
 	this->s_cpp_tag = ".cpp";
 	this->s_cpp_rep = " ";//not empty, can use one space
 	this->st = "";
-	this->f_name_h = GLOBAL_CODE;
-	this->f_name_h += ".h";
-	this->f_nam_cpp = GLOBAL_CODE;
-	this->f_nam_cpp += ".i";
+	this->file_h.f_name = GLOBAL_CODE;
+	this->file_h.f_name += ".h";
+	this->file_cpp.f_name = GLOBAL_CODE;
+	this->file_cpp.f_name += ".i";
 	this->se = EXTERN_KEYWOED;
 	this->s_term= ".cpp";
 	return 0;
@@ -38,8 +38,8 @@ int Ccode::func(void *p)//this ext function for object class and should be optim
 	this->se = EXTERN_KEYWOED;
 	this->se += this->st;
 	cout << this->se;//test
-	//this->f_append(&this->f_name_h, &this->se); //extern Cclass class; //test error
-	//this->f_append(&this->f_nam_cpp,&this->st);//Cclass class; //test error
+	this->file_h.f_append(&this->se); //extern Cclass class; //test ok
+	this->file_cpp.f_append(&this->st);//Cclass class; //test ok
 	return 0;
 }
 
@@ -56,13 +56,19 @@ int Ccode::deal_cmd(int argc, char *argv[])
 {
 	Cpath p;
 	p.s_term = this->s_term;
-	//this->f_append(this->f_nam_cpp, (char *)"#include \"all_h_include.h\"\n\n");//Cclass class; //test
+
+	this->file_h.create();
+	this->file_cpp.create();//create file
+	this->file_h.f_append((char *)G_CODE_H);//Cclass class; //test
+	this->file_cpp.f_append((char *)"\t#include \"all_h_include.h\"\n\n");//Cclass class; //test
+
 	do {
 		argc--;if (argc<1)	break;
 		p.s_url = argv[argc];
 		p.list_s(0);
 		p.execute((Object *)this);//p->execute c->func  ,Cross-class execute method
 	} while (argc>0);
+	this->file_h.f_append((char *)"#endif\n");//h
 	return -1;
 }
 

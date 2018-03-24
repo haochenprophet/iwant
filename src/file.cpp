@@ -124,6 +124,10 @@ int Cfile::f_append(char * ap_str)
 	return this->f_append((char *)this->f_name.c_str(),ap_str);
 }
 
+int Cfile::f_append(string * ap_str)
+{
+	return this->f_append((char *)ap_str->c_str());
+}
 
 char * Cfile::f_find(char *f_name,char * str,char *start)
 {
@@ -174,6 +178,21 @@ int Cfile::func(void *p)
 {
 	if(!p) return -1;
 	return this->f_read((char *) p);
+}
+
+int Cfile::create(void *p)
+{
+	if (p == nullptr)
+	{
+		if (this->f_name.empty()) return -1;
+		this->ap_fs.open(this->f_name.c_str(), std::fstream::in | std::fstream::out | std::fstream::trunc);
+		return 0;
+	}
+
+	char *filename = (char *)p;
+	this->f_name = filename;
+	this->ap_fs.open(filename, std::fstream::in | std::fstream::out | std::fstream::trunc);
+	return 0;
 }
 
 #ifndef FILE_TEST
