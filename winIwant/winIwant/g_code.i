@@ -21,7 +21,6 @@
 	Cftp  g_ftp ;
 	Cfunc  g_func ;
 	Cget  g_get ;
-	Cg_code  g_g_code ;
 	Chome  g_home ;
 	Chttp  g_http ;
 	Cinstruction  g_instruction ;

@@ -21,7 +21,6 @@
 	extern		Cftp  g_ftp ;
 	extern		Cfunc  g_func ;
 	extern		Cget  g_get ;
-	extern		Cg_code  g_g_code ;
 	extern		Chome  g_home ;
 	extern		Chttp  g_http ;
 	extern		Cinstruction  g_instruction ;
