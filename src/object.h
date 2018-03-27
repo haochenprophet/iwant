@@ -17,6 +17,7 @@
 #include "ex_func.h"
 #include "uuid.h"
 #include <stack> 
+#include <map>
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
@@ -86,6 +87,20 @@ namespace n_object {
 	typedef list<Cmyfunc> LIST_CMYFUNC;
 	typedef list<void *> LIST_FAMILY;//family list type
 
+	enum class TimelineStatus{
+		now,
+		past,
+		future,
+	};
+
+	class Ctimeline
+	{
+	public:
+		TimelineStatus status;
+		std::multimap<void *, void *> track; //1. void * point timer , 2. void * point Object
+	};
+	typedef list<Ctimeline> LIST_CTIMELINE;
+
 	class Object:public Cuuid
 	{
 	protected:
@@ -130,6 +145,7 @@ namespace n_object {
 
 		list<Object *> my_mem;//list for  memory address 
 		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
+		list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
 
 		list<void *> l_url;//url list
 		list<void *> l_style;//object style list
