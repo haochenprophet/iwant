@@ -8,7 +8,7 @@ int main()
   MYSQL mysql;
   char * host=(char *)"127.0.0.1";
   char * user=(char *)"root";
-  char * password=(char *)"password";
+  char * password=(char *)"password";//!
   char * use_db=(char *)"test";
 
 
@@ -21,6 +21,6 @@ int main()
       return ++ret;
   }
   fprintf(stdout, "mysql_real_connect pass!\n");
-  mysql_close(mysql);
+  mysql_close(&mysql);
   return ret;
 }
