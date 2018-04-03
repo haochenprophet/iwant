@@ -15,6 +15,7 @@ namespace n_my_sql {
 		char * password;
 		char * use_db;
 		char * sql;
+		bool is_connect;
 	public:
 		Cmy_sql();
 		Cmy_sql(char * password,char * user=(char *)"root",char * host=(char *)"127.0.0.1",char * use_db=nullptr,char *sql=(char *)"show databases;");
@@ -24,7 +25,8 @@ namespace n_my_sql {
 		int query(char *sql);
 		int query();
 		int execute(Object *o); //execute o->execute()
-		int execute(); 
+		int execute();
+		int execute(char * sql); 
 		int func(void *p=nullptr);
 	};
 }

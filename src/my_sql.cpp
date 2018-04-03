@@ -4,6 +4,7 @@ int Cmy_sql::my_init(void *p)
 	this->name = "Cmy_sql";
 	this->alias = "my_sql";
 	this->mysql=nullptr;
+	this->is_connect=false;
 	return 0;
 }
 
@@ -38,6 +39,7 @@ Cmy_sql::~Cmy_sql()
 
 int Cmy_sql::connect()
 {
+	if(this->is_connect) return 0;
 	if(this->is_error()) return -1;
 	if(!this->mysql&&!mysql_init(this->mysql)) //if not init ,init 
 	{
@@ -51,6 +53,7 @@ int Cmy_sql::connect()
 		this->inc_error();
 		return 1;
 	}
+	this->is_connect=true;
 	return 0;
 }
 
@@ -97,6 +100,17 @@ int Cmy_sql::execute()
 	return this->execute((Object *) this);
 }
 
+int Cmy_sql::execute(char * sql)
+{
+	int ret=0;
+	if(!sql) return ++ret;
+	if(!this->is_connect && this->connect()) return ++ret;
+	this->sql=sql;
+	if(this->query()) return ++ret;
+	if(this->execute()) return ++ret;
+	return ret;
+}
+
 #ifndef MY_SQL_TEST
 #define MY_SQL_TEST 01
 #endif
@@ -106,31 +120,13 @@ int Cmy_sql::execute()
 
 int main(int argc, const char* argv[])
 {
-	int ret=0;
-
     char password[100];//program language  
     cout<<"Enter root password :"; 
     std::cin>>password;
+    
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
-
-
-	if(m.connect())
-	{
-		cout<<"error:connect\n"; return ++ret;
-	}
-
-	//m.sql=(char *)"select * from src.url;";//"show databases;";
-
-	if(m.query())
-	{
-		cout<<"error:query\n"; return ++ret;
-	}
-
-	if(m.execute())
-	{
-		cout<<"error:execute\n"; return ++ret;
-	}
-
-	return ret;
+	int ret=m.execute((char *) (char *)"show databases;");
+	cout<<"return="<<ret<<endl;
+	return 	ret;
 }
 #endif 
