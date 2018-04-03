@@ -135,11 +135,14 @@ int main(int argc, const char* argv[])
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
 
 	int ret=0;
-	for(int n=0;n<10;n++)
+	for(int n=0;n<1;n++)
 	{
 		ret=m.execute((char *)"show databases;");
 		cout<<"return="<<ret<<endl;	
 	}
+
+	Object obj;
+	ret=m.execute((char *)"show databases;",&obj);
 
 	return 	ret;
 }
