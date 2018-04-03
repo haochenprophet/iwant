@@ -133,8 +133,14 @@ int main(int argc, const char* argv[])
     std::cin>>password;
 
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
-	int ret=m.execute((char *) (char *)"show databases;");
-	cout<<"return="<<ret<<endl;
+
+	int ret=0;
+	for(int n=0;n<10;n++)
+	{
+		ret=m.execute((char *)"show databases;");
+		cout<<"return="<<ret<<endl;	
+	}
+
 	return 	ret;
 }
 #endif 
