@@ -74,7 +74,7 @@ int Cmy_sql::query()
 int Cmy_sql::func(void *p)
 {
 	Cmy_sql *m=(Cmy_sql*) p;
-	cout<<"nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
+	cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
 }
 
 int Cmy_sql::execute(Object *o)
