@@ -716,6 +716,11 @@ int Object::my_clear(void *p)
 	return 0;
 }
 
+int Object::clear(void *p)
+{
+	return this->my_clear(p);
+}
+
 int Object::deal_cmd(int argc, char *argv[])
 {
 	do{

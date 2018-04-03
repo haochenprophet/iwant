@@ -1,17 +1,13 @@
 
 MK_TAG = iwant
 
-
-MYSQL_CONCPP_DIR=../mysql_connect
-
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1\
 	-DSTATIC_CONCPP \
 	-Wl,-Bdynamic \
 	-o $(MK_TAG) *.cpp $(src) $(sql) \
-	$(MYSQL_CONCPP_DIR)/lib64/libmysqlcppconn2-static.a \
-	-lpthread -luuid\
+	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz \
 	-I./ -I $(MYSQL_CONCPP_DIR)/include
 
 all : 

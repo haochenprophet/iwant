@@ -241,6 +241,7 @@ namespace n_object {
 		int sys_cmd(char * cmd);
 		int sys_cmd(string *cmd);
 		int sys_cmd();
+		int clear(void *p=nullptr);
 		//virtual
 		virtual Object * get_class();//object addressS
 		virtual Object * where();//object address
