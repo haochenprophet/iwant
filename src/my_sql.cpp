@@ -88,14 +88,7 @@ int Cmy_sql::execute(Object *o)
 			o->execute( (void*) this); //point Cmy_sql to call back
 			mysql_free_result(this->result);
 		}
-		else
-		{
-			if (mysql_field_count(this->mysql)) return 0;//error
-		}
-
-		if(mysql_next_result(this->mysql) > 0) break;		//check next
-		continue;
-	} while (true);
+	} while (!mysql_next_result(this->mysql));
 	return 0;
 }
 
@@ -114,15 +107,11 @@ int Cmy_sql::execute()
 int main(int argc, const char* argv[])
 {
 	int ret=0;
-	
-    const int size = 100;  
-    char name[size];  
-    char password[size];//program language  
 
-    cout<<"Enter user name:"; std::cin>>name;  
-    cout<<"Enter password :"; std::cin>>password;
-	//Cmy_sql m((char *)"password");
-	Cmy_sql m((char *)password,(char*)name);
+    char password[100];//program language  
+    cout<<"Enter root password :"; 
+    std::cin>>password;
+	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
 
 
 	if(m.connect())
@@ -130,7 +119,7 @@ int main(int argc, const char* argv[])
 		cout<<"error:connect\n"; return ++ret;
 	}
 
-	m.sql=(char *)"select * from src.url;";
+	//m.sql=(char *)"select * from src.url;";//"show databases;";
 
 	if(m.query())
 	{
