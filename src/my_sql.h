@@ -26,7 +26,7 @@ namespace n_my_sql {
 		int query();
 		int execute(Object *o); //execute o->execute()
 		int execute();
-		int execute(char * sql); 
+		int execute(char * sql,Object *o=nullptr); 
 		int func(void *p=nullptr);
 	};
 }

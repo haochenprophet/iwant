@@ -100,14 +100,22 @@ int Cmy_sql::execute()
 	return this->execute((Object *) this);
 }
 
-int Cmy_sql::execute(char * sql)
+int Cmy_sql::execute(char * sql,Object *o)
 {
 	int ret=0;
 	if(!sql) return ++ret;
 	if(!this->is_connect && this->connect()) return ++ret;
 	this->sql=sql;
 	if(this->query()) return ++ret;
-	if(this->execute()) return ++ret;
+	
+	if(o){
+		if(this->execute(o)) return ++ret;
+	}
+	else
+	{
+		if(this->execute()) return ++ret;		
+	}
+
 	return ret;
 }
 
@@ -123,7 +131,7 @@ int main(int argc, const char* argv[])
     char password[100];//program language  
     cout<<"Enter root password :"; 
     std::cin>>password;
-    
+
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
 	int ret=m.execute((char *) (char *)"show databases;");
 	cout<<"return="<<ret<<endl;
