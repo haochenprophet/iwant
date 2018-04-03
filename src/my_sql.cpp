@@ -129,7 +129,7 @@ int Cmy_sql::execute(char * sql,Object *o)
 int main(int argc, const char* argv[])
 {
     char password[100];//program language  
-    cout<<"Enter root password :"; 
+    cout<<"Enter mysql_db server root password :"; 
     std::cin>>password;
 
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
