@@ -28,12 +28,13 @@ namespace n_my_sql {
 		int query();
 		int get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show=false);//get fields
 		int get(MYSQL_FIELD *fields,bool show=false);
-		int get(MYSQL_RES *result,MYSQL_ROW row);
-		int get(MYSQL_RES *result);//get row
-		int get(void *p=nullptr);
+		int get(MYSQL_RES *result,MYSQL_ROW row,Object *o=nullptr);
+		int get(MYSQL_RES *result,Object *o=nullptr);//get row
+		int get(void *p=nullptr,Object *o=nullptr);
 		int execute(Object *o); //execute o->execute()
 		int execute();
 		int execute(char * sql,Object *o=nullptr); 
+		int execute(void *p1,void *p2,void *p3);
 		int func(void *p=nullptr);
 	};
 }

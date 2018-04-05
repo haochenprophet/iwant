@@ -103,9 +103,23 @@ int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
 	return this->get(this->result,fields,show);
 }
 
-int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row)
+int Cmy_sql::execute(void *p1,void *p2,void *p3)
 {
-	unsigned int i,num_fields;
+	MYSQL_ROW row=(MYSQL_ROW)p1;
+	unsigned int * num_fields=(unsigned int *)p2;
+    unsigned long *lengths=(unsigned long *)p3;
+	for(int i = 0; i < *num_fields; i++)
+	{
+		printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
+	}
+	printf("\n");
+
+	return 0;
+}
+
+int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row,Object *o)
+{
+	unsigned int num_fields;
 	unsigned long *lengths;
 
 	num_fields = mysql_num_fields(result);
@@ -113,23 +127,25 @@ int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row)
 	while ((row = mysql_fetch_row(result)))
 	{
 		lengths = mysql_fetch_lengths(result);
-		for(i = 0; i < num_fields; i++)
-		{
-			printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
+		if(o){
+			o->execute((void *)row,(void *)&num_fields,(void *)lengths); //call o->execute(void *,void *)
 		}
-		printf("\n");
+		else
+		{
+			this->execute((void *)row,(void *)&num_fields,(void *)lengths);
+		}
 	}
 	return 0;
 }
 
-int Cmy_sql::get(MYSQL_RES *result)//get row
+int Cmy_sql::get(MYSQL_RES *result,Object *o)//get row
 {
-	return this->get(result,this->row);
+	return this->get(result,this->row,o);
 }
 
-int Cmy_sql::get(void *p)//get row
+int Cmy_sql::get(void *p,Object *o)//get row
 {
-	return this->get(this->result,this->row);
+	return this->get(this->result,this->row,o);
 }
 
 int Cmy_sql::func(void *p)
@@ -161,21 +177,20 @@ int Cmy_sql::execute()
 
 int Cmy_sql::execute(char * sql,Object *o)
 {
-	int ret=0;
-	if(!sql) return ++ret;
-	if(!this->is_connect && this->connect()) return ++ret;
+	if(!sql) return 1;
+	if(!this->is_connect && this->connect()) return 2;
 	this->sql=sql;
-	if(this->query()) return ++ret;
+	if(this->query()) return 3;
 	
 	if(o){
-		if(this->execute(o)) return ++ret;
+		if(this->execute(o)) return 4;
 	}
 	else
 	{
-		if(this->execute()) return ++ret;		
+		if(this->execute()) return 4;		
 	}
 
-	return ret;
+	return 0;
 }
 
 #ifndef MY_SQL_TEST

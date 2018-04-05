@@ -385,6 +385,16 @@ int Object::execute(void *p)
 	return this->func(p);
 }
 
+int Object::execute(void *p1,void *p2)
+{
+	return -1;
+}
+
+int Object::execute(void *p1,void *p2,void *p3)
+{
+	return -1;	
+}
+
 int Object::execute(Object *o, void *p)//o->execute(void *p)
 {
 	if (!o) return -1;
