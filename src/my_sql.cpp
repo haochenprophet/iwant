@@ -108,6 +108,9 @@ int Cmy_sql::execute(void *p1,void *p2,void *p3)
 	MYSQL_ROW row=(MYSQL_ROW)p1;
 	unsigned int * num_fields=(unsigned int *)p2;
     unsigned long *lengths=(unsigned long *)p3;
+
+    if(!row||!num_fields||!lengths) return -1;
+    
 	for(int i = 0; i < *num_fields; i++)
 	{
 		printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
