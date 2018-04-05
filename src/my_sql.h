@@ -9,7 +9,9 @@ namespace n_my_sql {
 	{
 	public:
 		MYSQL mysql_i,*mysql;
-		MYSQL_RES  *result;		
+		MYSQL_RES  *result;
+		MYSQL_FIELD *fields;
+		MYSQL_ROW row;
 		char * host;
 		char * user;
 		char * password;
@@ -24,6 +26,11 @@ namespace n_my_sql {
 		int connect();
 		int query(char *sql);
 		int query();
+		int get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show=false);//get fields
+		int get(MYSQL_FIELD *fields,bool show=false);
+		int get(MYSQL_RES *result,MYSQL_ROW row);
+		int get(MYSQL_RES *result);//get row
+		int get(void *p=nullptr);
 		int execute(Object *o); //execute o->execute()
 		int execute();
 		int execute(char * sql,Object *o=nullptr); 

@@ -696,6 +696,11 @@ int Object::video(void *p)//execute object vedio if exist
 	return -1;//do nothing
 }
 
+int Object::get(void *p)
+{
+	return -1;
+}
+
 int Object::create(void *p)
 {
 	return -1;//do nothing

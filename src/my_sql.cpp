@@ -5,6 +5,8 @@ int Cmy_sql::my_init(void *p)
 	this->alias = "my_sql";
 	this->mysql=nullptr;
 	this->is_connect=false;
+	this->result=nullptr;
+	this->fields=nullptr;
 	return 0;
 }
 
@@ -21,7 +23,6 @@ Cmy_sql::Cmy_sql(char * password,char * user,char * host,char * use_db,char *sql
 	this->password=password;
 	this->use_db=use_db;
 	this->sql=sql;
-	this->result=nullptr;
 	this->mysql=&this->mysql_i;
 	if(NULL==mysql_init(this->mysql))
 	{
@@ -39,19 +40,20 @@ Cmy_sql::~Cmy_sql()
 
 int Cmy_sql::connect()
 {
+	int ret=0;
 	if(this->is_connect) return 0;
 	if(this->is_error()) return -1;
 	if(!this->mysql&&!mysql_init(this->mysql)) //if not init ,init 
 	{
 		this->inc_error();
 		this->mysql=nullptr;
-		return 1;
+		return ++ret;
 	}
 
 	if(!mysql_real_connect(this->mysql,	this->host,this->user,this->password,this->use_db,0,NULL,0))
 	{
 		this->inc_error();
-		return 1;
+		return ++ret;
 	}
 	this->is_connect=true;
 	return 0;
@@ -74,10 +76,66 @@ int Cmy_sql::query()
 	return this->query(this->sql);
 }
 
+int Cmy_sql::get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show)
+{
+	if(!result) return -1;
+	int ret=0;
+	unsigned int num_fields;
+	unsigned int i;
+
+	num_fields = mysql_num_fields(result);
+	if(num_fields<1) return ++ret;
+	fields = mysql_fetch_fields(result);
+	if(!fields) return ++ret;
+	if(!show) return ret;
+
+	for(i = 0; i < num_fields; i++)
+	{
+		printf("Field[%u]=%s\n", i, fields[i].name);
+	}
+	return ret;
+}
+
+int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
+{
+	return this->get(this->result,fields,show);
+}
+
+int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row)
+{
+	unsigned int num_fields;
+	unsigned int i;
+
+	num_fields = mysql_num_fields(result);
+	if(num_fields<1) return 1;
+	while ((row = mysql_fetch_row(result)))
+	{
+		unsigned long *lengths;
+		lengths = mysql_fetch_lengths(result);
+		for(i = 0; i < num_fields; i++)
+		{
+			printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+int Cmy_sql::get(MYSQL_RES *result)//get row
+{
+	return this->get(result,this->row);
+}
+
+int Cmy_sql::get(void *p)//get row
+{
+	return this->get(this->result,this->row);
+}
+
 int Cmy_sql::func(void *p)
 {
 	Cmy_sql *m=(Cmy_sql*) p;
 	cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
+	this->get(this->fields,true);
 }
 
 int Cmy_sql::execute(Object *o)
@@ -143,7 +201,9 @@ int main(int argc, const char* argv[])
 
 	Object obj;
 	ret=m.execute((char *)"show databases;",&obj);
-
+	m.get();
+	//ret=m.execute((char *)"select * from test.url;");
+	//m.get();
 	return 	ret;
 }
 #endif 

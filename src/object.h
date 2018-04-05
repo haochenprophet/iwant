@@ -261,6 +261,7 @@ namespace n_object {
 		virtual int image(void *p=nullptr);//execute object image if exist
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
+		virtual int get(void *p=nullptr);
 	};
 
 	class Cobject:public Object
