@@ -7,6 +7,7 @@ int Cmy_sql::my_init(void *p)
 	this->is_connect=false;
 	this->result=nullptr;
 	this->fields=nullptr;
+	this->row=nullptr;
 	return 0;
 }
 
@@ -79,21 +80,22 @@ int Cmy_sql::query()
 int Cmy_sql::get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show)
 {
 	if(!result) return -1;
-	int ret=0;
-	unsigned int num_fields;
-	unsigned int i;
+
+	unsigned int i,num_fields;
 
 	num_fields = mysql_num_fields(result);
-	if(num_fields<1) return ++ret;
+	if(num_fields<1) return 1;
+
 	fields = mysql_fetch_fields(result);
-	if(!fields) return ++ret;
-	if(!show) return ret;
+	if(!fields) return 2;
+
+	if(!show) return 0;
 
 	for(i = 0; i < num_fields; i++)
 	{
 		printf("Field[%u]=%s\n", i, fields[i].name);
 	}
-	return ret;
+	return 0;
 }
 
 int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
@@ -103,14 +105,13 @@ int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
 
 int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row)
 {
-	unsigned int num_fields;
-	unsigned int i;
+	unsigned int i,num_fields;
+	unsigned long *lengths;
 
 	num_fields = mysql_num_fields(result);
 	if(num_fields<1) return 1;
 	while ((row = mysql_fetch_row(result)))
 	{
-		unsigned long *lengths;
 		lengths = mysql_fetch_lengths(result);
 		for(i = 0; i < num_fields; i++)
 		{
@@ -135,7 +136,7 @@ int Cmy_sql::func(void *p)
 {
 	Cmy_sql *m=(Cmy_sql*) p;
 	cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
-	this->get(this->fields,true);
+	//this->get(this->fields,true);
 }
 
 int Cmy_sql::execute(Object *o)
