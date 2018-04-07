@@ -8855,5 +8855,6 @@
     <Library Include="..\mysql-connector-c++\lib64\vs14\mysqlcppconn2-static.lib">
       <Filter>lib</Filter>
     </Library>
+    <Library Include="..\mysql-connector-c\lib\libmysql.lib" />
   </ItemGroup>
 </Project>

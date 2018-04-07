@@ -5,7 +5,7 @@
 #include <windows.h>
 #include <tchar.h>
 #include <strsafe.h>
-
+#include <mysql.h>
 typedef TCHAR DIR_T;//for class Cpath
 
 #endif//WINDOWS_OS
@@ -16,7 +16,7 @@ typedef TCHAR DIR_T;//for class Cpath
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <dirent.h>
-
+#include <mysql/mysql.h>
 typedef char DIR_T;//for class Cpath
 #endif//LINUX_OS
 

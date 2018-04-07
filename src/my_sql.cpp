@@ -156,6 +156,7 @@ int Cmy_sql::func(void *p)
 	Cmy_sql *m=(Cmy_sql*) p;
 	cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
 	//this->get(this->fields,true);
+	return 0;
 }
 
 int Cmy_sql::execute(Object *o)

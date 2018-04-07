@@ -2,6 +2,7 @@
 #define SQL_H
 
 #include "object.h"
+#include "os.h"
 
 namespace n_sql {
 	class Csql :public Object
