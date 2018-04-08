@@ -18,6 +18,7 @@
 #include "uuid.h"
 #include <stack> 
 #include <map>
+#include <exception>
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;

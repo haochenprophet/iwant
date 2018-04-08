@@ -111,7 +111,7 @@ int Cmy_sql::execute(void *p1,void *p2,void *p3)
 
     if(!row||!num_fields||!lengths) return -1;
     
-	for(int i = 0; i < *num_fields; i++)
+	for(int i = 0; i < (int)*num_fields; i++)
 	{
 		printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
 	}
@@ -125,7 +125,16 @@ int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row,Object *o)
 	unsigned int num_fields;
 	unsigned long *lengths;
 
-	num_fields = mysql_num_fields(result);
+	try //can not catch the exception
+	{
+		num_fields = mysql_num_fields(result);
+	}
+	catch (...)
+	{
+		//AT_LINE
+		return -1;
+	}
+
 	if(num_fields<1) return 1;
 	while ((row = mysql_fetch_row(result)))
 	{
@@ -212,8 +221,8 @@ int main(int argc, const char* argv[])
 
 	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
 
-	int ret=0;
-	for(int n=0;n<1;n++)
+	int n,ret=0;
+	for(n=0;n<1;n++)
 	{
 		ret=m.execute((char *)"show databases;");
 		cout<<"return="<<ret<<endl;	
@@ -224,6 +233,14 @@ int main(int argc, const char* argv[])
 	m.get();
 	//ret=m.execute((char *)"select * from test.url;");
 	//m.get();
+	
+	/*	//note : insert sql can not use get() func ()
+	for (int n = 0; n < 10; n++)
+	{
+		ret=m.execute((char *)"INSERT INTO `test`.`test` (`value`) VALUES('value');");
+	}
+	*/
+
 	return 	ret;
 }
 #endif 
