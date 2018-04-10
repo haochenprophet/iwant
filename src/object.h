@@ -203,8 +203,8 @@ namespace n_object {
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, string *obj_name=nullptr, string * fun_name = NULL, void *p=nullptr, bool new_thread = false);
 		int execute(void *p);//execute this->func
-		int execute(void *p1,void *p2);//execute 
-		int execute(void *p1,void *p2,void *p3);//execute 
+		virtual int execute(void *p1,void *p2);//execute 
+		virtual int execute(void *p1,void *p2,void *p3);//execute 
 		int execute(Object *o, void *p);//o->execute(void *p)
 		int execute(MyFunc func, void *p=nullptr, bool new_thread = false); //execute input func 
 		int execute(string *fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 

@@ -387,11 +387,13 @@ int Object::execute(void *p)
 
 int Object::execute(void *p1,void *p2)
 {
+	OUT_LINE
 	return -1;
 }
 
 int Object::execute(void *p1,void *p2,void *p3)
 {
+	OUT_LINE
 	return -1;	
 }
 

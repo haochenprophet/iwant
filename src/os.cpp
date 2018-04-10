@@ -1,5 +1,8 @@
 #include "os.h"
 
+#if WINDOWS_OS
+#pragma comment(lib, "ws2_32.lib")
+#endif
 
 Cos::Cos()
 {

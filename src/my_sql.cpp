@@ -212,7 +212,7 @@ int Cmy_sql::execute(string * sql, Object *o)
 }
 
 #ifndef MY_SQL_TEST
-#define MY_SQL_TEST 01
+#define MY_SQL_TEST 0//1
 #endif
 
 #if MY_SQL_TEST
