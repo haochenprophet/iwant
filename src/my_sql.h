@@ -33,6 +33,7 @@ namespace n_my_sql {
 		int execute(Object *o); //execute o->execute()
 		int execute();
 		int execute(char * sql,Object *o=nullptr); 
+		int execute(string * sql, Object *o= nullptr);
 		int execute(void *p1,void *p2,void *p3);
 		int func(void *p=nullptr);
 	};

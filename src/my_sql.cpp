@@ -206,6 +206,11 @@ int Cmy_sql::execute(char * sql,Object *o)
 	return 0;
 }
 
+int Cmy_sql::execute(string * sql, Object *o)
+{
+	return this->execute((char *)sql->c_str(), o);
+}
+
 #ifndef MY_SQL_TEST
 #define MY_SQL_TEST 01
 #endif
