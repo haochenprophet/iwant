@@ -11,14 +11,15 @@
 #include <string.h>
 #include <time.h>       /* time_t, time */
 #include <wchar.h>
+#include <stack> 
+#include <map>
+#include <exception>
 
 #include "temp_def.h"
 #include "syntax_def.h"
 #include "ex_func.h"
 #include "uuid.h"
-#include <stack> 
-#include <map>
-#include <exception>
+#include "bits.h"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
@@ -26,6 +27,8 @@ using std::wstring;
 using std::list;
 using std::cout;
 using std::endl;
+
+typedef  unsigned long long ACTION_T;
 
 enum UsingLanguage
 {
@@ -109,7 +112,7 @@ namespace n_object {
 		long id;//object id
 	public:
 		int status;
-		int action;
+		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		int error; //error count >0 error
 		int count;
 		int cin_buf_len;
