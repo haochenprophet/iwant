@@ -19,8 +19,13 @@ namespace n_sql {
 	{
 	public:
 		SqlOperate sql_opetate;
+		char * db_name;
+		char * tab_name;
+		char * sql_buf;
+		int sql_buf_len;
 	public:
 		Csql();
+		~Csql();
 	};
 
 }

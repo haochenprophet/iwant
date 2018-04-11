@@ -4,20 +4,16 @@ int Cstock_db::my_init(void *p)
 	this->name = "Cstock_db";
 	this->alias = "stock_db";
 	this->my_sql = nullptr;
-	this->db_name = nullptr;
-	this->tab_name = nullptr;
 	return 0;
 }
 
 Cstock_db::Cstock_db()
 {
 	this->my_init();
-	this->sql_buf_len = this->allot(PAGE_4K, (void **)&this->sql_buf);
 }
 
 Cstock_db::~Cstock_db()
 {
-	this->delete_allot((void **)&this->sql_buf);
 }
 
 int Cstock_db::execute(void *p1, void *p2, void *p3)
@@ -34,9 +30,9 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	int id = atoi(row[0]);
 	if (this->my_sql&&this->count != id)
 	{
-		sprintf(this->sql_buf, "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';",this->db_name,this->tab_name, this->count, id);
-		printf("%s\n", this->sql_buf);
-		this->my_sql->execute(this->sql_buf);
+		sprintf(this->my_sql->sql_buf, "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';",this->my_sql->db_name,this->my_sql->tab_name, this->count, id);
+		printf("%s\n", this->my_sql->sql_buf);
+		this->my_sql->execute(this->my_sql->sql_buf);
 		this->my_sql->sql_opetate = SqlOperate::update;
 	}
 	/*
@@ -60,9 +56,9 @@ int Cstock_db::func(void *p)// callback function
 
 	if (this->my_sql->sql_opetate!= SqlOperate::nothing)
 	{
-		sprintf(this->sql_buf, "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;", this->db_name, this->tab_name, this->count + 1);
-		printf("%s\n", this->sql_buf);
-		this->my_sql->execute(this->sql_buf);
+		sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;", this->my_sql->db_name, this->my_sql->tab_name, this->count + 1);
+		printf("%s\n", this->my_sql->sql_buf);
+		this->my_sql->execute(this->my_sql->sql_buf);
 	}
 	//OUT_LINE //test ok
 	return 0;
@@ -86,10 +82,10 @@ int main(int argc, const char* argv[])
 	Cstock_db db;
 
 	db.my_sql = &m; //set mysql database to db
-	db.db_name = (char *)"stock";
-	db.tab_name = (char *)"sh000003";
-	sprintf(db.sql_buf, "SELECT idprice FROM `%s`.`%s` ;", db.db_name, db.tab_name);
-	ret=m.execute(db.sql_buf,&db);
+	db.my_sql->db_name = (char *)"stock";
+	db.my_sql->tab_name = (char *)"sh000003";
+	sprintf(db.my_sql->sql_buf, "SELECT idprice FROM `%s`.`%s` ;", db.my_sql->db_name, db.my_sql->tab_name);
+	ret=m.execute(db.my_sql->sql_buf,&db);
 	return 	ret;
 }
 #endif 

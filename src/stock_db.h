@@ -8,10 +8,6 @@ namespace n_stock_db {
 	{
 	public:
 		Cmy_sql * my_sql;
-		char * db_name;
-		char * tab_name;
-		char * sql_buf;
-		int sql_buf_len;
 	public:
 		Cstock_db();
 		~Cstock_db();
