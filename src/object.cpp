@@ -36,6 +36,7 @@ Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
 	this->name = fun_name;
 	this->alias = this->name;
 	this->p_func = func;
+	this->priority = 0;
 }
 
 int Cmyfunc::isMe(char *identifier)
@@ -62,6 +63,7 @@ int Cmyfunc::isMe(string identifier)
 int Cmyfunc::runMe(void *p, bool new_thread)
 {
 	if (!this->p_func)	return -1;
+	this->priority++;
 	if (new_thread == false)
 		return this->p_func(p);
 	//cout << "Cmyfunc::runMe->thread\n"; //test ok
@@ -82,6 +84,7 @@ Object::Object()
 {
 	this->id = ++object_id;
 	this->status=0;
+	this->priority = 0;
 	this->action=0;
 	this->error=0;
 	this->locate = -1;
@@ -333,7 +336,7 @@ void Object::my_syntax()
 
 int Object::execute()
 {
-	return 0;
+	return -1;//return -1 do nothing.
 }
 
 int Object::execute(Object *o)

@@ -81,6 +81,7 @@ namespace n_object {
 		string name; //function name
 		string alias;//Alias function name
 		MyFunc p_func;
+		long long priority;
 	public:
 		Cmyfunc(string fun_name, MyFunc func);
 		int isMe(char *identifier);
@@ -112,6 +113,7 @@ namespace n_object {
 		long id;//object id
 	public:
 		int status;
+		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		int error; //error count >0 error
 		int count;
