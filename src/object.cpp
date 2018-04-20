@@ -170,6 +170,17 @@ void Object::remove_exist_family()
 	}
 }
 
+bool cmp_family(Object & first, Object & second)
+{
+	return (first.name.length<second.name.length);
+}
+
+void Object::sort_family(void *cmpare) 
+{
+	if (p) this->family.sort(p);
+	else this->family.sort(cmp_family);
+}
+
 int Object::isMe(char *identifier)
 {
 	if (this->name == identifier) return (int)this->name.length();

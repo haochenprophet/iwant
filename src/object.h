@@ -175,6 +175,7 @@ namespace n_object {
 		void addMe(Object *o=nullptr);//add obj to family
 		void removeMe(void * item); //frome other class
 		void remove_exist_family();
+		void sort_family(void *p=nullptr);//p point cmpare function : bool cmp_family(Object & first, Object & second)
 
 		int isMe(char *identifier);
 		int isMe(string * identifier);
