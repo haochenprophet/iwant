@@ -170,15 +170,18 @@ void Object::remove_exist_family()
 	}
 }
 
-bool cmp_family(Object & first, Object & second)
+int Object::sort_family(void *p) 
 {
-	return (first.name.length<second.name.length);
-}
-
-void Object::sort_family(void *cmpare) 
-{
-	if (p) this->family.sort(p);
-	else this->family.sort(cmp_family);
+	int count = 0;
+	LIST_FAMILY::iterator it;
+	Object *op;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		op = (Object *)*it;
+		cout << this->name << ":" << ++count << ":" << op->name << op->where() << endl;
+	}
+	cout << this->name << " my_family count : " << count << endl;
+	return count;
 }
 
 int Object::isMe(char *identifier)

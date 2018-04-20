@@ -54,30 +54,7 @@ int Cmain::deal_cmd(int argc, char *argv[])
 	return -1;
 }
 
-#if MAIN_TEST||_TEST==0
-
-#define MYSQL_TEST  0//1
-#if MYSQL_TEST
-int my_sql_test(int argc, char *argv[])
-{
-	cout << "MY_SQL_TEST\n\n";
-
-	mysqlx_session_t  *sess;
-	const char   *url = (argc > 1 ? argv[1] : "mysqlx://root@127.0.0.1");
-	char conn_error[MYSQLX_MAX_ERROR_LEN];
-	int conn_err_code;
-
-	sess = mysqlx_get_node_session_from_url(url, conn_error, &conn_err_code);
-	if (!sess)
-	{
-		printf("\nError! %s. Error Code: %d", conn_error, conn_err_code);
-		return -1;
-	}
-
-	return 0;
-}
-#endif
-
+#if MAIN_TEST||_TEST==1
 int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
@@ -88,9 +65,6 @@ int main(int argc, char *argv[])
 	m.deal_cmd(argc,argv);
 	if(argc>1) cout<<argv[1]<<m.is_exist_main(argv[1])<<endl;	//test is_exist_main func
 
-#if MYSQL_TEST
-	my_sql_test(argc,argv);
-#endif
 	return 0;
 }
 #endif
