@@ -8,6 +8,8 @@
 #define GLOBAL_CODE "g_code" //global_code
 #define EXTERN_KEYWOED "\textern\t"
 #define G_CODE_H "#ifndef G_CODE_H\n#define G_CODE_H\n"
+#define G_CODE_I "#ifndef G_CODE_I\n#define G_CODE_I\n"
+#define G_CODE_FUNC_I "#ifndef G_CODE_FUNC_I\n#define G_CODE_FUNC_I\n"
 
 namespace n_code {
 	enum class CodeAtcion {

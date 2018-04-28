@@ -91,11 +91,13 @@ void Ccode::create_head()
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c)	{
 		this->file_cpp.create();//create file
+		this->file_cpp.f_append((char *)G_CODE_I);
 		this->file_cpp.f_append((char *)"\t#include \"all_h_include.h\"\n\n");//Cclass class; //test
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->file_func.create();
+		this->file_h.f_append((char *)G_CODE_FUNC_I);
 		this->file_func.f_append((char *)"void add_objects(Object *p)\n{\n");
 	}
 
@@ -109,13 +111,16 @@ void Ccode::create_tail()
 			this->file_h.f_append((char *)"void add_objects(Object *p);\n");//h
 		}
 
-		this->file_h.f_append((char *)"#endif\n");//h
+		this->file_h.f_append((char *)"#endif\n");//G_CODE_FUNC_I
 	}
 
-	//if (this->action&(ACTION_T)CodeAtcion::create_c);
+	if (this->action&(ACTION_T)CodeAtcion::create_c){
+		this->file_cpp.f_append((char *)"#endif\n");//is
+	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->file_func.f_append((char *)"\n}\n");
+		this->file_func.f_append((char *)"#endif\n");//i
 	}
 }
 
