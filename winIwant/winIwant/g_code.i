@@ -1,3 +1,5 @@
+#ifndef G_CODE_I
+#define G_CODE_I
 	#include "all_h_include.h"
 
 	Caction  g_action ;
@@ -63,3 +65,4 @@
 	Curl  g_url ;
 	Cuuid  g_uuid ;
 	Cwait  g_wait ;
+#endif

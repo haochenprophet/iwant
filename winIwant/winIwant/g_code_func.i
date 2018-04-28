@@ -1,3 +1,5 @@
+#ifndef G_CODE_FUNC_I
+#define G_CODE_FUNC_I
 void add_objects(Object *p)
 {
 	p->addMe(g_action.where());
@@ -65,3 +67,4 @@ void add_objects(Object *p)
 	p->addMe(g_wait.where());
 
 }
+#endif

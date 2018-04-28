@@ -97,7 +97,7 @@ void Ccode::create_head()
 
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->file_func.create();
-		this->file_h.f_append((char *)G_CODE_FUNC_I);
+		this->file_func.f_append((char *)G_CODE_FUNC_I);
 		this->file_func.f_append((char *)"void add_objects(Object *p)\n{\n");
 	}
 

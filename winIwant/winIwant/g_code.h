@@ -63,4 +63,5 @@
 	extern		Curl  g_url ;
 	extern		Cuuid  g_uuid ;
 	extern		Cwait  g_wait ;
+void add_objects(Object *p);
 #endif
