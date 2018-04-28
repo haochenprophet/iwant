@@ -2,6 +2,7 @@
 #define ALL_H_INCLUDE 
 
 #include "action.h" 
+#include "bits.h"
 #include "brackets.h" 
 #include "build.h" 
 #include "class.h" 
@@ -18,6 +19,7 @@
 #include "exec.h" 
 #include "exit.h" 
 #include "ex_func.h" 
+#include "ex_func_class.h"
 #include "file.h" 
 #include "ftp.h" 
 #include "func.h" 
@@ -48,6 +50,7 @@
 #include "search.h" 
 #include "smtp.h" 
 #include "socket.h" 
+#include "stock_db.h" 
 #include "source.h" 
 #include "sql.h" 
 #include "step.h" 
@@ -66,6 +69,7 @@
 #include "url.h" 
 #include "url_def.h" 
 #include "uuid.h" 
+#include "uuid_class.h" 
 #include "wait.h" 
 #include "sql/sql_ADD.h" 
 #include "sql/sql_ALL.h" 

@@ -4404,6 +4404,12 @@
     <ClCompile Include="..\..\src\code.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\bits.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stock_db.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8831,6 +8837,18 @@
     <ClInclude Include="..\..\src\code.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\bits.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock_db.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\uuid_class.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\g_code.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -8846,6 +8864,18 @@
     </None>
     <None Include="..\..\src\dictionary\Makefile">
       <Filter>dictionary</Filter>
+    </None>
+    <None Include="..\..\src\bits.def">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\ex_func_class.h">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\g_code.i">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\g_code_func.i">
+      <Filter>src</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -10,6 +10,12 @@
 #define G_CODE_H "#ifndef G_CODE_H\n#define G_CODE_H\n"
 
 namespace n_code {
+	enum class CodeAtcion {
+		create_h = BIT0,
+		create_c = BIT1,
+		create_func =BIT2,
+	};
+
 	class Ccode :public Object
 	{
 	public:
@@ -20,12 +26,17 @@ namespace n_code {
 		string s_cpp_rep;// = " ";//not empty, can use space
 		Cfile file_h;
 		Cfile file_cpp;
+		Cfile file_func;//function
 	public:
 		Ccode();
 		~Ccode();
 		int my_init(void *p=nullptr);
-		int create(char * cp);//cp point class name
+		int create_action(void *p);
 		int func(void *p = nullptr);
+		int create(char * cp);//cp point class name
+		void create_head();
+		void create_tail();
+		int create_cmd(int argc, char *argv[]);
 		int deal_cmd(int argc, char *argv[]);
 	};
 }

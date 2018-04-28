@@ -27,13 +27,13 @@ typedef union{
 }UUID_U;
 
 namespace n_uuid {
-	class Cuuid
+	class Ouuid
 	{
 	public:
 		std::string uuid;
 	public:
-		Cuuid();
-		~Cuuid();
+		Ouuid();
+		~Ouuid();
 		int create();
 	};
 }

@@ -527,6 +527,12 @@ int Object::s_replace(string *base,string *tag,string *rep)
 	return 0;
 }
 
+int Object::s_replace(string *base, char *tag, char *rep)
+{
+	string s_tag = tag, s_rep = rep;
+	return this->s_replace(base, &s_tag, &s_rep);
+}
+
 int Object::s_replace(string *base)
 {
 	return this->s_replace(base, &this->s_tag, &this->s_rep);

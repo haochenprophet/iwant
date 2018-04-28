@@ -35,6 +35,7 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 		this->my_sql->execute(this->my_sql->sql_buf);
 		this->my_sql->sql_opetate = SqlOperate::update;
 	}
+	return 0;
 }
 
 int Cstock_db::execute(void *p1, void *p2, void *p3)

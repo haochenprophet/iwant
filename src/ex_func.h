@@ -12,9 +12,4 @@ int runcmd(void *cmd);
 int time_cmd(void *format);
 int wait_char_abcd(void * cp);
 
-class Cex_func
-{
-
-};
-
 #endif

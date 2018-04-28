@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\action.cpp" />
+    <ClCompile Include="..\..\src\bits.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
     <ClCompile Include="..\..\src\build.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
@@ -1592,6 +1593,7 @@
     <ClCompile Include="..\..\src\sql\sql_WITHIN_GROUP.cpp" />
     <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp" />
     <ClCompile Include="..\..\src\step.cpp" />
+    <ClCompile Include="..\..\src\stock_db.cpp" />
     <ClCompile Include="..\..\src\stratagem.cpp" />
     <ClCompile Include="..\..\src\symbol.cpp" />
     <ClCompile Include="..\..\src\syntax.cpp" />
@@ -1609,6 +1611,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
+    <ClInclude Include="..\..\src\bits.h" />
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
     <ClInclude Include="..\..\src\class.h" />
@@ -1630,6 +1633,7 @@
     <ClInclude Include="..\..\src\ftp.h" />
     <ClInclude Include="..\..\src\func.h" />
     <ClInclude Include="..\..\src\get.h" />
+    <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\http.h" />
     <ClInclude Include="..\..\src\http_def.h" />
@@ -3055,6 +3059,7 @@
     <ClInclude Include="..\..\src\sql\sql_WITHIN_GROUP.h" />
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h" />
     <ClInclude Include="..\..\src\step.h" />
+    <ClInclude Include="..\..\src\stock_db.h" />
     <ClInclude Include="..\..\src\stratagem.h" />
     <ClInclude Include="..\..\src\symbol.h" />
     <ClInclude Include="..\..\src\syntax.h" />
@@ -3070,6 +3075,7 @@
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\url_def.h" />
     <ClInclude Include="..\..\src\uuid.h" />
+    <ClInclude Include="..\..\src\uuid_class.h" />
     <ClInclude Include="..\..\src\wait.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h" />
@@ -3085,7 +3091,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="..\..\src\bits.def" />
     <None Include="..\..\src\dictionary\Makefile" />
+    <None Include="..\..\src\ex_func_class.h" />
+    <None Include="..\..\src\g_code.i" />
+    <None Include="..\..\src\g_code_func.i" />
     <None Include="..\..\src\instruction\Makefile" />
     <None Include="..\..\src\Makefile" />
     <None Include="..\..\src\math\Makefile" />

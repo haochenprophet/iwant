@@ -1,16 +1,27 @@
 #include "uuid.h"
+#include "uuid_class.h"
 
 Cuuid::Cuuid()
 {
-	this->create();
+	this->name = "Cuuid";
+	this->alias = "uuid";
 }
 
 Cuuid::~Cuuid()
 {
+}
+
+Ouuid::Ouuid()
+{
+	this->create();
+}
+
+Ouuid::~Ouuid()
+{
 
 }
 
-int Cuuid::create()
+int Ouuid::create()
 {
 	UUID_U uuid;
 	char buf[GUID_LEN];
@@ -35,7 +46,7 @@ int main(int argc, char *argv[])
 {
 	cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<"\n";
 
-	Cuuid uuid;
+	Ouuid uuid;
 	cout<<uuid.uuid<<endl;
 
 	return 0;

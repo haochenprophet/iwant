@@ -19,7 +19,7 @@
 #include "syntax_def.h"
 #include "ex_func.h"
 #include "uuid.h"
-#include "bits.h"
+#include "bits.def"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
@@ -107,7 +107,7 @@ namespace n_object {
 	};
 	typedef list<Ctimeline> LIST_CTIMELINE;
 
-	class Object:public Cuuid
+	class Object:public Ouuid
 	{
 	protected:
 		long id;//object id
@@ -223,6 +223,7 @@ namespace n_object {
 
 		void s_toupper(string & str);
 		int s_replace(string *base,string *tag,string *rep);
+		int s_replace(string *base, char *tag, char *rep);
 		int s_replace(string *base);
 		int toupper_replace(string *base,string *tag,string *rep);
 		int replace_syntax(string *tag,string *rep);
