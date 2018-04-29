@@ -86,18 +86,18 @@ void Ccode::create_head()
 {
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		this->file_h.create();
-		this->file_h.f_append((char *)G_CODE_H);//Cclass class; //test
+		this->file_h.f_append((char *)G_CODE_H_DEFINE);//Cclass class; //test
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c)	{
 		this->file_cpp.create();//create file
-		this->file_cpp.f_append((char *)G_CODE_I);
+		this->file_cpp.f_append((char *)G_CODE_I_DEFINE);
 		this->file_cpp.f_append((char *)"\t#include \"all_h_include.h\"\n\n");//Cclass class; //test
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->file_func.create();
-		this->file_func.f_append((char *)G_CODE_FUNC_I);
+		this->file_func.f_append((char *)G_CODE_FUNC_I_DEFINE);
 		this->file_func.f_append((char *)"void add_objects(Object *p)\n{\n");
 	}
 
@@ -150,7 +150,7 @@ int Ccode::deal_cmd(int argc, char *argv[])
 }
 
 #ifndef CODE_TEST
-#define CODE_TEST 01
+#define CODE_TEST 0//1
 #endif
 
 #if CODE_TEST

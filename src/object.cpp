@@ -126,7 +126,7 @@ Object::~Object()
 	this->l_image.clear();
 	this->l_url.clear();
 	this->l_style.clear();
-	this->remove_exist_family();
+	//this->remove_exist_family();// error exception !!
 	this->exist_family.clear();
 	this->clear_my_memory();//clear my memory
 	this->my_mem.clear();
@@ -178,7 +178,7 @@ int Object::sort_family(void *p)
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << ":" << ++count << ":" << op->name << op->where() << endl;
+		cout << this->name << ":" << ++count << ":" << op->name << ":" << op->where() << endl;
 	}
 	cout << this->name << " my_family count : " << count << endl;
 	return count;
@@ -261,7 +261,7 @@ int Object::my_family()
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << ":"<<++count <<":"<< op->name << op->where() << endl;
+		cout << this->name << "["<<++count <<"]->"<< op->name << ":" << op->where() << endl;
 	}
 	cout << this->name << " my_family count : " << count << endl;
 	return count;
@@ -350,6 +350,7 @@ void Object::my_syntax()
 
 int Object::execute()
 {
+	AT_LINE this->myName();
 	return -1;//return -1 do nothing.
 }
 
@@ -376,14 +377,19 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 	for (it = o->family.begin(); it != o->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		if (obj_name&&obj_name->empty() == false&& op->isMe(obj_name)) {
+
+		if (obj_name&&obj_name->empty() == false&& op->isMe(obj_name)) 
+		{
 			if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
 			else ret = op->execute();
 		}
 		else
 		{
-			if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
-			else ret = op->execute();
+			if (obj_name&&obj_name->empty())//no object name check fun name
+			{
+				if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
+				//else ret = op->execute();
+			}
 		}
 	}
 	if (ret == -1 && fun_name&&fun_name->empty() == false) ret = this->execute((char*)"runcmd", (void *)fun_name->c_str(), new_thread); //auto run extern commant
@@ -392,9 +398,10 @@ int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bo
 
 int Object::execute(Object *o, char *obj_name , char * fun_name , void * p, bool new_thread)
 {
-	string n= obj_name;
-	string f= fun_name;	
-	return this->execute(o,n,f,p,new_thread);
+	string s_obj, s_fun;
+	if(obj_name) s_obj=obj_name;
+	if(fun_name)s_fun=fun_name;	
+	return this->execute(o, s_obj, s_fun,p,new_thread);
 }
 
 int Object::execute(void *p)
