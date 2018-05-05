@@ -4,6 +4,10 @@
 #define OBJECT_TEST 0//1
 #endif
 
+#ifndef OBJECT_DEBUG
+#define OBJECT_DEBUG 0//1
+#endif
+
 Cparameter::Cparameter()
 {
 	this->in=nullptr;
@@ -115,10 +119,17 @@ Object::Object()
 	this->velocity=0;
 	this->cin_buf=nullptr;
 	this->cin_buf_len=O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
+
+#if OBJECT_DEBUG
+	AT_LINE this->myName();
+#endif
 }
 
 Object::~Object()
 {
+#if OBJECT_DEBUG
+	AT_LINE this->myName();
+#endif
 	this->family.clear();
 	this->ex_func.clear();
 	this->l_tag_rule.clear();
@@ -174,6 +185,9 @@ void Object::removeMe(void * item)
 void Object::remove_exist_family()
 {
 	Object *o;
+#if OBJECT_DEBUG
+	AT_LINE this->myName();
+#endif
 	while (!this->exist_family.empty())
 	{
 		o=(Object *)this->exist_family.back();
