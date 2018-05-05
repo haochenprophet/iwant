@@ -1,5 +1,18 @@
 #include "ex_func.h"
+#include "ex_func_class.h"
 #include "object.h"
+
+int Cex_func::my_init(void *p)
+{
+	this->name = "Cex_func";
+	this->alias = "ex_func";
+	return 0;
+}
+
+Cex_func::Cex_func()
+{
+	this->my_init();
+}
 
 int runcmd(void *cmd)
 {

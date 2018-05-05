@@ -277,7 +277,9 @@ namespace n_object {
 
 	class Cobject:public Object
 	{
-
+	public:
+		Cobject();
+		int my_init(void *p= nullptr);
 	};
 }
 

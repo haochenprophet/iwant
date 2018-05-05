@@ -135,6 +135,18 @@ Object::~Object()
 	if(this->cin_buf) delete[] this->cin_buf;
 }
 
+int Cobject::my_init(void *p)
+{
+	this->name = "Cobject";
+	this->alias = "object";
+	return 0;
+}
+
+Cobject::Cobject()
+{
+	this->my_init();
+}
+
 void Object::myName(Object *o)
 {
 	if(o)
