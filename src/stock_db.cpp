@@ -24,10 +24,9 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test ok
 	this->row = (MYSQL_ROW)p1;
-	this->num_fields = (unsigned int *)p2;
-	this->lengths = (unsigned long *)p3;
-
-	if (!this->row || !this->num_fields || !this->lengths) return -1;
+	//this->num_fields = (unsigned int *)p2;
+	//this->lengths = (unsigned long *)p3;
+	if (!this->row || !p2 || !p3) return -1;
 	this->count++;
 	printf("[%d]%s\n", this->count, this->row[0]);
 
@@ -48,9 +47,9 @@ int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 	if (!this->my_sql) return -1;
 
 	this->row = (MYSQL_ROW)p1;
-	this->num_fields = (unsigned int *)p2;
-	this->lengths = (unsigned long *)p3;
-	if (!this->row || !this->num_fields || !this->lengths) return -1;
+	//this->num_fields = (unsigned int *)p2;
+	//this->lengths = (unsigned long *)p3;
+	if (!this->row || !p2 || !p3) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 	
 	sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;", this->my_sql->db_name, this->row[0]);
