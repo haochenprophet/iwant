@@ -38,18 +38,41 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 	return 0;
 }
 
-int Cstock_db::execute(void *p1, void *p2, void *p3)
+int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 {
+	//OUT_LINE //test ok
+	if (!this->my_sql) return -1;
 
-	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	MYSQL_ROW row = (MYSQL_ROW)p1;
+	unsigned int * num_fields = (unsigned int *)p2;
+	unsigned long *lengths = (unsigned long *)p3;
+	if (!row || !num_fields || !lengths) return -1;
+	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
+	
+	sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;", this->my_sql->db_name, row[0]);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::alter;
 
-	/*// out all data
+	return 0;
+}
+
+int Cstock_db::print_all_data(MYSQL_ROW row, unsigned int * num_fields, unsigned long *lengths)
+{
+	// out all data
 	for (int i = 0; i < (int)*num_fields; i++)
 	{
 		printf("[%.*s] ", (int)lengths[i], row[i] ? row[i] : "NULL");
 	}
 	printf("\n");
-	*/
+}
+
+int Cstock_db::execute(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test 
+	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
+	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
 	return 0;
 }
 
@@ -69,33 +92,58 @@ int Cstock_db::verify_id_first(void *p)
 	return 0;
 }
 
+int Cstock_db::add_ma_first(void *p)
+{
+	Cmy_sql * pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
+
+	return 0;
+}
+
 int Cstock_db::func(void *p)// callback function
 {
+	//OUT_LINE //test 
 	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
+	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
 	return 0;
 }
 
 int Cstock_db::verify_id_cmd(int argc, char *argv[])//verify_id action cmdd call back func.
 {
-	int ret = 0;
-	if (argc < 4)
-	{
-		cout << "verify_id_cmd request: password db_name tab_name\n";
-		return -1;
-	}
-	Cmy_sql m((char *)argv[1]);//Cmy_sql m((char *)"password");
-	
-	this->my_sql = &m; //set mysql database to db
-	this->my_sql->db_name = (char *)argv[2];
-	this->my_sql->tab_name = (char *)argv[3];
 	sprintf(this->my_sql->sql_buf, "SELECT idprice FROM `%s`.`%s` ;", this->my_sql->db_name, this->my_sql->tab_name);
-	ret = m.execute(this->my_sql->sql_buf, this);//!
-	return 	ret;
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);//!->func
+}
+
+int Cstock_db::add_ma_cmd(int argc, char *argv[])
+{
+	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
 }
 
 int Cstock_db::deal_cmd(int argc, char *argv[])
 {
+	//OUT_LINE //test 
+	//check user input
+	if (argc < 5)
+	{
+		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name\n";
+		return -1;
+	}
+
+	//get action 
+	this->action = atoll(argv[1]);
+	if (this->action == 0) return -1;
+	
+	//init mysql db
+	Cmy_sql m((char *)argv[2]);//Cmy_sql m((char *)"password");
+	this->my_sql = &m; //set mysql database to db
+	this->my_sql->db_name = (char *)argv[3];
+	this->my_sql->tab_name = (char *)argv[4];
+	
+	//parse and run action
 	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
+	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
+
 	return 0;
 }
 
@@ -109,7 +157,6 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 int main(int argc, char* argv[])
 {
 	Cstock_db s;
-	s.action += (ACTION_T)StockAtcion::verify_id;
 	return 	s.deal_cmd(argc, argv);
 }
 #endif 

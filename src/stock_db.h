@@ -6,6 +6,7 @@
 namespace n_stock_db {
 	enum class StockAtcion{
 		verify_id = BIT0,
+		add_ma = BIT1,
 	};
 
 	class Cstock_db :public Object
@@ -22,6 +23,10 @@ namespace n_stock_db {
 		int verify_id_cmd(int argc, char *argv[]);//verify_id action cmdd call back func.
 		int verify_id_first(void *p = nullptr);//verify_id action call back func 1
 		int verify_id_second(void *p1, void *p2, void *p3);//verify_id action call back func 2
+		int add_ma_cmd(int argc, char *argv[]); //add_ma action cmdd call back func.
+		int add_ma_first(void *p = nullptr);//add_ma action call back func 1
+		int add_ma_second(void *p1, void *p2, void *p3);//add_ma action call back func 2
+		int print_all_data(MYSQL_ROW row, unsigned int* num_fields, unsigned long *lengths);
 	};
 }
 

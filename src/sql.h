@@ -13,6 +13,7 @@ namespace n_sql {
 		insert,
 		create,
 		delete_,
+		alter,
 	};
 
 	class Csql :public Object
