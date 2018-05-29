@@ -12,7 +12,10 @@ namespace n_stock_db {
 	class Cstock_db :public Object
 	{
 	public:
-		Cmy_sql * my_sql;
+		Cmy_sql * my_sql, *pm;//point_mysql		
+		MYSQL_ROW row;
+		unsigned int * num_fields;
+		unsigned long *lengths;
 	public:
 		Cstock_db();
 		~Cstock_db();

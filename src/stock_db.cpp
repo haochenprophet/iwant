@@ -3,13 +3,17 @@ int Cstock_db::my_init(void *p)
 {
 	this->name = "Cstock_db";
 	this->alias = "stock_db";
-	this->my_sql = nullptr;
 	return 0;
 }
 
 Cstock_db::Cstock_db()
 {
 	this->my_init();
+	this->my_sql = nullptr;
+	this->pm = nullptr;
+	this->row = nullptr;
+	this->num_fields = nullptr;
+	this->lengths = nullptr;
 }
 
 Cstock_db::~Cstock_db()
@@ -19,15 +23,15 @@ Cstock_db::~Cstock_db()
 int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test ok
-	MYSQL_ROW row = (MYSQL_ROW)p1;
-	unsigned int * num_fields = (unsigned int *)p2;
-	unsigned long *lengths = (unsigned long *)p3;
+	this->row = (MYSQL_ROW)p1;
+	this->num_fields = (unsigned int *)p2;
+	this->lengths = (unsigned long *)p3;
 
-	if (!row || !num_fields || !lengths) return -1;
+	if (!this->row || !this->num_fields || !this->lengths) return -1;
 	this->count++;
-	printf("[%d]%s\n", this->count, row[0]);
+	printf("[%d]%s\n", this->count, this->row[0]);
 
-	int id = atoi(row[0]);
+	int id = atoi(this->row[0]);
 	if (this->my_sql&&this->count != id)
 	{
 		sprintf(this->my_sql->sql_buf, "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';", this->my_sql->db_name, this->my_sql->tab_name, this->count, id);
@@ -43,13 +47,13 @@ int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 	//OUT_LINE //test ok
 	if (!this->my_sql) return -1;
 
-	MYSQL_ROW row = (MYSQL_ROW)p1;
-	unsigned int * num_fields = (unsigned int *)p2;
-	unsigned long *lengths = (unsigned long *)p3;
-	if (!row || !num_fields || !lengths) return -1;
+	this->row = (MYSQL_ROW)p1;
+	this->num_fields = (unsigned int *)p2;
+	this->lengths = (unsigned long *)p3;
+	if (!this->row || !this->num_fields || !this->lengths) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 	
-	sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;", this->my_sql->db_name, row[0]);
+	sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;", this->my_sql->db_name, this->row[0]);
 	printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
@@ -79,9 +83,9 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 int Cstock_db::verify_id_first(void *p)
 {
 	this->count = 0;
-	Cmy_sql * pm = (Cmy_sql *)p;
+	this->pm = (Cmy_sql *)p;
 	this->my_sql->sql_opetate = SqlOperate::nothing;
-	pm->get((void *)nullptr, (Object *)this);
+	this->pm->get((void *)nullptr, (Object *)this);
 
 	if (this->my_sql->sql_opetate != SqlOperate::nothing)
 	{
@@ -94,7 +98,7 @@ int Cstock_db::verify_id_first(void *p)
 
 int Cstock_db::add_ma_first(void *p)
 {
-	Cmy_sql * pm = (Cmy_sql *)p;
+	this->pm = (Cmy_sql *)p;
 	this->my_sql->sql_opetate = SqlOperate::nothing;
 	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
 
