@@ -60,6 +60,23 @@ int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 	return 0;
 }
 
+int Cstock_db::calculate_ma_second(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test ok
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
+
+	sprintf(this->my_sql->sql_buf, "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma==0;", this->my_sql->db_name, this->row[0]);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 0;");
+	this->my_sql->execute(this->my_sql->sql_buf);
+
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
 int Cstock_db::print_all_data(MYSQL_ROW row, unsigned int * num_fields, unsigned long *lengths)
 {
 	// out all data
@@ -76,6 +93,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
 	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
 	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
+	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
 	return 0;
 }
 
@@ -104,11 +122,20 @@ int Cstock_db::add_ma_first(void *p)
 	return 0;
 }
 
+int Cstock_db::calculate_ma_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
+	return 0;
+}
+
 int Cstock_db::func(void *p)// callback function
 {
 	//OUT_LINE //test 
 	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
 	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
+	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
 	return 0;
 }
 
@@ -121,6 +148,15 @@ int Cstock_db::verify_id_cmd(int argc, char *argv[])//verify_id action cmdd call
 int Cstock_db::add_ma_cmd(int argc, char *argv[])
 {
 	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
+}
+
+//BEGIN; SET SQL_SAFE_UPDATES = 0; UPDATE stock.sh000001 SET ma = turnover / volume; SET SQL_SAFE_UPDATES = 1; COMMIT;
+int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
+{
+	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 0;");
+	this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
+	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 1;");
+	return 0;
 }
 
 int Cstock_db::deal_cmd(int argc, char *argv[])
@@ -146,7 +182,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	//parse and run action
 	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
 	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
-
+	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
 	return 0;
 }
 

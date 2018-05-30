@@ -7,6 +7,7 @@ namespace n_stock_db {
 	enum class StockAtcion{
 		verify_id = BIT0,
 		add_ma = BIT1,
+		calculate_ma = BIT2,
 	};
 
 	class Cstock_db :public Object
@@ -30,6 +31,9 @@ namespace n_stock_db {
 		int add_ma_first(void *p = nullptr);//add_ma action call back func 1
 		int add_ma_second(void *p1, void *p2, void *p3);//add_ma action call back func 2
 		int print_all_data(MYSQL_ROW row, unsigned int* num_fields, unsigned long *lengths);
+		int calculate_ma_cmd(int argc, char *argv[]); //calculate_ma action cmdd call back func.
+		int calculate_ma_first(void *p = nullptr);//calculate_ma action call back func 1
+		int calculate_ma_second(void *p1, void *p2, void *p3);//calculate_ma action call back func 2
 	};
 }
 
