@@ -68,7 +68,7 @@ int Cstock_db::calculate_ma_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
-	sprintf(this->my_sql->sql_buf, "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma==0;", this->my_sql->db_name, this->row[0]);
+	sprintf(this->my_sql->sql_buf, "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;", this->my_sql->db_name, this->row[0]);
 	printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 0;");
 	this->my_sql->execute(this->my_sql->sql_buf);
