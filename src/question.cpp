@@ -184,7 +184,7 @@ int Cquestion::q_question(char * sQ,char *sA ,char *sR,char* fB,int type,int act
 
 int Cquestion::q_question(Squestion *q,char *log)
 {
-	char *sD;// depend condition
+//	char *sD;// depend condition
 	int n,d;
 	for(n=0;q[n].sQ!=nullptr;n++)
 	{

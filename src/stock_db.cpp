@@ -159,6 +159,12 @@ int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
 	return 0;
 }
 
+int action_cmd(int argc, char *argv[])
+{
+	//OUT_LINE //test 
+	return 0;
+}
+
 int Cstock_db::deal_cmd(int argc, char *argv[])
 {
 	//OUT_LINE //test 
