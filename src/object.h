@@ -20,6 +20,7 @@
 #include "ex_func.h"
 #include "uuid.h"
 #include "bits.def"
+#include "action_type.h"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
@@ -27,8 +28,6 @@ using std::wstring;
 using std::list;
 using std::cout;
 using std::endl;
-
-typedef  unsigned long long ACTION_T;
 
 enum UsingLanguage
 {
@@ -253,6 +252,8 @@ namespace n_object {
 		int sys_cmd(string *cmd);
 		int sys_cmd();
 		int clear(void *p=nullptr);
+		//action
+		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
 		//virtual
 		virtual Object * get_class();//object addressS
 		virtual Object * where();//object address

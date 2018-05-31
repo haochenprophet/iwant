@@ -707,6 +707,26 @@ void Object::delay_clock(clock_t count)
 	while((clock()-t)<count);
 }
 
+bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
+{
+	if (r == EatcionRelation::none)		return false;	//0,
+	if (r == EatcionRelation::equal)		return (a == t);	//==
+	if (r == EatcionRelation::large)		return (a >t);	//>
+	if (r == EatcionRelation::large_equal)		return (a >= t);	//>=
+	if (r == EatcionRelation::small_)		return (a < t);	//< small
+	if (r == EatcionRelation::small_equal)		return (a <= t);	//<=
+	if (r == EatcionRelation::and)			return (a && t);//&&
+	if (r == EatcionRelation:: or )		return (a || t);//||
+	if (r == EatcionRelation::not)			return (!a);//	!
+	if (r == EatcionRelation::bit_and)		return (a & t);	//&
+	if (r == EatcionRelation::bit_or)			return (a | t);//|
+	if (r == EatcionRelation::bit_not)		return (~a);	//~
+	if (r == EatcionRelation::bit_xor)		return (a ^ t);	//^
+	if (r == EatcionRelation::not_and)		return (~a & t);	//~&
+	if (r == EatcionRelation::not_or)		return (~a | t);	//~|
+	return false; //other is none action 
+}
+
 Object * Object::get_class()//object address
 {
 	return this;	
