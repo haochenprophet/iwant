@@ -718,20 +718,18 @@ bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
 	if (r == EatcionRelation::and)	 return (a && t);//&&
 	if (r == EatcionRelation:: or ) return (a || t);//||
 	if (r == EatcionRelation::not) return (!a);//	!
-	if (r == EatcionRelation::bit_and) return (a & t);	//&
-	if (r == EatcionRelation::bit_or)	 return (a | t);//|
-	if (r == EatcionRelation::bit_not) return (~a);	//~
-	if (r == EatcionRelation::bit_xor) return (a ^ t);	//^
-	if (r == EatcionRelation::not_and) return (~a & t);	//~&
-	if (r == EatcionRelation::not_or) return (~a | t);	//~|
+	if (r == EatcionRelation::bit_and) return (a & t)?true:false;	//&
+	if (r == EatcionRelation::bit_or)	 return (a | t)?true:false;//|
+	if (r == EatcionRelation::bit_not) return (~a)?true:false;	//~
+	if (r == EatcionRelation::bit_xor) return (a ^ t)?true:false;	//^
+	if (r == EatcionRelation::not_and) return (~a & t)?true:false;	//~&
+	if (r == EatcionRelation::not_or) return (~a | t)?true:false;	//~|
 	return false; //other is none action 
 }
 
 int Object::do_action(Action * a, int count, Object * o)
 {
-	int i;
-	ActionInfo * s;
-	for (i = 0; i < count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		if (a[i].t == 0) break;
 		if (!this->is_action(this->action, a[i].t, a[i].r)) continue;

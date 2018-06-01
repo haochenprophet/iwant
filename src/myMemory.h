@@ -18,14 +18,14 @@ namespace n_my_memory {
 		int allot_flag;
 	public:
 		char *addr;//by byte memory 
-		int size;
+		size_t size;
 		int type;//0 is no type
 	public:
 		int my_init(void *p=nullptr);
 		CmyMemory();
 		CmyMemory(int size); 
 		~CmyMemory();
-		void *allot(int size=0,int type=0,int re_allot=0);//MY_MEMORY_REALLOT
+		void *allot(size_t size=0,int type=0,int re_allot=0);//MY_MEMORY_REALLOT
 		bool isMe(void * addr = nullptr, long id = 0,string name=""); 
 		void delete_me();
 		int set_addr(char *start,char *end,int type=0);

@@ -22,8 +22,8 @@ namespace n_file {
 		int f_append(char *filename, string ap_str);
 		int f_append(char * ap_str);
 		int f_append(string * ap_str);
-		int f_size(char *f_name);
-		int f_size();
+		size_t f_size(char *f_name);
+		size_t f_size();
 		int f_read(char *f_name);
 		int f_read();
 		char * f_find(char *f_name,char * str,char *start);

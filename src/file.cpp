@@ -64,17 +64,17 @@ int Cfile::f_append(char *filename, string ap_str)
 }
 
 
-int Cfile::f_size(char *f_name)
+size_t Cfile::f_size(char *f_name)
 {
 	std::ifstream is (f_name, std::ifstream::binary);
 	if (!is) return -1;	
 	is.seekg (0, is.end);
-	int len=is.tellg();
+	size_t len=is.tellg();
 	is.close();
 	return len;
 }
 
-int Cfile::f_size()
+size_t Cfile::f_size()
 {
 	if(this->size>0) return this->size-1;
 	if(this->f_name.empty()) return -1;
@@ -87,7 +87,7 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 	if (!is) return -1;
 
 	is.seekg (0, is.end);
-	int len=is.tellg();
+	size_t len=is.tellg();
 
 	this->allot(len+1,FileData_T,MY_MEMORY_REALLOT); // get size of file for allot memory
 
@@ -152,7 +152,7 @@ char * Cfile::f_find(char * str,char *start)
 int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
 {
 	char *cp=nullptr;
-	int len=strlen(func_name);
+	size_t len=strlen(func_name);
 
 	while(1)
 	{

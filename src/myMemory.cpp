@@ -31,7 +31,7 @@ CmyMemory::~CmyMemory()
 	this->delete_me();
 }
 
-void * CmyMemory::allot(int size, int type,int re_allot)
+void * CmyMemory::allot(size_t size, int type,int re_allot)
 {
 	if (size<1) return nullptr;
 

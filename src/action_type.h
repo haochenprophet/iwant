@@ -22,20 +22,20 @@ enum class EatcionRelation {
 	not_or,//~|
 };
 
-typedef struct StepActionStruct
+typedef struct ActionInfoStruct
 {
 	int step;
 	void * action;//this action point can : object ,script, callback func, sql , ...
 	void * time;//point time
 	void * location;//point location
 	void * executor;// point executor
-}StepActionS;
+}ActionInfo;
 
 typedef struct ActionStruct
 {
 	ACTION_T t;//action type
 	EatcionRelation r;//action operate
-	void * action;//action table ending in 0  , ie.[1,2,3,0] ,can point StepActionS
-}ActionS;
+	void * action;//action table ending in 0  , ie.[1,2,3,0] ,can point ActionInfo
+}Action;
 
 #endif // !ACTION_TYPE_H
