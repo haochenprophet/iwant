@@ -727,6 +727,27 @@ bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
 	return false; //other is none action 
 }
 
+int Object::do_action(Action * a, int count, Object * o)
+{
+	int i;
+	ActionInfo * s;
+	for (i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (!this->is_action(this->action, a[i].t, a[i].r)) continue;
+		if (a[i].action == nullptr) continue;
+		if (o == nullptr) this->do_action(a[i].action);
+		else o->do_action(a[i].action);
+	}
+	return 0;
+}
+
+int Object::do_action(void * a)
+{
+	OUT_LINE //test
+	return 0;
+}
+
 Object * Object::get_class()//object address
 {
 	return this;	

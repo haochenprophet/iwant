@@ -92,9 +92,9 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
 	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
-	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
-	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
-	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
+	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
+	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
 	return 0;
 }
 
@@ -134,9 +134,9 @@ int Cstock_db::calculate_ma_first(void *p)
 int Cstock_db::func(void *p)// callback function
 {
 	//OUT_LINE //test 
-	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
-	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
-	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
+	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
+	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
+	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
 	return 0;
 }
 
@@ -160,7 +160,7 @@ int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
 	return 0;
 }
 
-int action_cmd(int argc, char *argv[])
+int Cstock_db::action_cmd(int argc, char *argv[])
 {
 	//OUT_LINE //test 
 	return 0;
@@ -187,9 +187,9 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	this->my_sql->tab_name = (char *)argv[4];
 	
 	//parse and run action
-	if (this->action&(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
-	if (this->action&(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
-	if (this->action&(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
+	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
+	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
+	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
 	return 0;
 }
 

@@ -254,6 +254,8 @@ namespace n_object {
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
+		int do_action(Action * a, int count, Object * o= nullptr);//do action table 
+		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS
 		virtual Object * where();//object address
