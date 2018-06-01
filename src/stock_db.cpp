@@ -85,6 +85,7 @@ int Cstock_db::print_all_data(MYSQL_ROW row, unsigned int * num_fields, unsigned
 		printf("[%.*s] ", (int)lengths[i], row[i] ? row[i] : "NULL");
 	}
 	printf("\n");
+	return 0;
 }
 
 int Cstock_db::execute(void *p1, void *p2, void *p3)
