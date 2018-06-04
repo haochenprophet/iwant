@@ -11,9 +11,9 @@ enum class EatcionRelation {
 	large_equal,//>=
 	small_,//< small
 	small_equal,//<=
-	and,//&&
-	or ,//||
-	not,//!
+	and_,//&&
+	or_ ,//||
+	not_,//!
 	bit_and,//&
 	bit_or,//|
 	bit_not,//~
