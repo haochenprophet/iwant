@@ -18,6 +18,7 @@ namespace n_stock_db {
 		int my_init(void *p=nullptr);
 		int execute(void *p1, void *p2, void *p3);
 		int func(void *p = nullptr); // callback function
+		int parse_run_action(int argc, char *argv[]);
 		int deal_cmd(int argc, char *argv[]);
 		int do_action(void * a);
 		int display(ActionInfo * a);
@@ -32,6 +33,9 @@ namespace n_stock_db {
 		int calculate_ma_cmd(int argc, char *argv[]); //calculate_ma action cmdd call back func.
 		int calculate_ma_first(void *p = nullptr);//calculate_ma action call back func 1
 		int calculate_ma_second(void *p1, void *p2, void *p3);//calculate_ma action call back func 2
+		int add_avg_second(void *p1, void *p2, void *p3);
+		int add_avg_first(void *p);
+		int add_avg_cmd(int argc, char *argv[]);
 	};
 }
 

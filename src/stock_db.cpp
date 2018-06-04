@@ -41,6 +41,19 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 	return 0;
 }
 
+int Cstock_db::add_avg_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	sprintf(this->my_sql->sql_buf, ADD_AVG_COLUMN, this->my_sql->db_name, this->row[0]);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::alter;
+	return 0;
+}
+
 int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test ok
@@ -94,6 +107,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
 	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
 	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_second(p1, p2, p3);
 	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
 	return 0;
 }
@@ -114,12 +128,19 @@ int Cstock_db::verify_id_first(void *p)
 	return 0;
 }
 
+int Cstock_db::add_avg_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
+	return 0;
+}
+
 int Cstock_db::add_ma_first(void *p)
 {
 	this->pm = (Cmy_sql *)p;
 	this->my_sql->sql_opetate = SqlOperate::nothing;
 	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
-
 	return 0;
 }
 
@@ -136,6 +157,7 @@ int Cstock_db::func(void *p)// callback function
 	//OUT_LINE //test 
 	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
 	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_first(p);
 	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
 	return 0;
 }
@@ -151,6 +173,10 @@ int Cstock_db::add_ma_cmd(int argc, char *argv[])
 	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
 }
 
+int Cstock_db::add_avg_cmd(int argc, char *argv[])
+{
+	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
+}
 //BEGIN; SET SQL_SAFE_UPDATES = 0; UPDATE stock.sh000001 SET ma = turnover / volume; SET SQL_SAFE_UPDATES = 1; COMMIT;
 int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
 {
@@ -189,6 +215,16 @@ int Cstock_db::action_cmd(int argc, char *argv[])
 	return 0;
 }
 
+int Cstock_db::parse_run_action(int argc, char *argv[])
+{
+	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
+	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_cmd(argc, argv);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
+	//this->action_cmd(argc, argv);//use the stock_db_action table .
+	return 0;
+}
+
 int Cstock_db::deal_cmd(int argc, char *argv[])
 {
 	//OUT_LINE //test 
@@ -210,10 +246,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	this->my_sql->tab_name = (char *)argv[4];
 	
 	//parse and run action
-	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
-	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
-	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
-	this->action_cmd(argc, argv);//use the stock_db_action table .
+	this->parse_run_action(argc, argv);
 	return 0;
 }
 
