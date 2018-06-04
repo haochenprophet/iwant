@@ -160,9 +160,32 @@ int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
 	return 0;
 }
 
+int Cstock_db::display(ActionInfo * a)
+{
+	do {
+		if (a->step == 0 && a->action == nullptr) break;
+		cout << a->step << ":" << (char *)a->action << endl;
+		a++;
+	} while (1);
+	return 0;
+}
+
+int Cstock_db::do_action(void * a)
+{
+	//OUT_LINE //test 
+	this->action_info = (ActionInfo *)a;
+	do {
+		if (this->action_info->step == 0 && this->action_info->action == nullptr) break;
+		cout << this->action_info->step << ":" << (char *)this->action_info->action << endl;
+		this->action_info++;
+	} while (1);
+	return 0;
+}
+
 int Cstock_db::action_cmd(int argc, char *argv[])
 {
 	//OUT_LINE //test 
+	this->deal_action(stock_db_action, (int)STOCK_DB_ACTION_COUNT, nullptr);
 	return 0;
 }
 
@@ -190,6 +213,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	if (this->action==(ACTION_T)StockAtcion::verify_id) this->verify_id_cmd(argc, argv);
 	if (this->action==(ACTION_T)StockAtcion::add_ma) this->add_ma_cmd(argc, argv);
 	if (this->action==(ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd(argc, argv);
+	this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }
 

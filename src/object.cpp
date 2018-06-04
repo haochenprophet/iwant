@@ -727,7 +727,7 @@ bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
 	return false; //other is none action 
 }
 
-int Object::do_action(Action * a, int count, Object * o)
+int Object::deal_action(Action * a, int count, Object * o)
 {
 	for (int i = 0; i < count; i++)
 	{

@@ -48,7 +48,7 @@ char * Csearch::searchKmp(char *start,char *str,long len,int retStart) //KMP Sea
 { 
 	int i=0,j=1,tlen,*next; 
 
-	tlen=strlen(str);
+	tlen=(int)strlen(str);
 	if(!tlen) return 0;
 
 	next=(int*)malloc(tlen*sizeof(int));//allot memory

@@ -19,6 +19,8 @@ namespace n_stock_db {
 		int execute(void *p1, void *p2, void *p3);
 		int func(void *p = nullptr); // callback function
 		int deal_cmd(int argc, char *argv[]);
+		int do_action(void * a);
+		int display(ActionInfo * a);
 		int action_cmd(int argc, char *argv[]); 
 		int verify_id_cmd(int argc, char *argv[]);//verify_id action cmdd call back func.
 		int verify_id_first(void *p = nullptr);//verify_id action call back func 1

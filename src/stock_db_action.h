@@ -5,9 +5,11 @@
 
 enum class StockAtcion {
 	none = 0,
-	verify_id = BIT0,
-	add_ma = BIT1,
-	calculate_ma = BIT2,
+	verify_id = BIT0,//1
+	add_ma = BIT1,//2
+	add_avg = 3,//3
+	calculate_ma = BIT2,//4
+
 };
 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
@@ -39,9 +41,10 @@ ActionInfo calculate_ma[] = {
 };
 
 Action stock_db_action[]={
-	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::bit_and , verify_id },
-	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::bit_and , add_ma },
-	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::bit_and , calculate_ma },
+//	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id },
+//	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma },
+	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma },
+//	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma },
 	{0,EatcionRelation::none,nullptr }//!0 is the table end anchor
 };
 

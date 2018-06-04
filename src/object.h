@@ -114,6 +114,7 @@ namespace n_object {
 		int status;
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
+		ActionInfo * action_info;
 		int error; //error count >0 error
 		int count;
 		int cin_buf_len;
@@ -254,7 +255,7 @@ namespace n_object {
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
-		int do_action(Action * a, int count, Object * o= nullptr);//do action table 
+		int deal_action(Action * a, int count, Object * o= nullptr);//do action table 
 		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS
