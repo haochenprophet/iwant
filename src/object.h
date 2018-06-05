@@ -143,7 +143,10 @@ namespace n_object {
 		int direction;
 		int value;
 		int velocity;
-		
+		//object cmd
+		int argc;
+		char ** argv;
+
 		list<void *> family;//class list
 		list<void *> exist_family;//class exist other family for removeMe frome other class 。
 

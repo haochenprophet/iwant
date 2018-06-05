@@ -92,6 +92,8 @@ Object::Object()
 	this->action=0;
 	this->error=0;
 	this->locate = -1;
+	this->argc = 0;
+	this->argv = nullptr;
 	this->name = "Object";
 	this->alias = this->name;
 	this->s_tag="[tag]";
@@ -835,6 +837,8 @@ int Object::clear(void *p)
 
 int Object::deal_cmd(int argc, char *argv[])
 {
+	this->argc = argc;
+	this->argv = argv;
 	do{
 		argc--;
 		AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line

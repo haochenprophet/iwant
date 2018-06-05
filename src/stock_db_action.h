@@ -3,13 +3,13 @@
 
 #include "action_type.h"
 
-enum class StockAtcion {
+enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number will be change  
 	none = 0,
 	verify_id = BIT0,//1
 	add_ma = BIT1,//2
 	add_avg = 3,//3
 	calculate_ma = BIT2,//4
-
+	build_batch =5,//5
 };
 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
@@ -21,6 +21,7 @@ enum class StockAtcion {
 #define SET_SAFE_UPDATES_0  "SET SQL_SAFE_UPDATES = 0;"
 #define SET_SAFE_UPDATES_1  "SET SQL_SAFE_UPDATES = 1;"
 #define UPDATE_MA "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;"
+#define BUILD_BATCH "%s %s %s %s"  //[0].exe [1]action [2]password [3]db_name [4]tab_name
 
 ActionInfo verify_id[]={
 	{1,(char *)SELECT_STOCK_ID },

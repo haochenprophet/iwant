@@ -18,24 +18,27 @@ namespace n_stock_db {
 		int my_init(void *p=nullptr);
 		int execute(void *p1, void *p2, void *p3);
 		int func(void *p = nullptr); // callback function
-		int parse_run_action(int argc, char *argv[]);
+		int parse_run_action();
 		int deal_cmd(int argc, char *argv[]);
 		int do_action(void * a);
 		int display(ActionInfo * a);
-		int action_cmd(int argc, char *argv[]); 
-		int verify_id_cmd(int argc, char *argv[]);//verify_id action cmdd call back func.
+		int action_cmd(); 
+		int verify_id_cmd();//verify_id action cmdd call back func.
 		int verify_id_first(void *p = nullptr);//verify_id action call back func 1
 		int verify_id_second(void *p1, void *p2, void *p3);//verify_id action call back func 2
-		int add_ma_cmd(int argc, char *argv[]); //add_ma action cmdd call back func.
+		int add_ma_cmd(); //add_ma action cmdd call back func.
 		int add_ma_first(void *p = nullptr);//add_ma action call back func 1
 		int add_ma_second(void *p1, void *p2, void *p3);//add_ma action call back func 2
 		int print_all_data(MYSQL_ROW row, unsigned int* num_fields, unsigned long *lengths);
-		int calculate_ma_cmd(int argc, char *argv[]); //calculate_ma action cmdd call back func.
+		int calculate_ma_cmd(); //calculate_ma action cmdd call back func.
 		int calculate_ma_first(void *p = nullptr);//calculate_ma action call back func 1
 		int calculate_ma_second(void *p1, void *p2, void *p3);//calculate_ma action call back func 2
 		int add_avg_second(void *p1, void *p2, void *p3);
 		int add_avg_first(void *p);
-		int add_avg_cmd(int argc, char *argv[]);
+		int add_avg_cmd();
+		int build_batch_second(void *p1, void *p2, void *p3);
+		int build_batch_first(void *p);
+		int build_batch_cmd();
 	};
 }
 
