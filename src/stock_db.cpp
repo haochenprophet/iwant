@@ -33,7 +33,7 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 	int id = atoi(this->row[0]);
 	if (this->my_sql&&this->count != id)
 	{
-		sprintf(this->my_sql->sql_buf, "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';", this->my_sql->db_name, this->my_sql->tab_name, this->count, id);
+		sprintf(this->my_sql->sql_buf, UPDATE_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name, this->count, id);
 		printf("%s\n", this->my_sql->sql_buf);
 		this->my_sql->execute(this->my_sql->sql_buf);
 		this->my_sql->sql_opetate = SqlOperate::update;
@@ -65,7 +65,7 @@ int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 	
-	sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;", this->my_sql->db_name, this->row[0]);
+	sprintf(this->my_sql->sql_buf, ADD_MA_COLUMN, this->my_sql->db_name, this->row[0]);
 	printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
@@ -81,9 +81,9 @@ int Cstock_db::calculate_ma_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
-	sprintf(this->my_sql->sql_buf, "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;", this->my_sql->db_name, this->row[0]);
+	sprintf(this->my_sql->sql_buf, UPDATE_MA, this->my_sql->db_name, this->row[0]);
 	printf("%s\n", this->my_sql->sql_buf);
-	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 0;");
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
 	this->my_sql->execute(this->my_sql->sql_buf);
 
 	this->my_sql->sql_opetate = SqlOperate::update;
@@ -121,7 +121,7 @@ int Cstock_db::verify_id_first(void *p)
 
 	if (this->my_sql->sql_opetate != SqlOperate::nothing)
 	{
-		sprintf(this->my_sql->sql_buf, "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;", this->my_sql->db_name, this->my_sql->tab_name, this->count + 1);
+		sprintf(this->my_sql->sql_buf, ALTER_AUTO_INCREMENT, this->my_sql->db_name, this->my_sql->tab_name, this->count + 1);
 		printf("%s\n", this->my_sql->sql_buf);
 		this->my_sql->execute(this->my_sql->sql_buf);
 	}
@@ -164,25 +164,25 @@ int Cstock_db::func(void *p)// callback function
 
 int Cstock_db::verify_id_cmd(int argc, char *argv[])//verify_id action cmdd call back func.
 {
-	sprintf(this->my_sql->sql_buf, "SELECT idprice FROM `%s`.`%s` ;", this->my_sql->db_name, this->my_sql->tab_name);
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
 	return 	this->my_sql->execute(this->my_sql->sql_buf, this);//!->func
 }
 
 int Cstock_db::add_ma_cmd(int argc, char *argv[])
 {
-	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
 }
 
 int Cstock_db::add_avg_cmd(int argc, char *argv[])
 {
-	return  this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
 }
 //BEGIN; SET SQL_SAFE_UPDATES = 0; UPDATE stock.sh000001 SET ma = turnover / volume; SET SQL_SAFE_UPDATES = 1; COMMIT;
 int Cstock_db::calculate_ma_cmd(int argc, char *argv[])
 {
-	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 0;");
-	this->my_sql->execute((char *)"SELECT ID FROM stock.ID;", this);//magical 'this'  point !
-	this->my_sql->execute((char *)"SET SQL_SAFE_UPDATES = 1;");
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
+	this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_1);
 	return 0;
 }
 

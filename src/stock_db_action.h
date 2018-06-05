@@ -13,9 +13,10 @@ enum class StockAtcion {
 };
 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
+#define SELECT_IDPEICE "SELECT idprice FROM `%s`.`%s` ;"
 #define UPDATE_IDPEICE "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';"
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
-#define ADD_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;"
+#define ADD_MA_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;"
 #define ADD_AVG_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `avg` DOUBLE NOT NULL DEFAULT 0;"
 #define SET_SAFE_UPDATES_0  "SET SQL_SAFE_UPDATES = 0;"
 #define SET_SAFE_UPDATES_1  "SET SQL_SAFE_UPDATES = 1;"
@@ -30,7 +31,7 @@ ActionInfo verify_id[]={
 
 ActionInfo add_ma[] = {
 	{ 1,(char *)SELECT_STOCK_ID },
-	{ 2,(char *)ADD_COLUMN },//step 2
+	{ 2,(char *)ADD_MA_COLUMN },//step 2
 	{ 0,nullptr }//!0 and nullptr is the action table end anchor
 };
 
