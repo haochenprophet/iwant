@@ -27,7 +27,7 @@ Self-creation, self-renewal, self-improvement, creating classes, creating source
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
 
-[Coding rule]:
+[Coding rule]:We should endless pursuit of the graceful code.
 
 1.function return code rule : <0 do nothing , ==0 success, >0 fail .
 
