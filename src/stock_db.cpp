@@ -210,12 +210,7 @@ int Cstock_db::display(ActionInfo * a)
 int Cstock_db::do_action(void * a)
 {
 	//OUT_LINE //test 
-	this->action_info = (ActionInfo *)a;
-	do {
-		if (this->action_info->step == 0 && this->action_info->action == nullptr) break;
-		cout << this->action_info->step << ":" << (char *)this->action_info->action << endl;
-		this->action_info++;
-	} while (1);
+	this->parse_run_action();
 	return 0;
 }
 

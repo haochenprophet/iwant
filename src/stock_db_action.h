@@ -44,10 +44,11 @@ ActionInfo calculate_ma[] = {
 };
 
 Action stock_db_action[]={
-//	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id },
-//	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma },
+	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id },
+	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma },
 	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma },
-//	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma },
+	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma },
+	{ (ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr },
 	{0,EatcionRelation::none,nullptr }//!0 is the table end anchor
 };
 
