@@ -8,7 +8,8 @@ namespace n_stock_db {
 	class Cstock_db :public Object
 	{
 	public:
-		Cmy_sql * my_sql, *pm;//point_mysql		
+		Cmy_sql * my_sql, *pm;//point_mysql	
+		MYSQL_RES  *result;
 		MYSQL_ROW row;
 		unsigned int * num_fields;
 		unsigned long *lengths;
@@ -39,6 +40,9 @@ namespace n_stock_db {
 		int build_batch_second(void *p1, void *p2, void *p3);
 		int build_batch_first(void *p);
 		int build_batch_cmd();
+		int calculate_avg_second(void *p1, void *p2, void *p3);
+		int calculate_avg_first(void *p);
+		int calculate_avg_cmd();
 	};
 }
 

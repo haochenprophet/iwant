@@ -177,7 +177,7 @@ int Cmy_sql::execute(Object *o)
 		if(this->result)
 		{
 			o->execute( (void*) this); //point Cmy_sql to call back
-			mysql_free_result(this->result);
+			//mysql_free_result(this->result);
 		}
 	} while (!mysql_next_result(this->mysql));
 	return 0;
