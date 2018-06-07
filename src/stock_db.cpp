@@ -285,6 +285,78 @@ int Cstock_db::calculate_rd_cmd()
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_1);
 	return 0;
 }
+//delete_zero
+int Cstock_db::delete_zero_second(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test ok
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
+
+	sprintf(this->my_sql->sql_buf, DELETE_ZERO_ROW, this->my_sql->db_name, this->row[0]);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::delete_;
+	return 0;
+}
+int Cstock_db::delete_zero_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);//->execute(void *p1, void *p2, void *p3)
+	return 0;
+}
+int Cstock_db::delete_zero_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
+}
+
+int Cstock_db::execute(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test 
+	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
+	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_second(p1, p2, p3);
+	return 0;
+}
+
+int Cstock_db::func(void *p)// callback function
+{
+	//OUT_LINE //test 
+	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
+	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_first(p);
+	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_first(p);
+	return 0;
+}
+
+int Cstock_db::parse_run_action()
+{
+	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd();
+	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_cmd();
+	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_cmd();
+	//this->action_cmd(argc, argv);//use the stock_db_action table .
+	return 0;
+}
+
 //action
 int Cstock_db::display(ActionInfo * a)
 {
@@ -307,49 +379,6 @@ int Cstock_db::action_cmd()
 {
 	//OUT_LINE //test 
 	this->deal_action(stock_db_action, (int)STOCK_DB_ACTION_COUNT, nullptr);
-	return 0;
-}
-
-int Cstock_db::execute(void *p1, void *p2, void *p3)
-{
-	//OUT_LINE //test 
-	//this->print_all_data((MYSQL_ROW)p1, (unsigned int *)p2, (unsigned long *)p3);//test
-	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_second(p1, p2, p3);
-	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_second(p1, p2, p3);
-	return 0;
-}
-
-int Cstock_db::func(void *p)// callback function
-{
-	//OUT_LINE //test 
-	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_first(p);
-	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_first(p);
-	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_first(p);
-	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_first(p);
-	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_first(p);
-	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_first(p);
-	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_first(p);
-	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_first(p);
-	return 0;
-}
-
-int Cstock_db::parse_run_action()
-{
-	if (this->action == (ACTION_T)StockAtcion::verify_id) this->verify_id_cmd();
-	if (this->action == (ACTION_T)StockAtcion::add_ma) this->add_ma_cmd();
-	if (this->action == (ACTION_T)StockAtcion::add_avg) this->add_avg_cmd();
-	if (this->action == (ACTION_T)StockAtcion::calculate_ma) this->calculate_ma_cmd();
-	if (this->action == (ACTION_T)StockAtcion::build_batch) this->build_batch_cmd();
-	if (this->action == (ACTION_T)StockAtcion::calculate_avg) this->calculate_avg_cmd();
-	if (this->action == (ACTION_T)StockAtcion::add_rd) this->add_rd_cmd();
-	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_cmd();
-	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }
 

@@ -49,6 +49,9 @@ namespace n_stock_db {
 		int calculate_rd_second(void *p1, void *p2, void *p3);
 		int calculate_rd_first(void *p);
 		int calculate_rd_cmd();
+		int delete_zero_second(void *p1, void *p2, void *p3);
+		int delete_zero_first(void *p);
+		int delete_zero_cmd();
 	};
 }
 
