@@ -43,6 +43,9 @@ namespace n_stock_db {
 		int calculate_avg_second(void *p1, void *p2, void *p3);
 		int calculate_avg_first(void *p);
 		int calculate_avg_cmd();
+		int add_rd_second(void *p1, void *p2, void *p3);
+		int add_rd_first(void *p);
+		int add_rd_cmd();
 	};
 }
 
