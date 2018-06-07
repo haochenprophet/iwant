@@ -12,6 +12,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	build_batch =5,//5
 	calculate_avg = 6,//6
 	add_rd =7, //rise & drop
+	calculate_rd = 8,//8
 };
 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
@@ -27,6 +28,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define BUILD_BATCH "%s %s %s %s"  //[0].exe [1]action [2]password [3]db_name [4]tab_name
 #define SELECT_AVG_MA "SELECT avg(ma) FROM %s.%s where idprice<=%s;"
 #define UPDATE_AVG "UPDATE `%s`.`%s` SET `avg`='%s' WHERE `idprice`='%s' AND `avg`=0;"
+#define UPDATE_RD "UPDATE  `%s`.`%s` SET rd = (close - y_close) / y_close * 100 WHERE close >0 AND y_close >0 AND rd = 0;"
 
 ActionInfo verify_id[]={
 	{1,(char *)SELECT_STOCK_ID },
