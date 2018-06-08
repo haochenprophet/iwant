@@ -750,6 +750,7 @@ int Object::do_action(void * a)
 
 int Object::action_help(Action * a, int count)
 {
+	printf("[action]:\n");
 	for (int i = 0; i < count; i++)
 	{
 		if (a[i].t == 0) break;
