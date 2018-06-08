@@ -36,6 +36,8 @@ typedef struct ActionStruct
 	ACTION_T t;//action type
 	EatcionRelation r;//action operate
 	void * action;//action table ending in 0  , ie.[1,2,3,0] ,can point ActionInfo
+	char * name; // action name
+	char * help;
 }Action;
 
 #endif // !ACTION_TYPE_H

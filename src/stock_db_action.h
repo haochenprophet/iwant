@@ -54,13 +54,15 @@ ActionInfo calculate_ma[] = {
 };
 
 Action stock_db_action[]={
-	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id },
-	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma },
-	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma },
-	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma },
-	{ (ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr },
-	{ (ACTION_T)StockAtcion::calculate_avg , EatcionRelation::equal , nullptr },
-	{ (ACTION_T)StockAtcion::add_rd , EatcionRelation::equal , nullptr },
+	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id ,"verify_id"},
+	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma ,"add_ma"},
+	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma,"add_ma" },
+	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma,"calculate_ma" },
+	{ (ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr,"build_batch" },
+	{ (ACTION_T)StockAtcion::calculate_avg , EatcionRelation::equal , nullptr, "calculate_avg"},
+	{ (ACTION_T)StockAtcion::add_rd , EatcionRelation::equal , nullptr,"add_rd" },
+	{ (ACTION_T)StockAtcion::calculate_rd , EatcionRelation::equal , nullptr,"calculate_rd" },
+	{ (ACTION_T)StockAtcion::delete_zero , EatcionRelation::equal , nullptr,"delete_zero" },
 	{0,EatcionRelation::none,nullptr }//!0 is the table end anchor
 };
 

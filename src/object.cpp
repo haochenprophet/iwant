@@ -748,6 +748,18 @@ int Object::do_action(void * a)
 	return 0;
 }
 
+int Object::action_help(Action * a, int count)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (a[i].name) printf("%d %s ", (int)a[i].t, a[i].name);
+		if (a[i].help) printf("%s ", a[i].help);
+		else printf("\n");
+	}
+	return 0;
+}
+
 Object * Object::get_class()//object address
 {
 	return this;	

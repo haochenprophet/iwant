@@ -28,7 +28,7 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 	//this->lengths = (unsigned long *)p3;
 	if (!this->row || !p2 || !p3) return -1;
 	this->count++;
-	printf("[%d]%s\n", this->count, this->row[0]);
+	//printf("[%d]%s\n", this->count, this->row[0]);
 
 	int id = atoi(this->row[0]);
 	if (this->my_sql&&this->count != id)
@@ -389,6 +389,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	if (argc < 5)
 	{
 		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";
+		this->action_help(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 		return -1;
 	}
 	this->argc = argc;//store user input parameter
