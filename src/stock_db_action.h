@@ -14,6 +14,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	add_rd =7, //rise & drop
 	calculate_rd = 8,//8
 	delete_zero=9,//9
+	add_kprice,//10
 };
 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
@@ -31,6 +32,9 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_AVG "UPDATE `%s`.`%s` SET `avg`='%s' WHERE `idprice`='%s' AND `avg`=0;"
 #define UPDATE_RD "UPDATE  `%s`.`%s` SET rd = (close - y_close) / y_close * 100 WHERE close >0 AND y_close >0 AND rd = 0;"
 #define DELETE_ZERO_ROW "DELETE FROM `%s`.`%s` WHERE `y_close`='0' AND `open`='0'AND `close`='0' AND `high`='0' AND `low`='0';"
+//k_price
+#define ADD_K_PRICE_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `k_price` DOUBLE NOT NULL DEFAULT 0 COMMENT 'key price' ;"
+
 
 //action_table define
 ActionInfo verify_id[]={
@@ -54,15 +58,16 @@ ActionInfo calculate_ma[] = {
 };
 
 Action stock_db_action[]={
-	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id ,"verify_id"},
-	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma ,"add_ma"},
-	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma,"add_ma" },
-	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma,"calculate_ma" },
-	{ (ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr,"build_batch" },
-	{ (ACTION_T)StockAtcion::calculate_avg , EatcionRelation::equal , nullptr, "calculate_avg"},
-	{ (ACTION_T)StockAtcion::add_rd , EatcionRelation::equal , nullptr,"add_rd" },
-	{ (ACTION_T)StockAtcion::calculate_rd , EatcionRelation::equal , nullptr,"calculate_rd" },
-	{ (ACTION_T)StockAtcion::delete_zero , EatcionRelation::equal , nullptr,"delete_zero" },
+	{ (ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id ,(char *)"verify_id"},
+	{ (ACTION_T)StockAtcion::add_ma , EatcionRelation::equal , add_ma ,(char *)"add_ma"},
+	{ (ACTION_T)StockAtcion::add_avg , EatcionRelation::equal , add_ma,(char *)"add_ma" },
+	{ (ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , calculate_ma,(char *)"calculate_ma" },
+	{ (ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr,(char *)"build_batch" },
+	{ (ACTION_T)StockAtcion::calculate_avg , EatcionRelation::equal , nullptr,(char *) "calculate_avg"},
+	{ (ACTION_T)StockAtcion::add_rd , EatcionRelation::equal , nullptr,(char *)"add_rd" },
+	{ (ACTION_T)StockAtcion::calculate_rd , EatcionRelation::equal , nullptr,(char *)"calculate_rd" },
+	{ (ACTION_T)StockAtcion::delete_zero , EatcionRelation::equal , nullptr,(char *)"delete_zero" },
+	{ (ACTION_T)StockAtcion::add_kprice , EatcionRelation::equal , nullptr,(char *)"add_kprice" },
 	{0,EatcionRelation::none,nullptr }//!0 is the table end anchor
 };
 

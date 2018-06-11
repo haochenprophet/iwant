@@ -52,6 +52,9 @@ namespace n_stock_db {
 		int delete_zero_second(void *p1, void *p2, void *p3);
 		int delete_zero_first(void *p);
 		int delete_zero_cmd();
+		int add_kprice_second(void *p1, void *p2, void *p3);
+		int add_kprice_first(void *p);
+		int add_kprice_cmd();
 	};
 }
 
