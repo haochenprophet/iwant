@@ -761,6 +761,16 @@ int Object::action_help(Action * a, int count)
 	return 0;
 }
 
+ACTION_T Object::get_action(Action * a, int count, char * name)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (0 == strcmp(a[i].name, name)) return a[i].t;
+	}
+	return (ACTION_T)0;
+}
+
 Object * Object::get_class()//object address
 {
 	return this;	

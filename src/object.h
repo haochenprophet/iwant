@@ -260,6 +260,7 @@ namespace n_object {
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
 		int deal_action(Action * a, int count, Object * o= nullptr);//do action table 
 		int action_help(Action * a, int count);
+		ACTION_T get_action(Action * a, int count,char * name);
 		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS
