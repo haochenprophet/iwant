@@ -55,6 +55,44 @@ namespace n_stock_db {
 		int add_kprice_second(void *p1, void *p2, void *p3);
 		int add_kprice_first(void *p);
 		int add_kprice_cmd();
+		int add_column(char * sql, char *db, char * table);
+		int add_ma5_second(void *p1, void *p2, void *p3);
+		int add_ma5_first(void *p = nullptr);
+		int add_ma5_cmd(); 
+		int add_ma10_second(void *p1, void *p2, void *p3);
+		int add_ma10_first(void *p = nullptr);
+		int add_ma10_cmd();
+		int add_ma20_second(void *p1, void *p2, void *p3);
+		int add_ma20_first(void *p = nullptr);
+		int add_ma20_cmd();
+		int add_ma30_second(void *p1, void *p2, void *p3);
+		int add_ma30_first(void *p = nullptr);
+		int add_ma30_cmd();
+		int add_ma60_second(void *p1, void *p2, void *p3);
+		int add_ma60_first(void *p = nullptr);
+		int add_ma60_cmd();
+		int add_ma100_second(void *p1, void *p2, void *p3);
+		int add_ma100_first(void *p = nullptr);
+		int add_ma100_cmd();
+		int calculate_ma(int x);//!!
+		int calculate_ma5_second(void *p1, void *p2, void *p3);
+		int calculate_ma5_first(void *p);
+		int calculate_ma5_cmd();
+		int calculate_ma10_second(void *p1, void *p2, void *p3);
+		int calculate_ma10_first(void *p);
+		int calculate_ma10_cmd();
+		int calculate_ma20_second(void *p1, void *p2, void *p3);
+		int calculate_ma20_first(void *p);
+		int calculate_ma20_cmd();
+		int calculate_ma30_second(void *p1, void *p2, void *p3);
+		int calculate_ma30_first(void *p);
+		int calculate_ma30_cmd();
+		int calculate_ma60_second(void *p1, void *p2, void *p3);
+		int calculate_ma60_first(void *p);
+		int calculate_ma60_cmd();
+		int calculate_ma100_second(void *p1, void *p2, void *p3);
+		int calculate_ma100_first(void *p);
+		int calculate_ma100_cmd();
 	};
 }
 

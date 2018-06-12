@@ -189,7 +189,7 @@ int Cstock_db::build_batch_cmd()
 {
 	if (this->argc < 7)
 	{
-		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
+		cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
 		return -1;
 	}
 
@@ -338,6 +338,290 @@ int Cstock_db::add_kprice_cmd()
 	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
 }
 
+int Cstock_db::add_column(char * sql, char *db, char * table)
+{
+	sprintf(this->my_sql->sql_buf, sql, db, table);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::alter;
+	return 0;
+}
+//add_ma[x]
+int Cstock_db::add_ma5_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA5_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma5_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma5_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+int Cstock_db::add_ma10_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA10_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma10_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma10_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+int Cstock_db::add_ma20_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA20_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma20_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma20_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+int Cstock_db::add_ma30_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA30_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma30_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma30_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+int Cstock_db::add_ma60_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA60_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma60_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma60_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+int Cstock_db::add_ma100_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_MA100_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_ma100_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_ma100_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+//calculate_ma[x]
+int Cstock_db::calculate_ma(int x)
+{
+	sprintf(this->my_sql->sql_buf, SELECT_AVG_MA_X, this->my_sql->db_name, this->my_sql->tab_name, this->row[0], this->row[0], x);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->query(this->my_sql->sql_buf);
+	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
+	if (!this->result) return 1;
+	//cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
+	this->my_sql->sql_opetate = SqlOperate::select;
+
+	sprintf(this->my_sql->sql_buf, UPDATE_MA_X, this->my_sql->db_name, this->my_sql->tab_name,x, *this->result->data->data->data, this->row[0],x);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->query(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
+int Cstock_db::calculate_ma5_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(5);
+}
+
+int Cstock_db::calculate_ma5_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma5_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
+int Cstock_db::calculate_ma10_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(10);
+}
+
+int Cstock_db::calculate_ma10_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma10_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
+int Cstock_db::calculate_ma20_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(20);
+}
+
+int Cstock_db::calculate_ma20_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma20_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
+int Cstock_db::calculate_ma30_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(30);
+}
+
+int Cstock_db::calculate_ma30_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma30_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
+int Cstock_db::calculate_ma60_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(60);
+}
+
+int Cstock_db::calculate_ma60_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma60_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
+int Cstock_db::calculate_ma100_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->calculate_ma(100);
+}
+
+int Cstock_db::calculate_ma100_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_ma100_cmd()
+{
+	sprintf(this->my_sql->sql_buf, SELECT_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
+}
+
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
@@ -352,6 +636,18 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::add_kprice) this->add_kprice_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma5) this->add_ma5_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma10) this->add_ma10_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma20) this->add_ma20_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma30) this->add_ma30_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma60) this->add_ma60_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_ma100) this->add_ma100_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma5) this->calculate_ma5_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma10) this->calculate_ma10_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma20) this->calculate_ma20_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_second(p1, p2, p3);
 	return 0;
 }
 
@@ -368,6 +664,18 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_first(p);
 	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_first(p);
 	if (this->action == (ACTION_T)StockAtcion::add_kprice) this->add_kprice_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma5) this->add_ma5_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma10) this->add_ma10_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma20) this->add_ma20_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma30) this->add_ma30_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma60) this->add_ma60_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_ma100) this->add_ma100_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma5) this->calculate_ma5_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma10) this->calculate_ma10_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma20) this->calculate_ma20_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_first(p);
 	return 0;
 }
 
@@ -383,6 +691,18 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::calculate_rd) this->calculate_rd_cmd();
 	if (this->action == (ACTION_T)StockAtcion::delete_zero) this->delete_zero_cmd();
 	if (this->action == (ACTION_T)StockAtcion::add_kprice) this->add_kprice_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma5) this->add_ma5_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma10) this->add_ma10_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma20) this->add_ma20_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma30) this->add_ma30_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma60) this->add_ma60_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_ma100) this->add_ma100_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma5) this->calculate_ma5_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma10) this->calculate_ma10_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma20) this->calculate_ma20_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_cmd();
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }
@@ -424,8 +744,9 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	}
 	this->argc = argc;//store user input parameter
 	this->argv = argv;
-	//get action 
-	this->action = atoll(argv[1]);
+	//get action
+	this->action = this->get_action(stock_db_action, (int)STOCK_DB_ACTION_COUNT, argv[1]);
+	if(this->action==0) this->action = atoll(argv[1]);//no name 
 	if (this->action == 0) return -1;
 	
 	//init mysql db
