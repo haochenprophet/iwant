@@ -99,6 +99,9 @@ namespace n_stock_db {
 		int calculate_am_second(void *p1, void *p2, void *p3);
 		int calculate_am_first(void *p);
 		int calculate_am_cmd();
+		int calculate_kp_second(void *p1, void *p2, void *p3);
+		int calculate_kp_first(void *p);
+		int calculate_kp_cmd();
 	};
 }
 

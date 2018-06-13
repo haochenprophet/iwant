@@ -29,6 +29,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	calculate_ma100,
 	add_am,//amplitude
 	calculate_am,
+	calculate_kp,//key price
 };
 
 //SELECT 
@@ -55,6 +56,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_MA "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;"
 #define UPDATE_MA_X "UPDATE `%s`.`%s` SET `ma%d`='%s' WHERE `idprice`='%s' AND `ma%d`=0;"
 #define UPDATE_AM "UPDATE  `%s`.`%s` SET am = (high - low) / close * 100 WHERE high >0 AND close >0 AND am = 0;"
+#define UPDATE_KP "UPDATE  `%s`.`%s` SET k_price = ma WHERE rd >5 OR rd <-5 OR am >6;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 //SET
@@ -111,6 +113,7 @@ Action stock_db_action[]={
 	{ (ACTION_T)StockAtcion::calculate_ma100, EatcionRelation::equal , calculate_ma,(char *)"calculate_ma100" },
 	{ (ACTION_T)StockAtcion::add_am, EatcionRelation::equal , nullptr,(char *)"add_am" },
 	{ (ACTION_T)StockAtcion::calculate_am, EatcionRelation::equal , nullptr,(char *)"calculate_am" },
+	{ (ACTION_T)StockAtcion::calculate_kp, EatcionRelation::equal , nullptr,(char *)"calculate_kp" },
 	//0 is the table end anchor
 	{0,EatcionRelation::none,nullptr },
 };
