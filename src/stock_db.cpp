@@ -129,7 +129,6 @@ int Cstock_db::calculate_ma_cmd()
 	return 0;
 }
 
-
 int Cstock_db::print_all_data(MYSQL_ROW row, unsigned int * num_fields, unsigned long *lengths)
 {
 	// out all data
@@ -622,6 +621,54 @@ int Cstock_db::calculate_ma100_cmd()
 	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
 }
 
+int Cstock_db::add_am_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_AM_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+int Cstock_db::add_am_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+int Cstock_db::add_am_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
+//calculate_am
+int Cstock_db::calculate_am_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	sprintf(this->my_sql->sql_buf, UPDATE_AM, this->my_sql->db_name, this->row[0]);
+	printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
+	this->my_sql->execute(this->my_sql->sql_buf);
+
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
+int Cstock_db::calculate_am_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_am_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
@@ -648,6 +695,9 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_second(p1, p2, p3);
+
 	return 0;
 }
 
@@ -676,6 +726,8 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_first(p);
 	return 0;
 }
 
@@ -703,6 +755,8 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma30) this->calculate_ma30_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma60) this->calculate_ma60_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_ma100) this->calculate_ma100_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_cmd();
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }

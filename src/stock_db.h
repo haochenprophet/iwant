@@ -93,6 +93,12 @@ namespace n_stock_db {
 		int calculate_ma100_second(void *p1, void *p2, void *p3);
 		int calculate_ma100_first(void *p);
 		int calculate_ma100_cmd();
+		int add_am_second(void *p1, void *p2, void *p3);
+		int add_am_first(void *p);
+		int add_am_cmd();
+		int calculate_am_second(void *p1, void *p2, void *p3);
+		int calculate_am_first(void *p);
+		int calculate_am_cmd();
 	};
 }
 

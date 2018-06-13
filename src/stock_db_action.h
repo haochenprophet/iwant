@@ -27,6 +27,8 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	calculate_ma30,
 	calculate_ma60,
 	calculate_ma100,
+	add_am,//amplitude
+	calculate_am,
 };
 
 //SELECT 
@@ -45,12 +47,14 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define ADD_MA30_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma30` DOUBLE NOT NULL DEFAULT 0 COMMENT '30-day moving average' ;"
 #define ADD_MA60_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma60` DOUBLE NOT NULL DEFAULT 0 COMMENT '60-day moving average' ;"
 #define ADD_MA100_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma100` DOUBLE NOT NULL DEFAULT 0 COMMENT '100-day moving average' ;"
+#define ADD_AM_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `am` DOUBLE NOT NULL DEFAULT 0 COMMENT 'amplitude' ;"
 //UPDATE 
 #define UPDATE_IDPEICE "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';"
 #define UPDATE_AVG "UPDATE `%s`.`%s` SET `avg`='%s' WHERE `idprice`='%s' AND `avg`=0;"
 #define UPDATE_RD "UPDATE  `%s`.`%s` SET rd = (close - y_close) / y_close * 100 WHERE close >0 AND y_close >0 AND rd = 0;"
 #define UPDATE_MA "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;"
 #define UPDATE_MA_X "UPDATE `%s`.`%s` SET `ma%d`='%s' WHERE `idprice`='%s' AND `ma%d`=0;"
+#define UPDATE_AM "UPDATE  `%s`.`%s` SET am = (high - low) / close * 100 WHERE high >0 AND close >0 AND am = 0;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 //SET
@@ -105,7 +109,10 @@ Action stock_db_action[]={
 	{ (ACTION_T)StockAtcion::calculate_ma30, EatcionRelation::equal , calculate_ma,(char *)"calculate_ma30" },
 	{ (ACTION_T)StockAtcion::calculate_ma60, EatcionRelation::equal , calculate_ma,(char *)"calculate_ma60" },
 	{ (ACTION_T)StockAtcion::calculate_ma100, EatcionRelation::equal , calculate_ma,(char *)"calculate_ma100" },
-	{0,EatcionRelation::none,nullptr }//!0 is the table end anchor
+	{ (ACTION_T)StockAtcion::add_am, EatcionRelation::equal , nullptr,(char *)"add_am" },
+	{ (ACTION_T)StockAtcion::calculate_am, EatcionRelation::equal , nullptr,(char *)"calculate_am" },
+	//0 is the table end anchor
+	{0,EatcionRelation::none,nullptr },
 };
 
 #define  STOCK_DB_ACTION_COUNT (sizeof(stock_db_action) / sizeof(Action))
