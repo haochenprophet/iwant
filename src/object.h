@@ -255,6 +255,7 @@ namespace n_object {
 		int sys_cmd(char * cmd);
 		int sys_cmd(string *cmd);
 		int sys_cmd();
+		int get_cmd(int argc, char *argv[],char *cmd);
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate

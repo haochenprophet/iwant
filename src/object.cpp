@@ -956,6 +956,16 @@ int Object::sys_cmd()
 	return this->sys_cmd((string *)&this->s_cmd);
 }
 
+int Object::get_cmd(int argc, char *argv[], char *cmd)
+{
+	while (argc >= 0)
+	{
+		argc--;
+		if (0 == strcmp(argv[argc], cmd)) return argc;
+	}
+	return -1;
+}
+
 #if OBJECT_TEST
 int main()
 {

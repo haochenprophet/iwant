@@ -14,6 +14,7 @@ Cstock_db::Cstock_db()
 	this->row = nullptr;
 	this->num_fields = nullptr;
 	this->lengths = nullptr;
+	this->silent = 0;
 }
 
 Cstock_db::~Cstock_db()
@@ -34,7 +35,7 @@ int Cstock_db::verify_id_second(void *p1, void *p2, void *p3)
 	if (this->my_sql&&this->count != id)
 	{
 		sprintf(this->my_sql->sql_buf, UPDATE_IDPEICE, this->my_sql->db_name, this->my_sql->tab_name, this->count, id);
-		printf("%s\n", this->my_sql->sql_buf);
+		if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 		this->my_sql->execute(this->my_sql->sql_buf);
 		this->my_sql->sql_opetate = SqlOperate::update;
 	}
@@ -51,7 +52,7 @@ int Cstock_db::verify_id_first(void *p)
 	if (this->my_sql->sql_opetate != SqlOperate::nothing)
 	{
 		sprintf(this->my_sql->sql_buf, ALTER_AUTO_INCREMENT, this->my_sql->db_name, this->my_sql->tab_name, this->count + 1);
-		printf("%s\n", this->my_sql->sql_buf);
+		if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 		this->my_sql->execute(this->my_sql->sql_buf);
 	}
 	return 0;
@@ -76,7 +77,7 @@ int Cstock_db::add_ma_second(void *p1, void *p2, void *p3)
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 	
 	sprintf(this->my_sql->sql_buf,ADD_MA_COLUMN, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
 
@@ -105,7 +106,7 @@ int Cstock_db::calculate_ma_second(void *p1, void *p2, void *p3)
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
 	sprintf(this->my_sql->sql_buf,UPDATE_MA, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
 	this->my_sql->execute(this->my_sql->sql_buf);
 
@@ -148,7 +149,7 @@ int Cstock_db::add_avg_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	sprintf(this->my_sql->sql_buf,ADD_AVG_COLUMN, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
 	return 0;
@@ -202,7 +203,7 @@ int Cstock_db::calculate_avg_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	sprintf(this->my_sql->sql_buf, SELECT_AVG_MA, this->my_sql->db_name, this->my_sql->tab_name,this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
@@ -210,7 +211,7 @@ int Cstock_db::calculate_avg_second(void *p1, void *p2, void *p3)
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_AVG, this->my_sql->db_name, this->my_sql->tab_name, *this->result->data->data->data, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::update;
 	return 0;
@@ -236,7 +237,7 @@ int Cstock_db::add_rd_second(void *p1, void *p2, void *p3)
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
 	sprintf(this->my_sql->sql_buf, ADD_RD_COLUMN, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
 	return 0;
@@ -264,7 +265,7 @@ int Cstock_db::calculate_rd_second(void *p1, void *p2, void *p3)
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
 	sprintf(this->my_sql->sql_buf, UPDATE_RD, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::update;
@@ -294,7 +295,7 @@ int Cstock_db::delete_zero_second(void *p1, void *p2, void *p3)
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
 	sprintf(this->my_sql->sql_buf, DELETE_ZERO_ROW, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::delete_;
 	return 0;
@@ -318,7 +319,7 @@ int Cstock_db::add_kprice_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	sprintf(this->my_sql->sql_buf, ADD_K_PRICE_COLUMN, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
 	return 0;
@@ -340,7 +341,7 @@ int Cstock_db::add_kprice_cmd()
 int Cstock_db::add_column(char * sql, char *db, char * table)
 {
 	sprintf(this->my_sql->sql_buf, sql, db, table);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::alter;
 	return 0;
@@ -475,7 +476,7 @@ int Cstock_db::add_ma100_cmd()
 int Cstock_db::calculate_ma(int x)
 {
 	sprintf(this->my_sql->sql_buf, SELECT_AVG_MA_X, this->my_sql->db_name, this->my_sql->tab_name, this->row[0], this->row[0], x);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
@@ -483,7 +484,7 @@ int Cstock_db::calculate_ma(int x)
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_MA_X, this->my_sql->db_name, this->my_sql->tab_name,x, *this->result->data->data->data, this->row[0],x);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::update;
 	return 0;
@@ -648,7 +649,7 @@ int Cstock_db::calculate_am_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_AM, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
 	this->my_sql->execute(this->my_sql->sql_buf);
 
@@ -678,7 +679,7 @@ int Cstock_db::calculate_kp_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_KP, this->my_sql->db_name, this->row[0]);
-	printf("%s\n", this->my_sql->sql_buf);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::update;
 	return 0;
@@ -828,6 +829,8 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	}
 	this->argc = argc;//store user input parameter
 	this->argv = argv;
+	//get cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action
 	this->action = this->get_action(stock_db_action, (int)STOCK_DB_ACTION_COUNT, argv[1]);
 	if(this->action==0) this->action = atoll(argv[1]);//no name 
