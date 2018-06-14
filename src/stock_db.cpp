@@ -1,4 +1,6 @@
 #include "stock_db.h"
+#include "stock_db_action.i" //action_tab
+
 int Cstock_db::my_init(void *p)
 {
 	this->name = "Cstock_db";

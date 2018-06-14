@@ -958,7 +958,7 @@ int Object::sys_cmd()
 
 int Object::get_cmd(int argc, char *argv[], char *cmd)
 {
-	while (argc >= 0)
+	while (argc > 0)
 	{
 		argc--;
 		if (0 == strcmp(argv[argc], cmd)) return argc;
