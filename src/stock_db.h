@@ -103,6 +103,7 @@ namespace n_stock_db {
 		int calculate_kp_second(void *p1, void *p2, void *p3);
 		int calculate_kp_first(void *p);
 		int calculate_kp_cmd();
+		int execute_add_cmd(Action * a, int count);
 	};
 }
 

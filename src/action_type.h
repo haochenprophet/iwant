@@ -33,6 +33,7 @@ typedef struct ActionInfoStruct
 
 typedef struct ActionStruct
 {
+	int action_class;
 	ACTION_T t;//action type
 	EatcionRelation r;//action operate
 	void * action;//action table ending in 0  , ie.[1,2,3,0] ,can point ActionInfo

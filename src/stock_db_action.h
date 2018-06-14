@@ -2,6 +2,16 @@
 #define STOCK_DB_ACTION_H
 
 #include "action_type.h"
+enum class StockActionClass 
+{
+	none ,
+	verify,
+	add,
+	calculate,
+	delete_,
+	build,
+	execute,
+};
 
 enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number will be change  
 	none = 0,
@@ -30,6 +40,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	add_am,//amplitude
 	calculate_am,
 	calculate_kp,//key price
+	execute_add,
 };
 
 //SELECT 

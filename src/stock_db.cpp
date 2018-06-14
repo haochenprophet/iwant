@@ -176,7 +176,9 @@ int Cstock_db::build_batch_second(void *p1, void *p2, void *p3)
 	if (!this->my_sql) return -1;
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
-	printf("%s %s %s %s %s\n",this->argv[5],this->argv[6],this->argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
+	printf("%s %s %s %s %s",this->argv[5],this->argv[6],this->argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
+	for (int i = 7; i < argc; i++) printf(" %s", argv[i]);
+	printf("\n");
 	return 0;
 }
 
@@ -700,6 +702,19 @@ int Cstock_db::calculate_kp_cmd()
 	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
 }
 
+int Cstock_db::execute_add_cmd(Action * a, int count)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (a[i].action_class ==(int) StockActionClass::add)
+		{
+			this->add_column((char *)a[i].action, this->my_sql->db_name, this->my_sql->tab_name);
+		}
+	}
+	return 0;
+}
+
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
@@ -790,6 +805,7 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_cmd();
+	if (this->action == (ACTION_T)StockAtcion::execute_add) this->execute_add_cmd(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }
