@@ -37,6 +37,7 @@ Action stock_db_action[] = {
 { (int)StockActionClass::add, (ACTION_T)StockAtcion::add_ma60 , EatcionRelation::equal , (char *)ADD_MA60_COLUMN,(char *)"add_ma60" },
 { (int)StockActionClass::add, (ACTION_T)StockAtcion::add_ma100 , EatcionRelation::equal , (char *)ADD_MA100_COLUMN,(char *)"add_ma100" },
 { (int)StockActionClass::add, (ACTION_T)StockAtcion::add_am, EatcionRelation::equal , (char *)ADD_AM_COLUMN,(char *)"add_am" },
+{ (int)StockActionClass::add, (ACTION_T)StockAtcion::add_dir, EatcionRelation::equal , (char *)ADD_AM_COLUMN,(char *)"add_dir" },
 { (int)StockActionClass::calculate,(ACTION_T)StockAtcion::calculate_ma , EatcionRelation::equal , (char *)UPDATE_MA,(char *)"calculate_ma" },
 { (int)StockActionClass::calculate,(ACTION_T)StockAtcion::calculate_avg , EatcionRelation::equal , (char *)UPDATE_AVG,(char *) "calculate_avg" },
 { (int)StockActionClass::calculate,(ACTION_T)StockAtcion::calculate_rd , EatcionRelation::equal , (char *)UPDATE_RD,(char *)"calculate_rd" },

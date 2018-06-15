@@ -702,6 +702,28 @@ int Cstock_db::calculate_kp_cmd()
 	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
 }
 
+//add_dir
+int Cstock_db::add_dir_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+	return this->add_column((char *)ADD_DIR_COLUMN, this->my_sql->db_name, this->row[0]);
+}
+
+int Cstock_db::add_dir_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::add_dir_cmd()
+{
+	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
+
 int Cstock_db::execute_add_cmd(Action * a, int count)
 {
 	for (int i = 0; i < count; i++)
@@ -744,6 +766,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_second(p1, p2, p3);
 	return 0;
 }
 
@@ -775,6 +798,7 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_first(p);
+	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_first(p);
 	return 0;
 }
 
@@ -805,6 +829,7 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::execute_add) this->execute_add_cmd(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;

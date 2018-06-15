@@ -40,7 +40,9 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	add_am,//amplitude
 	calculate_am,
 	calculate_kp,//key price
+	add_dir,
 	execute_add,
+
 };
 
 //SELECT 
@@ -60,6 +62,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define ADD_MA60_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma60` DOUBLE NOT NULL DEFAULT 0 COMMENT '60-day moving average' ;"
 #define ADD_MA100_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma100` DOUBLE NOT NULL DEFAULT 0 COMMENT '100-day moving average' ;"
 #define ADD_AM_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `am` DOUBLE NOT NULL DEFAULT 0 COMMENT 'amplitude' ;"
+#define ADD_DIR_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `dir` DOUBLE NOT NULL DEFAULT 0 COMMENT 'direction' ;"
 //UPDATE 
 #define UPDATE_IDPEICE "UPDATE `%s`.`%s` SET `idprice`='%d' WHERE `idprice`='%d';"
 #define UPDATE_AVG "UPDATE `%s`.`%s` SET `avg`='%s' WHERE `idprice`='%s' AND `avg`=0;"
