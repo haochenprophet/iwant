@@ -736,6 +736,68 @@ int Cstock_db::execute_add_cmd(Action * a, int count)
 	}
 	return 0;
 }
+//calculate_dir
+int Cstock_db::calculate_dir_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	for(int i=0;i<CALULATE_DIR_COUNT;i++)
+	{
+		if(calculate_dir[i].action==nullptr) break;
+		sprintf(this->my_sql->sql_buf, (char *)calculate_dir[i].action, this->my_sql->db_name, this->my_sql->tab_name,this->row[0]);
+		if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
+		this->my_sql->execute(this->my_sql->sql_buf);
+	}
+
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
+int Cstock_db::calculate_dir_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::calculate_dir_cmd()
+{
+	sprintf(this->my_sql->sql_buf,SELECT_DIR_0, this->my_sql->db_name, this->my_sql->tab_name);
+	return 	this->my_sql->execute(this->my_sql->sql_buf, this);//!->func
+}
+//clear_dir
+int Cstock_db::clear_dir_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	sprintf(this->my_sql->sql_buf, UPDATE_DIR_0, this->my_sql->db_name, this->row[0]);
+	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
+	this->my_sql->execute(this->my_sql->sql_buf);
+
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
+int Cstock_db::clear_dir_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::clear_dir_cmd()
+{
+	this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_1);
+	return 0;
+}
 
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
@@ -766,7 +828,9 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::calculate_dir) this->calculate_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_second(p1, p2, p3);
 	return 0;
 }
 
@@ -798,7 +862,9 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_first(p);
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_first(p);
+	if (this->action == (ACTION_T)StockAtcion::calculate_dir) this->calculate_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_first(p);
+	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_first(p);
 	return 0;
 }
 
@@ -829,8 +895,10 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::add_am) this->add_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_am) this->calculate_am_cmd();
 	if (this->action == (ACTION_T)StockAtcion::calculate_kp) this->calculate_kp_cmd();
+	if (this->action == (ACTION_T)StockAtcion::calculate_dir) this->calculate_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::execute_add) this->execute_add_cmd(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
+	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_cmd();
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }

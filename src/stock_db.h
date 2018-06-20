@@ -106,6 +106,12 @@ namespace n_stock_db {
 		int add_dir_second(void *p1, void *p2, void *p3);
 		int add_dir_first(void *p = nullptr);
 		int add_dir_cmd();
+		int calculate_dir_second(void *p1, void *p2, void *p3);
+		int calculate_dir_first(void *p = nullptr);
+		int calculate_dir_cmd();
+		int clear_dir_second(void *p1, void *p2, void *p3);
+		int clear_dir_first(void *p = nullptr);
+		int clear_dir_cmd();
 		int execute_add_cmd(Action * a, int count);
 	};
 }

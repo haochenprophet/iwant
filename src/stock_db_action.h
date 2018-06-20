@@ -11,6 +11,7 @@ enum class StockActionClass
 	delete_,
 	build,
 	execute,
+	clear,
 };
 
 enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number will be change  
@@ -41,8 +42,9 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	calculate_am,
 	calculate_kp,//key price
 	add_dir,
+	calculate_dir,
 	execute_add,
-
+	clear_dir,
 };
 
 //SELECT 
@@ -50,6 +52,8 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define SELECT_IDPEICE "SELECT idprice FROM `%s`.`%s` ;"
 #define SELECT_AVG_MA "SELECT avg(ma) FROM `%s`.`%s` where idprice<=%s;"
 #define SELECT_AVG_MA_X "SELECT avg(ma) FROM `%s`.`%s` where idprice <= %s and idprice >= (%s - %d);"
+#define SELECT_AVG_CLOSE_X "SELECT avg(close) FROM `%s`.`%s` where idprice <= %s and idprice >= (%s - %d);"
+#define SELECT_DIR_0 "SELECT idprice FROM `%s`.`%s` where dir=0;"
 //ADD_COLUMN
 #define ADD_MA_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;"
 #define ADD_AVG_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `avg` DOUBLE NOT NULL DEFAULT 0;"
@@ -71,6 +75,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_MA_X "UPDATE `%s`.`%s` SET `ma%d`='%s' WHERE `idprice`='%s' AND `ma%d`=0;"
 #define UPDATE_AM "UPDATE  `%s`.`%s` SET am = (high - low) / close * 100 WHERE high >0 AND close >0 AND am = 0;"
 #define UPDATE_KP "UPDATE  `%s`.`%s` SET k_price = ma WHERE rd >5 OR rd <-5 OR am >6;"
+#define UPDATE_DIR_0 "UPDATE `%s`.`%s` SET dir = 0;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 //SET
