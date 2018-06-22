@@ -850,6 +850,18 @@ int Cstock_db::update_dir_cmd()
 	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
 }
 
+int Cstock_db::add_type_cmd()
+{
+	sprintf(this->my_sql->sql_buf, ALTER_ADD_TYPE, this->my_sql->db_name,this->my_sql->tab_name);
+	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+	return 	this->my_sql->execute(this->my_sql->sql_buf);
+}
+
+int Cstock_db::update_type_cmd()
+{
+	return 	this->my_sql->execute((char *)UPDATE_TYPE_ID);
+}
+
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
@@ -956,6 +968,8 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::insert_dir_id) this->insert_dir_id_cmd();
 	if (this->action == (ACTION_T)StockAtcion::alert_dir_key) this->alert_dir_key_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_cmd();
+	if (this->action == (ACTION_T)StockAtcion::add_type) this->add_type_cmd();
+	if (this->action == (ACTION_T)StockAtcion::update_type) this->update_type_cmd();
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }

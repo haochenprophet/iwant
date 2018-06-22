@@ -53,6 +53,8 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	insert_dir_id,
 	alert_dir_key,
 	update_dir,
+	add_type,
+	update_type,
 };
 //CREATE
 #define CREATE_DIR_TABLE "CREATE TABLE `%s`.`dir` ( \
@@ -100,9 +102,11 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_DIR_0 "UPDATE `%s`.`%s` SET dir = 0;"
 #define UPDATE_DIR "UPDATE `%s`.`dir` SET `dir`=(SELECT dir FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1) WHERE `ID`='%s';"
 #define UPDATE_DIR_TEST "UPDATE `%s`.`dir` SET `dir`=1 WHERE `ID`='%s';"
+#define UPDATE_TYPE_ID "UPDATE `stock`.`id` SET `type`='1' WHERE `idID`<10;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 #define ALTER_DIR_PKEY "ALTER TABLE `%s`.`dir` DROP PRIMARY KEY, ADD PRIMARY KEY(`iddir`, `ID`);"
+#define ALTER_ADD_TYPE "ALTER TABLE `%s`.`%s` ADD COLUMN `type` INT NOT NULL DEFAULT 0 ;"
 //SET
 #define SET_SAFE_UPDATES_0  "SET SQL_SAFE_UPDATES = 0;"
 #define SET_SAFE_UPDATES_1  "SET SQL_SAFE_UPDATES = 1;"

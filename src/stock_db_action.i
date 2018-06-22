@@ -146,6 +146,8 @@ Action stock_db_action[] = {
 { (int)StockActionClass::insert,(ACTION_T)StockAtcion::insert_dir_id , EatcionRelation::equal , nullptr,(char *)"insert_dir_id" },
 { (int)StockActionClass::alert,(ACTION_T)StockAtcion::alert_dir_key , EatcionRelation::equal , nullptr,(char *)"alert_dir_key" },
 { (int)StockActionClass::update,(ACTION_T)StockAtcion::update_dir , EatcionRelation::equal , nullptr,(char *)"update_dir" },
+{ (int)StockActionClass::add,(ACTION_T)StockAtcion::add_type , EatcionRelation::equal , nullptr,(char *)"add_type" },
+{ (int)StockActionClass::update,(ACTION_T)StockAtcion::update_type , EatcionRelation::equal , nullptr,(char *)"update_type" },
 //0 is the table end anchor
 { 0,0,EatcionRelation::none,nullptr },
 };
