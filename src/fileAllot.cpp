@@ -138,7 +138,7 @@ void CfileAllot::display(char *cp, int count, int binary)
 	int i;
 	for (i = 0;i<count;i++)
 	{
-		if (binary) printf("%02X ", cp[i] & 0xFF);
+		if (binary) printf("%02X ", cp[i]);
 		else printf("%c", cp[i]);
 	}
 }
