@@ -63,7 +63,7 @@ void CfileAllot::freeMe(CfileMem *p)
 
 void CfileAllot::clear()
 {
-	this->clear(&this->file_m);
+	this->file_m.clear();
 }
 
 void CfileAllot::clear(CfileMem *p) //clear Allot
