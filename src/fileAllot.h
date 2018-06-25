@@ -20,7 +20,7 @@ namespace n_fileAllot {
 	class CfileAllot :public Object
 	{
 	public:
-		CfileMem file_m;
+		CfileMem file_m;//file memory map
 		CfileAllot();
 		CfileAllot(char * fname);
 		CfileAllot(FILE * fp);
@@ -28,11 +28,11 @@ namespace n_fileAllot {
 		int my_init(void *p=nullptr);
 		void clear();
 		void clear(CfileMem * p);
-		long allot(FILE *fp, CfileMem * p);
-		long allot(char *fname, CfileMem * p);
-		long allot(char *fname);
-		long allot(FILE * fp);
-		long fsize(FILE *fp);
+		int allot(FILE *fp, CfileMem * p);
+		int allot(char *fname, CfileMem * p);
+		int allot(char *fname);
+		int allot(FILE * fp);
+		size_t fsize(FILE *fp);
 		void display(CfileMem *p, int binary = 0);
 		void display(int binary = 0);
 		void display(char *cp, int count, int binary = 0);

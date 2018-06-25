@@ -71,12 +71,12 @@ void CfileAllot::clear(CfileMem *p) //clear Allot
 	p->clear();
 }
 
-long CfileAllot::allot(FILE *fp)
+int CfileAllot::allot(FILE *fp)
 {
 	return this->allot(fp,&this->file_m);
 }
 
-long CfileAllot::allot(FILE *fp,CfileMem * p)
+int CfileAllot::allot(FILE *fp,CfileMem * p)
 {
 	p->start=0;
 	p->empty=true;
@@ -93,27 +93,27 @@ long CfileAllot::allot(FILE *fp,CfileMem * p)
 	return 0;
 }
 
-long CfileAllot::allot(char *fname)
+int CfileAllot::allot(char *fname)
 {
 	return this->allot(fname,&this->file_m);
 }
 
-long CfileAllot::allot(char *fname,CfileMem * p)
+int CfileAllot::allot(char *fname,CfileMem * p)
 {
 	FILE *fp;
 	if(!(fp=fopen(fname,"rb"))){
 		printf("Error:can not open the %s file.\n",fname);
 		return EOF;
 	}
-	long ret=this->allot(fp,p);
+	int ret=this->allot(fp,p);
 	fclose(fp);
 	return ret;
 }
 
-long CfileAllot::fsize(FILE *fp)
+size_t CfileAllot::fsize(FILE *fp)
 {	
 	fseek(fp,0L,SEEK_END);
-	return ftell(fp);
+	return ftell(fp);//fell()  should update of 64 bit operate system
 }
 
 void CfileAllot::display(CfileMem *p,int binary)
