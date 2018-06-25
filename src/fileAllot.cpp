@@ -165,7 +165,7 @@ int CfileAllot::token()
 #if FILEALLOT_TEST
 int main()
 {
-	CfileAllot fallot("fileAllot.cpp");
+	CfileAllot fallot((char *)"fileAllot.cpp");
 	fallot.display();
 	return 0;
 }
