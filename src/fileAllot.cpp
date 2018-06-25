@@ -118,12 +118,12 @@ size_t CfileAllot::fsize(FILE *fp)
 	return ftell(fp);//fell()  should update of 64 bit operate system
 }
 
-void CfileAllot::display(CfileMem *p,int binary)
+void CfileAllot::display(CfileMem *p,bool binary)
 {
 	char *cp;
 	for(cp=p->start;cp<p->end;cp++) 
 	{
-		if(binary) printf("%02X ",*cp&0xFF);
+		if(binary) printf("%02X ",*cp);
 		else printf("%c",*cp);
 	}
 }
@@ -133,9 +133,9 @@ void CfileAllot::display(int binary)
 	this->display(&this->file_m,binary);
 }
 
-void CfileAllot::display(char *cp, int count, int binary)
+void CfileAllot::display(char *cp, size_t count, bool binary)
 {
-	int i;
+	size_t i;
 	for (i = 0;i<count;i++)
 	{
 		if (binary) printf("%02X ", cp[i]);
