@@ -78,17 +78,23 @@ int CfileAllot::allot(FILE *fp)
 
 int CfileAllot::allot(FILE *fp,CfileMem * p)
 {
-	p->start=0;
-	p->empty=true;
+	if (p->start)//check!
+	{
+		this->freeMe(p);
+		p->clear();
+	}
+
 	if((p->file_size=fsize(fp))==EOF) return 1;//error 1
-	if(p->file_size!=0){p->empty=false;}
+	if(p->file_size>0){p->empty=false;}
 	if((p->start=(char*)malloc(p->file_size+1))==NULL) return 2;//error 2
+
 	clearerr(fp); 
 	fseek(fp,0,SEEK_SET);			//Set Filepoint
 	p->read_size=fread(p->start,1,p->file_size,fp);
 	p->end=p->start+p->read_size;
 	p->current=p->start;
 	*p->end='\0'; //end file to 0
+
 	if(ferror(fp)!=0) return 3;//error 3
 	return 0;
 }
