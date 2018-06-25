@@ -57,7 +57,7 @@ void CfileAllot::freeMe(CfileMem *p)
 {
 	if(p->start){
 		free(p->start);
-		this->clear(p);
+		p->clear();
 	}
 }
 
@@ -78,11 +78,7 @@ int CfileAllot::allot(FILE *fp)
 
 int CfileAllot::allot(FILE *fp,CfileMem * p)
 {
-	if (p->start)//check!
-	{
-		this->freeMe(p);
-		p->clear();
-	}
+	if (p->start) this->freeMe(p); //check!
 
 	if((p->file_size=fsize(fp))==EOF) return 1;//error 1
 	if(p->file_size>0){p->empty=false;}
