@@ -55,6 +55,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	update_dir,
 	add_type,
 	update_type,
+	verify_ma,
 };
 //CREATE
 #define CREATE_DIR_TABLE "CREATE TABLE `%s`.`dir` ( \
@@ -77,6 +78,9 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define SELECT_DIR_0 "SELECT idprice FROM `%s`.`%s` where dir=0;"
 #define SELECT_DIR "SELECT ID FROM `%s`.dir;"
 #define SELECT_DIR_LAST "SELECT dir FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1;"
+#define SELECT_TYPE "SELECT `type` FROM `%s`.ID where ID =`%s`;"
+#define SELECT_TYPE_0 "SELECT ID FROM stock.ID where type=0;"
+#define SELECT_TYPE_1 "SELECT ID FROM stock.ID where type=1;"
 
 //ADD_COLUMN
 #define ADD_MA_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;"
@@ -96,13 +100,14 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_AVG "UPDATE `%s`.`%s` SET `avg`='%s' WHERE `idprice`='%s' AND `avg`=0;"
 #define UPDATE_RD "UPDATE  `%s`.`%s` SET rd = (close - y_close) / y_close * 100 WHERE close >0 AND y_close >0 AND rd = 0;"
 #define UPDATE_MA "UPDATE  `%s`.`%s` SET ma = turnover / volume WHERE turnover >0 AND volume >0 AND ma=0;"
+#define UPDATE_MA_CLOSE "UPDATE  `%s`.`%s` SET ma = close WHERE  ma=0;"
 #define UPDATE_MA_X "UPDATE `%s`.`%s` SET `ma%d`='%s' WHERE `idprice`='%s' AND `ma%d`=0;"
 #define UPDATE_AM "UPDATE  `%s`.`%s` SET am = (high - low) / close * 100 WHERE high >0 AND close >0 AND am = 0;"
 #define UPDATE_KP "UPDATE  `%s`.`%s` SET k_price = ma WHERE rd >5 OR rd <-5 OR am >6;"
 #define UPDATE_DIR_0 "UPDATE `%s`.`%s` SET dir = 0;"
 #define UPDATE_DIR "UPDATE `%s`.`dir` SET `dir`=(SELECT dir FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1) WHERE `ID`='%s';"
 #define UPDATE_DIR_TEST "UPDATE `%s`.`dir` SET `dir`=1 WHERE `ID`='%s';"
-#define UPDATE_TYPE_ID "UPDATE `stock`.`id` SET `type`='1' WHERE `idID`<10;"
+#define UPDATE_TYPE_ID "UPDATE `stock`.`ID` SET `type`='1' WHERE `idID`<10;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 #define ALTER_DIR_PKEY "ALTER TABLE `%s`.`dir` DROP PRIMARY KEY, ADD PRIMARY KEY(`iddir`, `ID`);"

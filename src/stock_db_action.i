@@ -112,6 +112,20 @@ ActionInfo calculate_dir[] = {
 
 #define  CALULATE_DIR_COUNT (sizeof(calculate_dir) / sizeof(ActionInfo))
 
+ActionInfo verify_ma[] = {
+//	{ 1,(char *)"SET SQL_SAFE_UPDATES = 0;" },//
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma`=close;" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `avg`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma5`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma10`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma20`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma30`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma60`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET `ma100`='0';" },
+	{ 1,(char *)"UPDATE  `%s`.`%s` SET 	`dir`='0';" },
+};
+#define VERIFY_MA_COUNT  (sizeof(verify_ma) / sizeof(ActionInfo))
+
 Action stock_db_action[] = {
 { (int)StockActionClass::verify,(ACTION_T)StockAtcion::verify_id , EatcionRelation::equal , verify_id ,(char *)"verify_id" },
 { (int)StockActionClass::build,(ACTION_T)StockAtcion::build_batch , EatcionRelation::equal , nullptr,(char *)"build_batch" },
@@ -148,6 +162,7 @@ Action stock_db_action[] = {
 { (int)StockActionClass::update,(ACTION_T)StockAtcion::update_dir , EatcionRelation::equal , nullptr,(char *)"update_dir" },
 { (int)StockActionClass::add,(ACTION_T)StockAtcion::add_type , EatcionRelation::equal , nullptr,(char *)"add_type" },
 { (int)StockActionClass::update,(ACTION_T)StockAtcion::update_type , EatcionRelation::equal , nullptr,(char *)"update_type" },
+{ (int)StockActionClass::verify,(ACTION_T)StockAtcion::verify_ma , EatcionRelation::equal , (void *)verify_ma,(char *)"verify_ma" },
 //0 is the table end anchor
 { 0,0,EatcionRelation::none,nullptr },
 };

@@ -17,6 +17,7 @@ Cstock_db::Cstock_db()
 	this->num_fields = nullptr;
 	this->lengths = nullptr;
 	this->silent = 0;
+	this->stock_id_type = 0;
 }
 
 Cstock_db::~Cstock_db()
@@ -107,7 +108,8 @@ int Cstock_db::calculate_ma_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 	//printf("[%d] ID=%s\n", this->count++, row[0]);//test os 
 
-	sprintf(this->my_sql->sql_buf,UPDATE_MA, this->my_sql->db_name, this->row[0]);
+	if (this->stock_id_type == 0) sprintf(this->my_sql->sql_buf, UPDATE_MA, this->my_sql->db_name, this->row[0]);
+	if (this->stock_id_type == 1) sprintf(this->my_sql->sql_buf,UPDATE_MA_CLOSE, this->my_sql->db_name, this->row[0]);
 	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
 	this->my_sql->execute(this->my_sql->sql_buf);
@@ -127,7 +129,10 @@ int Cstock_db::calculate_ma_first(void *p)
 int Cstock_db::calculate_ma_cmd()
 {
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
-	this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
+	this->stock_id_type = 1;
+	this->my_sql->execute((char *)SELECT_TYPE_1, this);//magical 'this'  point !
+	this->stock_id_type = 0;
+	this->my_sql->execute((char *)SELECT_TYPE_0, this);
 	this->my_sql->execute((char *)SET_SAFE_UPDATES_1);
 	return 0;
 }
@@ -862,6 +867,38 @@ int Cstock_db::update_type_cmd()
 	return 	this->my_sql->execute((char *)UPDATE_TYPE_ID);
 }
 
+int Cstock_db::verify_ma_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_0);
+
+	for (int i = 0; i<VERIFY_MA_COUNT; i++)
+	{
+		if (verify_ma[i].action == nullptr) break;
+		sprintf(this->my_sql->sql_buf, (char *)verify_ma[i].action, this->my_sql->db_name, this->row[0]);//row[0] table name
+		if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+		this->my_sql->execute(this->my_sql->sql_buf);
+	}
+	this->my_sql->execute((char *)SET_SAFE_UPDATES_1);
+	this->my_sql->tab_name = this->row[0];
+	this->my_sql->sql_opetate = SqlOperate::update;
+	return 0;
+}
+int Cstock_db::verify_ma_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+int Cstock_db::verify_ma_cmd()
+{
+	return 	this->my_sql->execute((char *)SELECT_TYPE_1,this);
+}
+
 int Cstock_db::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test 
@@ -895,6 +932,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_second(p1, p2, p3);
 	return 0;
 }
 
@@ -930,6 +968,7 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_first(p);
+	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_first(p);
 	return 0;
 }
 
@@ -970,6 +1009,7 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::add_type) this->add_type_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_type) this->update_type_cmd();
+	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_cmd();
 	//this->action_cmd(argc, argv);//use the stock_db_action table .
 	return 0;
 }

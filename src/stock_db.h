@@ -14,6 +14,7 @@ namespace n_stock_db {
 		unsigned int * num_fields;
 		unsigned long *lengths;
 		int silent;
+		int stock_id_type;
 	public:
 		Cstock_db();
 		~Cstock_db();
@@ -121,6 +122,9 @@ namespace n_stock_db {
 		int execute_add_cmd(Action * a, int count);
 		int add_type_cmd();
 		int update_type_cmd();
+		int verify_ma_second(void *p1, void *p2, void *p3);
+		int verify_ma_first(void *p = nullptr);
+		int verify_ma_cmd();
 	};
 }
 
