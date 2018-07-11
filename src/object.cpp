@@ -88,6 +88,7 @@ Object::Object()
 {
 	this->id = ++object_id;
 	this->status=0;
+	this->silent =0;
 	this->priority = 0;
 	this->action=0;
 	this->error=0;

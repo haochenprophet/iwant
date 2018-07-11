@@ -42,10 +42,10 @@ int runcmd(void *cmd);
 
 #define PAGE_4K	(4*1024) 
 #define O_BUF_LEN PAGE_4K
-#define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
-#define OUT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";
-#define OUT_ERROR cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;
-
+#define AT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
+#define OUT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";}while(0);
+#define OUT_ERROR do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(1);}while(0);
+#define OUT_ERROR_N(n) do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(n);}while(0);
 
 namespace n_object {
 
@@ -112,6 +112,7 @@ namespace n_object {
 		long id;//object id
 	public:
 		int status;
+		int silent;//can use to print or not print
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		ActionInfo * action_info;

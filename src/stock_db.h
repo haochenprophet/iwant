@@ -13,7 +13,6 @@ namespace n_stock_db {
 		MYSQL_ROW row;
 		unsigned int * num_fields;
 		unsigned long *lengths;
-		int silent;
 		int stock_id_type;
 	public:
 		Cstock_db();

@@ -56,6 +56,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	add_type,
 	update_type,
 	verify_ma,
+	
 };
 //CREATE
 #define CREATE_DIR_TABLE "CREATE TABLE `%s`.`dir` ( \

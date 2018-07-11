@@ -26,6 +26,7 @@ typedef struct ActionInfoStruct
 {
 	int step;
 	void * action;//this action point can : object ,script, callback func, sql , ...
+	ACTION_T action_t;//action type
 	void * time;//point time
 	void * location;//point location
 	void * executor;// point executor

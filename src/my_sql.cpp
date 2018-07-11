@@ -1,4 +1,6 @@
 #include "my_sql.h"
+#include "my_sql_action.i" //action_tab
+
 int Cmy_sql::my_init(void *p)
 {
 	this->name = "Cmy_sql";
@@ -11,6 +13,17 @@ int Cmy_sql::my_init(void *p)
 	return 0;
 }
 
+int Cmy_sql::my_init(char * password, char * user, char * host, char * use_db, char *sql)
+{
+	this->host = host;
+	this->user = user;
+	this->password = password;
+	if(use_db) this->use_db = use_db;
+	if (!this->use_db&&this->db_name) this->use_db = this->db_name; //when use_db is null set it to db_name .
+	this->sql = sql;
+	return 0;
+}
+
 Cmy_sql::Cmy_sql()
 {
 	this->my_init();
@@ -19,18 +32,13 @@ Cmy_sql::Cmy_sql()
 Cmy_sql::Cmy_sql(char * password,char * user,char * host,char * use_db,char *sql)
 {
 	this->my_init();
-	this->host=host;
-	this->user=user;
-	this->password=password;
-	this->use_db=use_db;
-	this->sql=sql;
-	this->mysql=&this->mysql_i;
+	this->my_init(password, user, host, use_db, sql);
+	this->mysql = &this->mysql_i;
 	if(NULL==mysql_init(this->mysql))
 	{
 		this->inc_error();
 		this->mysql=nullptr;
 	} 
-
 }
 
 Cmy_sql::~Cmy_sql()
@@ -44,12 +52,17 @@ int Cmy_sql::connect()
 	int ret=0;
 	if(this->is_connect) return 0;
 	if(this->is_error()) return -1;
-	if(!this->mysql&&!mysql_init(this->mysql)) //if not init ,init 
+	if(!this->mysql) //if not init ,init 
 	{
-		this->inc_error();
-		this->mysql=nullptr;
-		return ++ret;
+		this->mysql = &this->mysql_i;
+		if (NULL == mysql_init(this->mysql))
+		{
+			this->inc_error();
+			this->mysql = nullptr;
+			return ++ret;
+		}
 	}
+	//if (!this->mysql) OUT_ERROR_N(1)
 
 	if(!mysql_real_connect(this->mysql,	this->host,this->user,this->password,this->use_db,0,NULL,0))
 	{
@@ -211,6 +224,59 @@ int Cmy_sql::execute(string * sql, Object *o)
 	return this->execute((char *)sql->c_str(), o);
 }
 
+int Cmy_sql::drop_db(char * db_name)
+{
+	if (!db_name) return -1;
+	if (strcmp((char *)"sys", db_name) == 0) return -1; //do not drop sys db
+	sprintf(this->sql_buf, DROP_DB, db_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
+int Cmy_sql::create_db(char * db_name)
+{
+	if (!db_name) return -1;
+	sprintf(this->sql_buf, CREATE_DB, db_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
+int Cmy_sql::do_action(void * a)
+{
+	if (this->action == (ACTION_T)MySqlAtcion::create_db) this->create_db(this->db_name);
+	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
+	return 0;
+}
+
+int Cmy_sql::deal_cmd(int argc, char *argv[])
+{
+	//check user input
+	if (argc < 5)
+	{
+		cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name [4]tab_name | db_name \n";
+		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
+		return -1;
+	}
+	this->argc = argc;//store user input parameter
+	this->argv = argv;
+	//get cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
+	//get action
+	this->action = this->get_action(my_sql_action, (int)MY_SQL_ACTION_COUNT, argv[1]);
+	if (this->action == 0) this->action = atoll(argv[1]);//no name 
+	if (this->action == 0) return -1;
+
+	//init mysql db
+	this->tab_name = (char *)argv[4];
+	this->db_name = (char *)argv[4];
+	this->use_db = (char *)argv[3];
+	this->my_init((char *)argv[2]);//my_init use db_name
+	//do action
+	this->do_action();
+
+	return 0;
+}
+
 #ifndef MY_SQL_TEST
 #define MY_SQL_TEST 0//1
 #endif
@@ -218,34 +284,9 @@ int Cmy_sql::execute(string * sql, Object *o)
 #if MY_SQL_TEST
 #include "all_h_include.h"
 
-int main(int argc, const char* argv[])
+int main(int argc, char* argv[])
 {
-    char password[100];//program language  
-    cout<<"Enter mysql_db server root password :"; 
-    std::cin>>password;
-
-	Cmy_sql m((char *)password);//Cmy_sql m((char *)"password");
-
-	int n,ret=0;
-	for(n=0;n<1;n++)
-	{
-		ret=m.execute((char *)"show databases;");
-		cout<<"return="<<ret<<endl;	
-	}
-
-	Object obj;
-	ret=m.execute((char *)"show databases;",&obj);
-	m.get();
-	//ret=m.execute((char *)"select * from test.url;");
-	//m.get();
-	
-	/*	//note : insert sql can not use get() func ()
-	for (int n = 0; n < 10; n++)
-	{
-		ret=m.execute((char *)"INSERT INTO `test`.`test` (`value`) VALUES('value');");
-	}
-	*/
-
-	return 	ret;
+	Cmy_sql m;
+	return 	m.deal_cmd(argc, argv);
 }
 #endif 

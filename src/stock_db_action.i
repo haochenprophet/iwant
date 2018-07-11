@@ -1,3 +1,5 @@
+#ifndef STOCK_DB_ACTION_I
+#define STOCK_DB_ACTION_I
 
 #include "stock_db_action.h"
 
@@ -168,3 +170,5 @@ Action stock_db_action[] = {
 };
 
 #define  STOCK_DB_ACTION_COUNT (sizeof(stock_db_action) / sizeof(Action))
+
+#endif

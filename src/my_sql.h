@@ -2,6 +2,7 @@
 #define MY_SQL_H
 
 #include "sql.h"
+#include "my_sql_action.h"
 
 namespace n_my_sql {
 	class Cmy_sql :public Csql
@@ -21,6 +22,7 @@ namespace n_my_sql {
 		Cmy_sql();
 		Cmy_sql(char * password,char * user=(char *)"root",char * host=(char *)"127.0.0.1",char * use_db=nullptr,char *sql=(char *)"show databases;");
 		~Cmy_sql();
+		int my_init(char * password, char * user = (char *)"root", char * host = (char *)"127.0.0.1", char * use_db = nullptr, char *sql = (char *)"show databases;");
 		int my_init(void *p=nullptr);
 		int connect();
 		int query(char *sql);
@@ -36,6 +38,10 @@ namespace n_my_sql {
 		int execute(string * sql, Object *o= nullptr);
 		int execute(void *p1,void *p2,void *p3);
 		int func(void *p=nullptr);
+		int deal_cmd(int argc, char *argv[]);
+		int do_action(void * a=nullptr);
+		int create_db(char * db_name);
+		int drop_db(char * db_name);
 	};
 }
 
