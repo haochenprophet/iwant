@@ -18,6 +18,7 @@ int Cmy_sql::my_init(char * password, char * user, char * host, char * use_db, c
 	this->host = host;
 	this->user = user;
 	this->password = password;
+	this->use_db = nullptr;//default init to null
 	if(use_db) this->use_db = use_db;
 	if (!this->use_db&&this->db_name) this->use_db = this->db_name; //when use_db is null set it to db_name .
 	this->sql = sql;
