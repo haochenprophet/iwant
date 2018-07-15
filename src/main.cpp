@@ -54,7 +54,7 @@ int Cmain::deal_cmd(int argc, char *argv[])
 	return -1;
 }
 
-#if MAIN_TEST||_TEST==0//1
+#if MAIN_TEST||_TEST
 int main(int argc, char *argv[])
 {
 	cout << "MAIN_TEST\n\n";
