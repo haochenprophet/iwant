@@ -17,7 +17,7 @@ Ctest::~Ctest()
 }
 
 #ifndef TEST_TEST
-#define TEST_TEST 01
+#define TEST_TEST 0//1
 #endif
 
 #if TEST_TEST
