@@ -102,7 +102,7 @@ Object::Object()
 	this->description=this->name;
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
-	this->addMe();
+	//this->addMe();//remove add this to family list
 
 	time (&this->at_time);
 	this->start_time=this->at_time;
@@ -165,10 +165,10 @@ void Object::myName(Object *o)
 {
 	if(o)
 	{
-		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id << endl;
+		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id <<" uuid:"<<o->uuid<<" at:"<<o->where()<< endl;
 		return;
 	}
-	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << endl;
+	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
 }
 
 void Object::addMe(Object * o)
@@ -290,7 +290,7 @@ int Object::my_family()
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << "["<<++count <<"]->"<< op->name << ":" << op->where() << endl;
+		cout << "[" << ++count << "] "; op->myName();
 	}
 	cout << this->name << " my_family count : " << count << endl;
 	return count;
@@ -871,6 +871,15 @@ int Object::clear(void *p)
 	return this->my_clear(p);
 }
 
+int Object::list_cmd(int argc, char *argv[])
+{
+	do {
+		argc--;
+		cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
+	} while (argc>0);
+	return 0;
+}
+
 int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
 {
 	int ret = 0;
@@ -878,6 +887,7 @@ int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
 	
 	if (this->isMe(argv[1]))
 	{
+		this->myName();
 		this->deal_cmd(argc - 1, &argv[1]);
 		return 0;
 	}

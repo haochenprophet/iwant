@@ -156,6 +156,7 @@ int Ccode::create_cmd(int argc, char *argv[])
 
 int Ccode::deal_cmd(int argc, char *argv[])
 {
+	if (argc < 2)	return this->help();
 	if (this->action&(ACTION_T)CodeAtcion::create_h || this->action&(ACTION_T)CodeAtcion::create_c || this->action&(ACTION_T)CodeAtcion::create_func)
 	{
 		this->init_file(argv[1]);//add path
@@ -178,10 +179,17 @@ int Ccode::help(void *p)
 #include "g_code.i"
 int main(int argc, char *argv[])
 {
-//	cout << "CODE_TEST\n\n";
+	cout << "CODE_TEST\n\n";
 	Ccode c;
+	c.action = (ACTION_T)CodeAtcion::create_h + (ACTION_T)CodeAtcion::create_c + (ACTION_T)CodeAtcion::create_func;
+	add_objects(&c);
+	c.my_family();
+	c.dispatch_cmd(argc, argv);
+	return 0;
+/*
 	if (argc < 2)	return c.help();
     c.action = (ACTION_T)CodeAtcion::create_h + (ACTION_T)CodeAtcion::create_c + (ACTION_T)CodeAtcion::create_func;
 	return c.deal_cmd(argc,argv);
+*/
 }
 #endif 

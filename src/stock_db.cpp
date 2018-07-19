@@ -1043,6 +1043,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 {
 	//OUT_LINE //test 
 	//check user input
+	this->list_cmd(argc, argv);//test
 	if (argc < 5)
 	{
 		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";

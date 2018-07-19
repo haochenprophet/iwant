@@ -257,6 +257,7 @@ namespace n_object {
 		int sys_cmd(string *cmd);
 		int sys_cmd();
 		int get_cmd(int argc, char *argv[],char *cmd);
+		int list_cmd(int argc, char *argv[]);
 		int dispatch_cmd(int argc, char *argv[]);
 		int clear(void *p=nullptr);
 		//action
