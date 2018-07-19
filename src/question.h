@@ -1,6 +1,8 @@
 #ifndef QUESTION_H
 #define QUESTION_H
 
+#include "stock_db.h"
+
 enum E_QTYPE{
 	Q_SWITCH,//default:  Q switch esult A ,B,C,D /
 	Q_CHOICE, //Q choice like ABC,AB ,BC ABCD
@@ -51,7 +53,7 @@ typedef union Uqresult_T
 #define Q_BUF_LEN O_BUF_LEN
 
 namespace n_question {
-	class Cquestion :public Object
+	class Cquestion :public Cstock_db
 	{
 	public:
 		char * q_buf,*a_buf,*r_buf,*f_buf,*d_buf;

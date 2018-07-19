@@ -128,7 +128,7 @@ void CfileAllot::display(CfileMem *p,bool binary)
 	}
 }
 
-void CfileAllot::display(int binary)
+void CfileAllot::display(bool binary)
 {
 	this->display(&this->file_m,binary);
 }

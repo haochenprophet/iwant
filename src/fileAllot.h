@@ -34,7 +34,7 @@ namespace n_fileAllot {
 		int allot(FILE * fp);
 		size_t fsize(FILE *fp);
 		void display(CfileMem *p, bool binary = false);
-		void display(int binary = 0);
+		void display(bool binary = false);
 		void display(char *cp, size_t count, bool binary = false);
 		int token(const char *delimit);//token the allot buf
 		int token();//"\n\r"

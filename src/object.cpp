@@ -806,6 +806,7 @@ int Object::func(void *p)
 
 int Object::url(void *p)//execute object url if exist
 {
+	OUT_LINE
 	return -1;//do nothing
 }
 
@@ -816,24 +817,32 @@ int Object::style(void *p)//execute object style
 
 int Object::image(void *p)//execute object image if exist
 {
+	OUT_LINE
 	return -1;//do nothing
 }
 
 int Object::audio(void *p)//execute object audio if exist
 {
+	OUT_LINE
 	return -1;//do nothing
 }
 
 int Object::video(void *p)//execute object vedio if exist
 {
+	OUT_LINE
 	return -1;//do nothing
 }
 
 int Object::get(void *p)
 {
+	OUT_LINE
 	return -1;
 }
-
+int Object::help(void *p)
+{
+	OUT_LINE
+	return -1;
+}
 int Object::create(void *p)
 {
 	return -1;//do nothing
@@ -841,22 +850,52 @@ int Object::create(void *p)
 
 int Object::my_init(void *p)
 {
+	OUT_LINE
 	return -1;
 }
 
 int Object::my_exit(void *p)
 {
+	OUT_LINE
 	return 0;
 }
 
 int Object::my_clear(void *p)
 {	
+	OUT_LINE
 	return 0;
 }
 
 int Object::clear(void *p)
 {
 	return this->my_clear(p);
+}
+
+int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
+{
+	int ret = 0;
+	if (argc < 2) return ++ret;//return error 1
+	
+	if (this->isMe(argv[1]))
+	{
+		this->deal_cmd(argc - 1, &argv[1]);
+		return 0;
+	}
+
+	if (this->family.empty()) return -1;
+
+	Object *o;
+	LIST_FAMILY::iterator it;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		o = (Object *)*it;
+		o->myName();//test
+		ret= o->dispatch_cmd(argc, argv);
+		if (ret) continue;
+		break;
+	}
+
+	return -1;
 }
 
 int Object::deal_cmd(int argc, char *argv[])

@@ -257,6 +257,7 @@ namespace n_object {
 		int sys_cmd(string *cmd);
 		int sys_cmd();
 		int get_cmd(int argc, char *argv[],char *cmd);
+		int dispatch_cmd(int argc, char *argv[]);
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
@@ -284,6 +285,7 @@ namespace n_object {
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
 		virtual int get(void *p=nullptr);
+		virtual int help(void *p = nullptr);//Can be used for command line help
 	};
 
 	class Cobject:public Object
