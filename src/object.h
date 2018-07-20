@@ -40,6 +40,10 @@ typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 int object_func(void *p);
 int runcmd(void *cmd);
 
+#ifndef OBJECT_DEBUG
+#define OBJECT_DEBUG 0//1
+#endif
+
 #define PAGE_4K	(4*1024) 
 #define O_BUF_LEN PAGE_4K
 #define AT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
