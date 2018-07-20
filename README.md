@@ -6,6 +6,7 @@ I want Library .
 
 [Thinker]: 
 Who am I, what I know,what can I do?
+Everyone serves me, I serve everyone.
 
 I am a thinker , I am Object ;
 I am you ,  You are me ,I am time, I am space, time is me, space is me;
