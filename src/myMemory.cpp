@@ -4,7 +4,6 @@ int CmyMemory::my_init(void *p)
 {
 	this->allot_flag=0;
 	this->name = "CmyMemory";
-	this->name += std::to_string(this->id);
 	this->alias = "myMemory";
 	return 0;
 }
