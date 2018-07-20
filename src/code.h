@@ -3,6 +3,7 @@
 
 #include "file.h"
 #include "path.h"
+#include "code_action.h"
 
 #define GLOBAL_CLASS "global_class"
 #define GLOBAL_CODE "g_code" //global_code
@@ -15,11 +16,6 @@
 #define G_CODE_FUNC_I_DEFINE "#ifndef G_CODE_FUNC_I\n#define G_CODE_FUNC_I\n"
 
 namespace n_code {
-	enum class CodeAtcion {
-		create_h = BIT0,
-		create_c = BIT1,
-		create_func =BIT2,
-	};
 
 	class Ccode :public Object
 	{

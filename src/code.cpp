@@ -1,4 +1,5 @@
 #include "code.h"
+#include "code_action.i"
 
 int Ccode::my_init(void *p)
 {
@@ -100,6 +101,7 @@ void Ccode::create_head()
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		this->file_h.create();
 		this->file_h.f_append((char *)G_CODE_H_DEFINE);//Cclass class; //test
+		this->file_h.f_append((char *)"\t#include \"all_h_include.h\"\n");
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c)	{
@@ -121,7 +123,7 @@ void Ccode::create_tail()
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		
 		if (this->action&(ACTION_T)CodeAtcion::create_func) {
-			this->file_h.f_append((char *)"void add_objects(Object *p);\n");//h
+			this->file_h.f_append((char *)"\tvoid add_objects(Object *p);\n");//h
 		}
 
 		this->file_h.f_append((char *)"#endif\n");//G_CODE_FUNC_I
@@ -157,6 +159,11 @@ int Ccode::create_cmd(int argc, char *argv[])
 int Ccode::deal_cmd(int argc, char *argv[])
 {
 	if (argc < 2)	return this->help();
+	//get action
+	this->action = this->get_action(code_action, (int)CODE_ACTION_COUNT, argv[2]);
+	if (this->action == 0) this->action = atoll(argv[2]);//no name 
+	if (this->action == 0) return -1;
+
 	if (this->action&(ACTION_T)CodeAtcion::create_h || this->action&(ACTION_T)CodeAtcion::create_c || this->action&(ACTION_T)CodeAtcion::create_func)
 	{
 		this->init_file(argv[1]);//add path
@@ -168,7 +175,9 @@ int Ccode::deal_cmd(int argc, char *argv[])
 
 int Ccode::help(void *p)
 {
-	return printf("Usage:Ccode <src_path> <action>\n");
+	printf("Usage:Ccode <src_path> <action>\n");
+	this->action_help(code_action, (int)CODE_ACTION_COUNT);
+	return 0;
 }
 
 #ifndef CODE_TEST
@@ -181,7 +190,6 @@ int main(int argc, char *argv[])
 {
 	cout << "CODE_TEST\n\n";
 	Ccode c;
-	c.action = (ACTION_T)CodeAtcion::create_h + (ACTION_T)CodeAtcion::create_c + (ACTION_T)CodeAtcion::create_func;
 	add_objects(&c);
 	c.my_family();
 	c.dispatch_cmd(argc, argv);
