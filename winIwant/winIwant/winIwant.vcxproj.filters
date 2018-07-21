@@ -4410,6 +4410,18 @@
     <ClCompile Include="..\..\src\stock_db.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\block.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fileAllot.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\question_def.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8849,6 +8861,27 @@
     <ClInclude Include="..\..\src\g_code.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\action_type.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\block.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fileAllot.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\my_sql_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\node.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock_db_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -8875,6 +8908,15 @@
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\g_code_func.i">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\code_action.i">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\my_sql_action.i">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\stock_db_action.i">
       <Filter>src</Filter>
     </None>
   </ItemGroup>

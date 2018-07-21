@@ -101,7 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D _TEST=1 /I "../mysql-connector-c/include" /I "../src" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D _TEST=1 /I "../mysql-connector-c/include" /I "../src" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include;C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include\devapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\action.cpp" />
     <ClCompile Include="..\..\src\bits.cpp" />
+    <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
     <ClCompile Include="..\..\src\build.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\ex_func.cpp" />
     <ClCompile Include="..\..\src\file.cpp" />
+    <ClCompile Include="..\..\src\fileAllot.cpp" />
     <ClCompile Include="..\..\src\ftp.cpp" />
     <ClCompile Include="..\..\src\func.cpp" />
     <ClCompile Include="..\..\src\get.cpp" />
@@ -1394,12 +1396,14 @@
     <ClCompile Include="..\..\src\myMemory.cpp" />
     <ClCompile Include="..\..\src\my_sql.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
+    <ClCompile Include="..\..\src\node.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
     <ClCompile Include="..\..\src\operator.cpp" />
     <ClCompile Include="..\..\src\os.cpp" />
     <ClCompile Include="..\..\src\path.cpp" />
     <ClCompile Include="..\..\src\plan.cpp" />
     <ClCompile Include="..\..\src\question.cpp" />
+    <ClCompile Include="..\..\src\question_def.cpp" />
     <ClCompile Include="..\..\src\register.cpp" />
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\search.cpp" />
@@ -1610,12 +1614,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
+    <ClInclude Include="..\..\src\action_type.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\bits.h" />
+    <ClInclude Include="..\..\src\block.h" />
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
     <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\code.h" />
+    <ClInclude Include="..\..\src\code_action.h" />
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\const.h" />
@@ -1630,6 +1637,7 @@
     <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\ex_func.h" />
     <ClInclude Include="..\..\src\file.h" />
+    <ClInclude Include="..\..\src\fileAllot.h" />
     <ClInclude Include="..\..\src\ftp.h" />
     <ClInclude Include="..\..\src\func.h" />
     <ClInclude Include="..\..\src\get.h" />
@@ -2858,7 +2866,9 @@
     <ClInclude Include="..\..\src\math.h" />
     <ClInclude Include="..\..\src\myMemory.h" />
     <ClInclude Include="..\..\src\my_sql.h" />
+    <ClInclude Include="..\..\src\my_sql_action.h" />
     <ClInclude Include="..\..\src\net.h" />
+    <ClInclude Include="..\..\src\node.h" />
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\operator.h" />
     <ClInclude Include="..\..\src\os.h" />
@@ -3060,6 +3070,7 @@
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h" />
     <ClInclude Include="..\..\src\step.h" />
     <ClInclude Include="..\..\src\stock_db.h" />
+    <ClInclude Include="..\..\src\stock_db_action.h" />
     <ClInclude Include="..\..\src\stratagem.h" />
     <ClInclude Include="..\..\src\symbol.h" />
     <ClInclude Include="..\..\src\syntax.h" />
@@ -3092,6 +3103,7 @@
   <ItemGroup>
     <None Include="..\..\README.md" />
     <None Include="..\..\src\bits.def" />
+    <None Include="..\..\src\code_action.i" />
     <None Include="..\..\src\dictionary\Makefile" />
     <None Include="..\..\src\ex_func_class.h" />
     <None Include="..\..\src\g_code.i" />
@@ -3099,7 +3111,9 @@
     <None Include="..\..\src\instruction\Makefile" />
     <None Include="..\..\src\Makefile" />
     <None Include="..\..\src\math\Makefile" />
+    <None Include="..\..\src\my_sql_action.i" />
     <None Include="..\..\src\sql\Makefile" />
+    <None Include="..\..\src\stock_db_action.i" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\doc\think.txt" />
