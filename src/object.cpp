@@ -859,6 +859,13 @@ int Object::help(void *p)
 #endif
 	return -1;
 }
+int Object::ui(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 int Object::create(void *p)
 {
 	return -1;//do nothing

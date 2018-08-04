@@ -291,6 +291,7 @@ namespace n_object {
 		virtual int video(void *p=nullptr);//execute object vedio if exist
 		virtual int get(void *p=nullptr);
 		virtual int help(void *p = nullptr);//Can be used for command line help
+		virtual int ui(void *p = nullptr);//UI:User Interface , include Graphic interface(GUI), Audio interface(AUI), video interface(VUI),Text Interface (TUI)
 	};
 
 	class Cobject:public Object
