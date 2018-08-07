@@ -17,8 +17,8 @@ namespace n_task {
 	class Ctask :public Object
 	{
 	public:
-		list<Ctask *> depend;
-		list<Ctask *> task_list;//my create() task list
+		std::list<Ctask *> depend;
+		std::list<Ctask *> task_list;//my create() task list
 	public:
 		Ctask();
 		~Ctask();
@@ -36,6 +36,6 @@ namespace n_task {
 }
 using namespace n_task;
 
-typedef list<Ctask *> LIST_DEPEND;//family list type
+typedef std::list<Ctask *> LIST_DEPEND;//family list type
 
 #endif
