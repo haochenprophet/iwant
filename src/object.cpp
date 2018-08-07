@@ -859,7 +859,43 @@ int Object::help(void *p)
 #endif
 	return -1;
 }
+
 int Object::ui(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::event(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::task(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::interrupt(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::callback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::exception(void *p)
 {
 #if OBJECT_DEBUG
 	OUT_LINE
@@ -870,7 +906,6 @@ int Object::create(void *p)
 {
 	return -1;//do nothing
 }
-
 int Object::my_init(void *p)
 {
 #if OBJECT_DEBUG
