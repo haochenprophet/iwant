@@ -66,6 +66,8 @@ namespace n_object {
 		unsigned long ul;
 		long long ll;
 		unsigned long long ull;
+		float f;
+		double d;
 		void * p;
 		char *cp;
 		unsigned char* ucp;
@@ -78,6 +80,8 @@ namespace n_object {
 		unsigned long *ulp;
 		long long *llp;
 		unsigned long long *ullp;
+		float *fp;
+		double *dp;
 	}u_data;
 
 	class Cparameter
