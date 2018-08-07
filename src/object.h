@@ -320,7 +320,7 @@ namespace n_object {
 		virtual int image(void *p=nullptr);//execute object image if exist
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
-		virtual int get(void *p=nullptr);
+		virtual int get(void *p=nullptr);//get data ,url ,download file and so on ...
 		virtual int help(void *p = nullptr);//Can be used for command line help
 		virtual int ui(void *p = nullptr);//UI:User Interface , include Graphic interface(GUI), Audio interface(AUI), video interface(VUI),Text Interface (TUI)
 		virtual int event(void *p = nullptr);
@@ -328,6 +328,7 @@ namespace n_object {
 		virtual int interrupt(void *p = nullptr);
 		virtual int callback(void *p = nullptr);//objec callback
 		virtual int exception(void *p = nullptr);//Respond or issue an exception
+		virtual int message(void *p = nullptr);//Passing and processing messages
 	};
 
 	class Cobject:public Object
