@@ -30,7 +30,7 @@ int Cmain::create_main_cmd(int argc, char *argv[])
 	char * str_tag=nullptr;
 	do{
 		argc--;
-		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+		//AT_LINE std::cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 		if(argc<2)	break;//action
 		
 		char * str_tag=(char *)argv[argc];
@@ -68,7 +68,7 @@ int Cmain::deal_cmd(int argc, char *argv[])
 	//check user input
 	if (argc < 3)
 	{
-		cout << "Cmain request cmd line input: <action> <file_list> \n";
+		std::cout << "Cmain request cmd line input: <action> <file_list> \n";
 		this->action_help(main_action, (int)MAIN_ACTION_COUNT);
 		return -1;
 	}
@@ -91,9 +91,9 @@ int Cmain::deal_cmd(int argc, char *argv[])
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "MAIN_TEST\n\n";
+	std::cout << "MAIN_TEST\n\n";
 	//Cuuid uuid;
-	//cout << uuid.uuid << endl;
+	//std::cout << uuid.uuid << endl;
 
 	Cmain m;
 	return m.deal_cmd(argc,argv);

@@ -19,7 +19,7 @@ Cnode::Cnode()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "NODE_TEST\n\n";
+	std::cout << "NODE_TEST\n\n";
 	return 0;
 }
 #endif 

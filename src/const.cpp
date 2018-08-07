@@ -42,7 +42,7 @@ bool Cconst::isDec(char *cp)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "CONST_TEST\n\n";
+	std::cout << "CONST_TEST\n\n";
 	
 	char s[]="12345678d ";
 

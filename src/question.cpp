@@ -39,7 +39,7 @@ int Cquestion::q_dir_value(char *sR,char* fB,int abcd)
 	cp=this->get_result((char*)sR,abcd,1);
 	if(cp) 
 	{
-		//cout<<cp<<endl;cout<<atoi(cp)<<endl;//test ok
+		//std::cout<<cp<<endl;std::std::cout<<atoi(cp)<<endl;//test ok
 		Cquestion::q_direction+=atoi(cp);
 		if(fB)
 		{
@@ -51,7 +51,7 @@ int Cquestion::q_dir_value(char *sR,char* fB,int abcd)
 	cp=this->get_result((char*)sR,abcd,2);
 	if(cp)
 	{
-		 //cout<<cp<<endl;cout<<atoi(cp)<<endl;//test ok
+		 //std::cout<<cp<<endl;std::cout<<atoi(cp)<<endl;//test ok
 		 Cquestion::q_value+=atoi(cp);
 		if(fB)
 		{
@@ -83,7 +83,7 @@ int Cquestion::q_type(int type,char *sR,char * fB,int action)
 		
 		if(action==Q_WAIT_STR)
 		{
-			cout<<(char *)MULTIPLE_CHOICE;
+			std::cout<<(char *)MULTIPLE_CHOICE;
 			this->wait_cin();
 			if(this->at_cin_buf((char*)"A")||this->at_cin_buf((char*)"a"))
 			{
@@ -165,12 +165,12 @@ int Cquestion::q_question(char * sQ,char *sA ,char *sR,char* fB,int type,int act
 
 	if(!(sQ&&sA&&sR)) return 0;//checkt nullptr
 
-	cout<<++Cquestion::q_count<<": "<<sQ<<endl;
-	cout<<sA<<endl;
+	std::cout<<++Cquestion::q_count<<": "<<sQ<<endl;
+	std::cout<<sA<<endl;
 
 	ret.i_abcd=this->q_type(type,sR,fB,action);
 	
-	cout<<endl;
+	std::cout<<endl;
 
 	if(log&&this->q_buf)
 	{

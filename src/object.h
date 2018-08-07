@@ -25,8 +25,8 @@
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::wstring;
-using std::list;
-using std::cout;
+//using std::list;
+//using std::cout;
 using std::endl;
 
 enum UsingLanguage
@@ -46,10 +46,10 @@ int runcmd(void *cmd);
 
 #define PAGE_4K	(4*1024) 
 #define O_BUF_LEN PAGE_4K
-#define AT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
-#define OUT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";}while(0);
-#define OUT_ERROR do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(1);}while(0);
-#define OUT_ERROR_N(n) do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(n);}while(0);
+#define AT_LINE do{std::cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
+#define OUT_LINE do{std::cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";}while(0);
+#define OUT_ERROR do{std::cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(1);}while(0);
+#define OUT_ERROR_N(n) do{std::cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(n);}while(0);
 
 namespace n_object {
 	
@@ -108,7 +108,7 @@ namespace n_object {
 		CtagItem(string tag,string temp,string replace);
 		CtagItem(char* tag,char* temp,char* replace);
 	};
-	typedef list<CtagItem> LIST_TAGITEM;
+	typedef std::list<CtagItem> LIST_TAGITEM;
 
 	class Cmyfunc {
 	public:
@@ -124,8 +124,8 @@ namespace n_object {
 		int runMe(void *p, bool new_thread=false);
 	};
 
-	typedef list<Cmyfunc> LIST_CMYFUNC;
-	typedef list<void *> LIST_FAMILY;//family list type
+	typedef std::list<Cmyfunc> LIST_CMYFUNC;
+	typedef std::list<void *> LIST_FAMILY;//family list type
 
 	enum class TimelineStatus{
 		now,
@@ -139,7 +139,7 @@ namespace n_object {
 		TimelineStatus status;
 		std::multimap<void *, void *> track; //1. void * point timer , 2. void * point Object
 	};
-	typedef list<Ctimeline> LIST_CTIMELINE;
+	typedef std::list<Ctimeline> LIST_CTIMELINE;
 
 	class Object:public Ouuid
 	{
@@ -183,21 +183,21 @@ namespace n_object {
 		int argc;
 		char ** argv;
 
-		list<void *> family;//class list
-		list<void *> exist_family;//class exist other family for removeMe frome other class 。
+		std::list<void *> family;//class list
+		std::list<void *> exist_family;//class exist other family for removeMe frome other class 。
 
-		list<Cmyfunc> ex_func;//extern function list 
-		list<CtagItem> l_tag_rule;//for tag rule 
+		std::list<Cmyfunc> ex_func;//extern function list 
+		std::list<CtagItem> l_tag_rule;//for tag rule 
 
-		list<Object *> my_mem;//list for  memory address 
-		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
-		list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
+		std::list<Object *> my_mem;//list for  memory address 
+		std::list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
+		std::list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
 
-		list<void *> l_url;//url list
-		list<void *> l_style;//object style list
-		list<void *> l_image;//object image list
-		list<void *> l_audio;//object audio list
-		list<void *> l_video;//object vedio list
+		std::list<void *> l_url;//url list
+		std::list<void *> l_style;//object style list
+		std::list<void *> l_image;//object image list
+		std::list<void *> l_audio;//object audio list
+		std::list<void *> l_video;//object vedio list
 		
 		//url can be by used class Cpath
 		string s_url; //Record a url string 

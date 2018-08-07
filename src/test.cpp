@@ -25,8 +25,8 @@ Ctest::~Ctest()
 #include "g_code.h"
 int main(int argc, char *argv[])
 {
-	cout << "TEST_TEST\n\n";
-    //cout<<1000000000000/(400*1024*1024)<<endl;
+	std::cout << "TEST_TEST\n\n";
+    //std::cout<<1000000000000/(400*1024*1024)<<endl;
 	Ctest test;
 	add_objects(&test);
 	test.my_family();

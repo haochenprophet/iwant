@@ -44,10 +44,10 @@ int Ouuid::create()
 
 int main(int argc, char *argv[])
 {
-	cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<"\n";
+	std::cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<"\n";
 
 	Ouuid uuid;
-	cout<<uuid.uuid<<endl;
+	std::cout<<uuid.uuid<<endl;
 
 	return 0;
 }

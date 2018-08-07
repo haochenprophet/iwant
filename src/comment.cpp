@@ -33,10 +33,10 @@ int Ccomment::isMe(char *identifier)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "COMMENT_TEST\n\n";
+	std::cout << "COMMENT_TEST\n\n";
 	Ccomment c;
 	int n=c.isMe((char *)"*/");
-	cout<<n<<endl;
+	std::cout<<n<<endl;
 	return 0;
 }
 #endif 

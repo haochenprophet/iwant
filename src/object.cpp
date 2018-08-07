@@ -66,7 +66,7 @@ int Cmyfunc::runMe(void *p, bool new_thread)
 	this->priority++;
 	if (new_thread == false)
 		return this->p_func(p);
-	//cout << "Cmyfunc::runMe->thread\n"; //test ok
+	//std::cout << "Cmyfunc::runMe->thread\n"; //test ok
 	std::thread(this->p_func, p).detach();
 	return 0;
 }
@@ -75,7 +75,7 @@ int object_func(void *p)//this ext function for object class
 {
 	if (!p) return -1;
 	char *cp =(char *) p;
-	cout << "object_func:"<<cp<<endl;//test
+	std::cout << "object_func:"<<cp<<endl;//test
 	return 0;
 }
 
@@ -161,10 +161,10 @@ void Object::myName(Object *o)
 {
 	if(o)
 	{
-		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id <<" uuid:"<<o->uuid<<" at:"<<o->where()<< endl;
+		std::cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id <<" uuid:"<<o->uuid<<" at:"<<o->where()<< endl;
 		return;
 	}
-	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
+	std::cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
 }
 
 void Object::addMe(Object * o)
@@ -203,9 +203,9 @@ int Object::sort_family(void *p)
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << ":" << ++count << ":" << op->name << ":" << op->where() << endl;
+		std::cout << this->name << ":" << ++count << ":" << op->name << ":" << op->where() << endl;
 	}
-	cout << this->name << " my_family count : " << count << endl;
+	std::cout << this->name << " my_family count : " << count << endl;
 	return count;
 }
 
@@ -286,9 +286,9 @@ int Object::my_family()
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << "[" << ++count << "] "; op->myName();
+		std::cout << "[" << ++count << "] "; op->myName();
 	}
-	cout << this->name << " my_family count : " << count << endl;
+	std::cout << this->name << " my_family count : " << count << endl;
 	return count;
 }
 
@@ -298,15 +298,15 @@ int Object::my_ex_func()
 	LIST_CMYFUNC::iterator it;
 	for (it = this->ex_func.begin(); it != this->ex_func.end(); ++it)
 	{
-		cout <<this->name<<":"<<++count << ":" << it->name << it->p_func << endl;
+		std::cout <<this->name<<":"<<++count << ":" << it->name << it->p_func << endl;
 	}
-	cout << this->name << " my_ex_func count : " << count << endl;
+	std::cout << this->name << " my_ex_func count : " << count << endl;
 	return count;
 }
 
 void Object::my_temp()
 {
-	if (this->temp.length())	cout << this->temp << endl;
+	if (this->temp.length())	std::cout << this->temp << endl;
 }
 
 int Object::inc_error()
@@ -370,7 +370,7 @@ char * Object::at_cin_buf(char * str)
 
 void Object::my_syntax()
 {
-	if (this->syntax.length())	cout << this->syntax << endl;
+	if (this->syntax.length())std::cout << this->syntax << endl;
 }
 
 int Object::execute()
@@ -479,7 +479,7 @@ int Object::execute(char* fun_name, void * p, bool new_thread)
 {
 	string s = fun_name;
 #if OBJECT_TEST
-	cout << "int Object::execute->"<<s << endl;//test ok
+	std::cout << "int Object::execute->"<<s << endl;//test ok
 #endif
 	return this->execute(s, p, new_thread);
 }
@@ -508,7 +508,7 @@ int Object::allot(int size,void * *o_addr)
 		}
 		catch (...)//fail
 		{
-			cout<< "error:Object::allot size=" << size << endl;
+			std::cout<< "error:Object::allot size=" << size << endl;
 			return 0;
 		}
 	}
@@ -583,7 +583,7 @@ int Object::toupper_replace(string *base,string *tag,string *rep)
 	this->s_toupper(us_tag);
 	this->s_toupper(us_rep);
 
-	//cout<<"toupper_replace:"<<us_tag<<"="<<us_rep<<endl;//test ok
+	//std::cout<<"toupper_replace:"<<us_tag<<"="<<us_rep<<endl;//test ok
 	this->s_replace(base,&us_tag,&us_rep);
 	return 0;
 }
@@ -645,9 +645,9 @@ int Object::my_tag_rule()
 	LIST_TAGITEM::iterator it;
 	for (it = this->l_tag_rule.begin(); it != this->l_tag_rule.end(); ++it)
 	{
-		cout << this->name << ":" << ++count << ":" << it->tag << it->replace << endl;
+		std::cout << this->name << ":" << ++count << ":" << it->tag << it->replace << endl;
 	}
-	cout << this->name << " my_tag_rule  count : " << count << endl;
+	std::cout << this->name << " my_tag_rule  count : " << count << endl;
 	return count;
 }
 
@@ -804,7 +804,7 @@ int Object::how()
 
 int Object::func(void *p)
 {
-	cout << this->name << "Object::func\n";
+	std::cout << this->name << "Object::func\n";
 	return 0;
 }
 
@@ -946,7 +946,7 @@ int Object::list_cmd(int argc, char *argv[])
 {
 	do {
 		argc--;
-		cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
+		std::cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
 	} while (argc>0);
 	return 0;
 }
@@ -989,7 +989,7 @@ int Object::deal_cmd(int argc, char *argv[])
 	this->argv = argv;
 	do{
 		argc--;
-		AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+		AT_LINE std::cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 	}while(argc>0);
 	return -1;
 }
@@ -997,11 +997,11 @@ int Object::display(void *p)
 {
 	if (p)
 	{
-		cout << p << endl;
+		std::cout << p << endl;
 		return 0;
 	}
 
-	cout<<this->name<<","<<this->alias<<","<<"id="<<this->id<<":"<<this->description<<endl;
+	std::cout<<this->name<<","<<this->alias<<","<<"id="<<this->id<<":"<<this->description<<endl;
 	return 0;
 }
 
@@ -1094,7 +1094,7 @@ int Object::get_cmd(int argc, char *argv[], char *cmd)
 #if OBJECT_TEST
 int main()
 {
-	cout << "Object main !\n";
+	std::cout << "Object main !\n";
 	return 0;
 }
 #endif

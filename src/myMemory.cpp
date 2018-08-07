@@ -48,7 +48,7 @@ void * CmyMemory::allot(size_t size, int type,int re_allot)
 	}
 	catch (...)//fail
 	{
-		cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
+		std::cout<< "error:CmyMemory::CmyMemory(int size)=" << size << endl;
 	}
 
 	return (void *)this->addr;

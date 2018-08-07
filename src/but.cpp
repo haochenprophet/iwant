@@ -24,7 +24,7 @@ Cbut::~Cbut()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "BUT_TEST\n\n";
+	std::cout << "BUT_TEST\n\n";
 
 	return 0;
 }

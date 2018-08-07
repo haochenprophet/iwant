@@ -104,7 +104,7 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 
 	if (getaddrinfo(hostname, service, &hints, &result))
 	{
-		cout << "error:if (getaddrinfo(hostname, service, &hints, &result)\n";
+		std::cout << "error:if (getaddrinfo(hostname, service, &hints, &result)\n";
 		return -1;
 	}
 
@@ -115,7 +115,7 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 		connect_socket = socket(ptr->ai_family, ptr->ai_socktype,ptr->ai_protocol);
 		if (connect_socket == INVALID_SOCKET) 
 		{
-			cout << "error:connect_socket == INVALID_SOCKET\n";
+			std::cout << "error:connect_socket == INVALID_SOCKET\n";
 			return 1;
 		}
 
@@ -133,7 +133,7 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 
 	if (connect_socket == INVALID_SOCKET)
 	{
-		cout<<"error:Unable to connect to server!\n";
+		std::cout<<"error:Unable to connect to server!\n";
 		return 1;
 	}
 
@@ -144,12 +144,12 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 		i_ret = send(connect_socket, sendbuf,*io_s_size, 0);
 		if (i_ret == SOCKET_ERROR)
 		{
-			cout<<"error:send failed with error.\n";
+			std::cout<<"error:send failed with error.\n";
 			this->s_close(connect_socket);
 			return 1;
 		}
 
-		cout<<"Bytes Sent:"<<i_ret<<endl;//test
+		std::cout<<"Bytes Sent:"<<i_ret<<endl;//test
 		*io_s_size=i_ret;
 
 		// shutdown the connection since no more data will be sent
@@ -166,11 +166,11 @@ int Csocket::client(char *hostname,char *service, char *sendbuf, int* io_s_size,
 		do{
 			i_ret = recv(connect_socket, recvbuf,*io_r_size, 0);
 			if(i_ret > 0)
-				cout<<"Bytes received:"<<i_ret<<endl;
+				std::cout<<"Bytes received:"<<i_ret<<endl;
 			else if(i_ret == 0 )
-				cout<<"Connection closed\n";
+				std::cout<<"Connection closed\n";
 			else
-				cout<<"recv failed with error: %d\n";
+				std::cout<<"recv failed with error: %d\n";
 		}while(i_ret>0);
 
 		if(i_ret>0) *io_r_size=i_ret;
@@ -211,7 +211,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	i_ret = getaddrinfo(NULL, service, &hints, &result);
 	if (i_ret != 0 ) 
 	{
-		cout<<"error:getaddrinfo failed with error:"<<i_ret<<endl;
+		std::cout<<"error:getaddrinfo failed with error:"<<i_ret<<endl;
 		return 1;
 	}
 
@@ -219,7 +219,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	listen_socket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
 	if(listen_socket == INVALID_SOCKET) 
 	{
-		cout<<"error:socket failed with error.\n";
+		std::cout<<"error:socket failed with error.\n";
 		freeaddrinfo(result);
 		return 1;
 	}
@@ -228,7 +228,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	i_ret = bind( listen_socket, result->ai_addr, (int)result->ai_addrlen);
 	if (i_ret == SOCKET_ERROR) 
 	{
-		cout<<"error:bind failed with error.\n";
+		std::cout<<"error:bind failed with error.\n";
 		freeaddrinfo(result);
 		this->s_close(listen_socket);
 		return 1;
@@ -239,7 +239,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	i_ret = listen(listen_socket, SOMAXCONN);
 	if (i_ret == SOCKET_ERROR) 
 	{
-		cout<<"error:listen failed with error.\n";
+		std::cout<<"error:listen failed with error.\n";
 		this->s_close(listen_socket);
 		return 1;
 	}
@@ -248,7 +248,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	client_socket = accept(listen_socket, NULL, NULL);
 	if (client_socket == INVALID_SOCKET) 
 	{
-		cout<<"error:accept failed with error.\n";
+		std::cout<<"error:accept failed with error.\n";
 		this->s_close(listen_socket);
 		return 1;
 	}
@@ -264,14 +264,14 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 			i_ret = recv(client_socket, recvbuf, *io_r_size, 0);
 			if (i_ret > 0)
 			{
-				cout<<"Bytes received:"<<i_ret<<endl;
+				std::cout<<"Bytes received:"<<i_ret<<endl;
 				*io_r_size = i_ret;
 			}
 			else if (i_ret == 0)
-				cout<<"Connection closing...\n";
+				std::cout<<"Connection closing...\n";
 			else
 			{
-				cout<<"error:recv failed with error.\n";
+				std::cout<<"error:recv failed with error.\n";
 				this->s_close(client_socket);
 				return 1;
 			}
@@ -284,11 +284,11 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 		send_result = send(client_socket, sendbuf, *io_s_size, 0);
 		if (send_result == SOCKET_ERROR)
 		{
-			cout << "error:send failed with error.\n";
+			std::cout << "error:send failed with error.\n";
 			this->s_close(client_socket);
 			return 1;
 		}
-		cout << "Bytes sent:" << send_result << endl;
+		std::cout << "Bytes sent:" << send_result << endl;
 		*io_s_size = send_result;
 	}
 
@@ -296,7 +296,7 @@ int Csocket::server(char *service, char *sendbuf, int* io_s_size,char *recvbuf,i
 	i_ret = shutdown(client_socket, SD_SEND);
 	if (i_ret == SOCKET_ERROR) 
 	{
-		cout<<"error:shutdown failed with error.\n";
+		std::cout<<"error:shutdown failed with error.\n";
 		this->s_close(client_socket);
 		return 1;
 	}
@@ -315,8 +315,8 @@ int Csocket::server()
 
 void Csocket::display()
 {
-	cout <<"sendbuf="<<this->sendbuf << endl;
-	cout << "recvbuf=" << this->recvbuf << endl;
+	std::cout <<"sendbuf="<<this->sendbuf << endl;
+	std::cout << "recvbuf=" << this->recvbuf << endl;
 }
 
 #if SOCKET_TEST
@@ -334,7 +334,7 @@ int main()
 {
 	Csocket s;
 	Csocket c;
-	cout << "Csocket main !\n";
+	std::cout << "Csocket main !\n";
 
 	//	Cexit e;e.func();//test Cexit ok
 

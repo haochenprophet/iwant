@@ -192,7 +192,7 @@ char * Cbrackets::getstart(char* start,char *end,char *s)
 #if BRACKETS_TEST
 int main(int argc, char *argv[])
 {
-	cout << "BRACKETS_TEST\n\n";
+	std::cout << "BRACKETS_TEST\n\n";
 	return 0;
 }
 #endif 

@@ -9,7 +9,7 @@
 Ciwant::Ciwant()
 {
 #if IWANT_TEST	
-	cout << "Ciwant::Ciwant()\n";
+	std::cout << "Ciwant::Ciwant()\n";
 #endif
 	this->name = "Ciwant";
 	this->alias = "iwant";
@@ -18,13 +18,13 @@ Ciwant::Ciwant()
 Ciwant::~Ciwant()
 {
 #if IWANT_TEST
-	cout << "Ciwant::~Ciwant()\n";
+	std::cout << "Ciwant::~Ciwant()\n";
 #endif
 }
 
 Object * Ciwant::who()
 {
-	cout << "I am iwant  APP.\n";
+	std::cout << "I am iwant  APP.\n";
 	return this;
 }
 
@@ -32,7 +32,7 @@ int iwant_func(void *p)//this ext function for object class
 {
 	if (!p) return -1;
 	string *s = (string *)p;
-	cout << "iwant_func:" << s->data() << endl;//test
+	std::cout << "iwant_func:" << s->data() << endl;//test
 	return 0;
 }
 
@@ -42,7 +42,7 @@ void add_me_test(Object *p)
 	Object o;
 	Ciwant i;
 	Chome oh;
-	cout << "void add_me_test(Object *p)\n";
+	std::cout << "void add_me_test(Object *p)\n";
 	p->addMe(o.where());
 	p->addMe(i.where());
 	p->addMe(oh.where());
@@ -56,27 +56,27 @@ int main(int argc ,char *argv[])
 	Chome oh;
 	oh.myName();
 
-	for (int n = 0; n < argc; n++)	cout << "argc=" << n << ":" << argv[n] << endl;
+	for (int n = 0; n < argc; n++)	std::cout << "argc=" << n << ":" << argv[n] << endl;
 
 	string s("Chome"); 
-	cout << s << endl;
-	cout << oh.isMe(s) << endl;	//test
-	cout <<"Object::isMe(string * identifier):"<< oh.isMe(&s) << endl;
+	std::cout << s << endl;
+	std::cout << oh.isMe(s) << endl;	//test
+	std::cout <<"Object::isMe(string * identifier):"<< oh.isMe(&s) << endl;
 	s = "Chome1";
-	cout << "Chome1:" << oh.isMe(&s) << endl;
+	std::cout << "Chome1:" << oh.isMe(&s) << endl;
 
 	Ciwant *p = (Ciwant *) i.where(); //test ok
 	p->myName();
-	cout << p->isMe((char *)"Ciwant") << endl;
-	cout << p->isMe((char *)"Object") << endl;
-	cout << "isMe(id)\n"<<p->isMe(2) << endl;//test ok
-	cout << p->isMe(3) << endl;
+	std::cout << p->isMe((char *)"Ciwant") << endl;
+	std::cout << p->isMe((char *)"Object") << endl;
+	std::cout << "isMe(id)\n"<<p->isMe(2) << endl;//test ok
+	std::cout << p->isMe(3) << endl;
 
 	o.who();
 	oh.who();
 	p->who();
 
-	cout<<"Hello iwant APP .\n";
+	std::cout<<"Hello iwant APP .\n";
 
 	char cp[] = "int main(int argc ,char *argv[])";
 	o.execute((char *)"objec_func", cp);
@@ -89,17 +89,17 @@ int main(int argc ,char *argv[])
 
 	char str[] = "iwant_func";
 	i.execute(str, (void *)&s, false);
-	cout << (fun_name == str) << endl; //test
+	std::cout << (fun_name == str) << endl; //test
 
 	char identifier[] = "Object";
-	cout<<o.isMe(identifier)<<endl;
-	cout<< i.isMe(identifier)<<endl;
+	std::cout<<o.isMe(identifier)<<endl;
+	std::cout<< i.isMe(identifier)<<endl;
 
 	char cmd[]="dir";
 	i.execute((char *)"runcmd", cmd, true);//test ok
 	string obj_name = "Object";
 	i.execute((Object *)&i, obj_name, cmd, nullptr, true);
-	cout << "test: Object->objec_func(cmd)->";//test ok
+	std::cout << "test: Object->objec_func(cmd)->";//test ok
 	i.execute((Object *)&i, obj_name, "objec_func", (void *)cmd, true);
 	i.execute((Object *)&i, obj_name, "objec_func", cmd, true);
 
@@ -110,7 +110,7 @@ int main(int argc ,char *argv[])
 	o.addMe(p);
 	o.my_family();
 
-	cout << "test ok:"<<o.where()<<"="<< &o <<endl;
+	std::cout << "test ok:"<<o.where()<<"="<< &o <<endl;
 	p->addMe(&o);
 	p->addMe(&oh);
 

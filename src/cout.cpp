@@ -9,6 +9,6 @@ Ccout::Ccout()
 int Ccout::func(void *p)
 {
 	if(!p) return -1;
-	cout << ((char *)p)<<endl;
+	std::cout << ((char *)p)<<endl;
 	return 0;
 }

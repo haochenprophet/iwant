@@ -24,7 +24,7 @@ Cfield::~Cfield()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "FIELD_TEST\n\n";
+	std::cout << "FIELD_TEST\n\n";
 
 	return 0;
 }

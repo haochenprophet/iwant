@@ -29,10 +29,10 @@ int Cos::init_winsock() //!=0 init fail
 
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData))
 	{
-		cout<<"error:Cos::init_winsock() WSAStartup fialed.\n";
+		std::cout<<"error:Cos::init_winsock() WSAStartup fialed.\n";
 		return -1;//init fail
 	}	
-	//cout << "Cos::init_winsock() WSAStartup start.\n";//test ok
+	//std::cout << "Cos::init_winsock() WSAStartup start.\n";//test ok
 	win_wsa_startup = 1;
 	return 0;
 }

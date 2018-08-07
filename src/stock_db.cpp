@@ -198,7 +198,7 @@ int Cstock_db::build_batch_cmd()
 {
 	if (this->argc < 7)
 	{
-		cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
+		std::cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
 		return -1;
 	}
 
@@ -216,7 +216,7 @@ int Cstock_db::calculate_avg_second(void *p1, void *p2, void *p3)
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
-	//cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
+	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_AVG, this->my_sql->db_name, this->my_sql->tab_name, *this->result->data->data->data, this->row[0]);
@@ -489,7 +489,7 @@ int Cstock_db::calculate_ma(int x)
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
-	//cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
+	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_MA_X, this->my_sql->db_name, this->my_sql->tab_name,x, *this->result->data->data->data, this->row[0],x);
@@ -1019,7 +1019,7 @@ int Cstock_db::display(ActionInfo * a)
 {
 	do {
 		if (a->step == 0 && a->action == nullptr) break;
-		cout << a->step << ":" << (char *)a->action << endl;
+		std::cout << a->step << ":" << (char *)a->action << endl;
 		a++;
 	} while (1);
 	return 0;
@@ -1046,7 +1046,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	//this->list_cmd(argc, argv);//test ok
 	if (argc < 5)
 	{
-		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";
+		std::cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";
 		this->action_help(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 		return -1;
 	}

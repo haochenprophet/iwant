@@ -19,7 +19,7 @@ Cmakefile::Cmakefile()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "MAKEFILE_TEST\n\n";
+	std::cout << "MAKEFILE_TEST\n\n";
 
 	return 0;
 }
