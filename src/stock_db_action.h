@@ -53,6 +53,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 	insert_dir_id,
 	alert_dir_key,
 	update_dir,
+	insert_dir,
 	add_type,
 	update_type,
 	verify_ma,
@@ -60,16 +61,15 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 };
 //CREATE
 #define CREATE_DIR_TABLE "CREATE TABLE `%s`.`dir` ( \
-	`iddir` INT NOT NULL AUTO_INCREMENT, \
-	`ID` VARCHAR(45) NOT NULL, \
-	`dir` DOUBLE NULL, \
-	PRIMARY KEY(`iddir`, `ID`), \
-		UNIQUE INDEX `iddir_UNIQUE` (`iddir` ASC), \
-		UNIQUE INDEX `ID_UNIQUE` (`ID` ASC)) \
-	ENGINE = InnoDB \
-	DEFAULT CHARACTER SET = utf8 \
-	COMMENT = 'dir'; "
-
+	`iddir` INT NOT NULL AUTO_INCREMENT,\
+	`stockid` VARCHAR(45) NULL,\
+	`dir` INT NULL,\
+	`time` DATETIME NOT NULL DEFAULT NOW(),\
+	PRIMARY KEY(`iddir`),\
+		UNIQUE INDEX `iddir_UNIQUE` (`iddir` ASC))\
+	ENGINE = InnoDB\
+	DEFAULT CHARACTER SET = utf8\
+	COMMENT = 'dir';"
 //SELECT 
 #define SELECT_STOCK_ID "SELECT ID FROM stock.ID;"
 #define SELECT_IDPEICE "SELECT idprice FROM `%s`.`%s` ;"
@@ -111,7 +111,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define UPDATE_TYPE_ID "UPDATE `stock`.`ID` SET `type`='1' WHERE `idID`<10;"
 //ALTER
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
-#define ALTER_DIR_PKEY "ALTER TABLE `%s`.`dir` DROP PRIMARY KEY, ADD PRIMARY KEY(`iddir`, `ID`);"
+#define ALTER_DIR_PKEY "ALTER TABLE `%s`.`dir` DROP PRIMARY KEY, ADD PRIMARY KEY(`iddir`, `time`);"
 #define ALTER_ADD_TYPE "ALTER TABLE `%s`.`%s` ADD COLUMN `type` INT NOT NULL DEFAULT 0 ;"
 //SET
 #define SET_SAFE_UPDATES_0  "SET SQL_SAFE_UPDATES = 0;"
@@ -119,7 +119,8 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 //DELETE
 #define DELETE_ZERO_ROW "DELETE FROM `%s`.`%s` WHERE `y_close`='0' AND `open`='0'AND `close`='0' AND `high`='0' AND `low`='0';"
 //INSERT
-#define INSERT_DIR_ID "INSERT INTO `%s`.`dir` (`ID`) SELECT ID FROM `%s`.`ID`;"
+#define INSERT_DIR_ID "INSERT INTO `%s`.`dir` (`stockid`) SELECT ID FROM `%s`.`ID`;"
+#define INSERT_DIR "INSERT INTO `%s`.`dir` (`stockid`,`dir`) VALUES('%s', (SELECT `dir` FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1));"
 //OTHER
 #define BUILD_BATCH "%s %s %s %s"  //[0].exe [1]action [2]password [3]db_name [4]tab_name
 

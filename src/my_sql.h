@@ -42,6 +42,7 @@ namespace n_my_sql {
 		int do_action(void * a=nullptr);
 		int create_db(char * db_name);
 		int drop_db(char * db_name);
+		int drop_tab(char * db_name,char * tab_name);
 	};
 }
 

@@ -234,6 +234,15 @@ int Cmy_sql::drop_db(char * db_name)
 	return 	this->execute(this->sql_buf);
 }
 
+int Cmy_sql::drop_tab(char * db_name, char * tab_name)
+{
+	if (!db_name) return -1;
+	if (strcmp((char *)"sys", db_name) == 0) return -1; //do not drop sys.[tabs]
+	sprintf(this->sql_buf, DROP_TAB, db_name, tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
 int Cmy_sql::create_db(char * db_name)
 {
 	if (!db_name) return -1;
@@ -246,6 +255,8 @@ int Cmy_sql::do_action(void * a)
 {
 	if (this->action == (ACTION_T)MySqlAtcion::create_db) this->create_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
+	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
+
 	return 0;
 }
 

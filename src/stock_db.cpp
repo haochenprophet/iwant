@@ -854,6 +854,32 @@ int Cstock_db::update_dir_cmd()
 	//if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
 	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
 }
+//insert_dir
+int Cstock_db::insert_dir_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0]);
+	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::insert;
+	return 0;
+}
+
+int Cstock_db::insert_dir_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::insert_dir_cmd()
+{
+	return	this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
 
 int Cstock_db::add_type_cmd()
 {
@@ -932,6 +958,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_second(p1, p2, p3);
 	return 0;
 }
@@ -968,6 +995,7 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_first(p);
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_first(p);
 	return 0;
 }
@@ -1007,6 +1035,7 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::insert_dir_id) this->insert_dir_id_cmd();
 	if (this->action == (ACTION_T)StockAtcion::alert_dir_key) this->alert_dir_key_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_cmd();
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::add_type) this->add_type_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_type) this->update_type_cmd();
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_cmd();
