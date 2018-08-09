@@ -909,6 +909,39 @@ int Object::message(void *p)
 #endif
 		return -1;
 }
+
+int Object::runme(void * myname, void *p) //p:parameter
+{
+	if (strcmp((char *)myname, (char *)"message") == 0) return this->message(p);
+	if (strcmp((char *)myname, (char *)"exception") == 0) return this->exception(p);
+	if (strcmp((char *)myname, (char *)"callback") == 0) return this->callback(p);
+	if (strcmp((char *)myname, (char *)"interrupt") == 0) return this->interrupt(p);
+	if (strcmp((char *)myname, (char *)"event") == 0) return this->event(p);
+	if (strcmp((char *)myname, (char *)"task") == 0) return this->task(p);
+	if (strcmp((char *)myname, (char *)"help") == 0) return this->help(p);
+	if (strcmp((char *)myname, (char *)"ui") == 0) return this->ui(p);
+	if (strcmp((char *)myname, (char *)"get") == 0) return this->get(p);
+	if (strcmp((char *)myname, (char *)"video") == 0) return this->video(p);
+	if (strcmp((char *)myname, (char *)"audio") == 0) return this->audio(p);
+	if (strcmp((char *)myname, (char *)"image") == 0) return this->image(p);
+	if (strcmp((char *)myname, (char *)"style") == 0) return this->style(p);
+	if (strcmp((char *)myname, (char *)"url") == 0) return this->url(p);
+	if (strcmp((char *)myname, (char *)"func") == 0) return this->func(p);
+	if (strcmp((char *)myname, (char *)"do_action") == 0) return this->do_action(p);
+	if (strcmp((char *)myname, (char *)"who") == 0) { this->who(); return 0; }
+	if (strcmp((char *)myname, (char *)"question") == 0) return this->question(p);
+	if (strcmp((char *)myname, (char *)"display") == 0) return this->display(p);
+	if (strcmp((char *)myname, (char *)"system") == 0)
+	{
+		if(p) return system((char *)p);
+		return -1;
+	}
+
+	if (p) return this->execute(p);
+	else return this->execute();
+	return -1;
+}
+
 int Object::create(void *p)
 {
 	return -1;//do nothing
