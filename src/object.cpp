@@ -83,7 +83,6 @@ long object_id = 0;
 Object::Object()
 {
 	this->id = ++object_id;
-	this->status=0;
 	this->silent =0;
 	this->priority = 0;
 	this->action=0;
@@ -797,7 +796,7 @@ time_t * Object::when()
 
 int Object::how()
 {
-	return this->status; //normal, success, OK ,Pass!  and so on
+	return this->status.data.i; //normal, success, OK ,Pass!  and so on
 }
 
 int Object::func(void *p)

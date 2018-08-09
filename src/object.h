@@ -83,7 +83,14 @@ namespace n_object {
 		float *fp;
 		double *dp;
 	}u_data;
-
+	
+	class Cdata
+	{
+	public:
+		u_data data;
+	public:
+		Cdata() { this->data.ull = 0; }
+	};
 	class Cparameter
 	{
 	public:
@@ -150,12 +157,16 @@ namespace n_object {
 		Ccmd(){argc = 0, argv = nullptr;}
 	};
 
+	class Cstatus :public Cdata//status class
+	{
+	};
+
 	class Object:public Ouuid
 	{
 	protected:
 		long id;//object id
 	public:
-		int status;
+		Cstatus status;
 		int silent;//can use to print or not print
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
