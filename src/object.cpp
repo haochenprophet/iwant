@@ -1011,7 +1011,8 @@ int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
 {
 	int ret = 0;
 	if (argc < 2) return ++ret;//return error 1
-	
+	if (argc > 2&&strcmp(argv[1], (char *)"runme") == 0) return 	this->dispatch_runme(argv[2], &this->cmd);//!!magical
+
 	if (this->isMe(argv[1]))
 	{
 #if OBJECT_DEBUG
