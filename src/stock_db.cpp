@@ -181,8 +181,8 @@ int Cstock_db::build_batch_second(void *p1, void *p2, void *p3)
 	if (!this->my_sql) return -1;
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
-	printf("%s %s %s %s %s",this->argv[5],this->argv[6],this->argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
-	for (int i = 7; i < argc; i++) printf(" %s", argv[i]);
+	printf("%s %s %s %s %s",this->cmd.argv[5],this->cmd.argv[6],this->cmd.argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
+	for (int i = 7; i < cmd.argc; i++) printf(" %s", cmd.argv[i]);
 	printf("\n");
 	return 0;
 }
@@ -196,7 +196,7 @@ int Cstock_db::build_batch_first(void *p)
 
 int Cstock_db::build_batch_cmd()
 {
-	if (this->argc < 7)
+	if (this->cmd.argc < 7)
 	{
 		std::cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
 		return -1;
@@ -1079,8 +1079,8 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 		this->action_help(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 		return -1;
 	}
-	this->argc = argc;//store user input parameter
-	this->argv = argv;
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
 	//get cmd
 	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action

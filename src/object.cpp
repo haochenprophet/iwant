@@ -89,8 +89,6 @@ Object::Object()
 	this->action=0;
 	this->error=0;
 	this->locate = -1;
-	this->argc = 0;
-	this->argv = nullptr;
 	this->name = "Object";
 	this->alias = this->name;
 	this->s_tag="[tag]";
@@ -909,13 +907,13 @@ int Object::message(void *p)
 #endif
 		return -1;
 }
-
+//return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
 {
 	int ret = 0;
 	ret=this->runme(myname, p);
 	if (ret != -1) return ret;//has find and execute function and return dispatch
-	if (this->family.empty()) return -1;//check family list is empty
+	if (this->family.empty()) return -2;//check family list is empty
 
 	Object *o;
 	LIST_FAMILY::iterator it;
@@ -925,7 +923,7 @@ int Object::dispatch_runme(void * myname, void *p)
 #if OBJECT_DEBUG
 		AT_LINE this->myName();
 #endif
-		ret = o->runme(myname, p);
+		ret = o->dispatch_runme(myname, p);
 		if (ret == -1) continue;//do-nothing or not find , find next object runme()
 		return ret; //ret >=0  
 	}
@@ -1043,8 +1041,8 @@ int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
 
 int Object::deal_cmd(int argc, char *argv[])
 {
-	this->argc = argc;
-	this->argv = argv;
+	this->cmd.argc = argc;
+	this->cmd.argv = argv;
 	do{
 		argc--;
 		AT_LINE std::cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line

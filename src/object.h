@@ -141,6 +141,15 @@ namespace n_object {
 	};
 	typedef std::list<Ctimeline> LIST_CTIMELINE;
 
+	class Ccmd //command class
+	{
+	public:
+		int argc;
+		char ** argv;
+	public:
+		Ccmd(){argc = 0, argv = nullptr;}
+	};
+
 	class Object:public Ouuid
 	{
 	protected:
@@ -180,8 +189,7 @@ namespace n_object {
 		int value;
 		int velocity;
 		//object cmd
-		int argc;
-		char ** argv;
+		Ccmd cmd;
 
 		std::list<void *> family;//class list
 		std::list<void *> exist_family;//class exist other family for removeMe frome other class 。

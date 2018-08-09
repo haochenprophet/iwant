@@ -269,8 +269,8 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
 		return -1;
 	}
-	this->argc = argc;//store user input parameter
-	this->argv = argv;
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
 	//get cmd
 	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action
