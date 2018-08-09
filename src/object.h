@@ -294,6 +294,7 @@ namespace n_object {
 		int get_cmd(int argc, char *argv[],char *cmd);
 		int list_cmd(int argc, char *argv[]);
 		int dispatch_cmd(int argc, char *argv[]);
+		int dispatch_runme(void * myname, void *p = nullptr);
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate

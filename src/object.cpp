@@ -910,6 +910,28 @@ int Object::message(void *p)
 		return -1;
 }
 
+int Object::dispatch_runme(void * myname, void *p)
+{
+	int ret = 0;
+	ret=this->runme(myname, p);
+	if (ret != -1) return ret;//has find and execute function and return dispatch
+	if (this->family.empty()) return -1;//check family list is empty
+
+	Object *o;
+	LIST_FAMILY::iterator it;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		o = (Object *)*it;
+#if OBJECT_DEBUG
+		AT_LINE this->myName();
+#endif
+		ret = o->runme(myname, p);
+		if (ret == -1) continue;//do-nothing or not find , find next object runme()
+		return ret; //ret >=0  
+	}
+	return -1;
+}
+
 int Object::runme(void * myname, void *p) //p:parameter
 {
 	if (strcmp((char *)myname, (char *)"message") == 0) return this->message(p);
@@ -931,14 +953,17 @@ int Object::runme(void * myname, void *p) //p:parameter
 	if (strcmp((char *)myname, (char *)"who") == 0) { this->who(); return 0; }
 	if (strcmp((char *)myname, (char *)"question") == 0) return this->question(p);
 	if (strcmp((char *)myname, (char *)"display") == 0) return this->display(p);
+	if (strcmp((char *)myname, (char *)"execute") == 0)//support two excute function
+	{
+		if (p) return this->execute(p);
+		else return this->execute();
+	}
+
 	if (strcmp((char *)myname, (char *)"system") == 0)
 	{
 		if(p) return system((char *)p);
 		return -1;
 	}
-
-	if (p) return this->execute(p);
-	else return this->execute();
 	return -1;
 }
 
