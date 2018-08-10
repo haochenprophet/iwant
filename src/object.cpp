@@ -906,6 +906,13 @@ int Object::message(void *p)
 #endif
 		return -1;
 }
+int Object::feedback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
 {
@@ -931,6 +938,7 @@ int Object::dispatch_runme(void * myname, void *p)
 
 int Object::runme(void * myname, void *p) //p:parameter
 {
+	if (strcmp((char *)myname, (char *)"feedback") == 0) return this->feedback(p);
 	if (strcmp((char *)myname, (char *)"message") == 0) return this->message(p);
 	if (strcmp((char *)myname, (char *)"exception") == 0) return this->exception(p);
 	if (strcmp((char *)myname, (char *)"callback") == 0) return this->callback(p);

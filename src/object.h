@@ -349,6 +349,7 @@ namespace n_object {
 		virtual int callback(void *p = nullptr);//objec callback
 		virtual int exception(void *p = nullptr);//Respond or issue an exception
 		virtual int message(void *p = nullptr);//Passing and processing messages
+		virtual int feedback(void *p = nullptr);//send and accept feedback info
 		virtual int runme(void * myname, void *p= nullptr);
 	};
 
