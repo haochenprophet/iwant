@@ -164,7 +164,7 @@ int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
 			cp+=len;continue;
 		}
 
-		if(dispaly) cout<<cp<<endl;
+		if(dispaly) std::cout<<cp<<endl;
 		cp+=len;
 
 		if(*(cp)=='(') return 1;//c/c++ function
@@ -203,12 +203,12 @@ int Cfile::create(void *p)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "FILE_TEST!\n\n";
+	std::cout << "FILE_TEST!\n\n";
 	Cfile f;
 	f.f_name="question.cpp";
 
 	f.f_read();
-	cout<<f.addr<<endl;
+	std::cout<<f.addr<<endl;
 
 	return 0;
 }

@@ -67,7 +67,7 @@ size_t Ctimer::t_strftime (char* ptr, size_t maxsize, const char* format,const s
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "TIMER_TEST\n\n";
+	std::cout << "TIMER_TEST\n\n";
 
 	Ctimer t;
 	//test time cmd

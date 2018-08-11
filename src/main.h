@@ -10,6 +10,8 @@ namespace n_main {
 		Cmain();
 		int my_init(void *p=nullptr);
 		int is_exist_main(char *f_name);
+		int create_main_cmd(int argc, char *argv[]);
+		int do_action(void * a=nullptr);
 		int deal_cmd(int argc, char *argv[]);
 	};
 

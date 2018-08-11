@@ -33,7 +33,7 @@ Cclass::~Cclass()
 
 int Cclass::func(void *p)
 {
-	cout << this->syntax;
+	std::cout << this->syntax;
 	return 0;
 }
 
@@ -53,7 +53,7 @@ int Cclass::deal_cmd(int argc, char *argv[])
 
 	do{
 		argc--;
-		//AT_LINE cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+		//AT_LINE std::cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
 		if(argc<1)	break;
 
 		if(this->create((void *)argv[argc])) continue;//creat h cpp temp
@@ -84,7 +84,7 @@ int Cclass::deal_cmd(int argc, char *argv[])
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "CLASS_TEST\n\n";
+	std::cout << "CLASS_TEST\n\n";
 
 	Cclass c;
 	c.deal_cmd(argc,argv);
@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
 
 	c.create((void *)"do");
 	c.my_temp();
-	cout<<c.cpp_temp<<endl;	
+	std::cout<<c.cpp_temp<<endl;	
 
 	Ctag t;
 	t.my_syntax();

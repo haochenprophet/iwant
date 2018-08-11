@@ -181,8 +181,8 @@ int Cstock_db::build_batch_second(void *p1, void *p2, void *p3)
 	if (!this->my_sql) return -1;
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
-	printf("%s %s %s %s %s",this->argv[5],this->argv[6],this->argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
-	for (int i = 7; i < argc; i++) printf(" %s", argv[i]);
+	printf("%s %s %s %s %s",this->cmd.argv[5],this->cmd.argv[6],this->cmd.argv[2],this->my_sql->db_name, this->row[0]);  //[0].exe [1]action [2]password [3]db_name [4]tab_name
+	for (int i = 7; i < cmd.argc; i++) printf(" %s", cmd.argv[i]);
 	printf("\n");
 	return 0;
 }
@@ -196,9 +196,9 @@ int Cstock_db::build_batch_first(void *p)
 
 int Cstock_db::build_batch_cmd()
 {
-	if (this->argc < 7)
+	if (this->cmd.argc < 7)
 	{
-		cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
+		std::cout << "Cstock_db::build_batch_cmd request cmd line input: [1]action [2]password [3]db_name [4]tab_name [5]program [6]action \n";
 		return -1;
 	}
 
@@ -216,7 +216,7 @@ int Cstock_db::calculate_avg_second(void *p1, void *p2, void *p3)
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
-	//cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
+	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_AVG, this->my_sql->db_name, this->my_sql->tab_name, *this->result->data->data->data, this->row[0]);
@@ -489,7 +489,7 @@ int Cstock_db::calculate_ma(int x)
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
 	if (!this->result) return 1;
-	//cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
+	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
 	sprintf(this->my_sql->sql_buf, UPDATE_MA_X, this->my_sql->db_name, this->my_sql->tab_name,x, *this->result->data->data->data, this->row[0],x);
@@ -854,6 +854,32 @@ int Cstock_db::update_dir_cmd()
 	//if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
 	return 	this->my_sql->execute(this->my_sql->sql_buf, this);
 }
+//insert_dir
+int Cstock_db::insert_dir_second(void *p1, void *p2, void *p3)
+{
+	if (!this->my_sql) return -1;
+	this->row = (MYSQL_ROW)p1;
+	if (!this->row || !p2 || !p3) return -1;
+
+	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0]);
+	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->execute(this->my_sql->sql_buf);
+	this->my_sql->sql_opetate = SqlOperate::insert;
+	return 0;
+}
+
+int Cstock_db::insert_dir_first(void *p)
+{
+	this->pm = (Cmy_sql *)p;
+	this->my_sql->sql_opetate = SqlOperate::nothing;
+	pm->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cstock_db::insert_dir_cmd()
+{
+	return	this->my_sql->execute((char *)SELECT_STOCK_ID, this);
+}
 
 int Cstock_db::add_type_cmd()
 {
@@ -932,6 +958,7 @@ int Cstock_db::execute(void *p1, void *p2, void *p3)
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_second(p1, p2, p3);
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_second(p1, p2, p3);
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_second(p1, p2, p3);
 	return 0;
 }
@@ -968,6 +995,7 @@ int Cstock_db::func(void *p)// callback function
 	if (this->action == (ACTION_T)StockAtcion::add_dir) this->add_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::clear_dir) this->clear_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_first(p);
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_first(p);
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_first(p);
 	return 0;
 }
@@ -1007,6 +1035,7 @@ int Cstock_db::parse_run_action()
 	if (this->action == (ACTION_T)StockAtcion::insert_dir_id) this->insert_dir_id_cmd();
 	if (this->action == (ACTION_T)StockAtcion::alert_dir_key) this->alert_dir_key_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_dir) this->update_dir_cmd();
+	if (this->action == (ACTION_T)StockAtcion::insert_dir) this->insert_dir_cmd();
 	if (this->action == (ACTION_T)StockAtcion::add_type) this->add_type_cmd();
 	if (this->action == (ACTION_T)StockAtcion::update_type) this->update_type_cmd();
 	if (this->action == (ACTION_T)StockAtcion::verify_ma) this->verify_ma_cmd();
@@ -1019,7 +1048,7 @@ int Cstock_db::display(ActionInfo * a)
 {
 	do {
 		if (a->step == 0 && a->action == nullptr) break;
-		cout << a->step << ":" << (char *)a->action << endl;
+		std::cout << a->step << ":" << (char *)a->action << endl;
 		a++;
 	} while (1);
 	return 0;
@@ -1046,12 +1075,12 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 	//this->list_cmd(argc, argv);//test ok
 	if (argc < 5)
 	{
-		cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";
+		std::cout << "Cstock_db request cmd line input: [1]action [2]password [3]db_name [4]tab_name \n";
 		this->action_help(stock_db_action, (int)STOCK_DB_ACTION_COUNT);
 		return -1;
 	}
-	this->argc = argc;//store user input parameter
-	this->argv = argv;
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
 	//get cmd
 	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action

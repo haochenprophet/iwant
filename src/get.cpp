@@ -19,7 +19,7 @@ Cget::Cget()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "GET_TEST\n\n";
+	std::cout << "GET_TEST\n\n";
 
 	return 0;
 }

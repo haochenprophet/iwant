@@ -118,6 +118,9 @@ namespace n_stock_db {
 		int update_dir_second(void *p1, void *p2, void *p3);
 		int update_dir_first(void *p = nullptr);
 		int update_dir_cmd();
+		int insert_dir_second(void *p1, void *p2, void *p3);
+		int insert_dir_first(void *p = nullptr);
+		int insert_dir_cmd();
 		int execute_add_cmd(Action * a, int count);
 		int add_type_cmd();
 		int update_type_cmd();

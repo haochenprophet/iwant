@@ -152,6 +152,7 @@
     <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
     <ClCompile Include="..\..\src\build.cpp" />
+    <ClCompile Include="..\..\src\but.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
     <ClCompile Include="..\..\src\code.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="..\..\src\exec.cpp" />
     <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\ex_func.cpp" />
+    <ClCompile Include="..\..\src\field.cpp" />
     <ClCompile Include="..\..\src\file.cpp" />
     <ClCompile Include="..\..\src\fileAllot.cpp" />
     <ClCompile Include="..\..\src\ftp.cpp" />
@@ -1620,6 +1622,7 @@
     <ClInclude Include="..\..\src\block.h" />
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
+    <ClInclude Include="..\..\src\but.h" />
     <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\code.h" />
     <ClInclude Include="..\..\src\code_action.h" />
@@ -1636,6 +1639,7 @@
     <ClInclude Include="..\..\src\exec.h" />
     <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\ex_func.h" />
+    <ClInclude Include="..\..\src\field.h" />
     <ClInclude Include="..\..\src\file.h" />
     <ClInclude Include="..\..\src\fileAllot.h" />
     <ClInclude Include="..\..\src\ftp.h" />
@@ -2861,6 +2865,7 @@
     <ClInclude Include="..\..\src\keywords\__w64.h" />
     <ClInclude Include="..\..\src\keywords\__wchar_t.h" />
     <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\main_action.h" />
     <ClInclude Include="..\..\src\make.h" />
     <ClInclude Include="..\..\src\makefile.h" />
     <ClInclude Include="..\..\src\math.h" />
@@ -3109,6 +3114,7 @@
     <None Include="..\..\src\g_code.i" />
     <None Include="..\..\src\g_code_func.i" />
     <None Include="..\..\src\instruction\Makefile" />
+    <None Include="..\..\src\main_action.i" />
     <None Include="..\..\src\Makefile" />
     <None Include="..\..\src\math\Makefile" />
     <None Include="..\..\src\my_sql_action.i" />

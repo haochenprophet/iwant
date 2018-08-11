@@ -21,12 +21,13 @@
 #include "uuid.h"
 #include "bits.def"
 #include "action_type.h"
+#include "data.h"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::wstring;
-using std::list;
-using std::cout;
+//using std::list;
+//using std::cout;
 using std::endl;
 
 enum UsingLanguage
@@ -40,16 +41,7 @@ typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 int object_func(void *p);
 int runcmd(void *cmd);
 
-#ifndef OBJECT_DEBUG
-#define OBJECT_DEBUG 0//1
-#endif
-
-#define PAGE_4K	(4*1024) 
-#define O_BUF_LEN PAGE_4K
-#define AT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
-#define OUT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";}while(0);
-#define OUT_ERROR do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(1);}while(0);
-#define OUT_ERROR_N(n) do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(n);}while(0);
+#include "object_def.h"
 
 namespace n_object {
 
@@ -77,7 +69,7 @@ namespace n_object {
 		CtagItem(string tag,string temp,string replace);
 		CtagItem(char* tag,char* temp,char* replace);
 	};
-	typedef list<CtagItem> LIST_TAGITEM;
+	typedef std::list<CtagItem> LIST_TAGITEM;
 
 	class Cmyfunc {
 	public:
@@ -93,8 +85,8 @@ namespace n_object {
 		int runMe(void *p, bool new_thread=false);
 	};
 
-	typedef list<Cmyfunc> LIST_CMYFUNC;
-	typedef list<void *> LIST_FAMILY;//family list type
+	typedef std::list<Cmyfunc> LIST_CMYFUNC;
+	typedef std::list<void *> LIST_FAMILY;//family list type
 
 	enum class TimelineStatus{
 		now,
@@ -108,14 +100,28 @@ namespace n_object {
 		TimelineStatus status;
 		std::multimap<void *, void *> track; //1. void * point timer , 2. void * point Object
 	};
-	typedef list<Ctimeline> LIST_CTIMELINE;
+	typedef std::list<Ctimeline> LIST_CTIMELINE;
+
+	class Ccmd //command class
+	{
+	public:
+		int argc;
+		char ** argv;
+	public:
+		Ccmd(){argc = 0, argv = nullptr;}
+	};
+
+	class Cstatus :public Udata//status class
+	{
+	};
 
 	class Object:public Ouuid
 	{
 	protected:
 		long id;//object id
 	public:
-		int status;
+		Udata udata;
+		Cstatus status;
 		int silent;//can use to print or not print
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
@@ -149,24 +155,23 @@ namespace n_object {
 		int value;
 		int velocity;
 		//object cmd
-		int argc;
-		char ** argv;
+		Ccmd cmd;
 
-		list<void *> family;//class list
-		list<void *> exist_family;//class exist other family for removeMe frome other class 。
+		std::list<void *> family;//class list
+		std::list<void *> exist_family;//class exist other family for removeMe frome other class 。
 
-		list<Cmyfunc> ex_func;//extern function list 
-		list<CtagItem> l_tag_rule;//for tag rule 
+		std::list<Cmyfunc> ex_func;//extern function list 
+		std::list<CtagItem> l_tag_rule;//for tag rule 
 
-		list<Object *> my_mem;//list for  memory address 
-		list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
-		list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
+		std::list<Object *> my_mem;//list for  memory address 
+		std::list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
+		std::list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
 
-		list<void *> l_url;//url list
-		list<void *> l_style;//object style list
-		list<void *> l_image;//object image list
-		list<void *> l_audio;//object audio list
-		list<void *> l_video;//object vedio list
+		std::list<void *> l_url;//url list
+		std::list<void *> l_style;//object style list
+		std::list<void *> l_image;//object image list
+		std::list<void *> l_audio;//object audio list
+		std::list<void *> l_video;//object vedio list
 		
 		//url can be by used class Cpath
 		string s_url; //Record a url string 
@@ -181,7 +186,7 @@ namespace n_object {
 
 		void myName(Object *o=nullptr);
 		void addMe(Object *o=nullptr);//add obj to family
-		void removeMe(void * item); //frome other class
+		void removeMe(void * item); //from other class
 		void remove_exist_family();
 		int  sort_family(void *p=nullptr);//p point cmpare function : bool cmp_family(Object & first, Object & second)
 
@@ -263,6 +268,7 @@ namespace n_object {
 		int get_cmd(int argc, char *argv[],char *cmd);
 		int list_cmd(int argc, char *argv[]);
 		int dispatch_cmd(int argc, char *argv[]);
+		int dispatch_runme(void * myname, void *p = nullptr);
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
@@ -289,8 +295,95 @@ namespace n_object {
 		virtual int image(void *p=nullptr);//execute object image if exist
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
-		virtual int get(void *p=nullptr);
+		virtual int get(void *p=nullptr);//get data ,url ,download file and so on ...
 		virtual int help(void *p = nullptr);//Can be used for command line help
+		virtual int ui(void *p = nullptr);//UI:User Interface , include Graphic interface(GUI), Audio interface(AUI), video interface(VUI),Text Interface (TUI)
+		virtual int event(void *p = nullptr);
+		virtual int task(void *p = nullptr);//Execution task queue
+		virtual int interrupt(void *p = nullptr);
+		virtual int callback(void *p = nullptr);//objec callback
+		virtual int exception(void *p = nullptr);//Respond or issue an exception
+		virtual int message(void *p = nullptr);//Passing and processing messages
+		virtual int feedback(void *p = nullptr);//send and accept feedback info
+		virtual int runme(void * myname, void *p= nullptr);
+		//Arithmetic Operators
+		Object  operator+(Object *o) { this->addMe(o); }
+		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
+		Object  operator-(Object *o) { this->removeMe(o);}
+		Object  operator-(Udata *o) { this->udata.data.ull -= o->data.ull; }
+		Object  operator*(Object *o) { this->udata.data.ull *= o->udata.data.ull; }
+		Object  operator/(Object *o) { if(o->udata.data.ull) this->udata.data.ull /= o->udata.data.ull; }
+		Object  operator%(Object *o) { if(o->udata.data.ull )this->udata.data.ull %= o->udata.data.ull; }
+		//Relational Operators
+		 bool operator==(char *identifier) { return (0 != this->isMe(identifier)); }
+		 bool operator==(string * identifier) { return (0 != this->isMe(identifier)); }
+		 bool operator==(string identifier) { return (0 != this->isMe(identifier)); }
+		 bool operator==(int id) { return (0 != this->isMe(id)); }
+		 bool operator==(Object *o) { return (this->uuid==o->uuid); }
+		 bool operator!=(char *identifier) { return (0 == this->isMe(identifier)); }
+		 bool operator!=(string * identifier) { return (0 == this->isMe(identifier)); }
+		 bool operator!=(string identifier) { return (0 == this->isMe(identifier)); }
+		 bool operator!=(int id) { return (0 == this->isMe(id)); }
+		 bool operator!=(Object *o) { return !(this->uuid == o->uuid); }
+		 bool operator < (Object& o) { return (this->name < o.name); }
+		 bool operator <= (Object& o) { return (this->name <= o.name); }
+		 bool operator > (Object&o) { return (this->name > o.name); }
+		 bool operator >= (Object&o) { return (this->name >= o.name); }
+		 //Logical Operators
+		 bool operator || (Object&o) { return this->udata.data.ull || o.udata.data.ull; }
+		 bool operator && (Object&o) { return this->udata.data.ull && o.udata.data.ull; }
+		 bool operator ! () { return !this->udata.data.ull; }
+		 //Positive and negative operators
+		/* 
+		Object& operator + () { }
+		 Object& operator - () { }
+		 Object* operator & () { return this; }
+		 Object& operator * () { }
+		 */
+		 //Self-increasing, self-decreasing operator
+		 Object& operator ++ () { ++this->udata.data.ull; }//before ++
+		 Object operator ++ (int i) { this->udata.data.ull++; }
+		 Object& operator --() { --this->udata.data.ull; }//before--
+		 Object operator -- (int i) { this->udata.data.ull--; }
+		 //Bit operators
+		 Object operator | (Object& o) { this->udata.data.ull|=o.udata.data.ull; }
+		 Object operator & (Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 Object operator ^ (Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 Object operator << (int i){ this->udata.data.ull <<= i; }
+		 Object operator >> (int i) { this->udata.data.ull >>= i; }
+		 Object operator ~ () { this->udata.data.ull= ~this->udata.data.ull; }
+		 //Assignment operators
+		 Object& operator += (const Object& o) { this->udata.data.ull += o.udata.data.ull; }
+		 Object& operator -= (const Object& o) { this->udata.data.ull -= o.udata.data.ull; }
+		 Object& operator *= (const Object& o) { this->udata.data.ull *= o.udata.data.ull; }
+		 Object& operator /= (const Object& o) { if(o.udata.data.ull) this->udata.data.ull /= o.udata.data.ull; }
+		 Object& operator %= (const Object& o) { if (o.udata.data.ull) this->udata.data.ull %= o.udata.data.ull; }
+		 Object& operator &= (const Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 Object& operator |= (const Object& o) { this->udata.data.ull |= o.udata.data.ull; }
+		 Object& operator ^= (const Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 Object& operator <<= (int i) { this->udata.data.ull <<=i; }
+		 Object& operator >>= (int i) { this->udata.data.ull >>=i; }
+		 //Memory operator
+		 /*
+		 void *operator new(size_t size) { }
+		 void *operator new(size_t size, int i) { }
+		 void *operator new[](size_t size) {}
+		 void operator delete(void*p) { }
+		 void operator delete(void*p, int i, int j) { }
+		 void operator delete[](void* p) {}
+		 */
+		 //Special operator
+		 Object& operator = (const Object& o) { this->udata.data.ull = o.udata.data.ull; }
+		 /*
+		 char operator [] (int i) {}
+		 const char* operator () () {}
+		 udata operator -> () { return this->udata; }
+		 operator char* () const {}
+		 operator int() {}
+		 operator const char() const {}s
+		 operator short int() const {}
+		 operator long long() const {}
+		 */
 	};
 
 	class Cobject:public Object

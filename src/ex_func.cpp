@@ -41,7 +41,7 @@ int rename_cmd(void * p_Cparameter) //point calss Cparameter
 
 	if(nullptr==p->in||nullptr==p->out)
 	{
-		cout<<"error:rename_cmd->if(nullptr==p->in||nullptr==p->out)\n";
+		std::cout<<"error:rename_cmd->if(nullptr==p->in||nullptr==p->out)\n";
 		return -1;
 	} 
 	
@@ -60,7 +60,7 @@ int wait_char_abcd(void * cp)
 		if(c=='C'||c=='c')	return 3;
 		if(c=='D'||c=='d')	return 4;
 		if(c=='Q'||c=='q')	exit(0);		
-		//cout<<"press: A B C D for select.\n";
+		//std::cout<<"press: A B C D for select.\n";
 	}
 	return 0;
 }

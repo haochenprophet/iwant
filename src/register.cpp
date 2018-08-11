@@ -24,7 +24,7 @@ Cregister::~Cregister()
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "REGISTER_TEST\n\n";
+	std::cout << "REGISTER_TEST\n\n";
 
 	return 0;
 }

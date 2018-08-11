@@ -4,7 +4,7 @@
 #include "object.h"
 #include "os.h" //DIR_T
 
-typedef list<DIR_T *> NAME_LIST;
+typedef std::list<DIR_T *> NAME_LIST;
 
 namespace n_path {
 	class Cpath :public Object

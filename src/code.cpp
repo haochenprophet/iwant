@@ -50,26 +50,26 @@ int Ccode::create_action(void *p)
 	if (!p) return -1;
 	this->st = GLOBAL_CLASS_TEMP;//global_class string template
 	this->sp = (string *)p;
-	this->s_replace(this->sp, &this->s_cpp_tag, &this->s_cpp_rep);//	cout << *this->sp<<endl;//test ok
+	this->s_replace(this->sp, &this->s_cpp_tag, &this->s_cpp_rep);//	std::cout << *this->sp<<endl;//test ok
 	this->s_replace(&this->st, &this->s_tag, this->sp);// this->sp= clas name
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c)
 	{
-		cout << this->st;//test
+		std::cout << this->st;//test
 		this->file_cpp.f_append(&this->st);//Cclass class; //test ok
 	}
 
 /*//remove create  extern to .h file
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		this->se = EXTERN_KEYWOED;
-		this->se += this->st;//	cout << this->se;//test ok
+		this->se += this->st;//	std::cout << this->se;//test ok
 		this->file_h.f_append(&this->se); //extern Cclass class; //test ok
 	}
 */
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->st = ADD_ME_TEMP;//note change tag template
 		this->sp = (string *)p;//*.cpp
-		this->s_replace(this->sp, &this->s_cpp_tag, &this->s_cpp_rep);//	cout << *this->sp<<endl;//test ok
+		this->s_replace(this->sp, &this->s_cpp_tag, &this->s_cpp_rep);//	std::cout << *this->sp<<endl;//test ok
 		this->s_replace(&this->st, &this->s_tag, this->sp);// this->sp= clas name
 		this->s_replace(&this->st, (char*)" .", (char *)".");// replace " .where()" to ".where()"
 		this->file_func.f_append(&this->st);//p->addMe(g_[tag].where());
@@ -91,7 +91,7 @@ int Ccode::create(char * cp)//cp point class name
 {
 	if(cp==nullptr) return -1;
 	
-	cout<<cp<<endl;//test
+	std::cout<<cp<<endl;//test
 
 	return 0;
 }
@@ -188,7 +188,7 @@ int Ccode::help(void *p)
 #include "g_code.i"
 int main(int argc, char *argv[])
 {
-	cout << "CODE_TEST\n\n";
+	std::cout << "CODE_TEST\n\n";
 	Ccode c;
 	add_objects(&c);
 	c.my_family();

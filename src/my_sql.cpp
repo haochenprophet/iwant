@@ -177,7 +177,7 @@ int Cmy_sql::get(void *p,Object *o)//get row
 int Cmy_sql::func(void *p)
 {
 	Cmy_sql *m=(Cmy_sql*) p;
-	cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
+	std::cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
 	//this->get(this->fields,true);
 	return 0;
 }
@@ -234,6 +234,15 @@ int Cmy_sql::drop_db(char * db_name)
 	return 	this->execute(this->sql_buf);
 }
 
+int Cmy_sql::drop_tab(char * db_name, char * tab_name)
+{
+	if (!db_name) return -1;
+	if (strcmp((char *)"sys", db_name) == 0) return -1; //do not drop sys.[tabs]
+	sprintf(this->sql_buf, DROP_TAB, db_name, tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
 int Cmy_sql::create_db(char * db_name)
 {
 	if (!db_name) return -1;
@@ -246,6 +255,8 @@ int Cmy_sql::do_action(void * a)
 {
 	if (this->action == (ACTION_T)MySqlAtcion::create_db) this->create_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
+	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
+
 	return 0;
 }
 
@@ -254,12 +265,12 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 	//check user input
 	if (argc < 5)
 	{
-		cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name [4]tab_name | db_name \n";
+		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name [4]tab_name | db_name \n";
 		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
 		return -1;
 	}
-	this->argc = argc;//store user input parameter
-	this->argv = argv;
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
 	//get cmd
 	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action

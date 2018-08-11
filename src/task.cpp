@@ -89,7 +89,7 @@ void Ctask::free_task_list() //for delete Ctask::create(char *p) task
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "TASK_TEST\n\n";
+	std::cout << "TASK_TEST\n\n";
 	Ctask t,*p;
 	p=t.create(&t,(char *)"sub-task",(char *) "test-sub-task");
 	t.display();

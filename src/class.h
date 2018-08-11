@@ -22,10 +22,10 @@ namespace n_class {
 		string decl_spec;
 		string tag;
 		string declarators;
-		list<string *> base_list;//base class list 
+		std::list<string *> base_list;//base class list 
 
-		list<string *> member_list;//base class list 
-		list<string *> func_list;//base class list 
+		std::list<string *> member_list;//base class list 
+		std::list<string *> func_list;//base class list 
 
 		string cpp_temp;
 	public:

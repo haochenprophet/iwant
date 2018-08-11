@@ -13,7 +13,7 @@ Cpath::Cpath()
 Cpath::~Cpath()
 {
 #if PATH_TEST
-	cout<<"Cpath::~Cpath()\n";
+	std::cout<<"Cpath::~Cpath()\n";
 #endif
 	this->my_clear();
 }
@@ -32,7 +32,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	while((p_dirent=readdir(p_dir)))
 	{
 		if(term&&!strstr(p_dirent->d_name,term)) continue;
-		if(display) cout<<p_dirent->d_name<<endl;
+		if(display) std::cout<<p_dirent->d_name<<endl;
 		if(to_list)
 		{
 			size=strlen(p_dirent->d_name);
@@ -184,7 +184,7 @@ int Cpath::display(void *p)
 #endif
 
 #if LINUX_OS
-	cout << (DIR_T *)p << endl;	//display the name_list
+	std::cout << (DIR_T *)p << endl;	//display the name_list
 #endif
 	return 0;
 }
@@ -218,7 +218,7 @@ int Cpath::execute(Object *o) //execute input func
 #if LINUX_OS
 		s = (char*)*it;
 #endif
-		//cout <<"s="<< s << endl;this->display(*it);//test ok 
+		//std::cout <<"s="<< s << endl;this->display(*it);//test ok 
 		o->execute( (void*)&s);	//execute o->func 
 	}
 	return 0;
@@ -228,7 +228,7 @@ int Cpath::execute(Object *o) //execute input func
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	cout << "PATH_TEST\n\n";
+	std::cout << "PATH_TEST\n\n";
 
 #if WINDOWS_OS
 	DIR_T *dir = L"../../src";//windows dir 
