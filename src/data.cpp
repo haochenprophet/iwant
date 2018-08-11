@@ -281,6 +281,159 @@ void Udata::get(std::wstring * *sws)
 {
 	*sws = this->data.sws;
 }
+
+int Udata::cmp(char c)
+{
+	if (this->data.c == c) return 0;
+	return (this->data.c > c)?1:-1;
+}
+int Udata::cmp(unsigned char uc)
+{
+	if (this->data.uc == uc) return 0;
+	return (this->data.uc > uc) ? 1 : -1;
+}
+int Udata::cmp(wchar_t wc)
+{
+	if (this->data.wc == wc) return 0;
+	return (this->data.wc > wc) ? 1 : -1;
+}
+int Udata::cmp(short s)
+{
+	if (this->data.s == s) return 0;
+	return (this->data.s > s) ? 1 : -1;
+}
+int Udata::cmp(unsigned short us)
+{
+	if (this->data.us == us) return 0;
+	return (this->data.us > us) ? 1 : -1;
+}
+int Udata::cmp(int i)
+{
+	if (this->data.i == i) return 0;
+	return (this->data.i > i) ? 1 : -1;
+}
+int Udata::cmp(unsigned int ui)
+{
+	if (this->data.ui == ui) return 0;
+	return (this->data.ui > ui) ? 1 : -1;
+}
+int Udata::cmp(long l)
+{
+	if (this->data.l == l) return 0;
+	return (this->data.l > l) ? 1 : -1;
+}
+int Udata::cmp(unsigned long ul)
+{
+	if (this->data.ul == ul) return 0;
+	return (this->data.ul > ul) ? 1 : -1;
+}
+int Udata::cmp(long long ll)
+{
+	if (this->data.ll == ll) return 0;
+	return (this->data.ll > ll) ? 1 : -1;
+}
+int Udata::cmp(unsigned long long ull)
+{
+	if (this->data.ull == ull) return 0;
+	return (this->data.ull > ull) ? 1 : -1;
+}
+int Udata::cmp(float f)
+{
+	if (this->data.f == f) return 0;
+	return (this->data.f > f) ? 1 : -1;
+}
+int Udata::cmp(double d)
+{
+	if (this->data.d == d) return 0;
+	return (this->data.d > d) ? 1 : -1;
+}
+int Udata::cmp(void * p)//!!
+{
+	if (this->data.p == p) return 0;
+	return (this->data.p> p) ? 1 : -1;
+}
+
+T_TYPE int Udata::cmp_t(T a, T b, size_t len)
+{
+	if (--len < 0) { OUT_ERROR return 2; }
+	for (; len > 0; len--)
+	{
+		if(a[len]>b[len]) return 1;
+		if(a[len]<b[len]) return -1;
+	}
+	return 0;
+}
+
+int Udata::cmp(char *cp, size_t len)
+{
+	return this->cmp_t(this->data.cp, cp, len);
+}
+int Udata::cmp(unsigned char* ucp, size_t len)
+{
+	return this->cmp_t(this->data.ucp, ucp, len);
+}
+int Udata::cmp(wchar_t *wcp, size_t len)
+{
+	return this->cmp_t(this->data.wcp, wcp, len);
+}
+int Udata::cmp(short * sp, size_t len)
+{
+	return this->cmp_t(this->data.sp, sp, len);
+}
+int Udata::cmp(unsigned short * usp, size_t len)
+{
+	return this->cmp_t(this->data.usp, usp, len);
+}
+int Udata::cmp(int *ip, size_t len)
+{
+	return this->cmp_t(this->data.ip, ip, len);
+}
+int Udata::cmp(unsigned int *uip, size_t len)
+{
+	return this->cmp_t(this->data.uip, uip, len);
+}
+int Udata::cmp(long *lp, size_t len)
+{
+	return this->cmp_t(this->data.lp, lp, len);
+}
+int Udata::cmp(unsigned long *ulp, size_t len)
+{
+	return this->cmp_t(this->data.ulp, ulp, len);
+}
+int Udata::cmp(long long *llp, size_t len)
+{
+	return this->cmp_t(this->data.llp, llp, len);
+}
+int Udata::cmp(unsigned long long *ullp, size_t len)
+{
+	return this->cmp_t(this->data.ullp, ullp, len);
+}
+int Udata::cmp(float *fp, size_t len)
+{
+	return this->cmp_t(this->data.fp, fp, len);
+}
+int Udata::cmp(double *dp, size_t len)
+{
+	return this->cmp_t(this->data.dp, dp, len);
+}
+int Udata::cmp(std::string *ss)
+{
+	if (*this->data.ss == *ss) return 0;
+	return  (*this->data.ss > *ss)?1: -1;
+}
+int Udata::cmp(std::wstring *sws)
+{
+	if (*this->data.sws == *sws) return 0;
+	return  (*this->data.sws > *sws) ? 1 : -1;
+}
+int Udata::cmp(Udata *p)
+{
+	return this->cmp_t((unsigned char*)&this->data, (unsigned char*)&p->data, (size_t)sizeof(u_data));
+}
+int Udata::cmp(u_data *p)
+{
+	return this->cmp_t((unsigned char*)&this->data,(unsigned char*) p, (size_t)sizeof(u_data));
+}
 #if DATA_TEST
 
 int main(int argc, char *argv[])

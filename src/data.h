@@ -1,6 +1,8 @@
 #ifndef DATA_H 
 #define DATA_H
 #include <string>
+#include "object_def.h"
+
 namespace n_data {
 
 	typedef union union_data
@@ -168,6 +170,39 @@ namespace n_data {
 		void get(double * *dp);
 		void get(std::string * *ss);
 		void get(std::wstring * *sws);
+		//compare
+		T_TYPE int cmp_t(T a, T b, size_t len = 1);
+		int cmp(char c);
+		int cmp(unsigned char uc);
+		int cmp(wchar_t wc);
+		int cmp(short s);
+		int cmp(unsigned short us);
+		int cmp(int i);
+		int cmp(unsigned int ui);
+		int cmp(long l);
+		int cmp(unsigned long ul);
+		int cmp(long long ll);
+		int cmp(unsigned long long ull);
+		int cmp(float f);
+		int cmp(double d);
+		int cmp(void * p);
+		int cmp(char *cp,size_t len=1);
+		int cmp(unsigned char* ucp, size_t len = 1);
+		int cmp(wchar_t *wcp, size_t len = 1);
+		int cmp(short * sp, size_t len = 1);
+		int cmp(unsigned short * usp, size_t len = 1);
+		int cmp(int *ip, size_t len = 1);
+		int cmp(unsigned int *uip, size_t len = 1);
+		int cmp(long *lp, size_t len = 1);
+		int cmp(unsigned long *ulp, size_t len = 1);
+		int cmp(long long *llp, size_t len = 1);
+		int cmp(unsigned long long *ullp, size_t len = 1);
+		int cmp(float *fp, size_t len = 1);
+		int cmp(double *dp, size_t len = 1);
+		int cmp(std::string *ss);
+		int cmp(std::wstring *sws);
+		int cmp(Udata *p);
+		int cmp(u_data *p);
 	};
 }
 using namespace n_data;

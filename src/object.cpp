@@ -4,6 +4,10 @@
 #define OBJECT_TEST 0//1
 #endif
 
+#ifndef OBJECT_DEBUG
+#define OBJECT_DEBUG 0//1
+#endif
+
 Cparameter::Cparameter()
 {
 	this->in=nullptr;
