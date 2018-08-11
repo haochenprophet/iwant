@@ -4428,6 +4428,9 @@
     <ClCompile Include="..\..\src\field.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\data.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8895,6 +8898,15 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\main_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\data.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\data_class.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\object_def.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

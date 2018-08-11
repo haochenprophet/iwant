@@ -9,7 +9,7 @@ enum TaskStatus{
 	TaskRunning,
 	TaskPending,
 	TaskComplete,
-	TaslContinue,
+	TaskContinue,
 	TaskBreak,
 };
 

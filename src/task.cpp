@@ -15,38 +15,38 @@ Ctask::~Ctask()
 
 int Ctask::t_break(Object *t)
 {
-	t->status=TaskBreak;
-	return this->status;
+	t->status.data.i=(int)TaskBreak;
+	return (int)TaskBreak;
 }
 
 int Ctask::t_continue(Object *t)
 {
-	t->status=TaslContinue;
-	return this->status;
+	t->status.data.i= (int)TaskContinue;
+	return (int)TaskContinue;
 }
 
 int Ctask::t_stop(Object *t)
 {
-	t->status=TaskStopping;
-	return this->status;
+	t->status.data.i= (int)TaskStopping;
+	return (int)TaskStopping;
 }
 
 int Ctask::t_run(Object *t)
 {
-	t->status=TaskRunning;
-	return this->status;
+	t->status.data.i= (int)TaskRunning;
+	return (int)TaskRunning;
 }
 
 int Ctask::t_pend(Object *t)
 {
-	t->status=TaskPending;
-	return this->status;
+	t->status.data.i= (int)TaskPending;
+	return (int)TaskPending;
 }
 
 int Ctask::t_complete(Object *t)
 {
-	t->status=TaskComplete;
-	return this->status;
+	t->status.data.i= (int)TaskComplete;
+	return (int)TaskComplete;
 }
 
 int Ctask::add_depend(Ctask * t)

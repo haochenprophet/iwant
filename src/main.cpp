@@ -59,7 +59,7 @@ int Cmain::create_main_cmd(int argc, char *argv[])
 int Cmain::do_action(void * a)
 {
 	//OUT_LINE //test 
-	if (this->action == (ACTION_T)MainAtcion::create_main) this->create_main_cmd(this->argc,this->argv);
+	if (this->action == (ACTION_T)MainAtcion::create_main) this->create_main_cmd(this->cmd.argc,this->cmd.argv);
 	return 0;
 }
 
@@ -72,8 +72,8 @@ int Cmain::deal_cmd(int argc, char *argv[])
 		this->action_help(main_action, (int)MAIN_ACTION_COUNT);
 		return -1;
 	}
-	this->argc = argc;//store user input parameter
-	this->argv = argv;
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
 	//get cmd
 	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
 	//get action

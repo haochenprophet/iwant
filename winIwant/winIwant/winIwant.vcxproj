@@ -159,6 +159,7 @@
     <ClCompile Include="..\..\src\company.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
+    <ClCompile Include="..\..\src\data.cpp" />
     <ClCompile Include="..\..\src\dictionary.cpp" />
     <ClCompile Include="..\..\src\dictionary\hello.cpp" />
     <ClCompile Include="..\..\src\die.cpp" />
@@ -1630,6 +1631,8 @@
     <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\const.h" />
     <ClInclude Include="..\..\src\cout.h" />
+    <ClInclude Include="..\..\src\data.h" />
+    <ClInclude Include="..\..\src\data_class.h" />
     <ClInclude Include="..\..\src\dictionary.h" />
     <ClInclude Include="..\..\src\dictionary\hello.h" />
     <ClInclude Include="..\..\src\die.h" />
@@ -2875,6 +2878,7 @@
     <ClInclude Include="..\..\src\net.h" />
     <ClInclude Include="..\..\src\node.h" />
     <ClInclude Include="..\..\src\object.h" />
+    <ClInclude Include="..\..\src\object_def.h" />
     <ClInclude Include="..\..\src\operator.h" />
     <ClInclude Include="..\..\src\os.h" />
     <ClInclude Include="..\..\src\path.h" />
