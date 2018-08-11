@@ -35,6 +35,9 @@ namespace n_uuid {
 		Ouuid();
 		~Ouuid();
 		int create();
+		bool operator==(Ouuid& uuid) { return (this->uuid == uuid.uuid); }
+		bool operator==(Ouuid *uuid) { return (this->uuid == uuid->uuid); }
+		bool operator==(std::string uuid) { return (this->uuid == uuid); }
 	};
 }
 using namespace n_uuid;
