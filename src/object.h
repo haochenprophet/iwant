@@ -21,6 +21,7 @@
 #include "uuid.h"
 #include "bits.def"
 #include "action_type.h"
+#include "data.h"
 
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
@@ -53,45 +54,7 @@ int runcmd(void *cmd);
 #define T_TYPE template<typename T>
 
 namespace n_object {
-	
-	typedef union union_data
-	{
-		char c;
-		unsigned char uc;
-		wchar_t wc;
-		short s;
-		unsigned short us;
-		int i;
-		unsigned int ui;
-		long l;
-		unsigned long ul;
-		long long ll;
-		unsigned long long ull;
-		float f;
-		double d;
-		void * p;
-		char *cp;
-		unsigned char* ucp;
-		wchar_t *wcp;
-		short * sp;
-		unsigned short * usp;
-		int *ip;
-		unsigned int *uip;
-		long *lp;
-		unsigned long *ulp;
-		long long *llp;
-		unsigned long long *ullp;
-		float *fp;
-		double *dp;
-	}u_data;
-	
-	class Cdata
-	{
-	public:
-		u_data data;
-	public:
-		Cdata() { this->data.ull = 0; }
-	};
+
 	class Cparameter
 	{
 	public:
@@ -158,7 +121,7 @@ namespace n_object {
 		Ccmd(){argc = 0, argv = nullptr;}
 	};
 
-	class Cstatus :public Cdata//status class
+	class Cstatus :public Udata//status class
 	{
 	};
 
@@ -167,7 +130,7 @@ namespace n_object {
 	protected:
 		long id;//object id
 	public:
-		Cdata cdata;
+		Udata udata;
 		Cstatus status;
 		int silent;//can use to print or not print
 		long long priority;
@@ -355,12 +318,12 @@ namespace n_object {
 		virtual int runme(void * myname, void *p= nullptr);
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }
-		Object  operator+(Cdata *o) { this->cdata.data.ull += o->data.ull; }
+		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
 		Object  operator-(Object *o) { this->removeMe(o);}
-		Object  operator-(Cdata *o) { this->cdata.data.ull -= o->data.ull; }
-		Object  operator*(Object *o) { this->cdata.data.ull *= o->cdata.data.ull; }
-		Object  operator/(Object *o) { if(o->cdata.data.ull) this->cdata.data.ull /= o->cdata.data.ull; }
-		Object  operator%(Object *o) { if(o->cdata.data.ull )this->cdata.data.ull %= o->cdata.data.ull; }
+		Object  operator-(Udata *o) { this->udata.data.ull -= o->data.ull; }
+		Object  operator*(Object *o) { this->udata.data.ull *= o->udata.data.ull; }
+		Object  operator/(Object *o) { if(o->udata.data.ull) this->udata.data.ull /= o->udata.data.ull; }
+		Object  operator%(Object *o) { if(o->udata.data.ull )this->udata.data.ull %= o->udata.data.ull; }
 		//Relational Operators
 		 bool operator==(char *identifier) { return (0 != this->isMe(identifier)); }
 		 bool operator==(string * identifier) { return (0 != this->isMe(identifier)); }
@@ -377,9 +340,9 @@ namespace n_object {
 		 bool operator > (Object&o) { return (this->name > o.name); }
 		 bool operator >= (Object&o) { return (this->name >= o.name); }
 		 //Logical Operators
-		 bool operator || (Object&o) { return this->cdata.data.ull || o.cdata.data.ull; }
-		 bool operator && (Object&o) { return this->cdata.data.ull && o.cdata.data.ull; }
-		 bool operator ! () { return !this->cdata.data.ull; }
+		 bool operator || (Object&o) { return this->udata.data.ull || o.udata.data.ull; }
+		 bool operator && (Object&o) { return this->udata.data.ull && o.udata.data.ull; }
+		 bool operator ! () { return !this->udata.data.ull; }
 		 //Positive and negative operators
 		/* 
 		Object& operator + () { }
@@ -388,28 +351,28 @@ namespace n_object {
 		 Object& operator * () { }
 		 */
 		 //Self-increasing, self-decreasing operator
-		 Object& operator ++ () { ++this->cdata.data.ull; }//before ++
-		 Object operator ++ (int i) { this->cdata.data.ull++; }
-		 Object& operator --() { --this->cdata.data.ull; }//before--
-		 Object operator -- (int i) { this->cdata.data.ull--; }
+		 Object& operator ++ () { ++this->udata.data.ull; }//before ++
+		 Object operator ++ (int i) { this->udata.data.ull++; }
+		 Object& operator --() { --this->udata.data.ull; }//before--
+		 Object operator -- (int i) { this->udata.data.ull--; }
 		 //Bit operators
-		 Object operator | (Object& o) { this->cdata.data.ull|=o.cdata.data.ull; }
-		 Object operator & (Object& o) { this->cdata.data.ull &= o.cdata.data.ull; }
-		 Object operator ^ (Object& o) { this->cdata.data.ull ^= o.cdata.data.ull; }
-		 Object operator << (int i){ this->cdata.data.ull <<= i; }
-		 Object operator >> (int i) { this->cdata.data.ull >>= i; }
-		 Object operator ~ () { this->cdata.data.ull= ~this->cdata.data.ull; }
+		 Object operator | (Object& o) { this->udata.data.ull|=o.udata.data.ull; }
+		 Object operator & (Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 Object operator ^ (Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 Object operator << (int i){ this->udata.data.ull <<= i; }
+		 Object operator >> (int i) { this->udata.data.ull >>= i; }
+		 Object operator ~ () { this->udata.data.ull= ~this->udata.data.ull; }
 		 //Assignment operators
-		 Object& operator += (const Object& o) { this->cdata.data.ull += o.cdata.data.ull; }
-		 Object& operator -= (const Object& o) { this->cdata.data.ull -= o.cdata.data.ull; }
-		 Object& operator *= (const Object& o) { this->cdata.data.ull *= o.cdata.data.ull; }
-		 Object& operator /= (const Object& o) { if(o.cdata.data.ull) this->cdata.data.ull /= o.cdata.data.ull; }
-		 Object& operator %= (const Object& o) { if (o.cdata.data.ull) this->cdata.data.ull %= o.cdata.data.ull; }
-		 Object& operator &= (const Object& o) { this->cdata.data.ull &= o.cdata.data.ull; }
-		 Object& operator |= (const Object& o) { this->cdata.data.ull |= o.cdata.data.ull; }
-		 Object& operator ^= (const Object& o) { this->cdata.data.ull ^= o.cdata.data.ull; }
-		 Object& operator <<= (int i) { this->cdata.data.ull <<=i; }
-		 Object& operator >>= (int i) { this->cdata.data.ull >>=i; }
+		 Object& operator += (const Object& o) { this->udata.data.ull += o.udata.data.ull; }
+		 Object& operator -= (const Object& o) { this->udata.data.ull -= o.udata.data.ull; }
+		 Object& operator *= (const Object& o) { this->udata.data.ull *= o.udata.data.ull; }
+		 Object& operator /= (const Object& o) { if(o.udata.data.ull) this->udata.data.ull /= o.udata.data.ull; }
+		 Object& operator %= (const Object& o) { if (o.udata.data.ull) this->udata.data.ull %= o.udata.data.ull; }
+		 Object& operator &= (const Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 Object& operator |= (const Object& o) { this->udata.data.ull |= o.udata.data.ull; }
+		 Object& operator ^= (const Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 Object& operator <<= (int i) { this->udata.data.ull <<=i; }
+		 Object& operator >>= (int i) { this->udata.data.ull >>=i; }
 		 //Memory operator
 		 /*
 		 void *operator new(size_t size) { }
@@ -420,11 +383,11 @@ namespace n_object {
 		 void operator delete[](void* p) {}
 		 */
 		 //Special operator
-		 Object& operator = (const Object& o) { this->cdata.data.ull = o.cdata.data.ull; }
+		 Object& operator = (const Object& o) { this->udata.data.ull = o.udata.data.ull; }
 		 /*
 		 char operator [] (int i) {}
 		 const char* operator () () {}
-		 Cdata operator -> () { return this->cdata; }
+		 udata operator -> () { return this->udata; }
 		 operator char* () const {}
 		 operator int() {}
 		 operator const char() const {}s
