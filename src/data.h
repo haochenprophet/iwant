@@ -444,6 +444,39 @@ namespace n_data {
 		bool and(std::wstring *sws);
 		bool and(Udata *p);
 		bool and(u_data *p);
+		//operator &&
+		bool operator &&(bool d) { return this-> and (d); }
+		bool operator &&(char d) { return this-> and (d); }
+		bool operator &&(unsigned char d) { return this-> and (d); }
+		bool operator &&(wchar_t d) { return this-> and (d); }
+		bool operator &&(short d) { return this-> and (d); }
+		bool operator &&(unsigned short d) { return this-> and (d); }
+		bool operator &&(int d) { return this-> and (d); }
+		bool operator &&(unsigned int d) { return this-> and (d); }
+		bool operator &&(long d) { return this-> and (d); }
+		bool operator &&(unsigned long d) { return this-> and (d); }
+		bool operator &&(long long d) { return this-> and (d); }
+		bool operator &&(unsigned long long d) { return this-> and (d); }
+		bool operator &&(float d) { return this-> and (d); }
+		bool operator &&(double d) { return this-> and (d); }
+		bool operator &&(void * d) { return this-> and (d); }
+		bool operator &&(char *d) { return this-> and (d); }
+		bool operator &&(unsigned char* d) { return this-> and (d); }
+		bool operator &&(wchar_t *d) { return this-> and (d); }
+		bool operator &&(short * d) { return this-> and (d); }
+		bool operator &&(unsigned short * d) { return this-> and (d); }
+		bool operator &&(int *d) { return this-> and (d); }
+		bool operator &&(unsigned int *d) { return this-> and (d); }
+		bool operator &&(long *d) { return this-> and (d); }
+		bool operator &&(unsigned long *d) { return this-> and (d); }
+		bool operator &&(long long *d) { return this-> and (d); }
+		bool operator &&(unsigned long long *d) { return this-> and (d); }
+		bool operator &&(float *d) { return this-> and (d); }
+		bool operator &&(double *d) { return this-> and (d); }
+		bool operator &&(std::string *d) { return this-> and (d); }
+		bool operator &&(std::wstring *d) { return this-> and (d); }
+		bool operator &&(Udata *d) { return this-> and (d); }
+		bool operator &&(u_data*d) { return this-> and (d); }
 	};
 }
 using namespace n_data;
