@@ -10,276 +10,307 @@ Cdata::Cdata()
 Cdata::~Cdata()
 {
 }
-void Udata::set(char c)
+void Udata::set(char c, size_t len)
 {
 	this->data.c = c;
-	this->type = UdataType::char_c;
+	this->type = UdataType::char_c; 
+	this->len = len;
 }
-void Udata::set(unsigned char uc)
+void Udata::set(unsigned char uc, size_t len)
 {
 	this->data.uc = uc;
-	this->type = UdataType::unsigned_char_uc;
+	this->type = UdataType::unsigned_char_uc; 
+	this->len = len;
 }
-void Udata::set(wchar_t wc)
+void Udata::set(wchar_t wc, size_t len)
 {
 	this->data.wc = wc;
-	this->type = UdataType::wchart_wc;
+	this->type = UdataType::wchart_wc; 
+	this->len = len;
 }
-void Udata::set(short s)
+void Udata::set(short s, size_t len)
 {
 	this->data.s = s;
-	this->type = UdataType::short_s;
+	this->type = UdataType::short_s; 
+	this->len = len;
 }
-void Udata::set(unsigned short us)
+void Udata::set(unsigned short us, size_t len)
 {
 	this->data.us = us;
-	this->type = UdataType::unsigned_short_us;
+	this->type = UdataType::unsigned_short_us; 
+	this->len = len;
 }
-void Udata::set(int i)
+void Udata::set(int i, size_t len)
 {
 	this->data.i = i;
-	this->type = UdataType::int_i;
+	this->type = UdataType::int_i; 
+	this->len = len;
 }
-void Udata::set(unsigned int ui)
+void Udata::set(unsigned int ui, size_t len)
 {
 	this->data.ui = ui;
-	this->type = UdataType::unsigned_int_ui;
+	this->type = UdataType::unsigned_int_ui; 
+	this->len = len;
 }
-void Udata::set(long l)
+void Udata::set(long l, size_t len)
 {
 	this->data.l = l;
-	this->type = UdataType::long_l;
+	this->type = UdataType::long_l; 
+	this->len = len;
 }
-void Udata::set(unsigned long ul)
+void Udata::set(unsigned long ul, size_t len)
 {
 	this->data.ul = ul;
-	this->type = UdataType::unsigned_long_ul;
+	this->type = UdataType::unsigned_long_ul; 
+	this->len = len;
 }
-void Udata::set(long long ll)
+void Udata::set(long long ll, size_t len)
 {
 	this->data.ll = ll;
-	this->type = UdataType::long_long_ll;
+	this->type = UdataType::long_long_ll; 
+	this->len = len;
 }
-void Udata::set(unsigned long long ull)
+void Udata::set(unsigned long long ull, size_t len)
 {
 	this->data.ull = ull;
-	this->type = UdataType::unsigned_long_long_ull;
+	this->type = UdataType::unsigned_long_long_ull; 
+	this->len = len;
 }
-void Udata::set(float f)
+void Udata::set(float f, size_t len)
 {
 	this->data.f = f;
-	this->type = UdataType::float_f;
+	this->type = UdataType::float_f; 
+	this->len = len;
 }
-void Udata::set(double d)
+void Udata::set(double d, size_t len)
 {
 	this->data.d = d;
-	this->type = UdataType::double_d;
+	this->type = UdataType::double_d; 
+	this->len = len;
 }
-void Udata::set(void * p)
+void Udata::set(void * p, size_t len)
 {
 	this->data.p = p;
 	this->type = UdataType::void_p;
+	this->len = len;
 }
-void Udata::set(char *cp)
+void Udata::set(char *cp, size_t len)
 {
 	this->data.cp = cp;
 	this->type = UdataType::char_cp;
+	this->len = len;
 }
-void Udata::set(unsigned char* ucp)
+void Udata::set(unsigned char* ucp, size_t len)
 {
 	this->data.ucp = ucp;
 	this->type = UdataType::unsigned_char_ucp;
+	this->len = len;
 }
-void Udata::set(wchar_t *wcp)
+void Udata::set(wchar_t *wcp, size_t len)
 {
 	this->data.wcp = wcp;
 	this->type = UdataType::wchart_wcp;
+	this->len = len;
 }
-void Udata::set(short * sp)
+void Udata::set(short * sp, size_t len)
 {
 	this->data.sp = sp;
 	this->type = UdataType::short_sp;
+	this->len = len;
 }
-void Udata::set(unsigned short * usp)
+void Udata::set(unsigned short * usp, size_t len)
 {
 	this->data.usp = usp;
 	this->type = UdataType::unsigned_short_usp;
+	this->len = len;
 }
-void Udata::set(int *ip)
+void Udata::set(int *ip, size_t len)
 {
 	this->data.ip = ip;
 	this->type = UdataType::int_ip;
+	this->len = len;
 }
-void Udata::set(unsigned int *uip)
+void Udata::set(unsigned int *uip, size_t len)
 {
 	this->data.uip = uip;
 	this->type = UdataType::unsigned_int_uip;
+	this->len = len;
 }
-void Udata::set(long *lp)
+void Udata::set(long *lp, size_t len)
 {
 	this->data.lp = lp;
 	this->type = UdataType::long_lp;
+	this->len = len;
 }
-void Udata::set(unsigned long *ulp)
+void Udata::set(unsigned long *ulp, size_t len)
 {
 	this->data.ulp = ulp;
 	this->type = UdataType::unsigned_long_ulp;
+	this->len = len;
 }
-void Udata::set(long long *llp)
+void Udata::set(long long *llp, size_t len)
 {
 	this->data.llp = llp;
 	this->type = UdataType::long_long_llp;
+	this->len = len;
 }
-void Udata::set(unsigned long long *ullp)
+void Udata::set(unsigned long long *ullp, size_t len)
 {
 	this->data.ullp = ullp;
 	this->type = UdataType::unsigned_long_long_ullp;
+	this->len = len;
 }
-void Udata::set(float *fp)
+void Udata::set(float *fp, size_t len)
 {
 	this->data.fp = fp;
 	this->type = UdataType::float_fp;
+	this->len = len;
 }
-void Udata::set(double *dp)
+void Udata::set(double *dp, size_t len)
 {
 	this->data.dp = dp;
 	this->type = UdataType::double_dp;
+	this->len = len;
 }
-void Udata::set(std::string *ss)
+void Udata::set(std::string *ss, size_t len)
 {
 	this->data.ss = ss;
 	this->type = UdataType::std_string_ss;
+	this->len = len;
 }
-void Udata::set(std::wstring *sws)
+void Udata::set(std::wstring *sws, size_t len)
 {
 	this->data.sws = sws;
 	this->type = UdataType::std_wstring_sws;
+	this->len = len;
 }
-void Udata::set(Udata *p)
+void Udata::set(Udata *p, size_t len)
 {
 	this->type = p->type;
 	this->data = p->data;
+	this->len = len;
 }
-void Udata::set(u_data *p)
+void Udata::set(u_data *p, size_t len)
 {
 	this->data = *p;
+	this->len = len;
 }
-
-void Udata::get(char * c)
+//get
+size_t Udata::get(char * c)
 {
-	*c = this->data.c;
+	*c = this->data.c; return this->len;
 }
-void Udata::get(unsigned char * uc)
+size_t Udata::get(unsigned char * uc)
 {
-	*uc = this->data.uc;
+	*uc = this->data.uc; return this->len;
 }
-void Udata::get(wchar_t * wc)
+size_t Udata::get(wchar_t * wc)
 {
-	*wc = this->data.wc;
+	*wc = this->data.wc; return this->len;
 }
-void Udata::get(short * s)
+size_t Udata::get(short * s)
 {
-	*s = this->data.s;
+	*s = this->data.s; return this->len;
 }
-void Udata::get(unsigned short * us)
+size_t Udata::get(unsigned short * us)
 {
-	*us = this->data.us;
+	*us = this->data.us; return this->len;
 }
-void Udata::get(int * i)
+size_t Udata::get(int * i)
 {
-	*i = this->data.i;
+	*i = this->data.i; return this->len;
 }
-void Udata::get(unsigned int * ui)
+size_t Udata::get(unsigned int * ui)
 {
-	*ui = this->data.ui;
+	*ui = this->data.ui; return this->len;
 }
-void Udata::get(long * l)
+size_t Udata::get(long * l)
 {
-	*l = this->data.l;
+	*l = this->data.l; return this->len;
 }
-void Udata::get(unsigned long * ul)
+size_t Udata::get(unsigned long * ul)
 {
-	*ul = this->data.ul;
+	*ul = this->data.ul; return this->len;
 }
-void Udata::get(long long * ll)
+size_t Udata::get(long long * ll)
 {
-	*ll = this->data.ll;
+	*ll = this->data.ll; return this->len;
 }
-void Udata::get(unsigned long long * ull)
+size_t Udata::get(unsigned long long * ull)
 {
-	*ull = this->data.ull;
+	*ull = this->data.ull; return this->len;
 }
-void Udata::get(float * f)
+size_t Udata::get(float * f)
 {
-	*f = this->data.f;
+	*f = this->data.f; return this->len;
 }
-void Udata::get(double * d)
+size_t Udata::get(double * d)
 {
-	*d = this->data.d;
+	*d = this->data.d; return this->len;
 }
-void Udata::get(void * * p)
+size_t Udata::get(void * * p)
 {
-	*p = this->data.p;
+	*p = this->data.p; return this->len;
 }
-void Udata::get(char * *cp)
+size_t Udata::get(char * *cp)
 {
-	*cp = this->data.cp;
+	*cp = this->data.cp; return this->len;
 }
-void Udata::get(unsigned char* * ucp)
+size_t Udata::get(unsigned char* * ucp)
 {
-	*ucp = this->data.ucp;
+	*ucp = this->data.ucp; return this->len;
 }
-void Udata::get(wchar_t * *wcp)
+size_t Udata::get(wchar_t * *wcp)
 {
-	*wcp = this->data.wcp;
+	*wcp = this->data.wcp; return this->len;
 }
-void Udata::get(short * * sp)
+size_t Udata::get(short * * sp)
 {
-	*sp = this->data.sp;
+	*sp = this->data.sp; return this->len;
 }
-void Udata::get(unsigned short * * usp)
+size_t Udata::get(unsigned short * * usp)
 {
-	*usp = this->data.usp;
+	*usp = this->data.usp; return this->len;
 }
-void Udata::get(int * *ip)
+size_t Udata::get(int * *ip)
 {
-	*ip = this->data.ip;
+	*ip = this->data.ip; return this->len;
 }
-void Udata::get(unsigned int * *uip)
+size_t Udata::get(unsigned int * *uip)
 {
-	*uip = this->data.uip;
+	*uip = this->data.uip; return this->len;
 }
-void Udata::get(long * *lp)
+size_t Udata::get(long * *lp)
 {
-	*lp = this->data.lp;
+	*lp = this->data.lp; return this->len;
 }
-void Udata::get(unsigned long * *ulp)
+size_t Udata::get(unsigned long * *ulp)
 {
-	*ulp = this->data.ulp;
+	*ulp = this->data.ulp; return this->len;
 }
-void Udata::get(long long * *llp)
+size_t Udata::get(long long * *llp)
 {
-	*llp = this->data.llp;
+	*llp = this->data.llp; return this->len;
 }
-void Udata::get(unsigned long long * *ullp)
+size_t Udata::get(unsigned long long * *ullp)
 {
-	*ullp = this->data.ullp;
+	*ullp = this->data.ullp; return this->len;
 }
-void Udata::get(float * *fp)
+size_t Udata::get(float * *fp)
 {
-	*fp = this->data.fp;
+	*fp = this->data.fp; return this->len;
 }
-void Udata::get(double * *dp)
+size_t Udata::get(double * *dp)
 {
-	*dp = this->data.dp;
+	*dp = this->data.dp; return this->len;
 }
-void Udata::get(std::string * *ss)
+size_t Udata::get(std::string * *ss)
 {
-	*ss = this->data.ss;
+	*ss = this->data.ss; return this->len;
 }
-void Udata::get(std::wstring * *sws)
+size_t Udata::get(std::wstring * *sws)
 {
-	*sws = this->data.sws;
+	*sws = this->data.sws; return this->len;
 }
 
 int Udata::cmp(char c)
@@ -353,68 +384,70 @@ int Udata::cmp(void * p)//!!
 	return (this->data.p> p) ? 1 : -1;
 }
 
-T_TYPE int Udata::cmp_t(T a, T b, size_t len)
+T_TYPE int Udata::cmp_t(T a, T b, size_t len_a, size_t len_b)
 {
-	if (--len < 0) { OUT_ERROR return 2; }
+	size_t len = (len_a > len_b) ? len_b : len_a;
+	if (--len) { OUT_ERROR return 2; }
 	for (; len > 0; len--)
 	{
 		if(a[len]>b[len]) return 1;
 		if(a[len]<b[len]) return -1;
 	}
-	return 0;
+	if (len_a == len_b) 	return 0;
+	return (len_a > len_b) ? 1 : -1;
 }
 
 int Udata::cmp(char *cp, size_t len)
 {
-	return this->cmp_t(this->data.cp, cp, len);
+	return this->cmp_t(this->data.cp, cp, this->len, len);
 }
 int Udata::cmp(unsigned char* ucp, size_t len)
 {
-	return this->cmp_t(this->data.ucp, ucp, len);
+	return this->cmp_t(this->data.ucp, ucp, this->len, len);
 }
 int Udata::cmp(wchar_t *wcp, size_t len)
 {
-	return this->cmp_t(this->data.wcp, wcp, len);
+	return this->cmp_t(this->data.wcp, wcp, this->len, len);
 }
 int Udata::cmp(short * sp, size_t len)
 {
-	return this->cmp_t(this->data.sp, sp, len);
+	return this->cmp_t(this->data.sp, sp, this->len, len);
 }
 int Udata::cmp(unsigned short * usp, size_t len)
 {
-	return this->cmp_t(this->data.usp, usp, len);
+	return this->cmp_t(this->data.usp, usp, this->len, len);
 }
 int Udata::cmp(int *ip, size_t len)
 {
-	return this->cmp_t(this->data.ip, ip, len);
+	return this->cmp_t(this->data.ip, ip, this->len, len);
 }
 int Udata::cmp(unsigned int *uip, size_t len)
 {
-	return this->cmp_t(this->data.uip, uip, len);
+	return this->cmp_t(this->data.uip, uip, this->len, len);
 }
 int Udata::cmp(long *lp, size_t len)
 {
-	return this->cmp_t(this->data.lp, lp, len);
+	return this->cmp_t(this->data.lp, lp, this->len, len);
 }
 int Udata::cmp(unsigned long *ulp, size_t len)
 {
-	return this->cmp_t(this->data.ulp, ulp, len);
+	return this->cmp_t(this->data.ulp, ulp, this->len, len);
 }
 int Udata::cmp(long long *llp, size_t len)
 {
-	return this->cmp_t(this->data.llp, llp, len);
+	return this->cmp_t(this->data.llp, llp, this->len, len);
 }
 int Udata::cmp(unsigned long long *ullp, size_t len)
 {
-	return this->cmp_t(this->data.ullp, ullp, len);
+	return this->cmp_t(this->data.ullp, ullp, this->len, len);
 }
 int Udata::cmp(float *fp, size_t len)
 {
-	return this->cmp_t(this->data.fp, fp, len);
+	return this->cmp_t(this->data.fp, fp, this->len, len);
 }
 int Udata::cmp(double *dp, size_t len)
 {
-	return this->cmp_t(this->data.dp, dp, len);
+	return this->cmp_t(this->data.dp, dp, this->len,len);
 }
 int Udata::cmp(std::string *ss)
 {
@@ -428,11 +461,152 @@ int Udata::cmp(std::wstring *sws)
 }
 int Udata::cmp(Udata *p)
 {
-	return this->cmp_t((unsigned char*)&this->data, (unsigned char*)&p->data, (size_t)sizeof(u_data));
+	return this->cmp_t((unsigned char*)&this->data, (unsigned char*)&p->data,this->len, (size_t)sizeof(u_data));
 }
 int Udata::cmp(u_data *p)
 {
-	return this->cmp_t((unsigned char*)&this->data,(unsigned char*) p, (size_t)sizeof(u_data));
+	return this->cmp_t((unsigned char*)&this->data,(unsigned char*) p, this->len, (size_t)sizeof(u_data));
+}
+
+T_TYPE bool Udata::and_t(T a, T b, size_t len_a, size_t len_b)
+{
+	size_t len = (len_a > len_b) ? len_b : len_a;
+	if (--len < 0) { OUT_ERROR return false; }
+	for (; len > 0; len--)
+	{
+		if (a[len]&&b[len]) continue;
+		return false;
+	}
+	if((len_a != len_b)) return false;
+	return true;
+}
+bool Udata:: and (bool b)
+{
+	return (this->data.b&&b);
+}
+bool Udata:: and (char c)
+{
+	return (this->data.c&&c);
+}
+bool Udata:: and (unsigned char uc)
+{
+	return (this->data.uc&&uc);
+}
+bool Udata:: and (wchar_t wc)
+{
+	return (this->data.wc&&wc);
+}
+bool Udata:: and (short s)
+{
+	return (this->data.s&&s);
+}
+bool Udata:: and (unsigned short us)
+{
+	return (this->data.us&&us);
+}
+bool Udata:: and (int i)
+{
+	return (this->data.i&&i);
+}
+bool Udata:: and (unsigned int ui)
+{
+	return (this->data.ui&&ui);
+}
+bool Udata:: and (long l)
+{
+	return (this->data.l&&l);
+}
+bool Udata:: and (unsigned long ul)
+{
+	return (this->data.ul&&ul);
+}
+bool Udata:: and (long long ll)
+{
+	return (this->data.ll&&ll);
+}
+bool Udata:: and (unsigned long long ull)
+{
+	return (this->data.ull&&ull);
+}
+bool Udata:: and (float f)
+{
+	return (this->data.f&&f);
+}
+bool Udata:: and (double d)
+{
+	return (this->data.d&&d);
+}
+bool Udata:: and (void * p)
+{
+	return (this->data.p&&p);
+}
+bool Udata:: and (char *cp, size_t len)
+{
+	return this->and_t(this->data.cp,cp,this->len,len);
+}
+bool Udata:: and (unsigned char* ucp, size_t len)
+{
+	return this->and_t(this->data.ucp, ucp, this->len, len);
+}
+bool Udata:: and (wchar_t *wcp, size_t len)
+{
+	return this->and_t(this->data.wcp, wcp, this->len, len);
+}
+bool Udata:: and (short * sp, size_t len)
+{
+	return this->and_t(this->data.sp, sp, this->len, len);
+}
+bool Udata:: and (unsigned short * usp, size_t len)
+{
+	return this->and_t(this->data.usp, usp, this->len, len);
+}
+bool Udata:: and (int *ip, size_t len)
+{
+	return this->and_t(this->data.ip, ip, this->len, len);
+}
+bool Udata:: and (unsigned int *uip, size_t len)
+{
+	return this->and_t(this->data.uip, uip, this->len, len);
+}
+bool Udata:: and (long *lp, size_t len)
+{
+	return this->and_t(this->data.lp, lp, this->len, len);
+}
+bool Udata:: and (unsigned long *ulp, size_t len)
+{
+	return this->and_t(this->data.ulp, ulp, this->len, len);
+}
+bool Udata:: and (long long *llp, size_t len)
+{
+	return this->and_t(this->data.llp, llp, this->len, len);
+}
+bool Udata:: and (unsigned long long *ullp, size_t len)
+{
+	return this->and_t(this->data.ullp, ullp, this->len, len);
+}
+bool Udata:: and (float *fp, size_t len)
+{
+	return this->and_t(this->data.fp, fp, this->len, len);
+}
+bool Udata:: and (double *dp, size_t len)
+{
+	return this->and_t(this->data.dp, dp, this->len, len);
+}
+bool Udata:: and (std::string *ss)
+{
+	return (*this->data.ss==*ss);
+}
+bool Udata:: and (std::wstring *sws)
+{
+	return (*this->data.sws == *sws);
+}
+bool Udata:: and (Udata *p) //use ull
+{
+	return (this->data.ull&&p->data.ull);
+}
+bool Udata:: and (u_data *p)//use ull
+{
+	return (this->data.ull&&p->ull);
 }
 #if DATA_TEST
 
