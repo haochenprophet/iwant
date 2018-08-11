@@ -105,6 +105,8 @@ namespace n_data {
 		void set(double *dp);
 		void set(std::string *ss);
 		void set(std::wstring *sws);
+		void set(Udata *p);
+		void set(u_data *p);
 		Udata& operator =(char d) { this->set(d); }
 		Udata& operator =(unsigned char d) { this->set(d); }
 		Udata& operator =(wchar_t d) { this->set(d); }
@@ -134,6 +136,8 @@ namespace n_data {
 		Udata& operator =(double *d) { this->set(d); }
 		Udata& operator =(std::string *d) { this->set(d); }
 		Udata& operator =(std::wstring *d) { this->set(d); }
+		Udata& operator =(Udata *d) { this->set(d); }
+		Udata& operator =(u_data*d) { this->set(d); }
 		//get data
 		void get(char * c);
 		void get(unsigned char * uc);

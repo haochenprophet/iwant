@@ -155,6 +155,16 @@ void Udata::set(std::wstring *sws)
 	this->data.sws = sws;
 	this->type = UdataType::std_wstring_sws;
 }
+void Udata::set(Udata *p)
+{
+	this->type = p->type;
+	this->data = p->data;
+}
+void Udata::set(u_data *p)
+{
+	this->data = *p;
+}
+
 void Udata::get(char * c)
 {
 	*c = this->data.c;
