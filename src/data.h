@@ -109,6 +109,7 @@ namespace n_data {
 		void set(std::wstring *sws);
 		void set(Udata *p);
 		void set(u_data *p);
+		//operator =
 		Udata& operator =(char d) { this->set(d); }
 		Udata& operator =(unsigned char d) { this->set(d); }
 		Udata& operator =(wchar_t d) { this->set(d); }
@@ -203,6 +204,198 @@ namespace n_data {
 		int cmp(std::wstring *sws);
 		int cmp(Udata *p);
 		int cmp(u_data *p);
+		//operator ==
+		bool operator ==(char d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned char d) { return (0 == this->cmp(d)); }
+		bool operator ==(wchar_t d) { return (0 == this->cmp(d)); }
+		bool operator ==(short d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned short d) { return (0 == this->cmp(d)); }
+		bool operator ==(int d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned int d) { return (0 == this->cmp(d)); }
+		bool operator ==(long d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned long d) { return (0 == this->cmp(d)); }
+		bool operator ==(long long d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned long long d) { return (0 == this->cmp(d)); }
+		bool operator ==(float d) { return (0 == this->cmp(d)); }
+		bool operator ==(double d) { return (0 == this->cmp(d)); }
+		bool operator ==(void * d) { return (0 == this->cmp(d)); }
+		bool operator ==(char *d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned char* d) { return (0 == this->cmp(d)); }
+		bool operator ==(wchar_t *d) { return (0 == this->cmp(d)); }
+		bool operator ==(short * d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned short * d) { return (0 == this->cmp(d)); }
+		bool operator ==(int *d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned int *d) { return (0 == this->cmp(d)); }
+		bool operator ==(long *d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned long *d) { return (0 == this->cmp(d)); }
+		bool operator ==(long long *d) { return (0 == this->cmp(d)); }
+		bool operator ==(unsigned long long *d) { return (0 == this->cmp(d)); }
+		bool operator ==(float *d) { return (0 == this->cmp(d)); }
+		bool operator ==(double *d) { return (0 == this->cmp(d)); }
+		bool operator ==(std::string *d) { return (0 == this->cmp(d)); }
+		bool operator ==(std::wstring *d) { return (0 == this->cmp(d)); }
+		bool operator ==(Udata *d) { return (0 == this->cmp(d)); }
+		bool operator ==(u_data*d) { return (0 == this->cmp(d)); }
+		//operator !=
+		bool operator !=(char d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned char d) { return (0 != this->cmp(d)); }
+		bool operator !=(wchar_t d) { return (0 != this->cmp(d)); }
+		bool operator !=(short d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned short d) { return (0 != this->cmp(d)); }
+		bool operator !=(int d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned int d) { return (0 != this->cmp(d)); }
+		bool operator !=(long d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned long d) { return (0 != this->cmp(d)); }
+		bool operator !=(long long d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned long long d) { return (0 != this->cmp(d)); }
+		bool operator !=(float d) { return (0 != this->cmp(d)); }
+		bool operator !=(double d) { return (0 != this->cmp(d)); }
+		bool operator !=(void * d) { return (0 != this->cmp(d)); }
+		bool operator !=(char *d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned char* d) { return (0 != this->cmp(d)); }
+		bool operator !=(wchar_t *d) { return (0 != this->cmp(d)); }
+		bool operator !=(short * d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned short * d) { return (0 != this->cmp(d)); }
+		bool operator !=(int *d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned int *d) { return (0 != this->cmp(d)); }
+		bool operator !=(long *d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned long *d) { return (0 != this->cmp(d)); }
+		bool operator !=(long long *d) { return (0 != this->cmp(d)); }
+		bool operator !=(unsigned long long *d) { return (0 != this->cmp(d)); }
+		bool operator !=(float *d) { return (0 != this->cmp(d)); }
+		bool operator !=(double *d) { return (0 != this->cmp(d)); }
+		bool operator !=(std::string *d) { return (0 != this->cmp(d)); }
+		bool operator !=(std::wstring *d) { return (0 != this->cmp(d)); }
+		bool operator !=(Udata *d) { return (0 != this->cmp(d)); }
+		bool operator !=(u_data*d) { return (0 != this->cmp(d)); }
+		//operator <
+		bool operator <(char d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned char d) { return (-1 == this->cmp(d)); }
+		bool operator <(wchar_t d) { return (-1 == this->cmp(d)); }
+		bool operator <(short d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned short d) { return (-1 == this->cmp(d)); }
+		bool operator <(int d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned int d) { return (-1 == this->cmp(d)); }
+		bool operator <(long d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned long d) { return (-1 == this->cmp(d)); }
+		bool operator <(long long d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned long long d) { return (-1 == this->cmp(d)); }
+		bool operator <(float d) { return (-1 == this->cmp(d)); }
+		bool operator <(double d) { return (-1 == this->cmp(d)); }
+		bool operator <(void * d) { return (-1 == this->cmp(d)); }
+		bool operator <(char *d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned char* d) { return (-1 == this->cmp(d)); }
+		bool operator <(wchar_t *d) { return (-1 == this->cmp(d)); }
+		bool operator <(short * d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned short * d) { return (-1 == this->cmp(d)); }
+		bool operator <(int *d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned int *d) { return (-1 == this->cmp(d)); }
+		bool operator <(long *d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned long *d) { return (-1 == this->cmp(d)); }
+		bool operator <(long long *d) { return (-1 == this->cmp(d)); }
+		bool operator <(unsigned long long *d) { return (-1 == this->cmp(d)); }
+		bool operator <(float *d) { return (-1 == this->cmp(d)); }
+		bool operator <(double *d) { return (-1 == this->cmp(d)); }
+		bool operator <(std::string *d) { return (-1 == this->cmp(d)); }
+		bool operator <(std::wstring *d) { return (-1 == this->cmp(d)); }
+		bool operator <(Udata *d) { return (-1 == this->cmp(d)); }
+		bool operator <(u_data*d) { return (-1 == this->cmp(d)); }
+		//operator <=
+		bool operator <=(char d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned char d) { return (0 >= this->cmp(d)); }
+		bool operator <=(wchar_t d) { return (0 >= this->cmp(d)); }
+		bool operator <=(short d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned short d) { return (0 >= this->cmp(d)); }
+		bool operator <=(int d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned int d) { return (0 >= this->cmp(d)); }
+		bool operator <=(long d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned long d) { return (0 >= this->cmp(d)); }
+		bool operator <=(long long d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned long long d) { return (0 >= this->cmp(d)); }
+		bool operator <=(float d) { return (0 >= this->cmp(d)); }
+		bool operator <=(double d) { return (0 >= this->cmp(d)); }
+		bool operator <=(void * d) { return (0 >= this->cmp(d)); }
+		bool operator <=(char *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned char* d) { return (0 >= this->cmp(d)); }
+		bool operator <=(wchar_t *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(short * d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned short * d) { return (0 >= this->cmp(d)); }
+		bool operator <=(int *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned int *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(long *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned long *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(long long *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(unsigned long long *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(float *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(double *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(std::string *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(std::wstring *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(Udata *d) { return (0 >= this->cmp(d)); }
+		bool operator <=(u_data*d) { return (0 >= this->cmp(d)); }
+		//operator >
+		bool operator >(char d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned char d) { return (1 == this->cmp(d)); }
+		bool operator >(wchar_t d) { return (1 == this->cmp(d)); }
+		bool operator >(short d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned short d) { return (1 == this->cmp(d)); }
+		bool operator >(int d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned int d) { return (1 == this->cmp(d)); }
+		bool operator >(long d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned long d) { return (1 == this->cmp(d)); }
+		bool operator >(long long d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned long long d) { return (1 == this->cmp(d)); }
+		bool operator >(float d) { return (1 == this->cmp(d)); }
+		bool operator >(double d) { return (1 == this->cmp(d)); }
+		bool operator >(void * d) { return (1 == this->cmp(d)); }
+		bool operator >(char *d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned char* d) { return (1 == this->cmp(d)); }
+		bool operator >(wchar_t *d) { return (1 == this->cmp(d)); }
+		bool operator >(short * d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned short * d) { return (1 == this->cmp(d)); }
+		bool operator >(int *d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned int *d) { return (1 == this->cmp(d)); }
+		bool operator >(long *d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned long *d) { return (1 == this->cmp(d)); }
+		bool operator >(long long *d) { return (1 == this->cmp(d)); }
+		bool operator >(unsigned long long *d) { return (1 == this->cmp(d)); }
+		bool operator >(float *d) { return (1 == this->cmp(d)); }
+		bool operator >(double *d) { return (1 == this->cmp(d)); }
+		bool operator >(std::string *d) { return (1 == this->cmp(d)); }
+		bool operator >(std::wstring *d) { return (1 == this->cmp(d)); }
+		bool operator >(Udata *d) { return (1 == this->cmp(d)); }
+		bool operator >(u_data*d) { return (1 == this->cmp(d)); }
+		//operator >=
+		bool operator >=(char d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned char d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(wchar_t d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(short d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned short d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(int d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned int d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(long d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned long d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(long long d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned long long d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(float d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(double d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(void * d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(char *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned char* d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(wchar_t *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(short * d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned short * d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(int *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned int *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(long *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned long *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(long long *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(unsigned long long *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(float *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(double *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(std::string *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(std::wstring *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(Udata *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
+		bool operator >=(u_data*d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
 	};
 }
 using namespace n_data;
