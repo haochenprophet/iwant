@@ -1,6 +1,45 @@
 #include "data.h"
 #include "data_class.h"
 
+CdataTypeToken data_type_token[]
+{
+	{UdataType::none, "none"},
+	{ UdataType::bool_b,"bool" },
+	{ UdataType::char_c,"char" },
+	{ UdataType::unsigned_char_uc,"unsigned[ \t]char" },
+	{ UdataType::wchart_wc,"wchart" },
+	{ UdataType::short_s,"short" },
+	{ UdataType::unsigned_short_us,"unsigned[ \t]short" },
+	{ UdataType::int_i,"int" },
+	{ UdataType::unsigned_int_ui,"unsigned[ \t]int" },
+	{ UdataType::long_l,"long" },
+	{ UdataType::unsigned_long_ul,"unsigned[ \t]long" },
+	{ UdataType::long_long_ll,"long[ \t]long" },
+	{ UdataType::unsigned_long_long_ull,"unsigned[ \t]long[ \t]long" },
+	{ UdataType::float_f,"float" },
+	{ UdataType::double_d,"double" },
+	{ UdataType::void_p,"void[ \t]*[ \t]" },
+	{ UdataType::char_cp,"char[ \t]*[ \t]" },
+	{ UdataType::unsigned_char_ucp,"unsigned[ \t]char[ \t]*[ \t]" },
+	{ UdataType::wchart_wcp,"wchart[ \t]*[ \t]" },
+	{ UdataType::short_sp,"short[ \t]*[ \t]" },
+	{ UdataType::unsigned_short_usp,"unsigned[ \t]short[ \t]*[ \t]" },
+	{ UdataType::int_ip,"int[ \t]*[ \t]" },
+	{ UdataType::unsigned_int_uip,"unsigned[ \t]short[ \t]*[ \t]" },
+	{ UdataType::long_lp,"long[ \t]*[ \t]" },
+	{ UdataType::unsigned_long_ulp,"unsigned[ \t]long[ \t]*[ \t]" },
+	{ UdataType::long_long_llp,"long[ \t]long[ \t]*[ \t]" },
+	{ UdataType::unsigned_long_long_ullp,"unsigned[ \t]long[ \t]long[ \t]*[ \t]" },
+	{ UdataType::float_fp,"float[ \t]*[ \t]" },
+	{ UdataType::double_dp,"double[ \t]*[ \t]" },
+	{ UdataType::std_string_ss,"string[ \t]*[ \t]" },
+	{ UdataType::std_wstring_sws,"wstring[ \t]*[ \t]" },
+	//end flag
+	{ UdataType::none, nullptr},//nullptr is end flag
+};
+
+#define data_type_token_count (sizeof(data_type_token)/sizeof(CdataTypeToken))
+
 Cdata::Cdata()
 {
 	this->name = "Cdata";
@@ -10,6 +49,7 @@ Cdata::Cdata()
 Cdata::~Cdata()
 {
 }
+
 void Udata::set(char c, size_t len)
 {
 	this->data.c = c;

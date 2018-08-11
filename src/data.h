@@ -74,6 +74,13 @@ namespace n_data {
 		std_wstring_sws,
 	};
 
+	class CdataTypeToken
+	{
+	public:
+		UdataType type;
+		char * token;
+	};
+
 	class Udata
 	{
 	public:
