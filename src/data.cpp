@@ -1,5 +1,6 @@
 #include "data.h"
 #include "data_class.h"
+#include <ctype.h>
 
 CdataTypeToken data_type_token[]
 {
@@ -39,6 +40,24 @@ CdataTypeToken data_type_token[]
 };
 
 #define data_type_token_count (sizeof(data_type_token)/sizeof(CdataTypeToken))
+
+UdataType CdataTypeToken::isme(char * token)
+{
+	if (!token) return (UdataType)-1;
+	for (; *token != 0; token++) if(isprint(*token)) break; //skip not print char
+	char *t = this->token;//
+
+	for (; *token != 0 && *t != 0; t++, token++)
+	{
+		for (; *t != 0 && (*t == '[' || *t == ']' || *t == ' ' || *t == '\t');t++);//skip [ \t]
+		for (; *token != 0; token++) if (isprint(*token)) break;//skip not print char
+		if (*t == 0||*token==0) break;
+		if (*token == *t) continue;
+		return (UdataType) -1;
+	}
+	if (*t == 0 &&*token == 0) return this->type;
+	return (UdataType)-1;
+}
 
 Cdata::Cdata()
 {

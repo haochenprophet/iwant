@@ -41,7 +41,7 @@ namespace n_data {
 	}u_data;
 
 	enum class UdataType{
-		none,
+		none=0,
 		bool_b,
 		char_c,
 		unsigned_char_uc,
@@ -79,6 +79,8 @@ namespace n_data {
 	public:
 		UdataType type;
 		char * token;
+	public:
+		UdataType isme(char * token=nullptr);
 	};
 
 	class Udata
