@@ -99,6 +99,7 @@ namespace n_data {
 		int cmp_by_type(Udata *p);
 		bool and_by_type(Udata *p);
 		bool or_by_type(Udata *p);
+		bool not_by_type(Udata *p);
 		//sets
 		void set(bool b, size_t len = 1) { this->data.b = b; this->type= UdataType::bool_b; this->len = len;}
 		void set(char c, size_t len = 1);
@@ -562,6 +563,9 @@ namespace n_data {
 		bool operator ||(std::wstring *d) { return this-> or (d); }
 		bool operator ||(Udata *d) { return this-> or (d); }
 		bool operator ||(u_data*d) { return this-> or (d); }
+		//not !
+		bool not(){return this->not_by_type(this);}
+		bool operator !() { return this-> not (); }
 	};
 }
 using namespace n_data;
