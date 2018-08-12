@@ -1,6 +1,5 @@
 #include "data.h"
 #include "data_class.h"
-#include <ctype.h>
 
 CdataTypeToken data_type_token[]
 {
@@ -67,6 +66,192 @@ Cdata::Cdata()
 
 Cdata::~Cdata()
 {
+}
+
+int Udata::runme(void * myname, Udata *p)
+{
+	if (strcmp("set", (char *)myname) == 0) { this->set_by_type(p);  return 0; }
+	if (strcmp("get", (char *)myname) == 0) { return (int) this->get_by_type(p);}
+	if (strcmp("cmp", (char *)myname) == 0) {return this->cmp_by_type(p); }
+	if (strcmp("and", (char *)myname) == 0) {return (int) this->and_by_type(p); }
+	if (strcmp("or", (char *)myname) == 0) {return (int) this->or_by_type(p);}
+	return -1;
+}
+
+void Udata::set_by_type(Udata *p)
+{
+	if (p->type == UdataType::none) return;
+	if (p->type == UdataType::bool_b) return this->set(p->data.b, p->len);
+	if (p->type == UdataType::char_c) return this->set(p->data.c, p->len);
+	if (p->type == UdataType::unsigned_char_uc) return this->set(p->data.uc, p->len);
+	if (p->type == UdataType::wchart_wc) return this->set(p->data.wc, p->len);
+	if (p->type == UdataType::short_s) return this->set(p->data.s, p->len);
+	if (p->type == UdataType::unsigned_short_us) return this->set(p->data.us, p->len);
+	if (p->type == UdataType::int_i) return this->set(p->data.i, p->len);
+	if (p->type == UdataType::unsigned_int_ui) return this->set(p->data.ui, p->len);
+	if (p->type == UdataType::long_l) return this->set(p->data.l, p->len);
+	if (p->type == UdataType::unsigned_long_ul) return this->set(p->data.ul, p->len);
+	if (p->type == UdataType::long_long_ll) return this->set(p->data.ll, p->len);
+	if (p->type == UdataType::unsigned_long_long_ull) return this->set(p->data.ull, p->len);
+	if (p->type == UdataType::float_f) return this->set(p->data.f, p->len);
+	if (p->type == UdataType::double_d) return this->set(p->data.d, p->len);
+	if (p->type == UdataType::void_p) return this->set(p->data.p, p->len);
+	if (p->type == UdataType::char_cp) return this->set(p->data.cp, p->len);
+	if (p->type == UdataType::unsigned_char_ucp) return this->set(p->data.ucp, p->len);
+	if (p->type == UdataType::wchart_wcp) return this->set(p->data.wcp, p->len);
+	if (p->type == UdataType::short_sp) return this->set(p->data.sp, p->len);
+	if (p->type == UdataType::unsigned_short_usp) return this->set(p->data.usp, p->len);
+	if (p->type == UdataType::int_ip) return this->set(p->data.ip, p->len);
+	if (p->type == UdataType::unsigned_int_uip) return this->set(p->data.uip, p->len);
+	if (p->type == UdataType::long_lp) return this->set(p->data.lp, p->len);
+	if (p->type == UdataType::unsigned_long_ulp) return this->set(p->data.ulp, p->len);
+	if (p->type == UdataType::long_long_llp) return this->set(p->data.llp, p->len);
+	if (p->type == UdataType::unsigned_long_long_ullp) return this->set(p->data.ullp, p->len);
+	if (p->type == UdataType::float_fp) return this->set(p->data.fp, p->len);
+	if (p->type == UdataType::double_dp) return this->set(p->data.dp, p->len);
+	if (p->type == UdataType::std_string_ss) return this->set(p->data.ss, p->len);
+	if (p->type == UdataType::std_wstring_sws) return this->set(p->data.sws, p->len);
+}
+
+size_t Udata::get_by_type(Udata *p)
+{
+	if (p->type == UdataType::none) return 0;
+	if (p->type == UdataType::bool_b) return this->get(&p->data.b);
+	if (p->type == UdataType::char_c) return this->get(&p->data.c);
+	if (p->type == UdataType::unsigned_char_uc) return this->get(&p->data.uc);
+	if (p->type == UdataType::wchart_wc) return this->get(&p->data.wc);
+	if (p->type == UdataType::short_s) return this->get(&p->data.s);
+	if (p->type == UdataType::unsigned_short_us) return this->get(&p->data.us);
+	if (p->type == UdataType::int_i) return this->get(&p->data.i);
+	if (p->type == UdataType::unsigned_int_ui) return this->get(&p->data.ui);
+	if (p->type == UdataType::long_l) return this->get(&p->data.l);
+	if (p->type == UdataType::unsigned_long_ul) return this->get(&p->data.ul);
+	if (p->type == UdataType::long_long_ll) return this->get(&p->data.ll);
+	if (p->type == UdataType::unsigned_long_long_ull) return this->get(&p->data.ull);
+	if (p->type == UdataType::float_f) return this->get(&p->data.f);
+	if (p->type == UdataType::double_d) return this->get(&p->data.d);
+	if (p->type == UdataType::void_p) return this->get(&p->data.p);
+	if (p->type == UdataType::char_cp) return this->get(&p->data.cp);
+	if (p->type == UdataType::unsigned_char_ucp) return this->get(&p->data.ucp);
+	if (p->type == UdataType::wchart_wcp) return this->get(&p->data.wcp);
+	if (p->type == UdataType::short_sp) return this->get(&p->data.sp);
+	if (p->type == UdataType::unsigned_short_usp) return this->get(&p->data.usp);
+	if (p->type == UdataType::int_ip) return this->get(&p->data.ip);
+	if (p->type == UdataType::unsigned_int_uip) return this->get(&p->data.uip);
+	if (p->type == UdataType::long_lp) return this->get(&p->data.lp);
+	if (p->type == UdataType::unsigned_long_ulp) return this->get(&p->data.ulp);
+	if (p->type == UdataType::long_long_llp) return this->get(&p->data.llp);
+	if (p->type == UdataType::unsigned_long_long_ullp) return this->get(&p->data.ullp);
+	if (p->type == UdataType::float_fp) return this->get(&p->data.fp);
+	if (p->type == UdataType::double_dp) return this->get(&p->data.dp);
+	if (p->type == UdataType::std_string_ss) return this->get(&p->data.ss);
+	if (p->type == UdataType::std_wstring_sws) return this->get(&p->data.sws);
+	return 0;
+}
+int Udata::cmp_by_type(Udata *p)
+{
+	if (p->type == UdataType::none) return 2;//2:not cmp
+	if (p->type == UdataType::bool_b) return this->cmp(p->data.b);
+	if (p->type == UdataType::char_c) return this->cmp(p->data.c);
+	if (p->type == UdataType::unsigned_char_uc) return this->cmp(p->data.uc);
+	if (p->type == UdataType::wchart_wc) return this->cmp(p->data.wc);
+	if (p->type == UdataType::short_s) return this->cmp(p->data.s);
+	if (p->type == UdataType::unsigned_short_us) return this->cmp(p->data.us);
+	if (p->type == UdataType::int_i) return this->cmp(p->data.i);
+	if (p->type == UdataType::unsigned_int_ui) return this->cmp(p->data.ui);
+	if (p->type == UdataType::long_l) return this->cmp(p->data.l);
+	if (p->type == UdataType::unsigned_long_ul) return this->cmp(p->data.ul);
+	if (p->type == UdataType::long_long_ll) return this->cmp(p->data.ll);
+	if (p->type == UdataType::unsigned_long_long_ull) return this->cmp(p->data.ull);
+	if (p->type == UdataType::float_f) return this->cmp(p->data.f);
+	if (p->type == UdataType::double_d) return this->cmp(p->data.d);
+	if (p->type == UdataType::void_p) return this->cmp(p->data.p);
+	if (p->type == UdataType::char_cp) return this->cmp(p->data.cp, p->len);
+	if (p->type == UdataType::unsigned_char_ucp) return this->cmp(p->data.ucp, p->len);
+	if (p->type == UdataType::wchart_wcp) return this->cmp(p->data.wcp, p->len);
+	if (p->type == UdataType::short_sp) return this->cmp(p->data.sp, p->len);
+	if (p->type == UdataType::unsigned_short_usp) return this->cmp(p->data.usp, p->len);
+	if (p->type == UdataType::int_ip) return this->cmp(p->data.ip, p->len);
+	if (p->type == UdataType::unsigned_int_uip) return this->cmp(p->data.uip, p->len);
+	if (p->type == UdataType::long_lp) return this->cmp(p->data.lp, p->len);
+	if (p->type == UdataType::unsigned_long_ulp) return this->cmp(p->data.ulp, p->len);
+	if (p->type == UdataType::long_long_llp) return this->cmp(p->data.llp, p->len);
+	if (p->type == UdataType::unsigned_long_long_ullp) return this->cmp(p->data.ullp, p->len);
+	if (p->type == UdataType::float_fp) return this->cmp(p->data.fp, p->len);
+	if (p->type == UdataType::double_dp) return this->cmp(p->data.dp, p->len);
+	if (p->type == UdataType::std_string_ss) return this->cmp(p->data.ss);
+	if (p->type == UdataType::std_wstring_sws) return this->cmp(p->data.sws);
+	return 2;//2:not cmp
+}
+bool Udata::and_by_type(Udata *p)
+{
+	if (p->type == UdataType::none) return false;//default return false
+	if (p->type == UdataType::bool_b) return this-> and (p->data.b);
+	if (p->type == UdataType::char_c) return this-> and (p->data.c);
+	if (p->type == UdataType::unsigned_char_uc) return this-> and (p->data.uc);
+	if (p->type == UdataType::wchart_wc) return this-> and (p->data.wc);
+	if (p->type == UdataType::short_s) return this-> and (p->data.s);
+	if (p->type == UdataType::unsigned_short_us) return this-> and (p->data.us);
+	if (p->type == UdataType::int_i) return this-> and (p->data.i);
+	if (p->type == UdataType::unsigned_int_ui) return this-> and (p->data.ui);
+	if (p->type == UdataType::long_l) return this-> and (p->data.l);
+	if (p->type == UdataType::unsigned_long_ul) return this-> and (p->data.ul);
+	if (p->type == UdataType::long_long_ll) return this-> and (p->data.ll);
+	if (p->type == UdataType::unsigned_long_long_ull) return this-> and (p->data.ull);
+	if (p->type == UdataType::float_f) return this-> and (p->data.f);
+	if (p->type == UdataType::double_d) return this-> and (p->data.d);
+	if (p->type == UdataType::void_p) return this-> and (p->data.p);
+	if (p->type == UdataType::char_cp) return this-> and (p->data.cp, p->len);
+	if (p->type == UdataType::unsigned_char_ucp) return this-> and (p->data.ucp, p->len);
+	if (p->type == UdataType::wchart_wcp) return this-> and (p->data.wcp, p->len);
+	if (p->type == UdataType::short_sp) return this-> and (p->data.sp, p->len);
+	if (p->type == UdataType::unsigned_short_usp) return this-> and (p->data.usp, p->len);
+	if (p->type == UdataType::int_ip) return this-> and (p->data.ip, p->len);
+	if (p->type == UdataType::unsigned_int_uip) return this-> and (p->data.uip, p->len);
+	if (p->type == UdataType::long_lp) return this-> and (p->data.lp, p->len);
+	if (p->type == UdataType::unsigned_long_ulp) return this-> and (p->data.ulp, p->len);
+	if (p->type == UdataType::long_long_llp) return this-> and (p->data.llp, p->len);
+	if (p->type == UdataType::unsigned_long_long_ullp) return this-> and (p->data.ullp, p->len);
+	if (p->type == UdataType::float_fp) return this-> and (p->data.fp, p->len);
+	if (p->type == UdataType::double_dp) return this-> and (p->data.dp, p->len);
+	if (p->type == UdataType::std_string_ss) return this-> and (p->data.ss);
+	if (p->type == UdataType::std_wstring_sws) return this-> and (p->data.sws);
+	return false;
+}
+bool Udata::or_by_type(Udata *p)
+{
+	if (p->type == UdataType::none) return true;//defult return true
+	if (p->type == UdataType::bool_b) return this-> or (p->data.b);
+	if (p->type == UdataType::char_c) return this-> or (p->data.c);
+	if (p->type == UdataType::unsigned_char_uc) return this-> or (p->data.uc);
+	if (p->type == UdataType::wchart_wc) return this-> or (p->data.wc);
+	if (p->type == UdataType::short_s) return this-> or (p->data.s);
+	if (p->type == UdataType::unsigned_short_us) return this-> or (p->data.us);
+	if (p->type == UdataType::int_i) return this-> or (p->data.i);
+	if (p->type == UdataType::unsigned_int_ui) return this-> or (p->data.ui);
+	if (p->type == UdataType::long_l) return this-> or (p->data.l);
+	if (p->type == UdataType::unsigned_long_ul) return this-> or (p->data.ul);
+	if (p->type == UdataType::long_long_ll) return this-> or (p->data.ll);
+	if (p->type == UdataType::unsigned_long_long_ull) return this-> or (p->data.ull);
+	if (p->type == UdataType::float_f) return this-> or (p->data.f);
+	if (p->type == UdataType::double_d) return this-> or (p->data.d);
+	if (p->type == UdataType::void_p) return this-> or (p->data.p);
+	if (p->type == UdataType::char_cp) return this-> or (p->data.cp, p->len);
+	if (p->type == UdataType::unsigned_char_ucp) return this-> or (p->data.ucp, p->len);
+	if (p->type == UdataType::wchart_wcp) return this-> or (p->data.wcp, p->len);
+	if (p->type == UdataType::short_sp) return this-> or (p->data.sp, p->len);
+	if (p->type == UdataType::unsigned_short_usp) return this-> or (p->data.usp, p->len);
+	if (p->type == UdataType::int_ip) return this-> or (p->data.ip, p->len);
+	if (p->type == UdataType::unsigned_int_uip) return this-> or (p->data.uip, p->len);
+	if (p->type == UdataType::long_lp) return this-> or (p->data.lp, p->len);
+	if (p->type == UdataType::unsigned_long_ulp) return this-> or (p->data.ulp, p->len);
+	if (p->type == UdataType::long_long_llp) return this-> or (p->data.llp, p->len);
+	if (p->type == UdataType::unsigned_long_long_ullp) return this-> or (p->data.ullp, p->len);
+	if (p->type == UdataType::float_fp) return this-> or (p->data.fp, p->len);
+	if (p->type == UdataType::double_dp) return this-> or (p->data.dp, p->len);
+	if (p->type == UdataType::std_string_ss) return this-> or (p->data.ss);
+	if (p->type == UdataType::std_wstring_sws) return this-> or (p->data.sws);
+	return true;
 }
 
 void Udata::set(char c, size_t len)

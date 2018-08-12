@@ -1,6 +1,8 @@
 #ifndef DATA_H 
 #define DATA_H
 
+#include <ctype.h>
+#include <string.h>
 #include <string>
 #include "object_def.h"
 
@@ -91,6 +93,13 @@ namespace n_data {
 		size_t len;//for typename bufer []or * point len
 	public:
 		Udata() { this->data.ull = 0; this->type = UdataType::none; this->len = 1; }
+		virtual int runme(void * myname, Udata *p);//
+		void set_by_type(Udata *p);
+		size_t get_by_type(Udata *p);
+		int cmp_by_type(Udata *p);
+		bool and_by_type(Udata *p);
+		bool or_by_type(Udata *p);
+		//sets
 		void set(bool b, size_t len = 1) { this->data.b = b; this->type= UdataType::bool_b; this->len = len;}
 		void set(char c, size_t len = 1);
 		void set(unsigned char uc, size_t len = 1);
