@@ -667,6 +667,146 @@ bool Udata:: and (u_data *p)//use ull
 {
 	return (this->data.ull&&p->ull);
 }
+T_TYPE bool Udata::or_t(T a, T b, size_t len_a, size_t len_b)
+{
+	size_t len = (len_a > len_b) ? len_b : len_a;
+	if (--len < 0) { OUT_ERROR return false; }
+	for (; len > 0; len--)
+	{
+		if (a[len] || b[len]) continue;
+		return false;
+	}
+	if ((len_a != len_b)) return false;
+	return true;
+}
+bool Udata:: or (bool b)
+{
+	return (this->data.b || b);
+}
+bool Udata:: or (char c)
+{
+	return (this->data.c || c);
+}
+bool Udata:: or (unsigned char uc)
+{
+	return (this->data.uc || uc);
+}
+bool Udata:: or (wchar_t wc)
+{
+	return (this->data.wc || wc);
+}
+bool Udata:: or (short s)
+{
+	return (this->data.s || s);
+}
+bool Udata:: or (unsigned short us)
+{
+	return (this->data.us || us);
+}
+bool Udata:: or (int i)
+{
+	return (this->data.i || i);
+}
+bool Udata:: or (unsigned int ui)
+{
+	return (this->data.ui || ui);
+}
+bool Udata:: or (long l)
+{
+	return (this->data.l || l);
+}
+bool Udata:: or (unsigned long ul)
+{
+	return (this->data.ul || ul);
+}
+bool Udata:: or (long long ll)
+{
+	return (this->data.ll || ll);
+}
+bool Udata:: or (unsigned long long ull)
+{
+	return (this->data.ull || ull);
+}
+bool Udata:: or (float f)
+{
+	return (this->data.f || f);
+}
+bool Udata:: or (double d)
+{
+	return (this->data.d || d);
+}
+bool Udata:: or (void * p)
+{
+	return (this->data.p || p);
+}
+bool Udata:: or (char *cp, size_t len)
+{
+	return this->or_t(this->data.cp, cp, this->len, len);
+}
+bool Udata:: or (unsigned char* ucp, size_t len)
+{
+	return this->or_t(this->data.ucp, ucp, this->len, len);
+}
+bool Udata:: or (wchar_t *wcp, size_t len)
+{
+	return this->or_t(this->data.wcp, wcp, this->len, len);
+}
+bool Udata:: or (short * sp, size_t len)
+{
+	return this->or_t(this->data.sp, sp, this->len, len);
+}
+bool Udata:: or (unsigned short * usp, size_t len)
+{
+	return this->or_t(this->data.usp, usp, this->len, len);
+}
+bool Udata:: or (int *ip, size_t len)
+{
+	return this->or_t(this->data.ip, ip, this->len, len);
+}
+bool Udata:: or (unsigned int *uip, size_t len)
+{
+	return this->or_t(this->data.uip, uip, this->len, len);
+}
+bool Udata:: or (long *lp, size_t len)
+{
+	return this->or_t(this->data.lp, lp, this->len, len);
+}
+bool Udata:: or (unsigned long *ulp, size_t len)
+{
+	return this->or_t(this->data.ulp, ulp, this->len, len);
+}
+bool Udata:: or (long long *llp, size_t len)
+{
+	return this->or_t(this->data.llp, llp, this->len, len);
+}
+bool Udata:: or (unsigned long long *ullp, size_t len)
+{
+	return this->or_t(this->data.ullp, ullp, this->len, len);
+}
+bool Udata:: or (float *fp, size_t len)
+{
+	return this->or_t(this->data.fp, fp, this->len, len);
+}
+bool Udata:: or (double *dp, size_t len)
+{
+	return this->or_t(this->data.dp, dp, this->len, len);
+}
+bool Udata:: or (std::string *ss)
+{
+	return (*this->data.ss == *ss);
+}
+bool Udata:: or (std::wstring *sws)
+{
+	return (*this->data.sws == *sws);
+}
+bool Udata:: or (Udata *p) //use ull
+{
+	return (this->data.ull || p->data.ull);
+}
+bool Udata:: or (u_data *p)//use ull
+{
+	return (this->data.ull || p->ull);
+}
 #if DATA_TEST
 
 int main(int argc, char *argv[])

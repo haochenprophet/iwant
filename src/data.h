@@ -486,6 +486,73 @@ namespace n_data {
 		bool operator &&(std::wstring *d) { return this-> and (d); }
 		bool operator &&(Udata *d) { return this-> and (d); }
 		bool operator &&(u_data*d) { return this-> and (d); }
+		//or ||
+		T_TYPE bool or_t(T a, T b, size_t len_a = 1, size_t len_b = 1);
+		bool or (bool b);
+		bool or (char c);
+		bool or (unsigned char uc);
+		bool or (wchar_t wc);
+		bool or (short s);
+		bool or (unsigned short us);
+		bool or (int i);
+		bool or (unsigned int ui);
+		bool or (long l);
+		bool or (unsigned long ul);
+		bool or (long long ll);
+		bool or (unsigned long long ull);
+		bool or (float f);
+		bool or (double d);
+		bool or (void * p);
+		bool or (char *cp, size_t len = 1);
+		bool or (unsigned char* ucp, size_t len = 1);
+		bool or (wchar_t *wcp, size_t len = 1);
+		bool or (short * sp, size_t len = 1);
+		bool or (unsigned short * usp, size_t len = 1);
+		bool or (int *ip, size_t len = 1);
+		bool or (unsigned int *uip, size_t len = 1);
+		bool or (long *lp, size_t len = 1);
+		bool or (unsigned long *ulp, size_t len = 1);
+		bool or (long long *llp, size_t len = 1);
+		bool or (unsigned long long *ullp, size_t len = 1);
+		bool or (float *fp, size_t len = 1);
+		bool or (double *dp, size_t len = 1);
+		bool or (std::string *ss);
+		bool or (std::wstring *sws);
+		bool or (Udata *p);
+		bool or (u_data *p);
+		//operator ||
+		bool operator ||(bool d) { return this-> or (d); }
+		bool operator ||(char d) { return this-> or (d); }
+		bool operator ||(unsigned char d) { return this-> or (d); }
+		bool operator ||(wchar_t d) { return this-> or (d); }
+		bool operator ||(short d) { return this-> or (d); }
+		bool operator ||(unsigned short d) { return this-> or (d); }
+		bool operator ||(int d) { return this-> or (d); }
+		bool operator ||(unsigned int d) { return this-> or (d); }
+		bool operator ||(long d) { return this-> or (d); }
+		bool operator ||(unsigned long d) { return this-> or (d); }
+		bool operator ||(long long d) { return this-> or (d); }
+		bool operator ||(unsigned long long d) { return this-> or (d); }
+		bool operator ||(float d) { return this-> or (d); }
+		bool operator ||(double d) { return this-> or (d); }
+		bool operator ||(void * d) { return this-> or (d); }
+		bool operator ||(char *d) { return this-> or (d); }
+		bool operator ||(unsigned char* d) { return this-> or (d); }
+		bool operator ||(wchar_t *d) { return this-> or (d); }
+		bool operator ||(short * d) { return this-> or (d); }
+		bool operator ||(unsigned short * d) { return this-> or (d); }
+		bool operator ||(int *d) { return this-> or (d); }
+		bool operator ||(unsigned int *d) { return this-> or (d); }
+		bool operator ||(long *d) { return this-> or (d); }
+		bool operator ||(unsigned long *d) { return this-> or (d); }
+		bool operator ||(long long *d) { return this-> or (d); }
+		bool operator ||(unsigned long long *d) { return this-> or (d); }
+		bool operator ||(float *d) { return this-> or (d); }
+		bool operator ||(double *d) { return this-> or (d); }
+		bool operator ||(std::string *d) { return this-> or (d); }
+		bool operator ||(std::wstring *d) { return this-> or (d); }
+		bool operator ||(Udata *d) { return this-> or (d); }
+		bool operator ||(u_data*d) { return this-> or (d); }
 	};
 }
 using namespace n_data;
