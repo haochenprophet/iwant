@@ -25,6 +25,8 @@ I will be reduced to ashes, I will be everywhere .
 No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
 Self-creation, self-renewal, self-improvement, creating classes, creating source code, creating Makefiles ... 
 
+I am inside the code, also outside the code.
+
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
 
