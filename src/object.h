@@ -305,6 +305,10 @@ namespace n_object {
 		virtual int exception(void *p = nullptr);//Respond or issue an exception
 		virtual int message(void *p = nullptr);//Passing and processing messages
 		virtual int feedback(void *p = nullptr);//send and accept feedback info
+		virtual int reservation(void *p = nullptr);//A object's future callback function, called at a certain time, location, event, condition ....of the object's future
+		virtual int secure(void *p = nullptr); //Verify and return to a safe state
+		virtual int environment(void *p = nullptr); //Verify and return to a environment state and info
+		virtual int context(void *p = nullptr); //context info
 		virtual int runme(void * myname, void *p= nullptr);
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }

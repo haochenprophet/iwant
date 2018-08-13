@@ -917,6 +917,36 @@ int Object::feedback(void *p)
 #endif
 		return -1;
 }
+//A object's future callback function, called at a certain time, location, event, condition ....of the object's future
+int Object::reservation(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::secure(void *p) //Verify and return to a safe state
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::environment(void *p) 
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::context(void *p) 
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
 {
@@ -942,6 +972,10 @@ int Object::dispatch_runme(void * myname, void *p)
 
 int Object::runme(void * myname, void *p) //p:parameter
 {
+	if (strcmp((char *)myname, (char *)"environment") == 0) return this->environment(p);
+	if (strcmp((char *)myname, (char *)"context") == 0) return this->context(p);
+	if (strcmp((char *)myname, (char *)"secure") == 0) return this->secure(p);
+	if (strcmp((char *)myname, (char *)"reservation") == 0) return this->reservation(p);
 	if (strcmp((char *)myname, (char *)"feedback") == 0) return this->feedback(p);
 	if (strcmp((char *)myname, (char *)"message") == 0) return this->message(p);
 	if (strcmp((char *)myname, (char *)"exception") == 0) return this->exception(p);
