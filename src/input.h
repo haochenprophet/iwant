@@ -37,27 +37,27 @@ namespace n_input {
 		//set
 		int set(void* p, InputType t) { this->parameter = p; this->type = t; }
 		//computer
-		virtual int scan(void *p) { return -1; }//p:parameter ,i:input
-		virtual int record(void *p) { return -1; } //input from record
-		virtual int url(void *p) { return -1; } //input from url
-		virtual int audio(void *p) { return -1; }//input from audio
-		virtual int vedio(void *p) { return -1; } //input from mail 
-		virtual int file(void *p) { return -1; } //input from file ,p point file name
-		virtual int memory(void *p) { return -1; } //input from memory ,p point file name
-		virtual int dma(void *p) { return -1; } //input from dma
-		virtual int xml(void *p) { return -1; } //input from xml 
-		virtual int sql(void *p) { return -1; } //input from database 
-		virtual int mail(void *p) { return -1; } //input from mail 
-		virtual int gpio(void *p) { return -1; } //input from gpio pin of hardware 
-		virtual int reg(void *p) { return -1; } //input from register 
+		virtual int scan(void *p=nullptr) { return -1; }//p:parameter ,i:input
+		virtual int record(void *p=nullptr) { return -1; } //input from record
+		virtual int url(void *p=nullptr) { return -1; } //input from url
+		virtual int audio(void *p=nullptr) { return -1; }//input from audio
+		virtual int vedio(void *p=nullptr) { return -1; } //input from mail 
+		virtual int file(void *p=nullptr) { return -1; } //input from file ,p point file name
+		virtual int memory(void *p=nullptr) { return -1; } //input from memory ,p point file name
+		virtual int dma(void *p=nullptr) { return -1; } //input from dma
+		virtual int xml(void *p=nullptr) { return -1; } //input from xml 
+		virtual int sql(void *p=nullptr) { return -1; } //input from database 
+		virtual int mail(void *p=nullptr) { return -1; } //input from mail 
+		virtual int gpio(void *p=nullptr) { return -1; } //input from gpio pin of hardware 
+		virtual int reg(void *p=nullptr) { return -1; } //input from register 
 		//device
-		virtual int antenna(void *p) { return -1; } //input from ear 
-		virtual int sensor(void *p) { return -1; } //input from ear 
+		virtual int antenna(void *p=nullptr) { return -1; } //input from ear 
+		virtual int sensor(void *p=nullptr) { return -1; } //input from ear 
 		 //biological
-		virtual int eye(void *p) { return -1; } //input from eye 
-		virtual int nose(void *p) { return -1; } //input from nose 
-		virtual int ear(void *p) { return -1; } //input from ear 
-		virtual int mouth(void *p) { return -1; } //input from ear 
+		virtual int eye(void *p=nullptr) { return -1; } //input from eye 
+		virtual int nose(void *p=nullptr) { return -1; } //input from nose 
+		virtual int ear(void *p=nullptr) { return -1; } //input from ear 
+		virtual int mouth(void *p=nullptr) { return -1; } //input from ear 
 		 //
 	};
 
