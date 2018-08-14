@@ -47,6 +47,9 @@ I am inside the code, also outside the code.
 
 4.A file has a main class and the class name is cpp filename add C.  ie. class Ciwant.
 
+5.For 'Object' class use the 'O' ,like Ouuid,Oinput .. 
+  namespace name 'n'  n_object , union 'u' or 'U'  like Udata . 
+
 [Building]:
 request :Need C + + compiler
 
