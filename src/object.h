@@ -114,8 +114,22 @@ namespace n_object {
 	class Cstatus :public Udata//status class
 	{
 	};
+	
+	class Otime //Object 's time O:Object
+	{
+	public://time and clock
+		struct tm * tm_start, *tm_at, *tm_end;
+		time_t start_time;//for class memory time
+		time_t at_time;
+		time_t end_time;
+		clock_t start_clock;
+		clock_t at_clock;
+		clock_t end_clock;
+	public :
+		Otime();
+	};
 
-	class Object:public Ouuid
+	class Object:public Ouuid, Otime
 	{
 	protected:
 		long id;//object id
@@ -135,15 +149,6 @@ namespace n_object {
 		string alias;//Alias object name
 		string description;
 		
-		//time and clock
-		struct tm * tm_start,*tm_at,*tm_end;
-		time_t start_time;//for class memory time
-		time_t at_time;
-		time_t end_time;
-		clock_t start_clock;
-		clock_t at_clock;
-		clock_t end_clock;
-
 		string syntax;//this for keyword object
 		string temp;//keyword template 
 		string s_tag;
@@ -305,11 +310,19 @@ namespace n_object {
 		virtual int exception(void *p = nullptr);//Respond or issue an exception
 		virtual int message(void *p = nullptr);//Passing and processing messages
 		virtual int feedback(void *p = nullptr);//send and accept feedback info
-		virtual int reservation(void *p = nullptr);//A object's future callback function, called at a certain time, location, event, condition ....of the object's future
-		virtual int secure(void *p = nullptr); //Verify and return to a safe state
+		virtual int past(void *p = nullptr);	//The object's  past function, Related to time, action, and condition
+		virtual int rollback(void *p = nullptr);//The object's  past function, 
+		virtual int previous(void *p = nullptr);
+		virtual int future(void *p = nullptr);//The object's  future function, 
+		virtual int next(void *p = nullptr);
+		virtual int reservation(void *p = nullptr);//The object's future callback function, called at a certain time, location, event, condition ....of the object's future
+		virtual int current(void *p = nullptr);		//The object's  current state function, 		
+		virtual int condition(void *p = nullptr);		//The object's  condition function, 
+		virtual int depend(void *p = nullptr);
 		virtual int environment(void *p = nullptr); //Verify and return to a environment state and info
 		virtual int context(void *p = nullptr); //context info
-		virtual int runme(void * myname, void *p= nullptr);
+		virtual int secure(void *p = nullptr); //Verify and return to a safe state
+		virtual int runme(void * myname, void *p= nullptr);	//dispatch my function
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }
 		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }

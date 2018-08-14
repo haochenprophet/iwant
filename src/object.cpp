@@ -83,6 +83,20 @@ int object_func(void *p)//this ext function for object class
 	return 0;
 }
 
+Otime::Otime()
+{
+	time(&this->at_time);
+	this->start_time = this->at_time;
+	this->end_time = this->at_time;
+	this->tm_start = localtime(&this->start_time);//init tm
+	this->tm_at = localtime(&this->at_time);
+	this->tm_end = localtime(&this->end_time);
+
+	this->at_clock = clock();
+	this->start_clock = at_clock;
+	this->end_clock = at_clock;
+}
+
 long object_id = 0;
 Object::Object()
 {
@@ -100,17 +114,6 @@ Object::Object()
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
 	//this->addMe();//remove add this to family list
-
-	time (&this->at_time);
-	this->start_time=this->at_time;
-	this->end_time=this->at_time;
-	this->tm_start = localtime (&this->start_time);//init tm
-	this->tm_at = localtime (&this->at_time);
-	this->tm_end = localtime (&this->end_time);
-
-	this->at_clock=clock();
-	this->start_clock=at_clock;
-	this->end_clock=at_clock;
 
 	this->language=EnglishLanguage;
 	this->count=0;
@@ -917,6 +920,43 @@ int Object::feedback(void *p)
 #endif
 		return -1;
 }
+//The object's  past function, Related to time, action, and condition
+int Object::past(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::rollback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::previous(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//The object's  future function, 
+int Object::future(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::next(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 //A object's future callback function, called at a certain time, location, event, condition ....of the object's future
 int Object::reservation(void *p)
 {
@@ -925,7 +965,29 @@ int Object::reservation(void *p)
 #endif
 		return -1;
 }
+int Object::current(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 int Object::secure(void *p) //Verify and return to a safe state
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//The object's  condition function, 
+int Object::condition(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::depend(void *p)
 {
 #if OBJECT_DEBUG
 	OUT_LINE
@@ -972,6 +1034,14 @@ int Object::dispatch_runme(void * myname, void *p)
 
 int Object::runme(void * myname, void *p) //p:parameter
 {
+	if (strcmp((char *)myname, (char *)"past") == 0) return this->past(p);
+	if (strcmp((char *)myname, (char *)"rollback") == 0) return this->rollback(p);
+	if (strcmp((char *)myname, (char *)"previous") == 0) return this->previous(p);
+	if (strcmp((char *)myname, (char *)"future") == 0) return this->future(p);
+	if (strcmp((char *)myname, (char *)"next") == 0) return this->next(p);
+	if (strcmp((char *)myname, (char *)"condition") == 0) return this->condition(p);
+	if (strcmp((char *)myname, (char *)"depend") == 0) return this->depend(p);
+	if (strcmp((char *)myname, (char *)"current") == 0) return this->current(p);
 	if (strcmp((char *)myname, (char *)"environment") == 0) return this->environment(p);
 	if (strcmp((char *)myname, (char *)"context") == 0) return this->context(p);
 	if (strcmp((char *)myname, (char *)"secure") == 0) return this->secure(p);
