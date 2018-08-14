@@ -58,18 +58,6 @@ namespace n_object {
 		~Cparameter() { while (!this->s.empty()) this->s.pop(); }//exit clear stack
 	};
 
-	class Cparameter
-	{
-	public:
-		void *in;
-		void *out;
-		int size;
-		std::stack<void *> s; //parameter stack
-	public:
-		Cparameter();
-		~Cparameter();
-	};
-
 	class CtagItem //out=temp+Temp.tag->rep
 	{
 	public:
