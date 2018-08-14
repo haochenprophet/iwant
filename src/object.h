@@ -325,6 +325,7 @@ namespace n_object {
 		virtual int context(void *p = nullptr); //context info
 		virtual int secure(void *p = nullptr); //Verify and return to a safe state
 		virtual int runme(void * myname, void *p= nullptr);	//dispatch my function
+		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer to input object,p:parameter
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }
 		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }

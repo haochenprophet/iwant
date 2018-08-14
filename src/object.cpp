@@ -1046,8 +1046,14 @@ int Object::dispatch_runme(void * myname, void *p)
 	return -1;
 }
 
+int Object::transfer(void * myname, void *p, Object *o)
+{
+	if (o) return o->runme(myname, p);
+	return this->runme(myname, p);
+}
 int Object::runme(void * myname, void *p) //p:parameter
 {
+//	if (strcmp((char *)myname, (char *)"transfer") == 0) return this->transfer(p);
 	if (strcmp((char *)myname, (char *)"past") == 0) return this->past(p);
 	if (strcmp((char *)myname, (char *)"rollback") == 0) return this->rollback(p);
 	if (strcmp((char *)myname, (char *)"previous") == 0) return this->previous(p);
@@ -1067,6 +1073,8 @@ int Object::runme(void * myname, void *p) //p:parameter
 	if (strcmp((char *)myname, (char *)"interrupt") == 0) return this->interrupt(p);
 	if (strcmp((char *)myname, (char *)"event") == 0) return this->event(p);
 	if (strcmp((char *)myname, (char *)"task") == 0) return this->task(p);
+	if (strcmp((char *)myname, (char *)"transaction") == 0) return this->transaction(p);
+	if (strcmp((char *)myname, (char *)"commit") == 0) return this->commit(p);
 	if (strcmp((char *)myname, (char *)"help") == 0) return this->help(p);
 	if (strcmp((char *)myname, (char *)"ui") == 0) return this->ui(p);
 	if (strcmp((char *)myname, (char *)"get") == 0) return this->get(p);
