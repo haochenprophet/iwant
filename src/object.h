@@ -305,6 +305,8 @@ namespace n_object {
 		virtual int ui(void *p = nullptr);//UI:User Interface , include Graphic interface(GUI), Audio interface(AUI), video interface(VUI),Text Interface (TUI)
 		virtual int event(void *p = nullptr);
 		virtual int task(void *p = nullptr);//Execution task queue
+		virtual int transaction(void *p = nullptr);//task function
+		virtual int commit(void *p = nullptr);//task function
 		virtual int interrupt(void *p = nullptr);
 		virtual int callback(void *p = nullptr);//objec callback
 		virtual int exception(void *p = nullptr);//Respond or issue an exception

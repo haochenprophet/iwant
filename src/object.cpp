@@ -885,6 +885,20 @@ int Object::task(void *p)
 #endif
 		return -1;
 }
+int Object::transaction(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::commit(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 int Object::interrupt(void *p)
 {
 #if OBJECT_DEBUG
