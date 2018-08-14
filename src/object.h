@@ -22,7 +22,7 @@
 #include "bits.def"
 #include "action_type.h"
 #include "data.h"
-
+#include "input.h"
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::wstring;
@@ -44,6 +44,19 @@ int runcmd(void *cmd);
 #include "object_def.h"
 
 namespace n_object {
+
+	class Cparameter
+	{
+	public:
+		void *in;//can point Udata[]
+		void *out;
+		int size_in;//in size
+		int size_out;//out_size
+		std::stack<void *> s; //parameter stack
+	public:
+		Cparameter() { this->in = nullptr;	this->out = nullptr;	this->size_in = 0;	this->size_out = 0; }
+		~Cparameter() { while (!this->s.empty()) this->s.pop(); }//exit clear stack
+	};
 
 	class Cparameter
 	{
@@ -134,6 +147,7 @@ namespace n_object {
 	protected:
 		long id;//object id
 	public:
+		Oinput *input;//set the input point change object input Cparameter
 		Udata udata;
 		Cstatus status;
 		int silent;//can use to print or not print
@@ -219,7 +233,8 @@ namespace n_object {
 		bool get_s(char ** s ,int size);
 		bool wait_cin(int size=O_BUF_LEN);
 		char * at_cin_buf(char * str);//is exist
-
+		//set
+		int set(Oinput *i) { this->input = i; return 0; }
 		//execute myfunc ,object, my_family func
 		int execute();
 		int execute(Object *o);//execute o->execute()
@@ -325,7 +340,7 @@ namespace n_object {
 		virtual int context(void *p = nullptr); //context info
 		virtual int secure(void *p = nullptr); //Verify and return to a safe state
 		virtual int runme(void * myname, void *p= nullptr);	//dispatch my function
-		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer to input object,p:parameter
+		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer runme() to input object,p:parameter
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }
 		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
@@ -394,6 +409,7 @@ namespace n_object {
 		 */
 		 //Special operator
 		 Object& operator = (const Object& o) { this->udata.data.ull = o.udata.data.ull; }
+		 Object& operator = (Oinput* i) { this->input = i; }
 		 /*
 		 char operator [] (int i) {}
 		 const char* operator () () {}

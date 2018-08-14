@@ -8,18 +8,6 @@
 #define OBJECT_DEBUG 0//1
 #endif
 
-Cparameter::Cparameter()
-{
-	this->in=nullptr;
-	this->out=nullptr;
-	this->size=0;
-}
-
-Cparameter::~Cparameter()
-{
-	while (!this->s.empty()) this->s.pop(); //exit clear stack 
-}
-
 CtagItem::CtagItem()
 {
 	this->status = 0;
