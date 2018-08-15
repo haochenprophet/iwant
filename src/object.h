@@ -19,10 +19,11 @@
 #include "syntax_def.h"
 #include "ex_func.h"
 #include "uuid.h"
-#include "bits.def"
+#include "bits_def.h"
 #include "action_type.h"
 #include "data.h"
 #include "input.h"
+#include "move.h"
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::wstring;
@@ -135,6 +136,7 @@ namespace n_object {
 	protected:
 		long id;//object id
 	public:
+		Omove * move;
 		Oinput *input;//set the input point change object input Cparameter
 		Udata udata;
 		Cstatus status;

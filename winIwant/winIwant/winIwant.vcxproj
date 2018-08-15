@@ -177,6 +177,7 @@
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\http.cpp" />
+    <ClCompile Include="..\..\src\input.cpp" />
     <ClCompile Include="..\..\src\instruction.cpp" />
     <ClCompile Include="..\..\src\instruction\AAA.cpp" />
     <ClCompile Include="..\..\src\instruction\AAD.cpp" />
@@ -1396,6 +1397,7 @@
     <ClCompile Include="..\..\src\make.cpp" />
     <ClCompile Include="..\..\src\makefile.cpp" />
     <ClCompile Include="..\..\src\math.cpp" />
+    <ClCompile Include="..\..\src\move.cpp" />
     <ClCompile Include="..\..\src\myMemory.cpp" />
     <ClCompile Include="..\..\src\my_sql.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
@@ -1620,6 +1622,7 @@
     <ClInclude Include="..\..\src\action_type.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\bits.h" />
+    <ClInclude Include="..\..\src\bits_def.h" />
     <ClInclude Include="..\..\src\block.h" />
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
@@ -1652,6 +1655,8 @@
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\http.h" />
     <ClInclude Include="..\..\src\http_def.h" />
+    <ClInclude Include="..\..\src\input.h" />
+    <ClInclude Include="..\..\src\input_class.h" />
     <ClInclude Include="..\..\src\instruction.h" />
     <ClInclude Include="..\..\src\instruction\AAA.h" />
     <ClInclude Include="..\..\src\instruction\AAD.h" />
@@ -2872,6 +2877,8 @@
     <ClInclude Include="..\..\src\make.h" />
     <ClInclude Include="..\..\src\makefile.h" />
     <ClInclude Include="..\..\src\math.h" />
+    <ClInclude Include="..\..\src\move.h" />
+    <ClInclude Include="..\..\src\move_class.h" />
     <ClInclude Include="..\..\src\myMemory.h" />
     <ClInclude Include="..\..\src\my_sql.h" />
     <ClInclude Include="..\..\src\my_sql_action.h" />
@@ -3111,7 +3118,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
-    <None Include="..\..\src\bits.def" />
     <None Include="..\..\src\code_action.i" />
     <None Include="..\..\src\dictionary\Makefile" />
     <None Include="..\..\src\ex_func_class.h" />

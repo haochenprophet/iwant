@@ -35,7 +35,7 @@ namespace n_input {
 	public:
 		Oinput() { this->type = InputType::none; this->parameter = nullptr; }
 		//set
-		int set(void* p, InputType t) { this->parameter = p; this->type = t; }
+		int set(void* p, InputType t=InputType::none) { this->parameter = p; this->type = t; }
 		//computer
 		virtual int scan(void *p=nullptr) { return -1; }//p:parameter ,i:input
 		virtual int record(void *p=nullptr) { return -1; } //input from record
@@ -51,13 +51,13 @@ namespace n_input {
 		virtual int gpio(void *p=nullptr) { return -1; } //input from gpio pin of hardware 
 		virtual int reg(void *p=nullptr) { return -1; } //input from register 
 		//device
-		virtual int antenna(void *p=nullptr) { return -1; } //input from ear 
-		virtual int sensor(void *p=nullptr) { return -1; } //input from ear 
+		virtual int antenna(void *p=nullptr) { return -1; } //input from antenna 
+		virtual int sensor(void *p=nullptr) { return -1; } //input from sensor 
 		 //biological
 		virtual int eye(void *p=nullptr) { return -1; } //input from eye 
 		virtual int nose(void *p=nullptr) { return -1; } //input from nose 
 		virtual int ear(void *p=nullptr) { return -1; } //input from ear 
-		virtual int mouth(void *p=nullptr) { return -1; } //input from ear 
+		virtual int mouth(void *p=nullptr) { return -1; } //input from mouth 
 		 //
 	};
 

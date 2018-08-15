@@ -4431,6 +4431,12 @@
     <ClCompile Include="..\..\src\data.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\input.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\move.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8909,6 +8915,21 @@
     <ClInclude Include="..\..\src\object_def.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\bits_def.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\input.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\input_class.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\move.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\move_class.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -8924,9 +8945,6 @@
     </None>
     <None Include="..\..\src\dictionary\Makefile">
       <Filter>dictionary</Filter>
-    </None>
-    <None Include="..\..\src\bits.def">
-      <Filter>src</Filter>
     </None>
     <None Include="..\..\src\ex_func_class.h">
       <Filter>src</Filter>

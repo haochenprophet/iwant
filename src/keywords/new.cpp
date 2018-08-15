@@ -11,7 +11,7 @@ int Cnew::func(void *p)//p->in --want new size  out ,is *//
 	Cparameter *pm=(Cparameter *)p;//pm->size ==new size;
 
 	try{
-		pm->out =(void *)new char[pm->size];//
+		pm->out =(void *)new char[pm->size_in];//
 	}
 	catch(...)//fail
 	{
@@ -19,5 +19,5 @@ int Cnew::func(void *p)//p->in --want new size  out ,is *//
 		return 0;
 	}
 
-	return pm->size;
+	return pm->size_in;
 }

@@ -1,6 +1,6 @@
 #ifndef MAIN_ACTION_H
 #define MAIN_ACTION_H
-#include "bits.def"
+#include "bits_def.h"
 #include "action_type.h"
 
 enum class MainAtcionClass

@@ -110,6 +110,8 @@ Object::Object()
 	this->velocity=0;
 	this->cin_buf=nullptr;
 	this->cin_buf_len=O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
+	this->input = nullptr;
+	this->move = nullptr;
 
 #if OBJECT_DEBUG
 	AT_LINE this->myName();
