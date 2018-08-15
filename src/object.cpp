@@ -1012,7 +1012,13 @@ int Object::context(void *p)
 #endif
 		return -1;
 }
-
+int Object::go(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
 {
@@ -1044,6 +1050,7 @@ int Object::transfer(void * myname, void *p, Object *o)
 int Object::runme(void * myname, void *p) //p:parameter
 {
 //	if (strcmp((char *)myname, (char *)"transfer") == 0) return this->transfer(p);
+	if (strcmp((char *)myname, (char *)"go") == 0) return this->go(p);
 	if (strcmp((char *)myname, (char *)"past") == 0) return this->past(p);
 	if (strcmp((char *)myname, (char *)"rollback") == 0) return this->rollback(p);
 	if (strcmp((char *)myname, (char *)"previous") == 0) return this->previous(p);

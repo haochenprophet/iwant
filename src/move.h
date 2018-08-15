@@ -45,6 +45,7 @@ namespace n_move {
 		void * distance;//move distance
 	public:
 		Cvelocity();
+		virtual int go(void * p = nullptr) { return -1; } //The starting conditions can be function calls, instructions, commands, and time, location, etc.
 		virtual int feedback(void * p = nullptr) { return -1; }//For correction,target_loaction,target_velocity,and acceleration*time
 	};
 
@@ -56,6 +57,7 @@ namespace n_move {
 		int v_count;//object_action = Cvelocity [v_count]
 	public:
 		Omove();
+		virtual int go(void * p = nullptr) { return -1; } //The starting conditions can be function calls, instructions, commands, and time, location, etc.
 	};
 
 }

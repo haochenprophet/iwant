@@ -225,6 +225,7 @@ namespace n_object {
 		char * at_cin_buf(char * str);//is exist
 		//set
 		int set(Oinput *i) { this->input = i; return 0; }
+		int set(Omove *m) { this->move = m; return 0; }
 		//execute myfunc ,object, my_family func
 		int execute();
 		int execute(Object *o);//execute o->execute()
@@ -331,6 +332,7 @@ namespace n_object {
 		virtual int secure(void *p = nullptr); //Verify and return to a safe state
 		virtual int runme(void * myname, void *p= nullptr);	//dispatch my function
 		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer runme() to input object,p:parameter
+		virtual int go(void *p = nullptr);	//go function for object move support
 		//Arithmetic Operators
 		Object  operator+(Object *o) { this->addMe(o); }
 		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
@@ -398,8 +400,9 @@ namespace n_object {
 		 void operator delete[](void* p) {}
 		 */
 		 //Special operator
-		 Object& operator = (const Object& o) { this->udata.data.ull = o.udata.data.ull; }
-		 Object& operator = (Oinput* i) { this->input = i; }
+		 void operator = (const Object& o) { this->udata.data.ull = o.udata.data.ull; }
+		 void operator = (Oinput* i) { this->input = i; }
+		 void operator = (Omove* m) { this->move = m; }
 		 /*
 		 char operator [] (int i) {}
 		 const char* operator () () {}
