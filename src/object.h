@@ -14,6 +14,7 @@
 #include <stack> 
 #include <map>
 #include <exception>
+#include <csignal> 
 
 #include "temp_def.h"
 #include "syntax_def.h"
@@ -41,6 +42,7 @@ typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);
 int runcmd(void *cmd);
+void signal_handler(int signum);
 
 #include "object_def.h"
 
@@ -333,6 +335,9 @@ namespace n_object {
 		virtual int runme(void * myname, void *p= nullptr);	//dispatch my function
 		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer runme() to input object,p:parameter
 		virtual int go(void *p = nullptr);	//go function for object move support
+		virtual int register_signal(int signum);
+		virtual int rejoin_signal(int signum);
+		int register_all_signal(int signum=-1);
 		//Arithmetic Operators
 		void  operator+(Object *o) { this->addMe(o); }
 		void  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
@@ -436,6 +441,6 @@ namespace n_object {
 		int my_init(void *p= nullptr);
 	};
 }
-
+extern n_object::Object object_global;
 using namespace n_object;
 #endif

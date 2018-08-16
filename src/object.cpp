@@ -112,7 +112,7 @@ Object::Object()
 	this->cin_buf_len=O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
 	this->input = nullptr;
 	this->move = nullptr;
-
+	this->register_all_signal();
 #if OBJECT_DEBUG
 	AT_LINE this->myName();
 #endif
@@ -1018,6 +1018,53 @@ int Object::go(void *p)
 	OUT_LINE
 #endif
 		return -1;
+}
+
+int Object::register_all_signal(int signum)
+{
+	//SIGINT , SIGILL ,SIGFPE, SIGSEGV,SIGTERM , SIGBREAK , SIGABRT  SIGABRT_COMPAT  
+	this->register_signal(SIGINT);
+	this->register_signal(SIGILL);
+	this->register_signal(SIGFPE);
+	this->register_signal(SIGSEGV);
+	this->register_signal(SIGTERM);
+	this->register_signal(SIGBREAK);
+	this->register_signal(SIGABRT);
+	this->register_signal(SIGABRT_COMPAT);
+	return 0;
+}
+
+Object object_global;
+void signal_handler(int signum)
+{
+	object_global.rejoin_signal(signum);
+	switch (signum)
+	{
+	case SIGILL:
+	case SIGFPE:
+	case SIGSEGV:
+	case SIGTERM:
+	case SIGBREAK:
+	case SIGABRT:
+	case SIGABRT_COMPAT:
+		exit(signum);
+	case SIGINT:
+		//...
+	default:
+		break;
+	}
+}
+
+int Object::register_signal(int signum)
+{
+	signal(signum, signal_handler);
+	return 0;
+}
+
+int Object::rejoin_signal(int signum)
+{
+	OUT_LINE_N(signum);
+	return -1;
 }
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
