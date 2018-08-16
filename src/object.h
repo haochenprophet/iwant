@@ -231,7 +231,7 @@ namespace n_object {
 		int execute(Object *o);//execute o->execute()
 		int execute(Object *o, string obj_name , string fun_name , void *p=nullptr, bool new_thread = false);
 		int execute(Object *o, char  *obj_name , char * fun_name , void *p=nullptr, bool new_thread = false);
-		int execute(Object *o, string *obj_name=nullptr, string * fun_name = NULL, void *p=nullptr, bool new_thread = false);
+		int execute(Object *o, string *obj_name, string * fun_name = nullptr, void *p=nullptr, bool new_thread = false);
 		int execute(void *p);//execute this->func
 		virtual int execute(void *p1,void *p2);//execute 
 		virtual int execute(void *p1,void *p2,void *p3);//execute 
@@ -361,17 +361,31 @@ namespace n_object {
 		 bool operator && (Object&o) { return this->udata.data.ull && o.udata.data.ull; }
 		 bool operator ! () { return !this->udata.data.ull; }
 		 //Positive and negative operators
-		/* 
-		Object& operator + () { }
-		 Object& operator - () { }
-		 Object* operator & () { return this; }
-		 Object& operator * () { }
-		 */
+		
+		 void operator + () {}
+		 void operator - () { this->udata.data.ll=(-this->udata.data.ll) ; }
+		// Object* operator & () { return this; }
+		// Object& operator * () { }
+		 // operator ()
+		 int operator ()() { return this->execute(); }
+		 int operator ()(Object *o) { return this->execute(o); }
+		 int operator ()(Object *o, string obj_name, string fun_name, void *p = nullptr, bool new_thread = false) { return this->execute(o,obj_name,fun_name,p,new_thread); }
+		 int operator ()(Object *o, char  *obj_name, char * fun_name, void *p = nullptr, bool new_thread = false) { return this->execute(o, obj_name, fun_name, p ,  new_thread); }
+		 int operator ()(Object *o, string *obj_name, string * fun_name = nullptr, void *p = nullptr, bool new_thread = false) { return this->execute( o,  obj_name,  fun_name ,  p  ,  new_thread ); }
+		 int operator ()(void *p) { return this->execute(p); }
+		 int operator ()(void *p1, void *p2) { return this->execute(p1,p2); }
+		 int operator ()(void *p1, void *p2, void *p3) { return this->execute(p1,p2,p3); }
+		 int operator ()(Object *o, void *p) { return this->execute(o,p); }
+		 int operator ()(MyFunc func, void *p = nullptr, bool new_thread = false) { return this->execute(func,p, new_thread); }
+		 int operator ()(string *fun_name, void *p = nullptr, bool new_thread = false) { return this->execute(fun_name,p,new_thread); }
+		 int operator ()(char * fun_name, void *p = nullptr, bool new_thread = false) { return this->execute(fun_name, p, new_thread); }
+		 int operator ()(string fun_name, void *p = nullptr, bool new_thread = false) { return this->execute(fun_name, p, new_thread); }
+
 		 //Self-increasing, self-decreasing operator
 		 void operator ++ () { ++this->udata.data.ull; }//before ++
-		 void operator ++ (int i) { this->udata.data.ull++; }
+		 void operator ++ (int i) { this->udata.data.ull+=i; }
 		 void operator --() { --this->udata.data.ull; }//before--
-		 void operator -- (int i) { this->udata.data.ull--; }
+		 void operator -- (int i) { this->udata.data.ull-=i; }
 		 //Bit operators
 		 void operator | (Object& o) { this->udata.data.ull |= o.udata.data.ull; }
 		 void operator & (Object& o) { this->udata.data.ull &= o.udata.data.ull; }
