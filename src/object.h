@@ -334,13 +334,13 @@ namespace n_object {
 		virtual int transfer(void * myname, void *p=nullptr,Object *o = nullptr); //Transfer runme() to input object,p:parameter
 		virtual int go(void *p = nullptr);	//go function for object move support
 		//Arithmetic Operators
-		Object  operator+(Object *o) { this->addMe(o); }
-		Object  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
-		Object  operator-(Object *o) { this->removeMe(o);}
-		Object  operator-(Udata *o) { this->udata.data.ull -= o->data.ull; }
-		Object  operator*(Object *o) { this->udata.data.ull *= o->udata.data.ull; }
-		Object  operator/(Object *o) { if(o->udata.data.ull) this->udata.data.ull /= o->udata.data.ull; }
-		Object  operator%(Object *o) { if(o->udata.data.ull )this->udata.data.ull %= o->udata.data.ull; }
+		void  operator+(Object *o) { this->addMe(o); }
+		void  operator+(Udata *o) { this->udata.data.ull += o->data.ull; }
+		void  operator-(Object *o) { this->removeMe(o);}
+		void  operator-(Udata *o) { this->udata.data.ull -= o->data.ull; }
+		void  operator*(Object *o) { this->udata.data.ull *= o->udata.data.ull; }
+		void  operator/(Object *o) { if(o->udata.data.ull) this->udata.data.ull /= o->udata.data.ull; }
+		void  operator%(Object *o) { if(o->udata.data.ull )this->udata.data.ull %= o->udata.data.ull; }
 		//Relational Operators
 		 bool operator==(char *identifier) { return (0 != this->isMe(identifier)); }
 		 bool operator==(string * identifier) { return (0 != this->isMe(identifier)); }
@@ -368,28 +368,28 @@ namespace n_object {
 		 Object& operator * () { }
 		 */
 		 //Self-increasing, self-decreasing operator
-		 Object& operator ++ () { ++this->udata.data.ull; }//before ++
-		 Object operator ++ (int i) { this->udata.data.ull++; }
-		 Object& operator --() { --this->udata.data.ull; }//before--
-		 Object operator -- (int i) { this->udata.data.ull--; }
+		 void operator ++ () { ++this->udata.data.ull; }//before ++
+		 void operator ++ (int i) { this->udata.data.ull++; }
+		 void operator --() { --this->udata.data.ull; }//before--
+		 void operator -- (int i) { this->udata.data.ull--; }
 		 //Bit operators
-		 Object operator | (Object& o) { this->udata.data.ull|=o.udata.data.ull; }
-		 Object operator & (Object& o) { this->udata.data.ull &= o.udata.data.ull; }
-		 Object operator ^ (Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
-		 Object operator << (int i){ this->udata.data.ull <<= i; }
-		 Object operator >> (int i) { this->udata.data.ull >>= i; }
-		 Object operator ~ () { this->udata.data.ull= ~this->udata.data.ull; }
+		 void operator | (Object& o) { this->udata.data.ull |= o.udata.data.ull; }
+		 void operator & (Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 void operator ^ (Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 void operator << (int i) { this->udata.data.ull <<= i; }
+		 void operator >> (int i) { this->udata.data.ull >>= i; }
+		 void operator ~ () { this->udata.data.ull = ~this->udata.data.ull; }
 		 //Assignment operators
-		 Object& operator += (const Object& o) { this->udata.data.ull += o.udata.data.ull; }
-		 Object& operator -= (const Object& o) { this->udata.data.ull -= o.udata.data.ull; }
-		 Object& operator *= (const Object& o) { this->udata.data.ull *= o.udata.data.ull; }
-		 Object& operator /= (const Object& o) { if(o.udata.data.ull) this->udata.data.ull /= o.udata.data.ull; }
-		 Object& operator %= (const Object& o) { if (o.udata.data.ull) this->udata.data.ull %= o.udata.data.ull; }
-		 Object& operator &= (const Object& o) { this->udata.data.ull &= o.udata.data.ull; }
-		 Object& operator |= (const Object& o) { this->udata.data.ull |= o.udata.data.ull; }
-		 Object& operator ^= (const Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
-		 Object& operator <<= (int i) { this->udata.data.ull <<=i; }
-		 Object& operator >>= (int i) { this->udata.data.ull >>=i; }
+		 void operator += (const Object& o) { this->udata.data.ull += o.udata.data.ull; }
+		 void operator -= (const Object& o) { this->udata.data.ull -= o.udata.data.ull; }
+		 void operator *= (const Object& o) { this->udata.data.ull *= o.udata.data.ull; }
+		 void operator /= (const Object& o) { if (o.udata.data.ull) this->udata.data.ull /= o.udata.data.ull; }
+		 void operator %= (const Object& o) { if (o.udata.data.ull) this->udata.data.ull %= o.udata.data.ull; }
+		 void operator &= (const Object& o) { this->udata.data.ull &= o.udata.data.ull; }
+		 void operator |= (const Object& o) { this->udata.data.ull |= o.udata.data.ull; }
+		 void operator ^= (const Object& o) { this->udata.data.ull ^= o.udata.data.ull; }
+		 void operator <<= (int i) { this->udata.data.ull <<= i; }
+		 void operator >>= (int i) { this->udata.data.ull >>= i; }
 		 //Memory operator
 		 /*
 		 void *operator new(size_t size) { }

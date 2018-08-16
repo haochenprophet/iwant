@@ -1109,6 +1109,7 @@ int Cstock_db::deal_cmd(int argc, char *argv[])
 int main(int argc, char* argv[])
 {
 	Cstock_db s;
+	//if(s==(char*)"stock_db") AT_LINE //test object:== ok
 	return 	s.deal_cmd(argc, argv);
 }
 #endif 
