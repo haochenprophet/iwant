@@ -1064,9 +1064,11 @@ int Object::register_all_signal(int signum)
 	this->register_signal(SIGFPE);
 	this->register_signal(SIGSEGV);
 	this->register_signal(SIGTERM);
-	this->register_signal(SIGBREAK);
 	this->register_signal(SIGABRT);
+#ifdef WINDOWS_OS
+	this->register_signal(SIGBREAK);
 	this->register_signal(SIGABRT_COMPAT);
+#endif
 	return 0;
 }
 
@@ -1080,9 +1082,11 @@ void signal_handler(int signum)
 	case SIGFPE:
 	case SIGSEGV:
 	case SIGTERM:
-	case SIGBREAK:
 	case SIGABRT:
+#ifdef WINDOWS_OS
+	case SIGBREAK:
 	case SIGABRT_COMPAT:
+#endif
 		exit(signum);
 	case SIGINT:
 		//...
