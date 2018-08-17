@@ -174,6 +174,7 @@ int Object::add_relation(Object *o, Orelation * r)//add obj relation to object r
 	{
 		OUT_ERROR;
 	}
+	return -1;
 }
 
 int Object::clear_relation()
