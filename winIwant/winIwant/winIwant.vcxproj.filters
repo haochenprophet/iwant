@@ -4437,6 +4437,9 @@
     <ClCompile Include="..\..\src\move.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\relation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8928,6 +8931,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\move_class.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\relation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\relation_class.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
