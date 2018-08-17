@@ -25,6 +25,8 @@
 #include "data.h"
 #include "input.h"
 #include "move.h"
+#include "relation.h"
+
 //using namespace std; //remove fixed std::bind  conflict socket bind
 using std::string;
 using std::wstring;
@@ -132,6 +134,14 @@ namespace n_object {
 	public :
 		Otime();
 	};
+	
+	class ObjectRelation
+	{
+	public:
+		void * obj;//point Object 
+		Orelation * relation;//point relation
+	};
+	typedef std::list<ObjectRelation *> LIST_OBJ_RELATION;
 
 	class Object:public Ouuid, Otime
 	{
@@ -183,7 +193,7 @@ namespace n_object {
 		std::list<void *> l_image;//object image list
 		std::list<void *> l_audio;//object audio list
 		std::list<void *> l_video;//object vedio list
-		
+		LIST_OBJ_RELATION l_relation;//list relation with other object
 		//url can be by used class Cpath
 		string s_url; //Record a url string 
 		string s_term;
