@@ -206,6 +206,8 @@ namespace n_object {
 		~Object();//clears
 
 		void myName(Object *o=nullptr);
+		int add_relation(Object *o, Orelation * r);//add obj relation to object relation list
+		int clear_relation();
 		void addMe(Object *o=nullptr);//add obj to family
 		void removeMe(void * item); //from other class
 		void remove_exist_family();

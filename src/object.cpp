@@ -133,6 +133,7 @@ Object::~Object()
 	//this->remove_exist_family();// error exception !!
 	this->exist_family.clear();
 	this->clear_my_memory();//clear my memory
+	this->clear_relation();
 	this->my_mem.clear();
 	this->clear_exist();
 	this->exist_list.clear();
@@ -159,6 +160,40 @@ void Object::myName(Object *o)
 		return;
 	}
 	std::cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
+}
+
+int Object::add_relation(Object *o, Orelation * r)//add obj relation to object relation list
+{
+	if (!(o&&r))	return -1;//check not nullptr
+	try {
+		ObjectRelation * obj_r = new ObjectRelation();
+		this->l_relation.push_back(obj_r);
+		return 0;
+	}
+	catch (...)
+	{
+		OUT_ERROR;
+	}
+}
+
+int Object::clear_relation()
+{
+#if OBJECT_DEBUG
+	AT_LINE
+#endif
+	ObjectRelation * obj_r;
+	while (!this->l_relation.empty())
+	{
+		obj_r = this->l_relation.back();
+		try {
+			delete obj_r;//del  new ObjectRelation();
+		}
+		catch(...){
+			OUT_ERROR;
+		}
+		this->l_relation.pop_back();
+	}
+	return 0;
 }
 
 void Object::addMe(Object * o)
