@@ -35,7 +35,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 
 		if (p_dirent->d_type & DT_DIR)
 		{
-			if (display) printf(TEXT(" %s   <DIR>\n"), p_dirent->d_name);
+			if (display) printf(" %s   <DIR>\n", p_dirent->d_name);
 
 			if (recursive)
 			{
@@ -45,7 +45,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 				if (strcmp((char *)".", p_dirent->d_name) != 0 && strcmp((char *)"..", p_dirent->d_name) != 0)
 				{
 					if (display)AT_LINE;
-					this->list((DIR_T *)w_dir.c_str(), term, display, to_list, recursive);
+					this->list((DIR_T *)s_dir.c_str(), term, display, to_list, recursive);
 				}
 			}
 			continue;//<DIR name not add ro list>
@@ -264,7 +264,7 @@ int main(int argc, char *argv[])
 
 #if LINUX_OS
 	DIR_T *dir = (DIR_T *) ".";//linux dir 
-	DIR_T *term = ".cpp";
+	DIR_T *term =(char*) ".cpp";
 #endif
 
 	Cpath p;
