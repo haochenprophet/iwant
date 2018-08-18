@@ -19,7 +19,7 @@ Cpath::~Cpath()
 }
 
 #if LINUX_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
 {
 	if (!term) return -1;
 	DIR *p_dir;	
@@ -45,7 +45,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 				if (strcmp((char *)".", p_dirent->d_name) != 0 && strcmp((char *)"..", p_dirent->d_name) != 0)
 				{
 					if (display)AT_LINE;
-					this->list((DIR_T *)w_dir.c_str(), term, display, to_list);
+					this->list((DIR_T *)w_dir.c_str(), term, display, to_list, recursive);
 				}
 			}
 			continue;//<DIR name not add ro list>
@@ -119,7 +119,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 				if (wcscmp((wchar_t *)".", ffd.cFileName) != 0 && wcscmp((wchar_t *)"..", ffd.cFileName) != 0)
 				{
 					if (display)AT_LINE;
-					this->list((DIR_T *)w_dir.c_str(), term, display, to_list);
+					this->list((DIR_T *)w_dir.c_str(), term, display, to_list, recursive);
 				}
 				else if (display) _tprintf(TEXT("wcscmp =  %s   <DIR>\n"), ffd.cFileName);
 			}
