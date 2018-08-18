@@ -31,8 +31,26 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	this->my_clear();
 	while((p_dirent=readdir(p_dir)))
 	{
-		if(term&&!strstr(p_dirent->d_name,term)) continue;
 		if(display) std::cout<<p_dirent->d_name<<endl;
+
+		if (p_dirent->d_type & DT_DIR)
+		{
+			if (display) printf(TEXT(" %s   <DIR>\n"), p_dirent->d_name);
+
+			if (recursive)
+			{
+				string s_dir = dir_name;
+				s_dir += (char *) "/";
+				s_dir += p_dirent->d_name;
+				if (strcmp((char *)".", p_dirent->d_name) != 0 && strcmp((char *)"..", p_dirent->d_name) != 0)
+				{
+					if (display)AT_LINE;
+					this->list((DIR_T *)w_dir.c_str(), term, display, to_list);
+				}
+			}
+			continue;//<DIR name not add ro list>
+		}
+		if (term && !strstr(p_dirent->d_name, term)) continue;
 		if(to_list)
 		{
 			size=strlen(p_dirent->d_name);
@@ -51,7 +69,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 #endif
 
 #if WINDOWS_OS
-int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
+int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
 {
 	if (!term) return -1;
 	WIN32_FIND_DATA ffd;//FindFileData
@@ -90,9 +108,30 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 	this->my_clear();
 	do
 	{
+		if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+		{
+			if (display) _tprintf(TEXT("  %s/   <DIR>\n"), ffd.cFileName);
+			if (recursive)
+			{
+				wstring w_dir = dir_name;
+				w_dir += (wchar_t *) "/";
+				w_dir += ffd.cFileName;
+				if (wcscmp((wchar_t *)".", ffd.cFileName) != 0 && wcscmp((wchar_t *)"..", ffd.cFileName) != 0)
+				{
+					if (display)AT_LINE;
+					this->list((DIR_T *)w_dir.c_str(), term, display, to_list);
+				}
+				else if (display) _tprintf(TEXT("wcscmp =  %s   <DIR>\n"), ffd.cFileName);
+			}
+			continue;
+		}//if (ffd.dwFileAttributes 
+
+		filesize.LowPart = ffd.nFileSizeLow;
+		filesize.HighPart = ffd.nFileSizeHigh;
+		if (display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
+
 		if(NULL==term||(term&&_tcsstr(ffd.cFileName,term)))
 		{
-
 			if (to_list)
 			{
 				size = _tcslen(ffd.cFileName);
@@ -104,18 +143,6 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 					this->name_list.push_back((DIR_T *)p_name);
 				}
 			}
-
-			if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
-			{
-				if(display) _tprintf(TEXT("  %s   <DIR>\n"), ffd.cFileName);
-			}
-			else
-			{
-				filesize.LowPart = ffd.nFileSizeLow;
-				filesize.HighPart = ffd.nFileSizeHigh;
-				if(display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
-			}
-
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
 
@@ -124,55 +151,55 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list)
 }
 #endif //WINDOWS_OS
 
-int Cpath::list(string * dir_name, string * term, int display, int to_list)//get list to name_list
+int Cpath::list(string * dir_name, string * term, int display, int to_list, int recursive)//get list to name_list
 {
 	if (dir_name->empty() || term->empty()) return -1;
 
 #if WINDOWS_OS
 	this->ws_url = this->s_ws(dir_name);
 	this->ws_term = this->s_ws(term);
-	return this->list((DIR_T*)this->ws_url.c_str(),(DIR_T*)this->ws_term.c_str(), display, to_list);
+	return this->list((DIR_T*)this->ws_url.c_str(),(DIR_T*)this->ws_term.c_str(), display, to_list,  recursive);
 #endif
 
 #if LINUX_OS
-	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list);
+	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list,  recursive);
 #endif
 }
 
-int  Cpath::list(wstring *dir_name, wstring *term, int display, int to_list )//get list to name_list
+int  Cpath::list(wstring *dir_name, wstring *term, int display, int to_list, int recursive)//get list to name_list
 {
 	if (dir_name->empty() || term->empty()) return -1;
 #if WINDOWS_OS
-	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list);
+	return this->list((DIR_T*)dir_name->c_str(), (DIR_T*)term->c_str(), display, to_list,  recursive);
 #endif
 
 #if LINUX_OS
 	this->s_url = this->ws_s(dir_name);
 	this->s_term = this->ws_s(term);
-	return this->list((DIR_T*)this->s_url.c_str(), (DIR_T*)this->s_term.c_str(), display, to_list);
+	return this->list((DIR_T*)this->s_url.c_str(), (DIR_T*)this->s_term.c_str(), display, to_list, recursive);
 #endif
 }
 
 #if WINDOWS_OS
-int Cpath::list(char* dir_name, char* term, int display, int to_list)//get list to name_list
+int Cpath::list(char* dir_name, char* term, int display, int to_list, int recursive)//get list to name_list
 {
 	if (!term) return -1;
 
 	this->s_url = dir_name;
 	this->s_term = term;
 	if (this->s_url.empty() || this->s_term.empty()) return -1;
-	return this->list(&this->s_url, &this->s_term, display, to_list);
+	return this->list(&this->s_url, &this->s_term, display, to_list, recursive);
 }
 #endif
 
-int Cpath::list_s(int display, int to_list)//get list to name_list
+int Cpath::list_s(int display, int to_list, int recursive)//get list to name_list
 {
-    return this->list((string *)&this->s_url, (string *)&this->s_term, display, to_list);
+    return this->list((string *)&this->s_url, (string *)&this->s_term, display, to_list,  recursive);
 }
 
-int Cpath::list_ws(int display, int to_list)//get list to name_list
+int Cpath::list_ws(int display, int to_list, int recursive)//get list to name_list
 {
-	return this->list((std::wstring *) &this->ws_url, (std::wstring*)&this->ws_term, display, to_list);
+	return this->list((std::wstring *) &this->ws_url, (std::wstring*)&this->ws_term, display, to_list,  recursive);
 }
 
 int Cpath::display(void *p)
@@ -232,7 +259,7 @@ int main(int argc, char *argv[])
 
 #if WINDOWS_OS
 	DIR_T *dir = L"../../src";//windows dir 
-	DIR_T *term = L".cpp";
+	DIR_T *term = L"";
 #endif
 
 #if LINUX_OS
