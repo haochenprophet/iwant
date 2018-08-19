@@ -34,6 +34,9 @@
     <Filter Include="string">
       <UniqueIdentifier>{85f46e06-0871-45b3-b766-fb64e7f9d8a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cstdio">
+      <UniqueIdentifier>{13966b13-4819-4e4e-b056-39a63155bfda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -4781,6 +4784,141 @@
     </ClCompile>
     <ClCompile Include="..\..\src\string\strxfrm.cpp">
       <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\clearerr.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fclose.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\feof.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\ferror.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fflush.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fgetc.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fgetpos.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fgets.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fopen.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fputc.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fputs.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fread.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\freopen.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fscanf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fseek.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fsetpos.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\ftell.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\fwrite.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\getc.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\getchar.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\gets.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\perror.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\printf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\putc.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\putchar.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\puts.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\remove.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\rename.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\rewind.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\scanf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\setvbuf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\snprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\sprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\sscanf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\tmpfile.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\tmpnam.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\ungetc.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vfprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vfscanf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vscanf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vsnprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vsprintf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\vsscanf.cpp">
+      <Filter>cstdio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -9617,6 +9755,141 @@
     <ClInclude Include="..\..\src\string\strxfrm.h">
       <Filter>string</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\clearerr.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fclose.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\feof.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\ferror.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fflush.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fgetc.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fgetpos.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fgets.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fopen.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fputc.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fputs.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fread.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\freopen.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fscanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fseek.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fsetpos.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\ftell.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\fwrite.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\getc.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\getchar.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\gets.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\perror.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\printf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\putc.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\putchar.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\puts.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\remove.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\rename.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\rewind.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\scanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\setvbuf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\snprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\sprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\sscanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\tmpfile.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\tmpnam.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\ungetc.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vfprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vfscanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vscanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vsnprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vsprintf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\vsscanf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -9656,6 +9929,9 @@
     </None>
     <None Include="..\..\src\instruction\t.php">
       <Filter>instruction</Filter>
+    </None>
+    <None Include="..\..\src\cstdio\Makefile">
+      <Filter>cstdio</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
