@@ -37,6 +37,9 @@
     <Filter Include="cstdio">
       <UniqueIdentifier>{13966b13-4819-4e4e-b056-39a63155bfda}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cstdlib">
+      <UniqueIdentifier>{0701cf1c-aa92-4cf7-97a6-6550f4f63494}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -4919,6 +4922,111 @@
     </ClCompile>
     <ClCompile Include="..\..\src\cstdio\vsscanf.cpp">
       <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\_Exit.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\abort.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\at_quick_exit.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\atexit.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\atof.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\atoi.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\atol.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\atoll.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\bsearch.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\calloc.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\free.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\getenv.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\labs.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\ldiv.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\llabs.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\lldiv.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\malloc.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\mblen.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\mbstowcs.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\mbtowc.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\qsort.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\quick_exit.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\rand.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\realloc.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\srand.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtod.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtof.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtol.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtold.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtoll.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtoul.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\strtoull.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\system.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\wcstombs.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\wctomb.cpp">
+      <Filter>cstdlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -9890,6 +9998,111 @@
     <ClInclude Include="..\..\src\cstdio\vsscanf.h">
       <Filter>cstdio</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\_Exit.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\abort.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\at_quick_exit.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\atexit.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\atof.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\atoi.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\atol.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\atoll.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\bsearch.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\calloc.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\free.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\getenv.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\labs.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\ldiv.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\llabs.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\lldiv.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\malloc.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\mblen.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\mbstowcs.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\mbtowc.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\qsort.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\quick_exit.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\rand.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\realloc.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\srand.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtod.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtof.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtol.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtold.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtoll.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtoul.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\strtoull.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\system.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\wcstombs.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\wctomb.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -9932,6 +10145,9 @@
     </None>
     <None Include="..\..\src\cstdio\Makefile">
       <Filter>cstdio</Filter>
+    </None>
+    <None Include="..\..\src\cstdlib\Makefile">
+      <Filter>cstdlib</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
