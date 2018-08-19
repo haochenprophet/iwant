@@ -40,6 +40,9 @@
     <Filter Include="cstdlib">
       <UniqueIdentifier>{0701cf1c-aa92-4cf7-97a6-6550f4f63494}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ctime">
+      <UniqueIdentifier>{96b17931-b01c-43cc-8e56-295913dee589}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5027,6 +5030,33 @@
     </ClCompile>
     <ClCompile Include="..\..\src\cstdlib\wctomb.cpp">
       <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\asctime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\clock.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\ctime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\difftime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\gmtime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\localtime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\mktime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\strftime.cpp">
+      <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctime\time.cpp">
+      <Filter>ctime</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -10103,6 +10133,33 @@
     <ClInclude Include="..\..\src\cstdlib\wctomb.h">
       <Filter>cstdlib</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\ctime\asctime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\clock.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\ctime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\difftime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\gmtime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\localtime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\mktime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\strftime.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\time.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -10148,6 +10205,9 @@
     </None>
     <None Include="..\..\src\cstdlib\Makefile">
       <Filter>cstdlib</Filter>
+    </None>
+    <None Include="..\..\src\ctime\Makefile">
+      <Filter>ctime</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
