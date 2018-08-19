@@ -31,6 +31,9 @@
     <Filter Include="ctype">
       <UniqueIdentifier>{81bfebb1-1652-4a74-83ea-ee594e1aa639}</UniqueIdentifier>
     </Filter>
+    <Filter Include="string">
+      <UniqueIdentifier>{85f46e06-0871-45b3-b766-fb64e7f9d8a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -4712,6 +4715,72 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ctype\wctype.cpp">
       <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\memchr.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\memcmp.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\memcpy.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\memmove.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\memset.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strcat.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strchr.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strcmp.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strcoll.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strcpy.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strcspn.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strerror.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strlen.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strncat.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strncmp.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strncpy.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strpbrk.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strrchr.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strspn.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strstr.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strtok.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\string\strxfrm.cpp">
+      <Filter>string</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -9481,6 +9550,72 @@
     </ClInclude>
     <ClInclude Include="..\..\src\ctype\wctype.h">
       <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\memchr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\memcmp.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\memcpy.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\memmove.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\memset.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strcat.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strchr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strcmp.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strcoll.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strcpy.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strcspn.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strerror.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strlen.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strncat.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strncmp.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strncpy.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strpbrk.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strrchr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strspn.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strstr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strtok.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\string\strxfrm.h">
+      <Filter>string</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
