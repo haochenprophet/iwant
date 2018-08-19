@@ -28,6 +28,9 @@
     <Filter Include="dictionary">
       <UniqueIdentifier>{78a3e1cc-b03e-4548-8432-1e4b156be716}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ctype">
+      <UniqueIdentifier>{81bfebb1-1652-4a74-83ea-ee594e1aa639}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -4613,6 +4616,102 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\fabs_.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isalnum.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isalpha.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isblank.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iscntrl.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isdigit.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isgraph.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\islower.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isprint.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\ispunct.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isspace.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isupper.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswalnum.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswalpha.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswblank.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswcntrl.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswctype.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswdigit.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswgraph.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswlower.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswprint.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswpunct.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswspace.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswupper.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\iswxdigit.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\isxdigit.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\tolower.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\toupper.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\towctrans.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\towlower.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\towupper.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\wctrans.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\wctype.cpp">
+      <Filter>ctype</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -9286,6 +9385,102 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\fabs_.h">
       <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isalnum.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isalpha.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isblank.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iscntrl.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isdigit.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isgraph.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\islower.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isprint.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\ispunct.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isspace.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isupper.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswalnum.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswalpha.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswblank.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswcntrl.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswctype.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswdigit.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswgraph.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswlower.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswprint.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswpunct.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswspace.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswupper.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\iswxdigit.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\isxdigit.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\tolower.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\toupper.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\towctrans.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\towlower.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\towupper.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\wctrans.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\wctype.h">
+      <Filter>ctype</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
