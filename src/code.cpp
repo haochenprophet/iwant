@@ -191,7 +191,7 @@ int main(int argc, char *argv[])
 	std::cout << "CODE_TEST\n\n";
 	Ccode c;
 	add_objects(&c);
-	c.my_family();
+	if (argc < 2) { c.my_family(); return -1; }
 	c.dispatch_cmd(argc, argv);
 	return 0;
 /*

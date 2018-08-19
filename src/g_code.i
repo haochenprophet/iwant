@@ -65,4 +65,5 @@
 	Curl  g_url ;
 	Cuuid  g_uuid ;
 	Cwait  g_wait ;
+	#include "g_code_func.i"
 #endif
