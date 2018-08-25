@@ -344,6 +344,13 @@ int Cstock_db::add_kprice_first(void *p)
 
 int Cstock_db::add_kprice_cmd()
 {
+	if (strcmp(this->my_sql->tab_name, (char*)"ID") != 0)
+	{
+		sprintf(this->my_sql->sql_buf, ADD_K_PRICE_COLUMN, this->my_sql->db_name, this->my_sql->tab_name);
+		if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+		return this->my_sql->execute(this->my_sql->sql_buf);
+	}
+	
 	return  this->my_sql->execute((char *)SELECT_STOCK_ID, this);//magical 'this'  point !
 }
 
@@ -861,7 +868,7 @@ int Cstock_db::insert_dir_second(void *p1, void *p2, void *p3)
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
 
-	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0]);
+	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0]);
 	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::insert;

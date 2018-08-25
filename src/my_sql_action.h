@@ -12,6 +12,7 @@ enum class MySqlActionClass
 	alert,
 	update,
 	drop,
+	query,
 };
 
 enum class MySqlAtcion {
@@ -19,6 +20,7 @@ enum class MySqlAtcion {
 	create_db,
 	drop_db,
 	drop_tab,
+	query,
 };
 
 //create

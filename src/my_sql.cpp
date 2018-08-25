@@ -256,6 +256,7 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::create_db) this->create_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
+	if (this->action == (ACTION_T)MySqlAtcion::query) this->execute(this->sql);;
 
 	return 0;
 }
@@ -263,9 +264,9 @@ int Cmy_sql::do_action(void * a)
 int Cmy_sql::deal_cmd(int argc, char *argv[])
 {
 	//check user input
-	if (argc < 5)
+	if (argc < 4)
 	{
-		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name [4]tab_name | db_name \n";
+		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name \n";
 		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
 		return -1;
 	}
@@ -279,9 +280,10 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 	if (this->action == 0) return -1;
 
 	//init mysql db
-	this->tab_name = (char *)argv[4];
-	this->db_name = (char *)argv[4];
+	if (argc > 4) this->tab_name = (char *)argv[4];
+	if (argc > 4) this->db_name = (char *)argv[4];
 	this->use_db = (char *)argv[3];
+	this->sql= (char *)argv[3];
 	this->my_init((char *)argv[2]);//my_init use db_name
 	//do action
 	this->do_action();
