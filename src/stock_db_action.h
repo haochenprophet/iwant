@@ -82,7 +82,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define SELECT_TYPE "SELECT `type` FROM `%s`.ID where ID =`%s`;"
 #define SELECT_TYPE_0 "SELECT ID FROM stock.ID where type=0;"
 #define SELECT_TYPE_1 "SELECT ID FROM stock.ID where type=1;"
-
+#define SELECT_LAST_KPRICE "SELECT `k_price` FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1 ;"
 //ADD_COLUMN
 #define ADD_MA_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `ma` DOUBLE NOT NULL DEFAULT 0;"
 #define ADD_AVG_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `avg` DOUBLE NOT NULL DEFAULT 0;"
@@ -120,10 +120,7 @@ enum class StockAtcion { //NOTE: should append enum ,  insert enum cmd number wi
 #define DELETE_ZERO_ROW "DELETE FROM `%s`.`%s` WHERE `y_close`='0' AND `open`='0'AND `close`='0' AND `high`='0' AND `low`='0';"
 //INSERT
 #define INSERT_DIR_ID "INSERT INTO `%s`.`dir` (`stockid`) SELECT ID FROM `%s`.`ID`;"
-#define INSERT_DIR "INSERT INTO `%s`.`dir` (`stockid`,`dir`,`k_price`) \
-VALUES('%s', (SELECT `dir` FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1), \
-(SELECT `k_price` FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1) \
-);"
+#define INSERT_DIR "INSERT INTO `%s`.`dir` (`stockid`,`dir`,`k_price`) VALUES('%s', (SELECT `dir` FROM `%s`.`%s` ORDER BY idprice DESC LIMIT 1),%s);"
 //OTHER
 #define BUILD_BATCH "%s %s %s %s"  //[0].exe [1]action [2]password [3]db_name [4]tab_name
 

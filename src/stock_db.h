@@ -14,6 +14,7 @@ namespace n_stock_db {
 		unsigned int * num_fields;
 		unsigned long *lengths;
 		int stock_id_type;
+		string s_str;
 	public:
 		Cstock_db();
 		~Cstock_db();

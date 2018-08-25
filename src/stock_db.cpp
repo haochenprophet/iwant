@@ -215,7 +215,7 @@ int Cstock_db::calculate_avg_second(void *p1, void *p2, void *p3)
 	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
-	if (!this->result) return 1;
+	if (!this->result || !this->result->data || !this->result->data->data || !this->result->data->data->data) return -1;
 	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
@@ -495,7 +495,7 @@ int Cstock_db::calculate_ma(int x)
 	if(this->silent==0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->query(this->my_sql->sql_buf);
 	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
-	if (!this->result) return 1;
+	if (!this->result || !this->result->data || !this->result->data->data || !this->result->data->data->data) return -1;
 	//std::cout << (char*) *this->result->data->data->data<< endl; //fuck this->result so much data !!!
 	this->my_sql->sql_opetate = SqlOperate::select;
 
@@ -868,7 +868,16 @@ int Cstock_db::insert_dir_second(void *p1, void *p2, void *p3)
 	this->row = (MYSQL_ROW)p1;
 	if (!this->row || !p2 || !p3) return -1;
 
-	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0], this->my_sql->db_name, this->row[0]);
+	this->s_str = this->row[0];//store to string
+	const char *id = this->s_str.c_str();//point to ID
+
+	sprintf(this->my_sql->sql_buf, SELECT_LAST_KPRICE, this->my_sql->db_name, id);
+	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
+	this->my_sql->query(this->my_sql->sql_buf);
+	this->result = mysql_store_result(this->my_sql->mysql);	// did current statement return data? 
+	if (!this->result|| !this->result->data|| !this->result->data->data|| !this->result->data->data->data) return -1;
+
+	sprintf(this->my_sql->sql_buf, INSERT_DIR, this->my_sql->db_name, id, this->my_sql->db_name, id, *this->result->data->data->data);
 	if (this->silent == 0) printf("%s\n", this->my_sql->sql_buf);
 	this->my_sql->execute(this->my_sql->sql_buf);
 	this->my_sql->sql_opetate = SqlOperate::insert;
