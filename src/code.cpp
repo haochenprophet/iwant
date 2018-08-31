@@ -160,7 +160,8 @@ int Ccode::deal_cmd(int argc, char *argv[])
 {
 	if (argc < 2)	return this->help();
 	//get action
-	this->action = this->get_action(code_action, (int)CODE_ACTION_COUNT, argv[2]);
+	if (argc < 3) this->action = ((int)CodeAtcion::create_c | (int)CodeAtcion::create_func | (int)CodeAtcion::create_h);
+	if (this->action == 0) this->action = this->get_action(code_action, (int)CODE_ACTION_COUNT, argv[2]);
 	if (this->action == 0) this->action = atoll(argv[2]);//no name 
 	if (this->action == 0) return -1;
 
@@ -175,7 +176,7 @@ int Ccode::deal_cmd(int argc, char *argv[])
 
 int Ccode::help(void *p)
 {
-	printf("Usage:Ccode <src_path> <action>\n");
+	printf("Usage:Ccode <src_path> <action>\nExample: Code ../src/\n");
 	this->action_help(code_action, (int)CODE_ACTION_COUNT);
 	return 0;
 }
