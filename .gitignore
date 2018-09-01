@@ -19,3 +19,5 @@ src/math/*.dll
 src/string/*.bat
 src/string/*.exe
 src/string/*.dll
+batch/*.exe
+batch/*.dll
