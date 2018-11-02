@@ -163,6 +163,7 @@ namespace n_object {
 
 		string name; //object name
 		string alias;//Alias object name
+		string symbol;//for sign detect
 		string description;
 		
 		string syntax;//this for keyword object

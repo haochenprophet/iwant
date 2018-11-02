@@ -43,6 +43,9 @@
     <Filter Include="ctime">
       <UniqueIdentifier>{96b17931-b01c-43cc-8e56-295913dee589}</UniqueIdentifier>
     </Filter>
+    <Filter Include="operator">
+      <UniqueIdentifier>{a77667a7-5e60-4dbc-8dc8-d18a6771a7d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5057,6 +5060,213 @@
     </ClCompile>
     <ClCompile Include="..\..\src\ctime\time.cpp">
       <Filter>ctime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\add_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\addition.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\address_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\array_subscript.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\assign_direct.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_and.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_and_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_or.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_or_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_xor.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bit_xor_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\bitwise_not.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\comma_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\conditional_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\const_cast_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\decrease_prefix.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\decrease_suffix.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\delete_array.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\dereference_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\direct_member_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\divide_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\division.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\dynamic_cast_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\end_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\equal_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\expression_grouping.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\function_call.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\increment_prefix.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\increment_suffix.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\indirect_member_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\indirect_member_release.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\joiner_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\less_than.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\less_than_equal.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\logic_and.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\logic_not.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\logic_or.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\member_release.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\mold_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\mold_remainder.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\more_than.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\more_than_equal.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\multiplication.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\multiply_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\negative_sign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\new_array.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\new_memory.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\not_equal.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\null_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\positive_sign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\reinterpret_cast_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\scope_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\semicolon_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\shift_left.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\shift_left_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\shift_right.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\shift_right_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\sizeof_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\space_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\static_cast_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\sub_assign.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\substruction.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\throw_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\type_conversion.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\typeid_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\value_construction.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\block_comment.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\line_comment.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\delete_memory.cpp">
+      <Filter>operator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -10160,6 +10370,213 @@
     <ClInclude Include="..\..\src\ctime\time.h">
       <Filter>ctime</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\operator\add_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\addition.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\address_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\array_subscript.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\assign_direct.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_and.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_and_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_or.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_or_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_xor.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bit_xor_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\bitwise_not.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\comma_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\conditional_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\const_cast_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\decrease_prefix.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\decrease_suffix.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\delete_array.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\dereference_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\direct_member_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\divide_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\division.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\dynamic_cast_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\end_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\equal_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\expression_grouping.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\function_call.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\increment_prefix.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\increment_suffix.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\indirect_member_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\indirect_member_release.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\joiner_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\less_than.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\less_than_equal.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\logic_and.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\logic_not.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\logic_or.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\member_release.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\mold_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\mold_remainder.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\more_than.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\more_than_equal.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\multiplication.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\multiply_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\negative_sign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\new_array.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\new_memory.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\not_equal.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\null_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\positive_sign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\reinterpret_cast_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\scope_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\semicolon_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\shift_left.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\shift_left_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\shift_right.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\shift_right_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\sizeof_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\space_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\static_cast_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\sub_assign.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\substruction.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\throw_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\type_conversion.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\typeid_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\value_construction.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\block_comment.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\line_comment.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\delete_memory.h">
+      <Filter>operator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -10208,6 +10625,9 @@
     </None>
     <None Include="..\..\src\ctime\Makefile">
       <Filter>ctime</Filter>
+    </None>
+    <None Include="..\..\src\operator\Makefile">
+      <Filter>operator</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

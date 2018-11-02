@@ -96,6 +96,7 @@ Object::Object()
 	this->locate = -1;
 	this->name = "Object";
 	this->alias = this->name;
+	this->symbol = this->name;
 	this->s_tag="[tag]";
 	this->name += std::to_string(object_id);//change name for nam +=id
 	this->description=this->name;
