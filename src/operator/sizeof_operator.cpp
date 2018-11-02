@@ -18,3 +18,17 @@ Csizeof_operator::~Csizeof_operator()
 {
 
 }
+
+#ifndef SIZEOF_OPERATOR_TEST
+#define SIZEOF_OPERATOR_TEST 0//1
+#endif
+
+#if SIZEOF_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "SIZEOF_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

@@ -18,3 +18,17 @@ Cnot_equal::~Cnot_equal()
 {
 
 }
+
+#ifndef NOT_EQUAL_TEST
+#define NOT_EQUAL_TEST 0//1
+#endif
+
+#if NOT_EQUAL_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "NOT_EQUAL_TEST\n\n";
+
+	return 0;
+}
+#endif 

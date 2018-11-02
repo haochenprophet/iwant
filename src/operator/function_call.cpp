@@ -18,3 +18,17 @@ Cfunction_call::~Cfunction_call()
 {
 
 }
+
+#ifndef FUNCTION_CALL_TEST
+#define FUNCTION_CALL_TEST 0//1
+#endif
+
+#if FUNCTION_CALL_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "FUNCTION_CALL_TEST\n\n";
+
+	return 0;
+}
+#endif 

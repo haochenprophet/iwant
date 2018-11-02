@@ -18,3 +18,17 @@ Cnew_memory::~Cnew_memory()
 {
 
 }
+
+#ifndef NEW_MEMORY_TEST
+#define NEW_MEMORY_TEST 0//1
+#endif
+
+#if NEW_MEMORY_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "NEW_MEMORY_TEST\n\n";
+
+	return 0;
+}
+#endif 

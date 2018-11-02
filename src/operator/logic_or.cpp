@@ -18,3 +18,17 @@ Clogic_or::~Clogic_or()
 {
 
 }
+
+#ifndef LOGIC_OR_TEST
+#define LOGIC_OR_TEST 0//1
+#endif
+
+#if LOGIC_OR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "LOGIC_OR_TEST\n\n";
+
+	return 0;
+}
+#endif 

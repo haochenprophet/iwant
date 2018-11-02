@@ -18,3 +18,17 @@ Cconst_cast_operator::~Cconst_cast_operator()
 {
 
 }
+
+#ifndef CONST_CAST_OPERATOR_TEST
+#define CONST_CAST_OPERATOR_TEST 0//1
+#endif
+
+#if CONST_CAST_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "CONST_CAST_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

@@ -15,3 +15,17 @@ Cdollar_operator::~Cdollar_operator()
 {
 
 }
+
+#ifndef DOLLAR_OPERATOR_TEST
+#define DOLLAR_OPERATOR_TEST 0//1
+#endif
+
+#if DOLLAR_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DOLLAR_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

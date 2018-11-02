@@ -18,3 +18,17 @@ Cadd_assign::~Cadd_assign()
 {
 
 }
+
+#ifndef ADD_ASSIGN_TEST
+#define ADD_ASSIGN_TEST 0//1
+#endif
+
+#if ADD_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "ADD_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

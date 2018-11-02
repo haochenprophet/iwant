@@ -18,3 +18,17 @@ Clogic_and::~Clogic_and()
 {
 
 }
+
+#ifndef LOGIC_AND_TEST
+#define LOGIC_AND_TEST 0//1
+#endif
+
+#if LOGIC_AND_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "LOGIC_AND_TEST\n\n";
+
+	return 0;
+}
+#endif 

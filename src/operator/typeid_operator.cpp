@@ -18,3 +18,17 @@ Ctypeid_operator::~Ctypeid_operator()
 {
 
 }
+
+#ifndef TYPEID_OPERATOR_TEST
+#define TYPEID_OPERATOR_TEST 0//1
+#endif
+
+#if TYPEID_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "TYPEID_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

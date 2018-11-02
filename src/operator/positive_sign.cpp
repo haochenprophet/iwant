@@ -18,3 +18,17 @@ Cpositive_sign::~Cpositive_sign()
 {
 
 }
+
+#ifndef POSITIVE_SIGN_TEST
+#define POSITIVE_SIGN_TEST 0//1
+#endif
+
+#if POSITIVE_SIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "POSITIVE_SIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

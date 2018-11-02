@@ -18,3 +18,17 @@ Csemicolon_operator::~Csemicolon_operator()
 {
 
 }
+
+#ifndef SEMICOLON_OPERATOR_TEST
+#define SEMICOLON_OPERATOR_TEST 0//1
+#endif
+
+#if SEMICOLON_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "SEMICOLON_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

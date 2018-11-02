@@ -18,3 +18,17 @@ Cdecrease_prefix::~Cdecrease_prefix()
 {
 
 }
+
+#ifndef DECREASE_PREFIX_TEST
+#define DECREASE_PREFIX_TEST 0//1
+#endif
+
+#if DECREASE_PREFIX_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DECREASE_PREFIX_TEST\n\n";
+
+	return 0;
+}
+#endif 

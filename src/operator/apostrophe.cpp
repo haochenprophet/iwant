@@ -16,3 +16,17 @@ Capostrophe::~Capostrophe()
 {
 
 }
+
+#ifndef APOSTROPHE_TEST
+#define APOSTROPHE_TEST 0//1
+#endif
+
+#if APOSTROPHE_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "APOSTROPHE_TEST\n\n";
+
+	return 0;
+}
+#endif 

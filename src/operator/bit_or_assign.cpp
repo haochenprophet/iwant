@@ -18,3 +18,17 @@ Cbit_or_assign::~Cbit_or_assign()
 {
 
 }
+
+#ifndef BIT_OR_ASSIGN_TEST
+#define BIT_OR_ASSIGN_TEST 0//1
+#endif
+
+#if BIT_OR_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "BIT_OR_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

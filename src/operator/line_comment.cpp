@@ -18,3 +18,17 @@ Cline_comment::~Cline_comment()
 {
 
 }
+
+#ifndef LINE_COMMENT_TEST
+#define LINE_COMMENT_TEST 0//1
+#endif
+
+#if LINE_COMMENT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "LINE_COMMENT_TEST\n\n";
+
+	return 0;
+}
+#endif 

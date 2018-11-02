@@ -18,3 +18,17 @@ Cmember_release::~Cmember_release()
 {
 
 }
+
+#ifndef MEMBER_RELEASE_TEST
+#define MEMBER_RELEASE_TEST 0//1
+#endif
+
+#if MEMBER_RELEASE_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "MEMBER_RELEASE_TEST\n\n";
+
+	return 0;
+}
+#endif 

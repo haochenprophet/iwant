@@ -18,3 +18,17 @@ Cmold_assign::~Cmold_assign()
 {
 
 }
+
+#ifndef MOLD_ASSIGN_TEST
+#define MOLD_ASSIGN_TEST 0//1
+#endif
+
+#if MOLD_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "MOLD_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

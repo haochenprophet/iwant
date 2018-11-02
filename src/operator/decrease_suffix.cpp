@@ -18,3 +18,17 @@ Cdecrease_suffix::~Cdecrease_suffix()
 {
 
 }
+
+#ifndef DECREASE_SUFFIX_TEST
+#define DECREASE_SUFFIX_TEST 0//1
+#endif
+
+#if DECREASE_SUFFIX_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DECREASE_SUFFIX_TEST\n\n";
+
+	return 0;
+}
+#endif 

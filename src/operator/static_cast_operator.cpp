@@ -15,3 +15,17 @@ Cstatic_cast_operator::~Cstatic_cast_operator()
 {
 
 }
+
+#ifndef STATIC_CAST_OPERATOR_TEST
+#define STATIC_CAST_OPERATOR_TEST 0//1
+#endif
+
+#if STATIC_CAST_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "STATIC_CAST_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

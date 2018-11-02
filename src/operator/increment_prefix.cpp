@@ -18,3 +18,17 @@ Cincrement_prefix::~Cincrement_prefix()
 {
 
 }
+
+#ifndef INCREMENT_PREFIX_TEST
+#define INCREMENT_PREFIX_TEST 0//1
+#endif
+
+#if INCREMENT_PREFIX_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "INCREMENT_PREFIX_TEST\n\n";
+
+	return 0;
+}
+#endif 

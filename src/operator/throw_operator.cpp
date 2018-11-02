@@ -18,3 +18,17 @@ Cthrow_operator::~Cthrow_operator()
 {
 
 }
+
+#ifndef THROW_OPERATOR_TEST
+#define THROW_OPERATOR_TEST 0//1
+#endif
+
+#if THROW_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "THROW_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

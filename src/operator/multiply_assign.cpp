@@ -18,3 +18,17 @@ Cmultiply_assign::~Cmultiply_assign()
 {
 
 }
+
+#ifndef MULTIPLY_ASSIGN_TEST
+#define MULTIPLY_ASSIGN_TEST 0//1
+#endif
+
+#if MULTIPLY_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "MULTIPLY_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

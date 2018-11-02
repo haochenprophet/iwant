@@ -18,3 +18,17 @@ Ctype_conversion::~Ctype_conversion()
 {
 
 }
+
+#ifndef TYPE_CONVERSION_TEST
+#define TYPE_CONVERSION_TEST 0//1
+#endif
+
+#if TYPE_CONVERSION_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "TYPE_CONVERSION_TEST\n\n";
+
+	return 0;
+}
+#endif 

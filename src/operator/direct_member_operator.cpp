@@ -18,3 +18,17 @@ Cdirect_member_operator::~Cdirect_member_operator()
 {
 
 }
+
+#ifndef DIRECT_MEMBER_OPERATOR_TEST
+#define DIRECT_MEMBER_OPERATOR_TEST 0//1
+#endif
+
+#if DIRECT_MEMBER_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DIRECT_MEMBER_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

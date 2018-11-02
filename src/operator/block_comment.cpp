@@ -18,3 +18,17 @@ Cblock_comment::~Cblock_comment()
 {
 
 }
+
+#ifndef BLOCK_COMMENT_TEST
+#define BLOCK_COMMENT_TEST 0//1
+#endif
+
+#if BLOCK_COMMENT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "BLOCK_COMMENT_TEST\n\n";
+
+	return 0;
+}
+#endif 

@@ -18,3 +18,17 @@ Cnegative_sign::~Cnegative_sign()
 {
 
 }
+
+#ifndef NEGATIVE_SIGN_TEST
+#define NEGATIVE_SIGN_TEST 0//1
+#endif
+
+#if NEGATIVE_SIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "NEGATIVE_SIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

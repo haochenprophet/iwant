@@ -18,3 +18,17 @@ Cassign_direct::~Cassign_direct()
 {
 
 }
+
+#ifndef ASSIGN_DIRECT_TEST
+#define ASSIGN_DIRECT_TEST 0//1
+#endif
+
+#if ASSIGN_DIRECT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "ASSIGN_DIRECT_TEST\n\n";
+
+	return 0;
+}
+#endif 

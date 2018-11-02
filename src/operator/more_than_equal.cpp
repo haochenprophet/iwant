@@ -18,3 +18,17 @@ Cmore_than_equal::~Cmore_than_equal()
 {
 
 }
+
+#ifndef MORE_THAN_EQUAL_TEST
+#define MORE_THAN_EQUAL_TEST 0//1
+#endif
+
+#if MORE_THAN_EQUAL_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "MORE_THAN_EQUAL_TEST\n\n";
+
+	return 0;
+}
+#endif 

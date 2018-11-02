@@ -18,3 +18,17 @@ Csub_assign::~Csub_assign()
 {
 
 }
+
+#ifndef SUB_ASSIGN_TEST
+#define SUB_ASSIGN_TEST 0//1
+#endif
+
+#if SUB_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "SUB_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

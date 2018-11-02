@@ -17,3 +17,17 @@ Cvalue_construction::~Cvalue_construction()
 {
 
 }
+
+#ifndef VALUE_CONSTRUCTION_TEST
+#define VALUE_CONSTRUCTION_TEST 0//1
+#endif
+
+#if VALUE_CONSTRUCTION_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "VALUE_CONSTRUCTION_TEST\n\n";
+
+	return 0;
+}
+#endif 

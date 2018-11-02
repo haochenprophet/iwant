@@ -18,3 +18,17 @@ Cdereference_operator::~Cdereference_operator()
 {
 
 }
+
+#ifndef DEREFERENCE_OPERATOR_TEST
+#define DEREFERENCE_OPERATOR_TEST 0//1
+#endif
+
+#if DEREFERENCE_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DEREFERENCE_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

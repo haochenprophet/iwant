@@ -18,3 +18,17 @@ Cincrement_suffix::~Cincrement_suffix()
 {
 
 }
+
+#ifndef INCREMENT_SUFFIX_TEST
+#define INCREMENT_SUFFIX_TEST 0//1
+#endif
+
+#if INCREMENT_SUFFIX_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "INCREMENT_SUFFIX_TEST\n\n";
+
+	return 0;
+}
+#endif 

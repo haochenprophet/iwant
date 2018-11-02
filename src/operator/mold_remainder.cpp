@@ -18,3 +18,17 @@ Cmold_remainder::~Cmold_remainder()
 {
 
 }
+
+#ifndef MOLD_REMAINDER_TEST
+#define MOLD_REMAINDER_TEST 0//1
+#endif
+
+#if MOLD_REMAINDER_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "MOLD_REMAINDER_TEST\n\n";
+
+	return 0;
+}
+#endif 

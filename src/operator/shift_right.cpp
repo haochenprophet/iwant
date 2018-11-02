@@ -18,3 +18,17 @@ Cshift_right::~Cshift_right()
 {
 
 }
+
+#ifndef SHIFT_RIGHT_TEST
+#define SHIFT_RIGHT_TEST 0//1
+#endif
+
+#if SHIFT_RIGHT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "SHIFT_RIGHT_TEST\n\n";
+
+	return 0;
+}
+#endif 

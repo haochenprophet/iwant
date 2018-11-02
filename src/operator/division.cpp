@@ -18,3 +18,17 @@ Cdivision::~Cdivision()
 {
 
 }
+
+#ifndef DIVISION_TEST
+#define DIVISION_TEST 0//1
+#endif
+
+#if DIVISION_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DIVISION_TEST\n\n";
+
+	return 0;
+}
+#endif 

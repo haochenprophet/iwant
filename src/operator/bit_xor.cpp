@@ -18,3 +18,17 @@ Cbit_xor::~Cbit_xor()
 {
 
 }
+
+#ifndef BIT_XOR_TEST
+#define BIT_XOR_TEST 0//1
+#endif
+
+#if BIT_XOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "BIT_XOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

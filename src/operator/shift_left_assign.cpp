@@ -18,3 +18,17 @@ Cshift_left_assign::~Cshift_left_assign()
 {
 
 }
+
+#ifndef SHIFT_LEFT_ASSIGN_TEST
+#define SHIFT_LEFT_ASSIGN_TEST 0//1
+#endif
+
+#if SHIFT_LEFT_ASSIGN_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "SHIFT_LEFT_ASSIGN_TEST\n\n";
+
+	return 0;
+}
+#endif 

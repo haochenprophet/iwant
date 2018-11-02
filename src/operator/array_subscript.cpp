@@ -18,3 +18,17 @@ Carray_subscript::~Carray_subscript()
 {
 
 }
+
+#ifndef ARRAY_SUBSCRIPT_TEST
+#define ARRAY_SUBSCRIPT_TEST 0//1
+#endif
+
+#if ARRAY_SUBSCRIPT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "ARRAY_SUBSCRIPT_TEST\n\n";
+
+	return 0;
+}
+#endif 

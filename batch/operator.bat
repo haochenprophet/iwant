@@ -144,7 +144,7 @@ code main create_main less_than_equal
 code main create_main more_than_equal
 code main create_main more_than
 
-code main create_main equal
+code main create_main equal_operator
 code main create_main not_equal
 
 code main create_main bit_and

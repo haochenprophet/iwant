@@ -18,3 +18,17 @@ Cconditional_operator::~Cconditional_operator()
 {
 
 }
+
+#ifndef CONDITIONAL_OPERATOR_TEST
+#define CONDITIONAL_OPERATOR_TEST 0//1
+#endif
+
+#if CONDITIONAL_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "CONDITIONAL_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

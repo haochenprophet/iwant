@@ -18,3 +18,17 @@ Cequal_operator::~Cequal_operator()
 {
 
 }
+
+#ifndef EQUAL_OPERATOR_TEST
+#define EQUAL_OPERATOR_TEST 0//1
+#endif
+
+#if EQUAL_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "EQUAL_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

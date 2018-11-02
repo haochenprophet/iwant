@@ -18,3 +18,17 @@ Cbit_and::~Cbit_and()
 {
 
 }
+
+#ifndef BIT_AND_TEST
+#define BIT_AND_TEST 0//1
+#endif
+
+#if BIT_AND_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "BIT_AND_TEST\n\n";
+
+	return 0;
+}
+#endif 

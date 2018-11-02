@@ -18,3 +18,17 @@ Clogic_not::~Clogic_not()
 {
 
 }
+
+#ifndef LOGIC_NOT_TEST
+#define LOGIC_NOT_TEST 0//1
+#endif
+
+#if LOGIC_NOT_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "LOGIC_NOT_TEST\n\n";
+
+	return 0;
+}
+#endif 

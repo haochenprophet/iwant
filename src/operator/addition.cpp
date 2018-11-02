@@ -18,3 +18,17 @@ Caddition::~Caddition()
 {
 
 }
+
+#ifndef ADDITION_TEST
+#define ADDITION_TEST 0//1
+#endif
+
+#if ADDITION_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "ADDITION_TEST\n\n";
+
+	return 0;
+}
+#endif 

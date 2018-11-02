@@ -18,3 +18,17 @@ Cdynamic_cast_operator::~Cdynamic_cast_operator()
 {
 
 }
+
+#ifndef DYNAMIC_CAST_OPERATOR_TEST
+#define DYNAMIC_CAST_OPERATOR_TEST 0//1
+#endif
+
+#if DYNAMIC_CAST_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "DYNAMIC_CAST_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

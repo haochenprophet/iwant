@@ -16,3 +16,17 @@ Cat_operator::~Cat_operator()
 {
 
 }
+
+#ifndef AT_OPERATOR_TEST
+#define AT_OPERATOR_TEST 0//1
+#endif
+
+#if AT_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "AT_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

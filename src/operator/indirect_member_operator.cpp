@@ -18,3 +18,17 @@ Cindirect_member_operator::~Cindirect_member_operator()
 {
 
 }
+
+#ifndef INDIRECT_MEMBER_OPERATOR_TEST
+#define INDIRECT_MEMBER_OPERATOR_TEST 0//1
+#endif
+
+#if INDIRECT_MEMBER_OPERATOR_TEST
+#include "all_h_include.h"
+int main(int argc, char *argv[])
+{
+	std::cout << "INDIRECT_MEMBER_OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 
