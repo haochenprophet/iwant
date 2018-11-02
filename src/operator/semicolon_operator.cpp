@@ -4,6 +4,8 @@ int Csemicolon_operator::my_init(void *p)
 	this->name = "Csemicolon_operator";
 	this->alias = "semicolon_operator";
 	this->symbol = ";";
+	this->op_priority = 19;
+	this->combination = Combination::R2L;
 	return 0;
 }
 

@@ -86,7 +86,13 @@ code class joiner_operator
 code class line_comment
 code class block_comment
 
-
+code class dollar_operator
+code class big_brackets
+code class hashtag
+code class at_operator
+code class apostrophe
+code class double_quotes
+code class angle_brackets
 
 
 code main create_main scope_operator
@@ -176,3 +182,11 @@ code main create_main space_operator
 code main create_main joiner_operator
 code main create_main line_comment
 code main create_main block_comment
+
+code main create_main dollar_operator
+code main create_main big_brackets
+code main create_main hashtag
+code main create_main at_operator
+code main create_main apostrophe
+code main create_main double_quotes
+code main create_main angle_brackets

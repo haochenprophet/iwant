@@ -4,6 +4,8 @@ int Csubstruction::my_init(void *p)
 	this->name = "Csubstruction";
 	this->alias = "substruction";
 	this->symbol = "-";
+	this->op_priority = 6;
+	this->combination = Combination::L2R;
 	return 0;
 }
 

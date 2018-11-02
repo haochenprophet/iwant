@@ -4,6 +4,8 @@ int Cblock_comment::my_init(void *p)
 	this->name = "Cblock_comment";
 	this->alias = "block_comment";
 	this->symbol = "/*...*/";
+	this->op_priority = 1;
+	this->combination = Combination::R2L;
 	return 0;
 }
 

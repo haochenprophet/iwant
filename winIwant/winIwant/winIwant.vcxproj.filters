@@ -5268,6 +5268,27 @@
     <ClCompile Include="..\..\src\operator\delete_memory.cpp">
       <Filter>operator</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\operator\angle_brackets.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\apostrophe.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\at_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\big_brackets.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\dollar_operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\double_quotes.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\operator\hashtag.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -10575,6 +10596,27 @@
       <Filter>operator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\operator\delete_memory.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\angle_brackets.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\apostrophe.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\at_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\big_brackets.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\dollar_operator.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\double_quotes.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\hashtag.h">
       <Filter>operator</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,7 +3,8 @@ int Cvalue_construction::my_init(void *p)
 {
 	this->name = "Cvalue_construction";
 	this->alias = "value_construction";
-	this->symbol = "()";
+	this->symbol = "type(exp)";
+	this->op_priority = 2;
 	return 0;
 }
 

@@ -3,7 +3,9 @@ int Ctype_conversion::my_init(void *p)
 {
 	this->name = "Ctype_conversion";
 	this->alias = "type_conversion";
-	this->symbol = "()";
+	this->symbol = "(type)exp";
+	this->op_priority = 3;
+	this->combination = Combination::R2L;
 	return 0;
 }
 

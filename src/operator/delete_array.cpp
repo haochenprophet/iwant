@@ -4,6 +4,8 @@ int Cdelete_array::my_init(void *p)
 	this->name = "Cdelete_array";
 	this->alias = "delete_array";
 	this->symbol = "delete []";
+	this->op_priority = 3;
+	this->combination = Combination::R2L;
 	return 0;
 }
 

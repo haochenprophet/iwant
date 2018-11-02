@@ -4,6 +4,8 @@ int Csizeof_operator::my_init(void *p)
 	this->name = "Csizeof_operator";
 	this->alias = "sizeof_operator";
 	this->symbol = "sizeof";
+	this->op_priority = 3;
+	this->combination = Combination::R2L;
 	return 0;
 }
 

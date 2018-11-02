@@ -4,6 +4,8 @@ int Cend_operator::my_init(void *p)
 	this->name = "Cend_operator";
 	this->alias = "end_operator";
 	this->symbol = "";
+	this->op_priority = -1;
+	this->combination = Combination::none;
 	return 0;
 }
 

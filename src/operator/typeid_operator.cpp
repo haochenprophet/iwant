@@ -4,6 +4,8 @@ int Ctypeid_operator::my_init(void *p)
 	this->name = "Ctypeid_operator";
 	this->alias = "typeid_operator";
 	this->symbol = "typeid";
+	this->op_priority = 2;
+	this->combination = Combination::L2R;
 	return 0;
 }
 

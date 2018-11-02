@@ -4,6 +4,8 @@ int Cthrow_operator::my_init(void *p)
 	this->name = "Cthrow_operator";
 	this->alias = "throw";
 	this->symbol = "throw";
+	this->op_priority = 17;
+	this->combination = Combination::L2R;
 	return 0;
 }
 

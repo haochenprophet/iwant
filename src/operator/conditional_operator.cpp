@@ -3,7 +3,9 @@ int Cconditional_operator::my_init(void *p)
 {
 	this->name = "Cconditional_operator";
 	this->alias = "conditional_operator";
-	this->symbol = ":?";
+	this->symbol = "exp?exp:exp";
+	this->op_priority = 15;
+	this->combination = Combination::R2L;
 	return 0;
 }
 
