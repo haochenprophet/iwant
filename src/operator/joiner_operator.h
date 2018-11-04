@@ -1,7 +1,7 @@
 #ifndef JOINER_OPERATOR_H
 #define JOINER_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_joiner_operator {
 	class Cjoiner_operator :public Coperator

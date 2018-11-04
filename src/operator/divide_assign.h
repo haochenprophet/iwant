@@ -1,7 +1,7 @@
 #ifndef DIVIDE_ASSIGN_H
 #define DIVIDE_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_divide_assign {
 	class Cdivide_assign :public Coperator

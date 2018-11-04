@@ -1,7 +1,7 @@
 #ifndef NEW_MEMORY_H
 #define NEW_MEMORY_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_new_memory {
 	class Cnew_memory :public Coperator

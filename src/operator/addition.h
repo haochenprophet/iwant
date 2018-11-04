@@ -1,7 +1,7 @@
 #ifndef ADDITION_H
 #define ADDITION_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_addition {
 	class Caddition :public Coperator

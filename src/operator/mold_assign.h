@@ -1,7 +1,7 @@
 #ifndef MOLD_ASSIGN_H
 #define MOLD_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_mold_assign {
 	class Cmold_assign :public Coperator

@@ -1,7 +1,7 @@
 #ifndef MOLD_REMAINDER_H
 #define MOLD_REMAINDER_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_mold_remainder {
 	class Cmold_remainder :public Coperator

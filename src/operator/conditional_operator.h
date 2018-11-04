@@ -1,7 +1,7 @@
 #ifndef CONDITIONAL_OPERATOR_H
 #define CONDITIONAL_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_conditional_operator {
 	class Cconditional_operator :public Coperator

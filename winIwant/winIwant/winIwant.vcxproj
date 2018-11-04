@@ -88,6 +88,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include;C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include\devapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -1582,7 +1583,6 @@
     <ClCompile Include="..\..\src\net.cpp" />
     <ClCompile Include="..\..\src\node.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
-    <ClCompile Include="..\..\src\operator.cpp" />
     <ClCompile Include="..\..\src\operator\addition.cpp" />
     <ClCompile Include="..\..\src\operator\address_operator.cpp" />
     <ClCompile Include="..\..\src\operator\add_assign.cpp" />
@@ -1642,6 +1642,7 @@
     <ClCompile Include="..\..\src\operator\new_memory.cpp" />
     <ClCompile Include="..\..\src\operator\not_equal.cpp" />
     <ClCompile Include="..\..\src\operator\null_operator.cpp" />
+    <ClCompile Include="..\..\src\operator\operator.cpp" />
     <ClCompile Include="..\..\src\operator\positive_sign.cpp" />
     <ClCompile Include="..\..\src\operator\reinterpret_cast_operator.cpp" />
     <ClCompile Include="..\..\src\operator\scope_operator.cpp" />
@@ -3343,7 +3344,6 @@
     <ClInclude Include="..\..\src\node.h" />
     <ClInclude Include="..\..\src\object.h" />
     <ClInclude Include="..\..\src\object_def.h" />
-    <ClInclude Include="..\..\src\operator.h" />
     <ClInclude Include="..\..\src\operator\addition.h" />
     <ClInclude Include="..\..\src\operator\address_operator.h" />
     <ClInclude Include="..\..\src\operator\add_assign.h" />
@@ -3403,6 +3403,7 @@
     <ClInclude Include="..\..\src\operator\new_memory.h" />
     <ClInclude Include="..\..\src\operator\not_equal.h" />
     <ClInclude Include="..\..\src\operator\null_operator.h" />
+    <ClInclude Include="..\..\src\operator\operator.h" />
     <ClInclude Include="..\..\src\operator\positive_sign.h" />
     <ClInclude Include="..\..\src\operator\reinterpret_cast_operator.h" />
     <ClInclude Include="..\..\src\operator\scope_operator.h" />

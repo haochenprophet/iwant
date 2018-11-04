@@ -1,7 +1,7 @@
 #ifndef ADD_ASSIGN_H
 #define ADD_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_add_assign {
 	class Cadd_assign :public Coperator

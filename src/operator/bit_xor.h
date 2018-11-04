@@ -1,7 +1,7 @@
 #ifndef BIT_XOR_H
 #define BIT_XOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_bit_xor {
 	class Cbit_xor :public Coperator

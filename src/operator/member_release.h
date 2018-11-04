@@ -1,7 +1,7 @@
 #ifndef MEMBER_RELEASE_H
 #define MEMBER_RELEASE_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_member_release {
 	class Cmember_release :public Coperator

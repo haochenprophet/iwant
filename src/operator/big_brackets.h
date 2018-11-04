@@ -1,7 +1,7 @@
 #ifndef BIG_BRACKETS_H
 #define BIG_BRACKETS_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_big_brackets {
 	class Cbig_brackets :public Coperator

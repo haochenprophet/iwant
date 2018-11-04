@@ -1,7 +1,7 @@
 #ifndef AT_OPERATOR_H
 #define AT_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_at_operator {
 	class Cat_operator :public Coperator

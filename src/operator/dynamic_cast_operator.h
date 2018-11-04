@@ -1,7 +1,7 @@
 #ifndef DYNAMIC_CAST_OPERATOR_H
 #define DYNAMIC_CAST_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_dynamic_cast_operator {
 	class Cdynamic_cast_operator :public Coperator

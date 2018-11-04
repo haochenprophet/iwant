@@ -1,7 +1,7 @@
 #ifndef DIRECT_MEMBER_OPERATOR_H
 #define DIRECT_MEMBER_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_direct_member_operator {
 	class Cdirect_member_operator :public Coperator

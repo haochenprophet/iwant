@@ -1,7 +1,7 @@
 #ifndef DOUBLE_QUOTES_H
 #define DOUBLE_QUOTES_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_double_quotes {
 	class Cdouble_quotes :public Coperator

@@ -1,7 +1,7 @@
 #ifndef BITWISE_NOT_H
 #define BITWISE_NOT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_bitwise_not {
 	class Cbitwise_not :public Coperator

@@ -1,7 +1,7 @@
 #ifndef FUNCTION_CALL_H
 #define FUNCTION_CALL_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_function_call {
 	class Cfunction_call :public Coperator

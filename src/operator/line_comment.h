@@ -1,7 +1,7 @@
 #ifndef LINE_COMMENT_H
 #define LINE_COMMENT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_line_comment {
 	class Cline_comment :public Coperator

@@ -1,7 +1,7 @@
 #ifndef NEGATIVE_SIGN_H
 #define NEGATIVE_SIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_negative_sign {
 	class Cnegative_sign :public Coperator

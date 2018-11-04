@@ -1,7 +1,7 @@
 #ifndef APOSTROPHE_H
 #define APOSTROPHE_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_apostrophe {
 	class Capostrophe :public Coperator

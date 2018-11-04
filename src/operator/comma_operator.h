@@ -1,7 +1,7 @@
 #ifndef COMMA_OPERATOR_H
 #define COMMA_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_comma_operator {
 	class Ccomma_operator :public Coperator

@@ -1,14 +1,14 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
 
-#include "object.h"
+#include "..\object.h"
 
 namespace n_operator {
 
 	enum class Combination {
 		none,
-		L2R,
-		R2L,
+		L2R,//left to right
+		R2L,//right to left
 	};
 
 	class Coperator :public Object

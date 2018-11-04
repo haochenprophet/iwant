@@ -1,7 +1,7 @@
 #ifndef DEREFERENCE_OPERATOR_H
 #define DEREFERENCE_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_dereference_operator {
 	class Cdereference_operator :public Coperator

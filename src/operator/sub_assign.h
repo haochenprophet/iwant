@@ -1,7 +1,7 @@
 #ifndef SUB_ASSIGN_H
 #define SUB_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_sub_assign {
 	class Csub_assign :public Coperator

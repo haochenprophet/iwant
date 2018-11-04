@@ -1,7 +1,7 @@
 #ifndef BLOCK_COMMENT_H
 #define BLOCK_COMMENT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_block_comment {
 	class Cblock_comment :public Coperator

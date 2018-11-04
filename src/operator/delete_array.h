@@ -1,7 +1,7 @@
 #ifndef DELETE_ARRAY_H
 #define DELETE_ARRAY_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_delete_array {
 	class Cdelete_array :public Coperator

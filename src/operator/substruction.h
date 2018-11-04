@@ -1,7 +1,7 @@
 #ifndef SUBSTRUCTION_H
 #define SUBSTRUCTION_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_substruction {
 	class Csubstruction :public Coperator

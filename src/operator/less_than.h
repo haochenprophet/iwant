@@ -1,7 +1,7 @@
 #ifndef LESS_THAN_H
 #define LESS_THAN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_less_than {
 	class Cless_than :public Coperator

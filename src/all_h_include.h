@@ -39,7 +39,7 @@
 #include "my_sql.h" 
 #include "net.h" 
 #include "object.h" 
-#include "operator.h" 
+#include "operator/operator.h" 
 #include "os.h" 
 #include "path.h" 
 #include "plan.h" 

@@ -1,7 +1,7 @@
 #ifndef THROW_OPERATOR_H
 #define THROW_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_throw_operator {
 	class Cthrow_operator :public Coperator

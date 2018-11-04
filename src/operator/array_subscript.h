@@ -1,7 +1,7 @@
 #ifndef ARRAY_SUBSCRIPT_H
 #define ARRAY_SUBSCRIPT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_array_subscript {
 	class Carray_subscript :public Coperator

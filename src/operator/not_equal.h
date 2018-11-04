@@ -1,7 +1,7 @@
 #ifndef NOT_EQUAL_H
 #define NOT_EQUAL_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_not_equal {
 	class Cnot_equal :public Coperator

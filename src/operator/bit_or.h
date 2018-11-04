@@ -1,7 +1,7 @@
 #ifndef BIT_OR_H
 #define BIT_OR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_bit_or {
 	class Cbit_or :public Coperator

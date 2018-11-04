@@ -1,7 +1,7 @@
 #ifndef INCREMENT_SUFFIX_H
 #define INCREMENT_SUFFIX_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_increment_suffix {
 	class Cincrement_suffix :public Coperator

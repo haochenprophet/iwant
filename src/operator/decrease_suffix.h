@@ -1,7 +1,7 @@
 #ifndef DECREASE_SUFFIX_H
 #define DECREASE_SUFFIX_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_decrease_suffix {
 	class Cdecrease_suffix :public Coperator

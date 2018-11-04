@@ -1,7 +1,7 @@
 #ifndef SIZEOF_OPERATOR_H
 #define SIZEOF_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_sizeof_operator {
 	class Csizeof_operator :public Coperator

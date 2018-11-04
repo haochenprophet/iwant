@@ -1,7 +1,7 @@
 #ifndef NEW_ARRAY_H
 #define NEW_ARRAY_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_new_array {
 	class Cnew_array :public Coperator

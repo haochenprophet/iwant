@@ -1,7 +1,7 @@
 #ifndef TYPE_CONVERSION_H
 #define TYPE_CONVERSION_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_type_conversion {
 	class Ctype_conversion :public Coperator

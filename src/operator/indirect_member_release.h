@@ -1,7 +1,7 @@
 #ifndef INDIRECT_MEMBER_RELEASE_H
 #define INDIRECT_MEMBER_RELEASE_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_indirect_member_release {
 	class Cindirect_member_release :public Coperator

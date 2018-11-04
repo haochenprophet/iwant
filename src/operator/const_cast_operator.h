@@ -1,7 +1,7 @@
 #ifndef CONST_CAST_OPERATOR_H
 #define CONST_CAST_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_const_cast_operator {
 	class Cconst_cast_operator :public Coperator

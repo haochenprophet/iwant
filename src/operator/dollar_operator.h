@@ -1,7 +1,7 @@
 #ifndef DOLLAR_OPERATOR_H
 #define DOLLAR_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_dollar_operator {
 	class Cdollar_operator :public Coperator

@@ -1,7 +1,7 @@
 #ifndef TYPEID_OPERATOR_H
 #define TYPEID_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_typeid_operator {
 	class Ctypeid_operator :public Coperator

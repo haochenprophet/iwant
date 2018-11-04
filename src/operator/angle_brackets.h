@@ -1,7 +1,7 @@
 #ifndef ANGLE_BRACKETS_H
 #define ANGLE_BRACKETS_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_angle_brackets {
 	class Cangle_brackets :public Coperator

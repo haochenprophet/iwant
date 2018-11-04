@@ -1,7 +1,7 @@
 #ifndef LOGIC_NOT_H
 #define LOGIC_NOT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_logic_not {
 	class Clogic_not :public Coperator

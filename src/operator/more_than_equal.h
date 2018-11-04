@@ -1,7 +1,7 @@
 #ifndef MORE_THAN_EQUAL_H
 #define MORE_THAN_EQUAL_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_more_than_equal {
 	class Cmore_than_equal :public Coperator

@@ -1470,9 +1470,6 @@
     <ClCompile Include="..\..\src\object.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\operator.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\os.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -5289,6 +5286,9 @@
     <ClCompile Include="..\..\src\operator\hashtag.cpp">
       <Filter>operator</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\operator\operator.cpp">
+      <Filter>operator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -6741,9 +6741,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\object.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\operator.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\os.h">
@@ -10617,6 +10614,9 @@
       <Filter>operator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\operator\hashtag.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\operator.h">
       <Filter>operator</Filter>
     </ClInclude>
   </ItemGroup>

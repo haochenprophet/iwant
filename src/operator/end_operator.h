@@ -1,7 +1,7 @@
 #ifndef END_OPERATOR_H
 #define END_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_end_operator {
 	class Cend_operator :public Coperator

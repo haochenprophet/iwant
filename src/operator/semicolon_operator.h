@@ -1,7 +1,7 @@
 #ifndef SEMICOLON_OPERATOR_H
 #define SEMICOLON_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_semicolon_operator {
 	class Csemicolon_operator :public Coperator

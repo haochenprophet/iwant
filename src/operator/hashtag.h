@@ -1,7 +1,7 @@
 #ifndef HASHTAG_H
 #define HASHTAG_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_hashtag {
 	class Chashtag :public Coperator

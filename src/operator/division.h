@@ -1,7 +1,7 @@
 #ifndef DIVISION_H
 #define DIVISION_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_division {
 	class Cdivision :public Coperator

@@ -1,7 +1,7 @@
 #ifndef LOGIC_AND_H
 #define LOGIC_AND_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_logic_and {
 	class Clogic_and :public Coperator

@@ -1,7 +1,7 @@
 #ifndef SHIFT_LEFT_H
 #define SHIFT_LEFT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_shift_left {
 	class Cshift_left :public Coperator

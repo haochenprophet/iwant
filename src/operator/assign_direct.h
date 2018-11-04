@@ -1,7 +1,7 @@
 #ifndef ASSIGN_DIRECT_H
 #define ASSIGN_DIRECT_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_assign_direct {
 	class Cassign_direct :public Coperator

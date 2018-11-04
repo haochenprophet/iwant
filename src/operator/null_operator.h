@@ -1,7 +1,7 @@
 #ifndef NULL_OPERATOR_H
 #define NULL_OPERATOR_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_null_operator {
 	class Cnull_operator :public Coperator

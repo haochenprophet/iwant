@@ -1,7 +1,7 @@
 #ifndef MULTIPLY_ASSIGN_H
 #define MULTIPLY_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_multiply_assign {
 	class Cmultiply_assign :public Coperator

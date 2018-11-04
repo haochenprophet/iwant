@@ -1,7 +1,7 @@
 #ifndef POSITIVE_SIGN_H
 #define POSITIVE_SIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_positive_sign {
 	class Cpositive_sign :public Coperator

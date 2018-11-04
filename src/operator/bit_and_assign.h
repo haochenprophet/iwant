@@ -1,7 +1,7 @@
 #ifndef BIT_AND_ASSIGN_H
 #define BIT_AND_ASSIGN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_bit_and_assign {
 	class Cbit_and_assign :public Coperator

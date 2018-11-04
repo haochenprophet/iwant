@@ -1,7 +1,7 @@
 #ifndef EXPRESSION_GROUPING_H
 #define EXPRESSION_GROUPING_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_expression_grouping {
 	class Cexpression_grouping :public Coperator

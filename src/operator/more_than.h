@@ -1,7 +1,7 @@
 #ifndef MORE_THAN_H
 #define MORE_THAN_H
 
-#include "../operator.h"
+#include "operator.h"
 
 namespace n_more_than {
 	class Cmore_than :public Coperator
