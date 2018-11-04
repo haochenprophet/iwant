@@ -38,7 +38,7 @@
 	Cmy_sql  g_my_sql ;
 	Cnet  g_net ;
 	Cobject  g_object ;
-	Coperator  g_operator ;
+//	Coperator  g_operator ;
 	Cos  g_os ;
 	Cpath  g_path ;
 	Cplan  g_plan ;

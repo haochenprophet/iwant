@@ -38,7 +38,7 @@ void add_objects(Object *p)
 	p->addMe(g_my_sql.where());
 	p->addMe(g_net.where());
 	p->addMe(g_object.where());
-	p->addMe(g_operator.where());
+//	p->addMe(g_operator.where());
 	p->addMe(g_os.where());
 	p->addMe(g_path.where());
 	p->addMe(g_plan.where());
