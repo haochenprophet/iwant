@@ -1,0 +1,53 @@
+#ifndef CSTDIO_G_CODE_FUNC_I
+#define CSTDIO_G_CODE_FUNC_I
+void cstdio_add_objects(Object *p)
+{
+	p->addMe(g_clearerr.where());
+	p->addMe(g_cstdio.where());
+	p->addMe(g_fclose.where());
+	p->addMe(g_feof.where());
+	p->addMe(g_ferror.where());
+	p->addMe(g_fflush.where());
+	p->addMe(g_fgetc.where());
+	p->addMe(g_fgetpos.where());
+	p->addMe(g_fgets.where());
+	p->addMe(g_fopen.where());
+	p->addMe(g_fprintf.where());
+	p->addMe(g_fputc.where());
+	p->addMe(g_fputs.where());
+	p->addMe(g_fread.where());
+	p->addMe(g_freopen.where());
+	p->addMe(g_fscanf.where());
+	p->addMe(g_fseek.where());
+	p->addMe(g_fsetpos.where());
+	p->addMe(g_ftell.where());
+	p->addMe(g_fwrite.where());
+	p->addMe(g_getc.where());
+	p->addMe(g_getchar.where());
+	p->addMe(g_gets.where());
+	p->addMe(g_perror.where());
+	p->addMe(g_printf.where());
+	p->addMe(g_putc.where());
+	p->addMe(g_putchar.where());
+	p->addMe(g_puts.where());
+	p->addMe(g_remove.where());
+	p->addMe(g_rename.where());
+	p->addMe(g_rewind.where());
+	p->addMe(g_scanf.where());
+	p->addMe(g_setvbuf.where());
+	p->addMe(g_snprintf.where());
+	p->addMe(g_sprintf.where());
+	p->addMe(g_sscanf.where());
+	p->addMe(g_tmpfile.where());
+	p->addMe(g_tmpnam.where());
+	p->addMe(g_ungetc.where());
+	p->addMe(g_vfprintf.where());
+	p->addMe(g_vfscanf.where());
+	p->addMe(g_vprintf.where());
+	p->addMe(g_vscanf.where());
+	p->addMe(g_vsnprintf.where());
+	p->addMe(g_vsprintf.where());
+	p->addMe(g_vsscanf.where());
+
+}
+#endif

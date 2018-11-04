@@ -41,6 +41,8 @@ code class wctomb
 code class mbstowcs
 code class wcstombs
 
+code class cstdlib
+
 code main create_main  atof
 code main create_main  atoi
 code main create_main  atol
@@ -83,3 +85,5 @@ code main create_main  wctomb
 
 code main create_main  mbstowcs
 code main create_main  wcstombs
+
+code main create_main cstdlib

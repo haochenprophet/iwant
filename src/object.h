@@ -161,6 +161,7 @@ namespace n_object {
 		int cin_buf_len;
 		char *cin_buf;
 
+		string package;
 		string name; //object name
 		string alias;//Alias object name
 		string symbol;//for sign detect

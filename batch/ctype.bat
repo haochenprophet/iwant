@@ -33,6 +33,7 @@ code class iswctype
 code class towctrans
 code class wctrans
 code class wctype
+code class ctype
 
 code main create_main  isalnum
 code main create_main  isalpha
@@ -69,3 +70,4 @@ code main create_main  iswctype
 code main create_main  towctrans
 code main create_main  wctrans
 code main create_main  wctype
+code main create_main ctype

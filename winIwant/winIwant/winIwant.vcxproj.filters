@@ -5289,6 +5289,18 @@
     <ClCompile Include="..\..\src\operator\operator.cpp">
       <Filter>operator</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\cstdio.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\cstdlib.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ctype\ctype.cpp">
+      <Filter>ctype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\cmath.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -10625,6 +10637,48 @@
     <ClInclude Include="..\..\src\operator\operator_all_h_include.h">
       <Filter>operator</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\cstdio.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\cstdio_all_h_include.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\cstdio_g_code.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\cstdlib.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\cstdlib_all_h_include.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\cstdlib_g_code.h">
+      <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\ctime_all_h_include.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctime\ctime_g_code.h">
+      <Filter>ctime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\ctype.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\ctype_all_h_include.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ctype\ctype_g_code.h">
+      <Filter>ctype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\cmath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\math_all_h_include.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\math_g_code.h">
+      <Filter>math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -10682,6 +10736,39 @@
     </None>
     <None Include="..\..\src\operator\operator_g_code_func.i">
       <Filter>operator</Filter>
+    </None>
+    <None Include="..\..\src\cstdio\cstdio_g_code.i">
+      <Filter>cstdio</Filter>
+    </None>
+    <None Include="..\..\src\cstdio\cstdio_g_code_func.i">
+      <Filter>cstdio</Filter>
+    </None>
+    <None Include="..\..\src\cstdlib\cstdlib_g_code.i">
+      <Filter>cstdlib</Filter>
+    </None>
+    <None Include="..\..\src\cstdlib\cstdlib_g_code_func.i">
+      <Filter>cstdlib</Filter>
+    </None>
+    <None Include="..\..\src\ctime\ctime_g_code.i">
+      <Filter>ctime</Filter>
+    </None>
+    <None Include="..\..\src\ctime\ctime_g_code_func.i">
+      <Filter>ctime</Filter>
+    </None>
+    <None Include="..\..\src\ctype\ctype_g_code.i">
+      <Filter>ctype</Filter>
+    </None>
+    <None Include="..\..\src\ctype\ctype_g_code_func.i">
+      <Filter>ctype</Filter>
+    </None>
+    <None Include="..\..\src\ctype\Makefile">
+      <Filter>ctype</Filter>
+    </None>
+    <None Include="..\..\src\math\math_g_code.i">
+      <Filter>math</Filter>
+    </None>
+    <None Include="..\..\src\math\math_g_code_func.i">
+      <Filter>math</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

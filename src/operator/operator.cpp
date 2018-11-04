@@ -1,6 +1,7 @@
 #include "operator.h"
 int Coperator::my_init(void *p)
 {
+	this->package = "operator";
 	this->name = "Coperator";
 	this->alias = "operator";
 	this->combination = Combination::none;

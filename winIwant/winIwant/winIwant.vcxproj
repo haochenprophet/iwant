@@ -161,6 +161,7 @@
     <ClCompile Include="..\..\src\const.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\cstdio\clearerr.cpp" />
+    <ClCompile Include="..\..\src\cstdio\cstdio.cpp" />
     <ClCompile Include="..\..\src\cstdio\fclose.cpp" />
     <ClCompile Include="..\..\src\cstdio\feof.cpp" />
     <ClCompile Include="..\..\src\cstdio\ferror.cpp" />
@@ -214,6 +215,7 @@
     <ClCompile Include="..\..\src\cstdlib\at_quick_exit.cpp" />
     <ClCompile Include="..\..\src\cstdlib\bsearch.cpp" />
     <ClCompile Include="..\..\src\cstdlib\calloc.cpp" />
+    <ClCompile Include="..\..\src\cstdlib\cstdlib.cpp" />
     <ClCompile Include="..\..\src\cstdlib\free.cpp" />
     <ClCompile Include="..\..\src\cstdlib\getenv.cpp" />
     <ClCompile Include="..\..\src\cstdlib\labs.cpp" />
@@ -249,6 +251,7 @@
     <ClCompile Include="..\..\src\ctime\mktime.cpp" />
     <ClCompile Include="..\..\src\ctime\strftime.cpp" />
     <ClCompile Include="..\..\src\ctime\time.cpp" />
+    <ClCompile Include="..\..\src\ctype\ctype.cpp" />
     <ClCompile Include="..\..\src\ctype\isalnum.cpp" />
     <ClCompile Include="..\..\src\ctype\isalpha.cpp" />
     <ClCompile Include="..\..\src\ctype\isblank.cpp" />
@@ -1529,6 +1532,7 @@
     <ClCompile Include="..\..\src\math\atanh.cpp" />
     <ClCompile Include="..\..\src\math\cbrt.cpp" />
     <ClCompile Include="..\..\src\math\ceil.cpp" />
+    <ClCompile Include="..\..\src\math\cmath.cpp" />
     <ClCompile Include="..\..\src\math\copysign.cpp" />
     <ClCompile Include="..\..\src\math\cos.cpp" />
     <ClCompile Include="..\..\src\math\cosh.cpp" />
@@ -1914,6 +1918,9 @@
     <ClInclude Include="..\..\src\const.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\cstdio\clearerr.h" />
+    <ClInclude Include="..\..\src\cstdio\cstdio.h" />
+    <ClInclude Include="..\..\src\cstdio\cstdio_all_h_include.h" />
+    <ClInclude Include="..\..\src\cstdio\cstdio_g_code.h" />
     <ClInclude Include="..\..\src\cstdio\fclose.h" />
     <ClInclude Include="..\..\src\cstdio\feof.h" />
     <ClInclude Include="..\..\src\cstdio\ferror.h" />
@@ -1967,6 +1974,9 @@
     <ClInclude Include="..\..\src\cstdlib\at_quick_exit.h" />
     <ClInclude Include="..\..\src\cstdlib\bsearch.h" />
     <ClInclude Include="..\..\src\cstdlib\calloc.h" />
+    <ClInclude Include="..\..\src\cstdlib\cstdlib.h" />
+    <ClInclude Include="..\..\src\cstdlib\cstdlib_all_h_include.h" />
+    <ClInclude Include="..\..\src\cstdlib\cstdlib_g_code.h" />
     <ClInclude Include="..\..\src\cstdlib\free.h" />
     <ClInclude Include="..\..\src\cstdlib\getenv.h" />
     <ClInclude Include="..\..\src\cstdlib\labs.h" />
@@ -1996,12 +2006,17 @@
     <ClInclude Include="..\..\src\ctime\asctime.h" />
     <ClInclude Include="..\..\src\ctime\clock.h" />
     <ClInclude Include="..\..\src\ctime\ctime.h" />
+    <ClInclude Include="..\..\src\ctime\ctime_all_h_include.h" />
+    <ClInclude Include="..\..\src\ctime\ctime_g_code.h" />
     <ClInclude Include="..\..\src\ctime\difftime.h" />
     <ClInclude Include="..\..\src\ctime\gmtime.h" />
     <ClInclude Include="..\..\src\ctime\localtime.h" />
     <ClInclude Include="..\..\src\ctime\mktime.h" />
     <ClInclude Include="..\..\src\ctime\strftime.h" />
     <ClInclude Include="..\..\src\ctime\time.h" />
+    <ClInclude Include="..\..\src\ctype\ctype.h" />
+    <ClInclude Include="..\..\src\ctype\ctype_all_h_include.h" />
+    <ClInclude Include="..\..\src\ctype\ctype_g_code.h" />
     <ClInclude Include="..\..\src\ctype\isalnum.h" />
     <ClInclude Include="..\..\src\ctype\isalpha.h" />
     <ClInclude Include="..\..\src\ctype\isblank.h" />
@@ -3287,6 +3302,7 @@
     <ClInclude Include="..\..\src\math\atanh.h" />
     <ClInclude Include="..\..\src\math\cbrt.h" />
     <ClInclude Include="..\..\src\math\ceil.h" />
+    <ClInclude Include="..\..\src\math\cmath.h" />
     <ClInclude Include="..\..\src\math\copysign.h" />
     <ClInclude Include="..\..\src\math\cos.h" />
     <ClInclude Include="..\..\src\math\cosh.h" />
@@ -3316,6 +3332,8 @@
     <ClInclude Include="..\..\src\math\logb.h" />
     <ClInclude Include="..\..\src\math\lrint.h" />
     <ClInclude Include="..\..\src\math\lround.h" />
+    <ClInclude Include="..\..\src\math\math_all_h_include.h" />
+    <ClInclude Include="..\..\src\math\math_g_code.h" />
     <ClInclude Include="..\..\src\math\modf.h" />
     <ClInclude Include="..\..\src\math\nan.h" />
     <ClInclude Include="..\..\src\math\nearbyint.h" />
@@ -3679,9 +3697,18 @@
   <ItemGroup>
     <None Include="..\..\README.md" />
     <None Include="..\..\src\code_action.i" />
+    <None Include="..\..\src\cstdio\cstdio_g_code.i" />
+    <None Include="..\..\src\cstdio\cstdio_g_code_func.i" />
     <None Include="..\..\src\cstdio\Makefile" />
+    <None Include="..\..\src\cstdlib\cstdlib_g_code.i" />
+    <None Include="..\..\src\cstdlib\cstdlib_g_code_func.i" />
     <None Include="..\..\src\cstdlib\Makefile" />
+    <None Include="..\..\src\ctime\ctime_g_code.i" />
+    <None Include="..\..\src\ctime\ctime_g_code_func.i" />
     <None Include="..\..\src\ctime\Makefile" />
+    <None Include="..\..\src\ctype\ctype_g_code.i" />
+    <None Include="..\..\src\ctype\ctype_g_code_func.i" />
+    <None Include="..\..\src\ctype\Makefile" />
     <None Include="..\..\src\dictionary\Makefile" />
     <None Include="..\..\src\ex_func_class.h" />
     <None Include="..\..\src\g_code.i" />
@@ -3691,6 +3718,8 @@
     <None Include="..\..\src\main_action.i" />
     <None Include="..\..\src\Makefile" />
     <None Include="..\..\src\math\Makefile" />
+    <None Include="..\..\src\math\math_g_code.i" />
+    <None Include="..\..\src\math\math_g_code_func.i" />
     <None Include="..\..\src\my_sql_action.i" />
     <None Include="..\..\src\operator\Makefile" />
     <None Include="..\..\src\operator\operator_g_code.i" />

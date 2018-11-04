@@ -94,6 +94,7 @@ Object::Object()
 	this->action=0;
 	this->error=0;
 	this->locate = -1;
+	this->package = "";
 	this->name = "Object";
 	this->alias = this->name;
 	this->symbol = this->name;

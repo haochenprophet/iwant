@@ -49,6 +49,7 @@ code class clearerr
 code class feof
 code class ferror
 code class perror
+code class cstdio
 
 code main create_main  remove
 code main create_main  rename
@@ -101,3 +102,4 @@ code main create_main  clearerr
 code main create_main  feof
 code main create_main  ferror
 code main create_main  perror
+code main create_main  cstdio

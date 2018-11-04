@@ -1,0 +1,66 @@
+#ifndef MATH_G_CODE_FUNC_I
+#define MATH_G_CODE_FUNC_I
+void math_add_objects(Object *p)
+{
+	p->addMe(g_abs.where());
+	p->addMe(g_acos.where());
+	p->addMe(g_acosh.where());
+	p->addMe(g_asin.where());
+	p->addMe(g_asinh.where());
+	p->addMe(g_atan.where());
+	p->addMe(g_atan2.where());
+	p->addMe(g_atanh.where());
+	p->addMe(g_cbrt.where());
+	p->addMe(g_ceil.where());
+	p->addMe(g_cmath.where());
+	p->addMe(g_copysign.where());
+	p->addMe(g_cos.where());
+	p->addMe(g_cosh.where());
+	p->addMe(g_erf.where());
+	p->addMe(g_erfc.where());
+	p->addMe(g_exp.where());
+	p->addMe(g_exp2.where());
+	p->addMe(g_expm1.where());
+	p->addMe(g_fabs_.where());
+	p->addMe(g_fdim.where());
+	p->addMe(g_floor.where());
+	p->addMe(g_fma.where());
+	p->addMe(g_fmax.where());
+	p->addMe(g_fmin.where());
+	p->addMe(g_fmod.where());
+	p->addMe(g_frexp.where());
+	p->addMe(g_hypot.where());
+	p->addMe(g_ilogb.where());
+	p->addMe(g_ldexp.where());
+	p->addMe(g_lgamma.where());
+	p->addMe(g_llrint.where());
+	p->addMe(g_llround.where());
+	p->addMe(g_log.where());
+	p->addMe(g_log10.where());
+	p->addMe(g_log1p.where());
+	p->addMe(g_log2.where());
+	p->addMe(g_logb.where());
+	p->addMe(g_lrint.where());
+	p->addMe(g_lround.where());
+	p->addMe(g_modf.where());
+	p->addMe(g_nan.where());
+	p->addMe(g_nearbyint.where());
+	p->addMe(g_nextafter.where());
+	p->addMe(g_nexttoward.where());
+	p->addMe(g_pow.where());
+	p->addMe(g_remainder.where());
+	p->addMe(g_remquo.where());
+	p->addMe(g_rint.where());
+	p->addMe(g_round.where());
+	p->addMe(g_scalbln.where());
+	p->addMe(g_scalbn.where());
+	p->addMe(g_sin.where());
+	p->addMe(g_sinh.where());
+	p->addMe(g_sqrt.where());
+	p->addMe(g_tan.where());
+	p->addMe(g_tanh.where());
+	p->addMe(g_tgamma.where());
+	p->addMe(g_trunc.where());
+
+}
+#endif
