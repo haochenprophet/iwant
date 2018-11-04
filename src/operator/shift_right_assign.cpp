@@ -24,7 +24,7 @@ Cshift_right_assign::~Cshift_right_assign()
 #endif
 
 #if SHIFT_RIGHT_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SHIFT_RIGHT_ASSIGN_TEST\n\n";

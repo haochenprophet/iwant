@@ -24,7 +24,7 @@ Csubstruction::~Csubstruction()
 #endif
 
 #if SUBSTRUCTION_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SUBSTRUCTION_TEST\n\n";

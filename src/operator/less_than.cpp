@@ -24,7 +24,7 @@ Cless_than::~Cless_than()
 #endif
 
 #if LESS_THAN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LESS_THAN_TEST\n\n";

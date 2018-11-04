@@ -24,7 +24,7 @@ Cmultiply_assign::~Cmultiply_assign()
 #endif
 
 #if MULTIPLY_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MULTIPLY_ASSIGN_TEST\n\n";

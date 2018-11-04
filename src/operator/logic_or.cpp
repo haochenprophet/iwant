@@ -24,7 +24,7 @@ Clogic_or::~Clogic_or()
 #endif
 
 #if LOGIC_OR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOGIC_OR_TEST\n\n";

@@ -24,7 +24,7 @@ Cmember_release::~Cmember_release()
 #endif
 
 #if MEMBER_RELEASE_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MEMBER_RELEASE_TEST\n\n";

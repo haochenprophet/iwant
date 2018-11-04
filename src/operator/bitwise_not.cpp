@@ -24,7 +24,7 @@ Cbitwise_not::~Cbitwise_not()
 #endif
 
 #if BITWISE_NOT_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BITWISE_NOT_TEST\n\n";

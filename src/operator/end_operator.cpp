@@ -24,7 +24,7 @@ Cend_operator::~Cend_operator()
 #endif
 
 #if END_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "END_OPERATOR_TEST\n\n";

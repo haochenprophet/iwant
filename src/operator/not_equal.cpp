@@ -24,7 +24,7 @@ Cnot_equal::~Cnot_equal()
 #endif
 
 #if NOT_EQUAL_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "NOT_EQUAL_TEST\n\n";

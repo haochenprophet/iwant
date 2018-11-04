@@ -24,7 +24,7 @@ Cfunction_call::~Cfunction_call()
 #endif
 
 #if FUNCTION_CALL_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FUNCTION_CALL_TEST\n\n";

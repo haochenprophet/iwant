@@ -24,7 +24,7 @@ Cconditional_operator::~Cconditional_operator()
 #endif
 
 #if CONDITIONAL_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "CONDITIONAL_OPERATOR_TEST\n\n";

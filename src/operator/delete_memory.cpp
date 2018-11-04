@@ -24,7 +24,7 @@ Cdelete_memory::~Cdelete_memory()
 #endif
 
 #if DELETE_MEMORY_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DELETE_MEMORY_TEST\n\n";

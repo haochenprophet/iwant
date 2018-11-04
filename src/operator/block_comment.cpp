@@ -24,7 +24,7 @@ Cblock_comment::~Cblock_comment()
 #endif
 
 #if BLOCK_COMMENT_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BLOCK_COMMENT_TEST\n\n";

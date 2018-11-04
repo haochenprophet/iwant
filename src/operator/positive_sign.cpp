@@ -24,7 +24,7 @@ Cpositive_sign::~Cpositive_sign()
 #endif
 
 #if POSITIVE_SIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "POSITIVE_SIGN_TEST\n\n";

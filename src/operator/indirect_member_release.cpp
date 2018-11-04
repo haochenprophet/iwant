@@ -24,7 +24,7 @@ Cindirect_member_release::~Cindirect_member_release()
 #endif
 
 #if INDIRECT_MEMBER_RELEASE_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "INDIRECT_MEMBER_RELEASE_TEST\n\n";

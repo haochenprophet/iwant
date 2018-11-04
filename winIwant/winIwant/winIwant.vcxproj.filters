@@ -10619,6 +10619,12 @@
     <ClInclude Include="..\..\src\operator\operator.h">
       <Filter>operator</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\operator\operator_g_code.h">
+      <Filter>operator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\operator\operator_all_h_include.h">
+      <Filter>operator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -10669,6 +10675,12 @@
       <Filter>ctime</Filter>
     </None>
     <None Include="..\..\src\operator\Makefile">
+      <Filter>operator</Filter>
+    </None>
+    <None Include="..\..\src\operator\operator_g_code.i">
+      <Filter>operator</Filter>
+    </None>
+    <None Include="..\..\src\operator\operator_g_code_func.i">
       <Filter>operator</Filter>
     </None>
   </ItemGroup>

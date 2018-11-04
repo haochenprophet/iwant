@@ -24,7 +24,7 @@ Cmore_than_equal::~Cmore_than_equal()
 #endif
 
 #if MORE_THAN_EQUAL_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MORE_THAN_EQUAL_TEST\n\n";

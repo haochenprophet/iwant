@@ -3404,6 +3404,8 @@
     <ClInclude Include="..\..\src\operator\not_equal.h" />
     <ClInclude Include="..\..\src\operator\null_operator.h" />
     <ClInclude Include="..\..\src\operator\operator.h" />
+    <ClInclude Include="..\..\src\operator\operator_all_h_include.h" />
+    <ClInclude Include="..\..\src\operator\operator_g_code.h" />
     <ClInclude Include="..\..\src\operator\positive_sign.h" />
     <ClInclude Include="..\..\src\operator\reinterpret_cast_operator.h" />
     <ClInclude Include="..\..\src\operator\scope_operator.h" />
@@ -3691,6 +3693,8 @@
     <None Include="..\..\src\math\Makefile" />
     <None Include="..\..\src\my_sql_action.i" />
     <None Include="..\..\src\operator\Makefile" />
+    <None Include="..\..\src\operator\operator_g_code.i" />
+    <None Include="..\..\src\operator\operator_g_code_func.i" />
     <None Include="..\..\src\sql\Makefile" />
     <None Include="..\..\src\stock_db_action.i" />
   </ItemGroup>

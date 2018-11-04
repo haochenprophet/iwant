@@ -24,7 +24,7 @@ Cjoiner_operator::~Cjoiner_operator()
 #endif
 
 #if JOINER_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "JOINER_OPERATOR_TEST\n\n";

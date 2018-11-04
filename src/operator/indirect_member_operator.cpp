@@ -24,7 +24,7 @@ Cindirect_member_operator::~Cindirect_member_operator()
 #endif
 
 #if INDIRECT_MEMBER_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "INDIRECT_MEMBER_OPERATOR_TEST\n\n";

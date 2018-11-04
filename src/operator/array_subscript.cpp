@@ -24,7 +24,7 @@ Carray_subscript::~Carray_subscript()
 #endif
 
 #if ARRAY_SUBSCRIPT_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ARRAY_SUBSCRIPT_TEST\n\n";

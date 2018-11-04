@@ -24,7 +24,7 @@ Cmore_than::~Cmore_than()
 #endif
 
 #if MORE_THAN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MORE_THAN_TEST\n\n";

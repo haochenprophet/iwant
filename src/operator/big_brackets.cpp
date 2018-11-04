@@ -21,7 +21,7 @@ Cbig_brackets::~Cbig_brackets()
 #endif
 
 #if BIG_BRACKETS_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BIG_BRACKETS_TEST\n\n";

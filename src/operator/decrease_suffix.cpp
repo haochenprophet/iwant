@@ -24,7 +24,7 @@ Cdecrease_suffix::~Cdecrease_suffix()
 #endif
 
 #if DECREASE_SUFFIX_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DECREASE_SUFFIX_TEST\n\n";

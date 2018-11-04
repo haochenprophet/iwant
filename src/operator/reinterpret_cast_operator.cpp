@@ -24,7 +24,7 @@ Creinterpret_cast_operator::~Creinterpret_cast_operator()
 #endif
 
 #if REINTERPRET_CAST_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "REINTERPRET_CAST_OPERATOR_TEST\n\n";

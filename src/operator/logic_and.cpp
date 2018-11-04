@@ -24,7 +24,7 @@ Clogic_and::~Clogic_and()
 #endif
 
 #if LOGIC_AND_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOGIC_AND_TEST\n\n";

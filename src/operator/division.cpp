@@ -24,7 +24,7 @@ Cdivision::~Cdivision()
 #endif
 
 #if DIVISION_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DIVISION_TEST\n\n";

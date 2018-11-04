@@ -24,7 +24,7 @@ Cmold_assign::~Cmold_assign()
 #endif
 
 #if MOLD_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MOLD_ASSIGN_TEST\n\n";

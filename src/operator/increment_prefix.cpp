@@ -24,7 +24,7 @@ Cincrement_prefix::~Cincrement_prefix()
 #endif
 
 #if INCREMENT_PREFIX_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "INCREMENT_PREFIX_TEST\n\n";

@@ -24,7 +24,7 @@ Cnew_array::~Cnew_array()
 #endif
 
 #if NEW_ARRAY_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "NEW_ARRAY_TEST\n\n";

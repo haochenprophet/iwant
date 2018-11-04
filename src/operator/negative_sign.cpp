@@ -24,7 +24,7 @@ Cnegative_sign::~Cnegative_sign()
 #endif
 
 #if NEGATIVE_SIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "NEGATIVE_SIGN_TEST\n\n";

@@ -24,7 +24,7 @@ Cspace_operator::~Cspace_operator()
 #endif
 
 #if SPACE_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SPACE_OPERATOR_TEST\n\n";

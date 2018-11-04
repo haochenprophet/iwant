@@ -24,7 +24,7 @@ Cshift_left::~Cshift_left()
 #endif
 
 #if SHIFT_LEFT_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SHIFT_LEFT_TEST\n\n";

@@ -24,7 +24,7 @@ Cbit_xor_assign::~Cbit_xor_assign()
 #endif
 
 #if BIT_XOR_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BIT_XOR_ASSIGN_TEST\n\n";

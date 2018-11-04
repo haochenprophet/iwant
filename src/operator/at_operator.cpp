@@ -22,7 +22,7 @@ Cat_operator::~Cat_operator()
 #endif
 
 #if AT_OPERATOR_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "AT_OPERATOR_TEST\n\n";

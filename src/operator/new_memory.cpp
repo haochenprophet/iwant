@@ -24,7 +24,7 @@ Cnew_memory::~Cnew_memory()
 #endif
 
 #if NEW_MEMORY_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "NEW_MEMORY_TEST\n\n";

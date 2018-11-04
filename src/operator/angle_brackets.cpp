@@ -22,7 +22,7 @@ Cangle_brackets::~Cangle_brackets()
 #endif
 
 #if ANGLE_BRACKETS_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ANGLE_BRACKETS_TEST\n\n";

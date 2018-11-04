@@ -24,7 +24,7 @@ Cdecrease_prefix::~Cdecrease_prefix()
 #endif
 
 #if DECREASE_PREFIX_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DECREASE_PREFIX_TEST\n\n";

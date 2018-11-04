@@ -24,7 +24,7 @@ Clogic_not::~Clogic_not()
 #endif
 
 #if LOGIC_NOT_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOGIC_NOT_TEST\n\n";

@@ -24,7 +24,7 @@ Cexpression_grouping::~Cexpression_grouping()
 #endif
 
 #if EXPRESSION_GROUPING_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "EXPRESSION_GROUPING_TEST\n\n";

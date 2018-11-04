@@ -23,7 +23,7 @@ Cvalue_construction::~Cvalue_construction()
 #endif
 
 #if VALUE_CONSTRUCTION_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "VALUE_CONSTRUCTION_TEST\n\n";

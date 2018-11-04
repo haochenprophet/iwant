@@ -23,7 +23,7 @@ Cdouble_quotes::~Cdouble_quotes()
 #endif
 
 #if DOUBLE_QUOTES_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DOUBLE_QUOTES_TEST\n\n";

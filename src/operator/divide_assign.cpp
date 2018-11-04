@@ -24,7 +24,7 @@ Cdivide_assign::~Cdivide_assign()
 #endif
 
 #if DIVIDE_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DIVIDE_ASSIGN_TEST\n\n";

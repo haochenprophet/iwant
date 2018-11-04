@@ -24,7 +24,7 @@ Cbit_and::~Cbit_and()
 #endif
 
 #if BIT_AND_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BIT_AND_TEST\n\n";

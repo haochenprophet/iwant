@@ -1,3 +1,5 @@
+code class operator
+
 code class scope_operator
 
 code class expression_grouping
@@ -94,6 +96,8 @@ code class apostrophe
 code class double_quotes
 code class angle_brackets
 
+
+code main create_main operator
 
 code main create_main scope_operator
 

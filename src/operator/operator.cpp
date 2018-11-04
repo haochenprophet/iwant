@@ -13,3 +13,18 @@ Coperator::Coperator()
 {
 	this->my_init();
 }
+
+#ifndef OPERATOR_TEST
+#define OPERATOR_TEST 0//1
+#endif
+
+#if OPERATOR_TEST
+#include "operator_all_h_include.h"
+#include "operator_g_code.i"
+int main(int argc, char *argv[])
+{
+	std::cout << "OPERATOR_TEST\n\n";
+
+	return 0;
+}
+#endif 

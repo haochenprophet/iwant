@@ -24,7 +24,7 @@ Csub_assign::~Csub_assign()
 #endif
 
 #if SUB_ASSIGN_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SUB_ASSIGN_TEST\n\n";

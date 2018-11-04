@@ -24,7 +24,7 @@ Cdelete_array::~Cdelete_array()
 #endif
 
 #if DELETE_ARRAY_TEST
-#include "all_h_include.h"
+#include "operator_all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DELETE_ARRAY_TEST\n\n";
