@@ -1,7 +1,7 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
 
-#include "..\object.h"
+#include "../object.h"
 
 namespace n_operator {
 
