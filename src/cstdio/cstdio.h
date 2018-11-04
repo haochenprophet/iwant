@@ -1,7 +1,7 @@
 #ifndef CSTDIO_H
 #define CSTDIO_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_cstdio {
 	class Ccstdio :public Object

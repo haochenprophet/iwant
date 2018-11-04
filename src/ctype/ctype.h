@@ -1,7 +1,7 @@
 #ifndef CTYPE_H
 #define CTYPE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_ctype {
 	class Cctype :public Object
