@@ -13,6 +13,7 @@ enum class CodeAtcion {
 	create_h = BIT0,
 	create_c = BIT1,
 	create_func = BIT2,
+	set_package = BIT3,
 };
 
 #endif

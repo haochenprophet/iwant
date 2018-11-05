@@ -13,17 +13,19 @@ int Ccode::my_init(void *p)
 	this->init_file();
 	this->se = EXTERN_KEYWOED;
 	this->s_term= ".cpp";
+	this->code_buf = nullptr;
 	return 0;
 }
 
 Ccode::Ccode()
 {
 	this->my_init();
+	if (0 == this->allot((int)CODE_BUF_LEN, (void **)&this->code_buf)) exit(-1);//allot memory fail
 }
 
 Ccode::~Ccode()
 {
-
+	this->delete_allot((void **)&this->code_buf);
 }
 
 int Ccode::init_file(char * url )
@@ -42,6 +44,17 @@ int Ccode::init_file(char * url )
 	this->file_h.f_name = GLOBAL_CODE_H;
 	this->file_cpp.f_name = GLOBAL_CODE_I;
 	this->file_func.f_name = GLOBAL_CODE_FUNC_I;
+	return 0;
+}
+
+int Ccode::set_package_action(void *p)
+{
+	if (!(this->action&(ACTION_T)CodeAtcion::set_package)) return -1;
+	if (this->package.length() < 1) return -1;
+
+	this->file_h.f_name = this->package+"_"+GLOBAL_CODE_H;
+	this->file_cpp.f_name = this->package + "_"+GLOBAL_CODE_I;
+	this->file_func.f_name = this->package + "_"+GLOBAL_CODE_FUNC_I;
 	return 0;
 }
 
@@ -100,20 +113,55 @@ void Ccode::create_head()
 {
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		this->file_h.create();
-		this->file_h.f_append((char *)G_CODE_H_DEFINE);//Cclass class; //test
-		this->file_h.f_append((char *)"\t#include \"all_h_include.h\"\n");
+
+		if (this->action&(ACTION_T)CodeAtcion::set_package)
+		{
+			sprintf(this->code_buf, G_CODE_H_DEFINE_PACKAGE,this->upper_str.c_str(), this->upper_str.c_str());//package upper
+			this->file_h.f_append(this->code_buf);//Cclass class; //test
+			sprintf(this->code_buf, G_CODE_ALL_H_PACKAGE, this->package.c_str());
+			this->file_h.f_append(this->code_buf);
+		}
+		else
+		{
+			this->file_h.f_append((char *)G_CODE_H_DEFINE);//Cclass class; //test
+			this->file_h.f_append((char *)G_CODE_ALL_H);
+		}
+
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c)	{
 		this->file_cpp.create();//create file
-		this->file_cpp.f_append((char *)G_CODE_I_DEFINE);
-		this->file_cpp.f_append((char *)"\t#include \"all_h_include.h\"\n\n");//Cclass class; //test
+
+		if (this->action&(ACTION_T)CodeAtcion::set_package)
+		{
+			sprintf(this->code_buf, G_CODE_I_DEFINE_PACKAGE, this->upper_str.c_str(),this->upper_str.c_str());
+			this->file_cpp.f_append(this->code_buf);//Cclass class; //test
+			sprintf(this->code_buf, G_CODE_ALL_H_PACKAGE, this->package.c_str());
+			this->file_cpp.f_append(this->code_buf);
+		}
+		else
+		{
+			this->file_cpp.f_append((char *)G_CODE_I_DEFINE);
+			this->file_cpp.f_append((char *)G_CODE_ALL_H);//Cclass class; //test
+		}
 	}
 
 	if (this->action&(ACTION_T)CodeAtcion::create_func) {
 		this->file_func.create();
-		this->file_func.f_append((char *)G_CODE_FUNC_I_DEFINE);
-		this->file_func.f_append((char *)"void add_objects(Object *p)\n{\n");
+
+
+		if (this->action&(ACTION_T)CodeAtcion::set_package)
+		{
+			sprintf(this->code_buf, G_CODE_FUNC_I_DEFINE_PACKAGE,this->upper_str.c_str(),this->upper_str.c_str());
+			this->file_func.f_append(this->code_buf);//Cclass class; //test
+			sprintf(this->code_buf, G_CODE_ADD_OBJECT_PACKAGE, this->package.c_str());
+			this->file_func.f_append(this->code_buf);
+		}
+		else
+		{
+			this->file_func.f_append((char *)G_CODE_FUNC_I_DEFINE);
+			this->file_func.f_append((char *)G_CODE_ADD_OBJECT);
+		}
 	}
 
 }
@@ -123,7 +171,15 @@ void Ccode::create_tail()
 	if (this->action&(ACTION_T)CodeAtcion::create_h) {
 		
 		if (this->action&(ACTION_T)CodeAtcion::create_func) {
-			this->file_h.f_append((char *)"\tvoid add_objects(Object *p);\n");//h
+			if (this->action&(ACTION_T)CodeAtcion::set_package)
+			{
+				sprintf(this->code_buf, G_CODE_ADD_OBJECT_H_PACKAGE,this->package.c_str());
+				this->file_h.f_append(this->code_buf);//Cclass class; //test
+			}
+			else
+			{
+				this->file_h.f_append((char *)G_CODE_ADD_OBJECT_H);//h
+			}
 		}
 
 		this->file_h.f_append((char *)"#endif\n");//G_CODE_FUNC_I
@@ -131,7 +187,15 @@ void Ccode::create_tail()
 
 	if (this->action&(ACTION_T)CodeAtcion::create_c){
 		this->file_cpp.f_append((char *)"\t#include \"");//is
-		this->file_cpp.f_append((char *)GLOBAL_CODE_FUNC_I);//#include "g_code_func.i"
+		if (this->action&(ACTION_T)CodeAtcion::set_package)
+		{
+			sprintf(this->code_buf, GLOBAL_CODE_FUNC_I_PACKAGE, this->package.c_str());
+			this->file_cpp.f_append(this->code_buf);//Cclass class; //test
+		}
+		else
+		{
+			this->file_cpp.f_append((char *)GLOBAL_CODE_FUNC_I);//#include "g_code_func.i"
+		}
 		this->file_cpp.f_append((char *)"\"\n#endif\n");//is
 	}
 
@@ -145,6 +209,7 @@ int Ccode::create_cmd(int argc, char *argv[])
 {
 	Cpath p;
 	p.s_term = this->s_term;
+	this->set_package_action();//package_file_name
 	this->create_head();
 	do {
 		argc--; if (argc<1)	break;
@@ -158,13 +223,18 @@ int Ccode::create_cmd(int argc, char *argv[])
 
 int Ccode::deal_cmd(int argc, char *argv[])
 {
+	//this->list_cmd(argc, argv);//test
 	if (argc < 2)	return this->help();
 	//get action
-	if (argc < 3) this->action = ((int)CodeAtcion::create_c | (int)CodeAtcion::create_func | (int)CodeAtcion::create_h);
-	if (this->action == 0) this->action = this->get_action(code_action, (int)CODE_ACTION_COUNT, argv[2]);
-	if (this->action == 0) this->action = atoll(argv[2]);//no name 
+	if (argc < 4) this->action = ((int)CodeAtcion::create_c | (int)CodeAtcion::create_func | (int)CodeAtcion::create_h);
+	if (this->action == 0) this->action = this->get_action(code_action, (int)CODE_ACTION_COUNT, argv[3]);
+	if (this->action == 0) this->action = atoll(argv[3]);//no name 
 	if (this->action == 0) return -1;
-
+	if (argc > 2) {
+		this->action |= (ACTION_T)CodeAtcion::set_package;
+		this->package = argv[2];//<pack_name>
+		this->set_upper_str(this->package);//uper_package
+	 }
 	if (this->action&(ACTION_T)CodeAtcion::create_h || this->action&(ACTION_T)CodeAtcion::create_c || this->action&(ACTION_T)CodeAtcion::create_func)
 	{
 		this->init_file(argv[1]);//add path
@@ -176,7 +246,7 @@ int Ccode::deal_cmd(int argc, char *argv[])
 
 int Ccode::help(void *p)
 {
-	printf("Usage:Ccode <src_path> <action>\nExample: Code ../src/\n");
+	printf("Usage:Ccode <src_path> <pack_name> <action>\nExample: Code ../src/ cstdio\n");
 	this->action_help(code_action, (int)CODE_ACTION_COUNT);
 	return 0;
 }

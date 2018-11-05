@@ -575,6 +575,12 @@ void Object::s_toupper(string & str)
 		str[i]=toupper(str[i]);
 }
 
+void Object::set_upper_str(string & s)
+{
+	this->upper_str = s;
+	this->s_toupper(this->upper_str);
+}
+
 int Object::s_replace(string *base,string *tag,string *rep)
 {
 	if(base->empty()||tag->empty()||rep->empty()) return -1;//check empty

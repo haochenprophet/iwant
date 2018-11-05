@@ -171,6 +171,7 @@ namespace n_object {
 		string temp;//keyword template 
 		string s_tag;
 		string s_rep;
+		string  upper_str;
 
 		long locate;//0 start , -1 end , n :locate value 
 		int language;
@@ -262,6 +263,7 @@ namespace n_object {
 		void delete_allot(void **addr);
 
 		void s_toupper(string & str);
+		void set_upper_str(string & s);
 		int s_replace(string *base,string *tag,string *rep);
 		int s_replace(string *base, char *tag, char *rep);
 		int s_replace(string *base);
