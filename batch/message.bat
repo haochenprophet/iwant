@@ -1,4 +1,5 @@
 code class message
+code class message_db
 code class text_message
 code class audio_message
 code class video_message
@@ -65,6 +66,7 @@ code class money_message
 code class price_message
 
 code main create_main  message
+code main create_main  message_db
 code main create_main  text_message
 code main create_main  audio_message
 code main create_main  video_message
