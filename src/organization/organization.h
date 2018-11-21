@@ -1,7 +1,7 @@
 #ifndef ORGANIZATION_H
 #define ORGANIZATION_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_organization {
 	class Corganization :public Object

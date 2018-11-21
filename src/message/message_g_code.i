@@ -60,5 +60,5 @@
 	Cvideo_message  g_video_message ;
 	Cwarning_message  g_warning_message ;
 	Cweather_message  g_weather_message ;
-	#include ""
+	#include "message_g_code_func.i"
 #endif

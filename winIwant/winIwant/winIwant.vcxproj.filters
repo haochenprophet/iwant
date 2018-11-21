@@ -46,6 +46,12 @@
     <Filter Include="operator">
       <UniqueIdentifier>{a77667a7-5e60-4dbc-8dc8-d18a6771a7d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="message">
+      <UniqueIdentifier>{1a6b4357-826e-49b4-999c-5e396eb60bf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="organization">
+      <UniqueIdentifier>{55837dea-e2df-4c92-b670-53bd5953116b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5300,6 +5306,189 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\cmath.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\account_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\action_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\add_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\address_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\affair_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\answer_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\audio_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\broadcast_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\code_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\collect_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\command_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\delete_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\destroy_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\digital_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\error_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\evaluate_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\file_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\follow_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\form_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\forward_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\html_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\image_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\label_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\location_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\mail_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\map_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\mark_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\message_db.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\modify_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\money_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\name_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\note_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\password_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\post_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\price_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\process_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\question_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\receive_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\reference_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\reply_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\revoke_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\reward_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\save_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\score_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\search_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\send_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\table_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\tag_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\task_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\text_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\time_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\track_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\transmit_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\unanswer_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\url_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\video_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\warning_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\weather_message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\organization\organization.cpp">
+      <Filter>organization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\organization\organization_db.cpp">
+      <Filter>organization</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -10679,6 +10868,195 @@
     <ClInclude Include="..\..\src\math\math_g_code.h">
       <Filter>math</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\message\account_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\action_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\add_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\address_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\affair_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\answer_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\audio_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\broadcast_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\code_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\collect_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\command_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\delete_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\destroy_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\digital_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\error_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\evaluate_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\file_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\follow_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\form_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\forward_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\html_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\image_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\label_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\location_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\mail_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\map_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\mark_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\message_db.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\message_g_code.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\modify_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\money_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\name_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\note_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\password_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\post_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\price_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\process_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\question_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\receive_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\reference_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\reply_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\revoke_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\reward_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\save_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\score_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\search_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\send_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\table_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\tag_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\task_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\text_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\time_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\track_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\transmit_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\unanswer_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\url_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\video_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\warning_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\weather_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\organization\organization.h">
+      <Filter>organization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\organization\organization_db.h">
+      <Filter>organization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\message_all_h_include.h">
+      <Filter>message</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -10769,6 +11147,18 @@
     </None>
     <None Include="..\..\src\math\math_g_code_func.i">
       <Filter>math</Filter>
+    </None>
+    <None Include="..\..\src\message\Makefile">
+      <Filter>message</Filter>
+    </None>
+    <None Include="..\..\src\message\message_g_code.i">
+      <Filter>message</Filter>
+    </None>
+    <None Include="..\..\src\message\message_g_code_func.i">
+      <Filter>message</Filter>
+    </None>
+    <None Include="..\..\src\organization\Makefile">
+      <Filter>organization</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
