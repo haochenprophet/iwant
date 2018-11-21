@@ -1,5 +1,5 @@
-#ifndef ALL_H_INCLUDE 
-#define ALL_H_INCLUDE 
+#ifndef MESSAGE_ALL_H_INCLUDE 
+#define MESSAGE_ALL_H_INCLUDE 
 
 #include "account_message.h" 
 #include "action_message.h" 

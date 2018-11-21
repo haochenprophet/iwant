@@ -5,8 +5,8 @@ set WK_PATH=.
 @dir /B %WK_PATH%\*.h >dir.log
 @dir /B %WK_PATH%\sql\*.h >dir_sql.log
 
-@echo #ifndef ALL_H_INCLUDE > %WK_PATH%\message_all_h_include.h
-@echo #define ALL_H_INCLUDE >>%WK_PATH%\message_all_h_include.h
+@echo #ifndef MESSAGE_ALL_H_INCLUDE > %WK_PATH%\message_all_h_include.h
+@echo #define MESSAGE_ALL_H_INCLUDE >>%WK_PATH%\message_all_h_include.h
 @echo.>>%WK_PATH%\message_all_h_include.h
 
 :WAIT
