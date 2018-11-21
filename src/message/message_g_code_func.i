@@ -1,0 +1,66 @@
+#ifndef MESSAGE_G_CODE_FUNC_I
+#define MESSAGE_G_CODE_FUNC_I
+void message_add_objects(Object *p)
+{
+	p->addMe(g_account_message.where());
+	p->addMe(g_action_message.where());
+	p->addMe(g_address_message.where());
+	p->addMe(g_add_message.where());
+	p->addMe(g_affair_message.where());
+	p->addMe(g_answer_message.where());
+	p->addMe(g_audio_message.where());
+	p->addMe(g_broadcast_message.where());
+	p->addMe(g_code_message.where());
+	p->addMe(g_collect_message.where());
+	p->addMe(g_command_message.where());
+	p->addMe(g_delete_message.where());
+	p->addMe(g_destroy_message.where());
+	p->addMe(g_digital_message.where());
+	p->addMe(g_error_message.where());
+	p->addMe(g_evaluate_message.where());
+	p->addMe(g_file_message.where());
+	p->addMe(g_follow_message.where());
+	p->addMe(g_form_message.where());
+	p->addMe(g_forward_message.where());
+	p->addMe(g_html_message.where());
+	p->addMe(g_image_message.where());
+	p->addMe(g_label_message.where());
+	p->addMe(g_location_message.where());
+	p->addMe(g_mail_message.where());
+	p->addMe(g_map_message.where());
+	p->addMe(g_mark_message.where());
+	p->addMe(g_message.where());
+	p->addMe(g_message_db.where());
+	p->addMe(g_modify_message.where());
+	p->addMe(g_money_message.where());
+	p->addMe(g_name_message.where());
+	p->addMe(g_note_message.where());
+	p->addMe(g_password_message.where());
+	p->addMe(g_post_message.where());
+	p->addMe(g_price_message.where());
+	p->addMe(g_process_message.where());
+	p->addMe(g_question_message.where());
+	p->addMe(g_receive_message.where());
+	p->addMe(g_reference_message.where());
+	p->addMe(g_reply_message.where());
+	p->addMe(g_revoke_message.where());
+	p->addMe(g_reward_message.where());
+	p->addMe(g_save_message.where());
+	p->addMe(g_score_message.where());
+	p->addMe(g_search_message.where());
+	p->addMe(g_send_message.where());
+	p->addMe(g_table_message.where());
+	p->addMe(g_tag_message.where());
+	p->addMe(g_task_message.where());
+	p->addMe(g_text_message.where());
+	p->addMe(g_time_message.where());
+	p->addMe(g_track_message.where());
+	p->addMe(g_transmit_message.where());
+	p->addMe(g_unanswer_message.where());
+	p->addMe(g_url_message.where());
+	p->addMe(g_video_message.where());
+	p->addMe(g_warning_message.where());
+	p->addMe(g_weather_message.where());
+
+}
+#endif
