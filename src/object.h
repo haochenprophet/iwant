@@ -143,11 +143,10 @@ namespace n_object {
 	};
 	typedef std::list<ObjectRelation *> LIST_OBJ_RELATION;
 
-	class Object:public Ouuid, Otime
+	class Osetting :public Ouuid, Otime //public object Collection of variables, setting ,data ,...
 	{
-	protected:
-		long id;//object id
 	public:
+		long id;//object id
 		Omove * move;
 		Oinput *input;//set the input point change object input Cparameter
 		Udata udata;
@@ -166,7 +165,7 @@ namespace n_object {
 		string alias;//Alias object name
 		string symbol;//for sign detect
 		string description;
-		
+
 		string syntax;//this for keyword object
 		string temp;//keyword template 
 		string s_tag;
@@ -197,13 +196,16 @@ namespace n_object {
 		std::list<void *> l_audio;//object audio list
 		std::list<void *> l_video;//object vedio list
 		LIST_OBJ_RELATION l_relation;//list relation with other object
-		//url can be by used class Cpath
+									 //url can be by used class Cpath
 		string s_url; //Record a url string 
 		string s_term;
 		wstring ws_url;//Record a url wstring
 		wstring ws_term;
 		string s_cmd; //Record a url string 
+	};
 
+	class Object:public Osetting
+	{
 	public:
 		Object();//set object name
 		~Object();//clears
