@@ -41,6 +41,9 @@ namespace n_my_sql {
 		int deal_cmd(int argc, char *argv[]);
 		int do_action(void * a=nullptr);
 		int create_db(char * db_name);
+		int create_tab(char * db_name, char * tab_name);
+		int create_tab();
+		int create_tab_cmd(void *p =nullptr);
 		int drop_db(char * db_name);
 		int drop_tab(char * db_name,char * tab_name);
 		int verify_id_cmd();//verify_id action cmdd call back func.

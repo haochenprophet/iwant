@@ -18,7 +18,6 @@ int Cmy_sql::my_init(char * password, char * user, char * host, char * use_db, c
 	this->host = host;
 	this->user = user;
 	this->password = password;
-	this->use_db = nullptr;//default init to null
 	if(use_db) this->use_db = use_db;
 	if (!this->use_db&&this->db_name) this->use_db = this->db_name; //when use_db is null set it to db_name .
 	if(!this->sql) this->sql = sql;//Check and Not covered
@@ -27,6 +26,7 @@ int Cmy_sql::my_init(char * password, char * user, char * host, char * use_db, c
 
 Cmy_sql::Cmy_sql()
 {
+	this->use_db = nullptr;//default init to null
 	this->my_init();
 }
 
@@ -245,6 +245,29 @@ int Cmy_sql::create_db(char * db_name)
 	if (this->silent == 0) printf("%s\n", this->sql_buf);
 	return 	this->execute(this->sql_buf);
 }
+
+int Cmy_sql::create_tab(char * db_name, char * tab_name)
+{
+	if (!(db_name&&tab_name)) return -1;
+	sprintf(this->sql_buf, (char *)CREATE_TAB, db_name, tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
+int Cmy_sql::create_tab()
+{
+	return this->create_tab(this->db_name, this->tab_name);
+}
+
+int Cmy_sql::create_tab_cmd(void *p)
+{
+	if (!(this->tab_name&&this->use_db))
+	{
+		std::cout << "cmd:Cmy_sql create_tab [2]password [3]use_db  [4]tab_name \n";
+		return -1;
+	}
+	return this->create_tab(this->use_db, this->tab_name);
+}
 //verify_id
 int Cmy_sql::verify_id_second(void *p1, void *p2, void *p3)
 {
@@ -315,7 +338,7 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
 	if (this->action == (ACTION_T)MySqlAtcion::query) this->execute(this->sql);;
 	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_cmd();
-
+	if (this->action == (ACTION_T)MySqlAtcion::create_tab) this->create_tab_cmd();
 	return 0;
 }
 
