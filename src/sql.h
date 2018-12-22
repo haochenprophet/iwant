@@ -22,7 +22,9 @@ namespace n_sql {
 		SqlOperate sql_opetate;
 		char * db_name;
 		char * tab_name;
+		char * tab_field;
 		char * sql_buf;
+		char * sql;
 		int sql_buf_len;
 	public:
 		Csql();

@@ -16,7 +16,6 @@ namespace n_my_sql {
 		char * user;
 		char * password;
 		char * use_db;
-		char * sql;
 		bool is_connect;
 	public:
 		Cmy_sql();
@@ -37,12 +36,16 @@ namespace n_my_sql {
 		int execute(char * sql,Object *o=nullptr); 
 		int execute(string * sql, Object *o= nullptr);
 		int execute(void *p1,void *p2,void *p3);
+		int output(void *p1, void *p2, void *p3);
 		int func(void *p=nullptr);
 		int deal_cmd(int argc, char *argv[]);
 		int do_action(void * a=nullptr);
 		int create_db(char * db_name);
 		int drop_db(char * db_name);
 		int drop_tab(char * db_name,char * tab_name);
+		int verify_id_cmd();//verify_id action cmdd call back func.
+		int verify_id_first(void *p = nullptr);//verify_id action call back func 1
+		int verify_id_second(void *p1, void *p2, void *p3);//verify_id action call back func 2
 	};
 }
 

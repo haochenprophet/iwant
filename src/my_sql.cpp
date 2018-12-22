@@ -21,7 +21,7 @@ int Cmy_sql::my_init(char * password, char * user, char * host, char * use_db, c
 	this->use_db = nullptr;//default init to null
 	if(use_db) this->use_db = use_db;
 	if (!this->use_db&&this->db_name) this->use_db = this->db_name; //when use_db is null set it to db_name .
-	this->sql = sql;
+	if(!this->sql) this->sql = sql;//Check and Not covered
 	return 0;
 }
 
@@ -77,6 +77,7 @@ int Cmy_sql::connect()
 int Cmy_sql::query(char *sql)
 {
 	if(this->is_error()) return -1;
+	//if (this->silent == 0) printf("Cmy_sql::query(%s)\n", sql);//test ok
 	if(mysql_query(this->mysql,sql))
 	{
 		this->inc_error();
@@ -117,17 +118,17 @@ int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
 	return this->get(this->result,fields,show);
 }
 
-int Cmy_sql::execute(void *p1,void *p2,void *p3)
+int Cmy_sql::output(void *p1, void *p2, void *p3)
 {
-	MYSQL_ROW row=(MYSQL_ROW)p1;
-	unsigned int * num_fields=(unsigned int *)p2;
-    unsigned long *lengths=(unsigned long *)p3;
+	MYSQL_ROW row = (MYSQL_ROW)p1;
+	unsigned int * num_fields = (unsigned int *)p2;
+	unsigned long *lengths = (unsigned long *)p3;
 
-    if(!row||!num_fields||!lengths) return -1;
-    
-	for(int i = 0; i < (int)*num_fields; i++)
+	if (!row || !num_fields || !lengths) return -1;
+
+	for (int i = 0; i < (int)*num_fields; i++)
 	{
-		printf("[%.*s] ", (int) lengths[i],row[i] ? row[i] : "NULL");
+		printf("[%.*s] ", (int)lengths[i], row[i] ? row[i] : "NULL");
 	}
 	printf("\n");
 
@@ -158,7 +159,7 @@ int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row,Object *o)
 		}
 		else
 		{
-			this->execute((void *)row,(void *)&num_fields,(void *)lengths);
+			this->output((void *)row,(void *)&num_fields,(void *)lengths);
 		}
 	}
 	return 0;
@@ -174,13 +175,7 @@ int Cmy_sql::get(void *p,Object *o)//get row
 	return this->get(this->result,this->row,o);
 }
 
-int Cmy_sql::func(void *p)
-{
-	Cmy_sql *m=(Cmy_sql*) p;
-	std::cout<<"Cmy_sql::func\nrow_count="<<m->result->row_count<<"\nfield_count="<<m->result->field_count<<"\ncurrent_field="<<m->result->current_field<<endl;
-	//this->get(this->fields,true);
-	return 0;
-}
+
 
 int Cmy_sql::execute(Object *o)
 {
@@ -250,6 +245,68 @@ int Cmy_sql::create_db(char * db_name)
 	if (this->silent == 0) printf("%s\n", this->sql_buf);
 	return 	this->execute(this->sql_buf);
 }
+//verify_id
+int Cmy_sql::verify_id_second(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test ok
+	this->row = (MYSQL_ROW)p1;
+	//this->num_fields = (unsigned int *)p2;
+	//this->lengths = (unsigned long *)p3;
+	if (!this->row || !p2 || !p3) return -1;
+	this->count++;
+	//printf("[%d]%s\n", this->count, this->row[0]);
+
+	int id = atoi(this->row[0]);
+	if (this->count != id)
+	{
+		sprintf(this->sql_buf,(char*) UPDATE_ID_X, this->db_name, this->tab_name, this->tab_field,this->count,this->tab_field, id);
+		if (this->silent == 0) printf("%s\n", this->sql_buf);
+		this->execute(this->sql_buf);
+		this->sql_opetate = SqlOperate::update;
+	}
+	return 0;
+}
+
+int Cmy_sql::verify_id_first(void *p)
+{
+	this->count = 0;
+	this->sql_opetate = SqlOperate::nothing;
+	this->get((void *)nullptr, (Object *)this);
+
+	if (this->sql_opetate != SqlOperate::nothing)
+	{
+		sprintf(this->sql_buf, ALTER_AUTO_INCREMENT, this->db_name, this->tab_name, this->count + 1);
+		if (this->silent == 0) printf("%s\n", this->sql_buf);
+		this->execute(this->sql_buf);
+	}
+	return 0;
+}
+
+int Cmy_sql::verify_id_cmd()//verify_id action cmdd call back func.
+{
+	if (!(this->tab_field&&this->tab_name&&this->db_name))
+	{
+		std::cout << "cmd:Cmy_sql verify_id [2]password [3]db_name  [4]tab_name  [5]tab_field \n"; 
+		return -1;
+	}
+	sprintf(this->sql_buf, SELECT_ID_X, this->tab_field, this->db_name, this->tab_name);
+	return 	this->execute(this->sql_buf, this);//!->func
+}
+
+int Cmy_sql::execute(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test ok
+	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	return 0;
+}
+
+int Cmy_sql::func(void *p)// callback function
+{
+	//OUT_LINE //test ok
+	if (this->action == (ACTION_T)MySqlAtcion::query) this->get();
+	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_first(p);
+	return 0;
+}
 
 int Cmy_sql::do_action(void * a)
 {
@@ -257,6 +314,7 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
 	if (this->action == (ACTION_T)MySqlAtcion::query) this->execute(this->sql);;
+	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_cmd();
 
 	return 0;
 }
@@ -264,9 +322,10 @@ int Cmy_sql::do_action(void * a)
 int Cmy_sql::deal_cmd(int argc, char *argv[])
 {
 	//check user input
+	//this->list_cmd(argc, argv);//test ok
 	if (argc < 4)
 	{
-		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name \n";
+		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name [5]tab_field \n";
 		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
 		return -1;
 	}
@@ -280,6 +339,7 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 	if (this->action == 0) return -1;
 
 	//init mysql db
+	if (argc > 5) this->tab_field = (char *)argv[5];
 	if (argc > 4) this->tab_name = (char *)argv[4];
 	if (argc > 4) this->db_name = (char *)argv[4];
 	this->use_db = (char *)argv[3];
