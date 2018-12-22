@@ -143,7 +143,7 @@ namespace n_object {
 	};
 	typedef std::list<ObjectRelation *> LIST_OBJ_RELATION;
 
-	class Osetting :public Ouuid, Otime //public object Collection of variables, setting ,data ,...
+	class Osetting :public Ouuid, public Otime //public object Collection of variables, setting ,data ,...
 	{
 	public:
 		long id;//object id
@@ -186,8 +186,8 @@ namespace n_object {
 		std::list<Cmyfunc> ex_func;//extern function list 
 		std::list<CtagItem> l_tag_rule;//for tag rule 
 
-		std::list<Object *> my_mem;//list for  memory address 
-		std::list<Object *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
+		std::list<void *> my_mem;//list for  memory address 
+		std::list<void *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
 		std::list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
 
 		std::list<void *> l_url;//url list

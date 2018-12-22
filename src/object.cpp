@@ -293,7 +293,7 @@ void Object::clear_my_memory(Object *m)
 	Object *p;
 	while (!this->my_mem.empty())
 	{
-		p=this->my_mem.back();
+		p=(Object *)this->my_mem.back();
 		p->exist_list.remove(this);
 		this->my_mem.pop_back();
 	}

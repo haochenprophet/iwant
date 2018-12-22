@@ -2,6 +2,7 @@
 #define ALL_H_INCLUDE 
 
 #include "action.h" 
+#include "action_type.h" 
 #include "bits.h"
 #include "brackets.h" 
 #include "build.h" 
@@ -20,6 +21,7 @@
 #include "exit.h" 
 #include "ex_func.h" 
 #include "ex_func_class.h"
+#include "field.h" 
 #include "file.h" 
 #include "ftp.h" 
 #include "func.h" 
@@ -39,6 +41,7 @@
 #include "my_sql.h" 
 #include "net.h" 
 #include "object.h" 
+#include "object_def.h" 
 #include "operator/operator.h" 
 #include "os.h" 
 #include "path.h" 
