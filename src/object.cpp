@@ -797,9 +797,9 @@ int Object::action_help(Action * a, int count)
 	for (int i = 0; i < count; i++)
 	{
 		if (a[i].t == 0) break;
-		if (a[i].name) printf("%d %s ", (int)a[i].t, a[i].name);
-		if (a[i].help) printf("%s ", a[i].help);
-		else printf("\n");
+		if (a[i].name) printf("%d %s", (int)a[i].t, a[i].name);
+		if (a[i].help) printf(" :%s ", a[i].help);
+		printf("\n");
 	}
 	return 0;
 }

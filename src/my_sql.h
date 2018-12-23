@@ -17,6 +17,7 @@ namespace n_my_sql {
 		char * password;
 		char * use_db;
 		bool is_connect;
+		string uuid_s;
 	public:
 		Cmy_sql();
 		Cmy_sql(char * password,char * user=(char *)"root",char * host=(char *)"127.0.0.1",char * use_db=nullptr,char *sql=(char *)"show databases;");
@@ -46,9 +47,14 @@ namespace n_my_sql {
 		int create_tab_cmd(void *p =nullptr);
 		int drop_db(char * db_name);
 		int drop_tab(char * db_name,char * tab_name);
-		int verify_id_cmd();//verify_id action cmdd call back func.
+		int verify_id_cmd();//verify_id action cmd call back func.
 		int verify_id_first(void *p = nullptr);//verify_id action call back func 1
 		int verify_id_second(void *p1, void *p2, void *p3);//verify_id action call back func 2
+		int update_uuid_second(void *p1, void *p2, void *p3);
+		int update_uuid_first(void *p);
+		int update_uuid_cmd();
+		int add_uuid_cmd();//add_uuid action cmd call back func.
+
 	};
 }
 

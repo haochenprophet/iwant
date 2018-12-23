@@ -305,21 +305,80 @@ int Cmy_sql::verify_id_first(void *p)
 	return 0;
 }
 
-int Cmy_sql::verify_id_cmd()//verify_id action cmdd call back func.
+int Cmy_sql::verify_id_cmd()//verify_id action cmd call back func.
 {
 	if (!(this->tab_field&&this->tab_name&&this->db_name))
 	{
-		std::cout << "cmd:Cmy_sql verify_id [2]password [3]db_name  [4]tab_name  [5]tab_field \n"; 
+		std::cout << VERIFY_ID_HELP << endl;
 		return -1;
 	}
-	sprintf(this->sql_buf, SELECT_ID_X, this->tab_field, this->db_name, this->tab_name);
+	sprintf(this->sql_buf, SELECT_ID_X, this->tab_field, this->use_db, this->tab_name);
 	return 	this->execute(this->sql_buf, this);//!->func
 }
+
+//add_uuid
+int Cmy_sql::update_uuid_second(void *p1, void *p2, void *p3)
+{
+	//OUT_LINE //test ok
+	this->row = (MYSQL_ROW)p1;
+	//this->num_fields = (unsigned int *)p2;
+	//this->lengths = (unsigned long *)p3;
+	if (!this->row || !p2 || !p3) return -1;
+
+	//int id = atoi(this->row[0]);
+	this->create_uuid(this->uuid_s, UUID_FORMAT_2);
+
+	sprintf(this->sql_buf, (char*)UPDATE_UUID, this->db_name, this->tab_name, this->uuid_s.c_str(), this->tab_field, this->row[0]);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	this->execute(this->sql_buf);
+	this->sql_opetate = SqlOperate::update;
+	return 0;
+}
+
+int Cmy_sql::update_uuid_first(void *p)
+{
+	//OUT_LINE //test ok
+	this->count = 0;
+	this->sql_opetate = SqlOperate::nothing;
+	this->get((void *)nullptr, (Object *)this);
+	return 0;
+}
+
+int Cmy_sql::update_uuid_cmd()//add_uuid action cmd call back func.
+{
+	//OUT_LINE //test ok
+
+	if (!(this->tab_field&&this->tab_name&&this->db_name))
+	{
+		std::cout << UPDATE_UUID_HELP << endl;
+		return -1;
+	}
+	sprintf(this->sql_buf, (char*)SELECT_UUID, this->tab_field, this->use_db, this->tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf, this);//!->func
+}
+
+int Cmy_sql::add_uuid_cmd()//add_uuid action cmd call back func.
+{
+	//OUT_LINE //test ok
+
+	if (!(this->tab_field&&this->tab_name&&this->db_name))
+	{
+		std::cout << ADD_UUID_HELP << endl;
+		return -1;
+	}
+	sprintf(this->sql_buf, (char*)ADD_UUID_COLUMN, this->use_db, this->tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return this->execute(this->sql_buf);
+}
+
 
 int Cmy_sql::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test ok
 	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_second(p1, p2, p3);
+	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_second(p1, p2, p3);
+
 	return 0;
 }
 
@@ -328,6 +387,7 @@ int Cmy_sql::func(void *p)// callback function
 	//OUT_LINE //test ok
 	if (this->action == (ACTION_T)MySqlAtcion::query) this->get();
 	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_first(p);
+	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_first(p);
 	return 0;
 }
 
@@ -336,9 +396,12 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::create_db) this->create_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_db) this->drop_db(this->db_name);
 	if (this->action == (ACTION_T)MySqlAtcion::drop_tab) this->drop_tab(this->db_name,this->tab_name);
-	if (this->action == (ACTION_T)MySqlAtcion::query) this->execute(this->sql);;
+	if (this->action == (ACTION_T)MySqlAtcion::query) this->execute(this->sql);
 	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_cmd();
 	if (this->action == (ACTION_T)MySqlAtcion::create_tab) this->create_tab_cmd();
+	if (this->action == (ACTION_T)MySqlAtcion::add_uuid) this->add_uuid_cmd();
+	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_cmd();
+
 	return 0;
 }
 

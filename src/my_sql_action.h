@@ -24,6 +24,8 @@ enum class MySqlAtcion {
 	drop_tab,
 	query,
 	verify_id,
+	add_uuid,
+	update_uuid,
 };
 //alert
 #define ADD_UUID_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `uuid` VARCHAR(45) NOT NULL;"
@@ -36,6 +38,8 @@ enum class MySqlAtcion {
 #define SELECT_ID_X "SELECT %s FROM `%s`.`%s` ;"
 #define UPDATE_ID_X "UPDATE `%s`.`%s` SET `%s`='%d' WHERE `%s`='%d';"
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
+#define SELECT_UUID "SELECT %s FROM `%s`.`%s` ;"
+#define UPDATE_UUID "UPDATE `%s`.`%s` SET `uuid` = '%s' WHERE(`%s` = '%s');"
 
 //other or long define
 #define CREATE_TAB "\
