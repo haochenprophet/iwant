@@ -263,7 +263,7 @@ int Cmy_sql::create_tab_cmd(void *p)
 {
 	if (!(this->tab_name&&this->use_db))
 	{
-		std::cout << "cmd:Cmy_sql create_tab [2]password [3]use_db  [4]tab_name \n";
+		std::cout << CREATE_TAB_HELP<<endl;
 		return -1;
 	}
 	return this->create_tab(this->use_db, this->tab_name);
@@ -411,7 +411,7 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 	//this->list_cmd(argc, argv);//test ok
 	if (argc < 4)
 	{
-		std::cout << "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name [5]tab_field \n";
+		std::cout << CMYSQL_MAIN_HELP<<endl;
 		this->action_help(my_sql_action, (int)MY_SQL_ACTION_COUNT);
 		return -1;
 	}
