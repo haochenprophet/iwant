@@ -50,6 +50,7 @@ I will with as little time as possible and the code, output as much as possible 
 
 5.For 'Object' class use the 'O' ,like Ouuid,Oinput .. 
   namespace name 'n'  n_object , union 'u' or 'U'  like Udata . 
+  
 6.All program should abstract out all the string definitions to separately.
 
 [Building]:
