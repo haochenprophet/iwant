@@ -5517,9 +5517,6 @@
     <ClCompile Include="..\..\src\hardware\protocol.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\hardware\block.cpp">
-      <Filter>hardware</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\hardware\gpio.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
@@ -5535,10 +5532,13 @@
     <ClCompile Include="..\..\src\hardware\pin.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\hardware\register.cpp">
+    <ClCompile Include="..\..\src\hardware\usb.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\hardware\usb.cpp">
+    <ClCompile Include="..\..\src\hardware\block_dev.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\register_hw.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
   </ItemGroup>
@@ -11132,9 +11132,6 @@
     <ClInclude Include="..\..\src\hardware\protocol.h">
       <Filter>hardware</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\hardware\block.h">
-      <Filter>hardware</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\hardware\gpio.h">
       <Filter>hardware</Filter>
     </ClInclude>
@@ -11150,10 +11147,13 @@
     <ClInclude Include="..\..\src\hardware\pin.h">
       <Filter>hardware</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\hardware\register.h">
+    <ClInclude Include="..\..\src\hardware\usb.h">
       <Filter>hardware</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\hardware\usb.h">
+    <ClInclude Include="..\..\src\hardware\block_dev.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\register_hw.h">
       <Filter>hardware</Filter>
     </ClInclude>
   </ItemGroup>

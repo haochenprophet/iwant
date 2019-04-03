@@ -13,10 +13,10 @@ code class bus
 code class usb
 code class i2c
 code class network
-code class block
+code class block_dev
 code class gpio
 code class pin
-code class register
+code class register_hw
 
 code main create_main  hardware
 code main create_main  device
@@ -33,7 +33,7 @@ code main create_main bus
 code main create_main usb
 code main create_main i2c
 code main create_main network
-code main create_main block
+code main create_main block_dev
 code main create_main gpio
 code main create_main pin
-code main create_main register
+code main create_main register_hw

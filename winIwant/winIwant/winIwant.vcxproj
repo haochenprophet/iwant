@@ -22,7 +22,7 @@
     <ProjectGuid>{1EA0EA20-89B8-4851-AE82-DB0376DC7DDA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>winIwant</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -300,7 +300,7 @@
     <ClCompile Include="..\..\src\ftp.cpp" />
     <ClCompile Include="..\..\src\func.cpp" />
     <ClCompile Include="..\..\src\get.cpp" />
-    <ClCompile Include="..\..\src\hardware\block.cpp" />
+    <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
     <ClCompile Include="..\..\src\hardware\cpu.cpp" />
     <ClCompile Include="..\..\src\hardware\device.cpp" />
@@ -314,7 +314,7 @@
     <ClCompile Include="..\..\src\hardware\pcie.cpp" />
     <ClCompile Include="..\..\src\hardware\pin.cpp" />
     <ClCompile Include="..\..\src\hardware\protocol.cpp" />
-    <ClCompile Include="..\..\src\hardware\register.cpp" />
+    <ClCompile Include="..\..\src\hardware\register_hw.cpp" />
     <ClCompile Include="..\..\src\hardware\usb.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\http.cpp" />
@@ -2144,7 +2144,7 @@
     <ClInclude Include="..\..\src\func.h" />
     <ClInclude Include="..\..\src\get.h" />
     <ClInclude Include="..\..\src\g_code.h" />
-    <ClInclude Include="..\..\src\hardware\block.h" />
+    <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
     <ClInclude Include="..\..\src\hardware\cpu.h" />
     <ClInclude Include="..\..\src\hardware\device.h" />
@@ -2158,7 +2158,7 @@
     <ClInclude Include="..\..\src\hardware\pcie.h" />
     <ClInclude Include="..\..\src\hardware\pin.h" />
     <ClInclude Include="..\..\src\hardware\protocol.h" />
-    <ClInclude Include="..\..\src\hardware\register.h" />
+    <ClInclude Include="..\..\src\hardware\register_hw.h" />
     <ClInclude Include="..\..\src\hardware\usb.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\http.h" />
