@@ -52,6 +52,9 @@
     <Filter Include="organization">
       <UniqueIdentifier>{55837dea-e2df-4c92-b670-53bd5953116b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="hardware">
+      <UniqueIdentifier>{d5aface7-0885-405a-a2fc-e0f922faa5f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5489,6 +5492,54 @@
     </ClCompile>
     <ClCompile Include="..\..\src\organization\organization_db.cpp">
       <Filter>organization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\bus.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\cpu.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\device.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\driver.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\hardware.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\io.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\memory.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\protocol.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\block.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\gpio.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\i2c.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\network.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\pcie.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\pin.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\register.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\usb.cpp">
+      <Filter>hardware</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -11056,6 +11107,54 @@
     </ClInclude>
     <ClInclude Include="..\..\src\message\message_all_h_include.h">
       <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\bus.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\cpu.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\device.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\driver.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\hardware.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\io.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\memory.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\protocol.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\block.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\gpio.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\i2c.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\network.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\pcie.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\pin.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\register.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\usb.h">
+      <Filter>hardware</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
