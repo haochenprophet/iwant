@@ -11,6 +11,9 @@
 #define DROP_DB_HELP "cmd:Cmy_sql drop_db password db_name "
 #define DROP_TAB_HELP "cmd:Cmy_sql drop_tab password db_name  tab_name "
 #define QUERY_HELP "cmd:Cmy_sql query password sql_string "
+#define SHOW_DB_HELP "cmd:Cmy_sql show_db password "
+#define SHOW_TAB_HELP "cmd:Cmy_sql show_tab password db_name "
+#define SHOW_COL_HELP "cmd:Cmy_sql show_col password db_name tab_name "
 
 Action my_sql_action[] = {
 	{ (int)MySqlActionClass::create,(ACTION_T)MySqlAtcion::create_db , EatcionRelation::equal , nullptr ,(char *)"create_db" ,(char *)CREATE_DB_HELP },
@@ -19,8 +22,11 @@ Action my_sql_action[] = {
 	{ (int)MySqlActionClass::drop,(ACTION_T)MySqlAtcion::drop_tab , EatcionRelation::equal , nullptr ,(char *)"drop_tab",(char *)DROP_TAB_HELP },
 	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::query , EatcionRelation::equal , nullptr ,(char *)"query",(char *)QUERY_HELP },
 	{ (int)MySqlActionClass::update,(ACTION_T)MySqlAtcion::verify_id , EatcionRelation::equal , nullptr ,(char *)"verify_id",(char *)VERIFY_ID_HELP },
-	{ (int)MySqlActionClass::alert,(ACTION_T)MySqlAtcion::add_uuid , EatcionRelation::equal , nullptr ,(char *)"add_uuid",(char*) ADD_UUID_HELP },
+	{ (int)MySqlActionClass::alert,(ACTION_T)MySqlAtcion::add_uuid , EatcionRelation::equal , nullptr ,(char *)"add_uuid",(char*)ADD_UUID_HELP },
 	{ (int)MySqlActionClass::alert,(ACTION_T)MySqlAtcion::update_uuid , EatcionRelation::equal , nullptr ,(char *)"update_uuid" ,(char *)ADD_UUID_HELP},
+	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_db , EatcionRelation::equal , nullptr ,(char *)"show_db" ,(char *)SHOW_DB_HELP },
+	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_tab , EatcionRelation::equal , nullptr ,(char *)"show_tab" ,(char *)SHOW_TAB_HELP },
+	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_col , EatcionRelation::equal , nullptr ,(char *)"show_col" ,(char *)SHOW_COL_HELP },
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

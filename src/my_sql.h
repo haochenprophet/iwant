@@ -54,6 +54,9 @@ namespace n_my_sql {
 		int update_uuid_first(void *p);
 		int update_uuid_cmd();
 		int add_uuid_cmd();//add_uuid action cmd call back func.
+		int show_db();
+		int show_tab(char * db_name);
+		int show_col(char * db_name, char * tab_name);
 
 	};
 }

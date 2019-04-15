@@ -371,7 +371,29 @@ int Cmy_sql::add_uuid_cmd()//add_uuid action cmd call back func.
 	if (this->silent == 0) printf("%s\n", this->sql_buf);
 	return this->execute(this->sql_buf);
 }
+//show
+int Cmy_sql::show_db()
+{
+	sprintf(this->sql_buf, SHOW_DB);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
 
+int Cmy_sql::show_tab(char * db_name)
+{
+	if (!db_name) return -1;
+	sprintf(this->sql_buf, SHOW_TAB, db_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
+int Cmy_sql::show_col(char * db_name, char * tab_name)
+{
+	if (!db_name||!tab_name) return -1;
+	sprintf(this->sql_buf, SHOW_COL, db_name, tab_name);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
 
 int Cmy_sql::execute(void *p1, void *p2, void *p3)
 {
@@ -388,6 +410,9 @@ int Cmy_sql::func(void *p)// callback function
 	if (this->action == (ACTION_T)MySqlAtcion::query) this->get();
 	if (this->action == (ACTION_T)MySqlAtcion::verify_id) this->verify_id_first(p);
 	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_first(p);
+	if (this->action == (ACTION_T)MySqlAtcion::show_db) this->get();
+	if (this->action == (ACTION_T)MySqlAtcion::show_tab) this->get();
+	if (this->action == (ACTION_T)MySqlAtcion::show_col) this->get();
 	return 0;
 }
 
@@ -401,6 +426,9 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::create_tab) this->create_tab_cmd();
 	if (this->action == (ACTION_T)MySqlAtcion::add_uuid) this->add_uuid_cmd();
 	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_cmd();
+	if (this->action == (ACTION_T)MySqlAtcion::show_db) this->show_db();
+	if (this->action == (ACTION_T)MySqlAtcion::show_tab) this->show_tab(this->db_name);
+	if (this->action == (ACTION_T)MySqlAtcion::show_col) this->show_col(this->db_name, this->tab_name);
 
 	return 0;
 }
