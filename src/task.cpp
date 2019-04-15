@@ -3,7 +3,7 @@
 Ctask::Ctask()
 {
 	this->name = "Ctask";
-	this->name += std::to_string(this->id);
+//	this->name += std::to_string(this->id);
 	this->alias = "task";
 }
 

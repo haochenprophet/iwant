@@ -427,8 +427,8 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::add_uuid) this->add_uuid_cmd();
 	if (this->action == (ACTION_T)MySqlAtcion::update_uuid) this->update_uuid_cmd();
 	if (this->action == (ACTION_T)MySqlAtcion::show_db) this->show_db();
-	if (this->action == (ACTION_T)MySqlAtcion::show_tab) this->show_tab(this->db_name);
-	if (this->action == (ACTION_T)MySqlAtcion::show_col) this->show_col(this->db_name, this->tab_name);
+	if (this->action == (ACTION_T)MySqlAtcion::show_tab) this->show_tab(this->use_db);
+	if (this->action == (ACTION_T)MySqlAtcion::show_col) this->show_col(this->use_db, this->tab_name);
 
 	return 0;
 }

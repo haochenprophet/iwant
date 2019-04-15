@@ -12,8 +12,8 @@
 #define DROP_TAB_HELP "cmd:Cmy_sql drop_tab password db_name  tab_name "
 #define QUERY_HELP "cmd:Cmy_sql query password sql_string "
 #define SHOW_DB_HELP "cmd:Cmy_sql show_db password "
-#define SHOW_TAB_HELP "cmd:Cmy_sql show_tab password db_name "
-#define SHOW_COL_HELP "cmd:Cmy_sql show_col password db_name tab_name "
+#define SHOW_TAB_HELP "cmd:Cmy_sql show_tab password use_db "
+#define SHOW_COL_HELP "cmd:Cmy_sql show_col password use_db tab_name "
 
 Action my_sql_action[] = {
 	{ (int)MySqlActionClass::create,(ACTION_T)MySqlAtcion::create_db , EatcionRelation::equal , nullptr ,(char *)"create_db" ,(char *)CREATE_DB_HELP },
