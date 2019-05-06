@@ -180,11 +180,12 @@ int Cmy_sql::get(void *p,Object *o)//get row
 int Cmy_sql::execute(Object *o)
 {
 	if(this->is_error()) return -1;
-
+	this->execute_count = 0;
 	do {
 		this->result = mysql_store_result(this->mysql);	// did current statement return data? 
 		if(this->result)
 		{
+			this->execute_count ++;
 			o->execute( (void*) this); //point Cmy_sql to call back
 			//mysql_free_result(this->result);
 		}
@@ -395,6 +396,14 @@ int Cmy_sql::show_col(char * db_name, char * tab_name)
 	return 	this->execute(this->sql_buf);
 }
 
+int Cmy_sql::is_exist(char* db_name, char* tab_name,char * col_name,char *col_value)
+{
+	if (db_name && tab_name && col_name && col_value) return -1;//check input
+	sprintf(this->sql_buf, IS_EXIST, col_name, db_name, tab_name, col_name,col_value);
+	if (this->silent == 0) printf("%s\n", this->sql_buf);
+	return 	this->execute(this->sql_buf);
+}
+
 int Cmy_sql::execute(void *p1, void *p2, void *p3)
 {
 	//OUT_LINE //test ok
@@ -429,6 +438,7 @@ int Cmy_sql::do_action(void * a)
 	if (this->action == (ACTION_T)MySqlAtcion::show_db) this->show_db();
 	if (this->action == (ACTION_T)MySqlAtcion::show_tab) this->show_tab(this->use_db);
 	if (this->action == (ACTION_T)MySqlAtcion::show_col) this->show_col(this->use_db, this->tab_name);
+	if (this->action == (ACTION_T)MySqlAtcion::is_exist) this->is_exist(this->use_db, this->tab_name,this->tab_field,this->col_value);
 
 	return 0;
 }
@@ -453,6 +463,7 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 	if (this->action == 0) return -1;
 
 	//init mysql db
+	if (argc > 6) this->col_value = (char*)argv[6];
 	if (argc > 5) this->tab_field = (char *)argv[5];
 	if (argc > 4) this->tab_name = (char *)argv[4];
 	if (argc > 4) this->db_name = (char *)argv[4];

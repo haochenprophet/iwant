@@ -57,7 +57,7 @@ namespace n_my_sql {
 		int show_db();
 		int show_tab(char * db_name);
 		int show_col(char * db_name, char * tab_name);
-
+		int is_exist(char * db_name, char * tab_name, char * col_name, char * col_value);
 	};
 }
 

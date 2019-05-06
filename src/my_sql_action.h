@@ -29,6 +29,7 @@ enum class MySqlAtcion {
 	show_db,
 	show_tab,
 	show_col,
+	is_exist,
 };
 //alert
 #define ADD_UUID_COLUMN "ALTER TABLE `%s`.`%s` ADD COLUMN `uuid` VARCHAR(45) NOT NULL;"
@@ -43,6 +44,7 @@ enum class MySqlAtcion {
 #define ALTER_AUTO_INCREMENT "ALTER TABLE `%s`.`%s` AUTO_INCREMENT =%d;"
 #define SELECT_UUID "SELECT %s FROM `%s`.`%s` ;"
 #define UPDATE_UUID "UPDATE `%s`.`%s` SET `uuid` = '%s' WHERE(`%s` = '%s');"
+#define IS_EXIST "SELECT %s FROM `%s`.`%s`  WHERE %s = \"%s\"  LIMIT 1;"
 //show
 #define SHOW_DB "SHOW DATABASES ;"
 #define SHOW_TAB "SHOW TABLES FROM %s ;" //db

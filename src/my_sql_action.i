@@ -2,7 +2,7 @@
 #define MY_SQL_ACTION_I
 #include "my_sql_action.h"
 
-#define CMYSQL_MAIN_HELP "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name [5]tab_field "
+#define CMYSQL_MAIN_HELP "Cmy_sql request cmd line input: [1]action [2]password [3]use_db_name |sql [4]tab_name | db_name [5]tab_field [6]col_value"
 #define ADD_UUID_HELP  "cmd:Cmy_sql add_uuid password use_db  tab_name"
 #define UPDATE_UUID_HELP "cmd:Cmy_sql update_uuid password use_db  tab_name  id_field "
 #define VERIFY_ID_HELP "cmd:Cmy_sql verify_id password use_db  tab_name  id_field"
@@ -14,6 +14,7 @@
 #define SHOW_DB_HELP "cmd:Cmy_sql show_db password "
 #define SHOW_TAB_HELP "cmd:Cmy_sql show_tab password use_db "
 #define SHOW_COL_HELP "cmd:Cmy_sql show_col password use_db tab_name "
+#define IS_EXIST_HELP "cmd:Cmy_sql is_exist password use_db tab_name col_name col_value"
 
 Action my_sql_action[] = {
 	{ (int)MySqlActionClass::create,(ACTION_T)MySqlAtcion::create_db , EatcionRelation::equal , nullptr ,(char *)"create_db" ,(char *)CREATE_DB_HELP },
@@ -27,6 +28,7 @@ Action my_sql_action[] = {
 	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_db , EatcionRelation::equal , nullptr ,(char *)"show_db" ,(char *)SHOW_DB_HELP },
 	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_tab , EatcionRelation::equal , nullptr ,(char *)"show_tab" ,(char *)SHOW_TAB_HELP },
 	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::show_col , EatcionRelation::equal , nullptr ,(char *)"show_col" ,(char *)SHOW_COL_HELP },
+	{ (int)MySqlActionClass::query,(ACTION_T)MySqlAtcion::is_exist , EatcionRelation::equal , nullptr ,(char*)"is_exist" ,(char*)IS_EXIST_HELP },
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

@@ -8,6 +8,7 @@ Csql::Csql()
 	this->db_name = nullptr;
 	this->tab_name = nullptr;
 	this->tab_field = nullptr;
+	this->col_value = nullptr;
 	this->sql_buf = nullptr;
 	this->sql = nullptr;
 	this->sql_buf_len = this->allot(PAGE_4K, (void **)&this->sql_buf);

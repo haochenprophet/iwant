@@ -157,6 +157,7 @@ namespace n_object {
 		ActionInfo * action_info;
 		int error; //error count >0 error
 		int count;
+		int execute_count;
 		int cin_buf_len;
 		char *cin_buf;
 
