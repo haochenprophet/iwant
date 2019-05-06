@@ -107,6 +107,7 @@ Object::Object()
 
 	this->language=EnglishLanguage;
 	this->count=0;
+	this->execute_count = 0;
 	this->direction=0;
 	this->value=0;
 	this->velocity=0;

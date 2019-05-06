@@ -401,7 +401,9 @@ int Cmy_sql::is_exist(char* db_name, char* tab_name,char * col_name,char *col_va
 	if (db_name && tab_name && col_name && col_value) return -1;//check input
 	sprintf(this->sql_buf, IS_EXIST, col_name, db_name, tab_name, col_name,col_value);
 	if (this->silent == 0) printf("%s\n", this->sql_buf);
-	return 	this->execute(this->sql_buf);
+	this->execute_count = 0;
+	this->execute(this->sql_buf);
+	return 	this->execute_count;
 }
 
 int Cmy_sql::execute(void *p1, void *p2, void *p3)
