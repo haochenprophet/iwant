@@ -285,6 +285,8 @@
     <ClCompile Include="..\..\src\ctype\wctrans.cpp" />
     <ClCompile Include="..\..\src\ctype\wctype.cpp" />
     <ClCompile Include="..\..\src\data.cpp" />
+    <ClCompile Include="..\..\src\database\database.cpp" />
+    <ClCompile Include="..\..\src\database\tree_db.cpp" />
     <ClCompile Include="..\..\src\dictionary.cpp" />
     <ClCompile Include="..\..\src\dictionary\hello.cpp" />
     <ClCompile Include="..\..\src\die.cpp" />
@@ -1986,6 +1988,7 @@
     <ClInclude Include="..\..\src\block.h" />
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build.h" />
+    <ClInclude Include="..\..\src\build_action.h" />
     <ClInclude Include="..\..\src\but.h" />
     <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\code.h" />
@@ -2127,6 +2130,8 @@
     <ClInclude Include="..\..\src\ctype\wctrans.h" />
     <ClInclude Include="..\..\src\ctype\wctype.h" />
     <ClInclude Include="..\..\src\data.h" />
+    <ClInclude Include="..\..\src\database\database.h" />
+    <ClInclude Include="..\..\src\database\tree_db.h" />
     <ClInclude Include="..\..\src\data_class.h" />
     <ClInclude Include="..\..\src\dictionary.h" />
     <ClInclude Include="..\..\src\dictionary\hello.h" />
@@ -3852,6 +3857,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="..\..\src\build_action.i" />
     <None Include="..\..\src\code_action.i" />
     <None Include="..\..\src\cstdio\cstdio_g_code.i" />
     <None Include="..\..\src\cstdio\cstdio_g_code_func.i" />
@@ -3865,6 +3871,7 @@
     <None Include="..\..\src\ctype\ctype_g_code.i" />
     <None Include="..\..\src\ctype\ctype_g_code_func.i" />
     <None Include="..\..\src\ctype\Makefile" />
+    <None Include="..\..\src\database\Makefile" />
     <None Include="..\..\src\dictionary\Makefile" />
     <None Include="..\..\src\ex_func_class.h" />
     <None Include="..\..\src\g_code.i" />

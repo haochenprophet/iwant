@@ -1,4 +1,6 @@
 #include "build.h"
+#include "build_action.i"
+
 int Cbuild::my_init(void *p)
 {
 	this->name = "Cbuild";

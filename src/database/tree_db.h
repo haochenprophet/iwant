@@ -1,7 +1,7 @@
 #ifndef TREE_DB_H
 #define TREE_DB_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_tree_db {
 	class Ctree_db :public Object

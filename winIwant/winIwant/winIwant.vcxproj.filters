@@ -55,6 +55,9 @@
     <Filter Include="hardware">
       <UniqueIdentifier>{d5aface7-0885-405a-a2fc-e0f922faa5f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{1f76c98d-2fe3-48c4-aafa-bc3022de4d18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5540,6 +5543,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\hardware\register_hw.cpp">
       <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\database\database.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\database\tree_db.cpp">
+      <Filter>database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -11156,6 +11165,15 @@
     <ClInclude Include="..\..\src\hardware\register_hw.h">
       <Filter>hardware</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\database\database.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\database\tree_db.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -11258,6 +11276,12 @@
     </None>
     <None Include="..\..\src\organization\Makefile">
       <Filter>organization</Filter>
+    </None>
+    <None Include="..\..\src\database\Makefile">
+      <Filter>database</Filter>
+    </None>
+    <None Include="..\..\src\build_action.i">
+      <Filter>src</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
