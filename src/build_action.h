@@ -6,7 +6,7 @@
 enum class CbuileAtcionClass
 {
 	none,
-	create_all_h_inclued,
+	create,
 };
 
 enum class CbuileAtcion {
