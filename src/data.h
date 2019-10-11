@@ -40,6 +40,7 @@ namespace n_data {
 		double *dp;
 		std::string *ss;
 		std::wstring *sws;
+		void * data;//Placeholder can be used point for append other datatype memory space 
 	}u_data;
 
 	enum class UdataType{
