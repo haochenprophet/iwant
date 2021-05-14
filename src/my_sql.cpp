@@ -327,7 +327,7 @@ int Cmy_sql::update_uuid_second(void *p1, void *p2, void *p3)
 	if (!this->row || !p2 || !p3) return -1;
 
 	//int id = atoi(this->row[0]);
-	this->create_uuid(this->uuid_s, UUID_FORMAT_2);
+	this->create_uuid(this->uuid_s, (char*)UUID_FORMAT_2);
 
 	sprintf(this->sql_buf, (char*)UPDATE_UUID, this->db_name, this->tab_name, this->uuid_s.c_str(), this->tab_field, this->row[0]);
 	if (this->silent == 0) printf("%s\n", this->sql_buf);
