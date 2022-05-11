@@ -50,7 +50,7 @@ namespace n_relation {
 	public:
 		Orelation() { this->type = RelationType::none; this->parameter = nullptr; }
 		//set
-		int set(void* p, RelationType t=RelationType::none) { this->parameter = p; this->type = t; }
+		int set(void* p, RelationType t=RelationType::none) { this->parameter = p; this->type = t;  return 0;}
 
 	};
 

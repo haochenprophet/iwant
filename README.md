@@ -60,9 +60,12 @@ I will recording all human history and activities .
 request :Need C + + compiler
 
 1. how to building in linux: 
-	depend insall: uuid-dev,libmysqld-dev
-		ie: sudo apt-get install uuid-dev
-		    sudo apt-get install libmysqld-dev
+	depend insall: uuid-dev,make,g++,libmysqlclient-dev
+
+	  libmysqlclient-dev: https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/#apt-repo-fresh-install
+		ie: sudo apt-get install uuid-dev make g++ 
+		    sudo apt-get install libmysqlclient-dev
+
 	step 1: cd src
 	step 2: make
 

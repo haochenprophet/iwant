@@ -35,7 +35,7 @@ namespace n_input {
 	public:
 		Oinput() { this->type = InputType::none; this->parameter = nullptr; }
 		//set
-		int set(void* p, InputType t=InputType::none) { this->parameter = p; this->type = t; }
+		int set(void* p, InputType t=InputType::none) { this->parameter = p; this->type = t; return 0;}
 		//computer
 		virtual int scan(void *p=nullptr) { return -1; }//p:parameter ,i:input
 		virtual int record(void *p=nullptr) { return -1; } //input from record
