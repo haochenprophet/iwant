@@ -68,7 +68,8 @@ request :Need C + + compiler
 
 	step 1: cd src
 	step 2: make
-
+          Build class example: sh ../batch/build_control_class.sh
+  
 2. how to building in windows:
 	step 1: install vs 2015 or least .
 	step 2: using the vs 2015 open "winIwant.sln"

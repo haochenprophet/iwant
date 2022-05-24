@@ -259,7 +259,7 @@ int Ccode::help(void *p)
 #include "g_code.i"
 int main(int argc, char *argv[])
 {
-	std::cout << "CODE_TEST\n\n";
+	WHERE_I;
 	Ccode c;
 	add_objects(&c);
 	if (argc < 2) { c.my_family(); return -1; }
