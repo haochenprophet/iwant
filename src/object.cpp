@@ -1,4 +1,5 @@
 #include "object.h"
+#include "g_code.i"//for Object::add_global_objects()
 
 #ifndef OBJECT_TEST
 #define OBJECT_TEST 0//1
@@ -207,6 +208,16 @@ void Object::addMe(Object * o)
 		o->exist_family.push_back(this);
 	}
 	else this->family.push_back(this);
+}
+
+void Object::add_global_objects(Object *p) //call g_code_func.i-> void add_objects(Object *p) for global object 
+{
+	add_objects(p);
+}
+
+void Object::add_global_objects()
+{
+	this->add_global_objects(this);
 }
 
 void Object::removeMe(void * item)

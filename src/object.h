@@ -215,6 +215,8 @@ namespace n_object {
 		int add_relation(Object *o, Orelation * r);//add obj relation to object relation list
 		int clear_relation();
 		void addMe(Object *o=nullptr);//add obj to family
+		void add_global_objects(Object *p); //call g_code_func.i-> void add_objects(Object *p)
+		void add_global_objects();
 		void removeMe(void * item); //from other class
 		void remove_exist_family();
 		int  sort_family(void *p=nullptr);//p point cmpare function : bool cmp_family(Object & first, Object & second)

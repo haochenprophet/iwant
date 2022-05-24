@@ -256,12 +256,12 @@ int Ccode::help(void *p)
 #endif
 
 #if CODE_TEST
-#include "g_code.i"
+
 int main(int argc, char *argv[])
 {
 	WHERE_I;
 	Ccode c;
-	add_objects(&c);
+	c.add_global_objects();
 	if (argc < 2) { c.my_family(); return -1; }
 	c.dispatch_cmd(argc, argv);
 	return 0;
