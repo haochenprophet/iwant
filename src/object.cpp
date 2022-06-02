@@ -117,14 +117,14 @@ Object::Object()
 	this->input = nullptr;
 	this->move = nullptr;
 	this->register_all_signal();
-#if OBJECT_DEBUG
+#if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
 }
 
 Object::~Object()
 {
-#if OBJECT_DEBUG
+#if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
 	this->family.clear();
@@ -183,7 +183,7 @@ int Object::add_relation(Object *o, Orelation * r)//add obj relation to object r
 
 int Object::clear_relation()
 {
-#if OBJECT_DEBUG
+#if OBJECT_DEBUG>2
 	AT_LINE
 #endif
 	ObjectRelation * obj_r;
@@ -1140,7 +1140,7 @@ int Object::dispatch_runme(void * myname, void *p)
 	{
 		o = (Object *)*it;
 #if OBJECT_DEBUG
-		AT_LINE this->myName();
+		AT_LINE o->myName();
 #endif
 		ret = o->dispatch_runme(myname, p);
 		if (ret == -1) continue;//do-nothing or not find , find next object runme()
@@ -1200,7 +1200,7 @@ int Object::runme(void * myname, void *p) //p:parameter
 
 	if (strcmp((char *)myname, (char *)"system") == 0)
 	{
-		if(p) return system((char *)p);
+		if(p) return system((char *)p);AT_LINE;
 		return -1;
 	}
 	return -1;

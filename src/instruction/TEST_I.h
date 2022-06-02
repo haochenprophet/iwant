@@ -1,5 +1,5 @@
-#ifndef TEST_H
-#define TEST_H
+#ifndef TEST_I_H
+#define TEST_I_H
 
 #include "../object.h"
 

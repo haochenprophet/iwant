@@ -1,5 +1,5 @@
-#ifndef REGISTER_H
-#define REGISTER_H
+#ifndef _REGISTER_H
+#define _REGISTER_H
 
 #include "../object.h"
 

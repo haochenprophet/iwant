@@ -22,3 +22,4 @@ src/string/*.dll
 batch/*.exe
 batch/*.dll
 iwant
+src/hardware/hardware

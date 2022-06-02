@@ -3,6 +3,7 @@ set WK_PATH=..\src
 
 @if exist %WK_PATH%\all_h_include.h del /F %WK_PATH%\all_h_include.h
 @dir /B %WK_PATH%\*.h >dir.log
+@dir /B %WK_PATH%\hardware\*.h >dir_hardware.log
 @dir /B %WK_PATH%\sql\*.h >dir_sql.log
 @dir /B %WK_PATH%\dictionary\*.h >dir_dictionary.log
 @dir /B %WK_PATH%\instruction\*.h >dir_instruction.log
@@ -18,6 +19,7 @@ set WK_PATH=..\src
 @if not exist dir.log goto WAIT
 
 for /F " eol=;" %%s in (dir.log) do @echo #include "%%s" >>%WK_PATH%\all_h_include.h
+for /F " eol=;" %%s in (dir_hardware.log) do @echo #include "hardware/%%s" >>%WK_PATH%\all_h_include.h
 for /F " eol=;" %%s in (dir_sql.log) do @echo #include "sql/%%s" >>%WK_PATH%\all_h_include.h
 for /F " eol=;" %%s in (dir_dictionary.log) do @echo #include "dictionary/%%s" >>%WK_PATH%\all_h_include.h
 for /F " eol=;" %%s in (dir_instruction.log) do @echo #include "instruction/%%s" >>%WK_PATH%\all_h_include.h

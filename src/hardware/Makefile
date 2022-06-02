@@ -1,14 +1,14 @@
 
-MK_TAG = iwant
+MK_TAG = hardware
 
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1 -D$(debug)_DEBUG=1 \
 	-DSTATIC_CONCPP \
 	-Wl,-Bdynamic \
-	-o $(MK_TAG) *.cpp $(src) $(sql) \
+	-o $(MK_TAG) *.cpp ../*.cpp $(src) $(sql) \
 	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz \
-	-I./ -I $(MYSQL_CONCPP_DIR)/include
+	-I./ -I../ -I $(MYSQL_CONCPP_DIR)/include
 
 all : 
 	g++ $(CFLAGS)

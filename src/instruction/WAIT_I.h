@@ -1,5 +1,5 @@
-#ifndef WAIT_H
-#define WAIT_H
+#ifndef WAIT_I_H
+#define WAIT_I_H
 
 #include "../object.h"
 

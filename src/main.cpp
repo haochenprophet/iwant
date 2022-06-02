@@ -91,7 +91,7 @@ int Cmain::deal_cmd(int argc, char *argv[])
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	std::cout << "MAIN_TEST\n\n";
+	WHERE_I;
 	//Cuuid uuid;
 	//std::cout << uuid.uuid << endl;
 
