@@ -202,7 +202,7 @@ namespace n_object {
 		string s_term;
 		wstring ws_url;//Record a url wstring
 		wstring ws_term;
-		string s_cmd; //Record a url string 
+		string s_cmd; //Record a command string 
 	};
 
 	class Object:public Osetting
