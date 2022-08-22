@@ -823,7 +823,21 @@ ACTION_T Object::get_action(Action * a, int count, char * name)
 		if (a[i].t == 0) break;
 		if (0 == strcmp(a[i].name, name)) return a[i].t;
 	}
-	return (ACTION_T)0;
+	return (ACTION_T)0;//not find return  none_action 
+}
+
+bool Object::get_action(Action * a, int count, char * name, ACTION_T * out)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (0 == strcmp(a[i].name, name))
+		{
+			* out=a[i].t;
+			 return  true;//find return true
+		}
+	}
+	return false;//not find return false
 }
 
 Object * Object::get_class()//object address

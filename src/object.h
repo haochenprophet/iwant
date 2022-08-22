@@ -309,6 +309,7 @@ namespace n_object {
 		int deal_action(Action * a, int count, Object * o= nullptr);//do action table 
 		int action_help(Action * a, int count);
 		ACTION_T get_action(Action * a, int count,char * name);
+		bool get_action(Action * a, int count, char * name, ACTION_T * out);
 		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS

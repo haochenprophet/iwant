@@ -1,7 +1,7 @@
 #ifndef ACTION_TYPE_H
 #define ACTION_TYPE_H
 
-typedef  unsigned long long ACTION_T;
+typedef  unsigned long long ACTION_T; //0 : reserve for none action 
 
 //action and action type relation
 enum class EatcionRelation {
