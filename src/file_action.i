@@ -17,12 +17,15 @@
 #define FILE_DEL_HELP   "del   <FileName>"
 //rename
 #define FILE_RENAME_HELP "rename <OldFileName> [NewFileName]"
-#define FILE_RN_HELP   "rn   <OldFileName> [OldFileName]"
-#define FILE_MOVE_HELP   "move   <OldFileName> [OldFileName]"
-#define FILE_MV_HELP   "mv   <OldFileName> [OldFileName]"
+#define FILE_RN_HELP   "rn   <OldFileName> [NewFileName]"
+#define FILE_MOVE_HELP   "move   <OldFileName> [NewFileName]"
+#define FILE_MV_HELP   "mv   <OldFileName> [NewFileName]"
 
 #define FILE_EXIST_HELP "exist <FileName>"
 #define FILE_EX_HELP   "ex   <FileName>"
+
+#define FILE_SIZE_HELP "size <FileName>"
+#define FILE_SZ_HELP   "sz   <FileName>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
@@ -44,6 +47,9 @@ Action file_action[] = {
 //exist
 	{ (int)FileAtcionClass::exist,(ACTION_T)FileAtcion::exist,      EatcionRelation::equal , nullptr ,(char *)"exist",     (char *)FILE_EXIST_HELP},
 	{ (int)FileAtcionClass::exist,(ACTION_T)FileAtcion::ex,         EatcionRelation::equal , nullptr ,(char *)"ex",        (char *)FILE_EX_HELP},
+//szie
+	{ (int)FileAtcionClass::size,(ACTION_T)FileAtcion::size,      EatcionRelation::equal , nullptr ,(char *)"size",     (char *)FILE_SIZE_HELP},
+	{ (int)FileAtcionClass::size,(ACTION_T)FileAtcion::sz,         EatcionRelation::equal , nullptr ,(char *)"sz",        (char *)FILE_SZ_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

@@ -13,6 +13,7 @@ enum class FileAtcionClass
 	write,
 	rd_wr,//read and write
 	exist,
+	size,
 };
 
 enum class FileAtcion {
@@ -33,6 +34,8 @@ enum class FileAtcion {
 	mv,
 	exist,
 	ex,
+	size,
+	sz,
 };
 
 #endif

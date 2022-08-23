@@ -146,7 +146,7 @@ int Cfile::cut(char *f_name,long start ,long size,char *out_file)
 		return -1;
 	}
 	
-	if(size==-1||start+size>this->size) size =this->size-start;
+	if(size==-1||start+size>this->size) size =(long)this->size-start;
 
 	fwrite(this->addr+start,sizeof(char),size,fp);
 	fclose(fp);
@@ -281,6 +281,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::rename||this->action == (ACTION_T)FileAtcion::rn|| \
 		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv) this->set_main_ret(this->rn());//rename
 	if (this->action == (ACTION_T)FileAtcion::exist||this->action == (ACTION_T)FileAtcion::ex) this->set_main_ret(this->is_exist());
+	if (this->action == (ACTION_T)FileAtcion::size || this->action == (ACTION_T)FileAtcion::sz) this->set_main_ret((int)this->f_size());
 	return 0;
 }
 
