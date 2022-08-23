@@ -1,4 +1,5 @@
 #include "file.h"
+#include "file_action.i" //action_tab
 
 Cfile::Cfile()
 {
@@ -107,6 +108,7 @@ int Cfile::f_read(char *f_name) //this->size=file_sile+1;'\0'
 	}
 
 	this->addr[len]='\0';
+	this->size=len;
 	is.close();
 
 	return 0;
@@ -116,6 +118,42 @@ int Cfile::f_read()
 {
 	if(this->f_name.empty()) return -1;
 	return this->f_read((char *)this->f_name.c_str());
+}
+
+int Cfile::cat()
+{
+	if(0!=this->f_read()) return -1;
+	std::cout<<this->addr<<endl;
+	return 0;
+}
+
+int Cfile::cut(char *f_name,long start ,long size,char *out_file)
+{
+	this->f_read(f_name); 
+
+	if(start >this->size)
+	{
+		printf("Cfile::cut start out of file size\n");
+		return 0;
+	} 
+
+	FILE *fp;
+	if(!(fp=fopen(out_file,"wb"))){
+		printf("Error:can not create the %s file.\n",out_file);
+		return -1;
+	}
+	
+	if(size==-1||start+size>this->size) size =this->size-start;
+
+	fwrite(this->addr+start,sizeof(char),size,fp);
+	fclose(fp);
+	
+	return size;
+}
+
+int Cfile::cut()
+{
+	return this->cut((char *)this->f_name.c_str(),this->range_start.data.l,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
 }
 
 int Cfile::f_append(char * ap_str)
@@ -195,6 +233,54 @@ int Cfile::create(void *p)
 	return 0;
 }
 
+int Cfile::do_action(void * a)
+{
+	if (this->action == (ACTION_T)FileAtcion::read) this->cat();
+	if (this->action == (ACTION_T)FileAtcion::cut) this->cut();
+
+	return 0;
+}
+
+int Cfile::deal_cmd(int argc, char *argv[])
+{
+	//check user input
+	//this->list_cmd(argc, argv);//test ok
+	if (argc < 3)
+	{
+		this->action_help(file_action, (int)FILE_ACTION_COUNT);
+		return -1;
+	}
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
+	//get cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
+
+	//get action
+	this->action = this->get_action(file_action, (int)FILE_ACTION_COUNT, argv[1]);
+	if (this->action == 0) this->action = atoll(argv[1]);//no name 
+	if (this->action == 0) return -1;
+
+	//init file action parameter; cmd:cat /cut option:  <FileName> [start] [size] [outfilename]
+	this->f_name=argv[2];
+	if (this->action == (ACTION_T)FileAtcion::cut) 
+	{
+		//[start] ,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
+		if(argc>3){this->range_start.data.l=atoll(argv[3]);}
+		else {this->range_start.data.l=0;}
+		//[size]
+		if(argc>4){this->range_amount.data.l=atoll(argv[4]);}
+		else {this->range_amount.data.l=-1;}
+		//[outfilename]
+		if(argc>5){this->s_output_fname=argv[5];}
+		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}		
+	}
+
+	//do action
+	this->do_action();
+
+	return 0;
+}
+
 #ifndef FILE_TEST
 #define FILE_TEST 0//1
 #endif
@@ -203,13 +289,7 @@ int Cfile::create(void *p)
 #include "all_h_include.h"
 int main(int argc, char *argv[])
 {
-	std::cout << "FILE_TEST!\n\n";
 	Cfile f;
-	f.f_name="question.cpp";
-
-	f.f_read();
-	std::cout<<f.addr<<endl;
-
-	return 0;
+	return 	f.deal_cmd(argc, argv);
 }
-#endif 
+#endif

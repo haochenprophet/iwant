@@ -11174,6 +11174,9 @@
     <ClInclude Include="..\..\src\build_action.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\file_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -11281,6 +11284,9 @@
       <Filter>database</Filter>
     </None>
     <None Include="..\..\src\build_action.i">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\file_action.i">
       <Filter>src</Filter>
     </None>
   </ItemGroup>

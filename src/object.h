@@ -121,7 +121,7 @@ namespace n_object {
 	{
 	};
 	
-	class Otime //Object 's time O:Object
+	class Otime //Object 's time O:Object ,timeline range
 	{
 	public://time and clock
 		struct tm * tm_start, *tm_at, *tm_end;
@@ -135,6 +135,14 @@ namespace n_object {
 		Otime();
 	};
 	
+	class Orange //Object's space range or Spatial scope
+	{
+	public:
+		Udata range_start; //object range start
+		Udata range_amount;//size ,length ,quantity ..
+		Udata range_end;//object range end
+	};
+
 	class ObjectRelation
 	{
 	public:
@@ -143,7 +151,7 @@ namespace n_object {
 	};
 	typedef std::list<ObjectRelation *> LIST_OBJ_RELATION;
 
-	class Osetting :public Ouuid, public Otime //public object Collection of variables, setting ,data ,...
+	class Osetting :public Ouuid, public Otime , public Orange //public object Collection of variables, setting ,data ,...
 	{
 	public:
 		long id;//object id
@@ -306,6 +314,7 @@ namespace n_object {
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
+		bool is_action_end(Action * a);
 		int deal_action(Action * a, int count, Object * o= nullptr);//do action table 
 		int action_help(Action * a, int count);
 		ACTION_T get_action(Action * a, int count,char * name);

@@ -803,12 +803,18 @@ int Object::do_action(void * a)
 	return 0;
 }
 
+bool Object::is_action_end(Action * a)
+{
+	if(a->t==0&&a->action_class==0&&a->name==nullptr) return true;
+	return false;
+}
+
 int Object::action_help(Action * a, int count)
 {
 	printf("[action]:\n");
 	for (int i = 0; i < count; i++)
 	{
-		if (a[i].t == 0) break;
+		if (is_action_end(&a[i])) break;
 		if (a[i].name) printf("%d %s", (int)a[i].t, a[i].name);
 		if (a[i].help) printf(" :%s ", a[i].help);
 		printf("\n");
@@ -820,7 +826,7 @@ ACTION_T Object::get_action(Action * a, int count, char * name)
 {
 	for (int i = 0; i < count; i++)
 	{
-		if (a[i].t == 0) break;
+		if (is_action_end(&a[i])) break;
 		if (0 == strcmp(a[i].name, name)) return a[i].t;
 	}
 	return (ACTION_T)0;//not find return  none_action 
@@ -830,7 +836,7 @@ bool Object::get_action(Action * a, int count, char * name, ACTION_T * out)
 {
 	for (int i = 0; i < count; i++)
 	{
-		if (a[i].t == 0) break;
+		if (is_action_end(&a[i])) break;
 		if (0 == strcmp(a[i].name, name))
 		{
 			* out=a[i].t;
@@ -1255,6 +1261,9 @@ int Object::clear(void *p)
 
 int Object::list_cmd(int argc, char *argv[])
 {
+#if OBJECT_DEBUG
+	AT_LINE; std::cout << "argc=" << argc << endl;//debug log
+#endif
 	do {
 		argc--;
 		std::cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
