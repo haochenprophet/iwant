@@ -6,14 +6,30 @@
 enum class FileAtcionClass
 {
 	none,
+	create,
+	remove,
+	rename,
 	read,
 	write,
+	rd_wr,//read and write
 };
 
 enum class FileAtcion {
 	none,//for 0 action
 	read,
 	cut,
+	copy,
+	cp,
+	create,
+	add,
+	remove,
+	rm,
+	_delete,
+	del,
+	rename,
+	rn,
+	move,
+	mv,
 };
 
 #endif

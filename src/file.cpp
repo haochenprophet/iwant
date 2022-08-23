@@ -1,10 +1,13 @@
 #include "file.h"
 #include "file_action.i" //action_tab
+#include <stdio.h>
 
 Cfile::Cfile()
 {
 	this->name = "Cfile";
 	this->alias = "file";
+	this->f_name="";
+	this->s_output_fname="";
 }
 
 Cfile::~Cfile()
@@ -156,6 +159,11 @@ int Cfile::cut()
 	return this->cut((char *)this->f_name.c_str(),this->range_start.data.l,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
 }
 
+int Cfile::copy()
+{
+	return this->cut((char *)this->f_name.c_str(),0,-1,(char *)this->s_output_fname.c_str());
+}
+
 int Cfile::f_append(char * ap_str)
 {
 	if(this->f_name.empty()) return -1;
@@ -233,10 +241,45 @@ int Cfile::create(void *p)
 	return 0;
 }
 
+int Cfile::rm (char * filename)
+{
+	if(filename==nullptr) filename=(char *)this->f_name.c_str();
+	
+	//printf("filename=%s\n",filename);//test ok
+
+	if( remove(filename) != 0 )
+	{
+		printf( "Error deleting file :%s\n",filename);
+		return -1;
+	}
+	return 0;
+}
+
+int Cfile::rn(char * oldname , char * newname )//rename
+{
+	if(oldname==nullptr) oldname = (char * )this->f_name.c_str();
+	if(newname==nullptr) newname = (char *) this->s_output_fname.c_str();
+
+	if(0!= rename( oldname , newname ))
+	{
+		printf( "Error renaming file :%s ",oldname);
+		return -1;
+	}
+	return 0;
+}
+
 int Cfile::do_action(void * a)
 {
 	if (this->action == (ACTION_T)FileAtcion::read) this->cat();
 	if (this->action == (ACTION_T)FileAtcion::cut) this->cut();
+	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp) this->copy();
+	if (this->action == (ACTION_T)FileAtcion::create||this->action == (ACTION_T)FileAtcion::add) this->create();
+
+	if (this->action == (ACTION_T)FileAtcion::remove||this->action == (ACTION_T)FileAtcion::rm|| \
+		this->action == (ACTION_T)FileAtcion::_delete||this->action == (ACTION_T)FileAtcion::del) this->rm();//remove
+
+	if (this->action == (ACTION_T)FileAtcion::rename||this->action == (ACTION_T)FileAtcion::rn|| \
+		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv) this->rn();//rename
 
 	return 0;
 }
@@ -273,6 +316,16 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		//[outfilename]
 		if(argc>5){this->s_output_fname=argv[5];}
 		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}		
+	}
+
+	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp ||
+		this->action == (ACTION_T)FileAtcion::rename||this->action == (ACTION_T)FileAtcion::rn||
+		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv 
+		) 
+	{
+		//[outfilename]
+		if(argc>3){this->s_output_fname=argv[3];}
+		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}	
 	}
 
 	//do action

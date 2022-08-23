@@ -30,11 +30,14 @@ namespace n_file {
 		int cat();
 		int cut(char *file,long start=0,long size=-1,char *out_file=(char *)CFILE_FILE_OUT);
 		int cut();
+		int copy();
 		char * f_find(char *f_name,char * str,char *start);
 		char * f_find(char * str,char *start);
 		int is_exist_func(char *f_name,char *func_name,int dispaly=0);//[space] <func_name> [space] (
 		int func(void *p=nullptr);
 		int create(void *p = nullptr);
+		int rm (char * filename = nullptr);//remove file 
+		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
 		int do_action(void * a= nullptr);
 		int deal_cmd(int argc, char *argv[]);
 	};
