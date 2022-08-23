@@ -21,6 +21,9 @@
 #define FILE_MOVE_HELP   "move   <OldFileName> [OldFileName]"
 #define FILE_MV_HELP   "mv   <OldFileName> [OldFileName]"
 
+#define FILE_EXIST_HELP "exist <FileName>"
+#define FILE_EX_HELP   "ex   <FileName>"
+
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
 	{ (int)FileAtcionClass::rd_wr,(ACTION_T)FileAtcion::cut , EatcionRelation::equal , nullptr ,(char *)"cut",(char *)FILE_CUT_HELP},
@@ -38,6 +41,9 @@ Action file_action[] = {
 	{ (int)FileAtcionClass::rename,(ACTION_T)FileAtcion::rn,        EatcionRelation::equal , nullptr ,(char *)"rn",       (char *)FILE_RN_HELP},
 	{ (int)FileAtcionClass::rename,(ACTION_T)FileAtcion::move,      EatcionRelation::equal , nullptr ,(char *)"move",     (char *)FILE_MOVE_HELP},
 	{ (int)FileAtcionClass::rename,(ACTION_T)FileAtcion::mv,        EatcionRelation::equal , nullptr ,(char *)"mv",       (char *)FILE_MV_HELP},
+//exist
+	{ (int)FileAtcionClass::exist,(ACTION_T)FileAtcion::exist,      EatcionRelation::equal , nullptr ,(char *)"exist",     (char *)FILE_EXIST_HELP},
+	{ (int)FileAtcionClass::exist,(ACTION_T)FileAtcion::ex,         EatcionRelation::equal , nullptr ,(char *)"ex",        (char *)FILE_EX_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

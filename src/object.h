@@ -163,6 +163,7 @@ namespace n_object {
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		ActionInfo * action_info;
+		int main_return_value;//recode main() return value
 		int error; //error count >0 error
 		int count;
 		int execute_count;
@@ -256,6 +257,7 @@ namespace n_object {
 		//set
 		int set(Oinput *i) { this->input = i; return 0; }
 		int set(Omove *m) { this->move = m; return 0; }
+		void set_main_ret(int ret) { this->main_return_value = ret; }
 		//execute myfunc ,object, my_family func
 		int execute();
 		int execute(Object *o);//execute o->execute()

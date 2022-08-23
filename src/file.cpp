@@ -6,8 +6,8 @@ Cfile::Cfile()
 {
 	this->name = "Cfile";
 	this->alias = "file";
-	this->f_name="";
-	this->s_output_fname="";
+//	this->f_name="";
+//	this->s_output_fname="";
 }
 
 Cfile::~Cfile()
@@ -270,17 +270,17 @@ int Cfile::rn(char * oldname , char * newname )//rename
 
 int Cfile::do_action(void * a)
 {
-	if (this->action == (ACTION_T)FileAtcion::read) this->cat();
-	if (this->action == (ACTION_T)FileAtcion::cut) this->cut();
-	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp) this->copy();
-	if (this->action == (ACTION_T)FileAtcion::create||this->action == (ACTION_T)FileAtcion::add) this->create();
+	if (this->action == (ACTION_T)FileAtcion::read) this->set_main_ret(this->cat());
+	if (this->action == (ACTION_T)FileAtcion::cut) this->set_main_ret(this->cut());
+	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp) this->set_main_ret(this->copy());
+	if (this->action == (ACTION_T)FileAtcion::create||this->action == (ACTION_T)FileAtcion::add) this->set_main_ret(this->create());
 
 	if (this->action == (ACTION_T)FileAtcion::remove||this->action == (ACTION_T)FileAtcion::rm|| \
-		this->action == (ACTION_T)FileAtcion::_delete||this->action == (ACTION_T)FileAtcion::del) this->rm();//remove
+		this->action == (ACTION_T)FileAtcion::_delete||this->action == (ACTION_T)FileAtcion::del) this->set_main_ret(this->rm());//remove
 
 	if (this->action == (ACTION_T)FileAtcion::rename||this->action == (ACTION_T)FileAtcion::rn|| \
-		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv) this->rn();//rename
-
+		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv) this->set_main_ret(this->rn());//rename
+	if (this->action == (ACTION_T)FileAtcion::exist||this->action == (ACTION_T)FileAtcion::ex) this->set_main_ret(this->is_exist());
 	return 0;
 }
 
@@ -308,10 +308,10 @@ int Cfile::deal_cmd(int argc, char *argv[])
 	if (this->action == (ACTION_T)FileAtcion::cut) 
 	{
 		//[start] ,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
-		if(argc>3){this->range_start.data.l=atoll(argv[3]);}
+		if(argc>3){this->range_start.data.l=(long)atoll(argv[3]);}
 		else {this->range_start.data.l=0;}
 		//[size]
-		if(argc>4){this->range_amount.data.l=atoll(argv[4]);}
+		if(argc>4){this->range_amount.data.l=(long)atoll(argv[4]);}
 		else {this->range_amount.data.l=-1;}
 		//[outfilename]
 		if(argc>5){this->s_output_fname=argv[5];}
@@ -343,6 +343,7 @@ int Cfile::deal_cmd(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	Cfile f;
-	return 	f.deal_cmd(argc, argv);
+	f.deal_cmd(argc, argv);
+	return 	f.main_return_value;//this->set_main_ret
 }
 #endif

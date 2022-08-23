@@ -117,6 +117,7 @@ Object::Object()
 	this->input = nullptr;
 	this->move = nullptr;
 	this->register_all_signal();
+	this->main_return_value = -1;//-1 do nothing
 #if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
