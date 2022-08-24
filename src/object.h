@@ -163,6 +163,8 @@ namespace n_object {
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		ActionInfo * action_info;
+		Action * action_table;
+		int count_of_action_table;//count of action_table
 		int main_return_value;//recode main() return value
 		int error; //error count >0 error
 		int count;
@@ -315,12 +317,16 @@ namespace n_object {
 		int dispatch_runme(void * myname, void *p = nullptr);
 		int clear(void *p=nullptr);
 		//action
+		void clear_action();//clear object action
+		bool set_action(Action* a, int count);//set action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
 		bool is_action_end(Action * a);
 		int deal_action(Action * a, int count, Object * o= nullptr);//do action table 
 		int action_help(Action * a, int count);
 		ACTION_T get_action(Action * a, int count,char * name);
+		ACTION_T get_action(char * name);
 		bool get_action(Action * a, int count, char * name, ACTION_T * out);
+		bool get_action(char* name, ACTION_T* out);
 		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS

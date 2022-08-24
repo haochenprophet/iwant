@@ -118,6 +118,8 @@ Object::Object()
 	this->move = nullptr;
 	this->register_all_signal();
 	this->main_return_value = -1;//-1 do nothing
+	this->action_table = nullptr;
+	this->count_of_action_table = 0;
 #if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
@@ -762,6 +764,20 @@ void Object::delay_clock(clock_t count)
 	clock_t t= clock();
 	while((clock()-t)<count);
 }
+//object action:
+bool Object::set_action(Action* a, int count)
+{
+	if (a == nullptr || count < 1) return false;
+	this->action_table = a;
+	this->count_of_action_table = count;
+	return true;
+}
+
+void Object::clear_action()
+{
+	this->action_table = nullptr;
+	this->count_of_action_table = 0;
+}
 
 bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
 {
@@ -833,6 +849,19 @@ ACTION_T Object::get_action(Action * a, int count, char * name)
 	return (ACTION_T)0;//not find return  none_action 
 }
 
+ACTION_T Object::get_action(char* name)
+{
+	if(this->action_table==nullptr) return (ACTION_T)0;//not find return  none_action 
+	do
+	{
+		if (is_action_end(this->action_table)) break;
+		if (0 == strcmp(this->action_table->name, name)) return this->action_table->t;
+		this->action_table++;
+	} while (1);
+
+	return (ACTION_T)0;//not find return  none_action 
+}
+
 bool Object::get_action(Action * a, int count, char * name, ACTION_T * out)
 {
 	for (int i = 0; i < count; i++)
@@ -844,6 +873,18 @@ bool Object::get_action(Action * a, int count, char * name, ACTION_T * out)
 			 return  true;//find return true
 		}
 	}
+	return false;//not find return false
+}
+
+bool Object::get_action(char* name, ACTION_T * out)
+{
+	if (this->action_table == nullptr) return (ACTION_T)0;//not find return  none_action 
+	do
+	{
+		if (is_action_end(this->action_table)) break;
+		if (0 == strcmp(this->action_table->name, name)) { * out = this->action_table->t; return true; }
+		this->action_table++;
+	} while (1);
 	return false;//not find return false
 }
 
