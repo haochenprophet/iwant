@@ -25,7 +25,7 @@ int Cfile::is_exist(char *filename)
 	fs.open (filename, std::fstream::in);
 	if(fs.good()) ret =1;
 	fs.close();
-
+	if (this->silent == 0) std::cout << "is_exist=" << ret << endl;
 	return ret;
 }
 
@@ -75,6 +75,7 @@ size_t Cfile::f_size(char *f_name)
 	is.seekg (0, is.end);
 	size_t len=is.tellg();
 	is.close();
+	if(this->silent==0) std::cout << "size=" << len << endl;
 	return len;
 }
 
