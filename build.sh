@@ -7,7 +7,7 @@ if [[ -f ${src_dir}/src/iwant ]];then
 fi
 #step 2:make
 cd ${src_dir}/src/
-make main=$1 debug=$2
+make main=${1^^} debug=${2^^}
 #step 3:check and mv
 if [[ -f ${src_dir}/src/iwant ]];then
 	mv ${src_dir}/src/iwant ${src_dir}/ -f
