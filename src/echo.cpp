@@ -6,6 +6,12 @@ Cecho::Cecho()
 	this->alias = "echo";
 }
 
+int Cecho::echo(char* s)//static 
+{
+	std::cout << s;
+	return 0;
+}
+
 #ifndef ECHO_TEST
 #define ECHO_TEST 0//1
 #endif

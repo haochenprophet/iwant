@@ -8,6 +8,7 @@ namespace n_echo {
 	{
 	public:
 		Cecho();
+		static int echo(char*);
 	};
 
 }
