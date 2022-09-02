@@ -38,6 +38,7 @@ namespace n_file {
 		int create(void *p = nullptr);
 		int rm (char * filename = nullptr);//remove file 
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
+		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int do_action(void * a= nullptr);
 		int deal_cmd(int argc, char *argv[]);
 	};

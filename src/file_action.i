@@ -20,12 +20,15 @@
 #define FILE_RN_HELP   "rn   <OldFileName> [NewFileName]"
 #define FILE_MOVE_HELP   "move   <OldFileName> [NewFileName]"
 #define FILE_MV_HELP   "mv   <OldFileName> [NewFileName]"
-
+//exist
 #define FILE_EXIST_HELP "exist <FileName>"
 #define FILE_EX_HELP   "ex   <FileName>"
-
+//size
 #define FILE_SIZE_HELP "size <FileName>"
 #define FILE_SZ_HELP   "sz   <FileName>"
+//add
+#define FILE_MERGE_HELP "merge file[1] ... file[n] OutputFilename"
+#define FILE_MERGE_OP_HELP "+ file[1] ... file[n] OutputFilename"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
@@ -50,6 +53,9 @@ Action file_action[] = {
 //szie
 	{ (int)FileAtcionClass::size,(ACTION_T)FileAtcion::size,      EatcionRelation::equal , nullptr ,(char *)"size",     (char *)FILE_SIZE_HELP},
 	{ (int)FileAtcionClass::size,(ACTION_T)FileAtcion::sz,         EatcionRelation::equal , nullptr ,(char *)"sz",        (char *)FILE_SZ_HELP},
+//add
+	{ (int)FileAtcionClass::merge,(ACTION_T)FileAtcion::merge,      EatcionRelation::equal , nullptr ,(char *)"merge",     (char *)FILE_MERGE_HELP},
+	{ (int)FileAtcionClass::merge,(ACTION_T)FileAtcion::merge_op,   EatcionRelation::equal , nullptr ,(char *)"+",         (char *)FILE_MERGE_OP_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

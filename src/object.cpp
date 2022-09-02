@@ -113,7 +113,9 @@ Object::Object()
 	this->value=0;
 	this->velocity=0;
 	this->cin_buf=nullptr;
-	this->cin_buf_len=O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
+	this->cin_buf_len = 0;//O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
+	this->buf = nullptr;
+	this->buf_len = 0;
 	this->input = nullptr;
 	this->move = nullptr;
 	this->register_all_signal();
@@ -145,6 +147,7 @@ Object::~Object()
 	this->clear_exist();
 	this->exist_list.clear();
 	if(this->cin_buf) delete[] this->cin_buf;
+	if (this->buf) delete[] this->buf;
 }
 
 int Cobject::my_init(void *p)
@@ -575,12 +578,22 @@ int Object::allot(int old_size, void ** o_addr, int new_size, bool mem_cpy)
 	return new_size;
 }
 
+int Object::allot(int size)
+{
+	return this->allot(size, (void**)&this->buf);
+}
+
 void Object::delete_allot(void **addr)
 {
 	if (addr&&*addr) {
 		delete[](char*) (*addr);
 		*addr = nullptr;
 	}
+}
+
+void Object::delete_allot()
+{
+	this->delete_allot((void**)&this->buf);
 }
 
 void Object::s_toupper(string & str)

@@ -269,6 +269,41 @@ int Cfile::rn(char * oldname , char * newname )//rename
 	return 0;
 }
 
+#if LINUX_OS
+int Cfile::merge(int argc, char* argv[])//add[0] file[1]...file[n] outfile
+{
+	string cmd;
+	cmd = (char*)"cat ";
+	for (int n = 1; n < argc; n++)//build copy command
+	{
+		if (n == argc - 1) cmd += (char*)" > ";
+		cmd += argv[n];
+		cmd += (char*)" ";
+	}
+	std::cout << cmd << endl;//test
+	return system(cmd.c_str());//run copy command
+
+	return 0;
+}
+#endif
+
+#if WINDOWS_OS
+int Cfile::merge(int argc, char* argv[])//argv[0]=add  argv[1]=file[1]...file[n] outfile
+{
+	string cmd;
+	cmd = (char *)"copy /B ";
+	for (int n = 1; n < argc; n++)//build copy command
+	{
+		cmd += argv[n];
+		cmd += (char*)" ";
+		if (n >= 1 && n < argc - 2) cmd += (char*)"+ ";
+		
+	}
+	std::cout << cmd << endl;//test
+	return system(cmd.c_str());//run copy command
+}
+#endif
+
 int Cfile::do_action(void * a)
 {
 	if (this->action == (ACTION_T)FileAtcion::read) this->set_main_ret(this->cat());
@@ -283,6 +318,7 @@ int Cfile::do_action(void * a)
 		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv) this->set_main_ret(this->rn());//rename
 	if (this->action == (ACTION_T)FileAtcion::exist||this->action == (ACTION_T)FileAtcion::ex) this->set_main_ret(this->is_exist());
 	if (this->action == (ACTION_T)FileAtcion::size || this->action == (ACTION_T)FileAtcion::sz) this->set_main_ret((int)this->f_size());
+	if (this->action == (ACTION_T)FileAtcion::merge || this->action == (ACTION_T)FileAtcion::merge_op) this->set_main_ret((int)this->merge(this->cmd.argc-1,&this->cmd.argv[1]));
 	return 0;
 }
 

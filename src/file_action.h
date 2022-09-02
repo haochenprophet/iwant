@@ -14,6 +14,7 @@ enum class FileAtcionClass
 	rd_wr,//read and write
 	exist,
 	size,
+	merge,
 };
 
 enum class FileAtcion {
@@ -36,6 +37,8 @@ enum class FileAtcion {
 	ex,
 	size,
 	sz,
+	merge,
+	merge_op,//operator +
 };
 
 #endif

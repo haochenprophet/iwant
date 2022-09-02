@@ -113,6 +113,7 @@ namespace n_object {
 	public:
 		int argc;
 		char ** argv;
+
 	public:
 		Ccmd(){argc = 0, argv = nullptr;}
 	};
@@ -170,7 +171,9 @@ namespace n_object {
 		int count;
 		int execute_count;
 		int cin_buf_len;
-		char *cin_buf;
+		char * cin_buf;
+		char * buf;
+		int buf_len;
 
 		string package;
 		string name; //object name
@@ -275,6 +278,8 @@ namespace n_object {
 		int execute(char * fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		
+		int allot(int size=(O_BUF_LEN));
+		void delete_allot();
 		int allot(int size,void ** o_addr);
 		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
 		void delete_allot(void **addr);
