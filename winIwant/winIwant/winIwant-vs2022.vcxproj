@@ -1751,6 +1751,7 @@
     <ClCompile Include="..\..\src\question_def.cpp" />
     <ClCompile Include="..\..\src\register.cpp" />
     <ClCompile Include="..\..\src\relation.cpp" />
+    <ClCompile Include="..\..\src\replace.cpp" />
     <ClCompile Include="..\..\src\run.cpp" />
     <ClCompile Include="..\..\src\search.cpp" />
     <ClCompile Include="..\..\src\smtp.cpp" />
@@ -3612,6 +3613,7 @@
     <ClInclude Include="..\..\src\register.h" />
     <ClInclude Include="..\..\src\relation.h" />
     <ClInclude Include="..\..\src\relation_class.h" />
+    <ClInclude Include="..\..\src\replace.h" />
     <ClInclude Include="..\..\src\run.h" />
     <ClInclude Include="..\..\src\search.h" />
     <ClInclude Include="..\..\src\smtp.h" />
