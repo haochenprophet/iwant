@@ -36,10 +36,7 @@ Creplace::Creplace()
 
 Creplace::~Creplace()
 {
-	if (this->result) {
-		delete[] this->result;
-		this->result = nullptr;
-	}
+	this->delete_allot((void**)&this->result);
 	this->parameter_list.clear();
 }
 
@@ -150,7 +147,7 @@ void replace_test()
 	p.replace_memory_size = sizeof(replace);
 
 	r.replace((void*)& source, sizeof(source), &p, (void**) &result, & result_size);
-	printf("result=%s result_size=%lld", result, result_size);
+	printf("result=%s result_size=%ld\n", result, result_size);
 	r.delete_allot((void**)&result);
 }
 
