@@ -580,6 +580,7 @@ int Object::allot(int old_size, void ** o_addr, int new_size, bool mem_cpy)
 
 int Object::allot(int size)
 {
+	this->delete_allot();
 	return this->allot(size, (void**)&this->buf);
 }
 

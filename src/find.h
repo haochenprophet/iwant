@@ -10,6 +10,9 @@ namespace n_find {
 		Cfind();
 		~Cfind();
 		int my_init(void *p=nullptr);
+		static int find(uint8_t* source, int64_t source_size, uint8_t* target, int64_t target_size, uint8_t** output);
+		static int find(uint8_t* source, uint8_t* source_end, uint8_t* target, int64_t target_size, uint8_t** output);
+		static int find(uint8_t* source, uint8_t* source_end, uint8_t* target, uint8_t* target_end, uint8_t** output);
 	};
 }
 
