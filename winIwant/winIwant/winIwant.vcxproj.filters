@@ -5550,6 +5550,12 @@
     <ClCompile Include="..\..\src\database\tree_db.cpp">
       <Filter>database</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\replace.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\find.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11175,6 +11181,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\file_action.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\replace.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\find.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
