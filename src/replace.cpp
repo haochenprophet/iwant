@@ -26,6 +26,7 @@ int Creplace::my_init(void* p)
 	this->source_size = 0;
 	this->result_size = 0;
 	this->map = nullptr;
+	this->total_size = 0;
 	return 0;
 }
 
@@ -63,6 +64,19 @@ int Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* p)
 	}
 
 	return (int) p->find_count;
+}
+
+int Creplace::analyze(void* source, int64_t source_size)//build map 
+{
+	CreplaceParameter* p;
+	this->total_size = source_size;
+	for (auto it = this->parameter_list.cbegin(); it != this->parameter_list.cend(); ++it)
+	{
+		p = (CreplaceParameter*)(*it);
+		this->analyze(source, source_size, p);
+		this->total_size+= (p->replace_memory_size - p->find_memory_size) * p->find_count;
+	}
+	return 0;
 }
 
 int64_t Creplace::copy(uint8_t* source, uint8_t* dest, int64_t size)
@@ -125,6 +139,36 @@ int Creplace::replace(void* source, int64_t source_size, CreplaceParameter* p)
 int Creplace::replace(void* source, void* source_end, CreplaceParameter* p)
 {
 	return this->replace(source, source_end, p, &this->result, &this->result_size);
+}
+
+//Check for conflicts and ambiguities
+//return -1 do nothing 0:pass ,1 : conflicts 2:ambiguities 
+int Creplace::add_parameter_list(CreplaceParameter * p)
+{
+	int exist;
+	uint8_t* output;
+	CreplaceParameter* i;
+	
+	if (p == nullptr) return -1;
+
+	for (auto it = this->parameter_list.cbegin(); it != this->parameter_list.cend(); ++it)
+	{
+		i = *it;
+		if (i->find_memory_size >= p->find_memory_size)//check and select source memory []
+		{
+			exist = Cfind::find((uint8_t*)i->find_memory, i->find_memory_size, (uint8_t*)p->find_memory, p->find_memory_size, &output);
+		}
+		else {
+			exist = Cfind::find((uint8_t*)p->find_memory, p->find_memory_size, (uint8_t*)i->find_memory, i->find_memory_size, &output);
+		}
+
+		if (exist == 1 && i->find_memory_size == p->find_memory_size) return 1;
+		if (exist == 1) return 2;
+
+		this->parameter_list.push_back(p);
+	}
+
+	return 0;
 }
 
 #if REPLACE_TEST

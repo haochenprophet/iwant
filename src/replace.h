@@ -33,12 +33,14 @@ namespace n_replace {
 		~Creplace();
 		int my_init(void *p=nullptr);
 		int analyze(void* source, int64_t source_size, CreplaceParameter* p);
+		int analyze(void* source, int64_t source_size);
 		int64_t copy(uint8_t* source, uint8_t* dest, int64_t size);
 		int64_t copy(uint8_t* source, uint8_t* dest, uint8_t* source_end);
 		int replace(void * source, int64_t source_size, CreplaceParameter* p, void** result_address, int64_t * result_size);
 		int replace(void * source, void  * source_end,  CreplaceParameter* p, void** result_address, int64_t * result_size);
 		int replace(void * source, int64_t source_size, CreplaceParameter* p);
 		int replace(void * source, void  * source_end,  CreplaceParameter* p);
+		int add_parameter_list(CreplaceParameter * p);
 	};
 }
 
