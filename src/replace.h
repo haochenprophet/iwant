@@ -43,10 +43,10 @@ namespace n_replace {
 		~Creplace();
 		int my_init(void *p=nullptr);
 
-		int analyze(void* source, int64_t source_size, CreplaceParameter* p);
-		int analyze(void* source, int64_t source_size);
-		int build_map(CreplaceMap* map, int map_count, int start_index, CreplaceParameter* p);
-		int build_map(int start_index, CreplaceParameter* p);
+		int64_t analyze(void* source, int64_t source_size, CreplaceParameter* p);
+		int64_t analyze(void* source, int64_t source_size);
+		int64_t build_map(CreplaceMap* map, int64_t map_count, int64_t start_index, CreplaceParameter* p);
+		int64_t build_map(int64_t start_index, CreplaceParameter* p);
 		int64_t copy(uint8_t* source, uint8_t* dest, int64_t size);
 		int64_t copy(uint8_t* source, uint8_t* dest, uint8_t* source_end);
 		int replace(void * source, int64_t source_size, CreplaceParameter* p, void** result_address, int64_t * result_size);

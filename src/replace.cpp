@@ -42,10 +42,10 @@ Creplace::~Creplace()
 	this->parameter_list.clear();
 }
 
-int Creplace::build_map(CreplaceMap* map, int map_count, int start_index, CreplaceParameter* p)//
+int64_t Creplace::build_map(CreplaceMap* map, int64_t map_count, int64_t start_index, CreplaceParameter* p)//
 {
 	if (start_index >= map_count || start_index < 0) return -1;
-	int i = start_index;
+	int64_t i = start_index;
 	void* addr;//address
 	for (auto it = p->location_list.cbegin(); it != p->location_list.cend(); ++it, i++)
 	{
@@ -59,7 +59,7 @@ int Creplace::build_map(CreplaceMap* map, int map_count, int start_index, Crepla
 		}
 
 		//case 2: if (i > 0) && (map[i - 1].address > addr)
-		if (map[i - 1].address > addr)//checke change for order by address 
+		if (map[i - 1].address > addr)//check change for order by address 
 		{
 			map[i].address = map[i - 1].address;
 			map[i].p = map[i - 1].p;
@@ -73,11 +73,11 @@ int Creplace::build_map(CreplaceMap* map, int map_count, int start_index, Crepla
 	return i;//return next index
 }
 
-int Creplace::build_map(int start_index, CreplaceParameter* p)
+int64_t Creplace::build_map(int64_t start_index, CreplaceParameter* p)
 {
-	return this->build_map(this->map, (int)this->map_total_count, start_index, p);
+	return this->build_map(this->map,this->map_total_count, start_index, p);
 }
-int Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* p)
+int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* p)
 {
 	int exist;
 	uint8_t * output;
@@ -99,16 +99,16 @@ int Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* p)
 		break;
 	}
 
-	return (int) p->find_count;
+	return p->find_count;
 }
 
 //parameter_list[n]->location_list[n]->replace memory address start point => map[n]-> [replace memory address][CreplaceParameter*]
 //output : this->total_size , this->map_total_count ,this->map
-int Creplace::analyze(void* source, int64_t source_size)//build map[] 
+int64_t Creplace::analyze(void* source, int64_t source_size)//build map[] 
 {
 	CreplaceParameter* p;
 	int64_t total_allot_size = 0;
-	int start_index;
+	int64_t start_index;
 	this->total_size = source_size;
 	this->map_total_count = 0;
 	for (auto it = this->parameter_list.cbegin(); it != this->parameter_list.cend(); ++it)
@@ -162,7 +162,7 @@ int Creplace::replace(void * source , int64_t source_size , CreplaceParameter * 
 	if (0 == this->analyze(source, source_size, p)) return -1;//not find no replace
 	total_allot_size = source_size + (p->replace_memory_size - p->find_memory_size) * p->find_count;
 
-	if(total_allot_size!=this->allot((int)total_allot_size,(void **) & dest)) return -1;//allot memory fail
+	if(total_allot_size!=this->allot(total_allot_size,(void **) & dest)) return -1;//allot memory fail
 	*result_address = (void*)dest;
 	*result_size = total_allot_size;
 
