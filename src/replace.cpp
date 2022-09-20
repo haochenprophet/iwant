@@ -287,7 +287,8 @@ void replace_test()
 	p.replace_memory_size = sizeof(replace);
 
 	r.replace((void*)& source, sizeof(source), &p, (void**) &result, & result_size);
-	printf("result=%s result_size=%I64d\n", result, result_size);
+	//printf("result=%s result_size=%I64d\n", result, result_size);//%I64d linux g++ build warning
+	std::cout << "result=" << (char*)result << " result_size=" << result_size << endl;
 	r.delete_allot((void**)&result);
 
 	p1.find_memory = (void*)&memory1;
@@ -298,7 +299,8 @@ void replace_test()
 	r.add_parameter_list(&p);
 	r.add_parameter_list(&p1);
 	r.replace((void*)&source, sizeof(source));
-	printf("r.result=%s r.result_size=%I64d\n", (char *)r.result, r.result_size); //test
+	//printf("r.result=%s r.result_size=%I64d\n", (char *)r.result, r.result_size); //%I64d linux g++ build warning
+	std::cout << "r.result=" << (char*)r.result << " r.result_size=" << r.result_size << endl;
 
 }
 
