@@ -281,7 +281,9 @@ namespace n_object {
 		int allot(int size=(O_BUF_LEN));
 		void delete_allot();
 		int allot(int size,void ** o_addr);
+		int64_t allot(int64_t size, void** o_addr);
 		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
+		int64_t allot(int64_t old_size, void** o_addr, int64_t new_size, bool mem_cpy = false);
 		void delete_allot(void **addr);
 
 		void s_toupper(string & str);
