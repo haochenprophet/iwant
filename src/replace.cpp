@@ -25,7 +25,7 @@ int Creplace::my_init(void* p)
 	this->result = nullptr;
 	this->source_size = 0;
 	this->result_size = 0;
-	this->map = nullptr;
+
 	this->total_size = 0;
 	this->map_total_count = 0;
 	return 0;
@@ -39,44 +39,10 @@ Creplace::Creplace()
 Creplace::~Creplace()
 {
 	this->delete_allot((void**)&this->result);
+	this->map.clear();
 	this->parameter_list.clear();
 }
 
-int64_t Creplace::build_map(CreplaceMap* map, int64_t map_count, int64_t start_index, CreplaceParameter* p)//
-{
-	if (start_index >= map_count || start_index < 0) return -1;
-	int64_t i = start_index;
-	void* addr;//address
-	for (auto it = p->location_list.cbegin(); it != p->location_list.cend(); ++it, i++)
-	{
-		addr = (void*)(*it);
-		//case 1:
-		if (i == 0 || map[i - 1].address < addr)
-		{
-			map[i].address = addr;
-			map[i].p = p;
-			continue;
-		}
-
-		//case 2: if (i > 0) && (map[i - 1].address > addr)
-		if (map[i - 1].address > addr)//check change for order by address 
-		{
-			map[i].address = map[i - 1].address;
-			map[i].p = map[i - 1].p;
-
-			map[i - 1].address = addr;
-			map[i - 1].p = p;
-			continue;//next;
-		}
-		//case 3 :map[i - 1].address == addr do nothing
-	}
-	return i;//return next index
-}
-
-int64_t Creplace::build_map(int64_t start_index, CreplaceParameter* p)
-{
-	return this->build_map(this->map,this->map_total_count, start_index, p);
-}
 int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* p)
 {
 	int exist;
@@ -101,16 +67,28 @@ int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* 
 
 	return p->find_count;
 }
+int Creplace::build_map(CreplaceParameter* p)
+{
+	CreplaceMap rmap;
+	for (auto it = p->location_list.cbegin(); it != p->location_list.cend(); ++it)
+	{
+		rmap.address= (void*)(*it);
+		rmap.p = p;
+		this->map.push_back(rmap);
+	}
+	return 0;
+}
 
 //parameter_list[n]->location_list[n]->replace memory address start point => map[n]-> [replace memory address][CreplaceParameter*]
 //output : this->total_size , this->map_total_count ,this->map
+
 int64_t Creplace::analyze(void* source, int64_t source_size)//build map[] 
 {
 	CreplaceParameter* p;
-	int64_t total_allot_size = 0;
-	int64_t start_index;
+
 	this->total_size = source_size;
 	this->map_total_count = 0;
+
 	for (auto it = this->parameter_list.cbegin(); it != this->parameter_list.cend(); ++it)
 	{
 		p = (CreplaceParameter*)(*it);
@@ -121,16 +99,15 @@ int64_t Creplace::analyze(void* source, int64_t source_size)//build map[]
 	//allot map memory
 	if (this->map_total_count < 1) return -1;//not find replace
 	//build replace map 
-	total_allot_size = this->map_total_count * sizeof(CreplaceMap);
-	if (total_allot_size != this->allot(total_allot_size, (void**)&this->map)) return -1;//allot memory fail
-	start_index = 0;
+
 	for (auto it = this->parameter_list.cbegin(); it != this->parameter_list.cend(); ++it)
 	{
 		p = (CreplaceParameter*)(*it);
-		start_index=this->build_map(start_index, p);
-		if (start_index < 0) return 1;//error
+		this->build_map(p);
 	}
 
+	//this->map.sort();//list sort build error  
+	//this->list_map();//test ok
 	return 0;
 }
 
@@ -199,8 +176,9 @@ int Creplace::replace(void* source, void* source_end, CreplaceParameter* p)
 int Creplace::replace(void* source, int64_t source_size)//map total count 
 {
 	int64_t size;
-	uint8_t * start ,* end ;
-	uint8_t* dest;
+	uint8_t * start ,* end, * dest,*min_address,*past_address ;
+	CreplaceMap map;
+	CreplaceParameter* p=nullptr;
 
 	if(0!=this->analyze(source, source_size)) return -1;//error or nothing
 	//this->total_size, this->map_total_count, this->map
@@ -212,16 +190,37 @@ int Creplace::replace(void* source, int64_t source_size)//map total count
 	start = (uint8_t*)source;
 	end = (uint8_t*)source + source_size;
 	dest = (uint8_t*)this->result;
+
+	min_address = end+1;//init min address to max address for first compare 
+	past_address = start-1;//init past address to start address for first compare 
+
 	//start fill result memory 
 	for (int i = 0; i < this->map_total_count; i++)
 	{
-		size = this->copy(start, (uint8_t*)dest, (uint8_t*)this->map[i].address);//source,dest,source_end
-		dest += size;
-		size = this->copy((uint8_t*)this->map[i].p->replace_memory, dest, this->map[i].p->replace_memory_size);//source,dest,size
-		if (size != this->map[i].p->replace_memory_size) { return 1; } //error 
+		for (auto it = this->map.cbegin(); it != this->map.cend(); ++it)
+		{
+			map = *it;
+		//	printf("[%d] min_address=%I64X map.address=%I64X past_address=%I64X\n",i, (int64_t)min_address , (int64_t) map.address, (int64_t) past_address); //test ok
 
-		start = (uint8_t*)this->map[i].address + this->map[i].p->find_memory_size;//Calculate the next start address
+			if (map.address < min_address&& map.address>past_address)
+			{
+				min_address = (uint8_t*)map.address;
+				p = map.p;//set CreplaceParameter
+			}
+		}
+	//	printf("min_address=%I64X\n",(int64_t)min_address);//test ok
+
+		size = this->copy(start, (uint8_t*)dest, min_address);//source,dest,source_end
+		dest += size;
+
+		size = this->copy((uint8_t*)p->replace_memory, dest, p->replace_memory_size);//source,dest,size
+		if (size !=p->replace_memory_size) { return 1; } //error 
+
+		start = min_address + p->find_memory_size;//Calculate the next start address
 		dest += size;//Calculate the next dest address
+
+		past_address = min_address;//set for get next min address
+		min_address = end;//set for get next min address
 	}
 	if (start < end) size = this->copy(start, (uint8_t*)dest, end);//source,dest,source_end
 	return 0;
@@ -263,14 +262,24 @@ int Creplace::add_parameter_list(CreplaceParameter * p)
 	return 0;
 }
 
+void Creplace::list_map()
+{
+	int i = 0;
+	for (auto it = this->map.begin(); it != this->map.end(); ++it,i++)
+	{
+		CreplaceMap map = *it;
+		printf("this->map[%d].address=%I64X\n", i,(int64_t)map.address);
+	}
+}
+
 #if REPLACE_TEST
 #include "all_h_include.h"
 
 void replace_test()
 {
 	Creplace r;
-	char source[] = "12345678956F";
-	char memory[] ={ '5', '6' };
+	char source[] = "56895678956F5";
+	char memory[] ={ '5','6'};
 	char memory1[] = { '8', '9' };
 
 	char replace[5] = { 'A','B','C','D','E' };
@@ -279,7 +288,7 @@ void replace_test()
 
 	char* result=nullptr;
 	int64_t result_size = 0;
-
+	//printf("sizeof(CreplaceMap)=%d\n", sizeof(CreplaceMap));
 	//init CreplaceParameter
 	p.find_memory = (void*)&memory;
 	p.find_memory_size = sizeof(memory);
