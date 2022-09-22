@@ -291,7 +291,7 @@ int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, siz
 int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str)
 {
 	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
-	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) - 1, (uint8_t*)replace_str, strlen(replace_str) - 1);
+	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) , (uint8_t*)replace_str, strlen(replace_str));
 }
 
 int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type)//type for C++ overloaded replace() functions
@@ -309,14 +309,14 @@ int Creplace::replace(int argc, char* argv[])
 	Creplace r;
 	ReplaceType type = ReplaceType::none;
 
-	if (argc < 5)//check input 
+	if (argc < 6)//check input 
 	{
 		printf("The number of input parameters is less than the replace command requirement.\n");
 		return -1;
 	}
 
-	if (argv[4][0] == 'S' || argv[4][0] == 's') type = ReplaceType::string;//string type
-	if (argv[4][0] == 'F' || argv[4][0] == 'f') type = ReplaceType::file;//file type
+	if (argv[5][0] == 'S' || argv[5][0] == 's') type = ReplaceType::string;//string type
+	if (argv[5][0] == 'F' || argv[5][0] == 'f') type = ReplaceType::file;//file type
 
 	if (type == ReplaceType::none)
 	{

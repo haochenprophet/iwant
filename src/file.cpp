@@ -333,7 +333,7 @@ int Cfile::replace(int argc, char* argv[])
 		return -1;
 	}
 	//int Creplace::replace(int argc, char* argv[])
-	return r.replace(argc-1,&argv[1]);
+	return r.replace(argc,argv);
 }
 
 int Cfile::do_action(void * a)
