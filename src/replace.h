@@ -51,7 +51,7 @@ namespace n_replace {
 		int replace(void * source, void  * source_end,  CreplaceParameter* p, void** result_address, int64_t * result_size);
 		int replace(void * source, int64_t source_size, CreplaceParameter* p);
 		int replace(void * source, void  * source_end,  CreplaceParameter* p);
-		int replace(void * source, void  * source_end);//parameter_list
+		int replace(void * source, void  * source_end);//will use this->parameter_list
 		int replace(void * source, int64_t source_size);
 		int add_parameter_list(CreplaceParameter * p);
 		void list_map();

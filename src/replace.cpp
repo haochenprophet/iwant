@@ -172,7 +172,7 @@ int Creplace::replace(void* source, void* source_end, CreplaceParameter* p)
 {
 	return this->replace(source, source_end, p, &this->result, &this->result_size);
 }
-
+//will use this->parameter_list
 int Creplace::replace(void* source, int64_t source_size)//map total count 
 {
 	int64_t size;
@@ -226,6 +226,10 @@ int Creplace::replace(void* source, int64_t source_size)//map total count
 	return 0;
 }
 
+int Creplace::replace(void* source, void* source_end)
+{
+	return this->replace(source, (int64_t)((uint8_t*)source_end- (uint8_t*)source));
+}
 //Check for conflicts and ambiguities
 //return -1 do nothing 0:pass ,1 : conflicts 2:ambiguities 
 int Creplace::add_parameter_list(CreplaceParameter * p)
