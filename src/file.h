@@ -3,6 +3,7 @@
 
 #include "myMemory.h"
 #include "search.h"
+
 #define CFILE_FILE_OUT "cfile.out"
 namespace n_file {
 	class Cfile :public CmyMemory
@@ -27,6 +28,8 @@ namespace n_file {
 		size_t f_size();
 		int f_read(char *f_name);
 		int f_read();
+		size_t f_write(char* f_name, void* addr, size_t size);
+		size_t f_write(char* f_name);//output filename
 		int cat();
 		int cut(char *file,long start=0,long size=-1,char *out_file=(char *)CFILE_FILE_OUT);
 		int cut();
@@ -39,6 +42,7 @@ namespace n_file {
 		int rm (char * filename = nullptr);//remove file 
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
+		int replace(int argc, char* argv[]);
 		int do_action(void * a= nullptr);
 		int deal_cmd(int argc, char *argv[]);
 	};

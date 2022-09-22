@@ -29,6 +29,9 @@
 //add
 #define FILE_MERGE_HELP "merge file[1] ... file[n] OutputFilename"
 #define FILE_MERGE_OP_HELP "+ file[1] ... file[n] OutputFilename"
+//replace
+#define FILE_REPLACE_HELP   "replace   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
+#define FILE_RP_HELP        "rp        <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
@@ -56,6 +59,9 @@ Action file_action[] = {
 //add
 	{ (int)FileAtcionClass::merge,(ACTION_T)FileAtcion::merge,      EatcionRelation::equal , nullptr ,(char *)"merge",     (char *)FILE_MERGE_HELP},
 	{ (int)FileAtcionClass::merge,(ACTION_T)FileAtcion::merge_op,   EatcionRelation::equal , nullptr ,(char *)"+",         (char *)FILE_MERGE_OP_HELP},
+//replace
+	{ (int)FileAtcionClass::replace,(ACTION_T)FileAtcion::replace,      EatcionRelation::equal , nullptr ,(char *)"replace",     (char *)FILE_REPLACE_HELP},
+	{ (int)FileAtcionClass::replace,(ACTION_T)FileAtcion::rp,           EatcionRelation::equal , nullptr ,(char *)"rp",         (char *)FILE_RP_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

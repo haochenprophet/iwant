@@ -3,8 +3,18 @@
 
 #include "object.h"
 #include "find.h"
+#include "file.h"
 
 namespace n_replace {
+
+	enum class ReplaceType
+	{
+		none,
+		string,
+		file,
+		memory,
+	};
+
 	class CreplaceParameter
 	{
 	public:
@@ -53,6 +63,10 @@ namespace n_replace {
 		int replace(void * source, void  * source_end,  CreplaceParameter* p);
 		int replace(void * source, void  * source_end);//will use this->parameter_list
 		int replace(void * source, int64_t source_size);
+		int replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size);
+		int replace(char* inputfile, char* outputfile, char* find_str, char* replace_str);
+		int replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type);//int type: for C++ overloaded replace() functions
+		int replace(int argc, char* argv[]);
 		int add_parameter_list(CreplaceParameter * p);
 		void list_map();
 	};

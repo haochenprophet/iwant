@@ -266,6 +266,78 @@ int Creplace::add_parameter_list(CreplaceParameter * p)
 	return 0;
 }
 
+int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
+{
+	Cfile f;
+	Creplace r;
+	CreplaceParameter p;
+
+	f.f_read(inputfile);
+	if (f.size < find_size) return -1;//will not be found
+	//init replace parameter
+	p.find_memory = find_data;
+	p.find_memory_size = find_size;
+	p.replace_memory = replace_data;
+	p.replace_memory_size = replace_size;
+
+	//int Creplace::replace(void* source, int64_t source_size, CreplaceParameter* p)
+	if (0 != r.replace((void*)f.addr, (int64_t)f.size, &p))return -1;//not find or not replace
+
+	//size_t Creplace::f_write(char* f_name, void* addr, size_t size)
+	f.f_write(outputfile, r.result, (size_t)r.result_size);//write file
+	return 0;
+}
+
+int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str)
+{
+	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
+	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) - 1, (uint8_t*)replace_str, strlen(replace_str) - 1);
+}
+
+int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type)//type for C++ overloaded replace() functions
+{
+	Cfile find, replace;
+	if (0 != find.f_read(find_file)) return -1;
+	if (0 != replace.f_read(replace_file)) return -1;
+	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
+	return this->replace(inputfile, outputfile, (uint8_t*)find.addr, find.size, (uint8_t*)replace.addr, replace.size);
+}
+
+//argv[0]=<InFileName> argv[1]=<OutFileName> argv[2]=<find>  argv[3]<replace> argv[4]=<S/F>"
+int Creplace::replace(int argc, char* argv[])
+{
+	Creplace r;
+	ReplaceType type = ReplaceType::none;
+
+	if (argc < 5)//check input 
+	{
+		printf("The number of input parameters is less than the replace command requirement.\n");
+		return -1;
+	}
+
+	if (argv[4][0] == 'S' || argv[4][0] == 's') type = ReplaceType::string;//string type
+	if (argv[4][0] == 'F' || argv[4][0] == 'f') type = ReplaceType::file;//file type
+
+	if (type == ReplaceType::none)
+	{
+		printf("Can not find ReplaceType £ºF or S of command line input.\n");
+		return -2;
+	}
+
+	if (type == ReplaceType::string)
+	{
+		//int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str)
+		return r.replace(argv[1], argv[2], argv[3], argv[4]);
+	}
+
+	if (type == ReplaceType::file)
+	{
+		//int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type)//type for C++ overloaded replace() functions
+		return r.replace(argv[1], argv[2], argv[3], argv[4], (int)type);
+	}
+	return 0;
+}
+
 void Creplace::list_map()
 {
 	int i = 0;

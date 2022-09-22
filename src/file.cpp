@@ -1,6 +1,7 @@
 #include "file.h"
 #include "file_action.i" //action_tab
 #include <stdio.h>
+#include "replace.h"
 
 Cfile::Cfile()
 {
@@ -269,6 +270,24 @@ int Cfile::rn(char * oldname , char * newname )//rename
 	return 0;
 }
 
+size_t Cfile::f_write(char* f_name,void *addr , size_t size)
+{
+	FILE* fp;
+	size_t ret;
+	if (!(fp = fopen(f_name, "wb"))) {
+		printf("Error:can not create the %s file.\n", f_name);
+		return -1;
+	}
+	ret=fwrite(addr,1, size, fp);
+	fclose(fp);
+	return ret;
+}
+
+size_t Cfile::f_write(char* f_name)
+{
+	return this->f_write(f_name, this->addr, this->size);
+}
+
 #if LINUX_OS
 int Cfile::merge(int argc, char* argv[])//add[0] file[1]...file[n] outfile
 {
@@ -304,6 +323,19 @@ int Cfile::merge(int argc, char* argv[])//argv[0]=add  argv[1]=file[1]...file[n]
 }
 #endif
 
+//main(argc >6) "argv[0]=replace argv[1]=<InFileName> argv[2]=<OutFileName> argv[3]=<find>  argv[4]<replace> argv[5]=<S/F>"
+int Cfile::replace(int argc, char* argv[])
+{
+	Creplace r;
+	if (argc < 6)//check input 
+	{
+		printf("The number of input parameters is less than the 'replace' or 'rp' command requirement.\n");
+		return -1;
+	}
+	//int Creplace::replace(int argc, char* argv[])
+	return r.replace(argc-1,&argv[1]);
+}
+
 int Cfile::do_action(void * a)
 {
 	if (this->action == (ACTION_T)FileAtcion::read) this->set_main_ret(this->cat());
@@ -319,6 +351,8 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::exist||this->action == (ACTION_T)FileAtcion::ex) this->set_main_ret(this->is_exist());
 	if (this->action == (ACTION_T)FileAtcion::size || this->action == (ACTION_T)FileAtcion::sz) this->set_main_ret((int)this->f_size());
 	if (this->action == (ACTION_T)FileAtcion::merge || this->action == (ACTION_T)FileAtcion::merge_op) this->set_main_ret((int)this->merge(this->cmd.argc-1,&this->cmd.argv[1]));
+	if (this->action == (ACTION_T)FileAtcion::replace || this->action == (ACTION_T)FileAtcion::rp) this->set_main_ret((int)this->replace(this->cmd.argc - 1, &this->cmd.argv[1]));
+
 	return 0;
 }
 
