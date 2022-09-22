@@ -268,7 +268,8 @@ void Creplace::list_map()
 	for (auto it = this->map.begin(); it != this->map.end(); ++it,i++)
 	{
 		CreplaceMap map = *it;
-		printf("this->map[%d].address=%I64X\n", i,(int64_t)map.address);
+		//printf("this->map[%d].address=%I64X\n", i,(int64_t)map.address);
+		std::cout << "this->map[" << i << "].address=" << std::hex << (int64_t)map.address << endl;
 	}
 }
 
