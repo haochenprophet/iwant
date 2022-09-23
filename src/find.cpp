@@ -13,7 +13,7 @@ Cfind::Cfind()
 
 Cfind::~Cfind()
 {
-
+	this->found_list.clear();
 }
 
 //return :-1: do nothing 1:find  0:not find
@@ -51,6 +51,22 @@ int Cfind::find(uint8_t* source, uint8_t* source_end, uint8_t* target, int64_t t
 int Cfind::find(uint8_t* source, uint8_t* source_end, uint8_t* target, uint8_t* target_end, uint8_t ** output)
 {
 	return  Cfind::find(source, (int64_t)(source_end - source), target, (int64_t)(target_end- target), output);
+}
+
+int Cfind::find_to_list(uint8_t* source, int64_t source_size, uint8_t* target, int64_t target_size)//result push to found_list
+{
+	uint8_t * output,*end;
+
+	this->found_linst_count = 0;
+	for (end = source + source_size; source < end; source += target_size)
+	{
+		//int Cfind::find(uint8_t* source, uint8_t* source_end, uint8_t* target, int64_t target_size, uint8_t ** output)
+		if(1 != Cfind::find(source, end, target, target_size, (uint8_t**)&output)) break;//not find break
+		this->found_list.push_back(output);
+		this->found_linst_count++;
+	}
+
+	return this->found_linst_count;
 }
 
 #ifndef FIND_TEST
