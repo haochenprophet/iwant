@@ -8,7 +8,7 @@ namespace n_find {
 	{
 	public:
 		std::list<uint8_t*> found_list;
-		int found_linst_count;
+		int found_list_count;
 	public:
 		Cfind();
 		~Cfind();

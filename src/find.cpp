@@ -3,6 +3,7 @@ int Cfind::my_init(void *p)
 {
 	this->name = "Cfind";
 	this->alias = "find";
+	this->found_list_count = 0;
 	return 0;
 }
 
@@ -57,16 +58,16 @@ int Cfind::find_to_list(uint8_t* source, int64_t source_size, uint8_t* target, i
 {
 	uint8_t * output,*end;
 
-	this->found_linst_count = 0;
+	this->found_list_count = 0;
 	for (end = source + source_size; source < end; source += target_size)
 	{
 		//int Cfind::find(uint8_t* source, uint8_t* source_end, uint8_t* target, int64_t target_size, uint8_t ** output)
 		if(1 != Cfind::find(source, end, target, target_size, (uint8_t**)&output)) break;//not find break
 		this->found_list.push_back(output);
-		this->found_linst_count++;
+		this->found_list_count++;
 	}
 
-	return this->found_linst_count;
+	return this->found_list_count;
 }
 
 #ifndef FIND_TEST
