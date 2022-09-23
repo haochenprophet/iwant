@@ -87,7 +87,7 @@ size_t Cfile::f_size(char *f_name)
 	is.seekg (0, is.end);
 	size_t len=is.tellg();
 	is.close();
-	if(this->silent==0) std::cout << f_name << " size=" << len << endl;
+	if(this->silent==0) std::cout << f_name << " gitsize=" << len << endl;
 	return len;
 }
 
@@ -444,12 +444,12 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		if(argc>3){this->s_output_fname=argv[3];}
 		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}	
 	}
-	//compare action 
+	//compare action : "compare   <FileName1> <FileName2>"
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc)
 	{
 		if (argc > 3) { //uset out file for right 
-			this->fname_left = argv[3];
-			this->fname_right = argv[3]; 
+			this->fname_left = argv[2];//FileName1
+			this->fname_right = argv[3]; //FileName2
 		}
 		else {// input error return 
 			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1; 
