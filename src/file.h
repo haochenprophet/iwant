@@ -12,10 +12,13 @@ namespace n_file {
 		string f_name;
 		string s_output_fname;//output file name
 		std::fstream ap_fs;//for Cfile::f_append()
-
+		char* fname_left;//compare () file 1 default use left
+		char* fname_right;//compare ()file 2 default use right
 	public:
 		Cfile();
+		Cfile(char* fname);
 		~Cfile();
+		int my_init(void* p=nullptr);
 		int is_exist(char *filename);
 		int is_exist();
 		int f_append(char *filename, char * ap_str);
@@ -41,6 +44,8 @@ namespace n_file {
 		int create(void *p = nullptr);
 		int rm (char * filename = nullptr);//remove file 
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
+		int compare(char* fname_left, char* fname_right);// compare 
+		int compare();// compare 
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
 		int do_action(void * a= nullptr);

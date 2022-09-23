@@ -16,6 +16,7 @@ enum class FileAtcionClass
 	size,
 	merge,
 	replace,
+	compare,
 };
 
 enum class FileAtcion {
@@ -42,6 +43,8 @@ enum class FileAtcion {
 	merge_op,//operator +
 	replace,
 	rp,
+	compare,
+	fc,
 };
 
 #endif

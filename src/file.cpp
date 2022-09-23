@@ -3,17 +3,28 @@
 #include <stdio.h>
 #include "replace.h"
 
-Cfile::Cfile()
+int Cfile::my_init(void* p)
 {
 	this->name = "Cfile";
 	this->alias = "file";
-//	this->f_name="";
-//	this->s_output_fname="";
+	this->fname_left = nullptr;
+	this->fname_right = nullptr;
+	return 0;
+}
+
+Cfile::Cfile()
+{
+	this->my_init();
+}
+
+Cfile::Cfile(char* fname)
+{
+	this->my_init();
+	this->f_read(fname);
 }
 
 Cfile::~Cfile()
 {
-
 	if(this->ap_fs.is_open()) this->ap_fs.close();//Cfile::f_append
 }
 
@@ -269,6 +280,38 @@ int Cfile::rn(char * oldname , char * newname )//rename
 	}
 	return 0;
 }
+//return 0: equivalent 1: not equivalent -1:error not compare
+int Cfile::compare(char* fname_left, char* fname_right)// compare file 1 and file 2 if or not equivalent
+{
+	size_t left_size=f_size(fname_left);
+	size_t right_size = f_size(fname_right);
+	if (left_size != right_size) return 1;
+	//if (left_size == right_size)
+	{
+		Cfile left(fname_left);//file 1
+		Cfile right(fname_right);//file 2
+
+		if (left.size != right.size) return -1;
+
+		for (size_t i = 0; i < left.size; i++)
+		{
+			if (left.addr[i] != right.addr[i]) return 1;
+		}
+	}
+
+	return 0;
+}
+
+int Cfile::compare()// compare 
+{
+	if (this->fname_left == nullptr || this->fname_right == nullptr) return -1;
+	//int Cfile::compare(char* fname_left, char* fname_right)
+	int ret = this->compare(this->fname_left, this->fname_right);
+	if(ret == 0)  printf("file : %s == %s\n", this->fname_left, this->fname_right);
+	if(ret == 1)  printf("file : %s != %s\n", this->fname_left, this->fname_right);
+	if(ret == -1) printf("Error occur when compare file : %s and %s\n", this->fname_left, this->fname_right);
+	return ret;
+}
 
 size_t Cfile::f_write(char* f_name,void *addr , size_t size)
 {
@@ -352,6 +395,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::size || this->action == (ACTION_T)FileAtcion::sz) this->set_main_ret((int)this->f_size());
 	if (this->action == (ACTION_T)FileAtcion::merge || this->action == (ACTION_T)FileAtcion::merge_op) this->set_main_ret((int)this->merge(this->cmd.argc-1,&this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::replace || this->action == (ACTION_T)FileAtcion::rp) this->set_main_ret((int)this->replace(this->cmd.argc - 1, &this->cmd.argv[1]));
+	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
 
 	return 0;
 }
@@ -377,6 +421,7 @@ int Cfile::deal_cmd(int argc, char *argv[])
 
 	//init file action parameter; cmd:cat /cut option:  <FileName> [start] [size] [outfilename]
 	this->f_name=argv[2];
+
 	if (this->action == (ACTION_T)FileAtcion::cut) 
 	{
 		//[start] ,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
@@ -398,6 +443,17 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		//[outfilename]
 		if(argc>3){this->s_output_fname=argv[3];}
 		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}	
+	}
+	//compare action 
+	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc)
+	{
+		if (argc > 3) { //uset out file for right 
+			this->fname_left = argv[3];
+			this->fname_right = argv[3]; 
+		}
+		else {// input error return 
+			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1; 
+		}
 	}
 
 	//do action

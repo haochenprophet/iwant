@@ -31,7 +31,10 @@
 #define FILE_MERGE_OP_HELP "+ file[1] ... file[n] OutputFilename"
 //replace
 #define FILE_REPLACE_HELP   "replace   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
-#define FILE_RP_HELP        "rp        <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
+#define FILE_RP_HELP        "rp   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
+//compare
+#define FILE_COMPARE_HELP   "compare   <FileName1> <FileName2>"
+#define FILE_FC_HELP        "fc  <FileName1> <FileName2>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
@@ -62,6 +65,9 @@ Action file_action[] = {
 //replace
 	{ (int)FileAtcionClass::replace,(ACTION_T)FileAtcion::replace,      EatcionRelation::equal , nullptr ,(char *)"replace",     (char *)FILE_REPLACE_HELP},
 	{ (int)FileAtcionClass::replace,(ACTION_T)FileAtcion::rp,           EatcionRelation::equal , nullptr ,(char *)"rp",         (char *)FILE_RP_HELP},
+//compare
+	{ (int)FileAtcionClass::compare,(ACTION_T)FileAtcion::compare,      EatcionRelation::equal , nullptr ,(char *)"compare",     (char *)FILE_COMPARE_HELP},
+	{ (int)FileAtcionClass::compare,(ACTION_T)FileAtcion::fc,           EatcionRelation::equal , nullptr ,(char *)"fc",         (char *)FILE_FC_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
