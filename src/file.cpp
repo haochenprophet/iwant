@@ -87,7 +87,7 @@ size_t Cfile::f_size(char *f_name)
 	is.seekg (0, is.end);
 	size_t len=is.tellg();
 	is.close();
-	if(this->silent==0) std::cout << f_name << " gitsize=" << len << endl;
+	if(this->silent==0) std::cout << f_name << " size=" << len << endl;
 	return len;
 }
 
