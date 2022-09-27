@@ -20,6 +20,13 @@ inline void Cdisplay::dispay_space(int space_count)
 	for (; space_count > 0; space_count--)  printf(" ");
 }
 
+void Cdisplay::dispay_data(void* data, int data_type)//byte=1,word=2,dword=4,qword=8
+{
+	if (data_type == 1) printf("%02X", *((unsigned char*)data));
+	if (data_type == 2) printf("%04X", *((unsigned short*)data));
+	if (data_type == 4) printf("%08lX", *((unsigned long*)data));
+	if (data_type == 8) printf("%08llX", *((unsigned long long*)data));
+}
 //int separate_count = 16, max_separate = 16;
 //bool display_offset = true;
 //bool tag_ascii = false;
