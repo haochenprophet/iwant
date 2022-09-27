@@ -136,10 +136,11 @@ int Cfile::f_read()
 	return this->f_read((char *)this->f_name.c_str());
 }
 
-int Cfile::cat()
+int Cfile::cat(DisplayType t)
 {
 	if(0!=this->f_read()) return -1;
-	std::cout<<this->addr<<endl;
+	if(t== DisplayType::string||t== DisplayType::ascii) std::cout<<this->addr<<endl;
+
 	return 0;
 }
 
