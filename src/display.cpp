@@ -19,13 +19,25 @@ inline void Cdisplay::dispay_space(int space_count)
 {
 	for (; space_count > 0; space_count--)  printf(" ");
 }
-
-void Cdisplay::dispay_data(void* data, int data_type)//byte=1,word=2,dword=4,qword=8
+//hex_dec :0 hexadecimal ,1 :decimal  display
+void Cdisplay::dispay_data(void* data, int data_type,int hex_dec)//byte=1,word=2,dword=4,qword=8
 {
-	if (data_type == 1) printf("%02X", *((unsigned char*)data));
-	if (data_type == 2) printf("%04X", *((unsigned short*)data));
-	if (data_type == 4) printf("%08X", *((unsigned int*)data));
-	if (data_type == 8) printf("%016llX", *((unsigned long long*)data));
+	if (hex_dec == 0)//hexadecimal
+	{
+		if (data_type == 1) printf("%02X", *((unsigned char*)data));
+		if (data_type == 2) printf("%04X", *((unsigned short*)data));
+		if (data_type == 4) printf("%08X", *((unsigned int*)data));
+		if (data_type == 8) printf("%016llX", *((unsigned long long*)data));
+	}
+
+	if (hex_dec == 1)//decimal
+	{
+		if (data_type == 1) printf("%hhd", *((unsigned char*)data));
+		if (data_type == 2) printf("%hd", *((unsigned short*)data));
+		if (data_type == 4) printf("%d", *((unsigned int*)data));
+		if (data_type == 8) printf("%lld", *((unsigned long long*)data));
+	}
+
 }
 //int separate_count = 16, max_separate = 16;
 //bool display_offset = true;
