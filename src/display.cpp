@@ -24,7 +24,7 @@ void Cdisplay::dispay_data(void* data, int data_type)//byte=1,word=2,dword=4,qwo
 {
 	if (data_type == 1) printf("%02X", *((unsigned char*)data));
 	if (data_type == 2) printf("%04X", *((unsigned short*)data));
-	if (data_type == 4) printf("%08lX", *((unsigned long*)data));
+	if (data_type == 4) printf("%08X", *((unsigned int*)data));
 	if (data_type == 8) printf("%016llX", *((unsigned long long*)data));
 }
 //int separate_count = 16, max_separate = 16;
