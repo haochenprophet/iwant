@@ -139,8 +139,9 @@ int Cfile::f_read()
 int Cfile::cat(DisplayType t)
 {
 	if(0!=this->f_read()) return -1;
-	if(t== DisplayType::string||t== DisplayType::ascii) std::cout<<this->addr<<endl;
-
+	//if(t== DisplayType::string||t== DisplayType::ascii) std::cout<<this->addr<<endl;
+	//static int display(uint8_t * start, uint8_t * end, DisplayType t = DisplayType::string);
+	Cdisplay::display((uint8_t*)this->addr, (uint8_t*)(this->addr + this->size), t);
 	return 0;
 }
 

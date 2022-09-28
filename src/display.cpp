@@ -19,8 +19,10 @@ inline void Cdisplay::dispay_space(int space_count)
 {
 	for (; space_count > 0; space_count--)  printf(" ");
 }
+
 //hex_dec :0 hexadecimal ,1 :decimal  display
-void Cdisplay::dispay_data(void* data, int data_type,int hex_dec)//byte=1,word=2,dword=4,qword=8
+//data_type:(int)DisplayStyle::byte=1,word=2,dword=4,qword=8
+void Cdisplay::dispay_data(void* data, int data_type,int hex_dec)
 {
 	if (hex_dec ==(int) DisplayRadix::hexadecimal)//hexadecimal
 	{
