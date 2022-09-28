@@ -16,6 +16,7 @@ namespace n_file {
 		std::fstream ap_fs;//for Cfile::f_append()
 		char* fname_left;//compare () file 1 default use left
 		char* fname_right;//compare ()file 2 default use right
+		DisplayType display_type;
 	public:
 		Cfile();
 		Cfile(char* fname);
@@ -35,7 +36,7 @@ namespace n_file {
 		int f_read();
 		size_t f_write(char* f_name, void* addr, size_t size);
 		size_t f_write(char* f_name);//output filename
-		int cat(DisplayType t= DisplayType::string);
+		int cat(size_t start=0,size_t size=-1,DisplayType t= DisplayType::string);
 		int cut(char *file,long start=0,long size=-1,char *out_file=(char *)CFILE_FILE_OUT);
 		int cut();
 		int copy();

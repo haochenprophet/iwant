@@ -3,7 +3,8 @@
 
 #include "file_action.h"
 
-#define FILE_READ_HELP "cat  <FileName>"
+#define FILE_READ_HELP "read <FileName>"
+#define FILE_CAT_HELP  "cat  <FileName> [start] [size] [DisplayType={string,hex,hex_offset}]"
 #define FILE_CUT_HELP  "cut  <FileName> [start] [size] [outfilename]"
 #define FILE_COPY_HELP "copy <FileName> [outfilename]"
 #define FILE_CP_HELP   "cp   <FileName> [outfilename]"
@@ -37,7 +38,8 @@
 #define FILE_FC_HELP        "fc  <FileName1> <FileName2>"
 
 Action file_action[] = {
-	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_READ_HELP},
+	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
+	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::cat ,  EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_CAT_HELP},
 	{ (int)FileAtcionClass::rd_wr,(ACTION_T)FileAtcion::cut , EatcionRelation::equal , nullptr ,(char *)"cut",(char *)FILE_CUT_HELP},
 	{ (int)FileAtcionClass::rd_wr,(ACTION_T)FileAtcion::copy, EatcionRelation::equal , nullptr ,(char *)"copy",(char *)FILE_COPY_HELP},
 	{ (int)FileAtcionClass::rd_wr,(ACTION_T)FileAtcion::cp,   EatcionRelation::equal , nullptr ,(char *)"cp",  (char *)FILE_CP_HELP},

@@ -9,6 +9,7 @@ int Cfile::my_init(void* p)
 	this->alias = "file";
 	this->fname_left = nullptr;
 	this->fname_right = nullptr;
+	this->display_type = DisplayType::string;
 	return 0;
 }
 
@@ -136,12 +137,13 @@ int Cfile::f_read()
 	return this->f_read((char *)this->f_name.c_str());
 }
 
-int Cfile::cat(DisplayType t)
+int Cfile::cat(size_t start, size_t size, DisplayType t)
 {
 	if(0!=this->f_read()) return -1;
-	//if(t== DisplayType::string||t== DisplayType::ascii) std::cout<<this->addr<<endl;
+	if (size == -1 || size > this->size) size = this->size;//check and set size
+	if (start + size > this->size)size = this->size - start;//check start+ size
 	//static int display(uint8_t * start, uint8_t * end, DisplayType t = DisplayType::string);
-	Cdisplay::display((uint8_t*)this->addr, (uint8_t*)(this->addr + this->size), t);
+	Cdisplay::display((uint8_t*)(this->addr+ start), (uint8_t*)(this->addr + size), t);
 	return 0;
 }
 
@@ -384,6 +386,7 @@ int Cfile::replace(int argc, char* argv[])
 int Cfile::do_action(void * a)
 {
 	if (this->action == (ACTION_T)FileAtcion::read) this->set_main_ret(this->cat());
+	if (this->action == (ACTION_T)FileAtcion::cat) this->set_main_ret(this->cat(this->range_start.data.l, this->range_amount.data.l,this->display_type));
 	if (this->action == (ACTION_T)FileAtcion::cut) this->set_main_ret(this->cut());
 	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp) this->set_main_ret(this->copy());
 	if (this->action == (ACTION_T)FileAtcion::create||this->action == (ACTION_T)FileAtcion::add) this->set_main_ret(this->create());
@@ -435,6 +438,24 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		//[outfilename]
 		if(argc>5){this->s_output_fname=argv[5];}
 		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}		
+	}
+
+	if (this->action == (ACTION_T)FileAtcion::cat)
+	{
+		if (argc > 3) { this->range_start.data.l = (long)atoll(argv[3]); }
+		else { this->range_start.data.l = 0; }//default min
+		//[size]
+		if (argc > 4) { this->range_amount.data.l = (long)atoll(argv[4]); }
+		else { this->range_amount.data.l = -1; }//default max
+		//[DisplayType={string,hex,hex_offset}
+		if (argc > 5) { 
+			if (0 == strcmp(argv[5], (char*)"string")) this->display_type=DisplayType::string;
+			if (0 == strcmp(argv[5], (char*)"hex")) this->display_type = DisplayType::hex;
+			if (0 == strcmp(argv[5], (char*)"hex_offset")) this->display_type = DisplayType::hex_offset;
+		}
+		else {
+			this->display_type = DisplayType::string;//default
+		}
 	}
 
 	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp ||

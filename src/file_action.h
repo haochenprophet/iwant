@@ -22,6 +22,7 @@ enum class FileAtcionClass
 enum class FileAtcion {
 	none,//for 0 action
 	read,
+	cat,
 	cut,
 	copy,
 	cp,

@@ -6,7 +6,7 @@
 namespace n_display {
 	enum class DisplayType
 	{
-		string,
+		string,//0
 		ascii,
 		hex,
 		hex_offset,//hex + offset display
