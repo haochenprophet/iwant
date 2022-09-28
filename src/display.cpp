@@ -70,7 +70,7 @@ void  Cdisplay::display_hex(char *buf, size_t size, bool display_offset,int data
 
 	for (i = 0, count=0, n = i; i < size; i+= data_type, offset+= data_type,count++)
 	{
-		if (display_offset && count % newline == 0) { printf("%08lX:",(int) offset); dispay_space(space_count); }
+		if (display_offset && count % newline == 0) { printf("%08lX:",(unsigned long) offset); dispay_space(space_count); }
 
 		dispay_data(&buf[i], data_type);
 		dispay_space(space_count);
