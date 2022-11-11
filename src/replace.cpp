@@ -320,7 +320,7 @@ int Creplace::replace(int argc, char* argv[])
 
 	if (type == ReplaceType::none)
 	{
-		printf("Can not find ReplaceType £ºF or S of command line input.\n");
+		printf("Can not find ReplaceType F or S of command line input.\n");
 		return -2;
 	}
 
