@@ -15,15 +15,30 @@ namespace n_replace {
 		memory,
 	};
 
+	class CLocationRange
+	{
+	public:
+		void* start;
+		void* end;
+		size_t size;//start_to_end_size;
+	public:
+		CLocationRange();
+		size_t set_size(size_t size=0);
+	};
+
 	class CreplaceParameter
 	{
 	public:
-		void* find_memory;
+		void* find_memory;//from_memory
 		int64_t find_memory_size;
+		void* to_memory;
+		int64_t to_memory_size; //0
 		void* replace_memory;
 		int64_t replace_memory_size;
 		int64_t find_count;//analyze set it
+		int64_t total_change_size;//(replace_memory_size-find_memory_size)*find_count
 		std::list<void*> location_list;//point [0] to find_count void* address , analyze() set it 
+		std::list<CLocationRange> location_range_list;
 	public:
 		CreplaceParameter();
 		~CreplaceParameter();
@@ -33,6 +48,7 @@ namespace n_replace {
 	{
 	public:
 		void* address;//replace_memory_address;
+		int64_t size;//replace_memory_size
 		CreplaceParameter* p;
 	};
 

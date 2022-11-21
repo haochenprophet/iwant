@@ -2,13 +2,43 @@
 #ifndef REPLACE_TEST
 #define REPLACE_TEST 0//1
 #endif
+
+CLocationRange::CLocationRange()
+{
+	this->start = nullptr;
+	this->end = nullptr;
+	this->size = 0;
+}
+
+size_t CLocationRange::set_size(size_t size)
+{
+	//case 1
+	if (size > 0)
+	{
+		this->size = size;
+		return size;
+	}
+	//case 2
+	if (this->start < this->end)
+	{
+		this->size = (uint8_t*)this->end - (uint8_t*)this->start;
+		return this->size;
+	}
+	//case 3
+	this->size = 0;
+	return this->size;
+}
+
 CreplaceParameter::CreplaceParameter()
 {
 	this->find_count = 0;
 	this->find_memory = nullptr;
 	this->find_memory_size = 0;
+	this->to_memory = nullptr;
+	this->to_memory_size = 0;
 	this->replace_memory = 0;
 	this->replace_memory_size = 0;
+	this->total_change_size = 0;
 }
 
 CreplaceParameter::~CreplaceParameter()
@@ -49,17 +79,39 @@ int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* 
 	uint8_t * output;
 	uint8_t * start = (uint8_t*)source;
 	uint8_t * end = start + source_size;
+	CLocationRange location_range;
 
 	p->location_list.clear(); 
+	p->location_range_list.clear();
 	p->find_count = 0;
 
 	while(1) {
+		//1.find from memory
 		exist=Cfind::find(start, end,(uint8_t*) p->find_memory, p->find_memory_size, & output);
 		if (exist == 1)
 		{
 			p->location_list.push_back((void*)output);//store address to list
 			p->find_count++;
 			start = output+ p->find_memory_size;
+			//set location range
+			location_range.start = (void*)output;//store start point
+			location_range.end = (void*)start;//store end point
+			location_range.size = p->find_memory_size;
+
+			//2.check from memory --to memory 
+			if (p->to_memory != nullptr && p->to_memory_size != 0)
+			{
+				exist = Cfind::find(start, end, (uint8_t*)p->to_memory, p->to_memory_size, &output);
+
+				if (exist == 1)
+				{
+					start = output + p->to_memory_size;
+					location_range.end = (void*)start;//store end point
+					location_range.set_size();//end-start
+				}
+			}
+			p->total_change_size += (p->replace_memory_size - location_range.size);//Calculate the total change size
+			p->location_range_list.push_back(location_range);//And also to record to location_range list
 			continue;
 		}
 		break;
@@ -70,9 +122,11 @@ int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* 
 int Creplace::build_map(CreplaceParameter* p)
 {
 	CreplaceMap rmap;
-	for (auto it = p->location_list.cbegin(); it != p->location_list.cend(); ++it)
+	//for (auto it = p->location_list.cbegin(); it != p->location_list.cend(); ++it)
+	for (std::list<CLocationRange>::iterator it = p->location_range_list.begin(); it != p->location_range_list.end(); ++it)
 	{
-		rmap.address= (void*)(*it);
+		rmap.address= (void*)(it->start);
+		rmap.size = it->size;
 		rmap.p = p;
 		this->map.push_back(rmap);
 	}
@@ -93,7 +147,8 @@ int64_t Creplace::analyze(void* source, int64_t source_size)//build map[]
 	{
 		p = (CreplaceParameter*)(*it);
 		this->analyze(source, source_size, p);
-		this->total_size+= (p->replace_memory_size - p->find_memory_size) * p->find_count;
+		//this->total_size+= (p->replace_memory_size - p->find_memory_size) * p->find_count;
+		this->total_size += p->total_change_size;
 		this->map_total_count += p->find_count;
 	}
 	//allot map memory
@@ -137,19 +192,21 @@ int Creplace::replace(void * source , int64_t source_size , CreplaceParameter * 
 	uint8_t* dest;
 
 	if (0 == this->analyze(source, source_size, p)) return -1;//not find no replace
-	total_allot_size = source_size + (p->replace_memory_size - p->find_memory_size) * p->find_count;
+	//total_allot_size = source_size + (p->replace_memory_size - p->find_memory_size) * p->find_count;
+	total_allot_size = source_size + p->total_change_size;
 
 	if(total_allot_size!=this->allot(total_allot_size,(void **) & dest)) return -1;//allot memory fail
 	*result_address = (void*)dest;
 	*result_size = total_allot_size;
 
-	for (std::list<void*>::iterator it = p->location_list.begin(); it != p->location_list.end(); ++it)
+	//for (std::list<void*>::iterator it = p->location_list.begin(); it != p->location_list.end(); ++it)
+	for (std::list<CLocationRange>::iterator it = p->location_range_list.begin(); it != p->location_range_list.end(); ++it)
 	{
-		size=this->copy(start, (uint8_t*)dest, (uint8_t*)(*it));//source,dest,source_end
+		size=this->copy(start, (uint8_t*)dest, (uint8_t*)(it->start));//source,dest,source_end
 		dest += size;
 		size=this->copy((uint8_t*)p->replace_memory, dest, p->replace_memory_size);//source,dest,size
 		if (size != p->replace_memory_size) { return 1; } //error 
-		start =(uint8_t*) * it+p->find_memory_size;//Calculate the next start address
+		start = (uint8_t*)it->end;// +p->find_memory_size;//Calculate the next start address
 		dest += size;//Calculate the next dest address
 	}
 	if(start< end) size = this->copy(start, (uint8_t*)dest, end);//source,dest,source_end
@@ -175,7 +232,7 @@ int Creplace::replace(void* source, void* source_end, CreplaceParameter* p)
 //will use this->parameter_list
 int Creplace::replace(void* source, int64_t source_size)//map total count 
 {
-	int64_t size;
+	int64_t size, skip_size;
 	uint8_t * start ,* end, * dest,*min_address,*past_address ;
 	CreplaceMap map;
 	CreplaceParameter* p=nullptr;
@@ -205,6 +262,7 @@ int Creplace::replace(void* source, int64_t source_size)//map total count
 			if (map.address < min_address&& map.address>past_address)
 			{
 				min_address = (uint8_t*)map.address;
+				skip_size = map.size;
 				p = map.p;//set CreplaceParameter
 			}
 		}
@@ -216,7 +274,7 @@ int Creplace::replace(void* source, int64_t source_size)//map total count
 		size = this->copy((uint8_t*)p->replace_memory, dest, p->replace_memory_size);//source,dest,size
 		if (size !=p->replace_memory_size) { return 1; } //error 
 
-		start = min_address + p->find_memory_size;//Calculate the next start address
+		start = min_address + skip_size;//Calculate the next start address
 		dest += size;//Calculate the next dest address
 
 		past_address = min_address;//set for get next min address
@@ -355,16 +413,22 @@ void Creplace::list_map()
 void replace_test()
 {
 	Creplace r;
-	char source[] = "56895678956F5";
+	char source[] = "56895678956F5*\n\r#5689F5#";
 	char memory[] ={ '5','6'};
 	char memory1[] = { '8', '9' };
+	char memory2[] = { 'F', '5', };
 
-	char replace[5] = { 'A','B','C','D','E' };
-	char replace1[5] = { 'F','G','H','I','J' };
-	CreplaceParameter p,p1;
+	char to_memory[] = { '\n','\r' };
+
+	char replace[] = { 'A','B','C','D','E','-' };
+	char replace1[] = { 'F','G','H','I','J','-' };
+	char replace2[] = { 'K','L','M','N','O','P','-' };
+
+	CreplaceParameter p,p1,p2;
 
 	char* result=nullptr;
 	int64_t result_size = 0;
+
 	//printf("sizeof(CreplaceMap)=%d\n", sizeof(CreplaceMap));
 	//init CreplaceParameter
 	p.find_memory = (void*)&memory;
@@ -386,6 +450,16 @@ void replace_test()
 	r.add_parameter_list(&p1);
 	r.replace((void*)&source, sizeof(source));
 	//printf("r.result=%s r.result_size=%I64d\n", (char *)r.result, r.result_size); //%I64d linux g++ build warning
+	std::cout << "r.result=" << (char*)r.result << " r.result_size=" << r.result_size << endl;
+
+	p2.find_memory = (void*)&memory2;
+	p2.find_memory_size = sizeof(memory2);
+	p2.replace_memory = (void*)&replace2;
+	p2.replace_memory_size = sizeof(replace2);
+	p2.to_memory = (void*)to_memory;
+	p2.to_memory_size= sizeof(to_memory);
+	r.add_parameter_list(&p2);
+	r.replace((void*)&source, sizeof(source));
 	std::cout << "r.result=" << (char*)r.result << " r.result_size=" << r.result_size << endl;
 
 }
