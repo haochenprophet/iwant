@@ -324,7 +324,7 @@ int Creplace::add_parameter_list(CreplaceParameter * p)
 	return 0;
 }
 
-int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
+int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size, uint8_t* end_find_data, size_t end_find_size)
 {
 	Cfile f;
 	Creplace r;
@@ -337,6 +337,8 @@ int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, siz
 	p.find_memory_size = find_size;
 	p.replace_memory = replace_data;
 	p.replace_memory_size = replace_size;
+	p.to_memory = end_find_data;
+	p.to_memory_size = end_find_size;
 
 	//int Creplace::replace(void* source, int64_t source_size, CreplaceParameter* p)
 	if (0 != r.replace((void*)f.addr, (int64_t)f.size, &p))return -1;//not find or not replace
@@ -346,26 +348,29 @@ int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, siz
 	return 0;
 }
 
-int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str)
+int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str, uint8_t* end_find_data, size_t end_find_size)
 {
-	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
-	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) , (uint8_t*)replace_str, strlen(replace_str));
+	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size, uint8_t* end_find_data, size_t end_find_size)
+	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) , (uint8_t*)replace_str, strlen(replace_str),end_find_data, end_find_size);
 }
 
-int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type)//type for C++ overloaded replace() functions
+int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type,uint8_t* end_find_data, size_t end_find_size)//type for C++ overloaded replace() functions
 {
 	Cfile find, replace;
 	if (0 != find.f_read(find_file)) return -1;
 	if (0 != replace.f_read(replace_file)) return -1;
-	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size)
-	return this->replace(inputfile, outputfile, (uint8_t*)find.addr, find.size, (uint8_t*)replace.addr, replace.size);
+	//int Creplace::replace(char* inputfile, char* outputfile, uint8_t * find_data, size_t find_size, uint8_t * replace_data, size_t replace_size, uint8_t * end_find_data, size_t end_find_size)
+	return this->replace(inputfile, outputfile, (uint8_t*)find.addr, find.size, (uint8_t*)replace.addr, replace.size, end_find_data, end_find_size);
 }
 
-//argv[0]=<InFileName> argv[1]=<OutFileName> argv[2]=<find>  argv[3]<replace> argv[4]=<S/F>"
+//argv[1]=<InFileName> argv[2]=<OutFileName> argv[3]=<find>  argv[4]<replace> argv[5]=<S/F> argv[6]=[endfind]"
 int Creplace::replace(int argc, char* argv[])
 {
 	Creplace r;
 	ReplaceType type = ReplaceType::none;
+
+	uint8_t* end_find_data = nullptr;
+	size_t end_find_size = 0;
 
 	if (argc < 6)//check input 
 	{
@@ -375,23 +380,43 @@ int Creplace::replace(int argc, char* argv[])
 
 	if (argv[5][0] == 'S' || argv[5][0] == 's') type = ReplaceType::string;//string type
 	if (argv[5][0] == 'F' || argv[5][0] == 'f') type = ReplaceType::file;//file type
+	if (argv[5][0] == 'L' || argv[5][0] == 'l') type = ReplaceType::line;//line type
 
 	if (type == ReplaceType::none)
 	{
 		printf("Can not find ReplaceType F or S of command line input.\n");
 		return -2;
 	}
+	
+	if (argc > 6)//argv[6]=[endfind]
+	{
+		end_find_data =(uint8_t*) argv[6];
+		end_find_size = strlen(argv[6]);
+	}
+
+	if (type == ReplaceType::line)
+	{
+		if (end_find_data == nullptr)
+		{
+			end_find_data = (uint8_t*)"\n";
+			end_find_size = 1;//sizeof("\r\n")-1;
+		}
+		string rs = argv[4];
+		rs += "\n";
+		//int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str, uint8_t* end_find_data, size_t end_find_size)
+		return r.replace(argv[1], argv[2], argv[3],(char*) rs.c_str(), end_find_data, end_find_size);
+	}
 
 	if (type == ReplaceType::string)
 	{
 		//int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str)
-		return r.replace(argv[1], argv[2], argv[3], argv[4]);
+		return r.replace(argv[1], argv[2], argv[3], argv[4], end_find_data, end_find_size);
 	}
 
 	if (type == ReplaceType::file)
 	{
 		//int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type)//type for C++ overloaded replace() functions
-		return r.replace(argv[1], argv[2], argv[3], argv[4], (int)type);
+		return r.replace(argv[1], argv[2], argv[3], argv[4], (int)type, end_find_data, end_find_size);
 	}
 	return 0;
 }

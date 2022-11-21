@@ -13,6 +13,7 @@ namespace n_replace {
 		string,
 		file,
 		memory,
+		line,//replace one line
 	};
 
 	class CLocationRange
@@ -79,9 +80,9 @@ namespace n_replace {
 		int replace(void * source, void  * source_end,  CreplaceParameter* p);
 		int replace(void * source, void  * source_end);//will use this->parameter_list
 		int replace(void * source, int64_t source_size);
-		int replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size);
-		int replace(char* inputfile, char* outputfile, char* find_str, char* replace_str);
-		int replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type);//int type: for C++ overloaded replace() functions
+		int replace(char* inputfile, char* outputfile, uint8_t* find_data, size_t find_size, uint8_t* replace_data, size_t replace_size, uint8_t* end_find_data =nullptr, size_t end_find_size=0);
+		int replace(char* inputfile, char* outputfile, char* find_str, char* replace_str, uint8_t* end_find_data = nullptr, size_t end_find_size = 0);
+		int replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type, uint8_t* end_find_data = nullptr, size_t end_find_size = 0);//int type: for C++ overloaded replace() functions
 		int replace(int argc, char* argv[]);
 		int add_parameter_list(CreplaceParameter * p);
 		void list_map();

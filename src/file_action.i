@@ -31,8 +31,8 @@
 #define FILE_MERGE_HELP "merge file[1] ... file[n] OutputFilename"
 #define FILE_MERGE_OP_HELP "+ file[1] ... file[n] OutputFilename"
 //replace
-#define FILE_REPLACE_HELP   "replace   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
-#define FILE_RP_HELP        "rp   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file>"
+#define FILE_REPLACE_HELP   "replace   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file> [end_find]"
+#define FILE_RP_HELP        "rp   <InFileName> <OutFileName> <find> <replace> <type=S:string or F:file or L:line> [end_find]"
 //compare
 #define FILE_COMPARE_HELP   "compare   <FileName1> <FileName2>"
 #define FILE_FC_HELP        "fc  <FileName1> <FileName2>"
