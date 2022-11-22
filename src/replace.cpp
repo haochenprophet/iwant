@@ -109,11 +109,11 @@ int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* 
 					start = output + p->to_memory_size;
 					if (p->replace_to_memory_end)
 					{
-						location_range.end = (void*)output;//store end point
+						location_range.end = start;// output + p->to_memory_size;
 					}
 					else
 					{
-						location_range.end = start;// output + p->to_memory_size;
+						location_range.end = (void*)output;//store end point
 					}					
 					location_range.set_size();//end-start
 				}
