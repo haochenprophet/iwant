@@ -40,6 +40,7 @@ namespace n_replace {
 		int64_t total_change_size;//(replace_memory_size-find_memory_size)*find_count
 		std::list<void*> location_list;//point [0] to find_count void* address , analyze() set it 
 		std::list<CLocationRange> location_range_list;
+		bool replace_to_memory_end;//include end find string will be replace
 	public:
 		CreplaceParameter();
 		~CreplaceParameter();
@@ -64,7 +65,7 @@ namespace n_replace {
 		std::list<CreplaceMap> map;
 		void * result;
 		int64_t result_size;
-
+		CreplaceParameter replace_parameter;//public data 
 	public:
 		Creplace();
 		~Creplace();

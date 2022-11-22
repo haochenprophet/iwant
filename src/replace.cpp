@@ -39,6 +39,7 @@ CreplaceParameter::CreplaceParameter()
 	this->replace_memory = 0;
 	this->replace_memory_size = 0;
 	this->total_change_size = 0;
+	this->replace_to_memory_end = false;
 }
 
 CreplaceParameter::~CreplaceParameter()
@@ -106,7 +107,14 @@ int64_t Creplace::analyze(void* source, int64_t source_size, CreplaceParameter* 
 				if (exist == 1)
 				{
 					start = output + p->to_memory_size;
-					location_range.end = (void*)start;//store end point
+					if (p->replace_to_memory_end)
+					{
+						location_range.end = (void*)output;//store end point
+					}
+					else
+					{
+						location_range.end = start;// output + p->to_memory_size;
+					}					
 					location_range.set_size();//end-start
 				}
 			}
@@ -328,20 +336,19 @@ int Creplace::replace(char* inputfile, char* outputfile, uint8_t* find_data, siz
 {
 	Cfile f;
 	Creplace r;
-	CreplaceParameter p;
 
 	f.f_read(inputfile);
 	if (f.size < find_size) return -1;//will not be found
 	//init replace parameter
-	p.find_memory = find_data;
-	p.find_memory_size = find_size;
-	p.replace_memory = replace_data;
-	p.replace_memory_size = replace_size;
-	p.to_memory = end_find_data;
-	p.to_memory_size = end_find_size;
+	this->replace_parameter.find_memory = find_data;
+	this->replace_parameter.find_memory_size = find_size;
+	this->replace_parameter.replace_memory = replace_data;
+	this->replace_parameter.replace_memory_size = replace_size;
+	this->replace_parameter.to_memory = end_find_data;
+	this->replace_parameter.to_memory_size = end_find_size;
 
 	//int Creplace::replace(void* source, int64_t source_size, CreplaceParameter* p)
-	if (0 != r.replace((void*)f.addr, (int64_t)f.size, &p))return -1;//not find or not replace
+	if (0 != r.replace((void*)f.addr, (int64_t)f.size, &this->replace_parameter))return -1;//not find or not replace
 
 	//size_t Creplace::f_write(char* f_name, void* addr, size_t size)
 	f.f_write(outputfile, r.result, (size_t)r.result_size);//write file
@@ -363,7 +370,7 @@ int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* 
 	return this->replace(inputfile, outputfile, (uint8_t*)find.addr, find.size, (uint8_t*)replace.addr, replace.size, end_find_data, end_find_size);
 }
 
-//argv[1]=<InFileName> argv[2]=<OutFileName> argv[3]=<find>  argv[4]<replace> argv[5]=<S/F> argv[6]=[endfind]"
+//argv[1]=<InFileName> argv[2]=<OutFileName> argv[3]=<find>  argv[4]<replace> argv[5]=<S/F> argv[6]=[endfind] argv[7]=1/0 1:replace_end 0:no replace"
 int Creplace::replace(int argc, char* argv[])
 {
 	Creplace r;
@@ -394,6 +401,12 @@ int Creplace::replace(int argc, char* argv[])
 		end_find_size = strlen(argv[6]);
 	}
 
+	if (argc > 7)// 1:replace_end 0:no replace
+	{
+		if (argv[7][0] == '1') this->replace_parameter.replace_to_memory_end = true;
+		if (argv[7][0] == '0') this->replace_parameter.replace_to_memory_end = false;
+	}
+
 	if (type == ReplaceType::line)
 	{
 		if (end_find_data == nullptr)
@@ -403,6 +416,7 @@ int Creplace::replace(int argc, char* argv[])
 		}
 		string rs = argv[4];
 		rs += "\n";
+		this->replace_parameter.replace_to_memory_end = true;//set flag for replace end to \n
 		//int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str, uint8_t* end_find_data, size_t end_find_size)
 		return r.replace(argv[1], argv[2], argv[3],(char*) rs.c_str(), end_find_data, end_find_size);
 	}
