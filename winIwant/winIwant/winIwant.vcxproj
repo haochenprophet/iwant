@@ -161,6 +161,7 @@
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\company.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
+    <ClCompile Include="..\..\src\copy.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\cstdio\clearerr.cpp" />
     <ClCompile Include="..\..\src\cstdio\cstdio.cpp" />
@@ -2000,6 +2001,7 @@
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\const.h" />
+    <ClInclude Include="..\..\src\copy.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\cstdio\clearerr.h" />
     <ClInclude Include="..\..\src\cstdio\cstdio.h" />
