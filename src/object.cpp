@@ -956,6 +956,11 @@ int Object::how()
 	return this->status.data.i; //normal, success, OK ,Pass!  and so on
 }
 
+size_t Object::my_size()
+{
+	return sizeof(Object);
+}
+
 int Object::func(void *p)
 {
 	std::cout << this->name << "Object::func\n";
@@ -1229,6 +1234,18 @@ int Object::rejoin_signal(int signum)
 {
 	OUT_LINE_N(signum);
 	return -1;
+}
+
+int64_t Object::copy(uint8_t* source, uint8_t* dest, int64_t size)
+{
+	int64_t i;
+	for (i = 0; i < size; i++) dest[i] = source[i];
+	return i;
+}
+
+int64_t Object::copy(uint8_t* source, uint8_t* dest, uint8_t* source_end)
+{
+	return this->copy(source, dest, (int64_t)(source_end - source));
 }
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)

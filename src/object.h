@@ -340,6 +340,7 @@ namespace n_object {
 		virtual Object * where();//object address
 		virtual Object * who();//object introduces
 		virtual time_t * when();
+		virtual size_t my_size();
 		virtual int how();//return current status , default is  normal ,success , pass ,OK  .... 
 		virtual int func(void *p=nullptr); // callback function
 		virtual int create(void *p=nullptr);//No gun, no cannons, we made ourselves, We create ourselves and create the future.(Objetc::create)
@@ -383,6 +384,8 @@ namespace n_object {
 		virtual int go(void *p = nullptr);	//go function for object move support
 		virtual int register_signal(int signum);
 		virtual int rejoin_signal(int signum);
+		virtual int64_t copy(uint8_t* source, uint8_t* dest, int64_t size);
+		virtual int64_t copy(uint8_t* source, uint8_t* dest, uint8_t* source_end);
 		int register_all_signal(int signum=-1);
 		//Arithmetic Operators
 		void  operator+(Object *o) { this->addMe(o); }

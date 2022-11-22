@@ -174,18 +174,6 @@ int64_t Creplace::analyze(void* source, int64_t source_size)//build map[]
 	return 0;
 }
 
-int64_t Creplace::copy(uint8_t* source, uint8_t* dest, int64_t size)
-{
-	int64_t i;
-	for (i=0; i < size; i++) dest[i] = source[i];
-	return i;
-}
-
-int64_t Creplace::copy(uint8_t* source, uint8_t* dest, uint8_t* source_end)
-{
-	return this->copy(source, dest, (int64_t)(source_end - source));
-}
-
 //class Creplace: Can be used for editingand modification of images, sounds, text, memory, documents ...
 //output result memory [n] = replace ( source memory[n] + replace information + relpace map + replace rule )
 //input: source +size + repalce list[n] , output :result+ size
