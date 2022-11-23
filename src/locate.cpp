@@ -19,7 +19,7 @@ Clocate::~Clocate()
 uint8_t* Clocate::line(uint8_t* start, uint8_t* end, int64_t line_number)
 {
 	int64_t line;
-
+	if (line_number <= 1) return start;
 	for (line=1; start < end; start++)
 	{
 		if (line == line_number) break; //n p
