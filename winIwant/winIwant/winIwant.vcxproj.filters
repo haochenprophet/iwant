@@ -5559,6 +5559,12 @@
     <ClCompile Include="..\..\src\copy.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\locate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\insert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11193,6 +11199,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\copy.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\locate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\insert.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

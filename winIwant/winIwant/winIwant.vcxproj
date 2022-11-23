@@ -325,6 +325,7 @@
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\http.cpp" />
     <ClCompile Include="..\..\src\input.cpp" />
+    <ClCompile Include="..\..\src\insert.cpp" />
     <ClCompile Include="..\..\src\instruction.cpp" />
     <ClCompile Include="..\..\src\instruction\AAA.cpp" />
     <ClCompile Include="..\..\src\instruction\AAD.cpp" />
@@ -1540,6 +1541,7 @@
     <ClCompile Include="..\..\src\keywords\__virtual_inheritance.cpp" />
     <ClCompile Include="..\..\src\keywords\__w64.cpp" />
     <ClCompile Include="..\..\src\keywords\__wchar_t.cpp" />
+    <ClCompile Include="..\..\src\locate.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\make.cpp" />
     <ClCompile Include="..\..\src\makefile.cpp" />
@@ -2178,6 +2180,7 @@
     <ClInclude Include="..\..\src\http_def.h" />
     <ClInclude Include="..\..\src\input.h" />
     <ClInclude Include="..\..\src\input_class.h" />
+    <ClInclude Include="..\..\src\insert.h" />
     <ClInclude Include="..\..\src\instruction.h" />
     <ClInclude Include="..\..\src\instruction\AAA.h" />
     <ClInclude Include="..\..\src\instruction\AAD.h" />
@@ -3393,6 +3396,7 @@
     <ClInclude Include="..\..\src\keywords\__virtual_inheritance.h" />
     <ClInclude Include="..\..\src\keywords\__w64.h" />
     <ClInclude Include="..\..\src\keywords\__wchar_t.h" />
+    <ClInclude Include="..\..\src\locate.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\main_action.h" />
     <ClInclude Include="..\..\src\make.h" />
