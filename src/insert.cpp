@@ -68,7 +68,7 @@ int Cinsert::allot_memory(CinsertParameter* p)
 	if (p->result_start != nullptr) return -1;
 
 	size = p->source_end - p->source_start + p->insert_data_end - p->insert_data_start;
-	if (size < 1) return -1;
+	if (size < 0) return -1;
 
 	//int64_t Object::allot(int64_t size, void** o_addr)
 	if (0 == this->allot(size, (void**)&p->result_start)) return -1;
@@ -94,6 +94,11 @@ int Cinsert::set(CinsertParameter* p, uint8_t* source_start, uint8_t* source_end
 	return -1;
 }
 
+int Cinsert::set(CinsertParameter* p, uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+{
+	return this->set(p, source_start, source_start + source_size, source_start + insert_offset, insert_data_start, insert_data_start + insert_data_size);
+}
+
 //return  -1 :do nothing 0:pass 1:fail 
 int Cinsert::insert(CinsertParameter* p)
 {
@@ -117,10 +122,24 @@ int Cinsert::insert(CinsertParameter* p)
 
 #if INSERT_TEST
 #include INCLUDE_ALL_H
+
+void inster_test()
+{
+	uint8_t source_data[] = { '1','2','0'};
+	uint8_t instert_data[] = { 'A' };
+	CinsertParameter p;
+	Cinsert i;
+
+	i.set(&p,source_data,(size_t) sizeof(source_data), (size_t)1, instert_data, (size_t)sizeof(instert_data));
+	i.insert(&p);
+
+	std::cout << (char*)p.result_start << endl;
+}
+
 int main(int argc, char *argv[])
 {
 	WHERE_I;
-
+	inster_test();
 	return 0;
 }
 #endif
