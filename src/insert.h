@@ -26,6 +26,8 @@ namespace n_insert {
 	class Cinsert :public Object
 	{
 	public:
+		CinsertParameter insert_parameter;//public for other coding
+	public:
 		Cinsert();
 		~Cinsert();
 		int my_init(void *p=nullptr);
@@ -33,7 +35,14 @@ namespace n_insert {
 		int allot_memory(CinsertParameter* p);
 		int set(CinsertParameter* p, uint8_t* source_start,uint8_t* source_end,uint8_t* insert_offset,uint8_t* insert_data_start,uint8_t* insert_data_end);
 		int set(CinsertParameter* p, uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size);
+		int set(uint8_t* source_start, uint8_t* source_end, uint8_t* insert_offset, uint8_t* insert_data_start, uint8_t* insert_data_end);
+		int set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size);
+
 		int insert(CinsertParameter* p);
+		int insert(CinsertParameter* p, int64_t line_number);
+		int insert();
+		int insert(int64_t line_number);
+		int insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset);//file offset insert
 	};
 }
 

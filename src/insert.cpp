@@ -1,4 +1,7 @@
 #include "insert.h"
+#include "locate.h"
+#include "find.h"
+#include "file.h"
 
 void CinsertParameter::init()
 {
@@ -99,6 +102,15 @@ int Cinsert::set(CinsertParameter* p, uint8_t* source_start, size_t source_size,
 	return this->set(p, source_start, source_start + source_size, source_start + insert_offset, insert_data_start, insert_data_start + insert_data_size);
 }
 
+int Cinsert::set(uint8_t* source_start, uint8_t* source_end, uint8_t* insert_offset, uint8_t* insert_data_start, uint8_t* insert_data_end)
+{
+	return this->set(&this->insert_parameter, source_start, source_end, insert_offset, insert_data_start, insert_data_end);
+}
+
+int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+{
+	return this->set(&this->insert_parameter, source_start, source_size, insert_offset, insert_data_start, insert_data_size);
+}
 //return  -1 :do nothing 0:pass 1:fail 
 int Cinsert::insert(CinsertParameter* p)
 {
@@ -109,11 +121,48 @@ int Cinsert::insert(CinsertParameter* p)
 	{
 		if(0!=this->allot_memory(p)) return -1;//allot memory fail
 	}
-	//start inster data to result 
+	//start insert data to result 
 	offset_size=this->copy(p->source_start, p->result_start, p->insert_offset);//1.from start to offset
 	insert_size=this->copy(p->insert_data_start, p->result_start + offset_size, p->insert_data_end);//2.inster data
 	this->copy(p->insert_offset, p->result_start + offset_size + insert_size, p->source_end);//3.form offset to end
 	return 0;
+}
+
+int Cinsert::insert()
+{
+	return this->insert(&this->insert_parameter);
+}
+
+int Cinsert::insert(CinsertParameter* p, int64_t line_number)
+{
+	p->insert_offset=Clocate::line(p->source_start,p->source_end,line_number);
+	return this->insert(p);
+}
+
+int Cinsert::insert(int64_t line_number)
+{
+	return this->insert(&this->insert_parameter, line_number );
+}
+
+int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset)//file offset insert
+{
+	int ret;
+	Cfile finput;
+	Cfile foutput;
+	Cfile finsert;
+
+	if(0!=finput.f_read(input_file)) return -1;//read fail 
+	if(0!=finsert.f_read(insert_file)) return -1;//read fail 
+
+	//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+	this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)finsert.addr,finsert.size );//init parameter
+	ret = this->insert();
+	if (0==ret)
+	{
+		foutput.f_write(output_file,this->insert_parameter.result_start,this->insert_parameter.result_end);//write file
+	}
+	this->insert_parameter.clear();//check and free result physical memory[n]	
+	return ret;
 }
 
 #ifndef INSERT_TEST
@@ -125,7 +174,7 @@ int Cinsert::insert(CinsertParameter* p)
 
 void inster_test()
 {
-	uint8_t source_data[] = { '1','2','0'};
+	uint8_t source_data[] = { '1','2','\0'};
 	uint8_t instert_data[] = { 'A' };
 	CinsertParameter p;
 	Cinsert i;

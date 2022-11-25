@@ -11,8 +11,8 @@ namespace n_locate {
 		~Clocate();
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Clocate); }
-		uint8_t * line(uint8_t * start, uint8_t * end, int64_t line_number);
-		uint8_t * line(uint8_t * start, size_t size, int64_t line_number);
+		static uint8_t * line(uint8_t * start, uint8_t * end, int64_t line_number);
+		static uint8_t * line(uint8_t * start, size_t size, int64_t line_number);
 	};
 }
 

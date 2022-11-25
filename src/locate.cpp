@@ -45,7 +45,7 @@ uint8_t* Clocate::line(uint8_t* start, uint8_t* end, int64_t line_number)
 
 uint8_t* Clocate::line(uint8_t* start, size_t size, int64_t line_number)
 {
-	return this->line(start, start + size, line_number);
+	return Clocate::line(start, start + size, line_number);
 }
 
 #ifndef LOCATE_TEST

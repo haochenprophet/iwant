@@ -330,6 +330,12 @@ size_t Cfile::f_write(char* f_name,void *addr , size_t size)
 	return ret;
 }
 
+size_t Cfile::f_write(char* f_name, uint8_t* start, uint8_t* end)
+{
+	if (end <= start) return -1;
+	return this->f_write(f_name, (void*)start, (size_t)(end - start));
+}
+
 size_t Cfile::f_write(char* f_name)
 {
 	return this->f_write(f_name, this->addr, this->size);

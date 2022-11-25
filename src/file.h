@@ -35,6 +35,7 @@ namespace n_file {
 		int f_read(char *f_name);
 		int f_read();
 		size_t f_write(char* f_name, void* addr, size_t size);
+		size_t f_write(char* f_name, uint8_t* start, uint8_t* end);
 		size_t f_write(char* f_name);//output filename
 		int cat(size_t start=0,size_t size=-1,DisplayType t= DisplayType::string);
 		int cut(char *file,long start=0,long size=-1,char *out_file=(char *)CFILE_FILE_OUT);
