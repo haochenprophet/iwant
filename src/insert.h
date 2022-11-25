@@ -5,6 +5,12 @@
 
 namespace n_insert {
 	
+	enum class InsertType
+	{
+		none,
+		before,
+		after,
+	};
 	class CinsertParameter
 	{
 	public:
@@ -37,11 +43,13 @@ namespace n_insert {
 		int set(CinsertParameter* p, uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size);
 		int set(uint8_t* source_start, uint8_t* source_end, uint8_t* insert_offset, uint8_t* insert_data_start, uint8_t* insert_data_end);
 		int set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size);
-
 		int insert(CinsertParameter* p);
 		int insert(CinsertParameter* p, int64_t line_number);
 		int insert();
 		int insert(int64_t line_number);
+		int insert(CinsertParameter* p, uint8_t* find, size_t find_size, InsertType type=InsertType::after);
+		int insert(uint8_t* find, size_t find_size, InsertType type);
+		int insert(char* input_file, char* output_file, char* insert_file, int64_t line_number);
 		int insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset);//file offset insert
 	};
 }

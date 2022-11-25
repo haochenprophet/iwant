@@ -39,7 +39,7 @@ uint8_t* Clocate::line(uint8_t* start, uint8_t* end, int64_t line_number)
 			}
 		}
 	}
-
+	if (line != line_number) return nullptr;
 	return start;
 }
 
