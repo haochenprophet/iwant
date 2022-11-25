@@ -199,6 +199,28 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size
 	this->insert_parameter.clear();//check and free result physical memory[n]	
 	return ret;
 }
+//argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<Type:O:offset L:line_number B:Before A:after>
+int Cinsert::insert(int argc, char* argv[])
+{
+	if (argc < 6)//check input 
+	{
+		printf("The number of input parameters is less than the insert command requirement.\n");
+		return -1;
+	}
+
+	//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int64_t line_number)//file line_number insert
+	if ( (argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'L' || argv[6][0] == 'l') )
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (int64_t)atol(argv[5]));
+	}
+	//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset)//file offset insert
+	if ((argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'O' || argv[6][0] == 'o'))
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]));
+	}
+
+	return 0;
+}
 
 #ifndef INSERT_TEST
 #define INSERT_TEST 0//1
@@ -207,7 +229,7 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size
 #if INSERT_TEST
 #include INCLUDE_ALL_H
 
-void inster_test()
+void insert_test()
 {
 	uint8_t source_data[] = { '1','2','3','4','5','6','7','8','9','\0'};
 	uint8_t instert_data[] = { 'A' };
@@ -228,7 +250,8 @@ void inster_test()
 int main(int argc, char *argv[])
 {
 	WHERE_I;
-	inster_test();
-	return 0;
+	//insert_test();
+	Cinsert ins;
+	return ins.insert(argc, argv);
 }
 #endif

@@ -8,8 +8,10 @@ namespace n_insert {
 	enum class InsertType
 	{
 		none,
-		before,
-		after,
+		before,//before find
+		after,//after find
+		string,//input string
+		file,//input file
 	};
 	class CinsertParameter
 	{
@@ -51,6 +53,7 @@ namespace n_insert {
 		int insert(uint8_t* find, size_t find_size, InsertType type);
 		int insert(char* input_file, char* output_file, char* insert_file, int64_t line_number);
 		int insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset);//file offset insert
+		int insert(int argc, char* argv[]);
 	};
 }
 
