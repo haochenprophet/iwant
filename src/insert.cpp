@@ -169,7 +169,8 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int6
 
 	uint8_t* insert_offset= Clocate::line((uint8_t*)finput.addr, finput.size, line_number);
 	if (nullptr == insert_offset) return -1;//not find line
-	this->set((uint8_t*)finput.addr, finput.size, insert_offset- (uint8_t*)finput.addr, (uint8_t*)finsert.addr, finsert.size);//init parameter
+	//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+	this->set((uint8_t*)finput.addr, (size_t)finput.size,(size_t)( insert_offset- (uint8_t*)finput.addr), (uint8_t*)finsert.addr,(size_t) finsert.size);//init parameter
 	ret = this->insert(line_number);
 	if (0 == ret)
 	{
@@ -199,7 +200,7 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size
 	this->insert_parameter.clear();//check and free result physical memory[n]	
 	return ret;
 }
-//argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<Type:O:offset L:line_number B:Before A:after>
+//argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<B:find_data Before A:find_data after>^int Cinsert::insert(int argc, char* argv[])
 int Cinsert::insert(int argc, char* argv[])
 {
 	if (argc < 6)//check input 
@@ -207,7 +208,7 @@ int Cinsert::insert(int argc, char* argv[])
 		printf("The number of input parameters is less than the insert command requirement.\n");
 		return -1;
 	}
-
+	this->insert_parameter.clear();//clear insert_parameter for clear Residual information
 	//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int64_t line_number)//file line_number insert
 	if ( (argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'L' || argv[6][0] == 'l') )
 	{
@@ -218,8 +219,9 @@ int Cinsert::insert(int argc, char* argv[])
 	{
 		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]));
 	}
+	//int Cinsert::set(uint8_t * source_start, size_t source_size, size_t insert_offset, uint8_t * insert_data_start, size_t insert_data_size)
 
-	return 0;
+	return -1;
 }
 
 #ifndef INSERT_TEST
@@ -245,6 +247,10 @@ void insert_test()
 	//int Cinsert::insert(uint8_t * find, size_t find_size, InsertType type)
 	i.insert(find_data, sizeof(find_data), InsertType::after);
 	std::cout << (char*)i.insert_parameter.result_start << endl;
+	//int Cinsert::insert(int argc, char* argv[])
+	int argc = 7;
+	char* argv[] = { {"insert"},{"input.txt"}, {"output.txt"} ,{"insert.txt"},{"F"},{ "5"} ,{"L"} };
+	i.insert(argc, argv);
 }
 
 int main(int argc, char *argv[])
