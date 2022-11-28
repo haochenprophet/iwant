@@ -157,20 +157,32 @@ int Cinsert::insert(uint8_t* find, size_t find_size, InsertType type)
 {
 	return this->insert(&this->insert_parameter, find, find_size, type);
 }
-int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int64_t line_number)//file line_number insert
+int Cinsert::insert(char* input_file, char* output_file, char* insert, int64_t line_number, InsertType type)//file line_number insert
 {
 	int ret;
 	Cfile finput;
 	Cfile foutput;
 	Cfile finsert;
+	
+	if (type != InsertType::file && type != InsertType::string) return -1;//check type
 
 	if (0 != finput.f_read(input_file)) return -1;//read fail 
-	if (0 != finsert.f_read(insert_file)) return -1;//read fail 
 
-	uint8_t* insert_offset= Clocate::line((uint8_t*)finput.addr, finput.size, line_number);
+	uint8_t* insert_offset = Clocate::line((uint8_t*)finput.addr, finput.size, line_number);
 	if (nullptr == insert_offset) return -1;//not find line
-	//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
-	this->set((uint8_t*)finput.addr, (size_t)finput.size,(size_t)( insert_offset- (uint8_t*)finput.addr), (uint8_t*)finsert.addr,(size_t) finsert.size);//init parameter
+
+	if (type == InsertType::file)
+	{
+		if (0 != finsert.f_read(insert)) return -1;//read fail 
+		//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+		this->set((uint8_t*)finput.addr, (size_t)finput.size, (size_t)(insert_offset - (uint8_t*)finput.addr), (uint8_t*)finsert.addr, (size_t)finsert.size);//init parameter
+	}
+
+	if (type == InsertType::string)
+	{
+		this->set((uint8_t*)finput.addr, finput.size, (size_t)(insert_offset - (uint8_t*)finput.addr), (uint8_t*)insert, strlen(insert) - 1);//init parameter
+	}
+
 	ret = this->insert(line_number);
 	if (0 == ret)
 	{
@@ -180,18 +192,29 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int6
 	return ret;
 }
 
-int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset)//file offset insert
+int Cinsert::insert(char* input_file, char* output_file, char* insert, size_t insert_offset, InsertType type)//file offset insert
 {
 	int ret;
 	Cfile finput;
 	Cfile foutput;
 	Cfile finsert;
 
-	if(0!=finput.f_read(input_file)) return -1;//read fail 
-	if(0!=finsert.f_read(insert_file)) return -1;//read fail 
+	if (type != InsertType::file && type != InsertType::string) return -1;//check type
 
-	//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
-	this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)finsert.addr,finsert.size );//init parameter
+	if(0!=finput.f_read(input_file)) return -1;//read fail 
+
+	if (type == InsertType::file)
+	{
+		if (0 != finsert.f_read(insert)) return -1;//read fail 
+		//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+		this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)finsert.addr, finsert.size);//init parameter
+	}
+
+	if (type == InsertType::string)
+	{
+		this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)insert, strlen(insert)-1);//init parameter
+	}
+
 	ret = this->insert();
 	if (0==ret)
 	{
@@ -209,18 +232,29 @@ int Cinsert::insert(int argc, char* argv[])
 		return -1;
 	}
 	this->insert_parameter.clear();//clear insert_parameter for clear Residual information
-	//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, int64_t line_number)//file line_number insert
+	//insert File F:
 	if ( (argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'L' || argv[6][0] == 'l') )
 	{
-		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (int64_t)atol(argv[5]));
+		//int Cinsert::insert(char* input_file, char* output_file, char* insert, int64_t line_number, InsertType type)//file line_number insert
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (int64_t)atol(argv[5]), InsertType::file);
 	}
-	//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset)//file offset insert
+	
 	if ((argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'O' || argv[6][0] == 'o'))
 	{
-		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]));
+		//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset, InsertType type)//file offset insert
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]), InsertType::file);
 	}
-	//int Cinsert::set(uint8_t * source_start, size_t source_size, size_t insert_offset, uint8_t * insert_data_start, size_t insert_data_size)
-
+	//insert String S:
+	if ((argv[4][0] == 'S' || argv[4][0] == 's') && (argv[6][0] == 'L' || argv[6][0] == 'l')) //line insert
+	{
+		//int Cinsert::insert(char* input_file, char* output_file, char* insert, int64_t line_number, InsertType type)//file line_number insert
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (int64_t)atol(argv[5]), InsertType::string);
+	}
+	if ((argv[4][0] == 'S' || argv[4][0] == 's') && (argv[6][0] == 'O' || argv[6][0] == 'o'))//offset insert
+	{
+		//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset, InsertType type)//file offset insert
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]), InsertType::string);
+	}
 	return -1;
 }
 

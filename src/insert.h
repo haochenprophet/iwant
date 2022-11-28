@@ -51,8 +51,8 @@ namespace n_insert {
 		int insert(int64_t line_number);
 		int insert(CinsertParameter* p, uint8_t* find, size_t find_size, InsertType type=InsertType::after);
 		int insert(uint8_t* find, size_t find_size, InsertType type);
-		int insert(char* input_file, char* output_file, char* insert_file, int64_t line_number);
-		int insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset);//file offset insert
+		int insert(char* input_file, char* output_file, char* insert, int64_t line_number, InsertType type= InsertType::file);
+		int insert(char* input_file, char* output_file, char* insert, size_t insert_offset, InsertType type = InsertType::file);//file offset insert
 		int insert(int argc, char* argv[]);
 	};
 }
