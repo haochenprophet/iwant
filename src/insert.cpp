@@ -180,7 +180,7 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert, int64_t l
 
 	if (type == InsertType::string)
 	{
-		this->set((uint8_t*)finput.addr, finput.size, (size_t)(insert_offset - (uint8_t*)finput.addr), (uint8_t*)insert, strlen(insert) - 1);//init parameter
+		this->set((uint8_t*)finput.addr, finput.size, (size_t)(insert_offset - (uint8_t*)finput.addr), (uint8_t*)insert, strlen(insert));//init parameter
 	}
 
 	ret = this->insert(line_number);
@@ -212,7 +212,7 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert, size_t in
 
 	if (type == InsertType::string)
 	{
-		this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)insert, strlen(insert)-1);//init parameter
+		this->set((uint8_t*)finput.addr, finput.size, insert_offset, (uint8_t*)insert, strlen(insert));//init parameter
 	}
 
 	ret = this->insert();
@@ -223,8 +223,43 @@ int Cinsert::insert(char* input_file, char* output_file, char* insert, size_t in
 	this->insert_parameter.clear();//check and free result physical memory[n]	
 	return ret;
 }
-//argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<B:find_data Before A:find_data after>^int Cinsert::insert(int argc, char* argv[])
-int Cinsert::insert(int argc, char* argv[])
+
+int Cinsert::insert(char* input_file, char* output_file, char* insert, InsertType insert_type, char* find , InsertType find_type)//file offset insert
+{
+	int ret;
+	Cfile finput;
+	Cfile foutput;
+	Cfile finsert;
+
+	if (insert_type != InsertType::file && insert_type != InsertType::string) return -1;//check insert_type
+	if (find_type != InsertType::before && find_type != InsertType::after) return -1;//check find_type
+
+	if (0 != finput.f_read(input_file)) return -1;//read fail 
+
+	if (insert_type == InsertType::file)
+	{
+		if (0 != finsert.f_read(insert)) return -1;//read fail 
+		//int Cinsert::set(uint8_t* source_start, size_t source_size, size_t insert_offset, uint8_t* insert_data_start, size_t insert_data_size)
+		this->set((uint8_t*)finput.addr, finput.size, (size_t)0, (uint8_t*)finsert.addr, finsert.size);//init parameter
+	}
+
+	if (insert_type == InsertType::string)
+	{
+		this->set((uint8_t*)finput.addr, finput.size, (size_t)0, (uint8_t*)insert, strlen(insert));//init parameter
+	}
+
+	//int Cinsert::insert(uint8_t * find, size_t find_size, InsertType type)
+	ret = this->insert((uint8_t*)find,strlen(find), find_type);
+
+	if (0 == ret)
+	{
+		foutput.f_write(output_file, this->insert_parameter.result_start, this->insert_parameter.result_end);//write file
+	}
+	this->insert_parameter.clear();//check and free result physical memory[n]	
+	return ret;
+}
+//argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<L:linue_number O:insert_offset B:find_data Before A:find_data after>
+int Cinsert::insert(int argc, char* argv[])//command line interface
 {
 	if (argc < 6)//check input 
 	{
@@ -254,6 +289,26 @@ int Cinsert::insert(int argc, char* argv[])
 	{
 		//int Cinsert::insert(char* input_file, char* output_file, char* insert_file, size_t insert_offset, InsertType type)//file offset insert
 		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], (size_t)atol(argv[5]), InsertType::string);
+	}
+	//insert find :	int Cinsert::insert(char* input_file, char* output_file, char* insert, InsertType insert_type, char* find, InsertType find_type)//file offset insert
+	if ((argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'B' || argv[6][0] == 'b'))
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], InsertType::file,argv[5], InsertType::before);
+	}
+
+	if ((argv[4][0] == 'F' || argv[4][0] == 'f') && (argv[6][0] == 'A' || argv[6][0] == 'a'))
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], InsertType::file, argv[5], InsertType::after);
+	}
+
+	if ((argv[4][0] == 'S' || argv[4][0] == 's') && (argv[6][0] == 'B' || argv[6][0] == 'b'))
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], InsertType::string, argv[5], InsertType::before);
+	}
+
+	if ((argv[4][0] == 'S' || argv[4][0] == 's') && (argv[6][0] == 'A' || argv[6][0] == 'a'))
+	{
+		return this->insert((char*)argv[1], (char*)argv[2], (char*)argv[3], InsertType::string, argv[5], InsertType::after);
 	}
 	return -1;
 }
