@@ -36,6 +36,9 @@
 //compare
 #define FILE_COMPARE_HELP   "compare   <FileName1> <FileName2>"
 #define FILE_FC_HELP        "fc  <FileName1> <FileName2>"
+//insert //argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<L:linue_number O:insert_offset B:find_data Before A:find_data after>
+#define FILE_INSERT_HELP   "insert   <input_file> <output_file> <instert_data> <data_type:F:file S:string> <offset/linue_number/find_data> <L:linue_number O:insert_offset B:find_data Before A:find_data after>"
+#define FILE_INS_HELP       "ins  <input_file> <output_file> <instert_data> <data_type:F:file S:string> <offset/linue_number/find_data> <L:linue_number O:insert_offset B:find_data Before A:find_data after>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
@@ -70,6 +73,9 @@ Action file_action[] = {
 //compare
 	{ (int)FileAtcionClass::compare,(ACTION_T)FileAtcion::compare,      EatcionRelation::equal , nullptr ,(char *)"compare",     (char *)FILE_COMPARE_HELP},
 	{ (int)FileAtcionClass::compare,(ACTION_T)FileAtcion::fc,           EatcionRelation::equal , nullptr ,(char *)"fc",         (char *)FILE_FC_HELP},
+//insert
+	{ (int)FileAtcionClass::insert,(ACTION_T)FileAtcion::insert,      EatcionRelation::equal , nullptr ,(char*)"insert",     (char*)FILE_INSERT_HELP},
+	{ (int)FileAtcionClass::insert,(ACTION_T)FileAtcion::ins,         EatcionRelation::equal , nullptr ,(char*)"ins",         (char*)FILE_INS_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

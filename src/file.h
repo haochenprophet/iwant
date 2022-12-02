@@ -52,6 +52,7 @@ namespace n_file {
 		int compare();// compare 
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
+		int insert(int argc, char* argv[]);
 		int do_action(void * a= nullptr);
 		int deal_cmd(int argc, char *argv[]);
 	};

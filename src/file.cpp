@@ -2,6 +2,7 @@
 #include "file_action.i" //action_tab
 #include <stdio.h>
 #include "replace.h"
+#include "insert.h"
 
 int Cfile::my_init(void* p)
 {
@@ -388,6 +389,18 @@ int Cfile::replace(int argc, char* argv[])
 	//int Creplace::replace(int argc, char* argv[])
 	return r.replace(argc,argv);
 }
+///main(argc >7) argv[0]=insert argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<L:linue_number O:insert_offset B:find_data Before A:find_data after>
+int Cfile::insert(int argc, char* argv[])
+{
+	Cinsert i;
+	if (argc < 7)//check input 
+	{
+		printf("The number of input parameters is less than the 'insert' or 'ins' command requirement.\n");
+		return -1;
+	}
+	//int Cinsert::insert(int argc, char* argv[])//command line interface
+	return i.insert(argc, argv);
+}
 
 int Cfile::do_action(void * a)
 {
@@ -407,6 +420,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::merge || this->action == (ACTION_T)FileAtcion::merge_op) this->set_main_ret((int)this->merge(this->cmd.argc-1,&this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::replace || this->action == (ACTION_T)FileAtcion::rp) this->set_main_ret((int)this->replace(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
+	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
 
 	return 0;
 }

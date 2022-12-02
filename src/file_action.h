@@ -17,6 +17,7 @@ enum class FileAtcionClass
 	merge,
 	replace,
 	compare,
+	insert,
 };
 
 enum class FileAtcion {
@@ -46,6 +47,8 @@ enum class FileAtcion {
 	rp,
 	compare,
 	fc,
+	insert,
+	ins,
 };
 
 #endif
