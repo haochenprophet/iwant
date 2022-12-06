@@ -1426,6 +1426,24 @@ int Object::display(void *p)
 	std::cout<<this->name<<","<<this->alias<<","<<"id="<<this->id<<":"<<this->description<<endl;
 	return 0;
 }
+//virtual int display(Object* o = nullptr);
+int Object::display(Object* o)
+{
+	if (o == nullptr)
+	{
+		std::cout << this->name << "," << this->alias << "," << "id=" << this->id << ":" << this->description << endl;
+		return 0;
+	}
+
+	std::cout << o->name << "," << o->alias << "," << "id=" << o->id << ":" << o->description << endl;
+	return 0;
+}
+
+int Object::vray(void* p)//Display the UI interface
+{
+	WHERE_I;
+	return 0;
+}
 
 int Object::question(void * p)
 {

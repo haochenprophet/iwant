@@ -349,8 +349,10 @@ namespace n_object {
 		virtual int my_clear(void *p=nullptr);
 		virtual int deal_cmd(int argc, char *argv[]);
 		virtual int display(void *p=nullptr);
+		virtual int display(Object* o = nullptr);
 		virtual int question(void *p=nullptr);
 		virtual int url(void *p=nullptr);//execute object url if exist
+	    virtual int vray(void* p = nullptr);//Display the UI interface
 		virtual int style(void *p=nullptr);//execute object style
 		virtual int image(void *p=nullptr);//execute object image if exist
 		virtual int audio(void *p=nullptr);//execute object audio if exist
