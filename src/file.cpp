@@ -425,41 +425,27 @@ int Cfile::do_action(void * a)
 	return 0;
 }
 
-int Cfile::deal_cmd(int argc, char *argv[])
+//set file action parameter from user input command line
+int Cfile::set_action_parameter(int argc, char* argv[])//override the functions of the Objet class
 {
-	//check user input
-	//this->list_cmd(argc, argv);//test ok
-	if (argc < 3)
-	{
-		this->action_help(file_action, (int)FILE_ACTION_COUNT);
-		return -1;
-	}
-	this->cmd.argc = argc;//store user input parameter
-	this->cmd.argv = argv;
-	//get cmd
-	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
-
-	//get action
-	this->action = this->get_action(file_action, (int)FILE_ACTION_COUNT, argv[1]);
-	if (this->action == 0) this->action = atoll(argv[1]);//no name 
-	if (this->action == 0) return -1;
-
 	//init file action parameter; cmd:cat /cut option:  <FileName> [start] [size] [outfilename]
-	this->f_name=argv[2];
+	this->f_name = argv[2];
 
-	if (this->action == (ACTION_T)FileAtcion::cut) 
+	//set file command cut parameter
+	if (this->action == (ACTION_T)FileAtcion::cut)
 	{
 		//[start] ,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
-		if(argc>3){this->range_start.data.l=(long)atoll(argv[3]);}
-		else {this->range_start.data.l=0;}
+		if (argc > 3) { this->range_start.data.l = (long)atoll(argv[3]); }
+		else { this->range_start.data.l = 0; }
 		//[size]
-		if(argc>4){this->range_amount.data.l=(long)atoll(argv[4]);}
-		else {this->range_amount.data.l=-1;}
+		if (argc > 4) { this->range_amount.data.l = (long)atoll(argv[4]); }
+		else { this->range_amount.data.l = -1; }
 		//[outfilename]
-		if(argc>5){this->s_output_fname=argv[5];}
-		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}		
+		if (argc > 5) { this->s_output_fname = argv[5]; }
+		else { this->s_output_fname = (char*)CFILE_FILE_OUT; }
 	}
 
+	//set file command cat parameter
 	if (this->action == (ACTION_T)FileAtcion::cat)
 	{
 		if (argc > 3) { this->range_start.data.l = (long)atoll(argv[3]); }
@@ -468,8 +454,8 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		if (argc > 4) { this->range_amount.data.l = (long)atoll(argv[4]); }
 		else { this->range_amount.data.l = -1; }//default max
 		//[DisplayType={string,hex,hex_offset}
-		if (argc > 5) { 
-			if (0 == strcmp(argv[5], (char*)"string")) this->display_type=DisplayType::string;
+		if (argc > 5) {
+			if (0 == strcmp(argv[5], (char*)"string")) this->display_type = DisplayType::string;
 			if (0 == strcmp(argv[5], (char*)"hex")) this->display_type = DisplayType::hex;
 			if (0 == strcmp(argv[5], (char*)"hex_offset")) this->display_type = DisplayType::hex_offset;
 		}
@@ -478,16 +464,18 @@ int Cfile::deal_cmd(int argc, char *argv[])
 		}
 	}
 
-	if (this->action == (ACTION_T)FileAtcion::copy||this->action == (ACTION_T)FileAtcion::cp ||
-		this->action == (ACTION_T)FileAtcion::rename||this->action == (ACTION_T)FileAtcion::rn||
-		this->action == (ACTION_T)FileAtcion::move||this->action == (ACTION_T)FileAtcion::mv 
-		) 
+	//set file commad  copy,rename,move parameter
+	if (this->action == (ACTION_T)FileAtcion::copy || this->action == (ACTION_T)FileAtcion::cp ||
+		this->action == (ACTION_T)FileAtcion::rename || this->action == (ACTION_T)FileAtcion::rn ||
+		this->action == (ACTION_T)FileAtcion::move || this->action == (ACTION_T)FileAtcion::mv
+		)
 	{
 		//[outfilename]
-		if(argc>3){this->s_output_fname=argv[3];}
-		else {this->s_output_fname=(char *)CFILE_FILE_OUT;}	
+		if (argc > 3) { this->s_output_fname = argv[3]; }
+		else { this->s_output_fname = (char*)CFILE_FILE_OUT; }
 	}
-	//compare action : "compare   <FileName1> <FileName2>"
+
+	//set file commad compare action parameter: "compare   <FileName1> <FileName2>"
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc)
 	{
 		if (argc > 3) { //uset out file for right 
@@ -495,11 +483,40 @@ int Cfile::deal_cmd(int argc, char *argv[])
 			this->fname_right = argv[3]; //FileName2
 		}
 		else {// input error return 
-			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1; 
+			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
 		}
 	}
 
-	//do action
+	return 0;
+}
+
+int Cfile::deal_cmd(int argc, char *argv[])
+{
+	//this->list_cmd(argc, argv);//test ok
+	
+	//step1.check user input
+	if (argc < 3)
+	{
+		this->action_help(file_action, (int)FILE_ACTION_COUNT);
+		return -1;
+	}
+
+	//step2.init this->cmd store user input parameter
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
+
+	//step3.get silent cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
+
+	//step4.get action
+	this->action = this->get_action(file_action, (int)FILE_ACTION_COUNT, argv[1]);
+	if (this->action == 0) this->action = atoll(argv[1]);//no name 
+	if (this->action == 0) return -1;
+
+	//step5.set action parameter
+	this->set_action_parameter(argc, argv);
+
+	//step6.do action 
 	this->do_action();
 
 	return 0;

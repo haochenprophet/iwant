@@ -334,6 +334,7 @@ namespace n_object {
 		ACTION_T get_action(char * name);
 		bool get_action(Action * a, int count, char * name, ACTION_T * out);
 		bool get_action(char* name, ACTION_T* out);
+		virtual int set_action_parameter(int argc, char* argv[]);//action parameter can from input command,or memory data
 		virtual int do_action(void * a);
 		//virtual
 		virtual Object * get_class();//object addressS

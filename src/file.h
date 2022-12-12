@@ -54,6 +54,7 @@ namespace n_file {
 		int replace(int argc, char* argv[]);
 		int insert(int argc, char* argv[]);
 		int do_action(void * a= nullptr);
+		int set_action_parameter(int argc, char* argv[]);//override the functions of the Objet class
 		int deal_cmd(int argc, char *argv[]);
 	};
 

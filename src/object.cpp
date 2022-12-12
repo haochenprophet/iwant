@@ -853,6 +853,14 @@ int Object::deal_action(Action * a, int count, Object * o)
 	}
 	return 0;
 }
+//action parameter can from input command,or memory data ... 
+int Object::set_action_parameter(int argc, char* argv[])
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return 0;
+}
 
 int Object::do_action(void * a)
 {
