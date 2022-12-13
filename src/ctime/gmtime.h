@@ -10,6 +10,8 @@ namespace n_gmtime {
 		Cgmtime();
 		~Cgmtime();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cgmtime); }
+		static struct tm* gmtime_c(const time_t* timer);
 	};
 }
 

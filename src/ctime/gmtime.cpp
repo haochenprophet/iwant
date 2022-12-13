@@ -16,6 +16,11 @@ Cgmtime::~Cgmtime()
 
 }
 
+struct tm* Cgmtime::gmtime_c(const time_t* timer)
+{
+	return gmtime(timer);
+}
+
 #ifndef GMTIME_TEST
 #define GMTIME_TEST 0//1
 #endif

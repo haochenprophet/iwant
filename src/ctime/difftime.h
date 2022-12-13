@@ -10,6 +10,8 @@ namespace n_difftime {
 		Cdifftime();
 		~Cdifftime();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cdifftime); }
+		static double difftime_c(time_t end, time_t beginning);
 	};
 }
 

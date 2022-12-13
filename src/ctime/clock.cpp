@@ -16,6 +16,11 @@ Cclock::~Cclock()
 
 }
 
+clock_t Cclock::clock_c(void)
+{
+	return clock();
+}
+
 #ifndef CLOCK_TEST
 #define CLOCK_TEST 0//1
 #endif

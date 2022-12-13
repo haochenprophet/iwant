@@ -16,6 +16,11 @@ Casctime::~Casctime()
 
 }
 
+char * Casctime::asctime_c(const struct tm* timeptr)
+{
+	return asctime(timeptr);
+}
+
 #ifndef ASCTIME_TEST
 #define ASCTIME_TEST 0//1
 #endif

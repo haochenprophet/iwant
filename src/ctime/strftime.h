@@ -10,6 +10,9 @@ namespace n_strftime {
 		Cstrftime();
 		~Cstrftime();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cstrftime); }
+		static size_t strftime_c(char* ptr, size_t maxsize, const char* format, const struct tm* timeptr);
+
 	};
 }
 

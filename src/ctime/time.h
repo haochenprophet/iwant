@@ -10,6 +10,8 @@ namespace n_time {
 		Ctime();
 		~Ctime();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Ctime); }
+		static time_t time_c(time_t* timer);
 	};
 }
 

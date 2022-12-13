@@ -16,6 +16,11 @@ Ctime::~Ctime()
 
 }
 
+time_t Ctime::time_c(time_t* timer)
+{
+	return time(timer);
+}
+
 #ifndef TIME_TEST
 #define TIME_TEST 0//1
 #endif

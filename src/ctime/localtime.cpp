@@ -16,6 +16,11 @@ Clocaltime::~Clocaltime()
 
 }
 
+struct tm* Clocaltime::localtime_c(const time_t* timer)
+{
+	return localtime(timer);
+}
+
 #ifndef LOCALTIME_TEST
 #define LOCALTIME_TEST 0//1
 #endif

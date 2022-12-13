@@ -16,6 +16,11 @@ Cdifftime::~Cdifftime()
 
 }
 
+double Cdifftime::difftime_c(time_t end, time_t beginning)
+{
+	return difftime(end, beginning);
+}
+
 #ifndef DIFFTIME_TEST
 #define DIFFTIME_TEST 0//1
 #endif

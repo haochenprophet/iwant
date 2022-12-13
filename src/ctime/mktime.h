@@ -10,6 +10,8 @@ namespace n_mktime {
 		Cmktime();
 		~Cmktime();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cmktime); }
+		static time_t mktime_c(struct tm* timeptr);
 	};
 }
 

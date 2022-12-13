@@ -16,6 +16,11 @@ Cmktime::~Cmktime()
 
 }
 
+time_t Cmktime:: mktime_c(struct tm* timeptr)
+{
+	return mktime(timeptr);
+}
+
 #ifndef MKTIME_TEST
 #define MKTIME_TEST 0//1
 #endif

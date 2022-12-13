@@ -16,6 +16,11 @@ Cstrftime::~Cstrftime()
 
 }
 
+size_t Cstrftime::strftime_c(char* ptr, size_t maxsize, const char* format, const struct tm* timeptr)
+{
+	return strftime(ptr, maxsize, format, timeptr);
+}
+
 #ifndef STRFTIME_TEST
 #define STRFTIME_TEST 0//1
 #endif

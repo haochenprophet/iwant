@@ -16,6 +16,11 @@ Cctime::~Cctime()
 
 }
 
+char* Cctime:: ctime_c(const time_t* timer)
+{
+	return ctime(timer);
+}
+
 #ifndef CTIME_TEST
 #define CTIME_TEST 0//1
 #endif
