@@ -30,6 +30,7 @@ I will with as little time as possible and the code, output as much as possible 
 
 I will recording all human history and activities .
 
+class Ctimeline: The life cycle of all objects is in the same time space. 
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 

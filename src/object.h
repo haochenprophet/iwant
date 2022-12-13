@@ -100,13 +100,13 @@ namespace n_object {
 		future,
 	};
 
-	class Ctimeline
+	class Otimeline //Object time line 
 	{
 	public:
 		TimelineStatus status;
 		std::multimap<void *, void *> track; //1. void * point timer , 2. void * point Object
 	};
-	typedef std::list<Ctimeline> LIST_CTIMELINE;
+	typedef std::list<Otimeline> LIST_OTIMELINE; //Object Time line list 
 
 	class Ccmd //command class
 	{
@@ -203,7 +203,7 @@ namespace n_object {
 
 		std::list<void *> my_mem;//list for  memory address 
 		std::list<void *> exist_list; //for list<Object *> my_mem;  where exist me ,for remove me;
-		std::list<Ctimeline> obj_track;//use time as key for recoder the object space track and status
+		std::list<Otimeline> obj_track;//use time as key for recoder the object space track and status
 
 		std::list<void *> l_url;//url list
 		std::list<void *> l_style;//object style list
