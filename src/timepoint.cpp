@@ -25,7 +25,7 @@ void TimePoint::now()
 {
 	this->clock_start = clock();//Record the start cpu clocks
 	this->timer = time(nullptr);
-	this->clock_end = clock();//Record the start cpu clocks
+	this->clock_end = clock();//Record the end cpu clocks
 	//set clock now
 	this->clock_now = clock();
 }

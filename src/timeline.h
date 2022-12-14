@@ -11,11 +11,14 @@ namespace n_timeline {
 	{
 	public:
 		TimePoint origin;//Origin of time.default Etime_orientation::zero
+		std::list<TimePoint *> time_point_list; //Multiple time point in one timeline
 	public:
 		Ctimeline();
 		~Ctimeline();
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Ctimeline); }
+		void add(TimePoint *tp);
+		void adjust_status(TimePoint *tp_now);
 	};
 }
 
