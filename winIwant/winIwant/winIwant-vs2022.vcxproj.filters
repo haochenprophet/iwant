@@ -5568,6 +5568,9 @@
     <ClCompile Include="..\..\src\timeline.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\timepoint.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11211,6 +11214,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\timeline.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\timepoint.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

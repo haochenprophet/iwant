@@ -1980,6 +1980,8 @@
     <ClCompile Include="..\..\src\task.cpp" />
     <ClCompile Include="..\..\src\temp.cpp" />
     <ClCompile Include="..\..\src\test.cpp" />
+    <ClCompile Include="..\..\src\timeline.cpp" />
+    <ClCompile Include="..\..\src\timepoint.cpp" />
     <ClCompile Include="..\..\src\timer.cpp" />
     <ClCompile Include="..\..\src\uri.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
@@ -3849,6 +3851,8 @@
     <ClInclude Include="..\..\src\temp.h" />
     <ClInclude Include="..\..\src\temp_def.h" />
     <ClInclude Include="..\..\src\test.h" />
+    <ClInclude Include="..\..\src\timeline.h" />
+    <ClInclude Include="..\..\src\timepoint.h" />
     <ClInclude Include="..\..\src\timer.h" />
     <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
