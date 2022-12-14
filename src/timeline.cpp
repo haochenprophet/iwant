@@ -24,11 +24,9 @@ void Ctimeline::add(TimePoint* tp)
 
 void Ctimeline::adjust_status(TimePoint* tp_now)
 {
-	TimePoint * tp;
 	for (auto it = this->time_point_list.cbegin(); it != this->time_point_list.cend(); ++it)
 	{
-		tp = (TimePoint*)(*it);
-		tp->adjust_status(tp_now);
+		(TimePoint*)(*it)->adjust_status(tp_now);
 	}
 }
 
