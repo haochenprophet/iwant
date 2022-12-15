@@ -1983,6 +1983,7 @@
     <ClCompile Include="..\..\src\timeline.cpp" />
     <ClCompile Include="..\..\src\timepoint.cpp" />
     <ClCompile Include="..\..\src\timer.cpp" />
+    <ClCompile Include="..\..\src\timetree.cpp" />
     <ClCompile Include="..\..\src\uri.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\uuid.cpp" />
@@ -3854,6 +3855,7 @@
     <ClInclude Include="..\..\src\timeline.h" />
     <ClInclude Include="..\..\src\timepoint.h" />
     <ClInclude Include="..\..\src\timer.h" />
+    <ClInclude Include="..\..\src\timetree.h" />
     <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\url_def.h" />
