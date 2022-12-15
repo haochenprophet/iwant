@@ -34,7 +34,8 @@ I will recording all human history and activities .
 
 class Ctimeline: The life cycle of all objects is in the same time space. 
 
-class Ctimetree: Describe the evolution of anything or object in the universe .
+class Ctimetree: Use c++ Describe the evolution and growth and activity of anything or object in the universe .
+                 This time map will help you understand the time tree . https://github.com/haochenprophet/iwant/blob/master/doc/timetree.jpg
 
 [Get code]: git clone --recursive  https://github.com/haochenprophet/iwant
 
