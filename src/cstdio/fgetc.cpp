@@ -16,6 +16,11 @@ Cfgetc::~Cfgetc()
 
 }
 
+int Cfgetc::fgetc_c(FILE* stream)
+{
+	return fgetc(stream);
+}
+
 #ifndef FGETC_TEST
 #define FGETC_TEST 0//1
 #endif

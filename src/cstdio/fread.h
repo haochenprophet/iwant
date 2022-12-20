@@ -10,6 +10,9 @@ namespace n_fread {
 		Cfread();
 		~Cfread();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfread); }
+		static size_t fread_c(void* ptr, size_t size, size_t count, FILE* stream);
+
 	};
 }
 

@@ -16,6 +16,11 @@ Cremove::~Cremove()
 
 }
 
+int Cremove::remove_c(const char* filename)
+{
+	return remove(filename);
+}
+
 #ifndef REMOVE_TEST
 #define REMOVE_TEST 0//1
 #endif

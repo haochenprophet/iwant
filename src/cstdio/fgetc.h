@@ -10,6 +10,8 @@ namespace n_fgetc {
 		Cfgetc();
 		~Cfgetc();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfgetc); }
+		static int fgetc_c(FILE* stream);
 	};
 }
 

@@ -16,6 +16,11 @@ Cfsetpos::~Cfsetpos()
 
 }
 
+int Cfsetpos::fsetpos_c(FILE* stream, const fpos_t* pos)
+{
+	return fsetpos(stream,pos);
+}
+
 #ifndef FSETPOS_TEST
 #define FSETPOS_TEST 0//1
 #endif

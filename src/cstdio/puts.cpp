@@ -16,6 +16,11 @@ Cputs::~Cputs()
 
 }
 
+int Cputs::puts_c(const char* str)
+{
+	return puts(str);
+}
+
 #ifndef PUTS_TEST
 #define PUTS_TEST 0//1
 #endif

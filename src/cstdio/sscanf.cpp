@@ -16,6 +16,12 @@ Csscanf::~Csscanf()
 
 }
 
+int Csscanf::sscanf_c(const char* s, const char* format, ...)
+{
+	ERROR_EXIT //should fix sprintf input ... error 
+	return sscanf(s,format);
+}
+
 #ifndef SSCANF_TEST
 #define SSCANF_TEST 0//1
 #endif

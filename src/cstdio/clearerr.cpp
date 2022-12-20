@@ -16,6 +16,11 @@ Cclearerr::~Cclearerr()
 
 }
 
+void Cclearerr::clearerr_c(FILE* stream)
+{
+	return clearerr(stream);
+}
+
 #ifndef CLEARERR_TEST
 #define CLEARERR_TEST 0//1
 #endif

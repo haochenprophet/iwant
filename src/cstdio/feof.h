@@ -10,6 +10,8 @@ namespace n_feof {
 		Cfeof();
 		~Cfeof();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfeof); }
+		static int feof_c(FILE* stream);
 	};
 }
 

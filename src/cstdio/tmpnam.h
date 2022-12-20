@@ -10,6 +10,9 @@ namespace n_tmpnam {
 		Ctmpnam();
 		~Ctmpnam();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Ctmpnam); }
+		static char* tmpnam_c(char* str);
+
 	};
 }
 

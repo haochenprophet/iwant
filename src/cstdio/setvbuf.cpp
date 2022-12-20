@@ -16,6 +16,11 @@ Csetvbuf::~Csetvbuf()
 
 }
 
+int Csetvbuf::setvbuf_c(FILE* stream, char* buffer, int mode, size_t size)
+{
+	return setvbuf(stream,buffer, mode, size);
+}
+
 #ifndef SETVBUF_TEST
 #define SETVBUF_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cfseek::~Cfseek()
 
 }
 
+int Cfseek::fseek_c(FILE* stream, long int offset, int origin)
+{
+	return fseek(stream,offset,origin);
+}
+
 #ifndef FSEEK_TEST
 #define FSEEK_TEST 0//1
 #endif

@@ -10,6 +10,9 @@ namespace n_fsetpos {
 		Cfsetpos();
 		~Cfsetpos();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfsetpos); }
+		static int fsetpos_c(FILE* stream, const fpos_t* pos);
+
 	};
 }
 

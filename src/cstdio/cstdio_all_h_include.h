@@ -33,6 +33,7 @@
 #include "rename.h" 
 #include "rewind.h" 
 #include "scanf.h" 
+#include "setbuf.h" 
 #include "setvbuf.h" 
 #include "snprintf.h" 
 #include "sprintf.h" 

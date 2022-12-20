@@ -10,6 +10,9 @@ namespace n_fputs {
 		Cfputs();
 		~Cfputs();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfputs); }
+		static int fputs_c(const char* str, FILE* stream);
+
 	};
 }
 

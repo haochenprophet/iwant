@@ -10,6 +10,8 @@ namespace n_freopen {
 		Cfreopen();
 		~Cfreopen();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfreopen); }
+		static FILE* freopen_c(const char* filename, const char* mode, FILE* stream);
 	};
 }
 

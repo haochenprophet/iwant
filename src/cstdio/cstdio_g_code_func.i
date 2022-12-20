@@ -34,6 +34,7 @@ void cstdio_add_objects(Object *p)
 	p->addMe(g_rename.where());
 	p->addMe(g_rewind.where());
 	p->addMe(g_scanf.where());
+	p->addMe(g_setbuf.where());
 	p->addMe(g_setvbuf.where());
 	p->addMe(g_snprintf.where());
 	p->addMe(g_sprintf.where());

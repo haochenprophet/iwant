@@ -10,6 +10,9 @@ namespace n_puts {
 		Cputs();
 		~Cputs();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cputs); }
+		static int puts_c(const char* str);
+
 	};
 }
 

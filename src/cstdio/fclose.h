@@ -10,6 +10,8 @@ namespace n_fclose {
 		Cfclose();
 		~Cfclose();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfclose); }
+		static int fclose_c(FILE* stream);
 	};
 }
 

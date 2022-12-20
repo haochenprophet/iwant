@@ -16,6 +16,12 @@ Cperror::~Cperror()
 
 }
 
+void Cperror::perror_c(const char* str)
+{
+	return perror(str);
+}
+
+
 #ifndef PERROR_TEST
 #define PERROR_TEST 0//1
 #endif

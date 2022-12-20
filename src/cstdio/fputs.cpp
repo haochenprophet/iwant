@@ -16,6 +16,11 @@ Cfputs::~Cfputs()
 
 }
 
+int Cfputs::fputs_c(const char* str, FILE* stream)
+{
+	return fputs(str, stream);
+}
+
 #ifndef FPUTS_TEST
 #define FPUTS_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cungetc::~Cungetc()
 
 }
 
+int Cungetc:: ungetc_c(int character, FILE* stream)
+{
+	return ungetc(character,stream);
+}
+
 #ifndef UNGETC_TEST
 #define UNGETC_TEST 0//1
 #endif

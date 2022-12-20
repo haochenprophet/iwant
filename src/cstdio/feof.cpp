@@ -15,7 +15,10 @@ Cfeof::~Cfeof()
 {
 
 }
-
+int Cfeof::feof_c(FILE* stream)
+{
+	return feof(stream);
+}
 #ifndef FEOF_TEST
 #define FEOF_TEST 0//1
 #endif

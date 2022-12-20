@@ -10,6 +10,9 @@ namespace n_putc {
 		Cputc();
 		~Cputc();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cputc); }
+		static int puts_c(const char* str);
+
 	};
 }
 

@@ -16,6 +16,12 @@ Cscanf::~Cscanf()
 
 }
 
+int Cscanf::scanf_c(const char* format, ...)
+{
+	ERROR_EXIT //should fix scanf input ... error 
+	return scanf(format);
+}
+
 #ifndef SCANF_TEST
 #define SCANF_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cfgetpos::~Cfgetpos()
 
 }
 
+int Cfgetpos::fgetpos_c(FILE* stream, fpos_t* pos)
+{
+	return fgetpos(stream, pos);
+}
+
 #ifndef FGETPOS_TEST
 #define FGETPOS_TEST 0//1
 #endif

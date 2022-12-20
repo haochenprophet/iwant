@@ -16,6 +16,11 @@ Cvprintf::~Cvprintf()
 
 }
 
+int Cvprintf::vprintf_c(const char* format, va_list arg)
+{
+	return vprintf(format,arg);
+}
+
 #ifndef VPRINTF_TEST
 #define VPRINTF_TEST 0//1
 #endif

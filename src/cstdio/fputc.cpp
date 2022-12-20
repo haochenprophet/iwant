@@ -16,6 +16,11 @@ Cfputc::~Cfputc()
 
 }
 
+int Cfputc::fputc_c(int character, FILE* stream)
+{
+	return fputc(character, stream);
+}
+
 #ifndef FPUTC_TEST
 #define FPUTC_TEST 0//1
 #endif

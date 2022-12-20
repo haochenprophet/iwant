@@ -16,6 +16,11 @@ Cputc::~Cputc()
 
 }
 
+int Cputc::puts_c(const char* str)
+{
+	return puts(str);
+}
+
 #ifndef PUTC_TEST
 #define PUTC_TEST 0//1
 #endif

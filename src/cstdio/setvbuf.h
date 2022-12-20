@@ -10,6 +10,10 @@ namespace n_setvbuf {
 		Csetvbuf();
 		~Csetvbuf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Csetvbuf); }
+		static int setvbuf_c(FILE* stream, char* buffer, int mode, size_t size);
+
+
 	};
 }
 

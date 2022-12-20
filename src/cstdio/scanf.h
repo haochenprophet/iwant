@@ -10,6 +10,9 @@ namespace n_scanf {
 		Cscanf();
 		~Cscanf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cscanf); }
+		static int scanf_c(const char* format, ...);
+
 	};
 }
 

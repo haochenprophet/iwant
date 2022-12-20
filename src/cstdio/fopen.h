@@ -10,6 +10,9 @@ namespace n_fopen {
 		Cfopen();
 		~Cfopen();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfopen); }
+		static FILE* fopen_c(const char* filename, const char* mode);
+
 	};
 }
 

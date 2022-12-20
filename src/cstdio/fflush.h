@@ -10,6 +10,8 @@ namespace n_fflush {
 		Cfflush();
 		~Cfflush();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfflush); }
+		static int fflush_c(FILE* stream);
 	};
 }
 

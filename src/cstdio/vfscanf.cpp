@@ -16,6 +16,11 @@ Cvfscanf::~Cvfscanf()
 
 }
 
+int Cvfscanf::vfscanf_c(FILE* stream, const char* format, va_list arg)
+{
+	return vfscanf(stream,format,arg);
+}
+
 #ifndef VFSCANF_TEST
 #define VFSCANF_TEST 0//1
 #endif

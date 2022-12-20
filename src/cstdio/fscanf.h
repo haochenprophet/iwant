@@ -10,6 +10,9 @@ namespace n_fscanf {
 		Cfscanf();
 		~Cfscanf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfscanf); }
+		static int fscanf_c(FILE* stream, const char* format, ...);
+
 	};
 }
 

@@ -16,6 +16,11 @@ Cfgets::~Cfgets()
 
 }
 
+char* Cfgets::fgets_c(char* str, int num, FILE* stream)
+{
+	return fgets(str, num, stream);
+}
+
 #ifndef FGETS_TEST
 #define FGETS_TEST 0//1
 #endif

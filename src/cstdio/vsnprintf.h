@@ -10,6 +10,9 @@ namespace n_vsnprintf {
 		Cvsnprintf();
 		~Cvsnprintf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cvsnprintf); }
+		static int vsnprintf_c(char* s, size_t n, const char* format, va_list arg);
+
 	};
 }
 

@@ -16,6 +16,11 @@ Cfreopen::~Cfreopen()
 
 }
 
+FILE* Cfreopen::freopen_c(const char* filename, const char* mode, FILE* stream)
+{
+	return freopen(filename, mode,stream);
+}
+
 #ifndef FREOPEN_TEST
 #define FREOPEN_TEST 0//1
 #endif

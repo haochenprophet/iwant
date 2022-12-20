@@ -16,6 +16,11 @@ Cvsnprintf::~Cvsnprintf()
 
 }
 
+int Cvsnprintf::vsnprintf_c(char* s, size_t n, const char* format, va_list arg)
+{
+	return vsnprintf(s, n, format,  arg);
+}
+
 #ifndef VSNPRINTF_TEST
 #define VSNPRINTF_TEST 0//1
 #endif

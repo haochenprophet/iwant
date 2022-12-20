@@ -10,6 +10,8 @@ namespace n_clearerr {
 		Cclearerr();
 		~Cclearerr();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cclearerr); }
+		static void clearerr_c(FILE* stream);
 	};
 }
 

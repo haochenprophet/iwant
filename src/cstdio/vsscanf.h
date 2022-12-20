@@ -10,6 +10,9 @@ namespace n_vsscanf {
 		Cvsscanf();
 		~Cvsscanf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cvsscanf); }
+		static int vsscanf_c(const char* s, const char* format, va_list arg);
+
 	};
 }
 

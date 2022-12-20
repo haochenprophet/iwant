@@ -16,6 +16,11 @@ Cvscanf::~Cvscanf()
 
 }
 
+int Cvscanf::vscanf_c(const char* format, va_list arg)
+{
+	return vscanf(format,arg);
+}
+
 #ifndef VSCANF_TEST
 #define VSCANF_TEST 0//1
 #endif

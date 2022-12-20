@@ -16,6 +16,12 @@ Cfscanf::~Cfscanf()
 
 }
 
+int Cfscanf::fscanf_c(FILE* stream, const char* format, ...)
+{
+	ERROR_EXIT //should fix fscanf input ...error 
+	return fscanf(stream, format);//code error 
+}
+
 #ifndef FSCANF_TEST
 #define FSCANF_TEST 0//1
 #endif

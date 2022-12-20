@@ -10,6 +10,9 @@ namespace n_vfscanf {
 		Cvfscanf();
 		~Cvfscanf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cvfscanf); }
+		static int vfscanf_c(FILE* stream, const char* format, va_list arg);
+
 	};
 }
 

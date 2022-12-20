@@ -16,6 +16,11 @@ Cvfprintf::~Cvfprintf()
 
 }
 
+int Cvfprintf::vfprintf_c(FILE* stream, const char* format, va_list arg)
+{
+	return vfprintf(stream, format, arg);
+}
+
 #ifndef VFPRINTF_TEST
 #define VFPRINTF_TEST 0//1
 #endif

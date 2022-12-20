@@ -16,6 +16,12 @@ Cprintf::~Cprintf()
 
 }
 
+int Cprintf::printf_c(const char* format, ...)
+{
+	ERROR_EXIT //should fix printf input ... error 
+	return printf(format);
+}
+
 #ifndef PRINTF_TEST
 #define PRINTF_TEST 0//1
 #endif

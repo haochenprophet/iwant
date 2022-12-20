@@ -10,6 +10,8 @@ namespace n_snprintf {
 		Csnprintf();
 		~Csnprintf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Csnprintf); }
+		static int snprintf_c(char* s, size_t n, const char* format, ...);
 	};
 }
 

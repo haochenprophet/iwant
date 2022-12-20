@@ -16,6 +16,12 @@ Csnprintf::~Csnprintf()
 
 }
 
+int Csnprintf::snprintf_c(char* s, size_t n, const char* format, ...)
+{
+	ERROR_EXIT //should fix fprintf input ... error 
+	return snprintf(s, n,format);
+}
+
 #ifndef SNPRINTF_TEST
 #define SNPRINTF_TEST 0//1
 #endif

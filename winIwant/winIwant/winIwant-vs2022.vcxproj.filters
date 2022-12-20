@@ -5574,6 +5574,9 @@
     <ClCompile Include="..\..\src\timetree.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\setbuf.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11224,6 +11227,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\timetree.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\setbuf.h">
+      <Filter>cstdio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

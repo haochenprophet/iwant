@@ -1,4 +1,6 @@
 #include "gets.h"
+#include <stdio.h>
+
 int Cgets::my_init(void *p)
 {
 	this->name = "Cgets";
@@ -14,6 +16,13 @@ Cgets::Cgets()
 Cgets::~Cgets()
 {
 
+}
+
+char* Cgets::gets_c(char* str)
+{
+	//return gets(str);//build error 
+	AT_LINE
+	return nullptr;
 }
 
 #ifndef GETS_TEST

@@ -16,6 +16,11 @@ Cftell::~Cftell()
 
 }
 
+long int Cftell::ftell_c(FILE* stream)
+{
+	return ftell(stream);
+}
+
 #ifndef FTELL_TEST
 #define FTELL_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cfopen::~Cfopen()
 
 }
 
+FILE* Cfopen::fopen_c(const char* filename, const char* mode)
+{
+	return fopen(filename, mode);
+}
+
 #ifndef FOPEN_TEST
 #define FOPEN_TEST 0//1
 #endif

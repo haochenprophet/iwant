@@ -16,6 +16,11 @@ Crename::~Crename()
 
 }
 
+int Crename::rename_c(const char* oldname, const char* newname)
+{
+	return rename( oldname,  newname);
+}
+
 #ifndef RENAME_TEST
 #define RENAME_TEST 0//1
 #endif

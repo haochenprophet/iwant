@@ -10,6 +10,9 @@ namespace n_vprintf {
 		Cvprintf();
 		~Cvprintf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cvprintf); }
+		static int vprintf_c(const char* format, va_list arg);
+
 	};
 }
 

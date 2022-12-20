@@ -16,6 +16,11 @@ Cputchar::~Cputchar()
 
 }
 
+int Cputchar::putchar_c(int character)
+{
+	return putchar(character);
+}
+
 #ifndef PUTCHAR_TEST
 #define PUTCHAR_TEST 0//1
 #endif

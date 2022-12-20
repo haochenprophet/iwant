@@ -16,6 +16,11 @@ Cferror::~Cferror()
 
 }
 
+int Cferror::ferror_c(FILE* stream)
+{
+	return ferror(stream);
+}
+
 #ifndef FERROR_TEST
 #define FERROR_TEST 0//1
 #endif

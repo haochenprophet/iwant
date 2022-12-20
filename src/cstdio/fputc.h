@@ -10,6 +10,9 @@ namespace n_fputc {
 		Cfputc();
 		~Cfputc();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfputc); }
+		static int fputc_c(int character, FILE* stream);
+
 	};
 }
 

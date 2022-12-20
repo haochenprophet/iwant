@@ -16,6 +16,11 @@ Crewind::~Crewind()
 
 }
 
+void Crewind:: rewind_c(FILE* stream)
+{
+	rewind(stream);
+}
+
 #ifndef REWIND_TEST
 #define REWIND_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cgetchar::~Cgetchar()
 
 }
 
+int Cgetchar::getchar_c(void)
+{
+	return getchar();
+}
+
 #ifndef GETCHAR_TEST
 #define GETCHAR_TEST 0//1
 #endif

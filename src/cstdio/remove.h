@@ -10,6 +10,9 @@ namespace n_remove {
 		Cremove();
 		~Cremove();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cremove); }
+		static int remove_c(const char* filename);
+
 	};
 }
 

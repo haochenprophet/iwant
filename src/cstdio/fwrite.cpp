@@ -16,6 +16,12 @@ Cfwrite::~Cfwrite()
 
 }
 
+size_t Cfwrite::fwrite_c(const void* ptr, size_t size, size_t count, FILE* stream)
+{
+	return fwrite(ptr,size,count,stream);
+}
+
+
 #ifndef FWRITE_TEST
 #define FWRITE_TEST 0//1
 #endif

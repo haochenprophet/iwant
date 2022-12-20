@@ -16,6 +16,12 @@ Csprintf::~Csprintf()
 
 }
 
+int Csprintf::sprintf_c(char* str, const char* format, ...)
+{
+	ERROR_EXIT //should fix sprintf input ... error 
+	return sprintf(str,format);
+}
+
 #ifndef SPRINTF_TEST
 #define SPRINTF_TEST 0//1
 #endif

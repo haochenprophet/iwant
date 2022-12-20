@@ -10,6 +10,8 @@ namespace n_ferror {
 		Cferror();
 		~Cferror();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cferror); }
+		static int ferror_c(FILE* stream);
 	};
 }
 

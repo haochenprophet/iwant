@@ -16,6 +16,12 @@ Cfprintf::~Cfprintf()
 
 }
 
+int Cfprintf::fprintf_c(FILE* stream, const char* format, ...)
+{
+	ERROR_EXIT //should fix fprintf input ... error 
+	return fprintf(stream, format);	
+}
+
 #ifndef FPRINTF_TEST
 #define FPRINTF_TEST 0//1
 #endif

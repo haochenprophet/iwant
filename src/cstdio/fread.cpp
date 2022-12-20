@@ -16,6 +16,11 @@ Cfread::~Cfread()
 
 }
 
+size_t Cfread::fread_c(void* ptr, size_t size, size_t count, FILE* stream)
+{
+	return fread(ptr,size,count,stream);
+}
+
 #ifndef FREAD_TEST
 #define FREAD_TEST 0//1
 #endif

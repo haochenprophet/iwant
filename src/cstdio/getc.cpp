@@ -16,6 +16,11 @@ Cgetc::~Cgetc()
 
 }
 
+int Cgetc::getc_c(FILE* stream)
+{
+	return getc(stream);
+}
+
 #ifndef GETC_TEST
 #define GETC_TEST 0//1
 #endif

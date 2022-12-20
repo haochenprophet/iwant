@@ -10,6 +10,9 @@ namespace n_fprintf {
 		Cfprintf();
 		~Cfprintf();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfprintf); }
+		static int fprintf_c(FILE* stream, const char* format, ...);
+
 	};
 }
 

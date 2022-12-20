@@ -16,6 +16,11 @@ Ctmpfile::~Ctmpfile()
 
 }
 
+FILE* Ctmpfile::tmpfile_c(void)
+{
+	return  tmpfile();
+}
+
 #ifndef TMPFILE_TEST
 #define TMPFILE_TEST 0//1
 #endif

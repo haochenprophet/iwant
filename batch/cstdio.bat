@@ -7,6 +7,7 @@ code class fclose
 code class fflush
 code class fopen
 code class freopen
+code class setbuf
 code class setvbuf
 
 code class fprintf
@@ -60,6 +61,7 @@ code main create_main  fclose
 code main create_main  fflush
 code main create_main  fopen
 code main create_main  freopen
+code main create_main  setbuf
 code main create_main  setvbuf
 
 code main create_main  fprintf

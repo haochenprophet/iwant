@@ -10,6 +10,9 @@ namespace n_gets {
 		Cgets();
 		~Cgets();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cgets); }
+		static char* gets_c(char* str);
+
 	};
 }
 

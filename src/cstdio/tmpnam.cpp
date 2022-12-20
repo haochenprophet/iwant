@@ -16,6 +16,11 @@ Ctmpnam::~Ctmpnam()
 
 }
 
+char* Ctmpnam::tmpnam_c(char* str)
+{
+	return tmpnam(str);
+}
+
 #ifndef TMPNAM_TEST
 #define TMPNAM_TEST 0//1
 #endif

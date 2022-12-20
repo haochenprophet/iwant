@@ -10,6 +10,8 @@ namespace n_fgets {
 		Cfgets();
 		~Cfgets();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cfgets); }
+		static char* fgets_c(char* str, int num, FILE* stream);
 	};
 }
 

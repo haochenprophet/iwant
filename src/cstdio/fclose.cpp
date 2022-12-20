@@ -16,6 +16,11 @@ Cfclose::~Cfclose()
 
 }
 
+int Cfclose::fclose_c(FILE* stream)
+{
+	return fclose(stream);
+}
+
 #ifndef FCLOSE_TEST
 #define FCLOSE_TEST 0//1
 #endif

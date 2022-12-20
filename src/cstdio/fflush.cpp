@@ -16,6 +16,11 @@ Cfflush::~Cfflush()
 
 }
 
+int Cfflush::fflush_c(FILE* stream)
+{
+	return fflush(stream);
+}
+
 #ifndef FFLUSH_TEST
 #define FFLUSH_TEST 0//1
 #endif

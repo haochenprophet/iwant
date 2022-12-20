@@ -10,6 +10,9 @@ namespace n_rewind {
 		Crewind();
 		~Crewind();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Crewind); }
+		static void rewind_c(FILE* stream);
+
 	};
 }
 
