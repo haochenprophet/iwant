@@ -5577,6 +5577,15 @@
     <ClCompile Include="..\..\src\cstdio\setbuf.cpp">
       <Filter>cstdio</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\stderr.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\stdin.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cstdio\stdout.cpp">
+      <Filter>cstdio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11229,6 +11238,15 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cstdio\setbuf.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\stderr.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\stdin.h">
+      <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdio\stdout.h">
       <Filter>cstdio</Filter>
     </ClInclude>
   </ItemGroup>

@@ -52,6 +52,10 @@ code class ferror
 code class perror
 code class cstdio
 
+code class stderr
+code class stdin
+code class stdout
+
 code main create_main  remove
 code main create_main  rename
 code main create_main  tmpfile
@@ -105,3 +109,7 @@ code main create_main  feof
 code main create_main  ferror
 code main create_main  perror
 code main create_main  cstdio
+
+code main create_main  stderr
+code main create_main  stdin
+code main create_main  stdout

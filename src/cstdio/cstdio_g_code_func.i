@@ -39,6 +39,9 @@ void cstdio_add_objects(Object *p)
 	p->addMe(g_snprintf.where());
 	p->addMe(g_sprintf.where());
 	p->addMe(g_sscanf.where());
+	p->addMe(g_stderr.where());
+	p->addMe(g_stdin.where());
+	p->addMe(g_stdout.where());
 	p->addMe(g_tmpfile.where());
 	p->addMe(g_tmpnam.where());
 	p->addMe(g_ungetc.where());

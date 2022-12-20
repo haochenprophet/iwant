@@ -39,6 +39,9 @@
 	Csnprintf  g_snprintf ;
 	Csprintf  g_sprintf ;
 	Csscanf  g_sscanf ;
+	Cstderr g_stderr;
+	Cstdin g_stdin;
+	Cstdout g_stdout;
 	Ctmpfile  g_tmpfile ;
 	Ctmpnam  g_tmpnam ;
 	Cungetc  g_ungetc ;
