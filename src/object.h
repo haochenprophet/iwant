@@ -196,7 +196,7 @@ namespace n_object {
 		Ccmd cmd;
 
 		std::list<void *> family;//class list
-		std::list<void *> exist_family;//class exist other family for removeMe frome other class 。
+		std::list<void *> exist_family;//class exist other family for removeMe from other class
 
 		std::list<Cmyfunc> ex_func;//extern function list 
 		std::list<CtagItem> l_tag_rule;//for tag rule 

@@ -1,4 +1,6 @@
 #include "cstdio.h"
+#include "cstdio_g_code.i"
+
 int Ccstdio::my_init(void *p)
 {
 	this->name = "Ccstdio";
@@ -14,6 +16,11 @@ Ccstdio::Ccstdio()
 Ccstdio::~Ccstdio()
 {
 
+}
+//Overrides the Object class add_global_objects functions
+void Ccstdio::add_global_objects(Object* p)//Add cstdio package global object to Object* p
+{
+	cstdio_add_objects(p);
 }
 
 #ifndef CSTDIO_TEST

@@ -209,9 +209,9 @@ int Object::clear_relation()
 
 void Object::addMe(Object * o)
 {
-	if (o) {
+	if (o&&o!=this) {//other object address add to my family list
 		this->family.push_back(o);
-		o->exist_family.push_back(this);
+		o->exist_family.push_back(this);//notice other object exist in my family list
 	}
 	else this->family.push_back(this);
 }

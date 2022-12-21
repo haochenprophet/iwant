@@ -34,7 +34,7 @@
 	Crename  g_rename ;
 	Crewind  g_rewind ;
 	Cscanf  g_scanf ;
-	Csebuf  g_setbuf;
+	Csetbuf  g_setbuf;
 	Csetvbuf  g_setvbuf ;
 	Csnprintf  g_snprintf ;
 	Csprintf  g_sprintf ;
