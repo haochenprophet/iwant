@@ -18,8 +18,14 @@ Cprintf::~Cprintf()
 
 int Cprintf::printf_c(const char* format, ...)
 {
-	ERROR_EXIT //should fix printf input ... error 
-	return printf(format);
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vprintf(format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef PRINTF_TEST

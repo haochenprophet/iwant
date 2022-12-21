@@ -18,8 +18,14 @@ Cscanf::~Cscanf()
 
 int Cscanf::scanf_c(const char* format, ...)
 {
-	ERROR_EXIT //should fix scanf input ... error 
-	return scanf(format);
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vscanf(format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef SCANF_TEST

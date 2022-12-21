@@ -18,8 +18,14 @@ Cfscanf::~Cfscanf()
 
 int Cfscanf::fscanf_c(FILE* stream, const char* format, ...)
 {
-	ERROR_EXIT //should fix fscanf input ...error 
-	return fscanf(stream, format);//code error 
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vfscanf(stream, format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef FSCANF_TEST

@@ -18,8 +18,14 @@ Csnprintf::~Csnprintf()
 
 int Csnprintf::snprintf_c(char* s, size_t n, const char* format, ...)
 {
-	ERROR_EXIT //should fix fprintf input ... error 
-	return snprintf(s, n,format);
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vsnprintf(s, n, format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef SNPRINTF_TEST

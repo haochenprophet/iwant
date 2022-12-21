@@ -18,8 +18,14 @@ Cfprintf::~Cfprintf()
 
 int Cfprintf::fprintf_c(FILE* stream, const char* format, ...)
 {
-	ERROR_EXIT //should fix fprintf input ... error 
-	return fprintf(stream, format);	
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vfprintf(stream, format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef FPRINTF_TEST

@@ -18,8 +18,14 @@ Csscanf::~Csscanf()
 
 int Csscanf::sscanf_c(const char* s, const char* format, ...)
 {
-	ERROR_EXIT //should fix sprintf input ... error 
-	return sscanf(s,format);
+	va_list arg;
+	int done;
+
+	va_start(arg, format);
+	done = vsscanf(s, format, arg);
+	va_end(arg);
+
+	return done;
 }
 
 #ifndef SSCANF_TEST
