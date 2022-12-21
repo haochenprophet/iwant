@@ -30,6 +30,9 @@ I will with as little time as possible and the code, output as much as possible 
 
 I will recording all human history and activities .
 
+[package]:code tree: main/package/class/function/command/action  
+
+
 [class]:
 
 class Ctimeline: The life cycle of all objects is in the same time space. 
@@ -61,6 +64,9 @@ class Ctimetree: Use c++ Describe the evolution and growth and activity of anyth
   namespace name 'n'  n_object , union 'u' or 'U'  like Udata . 
   
 6.All program should abstract out all the string definitions to separately.
+
+7.Standard c or libc ... c functions have overloaded function names with _c attached. 
+  ie. static int printf_c(const char* format, ...);
 
 [Building]:
 request :Need C + + compiler
