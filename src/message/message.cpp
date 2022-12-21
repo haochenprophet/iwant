@@ -1,4 +1,6 @@
 #include "message.h"
+#include "message_g_code.i"
+
 int Cmessage::my_init(void *p)
 {
 	this->name = "Cmessage";
@@ -14,6 +16,11 @@ Cmessage::Cmessage()
 Cmessage::~Cmessage()
 {
 
+}
+
+void Cmessage::add_global_objects(Object* p) //Add  package global object to Object* p
+{
+	message_add_objects(p);
 }
 
 #ifndef MESSAGE_TEST
