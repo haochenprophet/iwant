@@ -10,6 +10,7 @@ namespace n_at_quick_exit {
 		Cat_quick_exit();
 		~Cat_quick_exit();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cat_quick_exit); }
 	};
 }
 

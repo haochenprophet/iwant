@@ -10,6 +10,7 @@ namespace n_strtof {
 		Cstrtof();
 		~Cstrtof();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cstrtof); }
 	};
 }
 

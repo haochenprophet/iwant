@@ -10,6 +10,7 @@ namespace n_srand {
 		Csrand();
 		~Csrand();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Csrand); }
 	};
 }
 

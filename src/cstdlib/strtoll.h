@@ -10,6 +10,7 @@ namespace n_strtoll {
 		Cstrtoll();
 		~Cstrtoll();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cstrtoll); }
 	};
 }
 

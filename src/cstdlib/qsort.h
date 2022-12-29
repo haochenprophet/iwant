@@ -10,6 +10,7 @@ namespace n_qsort {
 		Cqsort();
 		~Cqsort();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cqsort); }
 	};
 }
 

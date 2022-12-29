@@ -16,6 +16,11 @@ C_Exit::~C_Exit()
 
 }
 
+void C_Exit::_Exit_c(int status)
+{
+	_Exit(status);
+}
+
 #ifndef _EXIT_TEST
 #define _EXIT_TEST 0//1
 #endif

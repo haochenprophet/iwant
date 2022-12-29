@@ -10,6 +10,7 @@ namespace n_bsearch {
 		Cbsearch();
 		~Cbsearch();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cbsearch); }
 	};
 }
 

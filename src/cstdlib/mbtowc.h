@@ -10,6 +10,7 @@ namespace n_mbtowc {
 		Cmbtowc();
 		~Cmbtowc();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cmbtowc); }
 	};
 }
 
