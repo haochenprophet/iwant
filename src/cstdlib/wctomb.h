@@ -11,6 +11,8 @@ namespace n_wctomb {
 		~Cwctomb();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cwctomb); }
+		static int wctomb_c(char* pmb, wchar_t wc);
+
 	};
 }
 

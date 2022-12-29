@@ -11,6 +11,8 @@ namespace n_mblen {
 		~Cmblen();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cmblen); }
+		static int mblen_c(const char* pmb, size_t max);
+
 	};
 }
 

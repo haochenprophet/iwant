@@ -11,6 +11,8 @@ namespace n_malloc {
 		~Cmalloc();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cmalloc); }
+		static void* malloc_c(size_t size);
+
 	};
 }
 

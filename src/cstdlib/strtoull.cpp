@@ -15,7 +15,10 @@ Cstrtoull::~Cstrtoull()
 {
 
 }
-
+unsigned long long int Cstrtoull::strtoull_c(const char* str, char** endptr, int base)
+{
+	return strtoull( str, endptr, base);
+}
 #ifndef STRTOULL_TEST
 #define STRTOULL_TEST 0//1
 #endif

@@ -5586,6 +5586,9 @@
     <ClCompile Include="..\..\src\cstdio\stdout.cpp">
       <Filter>cstdio</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cstdlib\div_c.cpp">
+      <Filter>cstdlib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11248,6 +11251,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\cstdio\stdout.h">
       <Filter>cstdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cstdlib\div_c.h">
+      <Filter>cstdlib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

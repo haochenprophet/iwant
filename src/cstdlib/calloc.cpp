@@ -16,6 +16,11 @@ Ccalloc::~Ccalloc()
 
 }
 
+void* Ccalloc::calloc_c(size_t num, size_t size)
+{
+	return calloc( num,  size);
+}
+
 #ifndef CALLOC_TEST
 #define CALLOC_TEST 0//1
 #endif

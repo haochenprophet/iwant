@@ -9,6 +9,7 @@ namespace n_exit {
 	public:
 		Cexit();
 		int func(void *p=nullptr);
+		static void exit_c(int status);
 	};
 
 }

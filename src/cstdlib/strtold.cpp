@@ -15,7 +15,10 @@ Cstrtold::~Cstrtold()
 {
 
 }
-
+long double Cstrtold::strtold_c(const char* str, char** endptr)
+{
+	return strtold( str, endptr);
+}
 #ifndef STRTOLD_TEST
 #define STRTOLD_TEST 0//1
 #endif

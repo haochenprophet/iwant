@@ -11,6 +11,7 @@ namespace n_rand {
 		~Crand();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Crand); }
+		static int rand_c(void);
 	};
 }
 

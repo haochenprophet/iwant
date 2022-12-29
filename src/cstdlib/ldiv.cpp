@@ -15,6 +15,10 @@ Cldiv::~Cldiv()
 {
 
 }
+ldiv_t Cldiv::ldiv_c(long int numer, long int denom)
+{
+	return ldiv(numer, denom);
+}
 
 #ifndef LDIV_TEST
 #define LDIV_TEST 0//1

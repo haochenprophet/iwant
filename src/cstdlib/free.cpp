@@ -15,7 +15,10 @@ Cfree::~Cfree()
 {
 
 }
-
+void Cfree::free_c(void* ptr)
+{
+	free(ptr);
+}
 #ifndef FREE_TEST
 #define FREE_TEST 0//1
 #endif

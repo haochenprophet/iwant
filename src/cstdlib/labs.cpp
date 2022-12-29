@@ -16,6 +16,10 @@ Clabs::~Clabs()
 
 }
 
+long int Clabs::labs_c(long int n)
+{
+	return labs(n);
+}
 #ifndef LABS_TEST
 #define LABS_TEST 0//1
 #endif

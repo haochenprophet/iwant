@@ -15,7 +15,10 @@ Crealloc::~Crealloc()
 {
 
 }
-
+void* Crealloc::realloc_c(void* ptr, size_t size)
+{
+	return realloc(  ptr,  size);
+}
 #ifndef REALLOC_TEST
 #define REALLOC_TEST 0//1
 #endif

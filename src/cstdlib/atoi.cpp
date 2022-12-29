@@ -16,6 +16,11 @@ Catoi::~Catoi()
 
 }
 
+int Catoi::atoi_c(const char* str)
+{
+	return atoi(str);
+}
+
 #ifndef ATOI_TEST
 #define ATOI_TEST 0//1
 #endif

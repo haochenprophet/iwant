@@ -11,6 +11,8 @@ namespace n_mbstowcs {
 		~Cmbstowcs();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cmbstowcs); }
+		static size_t mbstowcs_c(wchar_t* dest, const char* src, size_t max);
+
 	};
 }
 

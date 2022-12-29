@@ -11,6 +11,7 @@ namespace n_atexit {
 		~Catexit();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Catexit); }
+		static int atexit_c(void (*func)(void));
 	};
 }
 

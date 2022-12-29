@@ -11,3 +11,8 @@ int Cexit::func(void *p)
 	if(!p) exit(0);
 	exit(*(int*)p);
 }
+
+void Cexit::exit_c(int status)
+{
+	exit(status);
+}

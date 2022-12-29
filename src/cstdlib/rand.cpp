@@ -15,7 +15,10 @@ Crand::~Crand()
 {
 
 }
-
+int Crand:: rand_c(void)
+{
+	return  rand();
+}
 #ifndef RAND_TEST
 #define RAND_TEST 0//1
 #endif

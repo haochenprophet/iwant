@@ -15,7 +15,10 @@ Csystem::~Csystem()
 {
 
 }
-
+int Csystem::system_c(const char* command)
+{
+	return system(command);
+}
 #ifndef SYSTEM_TEST
 #define SYSTEM_TEST 0//1
 #endif

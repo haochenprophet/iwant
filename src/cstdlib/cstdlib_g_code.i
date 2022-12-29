@@ -38,5 +38,5 @@
 	Cwcstombs  g_wcstombs ;
 	Cwctomb  g_wctomb ;
 	C_Exit  g__Exit ;
-	#include "g_code_func.i"
+	#include "cstdlib_g_code_func.i"
 #endif

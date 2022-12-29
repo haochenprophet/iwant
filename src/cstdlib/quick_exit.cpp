@@ -15,6 +15,10 @@ Cquick_exit::~Cquick_exit()
 {
 
 }
+void Cquick_exit::quick_exit_c(int status)
+{
+	quick_exit( status);
+}
 
 #ifndef QUICK_EXIT_TEST
 #define QUICK_EXIT_TEST 0//1

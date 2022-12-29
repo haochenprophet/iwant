@@ -11,6 +11,8 @@ namespace n_bsearch {
 		~Cbsearch();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cbsearch); }
+		static void* bsearch_c(const void* key, const void* base, size_t num, size_t size, int (*compar)(const void*, const void*));
+
 	};
 }
 

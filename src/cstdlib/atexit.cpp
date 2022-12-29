@@ -16,6 +16,11 @@ Catexit::~Catexit()
 
 }
 
+int Catexit::atexit_c(void (*func)(void))
+{
+	return atexit(func);
+}
+
 #ifndef ATEXIT_TEST
 #define ATEXIT_TEST 0//1
 #endif

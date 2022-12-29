@@ -16,6 +16,11 @@ Cwctomb::~Cwctomb()
 
 }
 
+int Cwctomb::wctomb_c(char* pmb, wchar_t wc)
+{
+	return wctomb( pmb, wc);
+}
+
 #ifndef WCTOMB_TEST
 #define WCTOMB_TEST 0//1
 #endif

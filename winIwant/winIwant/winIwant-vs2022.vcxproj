@@ -223,6 +223,7 @@
     <ClCompile Include="..\..\src\cstdlib\bsearch.cpp" />
     <ClCompile Include="..\..\src\cstdlib\calloc.cpp" />
     <ClCompile Include="..\..\src\cstdlib\cstdlib.cpp" />
+    <ClCompile Include="..\..\src\cstdlib\div_c.cpp" />
     <ClCompile Include="..\..\src\cstdlib\free.cpp" />
     <ClCompile Include="..\..\src\cstdlib\getenv.cpp" />
     <ClCompile Include="..\..\src\cstdlib\labs.cpp" />
@@ -2076,6 +2077,7 @@
     <ClInclude Include="..\..\src\cstdlib\cstdlib.h" />
     <ClInclude Include="..\..\src\cstdlib\cstdlib_all_h_include.h" />
     <ClInclude Include="..\..\src\cstdlib\cstdlib_g_code.h" />
+    <ClInclude Include="..\..\src\cstdlib\div_c.h" />
     <ClInclude Include="..\..\src\cstdlib\free.h" />
     <ClInclude Include="..\..\src\cstdlib\getenv.h" />
     <ClInclude Include="..\..\src\cstdlib\labs.h" />

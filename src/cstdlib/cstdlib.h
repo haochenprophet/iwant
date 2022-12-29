@@ -11,6 +11,8 @@ namespace n_cstdlib {
 		~Ccstdlib();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ccstdlib); }
+		void add_global_objects(Object* p); //Add stdlib package global object to Object* p
+
 	};
 }
 

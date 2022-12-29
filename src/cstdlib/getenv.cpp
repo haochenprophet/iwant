@@ -16,6 +16,11 @@ Cgetenv::~Cgetenv()
 
 }
 
+char* Cgetenv::getenv_c(const char* name)
+{
+	return getenv( name);
+}
+
 #ifndef GETENV_TEST
 #define GETENV_TEST 0//1
 #endif

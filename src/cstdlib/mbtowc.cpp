@@ -15,7 +15,10 @@ Cmbtowc::~Cmbtowc()
 {
 
 }
-
+int Cmbtowc::mbtowc_c(wchar_t* pwc, const char* pmb, size_t max)
+{
+	return mbtowc(pwc,pmb, max);
+}
 #ifndef MBTOWC_TEST
 #define MBTOWC_TEST 0//1
 #endif

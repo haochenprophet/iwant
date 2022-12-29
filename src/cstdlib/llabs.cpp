@@ -15,7 +15,10 @@ Cllabs::~Cllabs()
 {
 
 }
-
+long long int Cllabs::llabs_c(long long int n)
+{
+	return llabs(n);
+}
 #ifndef LLABS_TEST
 #define LLABS_TEST 0//1
 #endif

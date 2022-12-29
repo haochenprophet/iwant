@@ -16,6 +16,11 @@ Cat_quick_exit::~Cat_quick_exit()
 
 }
 
+int Cat_quick_exit::at_quick_exit_c(void (*func)(void))
+{
+	return at_quick_exit(func);
+}
+
 #ifndef AT_QUICK_EXIT_TEST
 #define AT_QUICK_EXIT_TEST 0//1
 #endif

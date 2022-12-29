@@ -11,6 +11,8 @@ namespace n_strtod {
 		~Cstrtod();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cstrtod); }
+		static double strtod_c(const char* str, char** endptr);
+
 	};
 }
 

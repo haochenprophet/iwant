@@ -15,7 +15,10 @@ Cstrtoll::~Cstrtoll()
 {
 
 }
-
+long long int Cstrtoll::strtoll_c(const char* str, char** endptr, int base)
+{
+	return strtoll( str,  endptr,  base);
+}
 #ifndef STRTOLL_TEST
 #define STRTOLL_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Catoll::~Catoll()
 
 }
 
+long long int Catoll::atoll_c(const char* str)
+{
+	return atoll(str);
+}
+
 #ifndef ATOLL_TEST
 #define ATOLL_TEST 0//1
 #endif

@@ -16,6 +16,10 @@ Cqsort::~Cqsort()
 
 }
 
+void Cqsort::qsort_c(void* base, size_t num, size_t size, int (*compar)(const void*, const void*))
+{
+	qsort(base,  num,  size, compar);
+}
 #ifndef QSORT_TEST
 #define QSORT_TEST 0//1
 #endif

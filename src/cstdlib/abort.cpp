@@ -16,6 +16,11 @@ Cabort::~Cabort()
 
 }
 
+void Cabort::abort_c(void)
+{
+	abort();
+}
+
 #ifndef ABORT_TEST
 #define ABORT_TEST 0//1
 #endif

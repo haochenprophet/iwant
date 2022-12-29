@@ -11,6 +11,8 @@ namespace n_atol {
 		~Catol();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Catol); }
+		static long int atol_c(const char* str);
+
 	};
 }
 

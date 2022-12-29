@@ -11,6 +11,8 @@ namespace n_mbtowc {
 		~Cmbtowc();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cmbtowc); }
+		static int mbtowc_c(wchar_t* pwc, const char* pmb, size_t max);
+
 	};
 }
 

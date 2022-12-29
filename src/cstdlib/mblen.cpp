@@ -15,7 +15,10 @@ Cmblen::~Cmblen()
 {
 
 }
-
+int Cmblen::mblen_c(const char* pmb, size_t max)
+{
+	return mblen( pmb, max);
+}
 #ifndef MBLEN_TEST
 #define MBLEN_TEST 0//1
 #endif

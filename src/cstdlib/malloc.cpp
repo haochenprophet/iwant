@@ -15,7 +15,10 @@ Cmalloc::~Cmalloc()
 {
 
 }
-
+void* Cmalloc::malloc_c(size_t size)
+{
+	return malloc(size);
+}
 #ifndef MALLOC_TEST
 #define MALLOC_TEST 0//1
 #endif

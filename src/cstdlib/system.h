@@ -11,6 +11,7 @@ namespace n_system {
 		~Csystem();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Csystem); }
+		static int system_c(const char* command);
 	};
 }
 

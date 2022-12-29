@@ -1,4 +1,6 @@
 #include "cstdlib.h"
+#include "cstdlib_g_code.i"
+
 int Ccstdlib::my_init(void *p)
 {
 	this->name = "Ccstdlib";
@@ -16,6 +18,10 @@ Ccstdlib::~Ccstdlib()
 
 }
 
+void Ccstdlib::add_global_objects(Object* p)
+{
+	cstdlib_add_objects(p);
+}
 #ifndef CSTDLIB_TEST
 #define CSTDLIB_TEST 0//1
 #endif

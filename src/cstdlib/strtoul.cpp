@@ -15,7 +15,10 @@ Cstrtoul::~Cstrtoul()
 {
 
 }
-
+unsigned long int Cstrtoul::strtoul_c(const char* str, char** endptr, int base)
+{
+	return strtoul( str, endptr, base);
+}
 #ifndef STRTOUL_TEST
 #define STRTOUL_TEST 0//1
 #endif

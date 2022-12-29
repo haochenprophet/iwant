@@ -11,6 +11,8 @@ namespace n_abort {
 		~Cabort();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cabort); }
+		static void abort_c(void);
+
 	};
 }
 

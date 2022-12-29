@@ -11,6 +11,8 @@ namespace n_wcstombs {
 		~Cwcstombs();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cwcstombs); }
+		static size_t wcstombs_c(char* dest, const wchar_t* src, size_t max);
+
 	};
 }
 

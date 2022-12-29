@@ -11,6 +11,8 @@ namespace n_strtoul {
 		~Cstrtoul();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cstrtoul); }
+		static unsigned long int strtoul_c(const char* str, char** endptr, int base);
+
 	};
 }
 

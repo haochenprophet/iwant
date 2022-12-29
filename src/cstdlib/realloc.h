@@ -11,6 +11,7 @@ namespace n_realloc {
 		~Crealloc();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Crealloc); }
+		static void* realloc_c(void* ptr, size_t size);
 	};
 }
 

@@ -15,7 +15,10 @@ Cwcstombs::~Cwcstombs()
 {
 
 }
-
+size_t Cwcstombs::wcstombs_c(char* dest, const wchar_t* src, size_t max)
+{
+	return wcstombs( dest, src, max);
+}
 #ifndef WCSTOMBS_TEST
 #define WCSTOMBS_TEST 0//1
 #endif

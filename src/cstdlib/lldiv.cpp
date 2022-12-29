@@ -16,6 +16,11 @@ Clldiv::~Clldiv()
 
 }
 
+lldiv_t Clldiv::lldiv_c(long long int numer, long long int denom)
+{
+	return lldiv(numer,denom);
+}
+
 #ifndef LLDIV_TEST
 #define LLDIV_TEST 0//1
 #endif

@@ -16,6 +16,11 @@ Cbsearch::~Cbsearch()
 
 }
 
+void* Cbsearch::bsearch_c(const void* key, const void* base, size_t num, size_t size, int (*compar)(const void*, const void*))
+{
+	return bsearch(key,base,num,size, compar);
+}
+
 #ifndef BSEARCH_TEST
 #define BSEARCH_TEST 0//1
 #endif

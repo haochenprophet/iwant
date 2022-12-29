@@ -11,6 +11,8 @@ namespace n_strtoll {
 		~Cstrtoll();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cstrtoll); }
+		static long long int strtoll_c(const char* str, char** endptr, int base);
+
 	};
 }
 

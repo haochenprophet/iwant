@@ -15,6 +15,10 @@ Csrand::~Csrand()
 {
 
 }
+void Csrand::srand_c(unsigned int seed)
+{
+	srand(seed);
+}
 
 #ifndef SRAND_TEST
 #define SRAND_TEST 0//1

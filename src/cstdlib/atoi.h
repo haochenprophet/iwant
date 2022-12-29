@@ -11,6 +11,8 @@ namespace n_atoi {
 		~Catoi();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Catoi); }
+		static int atoi_c(const char* str);
+
 	};
 }
 

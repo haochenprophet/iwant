@@ -16,6 +16,11 @@ Catol::~Catol()
 
 }
 
+long int Catol::atol_c(const char* str)
+{
+	return atol(str);
+}
+
 #ifndef ATOL_TEST
 #define ATOL_TEST 0//1
 #endif

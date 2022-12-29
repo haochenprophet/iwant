@@ -11,6 +11,8 @@ namespace n_llabs {
 		~Cllabs();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cllabs); }
+		static long long int llabs_c(long long int n);
+
 	};
 }
 

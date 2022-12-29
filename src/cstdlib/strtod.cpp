@@ -16,6 +16,10 @@ Cstrtod::~Cstrtod()
 
 }
 
+double Cstrtod::strtod_c(const char* str, char** endptr)
+{
+	return strtod( str, endptr);
+}
 #ifndef STRTOD_TEST
 #define STRTOD_TEST 0//1
 #endif

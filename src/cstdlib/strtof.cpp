@@ -15,7 +15,10 @@ Cstrtof::~Cstrtof()
 {
 
 }
-
+float Cstrtof::strtof_c(const char* str, char** endptr)
+{
+	return strtof( str, endptr);
+}
 #ifndef STRTOF_TEST
 #define STRTOF_TEST 0//1
 #endif

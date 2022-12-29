@@ -11,6 +11,8 @@ namespace n_labs {
 		~Clabs();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Clabs); }
+		static long int labs_c(long int n);
+
 	};
 }
 

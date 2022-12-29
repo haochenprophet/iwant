@@ -11,6 +11,8 @@ namespace n_strtold {
 		~Cstrtold();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cstrtold); }
+		static long double strtold_c(const char* str, char** endptr);
+
 	};
 }
 

@@ -16,6 +16,11 @@ Catof::~Catof()
 
 }
 
+double Catof::atof_c(const char* str)
+{
+	return atof(str);
+}
+
 #ifndef ATOF_TEST
 #define ATOF_TEST 0//1
 #endif

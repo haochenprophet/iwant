@@ -15,7 +15,10 @@ Cmbstowcs::~Cmbstowcs()
 {
 
 }
-
+size_t Cmbstowcs:: mbstowcs_c(wchar_t* dest, const char* src, size_t max)
+{
+	return mbstowcs( dest,  src, max);
+}
 #ifndef MBSTOWCS_TEST
 #define MBSTOWCS_TEST 0//1
 #endif
