@@ -21,7 +21,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_exp.where());
 	p->addMe(g_exp2.where());
 	p->addMe(g_expm1.where());
-	p->addMe(g_fabs_.where());
+	p->addMe(g_fabs.where());
 	p->addMe(g_fdim.where());
 	p->addMe(g_floor.where());
 	p->addMe(g_fma.where());

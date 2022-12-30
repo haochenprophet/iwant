@@ -10,6 +10,7 @@ namespace n_remquo {
 		Cremquo();
 		~Cremquo();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Cremquo); }
 	};
 }
 

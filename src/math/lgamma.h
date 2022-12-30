@@ -10,6 +10,7 @@ namespace n_lgamma {
 		Clgamma();
 		~Clgamma();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Clgamma); }
 	};
 }
 

@@ -10,6 +10,8 @@ namespace n_cmath {
 		Ccmath();
 		~Ccmath();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Ccmath); }
+		void add_global_objects(Object* p);
 	};
 }
 

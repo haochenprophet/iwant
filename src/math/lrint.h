@@ -10,6 +10,7 @@ namespace n_lrint {
 		Clrint();
 		~Clrint();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Clrint); }
 	};
 }
 

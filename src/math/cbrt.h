@@ -10,6 +10,7 @@ namespace n_cbrt {
 		Ccbrt();
 		~Ccbrt();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Ccbrt); }
 	};
 }
 

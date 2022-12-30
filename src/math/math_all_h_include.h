@@ -11,6 +11,7 @@
 #include "atanh.h" 
 #include "cbrt.h" 
 #include "ceil.h" 
+#include "cmath.h"
 #include "copysign.h" 
 #include "cos.h" 
 #include "cosh.h" 

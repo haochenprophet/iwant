@@ -1,4 +1,5 @@
 #include "cmath.h"
+#include "math_g_code.i"
 int Ccmath::my_init(void *p)
 {
 	this->name = "Ccmath";
@@ -15,7 +16,10 @@ Ccmath::~Ccmath()
 {
 
 }
-
+void Ccmath::add_global_objects(Object* p)
+{
+	math_add_objects(p);
+}
 #ifndef CMATH_TEST
 #define CMATH_TEST 0//1
 #endif

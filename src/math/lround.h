@@ -10,6 +10,7 @@ namespace n_lround {
 		Clround();
 		~Clround();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Clround); }
 	};
 }
 

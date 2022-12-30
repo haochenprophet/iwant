@@ -21,7 +21,7 @@
 	Cexp  g_exp ;
 	Cexp2  g_exp2 ;
 	Cexpm1  g_expm1 ;
-	Cfabs_  g_fabs_ ;
+	Cfabs  g_fabs ;
 	Cfdim  g_fdim ;
 	Cfloor  g_floor ;
 	Cfma  g_fma ;
@@ -61,5 +61,5 @@
 	Ctanh  g_tanh ;
 	Ctgamma  g_tgamma ;
 	Ctrunc  g_trunc ;
-	#include "g_code_func.i"
+	#include "math_g_code_func.i"
 #endif

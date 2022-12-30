@@ -10,6 +10,7 @@ namespace n_log1p {
 		Clog1p();
 		~Clog1p();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Clog1p); }
 	};
 }
 

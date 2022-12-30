@@ -10,6 +10,7 @@ namespace n_copysign {
 		Ccopysign();
 		~Ccopysign();
 		int my_init(void *p=nullptr);
+		size_t my_size() { return sizeof(Ccopysign); }
 	};
 }
 
