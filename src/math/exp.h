@@ -11,6 +11,7 @@ namespace n_exp {
 		~Cexp();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cexp); }
+		static double exp_c(double x);
 	};
 }
 

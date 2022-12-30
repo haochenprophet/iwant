@@ -16,6 +16,11 @@ Cacos::~Cacos()
 
 }
 
+double Cacos::acos_c(double x)
+{
+	return acos( x);
+}
+
 #ifndef ACOS_TEST
 #define ACOS_TEST 0//1
 #endif

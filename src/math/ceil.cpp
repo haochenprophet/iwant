@@ -15,7 +15,10 @@ Cceil::~Cceil()
 {
 
 }
-
+double Cceil::ceil_c(double x)
+{
+	return ceil(x);
+}
 #ifndef CEIL_TEST
 #define CEIL_TEST 0//1
 #endif

@@ -16,6 +16,21 @@ Cacosh::~Cacosh()
 
 }
 
+double Cacosh::acosh_c(double x)
+{
+	return acosh(x);
+}
+
+float Cacosh::acoshf_c(float x)
+{
+	return acoshf(x);
+}
+
+long double Cacosh::acoshl_c(long double x)
+{
+	return acoshl(x);
+}
+
 #ifndef ACOSH_TEST
 #define ACOSH_TEST 0//1
 #endif

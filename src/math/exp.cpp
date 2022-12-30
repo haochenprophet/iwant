@@ -16,6 +16,11 @@ Cexp::~Cexp()
 
 }
 
+double Cexp::exp_c(double x)
+{
+	return exp(x);
+}
+
 #ifndef EXP_TEST
 #define EXP_TEST 0//1
 #endif

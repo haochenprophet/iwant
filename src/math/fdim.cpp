@@ -16,6 +16,19 @@ Cfdim::~Cfdim()
 
 }
 
+double Cfdim::fdim_c(double x, double y)
+{
+	return fdim( x,  y);
+}
+float Cfdim::fdimf_c(float x, float y)
+{
+	return fdimf(x, y);
+}
+long double Cfdim::fdiml_c(long double x, long double y)
+{
+	return fdiml(x, y);
+}
+
 #ifndef FDIM_TEST
 #define FDIM_TEST 0//1
 #endif

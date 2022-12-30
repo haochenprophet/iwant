@@ -16,11 +16,15 @@ Cfabs::~Cfabs()
 
 }
 
-#ifndef FABS_TEST
-#define FABS_TEST 0//1
+double Cfabs::fabs_c(double x)
+{
+	return fabs(x);
+}
+#ifndef FABS__TEST
+#define FABS__TEST 0//1
 #endif
 
-#if FABS_TEST
+#if FABS__TEST
 #include "../all_h_include.h"
 int main(int argc, char *argv[])
 {

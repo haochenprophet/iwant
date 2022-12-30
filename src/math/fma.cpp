@@ -16,6 +16,21 @@ Cfma::~Cfma()
 
 }
 
+double Cfma::fma_c(double x, double y, double z)
+{
+	return fma( x,  y,  z);
+}
+
+float Cfma::fmaf_c(float x, float y, float z)
+{
+	return fmaf(x, y, z);
+}
+
+long double Cfma::fmal_c(long double x, long double y, long double z)
+{
+	return fmal(x, y, z);
+}
+
 #ifndef FMA_TEST
 #define FMA_TEST 0//1
 #endif

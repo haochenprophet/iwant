@@ -15,6 +15,18 @@ Cexp2::~Cexp2()
 {
 
 }
+double Cexp2::exp2_c(double x)
+{
+	return exp2(x);
+}
+float Cexp2::exp2f_c(float x)
+{
+	return exp2f(x);
+}
+long double Cexp2::exp2l_c(long double x)
+{
+	return exp2l(x);
+}
 
 #ifndef EXP2_TEST
 #define EXP2_TEST 0//1

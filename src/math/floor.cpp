@@ -15,7 +15,10 @@ Cfloor::~Cfloor()
 {
 
 }
-
+double Cfloor::floor_c(double x)
+{
+	return floor(x);
+}
 #ifndef FLOOR_TEST
 #define FLOOR_TEST 0//1
 #endif

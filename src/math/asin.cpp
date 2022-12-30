@@ -16,6 +16,11 @@ Casin::~Casin()
 
 }
 
+double Casin::asin_c(double x)
+{
+	return asin(x);
+}
+
 #ifndef ASIN_TEST
 #define ASIN_TEST 0//1
 #endif

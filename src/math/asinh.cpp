@@ -15,7 +15,19 @@ Casinh::~Casinh()
 {
 
 }
+double Casinh::asinh_c(double x)
+{
+	return asinh(x);
+}
+float Casinh::asinhf_c(float x)
+{
+	return asinhf(x);
+}
 
+long double Casinh::asinhl_c(long double x)
+{
+	return asinhl(x);
+}
 #ifndef ASINH_TEST
 #define ASINH_TEST 0//1
 #endif

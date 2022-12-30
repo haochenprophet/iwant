@@ -11,6 +11,10 @@ namespace n_erf {
 		~Cerf();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cerf); }
+		static double erf_c(double x);
+		static float erff_c(float x);
+		static long double erfl_c(long double x);
+
 	};
 }
 

@@ -11,6 +11,8 @@ namespace n_atan {
 		~Catan();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Catan); }
+		static double atan_c(double x);
+
 	};
 }
 

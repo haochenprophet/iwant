@@ -15,7 +15,18 @@ Cexpm1::~Cexpm1()
 {
 
 }
-
+double Cexpm1::expm1_c(double x)
+{
+	return expm1(x);
+}
+float Cexpm1::expm1f_c(float x)
+{
+	return expm1f(x);
+}
+long double Cexpm1::expm1l_c(long double x)
+{
+	return expm1l(x);
+}
 #ifndef EXPM1_TEST
 #define EXPM1_TEST 0//1
 #endif

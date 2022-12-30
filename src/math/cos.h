@@ -11,6 +11,7 @@ namespace n_cos {
 		~Ccos();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ccos); }
+		static double cos_c(double x);
 	};
 }
 

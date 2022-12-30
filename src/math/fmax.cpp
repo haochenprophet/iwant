@@ -15,7 +15,18 @@ Cfmax::~Cfmax()
 {
 
 }
-
+double Cfmax::fmax_c(double x, double y)
+{
+	return fmax( x, y);
+}
+float Cfmax::fmaxf_c(float x, float y)
+{
+	return fmaxf (x, y);
+}
+long double Cfmax::fmaxl_c(long double x, long double y)
+{
+	return fmaxl(x, y);
+}
 #ifndef FMAX_TEST
 #define FMAX_TEST 0//1
 #endif

@@ -16,6 +16,10 @@ Ccos::~Ccos()
 
 }
 
+double Ccos::cos_c(double x)
+{
+	return cos(x);
+}
 #ifndef COS_TEST
 #define COS_TEST 0//1
 #endif

@@ -15,7 +15,18 @@ Cerf::~Cerf()
 {
 
 }
-
+double Cerf::erf_c(double x)
+{
+	return erf(x);
+}
+float Cerf::erff_c(float x)
+{
+	return erff(x);
+}
+long double Cerf::erfl_c(long double x)
+{
+	return erfl(x);
+}
 #ifndef ERF_TEST
 #define ERF_TEST 0//1
 #endif

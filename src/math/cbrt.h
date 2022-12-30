@@ -11,6 +11,10 @@ namespace n_cbrt {
 		~Ccbrt();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ccbrt); }
+		static double cbrt_c(double x);
+		static float cbrtf_c(float x);
+		static long double cbrtl_c(long double x);
+
 	};
 }
 

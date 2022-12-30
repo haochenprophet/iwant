@@ -11,6 +11,10 @@ namespace n_atanh {
 		~Catanh();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Catanh); }
+		static double atanh_c(double x);
+		static float atanhf_c(float x);
+		static long double atanhl_c(long double x);
+
 	};
 }
 

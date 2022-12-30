@@ -11,6 +11,8 @@ namespace n_floor {
 		~Cfloor();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cfloor); }
+		static double floor_c(double x);
+
 	};
 }
 

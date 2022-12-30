@@ -16,6 +16,26 @@ Cabs::~Cabs()
 
 }
 
+int Cabs::abs_c(int n)
+{
+	return abs(n);
+}
+
+double Cabs::abs_c(double x)
+{
+	return abs(x);
+}
+
+float Cabs::abs_c(float x)
+{
+	return abs(x);
+}
+
+long double Cabs::abs_c(long double x)
+{
+	return abs(x);
+}
+
 #ifndef ABS_TEST
 #define ABS_TEST 0//1
 #endif

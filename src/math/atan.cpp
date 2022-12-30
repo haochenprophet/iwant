@@ -16,6 +16,10 @@ Catan::~Catan()
 
 }
 
+double Catan::atan_c(double x)
+{
+	return atan(x);
+}
 #ifndef ATAN_TEST
 #define ATAN_TEST 0//1
 #endif

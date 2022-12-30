@@ -16,6 +16,19 @@ Cerfc::~Cerfc()
 
 }
 
+double Cerfc::erfc_c(double x)
+{
+	return erfc(x);
+}
+float Cerfc::erfcf_c(float x)
+{
+	return erfcf(x);
+}
+long double Cerfc::erfcl_c(long double x)
+{
+	return erfcl(x);
+}
+
 #ifndef ERFC_TEST
 #define ERFC_TEST 0//1
 #endif

@@ -15,7 +15,10 @@ Ccosh::~Ccosh()
 {
 
 }
-
+double Ccosh::cosh_h(double x)
+{
+	return cosh(x);
+}
 #ifndef COSH_TEST
 #define COSH_TEST 0//1
 #endif

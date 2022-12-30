@@ -16,6 +16,11 @@ Catan2::~Catan2()
 
 }
 
+double Catan2::atan2_c(double y, double x)
+{
+	return atan2( y,  x);
+}
+
 #ifndef ATAN2_TEST
 #define ATAN2_TEST 0//1
 #endif

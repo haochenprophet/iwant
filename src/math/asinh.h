@@ -11,6 +11,9 @@ namespace n_asinh {
 		~Casinh();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Casinh); }
+		static double asinh_c(double x);
+		static float asinhf_c(float x);
+		static long double asinhl_c(long double x);
 	};
 }
 

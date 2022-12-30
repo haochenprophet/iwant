@@ -16,6 +16,21 @@ Ccopysign::~Ccopysign()
 
 }
 
+double copysign_c(double x, double y)
+{
+	return copysign( x,y);
+}
+
+float copysignf_c(float x, float y)
+{
+	return copysignf(x, y);
+}
+
+long double copysignl_c(long double x, long double y)
+{
+	return copysignl(x, y);
+}
+
 #ifndef COPYSIGN_TEST
 #define COPYSIGN_TEST 0//1
 #endif

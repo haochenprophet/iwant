@@ -11,6 +11,7 @@ namespace n_acos {
 		~Cacos();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cacos); }
+		static double acos_c(double x);
 	};
 }
 

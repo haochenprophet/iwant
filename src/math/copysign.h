@@ -11,6 +11,10 @@ namespace n_copysign {
 		~Ccopysign();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ccopysign); }
+		static double copysign_c(double x, double y);
+		static float copysignf_c(float x, float y);
+		static long double copysignl_c(long double x, long double y);
+
 	};
 }
 

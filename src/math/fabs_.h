@@ -1,5 +1,5 @@
-#ifndef FABS_H
-#define FABS_H
+#ifndef FABS_H_
+#define FABS_H_
 
 #include "../object.h"
 
@@ -11,6 +11,7 @@ namespace n_fabs {
 		~Cfabs();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cfabs); }
+		static double fabs_c(double x);
 	};
 }
 

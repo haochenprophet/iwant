@@ -15,6 +15,18 @@ Ccbrt::~Ccbrt()
 {
 
 }
+double Ccbrt::cbrt_c(double x)
+{
+	return cbrt(x);
+}
+float Ccbrt::cbrtf_c(float x)
+{
+	return cbrtf(x);
+}
+long double Ccbrt::cbrtl_c(long double x)
+{
+	return cbrtl(x);
+}
 
 #ifndef CBRT_TEST
 #define CBRT_TEST 0//1
