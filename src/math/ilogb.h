@@ -11,6 +11,10 @@ namespace n_ilogb {
 		~Cilogb();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cilogb); }
+		static int ilogb_c(double x); 
+		static int ilogbf_c(float x);
+		static int ilogbl_c(long double x);
+
 	};
 }
 

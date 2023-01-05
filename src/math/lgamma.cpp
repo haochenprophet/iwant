@@ -16,6 +16,21 @@ Clgamma::~Clgamma()
 
 }
 
+double Clgamma::lgamma_c(double x)
+{
+	return lgamma(x);
+}
+
+float Clgamma::lgammaf_c(float x)
+{
+	return lgammaf(x);
+}
+
+long double Clgamma::lgammal_c(long double x)
+{
+	return lgammal(x);
+}
+
 #ifndef LGAMMA_TEST
 #define LGAMMA_TEST 0//1
 #endif

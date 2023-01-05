@@ -16,6 +16,11 @@ Cmodf::~Cmodf()
 
 }
 
+double Cmodf:: modf(double x, double* intpart)
+{
+	return modf( x,  intpart);
+}
+
 #ifndef MODF_TEST
 #define MODF_TEST 0//1
 #endif

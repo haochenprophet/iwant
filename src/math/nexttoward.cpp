@@ -16,6 +16,20 @@ Cnexttoward::~Cnexttoward()
 
 }
 
+double nexttoward_c(double x, long double y)
+{
+	return  nexttoward( x, y);
+}
+
+float nexttowardf_c(float x, long double y)
+{
+	return  nexttowardf(x, y);
+}
+
+long double nexttowardl_c(long double x, long double y)
+{
+	return  nexttowardl(x, y);
+}
 #ifndef NEXTTOWARD_TEST
 #define NEXTTOWARD_TEST 0//1
 #endif

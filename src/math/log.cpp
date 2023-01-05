@@ -16,6 +16,10 @@ Clog::~Clog()
 
 }
 
+double Clog::log_c(double x)
+{
+	return log(x);
+}
 #ifndef LOG_TEST
 #define LOG_TEST 0//1
 #endif

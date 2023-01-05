@@ -16,6 +16,11 @@ Cfmod::~Cfmod()
 
 }
 
+double Cfmod::fmod_c(double numer, double denom)
+{
+	return fmod( numer,  denom);
+}
+
 #ifndef FMOD_TEST
 #define FMOD_TEST 0//1
 #endif

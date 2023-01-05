@@ -16,6 +16,11 @@ Cfrexp::~Cfrexp()
 
 }
 
+double Cfrexp::frexp_c(double x, int* exp)
+{
+	return frexp( x,  exp);
+}
+
 #ifndef FREXP_TEST
 #define FREXP_TEST 0//1
 #endif

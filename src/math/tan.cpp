@@ -16,6 +16,11 @@ Ctan::~Ctan()
 
 }
 
+double Ctan::tan_c(double x)
+{
+	return tan(x);
+}
+
 #ifndef TAN_TEST
 #define TAN_TEST 0//1
 #endif

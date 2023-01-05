@@ -11,6 +11,8 @@ namespace n_ldexp {
 		~Cldexp();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cldexp); }
+		static double ldexp_c(double x, int exp);
+
 	};
 }
 

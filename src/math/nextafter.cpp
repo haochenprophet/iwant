@@ -16,6 +16,21 @@ Cnextafter::~Cnextafter()
 
 }
 
+double Cnextafter::nextafter_c(double x, double y)
+{
+	return nextafter( x, y);
+}
+
+float Cnextafter::nextafterf_c(float x, float y)
+{
+	return nextafterf(x, y);
+}
+
+long double Cnextafter::nextafterl_c(long double x, long double y)
+{
+	return nextafterl(x, y);
+}
+
 #ifndef NEXTAFTER_TEST
 #define NEXTAFTER_TEST 0//1
 #endif

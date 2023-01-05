@@ -11,6 +11,10 @@ namespace n_nexttoward {
 		~Cnexttoward();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cnexttoward); }
+		static double nexttoward_c(double x, long double y);
+		static float nexttowardf_c(float x, long double y);
+		static long double nexttowardl_c(long double x, long double y);
+
 	};
 }
 

@@ -16,6 +16,19 @@ Cremquo::~Cremquo()
 
 }
 
+double Cremquo::remquo_c(double numer, double denom, int* quot)
+{
+	return remquo( numer,  denom,  quot);
+}
+float Cremquo::remquof_c(float numer, float denom, int* quot)
+{
+	return remquof(numer, denom, quot);
+}
+long double Cremquo::remquol_c(long double numer, long double denom, int* quot)
+{
+	return remquol(numer, denom, quot);
+}
+
 #ifndef REMQUO_TEST
 #define REMQUO_TEST 0//1
 #endif

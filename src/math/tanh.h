@@ -11,6 +11,8 @@ namespace n_tanh {
 		~Ctanh();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ctanh); }
+		static double tanh_c(double x);
+
 	};
 }
 

@@ -16,6 +16,21 @@ Cilogb::~Cilogb()
 
 }
 
+int Cilogb::ilogb_c(double x)
+{
+	return ilogb(x);
+}
+
+int Cilogb::ilogbf_c(float x)
+{
+	return ilogbf(x);
+}
+
+int Cilogb::ilogbl_c(long double x)
+{
+	return ilogbl(x);
+}
+
 #ifndef ILOGB_TEST
 #define ILOGB_TEST 0//1
 #endif

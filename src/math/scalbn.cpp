@@ -16,6 +16,21 @@ Cscalbn::~Cscalbn()
 
 }
 
+double Cscalbn::scalbn_c(double x, int n)
+{
+	return scalbn( x,  n);
+}
+
+float Cscalbn::scalbnf_c(float x, int n)
+{
+	return scalbnf(x, n);
+}
+
+long double Cscalbn::scalbnl_c(long double x, int n)
+{
+	return scalbnl(x, n);
+}
+
 #ifndef SCALBN_TEST
 #define SCALBN_TEST 0//1
 #endif

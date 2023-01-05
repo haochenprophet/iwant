@@ -16,6 +16,21 @@ Ctrunc::~Ctrunc()
 
 }
 
+double Ctrunc::trunc_c(double x)
+{
+	return trunc(x);
+}
+
+float Ctrunc::truncf_c(float x)
+{
+	return trunc(x);
+}
+
+long double Ctrunc::truncl_c(long double x)
+{
+	return trunc(x);
+}
+
 #ifndef TRUNC_TEST
 #define TRUNC_TEST 0//1
 #endif

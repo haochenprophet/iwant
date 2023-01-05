@@ -16,6 +16,11 @@ Cpow::~Cpow()
 
 }
 
+double Cpow::pow_c(double base, double exponent)
+{
+	return pow( base,  exponent);
+}
+
 #ifndef POW_TEST
 #define POW_TEST 0//1
 #endif

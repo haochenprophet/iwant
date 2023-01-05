@@ -16,6 +16,20 @@ Cnan::~Cnan()
 
 }
 
+double Cnan::nan_c(const char* tagp)
+{
+	return nan(tagp);
+}
+
+float Cnan::nanf_c(const char* tagp)
+{
+	return nanf(tagp);
+}
+
+float Cnan::nanl(const char* tagp)
+{
+	return nanl(tagp);
+}
 #ifndef NAN_TEST
 #define NAN_TEST 0//1
 #endif

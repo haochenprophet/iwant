@@ -1577,6 +1577,7 @@
     <ClCompile Include="..\..\src\math\fmax.cpp" />
     <ClCompile Include="..\..\src\math\fmin.cpp" />
     <ClCompile Include="..\..\src\math\fmod.cpp" />
+    <ClCompile Include="..\..\src\math\fpclassify.cpp" />
     <ClCompile Include="..\..\src\math\frexp.cpp" />
     <ClCompile Include="..\..\src\math\hypot.cpp" />
     <ClCompile Include="..\..\src\math\ilogb.cpp" />
@@ -1603,6 +1604,7 @@
     <ClCompile Include="..\..\src\math\round.cpp" />
     <ClCompile Include="..\..\src\math\scalbln.cpp" />
     <ClCompile Include="..\..\src\math\scalbn.cpp" />
+    <ClCompile Include="..\..\src\math\signbit.cpp" />
     <ClCompile Include="..\..\src\math\sin.cpp" />
     <ClCompile Include="..\..\src\math\sinh.cpp" />
     <ClCompile Include="..\..\src\math\sqrt.cpp" />
@@ -3441,6 +3443,7 @@
     <ClInclude Include="..\..\src\math\fmax.h" />
     <ClInclude Include="..\..\src\math\fmin.h" />
     <ClInclude Include="..\..\src\math\fmod.h" />
+    <ClInclude Include="..\..\src\math\fpclassify.h" />
     <ClInclude Include="..\..\src\math\frexp.h" />
     <ClInclude Include="..\..\src\math\hypot.h" />
     <ClInclude Include="..\..\src\math\ilogb.h" />
@@ -3469,6 +3472,7 @@
     <ClInclude Include="..\..\src\math\round.h" />
     <ClInclude Include="..\..\src\math\scalbln.h" />
     <ClInclude Include="..\..\src\math\scalbn.h" />
+    <ClInclude Include="..\..\src\math\signbit.h" />
     <ClInclude Include="..\..\src\math\sin.h" />
     <ClInclude Include="..\..\src\math\sinh.h" />
     <ClInclude Include="..\..\src\math\sqrt.h" />

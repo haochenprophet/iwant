@@ -16,6 +16,20 @@ Crint::~Crint()
 
 }
 
+double rint_c(double x)
+{
+	return rint(x);
+}
+float rintf_c(float x)
+{
+	return rintf(x);
+}
+long double rintl_c(long double x)
+{
+	return rintl(x);
+}
+
+
 #ifndef RINT_TEST
 #define RINT_TEST 0//1
 #endif

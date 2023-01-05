@@ -11,6 +11,12 @@ namespace n_nan {
 		~Cnan();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cnan); }
+		static double nan_c(const char* tagp);
+		static float nanf_c(const char* tagp);
+		static float nanl(const char* tagp);
+
+
+
 	};
 }
 

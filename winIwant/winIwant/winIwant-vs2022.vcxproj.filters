@@ -5589,6 +5589,12 @@
     <ClCompile Include="..\..\src\cstdlib\div_c.cpp">
       <Filter>cstdlib</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\math\fpclassify.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\signbit.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11254,6 +11260,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\cstdlib\div_c.h">
       <Filter>cstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\fpclassify.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\signbit.h">
+      <Filter>math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

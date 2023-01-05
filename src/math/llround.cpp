@@ -16,6 +16,21 @@ Cllround::~Cllround()
 
 }
 
+long long int llround_c(double x)
+{
+	return llround(x);
+}
+
+long long int llroundf_c(float x)
+{
+	return llroundf(x);
+}
+
+long long int llroundl_c(long double x)
+{
+	return llroundl(x);
+}
+
 #ifndef LLROUND_TEST
 #define LLROUND_TEST 0//1
 #endif

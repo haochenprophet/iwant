@@ -16,6 +16,21 @@ Chypot::~Chypot()
 
 }
 
+double Chypot::hypot_c(double x, double y)
+{
+	return hypot( x,  y);
+}
+
+float Chypot::hypotf_c(float x, float y)
+{
+	return hypotf(x, y);
+}
+
+long double Chypot::hypotl_c(long double x, long double y)
+{
+	return hypotl(x, y);
+}
+
 #ifndef HYPOT_TEST
 #define HYPOT_TEST 0//1
 #endif

@@ -11,6 +11,8 @@ namespace n_frexp {
 		~Cfrexp();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cfrexp); }
+		static double frexp_c(double x, int* exp);
+
 	};
 }
 

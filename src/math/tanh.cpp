@@ -16,6 +16,10 @@ Ctanh::~Ctanh()
 
 }
 
+double Ctanh::tanh_c(double x)
+{
+	return tanh(x);
+}
 #ifndef TANH_TEST
 #define TANH_TEST 0//1
 #endif

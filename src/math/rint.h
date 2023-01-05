@@ -11,6 +11,10 @@ namespace n_rint {
 		~Crint();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Crint); }
+		static double rint_c(double x);
+		static float rintf_c(float x);
+		static long double rintl_c(long double x);
+
 	};
 }
 

@@ -28,6 +28,7 @@
 	Cfmax  g_fmax ;
 	Cfmin  g_fmin ;
 	Cfmod  g_fmod ;
+	Cfpclassify g_fpclassify;
 	Cfrexp  g_frexp ;
 	Chypot  g_hypot ;
 	Cilogb  g_ilogb ;
@@ -54,6 +55,7 @@
 	Cround  g_round ;
 	Cscalbln  g_scalbln ;
 	Cscalbn  g_scalbn ;
+	Csignbit g_signbit;
 	Csin  g_sin ;
 	Csinh  g_sinh ;
 	Csqrt  g_sqrt ;

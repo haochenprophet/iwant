@@ -16,6 +16,19 @@ Clrint::~Clrint()
 
 }
 
+long int lrint_c(double x)
+{
+	return lrint(x);
+}
+long int lrintf_c(float x)
+{
+	return lrintf(x);
+}
+long int lrintl_c(long double x)
+{
+	return lrintl(x);
+}
+
 #ifndef LRINT_TEST
 #define LRINT_TEST 0//1
 #endif

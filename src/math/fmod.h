@@ -11,6 +11,8 @@ namespace n_fmod {
 		~Cfmod();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cfmod); }
+		static double fmod_c(double numer, double denom);
+
 	};
 }
 

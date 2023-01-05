@@ -11,6 +11,7 @@ namespace n_log {
 		~Clog();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Clog); }
+		static double log_c(double x);
 	};
 }
 

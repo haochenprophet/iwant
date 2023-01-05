@@ -16,6 +16,21 @@ Clogb::~Clogb()
 
 }
 
+double Clogb::logb_c(double x)
+{
+	return logb(x);
+}
+
+float Clogb::logbf_c(float x)
+{
+	return logbf(x);
+}
+
+long double Clogb::logbl_c(long double x)
+{
+	return logbl(x);
+}
+
 #ifndef LOGB_TEST
 #define LOGB_TEST 0//1
 #endif

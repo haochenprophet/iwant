@@ -11,6 +11,8 @@ namespace n_tan {
 		~Ctan();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Ctan); }
+		static double tan_c(double x);
+
 	};
 }
 

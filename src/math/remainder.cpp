@@ -16,6 +16,22 @@ Cremainder::~Cremainder()
 
 }
 
+double Cremainder::remainder_c(double numer, double denom)
+{
+	return remainder( numer, denom);
+}
+
+float Cremainder::remainderf_c(float numer, float denom)
+{
+	return remainderf(numer, denom);
+}
+
+long double Cremainder::remainderl_c(long double numer, long double denom)
+{
+	return remainderl(numer, denom);
+}
+
+
 #ifndef REMAINDER_TEST
 #define REMAINDER_TEST 0//1
 #endif

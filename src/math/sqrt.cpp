@@ -16,6 +16,10 @@ Csqrt::~Csqrt()
 
 }
 
+double Csqrt::sqrt_c(double x)
+{
+	return sqrt(x);
+}
 #ifndef SQRT_TEST
 #define SQRT_TEST 0//1
 #endif

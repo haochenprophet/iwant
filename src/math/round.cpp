@@ -16,6 +16,18 @@ Cround::~Cround()
 
 }
 
+double Cround::round_c(double x)
+{
+	return round(x);
+}
+float Cround::roundf_c(float x)
+{
+	return roundf(x);
+}
+long double Cround::roundl_c(long double x)
+{
+	return roundl(x);
+}
 #ifndef ROUND_TEST
 #define ROUND_TEST 0//1
 #endif

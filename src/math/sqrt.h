@@ -11,6 +11,8 @@ namespace n_sqrt {
 		~Csqrt();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Csqrt); }
+		static double sqrt_c(double x);
+
 	};
 }
 

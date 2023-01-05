@@ -15,7 +15,10 @@ Csinh::~Csinh()
 {
 
 }
-
+double Csinh::sinh_c(double x)
+{
+	return sinh(x);
+}
 #ifndef SINH_TEST
 #define SINH_TEST 0//1
 #endif

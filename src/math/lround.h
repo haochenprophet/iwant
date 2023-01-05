@@ -11,6 +11,10 @@ namespace n_lround {
 		~Clround();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Clround); }
+		long int lround_c(double x);
+		long int lroundf_c(float x); 
+		long int lroundl_c(long double x);
+
 	};
 }
 

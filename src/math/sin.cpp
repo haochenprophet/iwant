@@ -16,6 +16,11 @@ Csin::~Csin()
 
 }
 
+double Csin::sin_c(double x)
+{
+	return sin(x);
+}
+
 #ifndef SIN_TEST
 #define SIN_TEST 0//1
 #endif

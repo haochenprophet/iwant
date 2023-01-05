@@ -11,6 +11,8 @@ namespace n_sinh {
 		~Csinh();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Csinh); }
+		static double sinh_c(double x);
+
 	};
 }
 

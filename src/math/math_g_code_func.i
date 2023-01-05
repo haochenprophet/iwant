@@ -28,6 +28,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_fmax.where());
 	p->addMe(g_fmin.where());
 	p->addMe(g_fmod.where());
+	p->addMe(g_fpclassify.where());
 	p->addMe(g_frexp.where());
 	p->addMe(g_hypot.where());
 	p->addMe(g_ilogb.where());
@@ -54,6 +55,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_round.where());
 	p->addMe(g_scalbln.where());
 	p->addMe(g_scalbn.where());
+	p->addMe(g_signbit.where());
 	p->addMe(g_sin.where());
 	p->addMe(g_sinh.where());
 	p->addMe(g_sqrt.where());

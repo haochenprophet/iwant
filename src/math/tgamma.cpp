@@ -15,6 +15,18 @@ Ctgamma::~Ctgamma()
 {
 
 }
+double Ctgamma::tgamma_c(double x)
+{
+	return tgamma( x);
+}
+float Ctgamma::tgammaf_c(float x)
+{
+	return tgammaf(x);
+}
+long double Ctgamma::tgammal_c(long double x)
+{
+	return tgammal(x);
+}
 
 #ifndef TGAMMA_TEST
 #define TGAMMA_TEST 0//1

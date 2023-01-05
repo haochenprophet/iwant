@@ -16,6 +16,10 @@ Cldexp::~Cldexp()
 
 }
 
+double Cldexp::ldexp_c(double x, int exp)
+{
+	return ldexp( x,  exp);
+}
 #ifndef LDEXP_TEST
 #define LDEXP_TEST 0//1
 #endif
