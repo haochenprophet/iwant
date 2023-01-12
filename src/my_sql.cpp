@@ -1,6 +1,18 @@
 #include "my_sql.h"
 #include "my_sql_action.i" //action_tab
 
+#ifndef MY_SQL_TEST
+#define MY_SQL_TEST 0//1
+#endif
+
+#ifndef MYSQL_INIT_IN_CONSTRUCTOR
+	#if MY_SQL_TEST
+		#define MYSQL_INIT_IN_CONSTRUCTOR  1
+	#else
+		#define MYSQL_INIT_IN_CONSTRUCTOR  0
+	#endif //#if MY_SQL_TEST
+#endif  //#ifndef MYSQL_INIT_IN_CONSTRUCTOR
+
 int Cmy_sql::my_init(void *p)
 {
 	this->name = "Cmy_sql";
@@ -35,16 +47,20 @@ Cmy_sql::Cmy_sql(char * password,char * user,char * host,char * use_db,char *sql
 	this->my_init();
 	this->my_init(password, user, host, use_db, sql);
 	this->mysql = &this->mysql_i;
+#if MYSQL_INIT_IN_CONSTRUCTOR
 	if(NULL==mysql_init(this->mysql))
 	{
 		this->inc_error();
 		this->mysql=nullptr;
 	} 
+#endif
 }
 
 Cmy_sql::~Cmy_sql()
 {
+#if MYSQL_INIT_IN_CONSTRUCTOR
 	if(this->mysql) mysql_close(this->mysql);
+#endif
 }
 
 
@@ -477,10 +493,6 @@ int Cmy_sql::deal_cmd(int argc, char *argv[])
 
 	return 0;
 }
-
-#ifndef MY_SQL_TEST
-#define MY_SQL_TEST 0//1
-#endif
 
 #if MY_SQL_TEST
 #include "all_h_include.h"
