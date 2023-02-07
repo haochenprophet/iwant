@@ -305,6 +305,7 @@ namespace n_object {
 		int set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year=0,int tm_hour=0,int tm_min=0,int tm_sec=0,int tm_wday=-1,int tm_yday=-1);
 		int cmp_time(struct tm *t1,struct tm *t2);
 		void delay_clock(clock_t count);
+		void delay(clock_t count);
 		
 		//is func
 		bool is_identifier(char *str,void ** o_addr =nullptr); 

@@ -806,6 +806,11 @@ void Object::delay_clock(clock_t count)
 	clock_t t= clock();
 	while((clock()-t)<count);
 }
+
+void Object::delay(clock_t count)
+{
+	return this->delay_clock(count);
+}
 //object action:
 bool Object::set_action(Action* a, int count)
 {
