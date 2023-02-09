@@ -88,6 +88,19 @@ int Cregister_hw::write(hardware_register* hw_reg)
 	return -1;
 }
 
+int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//set function 
+{
+	hw_reg->function = function;
+	hw_reg->input = input;
+	hw_reg->output = output;
+	return 0;
+}
+
+int Cregister_hw::reset(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//reset function 
+{
+	return this->set(hw_reg, function, input, output);
+}
+
 int Cregister_hw::execute(hardware_register* hw_reg)
 {
 	//1.read and set hardware register bit value use and_data,or_data

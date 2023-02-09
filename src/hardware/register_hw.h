@@ -38,7 +38,7 @@ namespace n_register_hw {
 
 	typedef long long hw_reg_addr;//64 bit hardware register address typedef 
 	typedef long long hw_reg_data;//64 bit hardware register data typedef 
-
+	typedef int (*hw_reg_func)(void* input, void* output);
 //	class  Chardware_register
 	typedef struct hardware_register_struct
 	{
@@ -54,7 +54,7 @@ namespace n_register_hw {
 		int  delay;//hardware register access delay or function delay
 		void * input;//function input parameter //INPUT_NULL
 		void * output;//function output data //OUTPUT_NULL
-		int (*function)(void* input, void* output);//FUNC_NULL
+		hw_reg_func function;//FUNC_NULL
 		int func_ret;//runtime function return data , ret_data=function(input,output); FUNC_RET_INIT
 		int ret;//runtime return hardware register access and or ,read write ,return data ;HW_REG_RET_INIT
 	}hardware_register;
@@ -87,7 +87,8 @@ namespace n_register_hw {
 
 		int read(hardware_register* hw_reg);
 		int write(hardware_register* hw_reg);
-
+		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
+		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 
 		virtual void delay(int count);
 		virtual int byte_read(hardware_register* hw_reg);//8bit access 
 		virtual int word_read(hardware_register* hw_reg);//word 16 bit access 
