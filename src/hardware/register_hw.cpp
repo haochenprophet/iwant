@@ -155,10 +155,31 @@ int Cregister_hw::reset(hardware_register* hw_reg, hw_reg_func function, void* i
 	return this->set(hw_reg, function, input, output);
 }
 
+//hw_reg_buf will replace null input or output,it can use share data between other hardware access function()
+//also customize the void * input and void *outputs to share data
 int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
 {
 	if (function == nullptr) return -1;
-	return function(input, output);
+	if (input != nullptr && output != nullptr)
+	{
+		return function(input, output);
+	}
+	//check input is nullptr ,input use  this->hw_reg_buf
+	if (input == nullptr && output != nullptr)
+	{
+		return function((void*)this->hw_reg_buf, output);
+	}
+	//check output is nullptr ,output use  this->hw_reg_buf
+	if (input != nullptr && output == nullptr)
+	{
+		return function(input, (void*)this->hw_reg_buf);
+	}
+	//check input and output all nullptr
+	if (input == nullptr && output == nullptr)
+	{
+		return function((void*)this->hw_reg_buf, (void*)this->hw_reg_buf);
+	}
+	return -1;// not gone here
 }
 
 int Cregister_hw::execute(hardware_register* hw_reg)
@@ -181,26 +202,7 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	//3.check and call function 
 	if (hw_reg->function != nullptr) //input output can null ptr
 	{
-		if (hw_reg->input != nullptr && hw_reg->output != nullptr)
-		{
-			hw_reg->func_ret = hw_reg->function(hw_reg->input, hw_reg->output);
-		}
-		//check input is nullptr ,input use  this->hw_reg_buf
-		if (hw_reg->input == nullptr && hw_reg->output != nullptr)
-		{
-			hw_reg->func_ret = hw_reg->function((void *) this->hw_reg_buf, hw_reg->output);
-		}
-		//check output is nullptr ,output use  this->hw_reg_buf
-		if (hw_reg->input != nullptr && hw_reg->output == nullptr)
-		{
-			hw_reg->func_ret = hw_reg->function(hw_reg->input, (void*)this->hw_reg_buf);
-		}
-		//check input and output all nullptr
-		if (hw_reg->input == nullptr && hw_reg->output == nullptr)
-		{
-			hw_reg->func_ret = hw_reg->function((void*)this->hw_reg_buf, (void*)this->hw_reg_buf);
-		}
-
+		hw_reg->func_ret=execute(hw_reg->function, hw_reg->input, hw_reg->output);
 		if (0 != hw_reg->func_ret) return hw_reg->func_ret;
 	}
 
