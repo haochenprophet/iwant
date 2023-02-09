@@ -74,12 +74,28 @@ namespace n_register_hw {
 
 	#define HW_REG_BUF_LEN  0x400
 
+	class Chardware_rw //hardware access interface
+	{
+	public :
+		virtual void delay(int count);
+		virtual int byte_read(hardware_register* hw_reg);//8bit access 
+		virtual int word_read(hardware_register* hw_reg);//word 16 bit access 
+		virtual int dword_read(hardware_register* hw_reg);//double word 32 bit access 
+		virtual int qword_read(hardware_register* hw_reg);//quad word sh64 bit access 
+		virtual int byte_write(hardware_register* hw_reg);//8bit access 
+		virtual int word_write(hardware_register* hw_reg);//word 16 bit access 
+		virtual int dword_write(hardware_register* hw_reg);//double word 32 bit access 
+		virtual int qword_write(hardware_register* hw_reg);//quad word sh64 bit access 
+	};
+
 	class Cregister_hw :public Object
 	{
 	public:
+		Chardware_rw * hw_rw;//set hw_rw can use access access any typ hardware
 		char hw_reg_buf[HW_REG_BUF_LEN];//public buffer for function share data 
 	public:
 		Cregister_hw();
+		Cregister_hw(Chardware_rw* hw_rw);
 		~Cregister_hw();
 		int my_init(void *p=nullptr);
 		//execute
@@ -92,20 +108,12 @@ namespace n_register_hw {
 		int read_write(hardware_register* hw_reg);
 		int write_read(hardware_register* hw_reg);
 		//set
+		int set(Chardware_rw* hw_rw);
 		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
 		int set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
 		//reset
 		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 
-		//interface
-		virtual void delay(int count);
-		virtual int byte_read(hardware_register* hw_reg);//8bit access 
-		virtual int word_read(hardware_register* hw_reg);//word 16 bit access 
-		virtual int dword_read(hardware_register* hw_reg);//double word 32 bit access 
-		virtual int qword_read(hardware_register* hw_reg);//quad word sh64 bit access 
-		virtual int byte_write(hardware_register* hw_reg);//8bit access 
-		virtual int word_write(hardware_register* hw_reg);//word 16 bit access 
-		virtual int dword_write(hardware_register* hw_reg);//double word 32 bit access 
-		virtual int qword_write(hardware_register* hw_reg);//quad word sh64 bit access 
+
 	};
 }
 

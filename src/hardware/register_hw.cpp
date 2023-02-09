@@ -9,57 +9,63 @@ int Cregister_hw::my_init(void *p)
 Cregister_hw::Cregister_hw()
 {
 	this->my_init();
+	this->hw_rw = nullptr;
+}
+
+Cregister_hw::Cregister_hw(Chardware_rw * hw_rw)
+{
+	this->my_init();
+	this->hw_rw = hw_rw;
 }
 
 Cregister_hw::~Cregister_hw()
 {
 
-
 }
 
-void Cregister_hw::delay(int count)
+void Chardware_rw::delay(int count)
 {
 	//delay codeing here or overload delay function by system (OS) .
 	//usleep(count);
 }
 //Different hardware platform should overload the delay,read,write ... interface function
 //read ,write function return rule: 0 pass , >0 error ,<0 do nothing
- int Cregister_hw::byte_read(hardware_register* hw_reg)//8bit access 
+ int Chardware_rw::byte_read(hardware_register* hw_reg)//8bit access 
  {
 	 ERROR_EXIT;//should overload byte_read function  by hardware platform
 	 return -1;
  }
- int Cregister_hw::word_read(hardware_register* hw_reg)//word 16 bit access 
+ int Chardware_rw::word_read(hardware_register* hw_reg)//word 16 bit access 
  {
 	 ERROR_EXIT;//should overload word_read function by hardware platform
 	 return -1;
  }
- int Cregister_hw::dword_read(hardware_register* hw_reg)//double word 32 bit access 
+ int Chardware_rw::dword_read(hardware_register* hw_reg)//double word 32 bit access 
  {
 	 ERROR_EXIT;//should overload dword_read function by hardware platform
 	 return -1;
  }
- int Cregister_hw::qword_read(hardware_register* hw_reg)//quad word sh64 bit access 
+ int Chardware_rw::qword_read(hardware_register* hw_reg)//quad word sh64 bit access 
  {
 	 ERROR_EXIT;//should overload dword_read function by hardware platform
 	 return -1;
  }
- int Cregister_hw::byte_write(hardware_register* hw_reg)//8bit access 
+ int Chardware_rw::byte_write(hardware_register* hw_reg)//8bit access 
  {
 	 AT_LINE;//should overload byte_write function by hardware platform
 	 return -1;
  }
- int Cregister_hw::word_write(hardware_register* hw_reg)//word 16 bit access 
+ int Chardware_rw::word_write(hardware_register* hw_reg)//word 16 bit access 
  {
 	 ERROR_EXIT;//should overload word_write function by hardware platform
 	 return -1;
  }
- int Cregister_hw::dword_write(hardware_register* hw_reg)//double word 32 bit access 
+ int Chardware_rw::dword_write(hardware_register* hw_reg)//double word 32 bit access 
  {
 	 ERROR_EXIT;//should overload dword_write function by hardware platform
 	 return -1;
  }
- int Cregister_hw::qword_write(hardware_register* hw_reg)//quad word sh64 bit access 
+ int Chardware_rw::qword_write(hardware_register* hw_reg)//quad word sh64 bit access 
  {
 	 ERROR_EXIT;//should overload qword_write function by hardware platform
 	 return -1;
@@ -68,10 +74,11 @@ void Cregister_hw::delay(int count)
 //return 0: pass ,>0 fail ,<0 do nothing
 int Cregister_hw::read(hardware_register* hw_reg)
 {
-	if (hw_reg->mode == hw_reg_access_mode::byte)  return this->byte_read(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::word)  return this->word_read(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::dword) return this->dword_read(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::qword) return this->qword_read(hw_reg);
+	if (this->hw_rw == nullptr) return -1;//not init hardware read write function
+	if (hw_reg->mode == hw_reg_access_mode::byte)  return this->hw_rw->byte_read(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::word)  return this->hw_rw->word_read(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::dword) return this->hw_rw->dword_read(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::qword) return this->hw_rw->qword_read(hw_reg);
 
 	OUT_ERROR;//check you code should not have gone here
 	return -1;
@@ -79,10 +86,11 @@ int Cregister_hw::read(hardware_register* hw_reg)
 
 int Cregister_hw::write(hardware_register* hw_reg)
 {
-	if (hw_reg->mode == hw_reg_access_mode::byte)  return this->byte_write(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::word)  return this->word_write(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::dword) return this->dword_write(hw_reg);
-	if (hw_reg->mode == hw_reg_access_mode::qword) return this->qword_write(hw_reg);
+	if (this->hw_rw == nullptr) return -1;//not init hardware read write function
+	if (hw_reg->mode == hw_reg_access_mode::byte)  return this->hw_rw->byte_write(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::word)  return this->hw_rw->word_write(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::dword) return this->hw_rw->dword_write(hw_reg);
+	if (hw_reg->mode == hw_reg_access_mode::qword) return this->hw_rw->qword_write(hw_reg);
 
 	OUT_ERROR;//check you code should not have gone here
 	return -1;
@@ -101,6 +109,12 @@ int Cregister_hw::write_read(hardware_register* hw_reg)
 	int ret = this->write(hw_reg);
 	if(0!= ret) return ret;
 	return this->read(hw_reg);
+}
+
+int Cregister_hw::set(Chardware_rw* hw_rw)
+{
+	this->hw_rw = hw_rw;
+	return 0;
 }
 
 int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//set function 
@@ -158,7 +172,11 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	if (0 != hw_reg->ret) return hw_reg->ret; //check write return 
 
 	//2.check delay
-	if (hw_reg->delay > 0) this->delay(hw_reg->delay);
+	if (hw_reg->delay > 0)
+	{
+		if (this->hw_rw == nullptr) { this->delay(hw_reg->delay);}//call Object::delay
+		else { this->hw_rw->delay(hw_reg->delay); }
+	}
 
 	//3.check and call function 
 	if (hw_reg->function != nullptr) //input output can null ptr
@@ -215,7 +233,7 @@ int Cregister_hw::execute(hardware_register* hw_reg, int count)
 #endif
 
 #if REGISTER_HW_TEST
-#include "all_h_include.h"
+#include "../all_h_include.h"
 
 //io table //test code 
 #define REG_BASE_ADDRESS 0x500
