@@ -39,7 +39,7 @@ enum UsingLanguage
 	EnglishLanguage,
 	SimplifiedChinese,
 };
-
+typedef int (*ObjectFunc)(void* input, void* output);
 typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 
 int object_func(void *p);
@@ -277,6 +277,7 @@ namespace n_object {
 		int execute(string *fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		int execute(char * fun_name, void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		int execute(string fun_name,void *p=nullptr, bool new_thread = false); //execute this->ex_func 
+		int execute(ObjectFunc func, void* input = nullptr, void* output = nullptr, bool new_thread = false); //execute input func 
 		
 		int allot(int size=(O_BUF_LEN));
 		void delete_allot();

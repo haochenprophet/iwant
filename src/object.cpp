@@ -519,6 +519,14 @@ int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func
 
 	return 0;
 }
+ 
+int Object::execute(ObjectFunc func, void* input, void* output, bool new_thread) //execute input func 
+{
+	if (!func) return -1;
+	if (new_thread == false) return func(input, output);
+	std::thread(func, input, output).detach();
+	return 0;
+}
 
 int Object::execute(string *fun_name, void * p, bool new_thread) //execute this->ex_func 
 {
