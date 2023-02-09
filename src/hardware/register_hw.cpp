@@ -23,48 +23,96 @@ Cregister_hw::~Cregister_hw()
 
 }
 
+Chardware_rw::Chardware_rw()
+{
+	this->hw_addr_type = hw_reg_addr_type::none;
+}
+
+inline bool Chardware_rw::isMe(hw_reg_addr_type type)
+{
+	return (this->hw_addr_type == type);
+}
+
+inline int Chardware_rw::set(hw_reg_addr_type type)
+{
+	this->hw_addr_type = type;
+	return 0;
+}
+
 void Chardware_rw::delay(int count)
 {
 	//delay codeing here or overload delay function by system (OS) .
 	//usleep(count);
+	OUT_ERROR;//check you code should not have gone here
 }
 //Different hardware platform should overload the delay,read,write ... interface function
 //read ,write function return rule: 0 pass , >0 error ,<0 do nothing
  int Chardware_rw::byte_read(hardware_register* hw_reg)//8bit access 
  {
+	 if (false == this->isMe(hw_reg->type)) //check hardware address type demo code 
+	 {
+		 OUT_ERROR;//check you code should not have gone here
+		 return -1;//not my address type 
+	 }
 	 ERROR_EXIT;//should overload byte_read function  by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::word_read(hardware_register* hw_reg)//word 16 bit access 
  {
+	 //switch hardware address type demo code 
+	 switch (hw_reg->type)
+	 {
+	 case hw_reg_addr_type::io:
+		 //code here io word read
+		 break;
+	 case hw_reg_addr_type::memory:
+	 case hw_reg_addr_type::mmio:
+	 case hw_reg_addr_type::pci:
+		 //code here memory or mmio word read
+		 break;
+	 case hw_reg_addr_type::cpu_msr:
+	 case hw_reg_addr_type::cpu:
+		 //code herer cpu msr read
+		 break;
+	 default:
+		 OUT_ERROR;//check you code should not have gone here
+		 return -1;
+	 }
 	 ERROR_EXIT;//should overload word_read function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::dword_read(hardware_register* hw_reg)//double word 32 bit access 
  {
 	 ERROR_EXIT;//should overload dword_read function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::qword_read(hardware_register* hw_reg)//quad word sh64 bit access 
  {
 	 ERROR_EXIT;//should overload dword_read function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::byte_write(hardware_register* hw_reg)//8bit access 
  {
 	 AT_LINE;//should overload byte_write function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::word_write(hardware_register* hw_reg)//word 16 bit access 
  {
 	 ERROR_EXIT;//should overload word_write function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::dword_write(hardware_register* hw_reg)//double word 32 bit access 
  {
 	 ERROR_EXIT;//should overload dword_write function by hardware platform
 	 return -1;
  }
+
  int Chardware_rw::qword_write(hardware_register* hw_reg)//quad word sh64 bit access 
  {
 	 ERROR_EXIT;//should overload qword_write function by hardware platform
@@ -202,7 +250,7 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	//3.check and call function 
 	if (hw_reg->function != nullptr) //input output can null ptr
 	{
-		hw_reg->func_ret=execute(hw_reg->function, hw_reg->input, hw_reg->output);
+		hw_reg->func_ret=execute(hw_reg->function, hw_reg->input, hw_reg->output);//int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
 		if (0 != hw_reg->func_ret) return hw_reg->func_ret;
 	}
 

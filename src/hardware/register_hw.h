@@ -77,6 +77,12 @@ namespace n_register_hw {
 	class Chardware_rw //hardware access interface
 	{
 	public :
+		hw_reg_addr_type hw_addr_type;//my hardware address type
+	public:
+		Chardware_rw();
+		bool isMe(hw_reg_addr_type type);
+		int set(hw_reg_addr_type type);
+	public :
 		virtual void delay(int count);
 		virtual int byte_read(hardware_register* hw_reg);//8bit access 
 		virtual int word_read(hardware_register* hw_reg);//word 16 bit access 
