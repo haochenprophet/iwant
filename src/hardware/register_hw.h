@@ -84,6 +84,7 @@ namespace n_register_hw {
 		int my_init(void *p=nullptr);
 		int execute(hardware_register* hw_reg);
 		int execute(hardware_register* hw_reg, int count);
+		int execute(hw_reg_func function, void * input, void * output);
 
 		int read(hardware_register* hw_reg);
 		int write(hardware_register* hw_reg);
