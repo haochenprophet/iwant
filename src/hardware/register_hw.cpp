@@ -99,7 +99,7 @@ int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* inp
 int Cregister_hw::set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func)//Update hw_reg.fnction to hw_reg_tab.function 
 {
 	int i, set_count =0;
-	for (i = 0; i < count; i++)
+	for (i = 0; i < count_tab; i++)
 	{
 		if (
 			hw_reg_tab[i].type == hw_reg->type &&
