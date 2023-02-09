@@ -95,6 +95,31 @@ int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* inp
 	hw_reg->output = output;
 	return 0;
 }
+//count=tab item count ,return set count 
+int Cregister_hw::set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func)//Update hw_reg.fnction to hw_reg_tab.function 
+{
+	int i, set_count =0;
+	for (i = 0; i < count; i++)
+	{
+		if (
+			hw_reg_tab[i].type == hw_reg->type &&
+			hw_reg_tab[i].mode == hw_reg->mode &&
+			hw_reg_tab[i].address == hw_reg->address &&
+			hw_reg_tab[i].and_data == hw_reg->and_data &&
+			hw_reg_tab[i].or_data == hw_reg->or_data
+			)
+		{
+			if (clear_func) {this->set(&hw_reg_tab[i], nullptr, nullptr, nullptr); }
+			else { this->set(&hw_reg_tab[i], hw_reg->function, hw_reg->input, hw_reg->output); }
+				
+			hw_reg_tab[i].read_back = hw_reg->read_back;
+			hw_reg_tab[i].delay = hw_reg->delay;
+
+			set_count++;
+		}
+	}
+	return set_count;
+}
 
 int Cregister_hw::reset(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//reset function 
 {

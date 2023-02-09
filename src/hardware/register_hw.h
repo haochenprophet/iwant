@@ -82,14 +82,19 @@ namespace n_register_hw {
 		Cregister_hw();
 		~Cregister_hw();
 		int my_init(void *p=nullptr);
+		//execute
 		int execute(hardware_register* hw_reg);
 		int execute(hardware_register* hw_reg, int count);
 		int execute(hw_reg_func function, void * input, void * output);
-
+		//access
 		int read(hardware_register* hw_reg);
 		int write(hardware_register* hw_reg);
+		//set
 		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
+		int set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
+		//reset
 		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 
+		//interface
 		virtual void delay(int count);
 		virtual int byte_read(hardware_register* hw_reg);//8bit access 
 		virtual int word_read(hardware_register* hw_reg);//word 16 bit access 
