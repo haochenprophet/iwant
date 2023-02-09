@@ -90,6 +90,7 @@ namespace n_register_hw {
 		int read(hardware_register* hw_reg);
 		int write(hardware_register* hw_reg);
 		int read_write(hardware_register* hw_reg);
+		int write_read(hardware_register* hw_reg);
 		//set
 		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
 		int set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 

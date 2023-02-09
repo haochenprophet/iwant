@@ -90,9 +90,17 @@ int Cregister_hw::write(hardware_register* hw_reg)
 
 int Cregister_hw::read_write(hardware_register* hw_reg)
 {
-	if(0!=this->read(hw_reg)) return -1;
+	int ret = this->read(hw_reg);
+	if(0!=ret) return ret;
 	hw_reg->write_data = hw_reg->read_data;
 	return this->write(hw_reg);
+}
+//hw_reg->write_data to hardware register => hw_reg->read_data
+int Cregister_hw::write_read(hardware_register* hw_reg)
+{
+	int ret = this->write(hw_reg);
+	if(0!= ret) return ret;
+	return this->read(hw_reg);
 }
 
 int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//set function 
