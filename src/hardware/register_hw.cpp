@@ -79,7 +79,7 @@ void Chardware_rw::delay(int count)
 		 OUT_ERROR;//check you code should not have gone here
 		 return -1;
 	 }
-	 ERROR_EXIT;//should overload word_read function by hardware platform
+	 ERROR_EXIT;//should word_read function by hardware platform
 	 return -1;
  }
 
@@ -233,13 +233,15 @@ int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
 int Cregister_hw::execute(hardware_register* hw_reg)
 {
 	//1.read and set hardware register bit value use and_data,or_data
-	hw_reg->ret = this->read(hw_reg);//get hardware register data to read_data
-	if (0!=hw_reg->ret) return hw_reg->ret; //check read return 
+	if ((-1 & hw_reg->and_data) != -1 || (0 | hw_reg->or_data) != 0) //check if or not change(and clear or set bit) register bit,when bit change call read() write() 
+	{
+		hw_reg->ret = this->read(hw_reg);//get hardware register data to read_data
+		if (0 != hw_reg->ret) return hw_reg->ret; //check read return 
 
-	hw_reg->write_data = hw_reg->read_data & hw_reg->and_data | hw_reg->or_data;//set write data for write function
-	hw_reg->ret = this->write(hw_reg);
-	if (0 != hw_reg->ret) return hw_reg->ret; //check write return 
-
+		hw_reg->write_data = hw_reg->read_data & hw_reg->and_data | hw_reg->or_data;//set write data for write function
+		hw_reg->ret = this->write(hw_reg);
+		if (0 != hw_reg->ret) return hw_reg->ret; //check write return 
+	}
 	//2.check delay
 	if (hw_reg->delay > 0)
 	{

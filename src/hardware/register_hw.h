@@ -26,6 +26,10 @@ namespace n_register_hw {
 		usb,//usb mm IO 
 		network,//network 
 		gpu,//VGA HDMI .... 
+		i2c,//I2C bus access
+		usb,//usb bus access
+		serial,//serial bus access
+		gpio,//gpio memory /io access
 	};
 
 	enum class hw_reg_access_mode
