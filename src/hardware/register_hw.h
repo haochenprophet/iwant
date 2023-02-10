@@ -120,7 +120,7 @@ namespace n_register_hw {
 		//set
 		int set(Chardware_rw* hw_rw);
 		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
-		int set(hardware_register* hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
+		int set(hardware_register * hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
 		//reset
 		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 
 

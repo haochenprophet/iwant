@@ -79,7 +79,7 @@ void Chardware_rw::delay(int count)
 		 OUT_ERROR;//check you code should not have gone here
 		 return -1;
 	 }
-	 ERROR_EXIT;//should word_read function by hardware platform
+	 ERROR_EXIT;//should overload word_read function by hardware platform
 	 return -1;
  }
 
