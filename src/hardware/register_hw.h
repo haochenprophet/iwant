@@ -3,6 +3,25 @@
 
 #include "../object.h"
 
+#define AND_DATA_NONE -1
+#define OR_DATA_NONE 0
+#define READ_DATA_INIT 0
+#define WRITE_DATA_INIT 0
+#define READ_BACK_NONE 0
+#define DELAY_NONE 0
+#define INPUT_NULL nullptr
+#define OUTPUT_NULL nullptr
+#define FUNC_NULL nullptr
+#define FUNC_RET_INIT -1
+#define HW_FUNC_DISABLE_INIT 0 //0: enable function, 1 :disable fucntion
+#define HW_REG_RET_INIT -1
+
+#define HW_REG_BUF_LEN  0x400
+
+typedef long long hw_reg_addr;//64 bit hardware register address typedef 
+typedef long long hw_reg_data;//64 bit hardware register data typedef 
+typedef int (*hw_reg_func)(void* input, void* output);
+
 namespace n_register_hw {
 
 	enum class hw_reg_addr_type
@@ -40,9 +59,6 @@ namespace n_register_hw {
 		qword,//quad word sh64 bit access 
 	};
 
-	typedef long long hw_reg_addr;//64 bit hardware register address typedef 
-	typedef long long hw_reg_data;//64 bit hardware register data typedef 
-	typedef int (*hw_reg_func)(void* input, void* output);
 //	class  Chardware_register
 	typedef struct hardware_register_struct
 	{
@@ -61,22 +77,9 @@ namespace n_register_hw {
 		hw_reg_func function;//FUNC_NULL
 		int func_ret;//runtime function return data , ret_data=function(input,output); FUNC_RET_INIT
 		int ret;//runtime return hardware register access and or ,read write ,return data ;HW_REG_RET_INIT
+		int func_disable;//when set diable 1 dispach not run callback function ,HW_FUNC_DISABLE_INIT
 	}hardware_register;
 
-
-	#define AND_DATA_NONE -1
-	#define OR_DATA_NONE 0
-	#define READ_DATA_INIT 0
-	#define WRITE_DATA_INIT 0
-	#define READ_BACK_NONE 0
-	#define DELAY_NONE 0
-	#define INPUT_NULL nullptr
-	#define OUTPUT_NULL nullptr
-	#define FUNC_NULL nullptr
-	#define FUNC_RET_INIT -1
-	#define HW_REG_RET_INIT -1
-
-	#define HW_REG_BUF_LEN  0x400
 
 	class Chardware_rw //hardware access interface
 	{
@@ -119,7 +122,7 @@ namespace n_register_hw {
 		int write_read(hardware_register* hw_reg);
 		//set
 		int set(Chardware_rw* hw_rw);
-		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output);//set function 
+		int set(hardware_register * hw_reg, hw_reg_func function, void* input, void* output,int disable=0);//set function 
 		int set(hardware_register * hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
 		//reset
 		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 

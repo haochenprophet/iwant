@@ -165,11 +165,12 @@ int Cregister_hw::set(Chardware_rw* hw_rw)
 	return 0;
 }
 
-int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* input, void* output)//set function 
+int Cregister_hw::set(hardware_register* hw_reg, hw_reg_func function, void* input, void* output, int disable)//set function 
 {
 	hw_reg->function = function;
 	hw_reg->input = input;
 	hw_reg->output = output;
+	hw_reg->func_disable = disable;
 	return 0;
 }
 //count=tab item count ,return set count 
@@ -250,7 +251,7 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	}
 
 	//3.check and call function 
-	if (hw_reg->function != nullptr) //input output can null ptr
+	if (hw_reg->function != nullptr&&hw_reg->func_disable==0) //input output can null ptr
 	{
 		hw_reg->func_ret=execute(hw_reg->function, hw_reg->input, hw_reg->output);//int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
 		if (0 != hw_reg->func_ret) return hw_reg->func_ret;
