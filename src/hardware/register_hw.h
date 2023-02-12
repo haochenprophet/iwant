@@ -16,7 +16,7 @@
 #define HW_FUNC_DISABLE_INIT 0 //0: enable function, 1 :disable fucntion
 #define HW_REG_RET_INIT -1
 
-#define HW_REG_BUF_LEN  0x400
+#define HW_REG_BUF_LEN  (4*1024) //use 4K buf 1 memory page
 
 typedef long long hw_reg_addr;//64 bit hardware register address typedef 
 typedef long long hw_reg_data;//64 bit hardware register data typedef 
