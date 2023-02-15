@@ -42,7 +42,6 @@ namespace n_register_hw {
 		cpld,//CPLD MMIO or IO 
 		fpga,//FPGA MMIO or IO 
 		me,//intel ME
-		usb,//usb mm IO 
 		network,//network 
 		gpu,//VGA HDMI .... 
 		i2c,//I2C bus access

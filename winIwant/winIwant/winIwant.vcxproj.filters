@@ -5547,9 +5547,6 @@
     <ClCompile Include="..\..\src\database\database.cpp">
       <Filter>database</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\database\tree_db.cpp">
-      <Filter>database</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\replace.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -5594,6 +5591,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\signbit.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\database\tree_db.cpp">
+      <Filter>dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\recognition.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -11266,6 +11269,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\signbit.h">
       <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
