@@ -1762,6 +1762,8 @@
     <ClCompile Include="..\..\src\question.cpp" />
     <ClCompile Include="..\..\src\question_def.cpp" />
     <ClCompile Include="..\..\src\recognition.cpp" />
+    <ClCompile Include="..\..\src\recognition_intel_gpio.cpp" />
+    <ClCompile Include="..\..\src\recognition_tab.cpp" />
     <ClCompile Include="..\..\src\register.cpp" />
     <ClCompile Include="..\..\src\relation.cpp" />
     <ClCompile Include="..\..\src\replace.cpp" />
@@ -3638,6 +3640,8 @@
     <ClInclude Include="..\..\src\question.h" />
     <ClInclude Include="..\..\src\question_def.h" />
     <ClInclude Include="..\..\src\recognition.h" />
+    <ClInclude Include="..\..\src\recognition_intel_gpio.h" />
+    <ClInclude Include="..\..\src\recognition_tab.h" />
     <ClInclude Include="..\..\src\register.h" />
     <ClInclude Include="..\..\src\relation.h" />
     <ClInclude Include="..\..\src\relation_class.h" />

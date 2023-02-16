@@ -2,8 +2,16 @@
 #define RECOGNITION_TAB_H
 
 #include "object.h"
+#include "recognition.h"
 
 namespace n_recognition_tab {
+
+	typedef struct bit_information_struct
+	{
+		int value;
+		char* informarion;
+	}bit_information;
+
 	class Crecognition_tab :public Object
 	{
 	public:

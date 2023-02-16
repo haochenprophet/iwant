@@ -40,13 +40,9 @@ namespace n_recognition {
 			int  length;
 		};
 
-		union information
-		{
-			void * infor; //point information data struct
-			char * string;
-		};
-
-		int count;//infor struct count 
+		void * information; //point information data struct
+		char * description;//information description
+		int count;//information struct count 
 	}data_information;
 
 	class Cdata_information

@@ -5598,6 +5598,12 @@
     <ClCompile Include="..\..\src\recognition.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\recognition_tab.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\recognition_intel_gpio.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11271,6 +11277,12 @@
       <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\recognition.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition_tab.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition_intel_gpio.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
