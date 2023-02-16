@@ -16,6 +16,11 @@ Crecognition::~Crecognition()
 
 }
 
+Cdata_information::Cdata_information()
+{
+	this->infor = nullptr;
+}
+
 #ifndef RECOGNITION_TEST
 #define RECOGNITION_TEST 0//1
 #endif

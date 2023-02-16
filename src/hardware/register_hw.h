@@ -48,6 +48,7 @@ namespace n_register_hw {
 		usb,//usb bus access
 		serial,//serial bus access
 		gpio,//gpio memory /io access
+		can,//CAN bus
 	};
 
 	enum class hw_reg_access_mode
