@@ -40,7 +40,12 @@ namespace n_recognition {
 			int  length;
 		};
 
-		void* infor; //point information data struct
+		union information
+		{
+			void * infor; //point information data struct
+			char * string;
+		};
+
 		int count;//infor struct count 
 	}data_information;
 
