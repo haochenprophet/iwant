@@ -30,7 +30,7 @@ namespace n_recognition {
 		int count;//information struct count 
 	}data_information;
 
-	typedef long long bit_value_type;
+	typedef unsigned int bit_value_type;
 	typedef struct bit_information_struct
 	{
 		bit_value_type value;

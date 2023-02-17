@@ -22,6 +22,9 @@ namespace n_recognition_intel_gpio {
 		~Crecognition_intel_gpio();
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Crecognition_intel_gpio); }
+		int analysis(bit_value_type bit_value, bit_information* infor, int infor_count);
+		int analysis(unsigned long dw_data, data_information *infor,int infor_count);
+
 	};
 }
 

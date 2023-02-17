@@ -1,13 +1,13 @@
 
 #include "recognition_intel_gpio.h"
 
-//give an example intel PCH gpio table 
+//give an example : intel PCH gpio datasheet bits description define to c++ information table 
 
 #define  GPIO_RX_STATE_DESC " \
 	GPIO RX State (GPIORXSTATE): \
 	This is the current internal RX pad state after Glitch Filter logic stageand is not \
 	affected by PModeand RXINV, hardware debouncer(if any) settings. \
-	When read, this bit returns a ¡®0¡¯ if GPIORxDis is ¡®1¡¯."
+	When read, this bit returns a 0 if GPIORxDis is 1."
 
 bit_information GPIO_RX_State[] =
 {
@@ -32,6 +32,8 @@ data_information pad_configuration_dw_0[] =
 	{granularity_type::bit,PAD_CFG_DW0_GPPC_A_0,1,1 ,GPIO_RX_State,(char*)GPIO_RX_STATE_DESC,GPIO_RX_STATE_COUNT},//offset 1, length 1 = bit 1 ; 
 };
 
+#define PAD_CONFIGURATION_DW_0_COUNT (sizeof(pad_configuration_dw_0)/data_information)
+
 int Crecognition_intel_gpio::my_init(void *p)
 {
 	this->name = "Crecognition_intel_gpio";
@@ -47,6 +49,25 @@ Crecognition_intel_gpio::Crecognition_intel_gpio()
 Crecognition_intel_gpio::~Crecognition_intel_gpio()
 {
 
+}
+
+int Crecognition_intel_gpio::analysis(bit_value_type bit_value, bit_information* infor, int infor_count)
+{
+	int n;
+	for (n = 0; n < infor_count; n++)
+	{
+		if (infor[n].value == bit_value)
+		{
+			if(infor[n].informarion!=nullptr) printf("%s", infor[n].informarion);
+		}
+	}
+	if (n >= infor_count) return -1; //not found match information
+	return 0;
+}
+
+int Crecognition_intel_gpio::analysis(unsigned long dw_data, data_information* infor, int infor_count)
+{
+	return 0;
 }
 
 #ifndef RECOGNITION_INTEL_GPIO_TEST
