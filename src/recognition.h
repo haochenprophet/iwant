@@ -6,8 +6,8 @@
 namespace n_recognition {
 
 	typedef int (*data_infor_func)(void* input,void *output);
-	typedef long long base_address_type;
-
+	typedef unsigned long long base_address_type;
+	
 	enum class granularity_type//data_information_access_mode 
 	{
 		none  = 0,
@@ -22,28 +22,20 @@ namespace n_recognition {
 	typedef struct data_information_struct  //Generic or common data information
 	{
 		granularity_type type;
-		union base_address //base address of data start
-		{
-			void* address;
-			base_address_type base;
-		};
-
-		union start_address //memory address start of data=> unsigned char * 
-		{
-			void* address;
-			int  offset;
-		};
-
-		union end_address
-		{
-			void* address;//memory address start of data=> unsigned char * 
-			int  length;
-		};
-
+		base_address_type base_address; //base address of data start
+		base_address_type offset; //base address of data void * start or int offset
+		base_address_type end_address;//void * end addres or int length
 		void * information; //point information data struct
 		char * description;//information description
 		int count;//information struct count 
 	}data_information;
+
+	typedef long long bit_value_type;
+	typedef struct bit_information_struct
+	{
+		bit_value_type value;
+		char* informarion;
+	}bit_information;
 
 	class Cdata_information
 	{

@@ -4,14 +4,15 @@
 #include "object.h"
 #include "recognition_tab.h"
 
-#define  GPIO_RX_STATE_DESC " \
-	GPIO RX State (GPIORXSTATE): \
-	This is the current internal RX pad state after Glitch Filter logic stageand is not \
-	affected by PModeand RXINV, hardware debouncer(if any) settings. \
-	When read, this bit returns a ¡®0¡¯ if GPIORxDis is ¡®1¡¯."
+#define INTEL_SBREG_BAR             0xFD000000
+#define INTEL_PID_GPIOCOM0          0x6E0000
+#define INTEL_PID_GPIOCOM1          0x6D0000
+#define INTEL_PID_GPIOCOM2          0x6C0000
+#define INTEL_PID_GPIOCOM3          0x6B0000
+#define INTEL_PID_GPIOCOM4          0x6A0000
+#define INTEL_PID_GPIOCOM5          0x690000
 
-#define GPIO_TX_STATE_DESC "GPIO TX State (GPIOTXSTATE):TX state in when PMode = 0 ONLY.No effect when the pad in native mode."
-
+#define PAD_CFG_DW0_GPPC_A_0 (INTEL_SBREG_BAR+INTEL_PID_GPIOCOM0+0x700)
 
 namespace n_recognition_intel_gpio {
 	class Crecognition_intel_gpio :public Object
