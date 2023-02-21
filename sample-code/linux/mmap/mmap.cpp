@@ -5,21 +5,22 @@
 #include <errno.h>
 #include <sys/mman.h>
 
-#define REG_PERT_BASE_ADDR        0x120E0000        
-#define MMAP_ADDR REG_PERT_BASE_ADDR   
+#define INTEL_GPIO_BASE_ADDR        0xFD000000        
+#define MMAP_ADDR INTEL_GPIO_BASE_ADDR   
  
 #define MMAP_SIZE 0x1000        
 
 int main(int argc, char *argv[])
 {
-    int fd = 0;//,data;
+    int fd = 0;
+    unsigned long data;
     char *mmap_base = NULL;
 
     fd = open("/dev/mem", O_RDWR | O_NDELAY);        
 
     if (fd < 0)    
     {  
-        printf("open mem fd failed,%s\n", strerror(errno));      
+        printf("open mem fd failed\n");      
         return -1;  
     }  
 
@@ -27,11 +28,11 @@ int main(int argc, char *argv[])
     
     if (NULL == mmap_base)
     {
-        printf("mmap failed,%s\n", strerror(errno));
+        printf("mmap failed\n");
         return -1;
     }
     
-    //data = (int*)(mmap_base + 0);
+    data = *( unsigned long  *)(mmap_base + 0);
 
     munmap(mmap_base, MMAP_SIZE);
     close(fd);
