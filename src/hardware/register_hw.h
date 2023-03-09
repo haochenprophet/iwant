@@ -78,6 +78,7 @@ namespace n_register_hw {
 		int func_ret;//runtime function return data , ret_data=function(input,output); FUNC_RET_INIT
 		int ret;//runtime return hardware register access and or ,read write ,return data ;HW_REG_RET_INIT
 		int func_disable;//when set diable 1 dispach not run callback function ,HW_FUNC_DISABLE_INIT
+		void * timeline;//point class Ctimeline . Used for precise timing, handling past and future events
 	}hardware_register;
 
 
@@ -111,6 +112,7 @@ namespace n_register_hw {
 		Cregister_hw(Chardware_rw* hw_rw);
 		~Cregister_hw();
 		int my_init(void *p=nullptr);
+
 		//execute
 		int execute(hardware_register* hw_reg);
 		int execute(hardware_register* hw_reg, int count);
@@ -126,6 +128,8 @@ namespace n_register_hw {
 		int set(hardware_register * hw_reg_tab, int count_tab, hardware_register* hw_reg,bool clear_func=false);//Update hw_reg.fnction to hw_reg_tab.function 
 		//reset
 		int reset(hardware_register* hw_reg, hw_reg_func function=nullptr, void* input=nullptr, void* output=nullptr);//clear function 
+		//virtual
+		virtual int time_action(void* timeline);//deal time function
 
 	};
 }

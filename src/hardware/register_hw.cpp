@@ -253,7 +253,7 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	//3.check and call function 
 	if (hw_reg->function != nullptr&&hw_reg->func_disable==0) //input output can null ptr
 	{
-		hw_reg->func_ret=execute(hw_reg->function, hw_reg->input, hw_reg->output);//int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
+		hw_reg->func_ret=this->execute(hw_reg->function, hw_reg->input, hw_reg->output);//int Cregister_hw::execute(hw_reg_func function, void* input, void* output)
 		if (0 != hw_reg->func_ret) return hw_reg->func_ret;
 	}
 
@@ -261,6 +261,13 @@ int Cregister_hw::execute(hardware_register* hw_reg)
 	if (hw_reg->read_back)
 	{
 		hw_reg->ret = this->read(hw_reg);
+		if (0 != hw_reg->ret) return hw_reg->ret; //check read return
+	}
+
+	//5.check timeline action
+	if (hw_reg->timeline!=nullptr)
+	{
+		this->time_action(hw_reg->timeline);
 		if (0 != hw_reg->ret) return hw_reg->ret; //check read return
 	}
 
@@ -280,6 +287,15 @@ int Cregister_hw::execute(hardware_register* hw_reg, int count)
 	return ret; 
 }
 
+int  Cregister_hw::time_action(void* timeline)//deal time function
+{
+	// Ctimeline * t= (Ctimeline *)timeline;
+	// TimePoint *tp = new TimePoint;
+	// tp->now();
+	// t->add(tp);
+	OUT_ERROR;//check you code should not have gone here
+	return 0;
+}
 
 #ifndef REGISTER_HW_TEST
 #define REGISTER_HW_TEST 0//1
