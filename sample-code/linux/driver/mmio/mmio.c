@@ -16,13 +16,13 @@ static int mmio_open(struct inode *inode, struct file *filp)
 	return 0;
 }
 
-static int mmio_read (struct file *file, char __user *buf, size_t size, loff_t *offset)
+static ssize_t mmio_read (struct file *file, char __user *buf, size_t size, loff_t *offset)
 {
 		AT_LINE
 	return 0;
 }
 
-static int mmio_write(struct file *file, const char __user *buf, size_t count, loff_t *offset)
+static ssize_t mmio_write(struct file *file, const char __user *buf, size_t count, loff_t *offset)
 {
 		AT_LINE
     return 0;
@@ -35,10 +35,12 @@ static struct file_operations mmio_fops = {
    .write = mmio_write,
 };
 
+
+int mmio_device;
+struct class *mmio_class;
+
 int mmio_init(void)
 {
-	static int mmio_device;
-	static struct class *mmio_class; //static for mmio_exit
 	AT_LINE
 	mmio_device = register_chrdev (0, "mmio", &mmio_fops);
 	mmio_class = class_create(THIS_MODULE, "mmio");
@@ -59,5 +61,4 @@ module_init(mmio_init);
 module_exit(mmio_exit);
 
 MODULE_LICENSE("GPL");
-
-
+MODULE_AUTHOR("https://github.com/haochenprophet");
