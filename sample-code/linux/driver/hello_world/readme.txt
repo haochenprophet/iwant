@@ -19,6 +19,6 @@ suod lsmod | grep hello_world
 
 sudo rmmod hello_world
 
-6.4.How to clean
+6.How to clean
 
 make clean
