@@ -179,7 +179,7 @@ int main(int argc,char ** argv)
 		read(fd,&action, sizeof(mmio_action));
 		if(action.status==0)
 		{
-			printf("data=%08X",action.data);
+			printf("data=%08X\n",action.data);
 		}
 		else
 		{

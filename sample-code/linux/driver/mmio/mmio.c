@@ -21,7 +21,7 @@ inline void init_map_range(mmio_map_range *map)
 int unmap_range(mmio_map_range *map)
 {	AT_LINE
 	if( (map->status&none_map_state)==none_map_state) return 0;// bit 0 =0 none map 
-	
+	AT_LINE
 	map->status = none_map_state;
 	iounmap(map->base_addr);
 
@@ -30,7 +30,7 @@ int unmap_range(mmio_map_range *map)
 
 int map_range(physical_address phy_addr,size_t size,mmio_map_range *map)
 {	AT_LINE
-	
+	if(LINUX_DEBUG) printk("phy_addr=0x%08X,size=%ld\n",phy_addr,size);
 	map->phy_addr = phy_addr & ADDRESS_PAGE_ALIGN;//change map->phy_addr ~(0xFFF)
 	map->offset = phy_addr & ADDRESS_OFFSET_KEEP;//0xFFF
 
@@ -38,39 +38,46 @@ int map_range(physical_address phy_addr,size_t size,mmio_map_range *map)
 	{
 		map->size = (size & ADDRESS_PAGE_ALIGN) + MMIO_MAP_PAGE;//At least one page
 	}
+AT_LINE
+	if(LINUX_DEBUG) printk("map->phy_addr=0x%08X,size=%ld\n",map->phy_addr,size);
 
 	map->base_addr=ioremap(map->phy_addr, map->size);// save ioremap address to map->base_addr and for iounmap(map->base_addr);
+	if(LINUX_DEBUG) printk("map->base_addr=%p,size=%ld\n",map->base_addr,size);
 
 	map->address=map->base_addr+map->offset;//set and save map->address point to phy_addr
 	map->status =in_map_state;
-
+AT_LINE
 	return 0;// case none map return 
 }
 
 int build_map_range(physical_address phy_addr,size_t size,mmio_map_range *map) 
 {	AT_LINE
+	if(LINUX_DEBUG) printk("phy_addr=0x%08X,size=%ld\n",phy_addr,size);
 	if( (map->status & none_map_state) == none_map_state )// bit 0 =0 none map 
-	{
+	{AT_LINE
 		map_range(phy_addr,size,map);
 		return 0;// case none map return 
 	}
 	//else //if(map->status&in_map_state==in_map_state) //bit 0 =1 in map state
 	
 	if( phy_addr >= map->phy_addr && phy_addr+size <= map->phy_addr + map->size )//set and save map->address point to phy_addr
-	{
+	{AT_LINE
 		map->address=map->base_addr+(phy_addr -  map->phy_addr);//offset = phy_addr -  map->phy_addr 
 		return 0;//phy_addr in current map range
 	}
-
+	AT_LINE
 	//else out off mmio map range 
 	unmap_range(map);
 	map_range(phy_addr,size,map);
-	
+	AT_LINE
 	return 0;
 }
 
 int do_mmio_action_read(volatile void *address,mmio_action * action)
 {	AT_LINE
+
+	if(address==(void *)0) return -1;
+	AT_LINE
 	if(action->action <= mmio_read_action)	//mmio_read_action
 	{
 		action->data = *(mmio_data *) address;
@@ -93,29 +100,37 @@ int do_mmio_action_read(volatile void *address,mmio_action * action)
 
 int do_mmio_action_write(volatile void *address,mmio_action * action)
 {	AT_LINE
+	if(address==(void *)0) return -1;
+	AT_LINE
 	if(action->action >= mmio_byte_write && action->action <= mmio_write_action)	//mmio_write_action
-	{
+	{AT_LINE
 		switch(action->action)
 		{
 			case mmio_byte_write  :
+				AT_LINE
 				* (UINT8 *) address = (UINT8) action->data;
 				break;
 			case mmio_word_write  :
+				AT_LINE
 				* (UINT16 *) address = (UINT16) action->data;
 				break;
 			case mmio_dword_write :
+				AT_LINE
 				* (UINT32 *) address = (UINT32) action->data;
 				break;
-			default:
+			default:AT_LINE
 				* (UINT32 *) address = (UINT32) action->data;
 		}
+		AT_LINE
 		return 0;	
-	}
+	}AT_LINE
 	return -1;//do nothing
 }
 
 int do_mmio_action_and(volatile void *address,mmio_action * action)
 {	AT_LINE
+	if(address==(void *)0) return -1;
+	AT_LINE
 	if(action->action >= mmio_byte_and && action->action <= mmio_and_action)	//mmio_and_action
 	{
 		switch(action->action)
@@ -140,6 +155,8 @@ int do_mmio_action_and(volatile void *address,mmio_action * action)
 
 int do_mmio_action_or(volatile void *address,mmio_action * action)
 {	AT_LINE
+	if(address==(void *)0) return -1;
+	AT_LINE
 	if(action->action >= mmio_byte_or && action->action <= mmio_or_action)	//mmio_or_action
 	{
 		switch(action->action)
@@ -167,6 +184,8 @@ int do_mmio_action(volatile void *address,mmio_action * action)
 
 	if(LINUX_DEBUG) printk("phy_addr=0x%08X,action=%d data=%08X\n",action->phy_addr,action->action,action->data);
 
+	if(address==(void *)0) return -1;
+	AT_LINE
 	if(action->action >= mmio_byte_read && action->action <= mmio_or_action)	//from mmio_byte_read to mmio_or_action
 	{
 		if(0==do_mmio_action_read(address,action)) return 0;
@@ -190,7 +209,7 @@ static ssize_t mmio_read (struct file *file, char __user *buf, size_t size, loff
 	mmio_action action;
 	AT_LINE;
 	ret = copy_from_user(&action, buf, sizeof(mmio_action));//copy mmio_action to action
-	build_map_range(action.phy_addr,MMIO_MAP_PAGE,& public_addr_range);
+	build_map_range(action.phy_addr,MMIO_MAP_PAGE-1,& public_addr_range);
 	action.status=do_mmio_action(public_addr_range.address,&action);
 	ret = copy_to_user(buf, &action, sizeof(mmio_action));
 	return 0;
@@ -202,7 +221,7 @@ static ssize_t mmio_write(struct file *file, const char __user *buf, size_t coun
 	mmio_action action;
 	AT_LINE;
 	ret = copy_from_user(&action, buf, sizeof(mmio_action));
-	build_map_range(action.phy_addr,MMIO_MAP_PAGE,& public_addr_range);
+	build_map_range(action.phy_addr,MMIO_MAP_PAGE-1,& public_addr_range);
 	action.status=do_mmio_action(public_addr_range.address,&action);
 	ret = copy_to_user((char *)buf,&action, sizeof(mmio_action));
    return 0;
