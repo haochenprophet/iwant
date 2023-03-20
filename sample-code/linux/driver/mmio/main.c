@@ -11,19 +11,19 @@
 
 char * mmio_usage = (char * ) "\
 [Usage]: <action> <address> [data]\n\
-\tRead        :mmio RR 0xFD000000 \n\
+\tRead        :mmio -R 0xFD000000 \n\
 \tByte  Read  :mmio BR 0xFD000000 \n\
 \tWord  Read  :mmio WR 0xFD000000 \n\
 \tDword Read  :mmio DR 0xFD000000 \n\
-\tWrite       :mmio WW 0xFD000000 0xAAAA5555\n\
+\tWrite       :mmio -W 0xFD000000 0xAAAA5555\n\
 \tByte  Write :mmio BW 0xFD000000 0xA5\n\
 \tWord  Write :mmio WW 0xFD000000 0xAA55\n\
 \tDword Write :mmio DW 0xFD000000 0xAAAA5555\n\
-\tAnd         :mmio AA 0xFD000000 0xAAAA5555\n\
+\tAnd         :mmio -A 0xFD000000 0xAAAA5555\n\
 \tByte  And   :mmio BA 0xFD000000 0xA5\n\
 \tWord  And   :mmio WA 0xFD000000 0xAA55\n\
 \tDword And   :mmio DA 0xFD000000 0xAAAA5555\n\
-\tOr          :mmio OO 0xFD000000 0xAAAA5555\n\
+\tOr          :mmio -O 0xFD000000 0xAAAA5555\n\
 \tByte  Or    :mmio BO 0xFD000000 0xA5\n\
 \tWord  Or    :mmio WO 0xFD000000 0xAA55\n\
 \tDword Or    :mmio DO 0xFD000000 0xAAAA5555\n";
