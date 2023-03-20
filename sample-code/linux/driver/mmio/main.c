@@ -172,17 +172,30 @@ int main(int argc,char ** argv)
 	}
 	if(LINUX_DEBUG) printf("Open device %s succeed\n",device_path);
 
+	action.status=-2;//mmio driver will set to 0 or -1 
+
 	if(action.action<=mmio_read_action)//Read
 	{
 		read(fd,&action, sizeof(mmio_action));
-
+		if(action.status==0)
+		{
+			printf("data=%08X",action.data);
+		}
+		else
+		{
+			printf("Get 0x%08X data fail.\n",action.phy_addr);
+		}
 	}
 
 	if(action.action>=mmio_byte_write)//Write 
 	{
 		write(fd,&action, sizeof(mmio_action));
+		if(action.status!=0)
+		{
+			printf("Set 0x%08X data fail.\n",action.phy_addr);
+		}
 	}
 
 	close(fd);
-	return 0;
+	return action.status;
 }
