@@ -33,11 +33,12 @@ int map_range(physical_address phy_addr,size_t size,mmio_map_range *map)
 	if(LINUX_DEBUG) printk("phy_addr=0x%08X,size=%ld\n",phy_addr,size);
 	map->phy_addr = phy_addr & ADDRESS_PAGE_ALIGN;//change map->phy_addr ~(0xFFF)
 	map->offset = phy_addr & ADDRESS_OFFSET_KEEP;//0xFFF
-
+	map->size =size;
 	if(size % MMIO_MAP_PAGE >0) //Not a whole memory page
 	{
 		map->size = (size & ADDRESS_PAGE_ALIGN) + MMIO_MAP_PAGE;//At least one page
 	}
+
 AT_LINE
 	if(LINUX_DEBUG) printk("map->phy_addr=0x%08X,size=%ld\n",map->phy_addr,size);
 
@@ -209,7 +210,7 @@ static ssize_t mmio_read (struct file *file, char __user *buf, size_t size, loff
 	mmio_action action;
 	AT_LINE;
 	ret = copy_from_user(&action, buf, sizeof(mmio_action));//copy mmio_action to action
-	build_map_range(action.phy_addr,MMIO_MAP_PAGE-1,& public_addr_range);
+	build_map_range(action.phy_addr,MMIO_MAP_PAGE,& public_addr_range);
 	action.status=do_mmio_action(public_addr_range.address,&action);
 	ret = copy_to_user(buf, &action, sizeof(mmio_action));
 	return 0;
@@ -221,7 +222,7 @@ static ssize_t mmio_write(struct file *file, const char __user *buf, size_t coun
 	mmio_action action;
 	AT_LINE;
 	ret = copy_from_user(&action, buf, sizeof(mmio_action));
-	build_map_range(action.phy_addr,MMIO_MAP_PAGE-1,& public_addr_range);
+	build_map_range(action.phy_addr,MMIO_MAP_PAGE,& public_addr_range);
 	action.status=do_mmio_action(public_addr_range.address,&action);
 	ret = copy_to_user((char *)buf,&action, sizeof(mmio_action));
    return 0;
