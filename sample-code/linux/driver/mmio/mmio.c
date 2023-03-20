@@ -164,6 +164,9 @@ int do_mmio_action_or(volatile void *address,mmio_action * action)
 
 int do_mmio_action(volatile void *address,mmio_action * action)
 {	AT_LINE
+
+	if(LINUX_DEBUG) printk("phy_addr=0x%08X,action=%d data=%08X\n",action->phy_addr,action->action,action->data);
+
 	if(action->action >= mmio_byte_read && action->action <= mmio_or_action)	//from mmio_byte_read to mmio_or_action
 	{
 		if(0==do_mmio_action_read(address,action)) return 0;
@@ -173,7 +176,6 @@ int do_mmio_action(volatile void *address,mmio_action * action)
 	}
 	return -1;
 }
-
 
 static int mmio_open(struct inode *inode, struct file *filp)
 {  

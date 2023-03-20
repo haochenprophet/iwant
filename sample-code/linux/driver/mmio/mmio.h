@@ -12,6 +12,8 @@
     #define AT_LINE  
 #endif
 
+#define MMIO_DEVICE_PATH "/dev/mmio"
+
 //mmio code 
 #define MMIO_MAP_PAGE  (4096) //one address map 4KB(0x1000) one page for mmio_action access
 
