@@ -49,6 +49,7 @@ namespace n_register_hw {
 		serial,//serial bus access
 		gpio,//gpio memory /io access
 		can,//CAN bus
+		cmos,//intel RTC cmos index IO:70,71 ;80,81
 	};
 
 	enum class hw_reg_access_mode
