@@ -27,6 +27,7 @@ namespace n_io {
 	public:
 		CioHwRw();
 		~CioHwRw();
+		int my_init(void* p);
 	public:
 		void delay(int count);
 		int byte_read(hardware_register* hw_reg);//8bit access 

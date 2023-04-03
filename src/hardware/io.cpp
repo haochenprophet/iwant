@@ -109,11 +109,19 @@ int Cio::write(unsigned short port, unsigned long long data)
 
 CioHwRw::CioHwRw()
 {
+	this->my_init();
 	this->hw_addr_type = hw_reg_addr_type::io;
 }
 CioHwRw::~CioHwRw()
 {
 
+}
+
+int CioHwRw::my_init(void* p)
+{
+	this->name = "CioHwRw";
+	this->alias = "CioHwRw";
+	return 0;
 }
 
 void CioHwRw::delay(int count)
