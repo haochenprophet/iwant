@@ -36,6 +36,8 @@ namespace n_cmos {
 		int read_cmd();
 		int write_cmd();
 		int rw_cmd();//8bit access 
+		int dump_cmd(int start ,int end);
+		int dump_cmd();
 		int do_action(void* a = nullptr);
 		int set_action_parameter(int argc, char* argv[]);
 		int deal_cmd(int argc, char *argv[]);

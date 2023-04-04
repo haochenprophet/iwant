@@ -105,6 +105,32 @@ int Ccmos::rw_cmd()//8bit access
 	return this->write_cmd();
 }
 
+int Ccmos::dump_cmd(int start , int end)
+{
+	int ret=-1,n;
+	unsigned char data;
+
+	printf("[ dump ]: 0x%02X-0x%02X\n[offset]: 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F\n",start,end);
+	for(n=0;start<=end&&start<0x100;start++,n++)
+	{
+		ret=this->read((unsigned char )start,&data);
+		if(ret!=0) break;
+
+		if(n%16==0) printf("[  %02X  ]: ",start);
+		printf("%02X ",data);
+		if(n%16==15) printf("\n");
+	}
+
+	if(n%16!=0) printf("\n");
+
+	return ret;
+}
+
+int Ccmos::dump_cmd()
+{
+	return  this->dump_cmd(this->cmos_action_parameter.start,this->cmos_action_parameter.end);
+}
+
 int Ccmos::do_action(void * a)
 {
 	//printf("this->action =%lld\n",this->action);//test ok
@@ -112,6 +138,7 @@ int Ccmos::do_action(void * a)
 	if (this->action == (ACTION_T)CmosAtcion::write || this->action == (ACTION_T)CmosAtcion::w || this->action == (ACTION_T)CmosAtcion::W) this->set_main_ret(this->write_cmd());
 	if (this->action == (ACTION_T)CmosAtcion::_and || this->action == (ACTION_T)CmosAtcion::a || this->action == (ACTION_T)CmosAtcion::A) this->set_main_ret(this->and_cmd());
 	if (this->action == (ACTION_T)CmosAtcion::_or || this->action == (ACTION_T)CmosAtcion::o || this->action == (ACTION_T)CmosAtcion::O) this->set_main_ret(this->or_cmd());
+	if (this->action == (ACTION_T)CmosAtcion::dump || this->action == (ACTION_T)CmosAtcion::d ||this->action == (ACTION_T)CmosAtcion::D) this->set_main_ret(this->dump_cmd());
 	if (this->action == (ACTION_T)CmosAtcion::rw || this->action == (ACTION_T)CmosAtcion::RW) this->set_main_ret(this->rw_cmd());
 	return 0;
 }
@@ -207,7 +234,7 @@ int Ccmos::deal_cmd(int argc, char *argv[])
 #include INCLUDE_ALL_H
 int main(int argc, char *argv[])
 {
-	WHERE_I;
+//	WHERE_I;
 	Ccmos cmos;
 	cmos.deal_cmd(argc, argv);
 	return 	cmos.main_return_value;//this->set_main_ret
