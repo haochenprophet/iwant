@@ -287,6 +287,7 @@ namespace n_object {
 		int64_t allot(int64_t old_size, void** o_addr, int64_t new_size, bool mem_cpy = false);
 		void delete_allot(void **addr);
 
+		int str2i(const char *str,int * data );
 		void s_toupper(string & str);
 		void set_upper_str(string & s);
 		int s_replace(string *base,string *tag,string *rep);
@@ -336,6 +337,7 @@ namespace n_object {
 		ACTION_T get_action(char * name);
 		bool get_action(Action * a, int count, char * name, ACTION_T * out);
 		bool get_action(char* name, ACTION_T* out);
+
 		virtual int set_action_parameter(int argc, char* argv[]);//action parameter can from input command,or memory data
 		virtual int do_action(void * a);
 		//virtual
@@ -351,6 +353,7 @@ namespace n_object {
 		virtual int my_exit(void *p=nullptr);//object exit
 		virtual int my_clear(void *p=nullptr);
 		virtual int deal_cmd(int argc, char *argv[]);
+		virtual	int deal_cmd(int argc, char *argv[],Action * action, int action_count,int min_input);
 		virtual int display(void *p=nullptr);
 		virtual int display(Object* o = nullptr);
 		virtual int question(void *p=nullptr);

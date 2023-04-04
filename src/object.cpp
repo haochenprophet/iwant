@@ -633,6 +633,22 @@ void Object::delete_allot()
 	this->delete_allot((void**)&this->buf);
 }
 
+char * Object::str2i(const char *str,int * data )
+{
+    char *endptr;
+
+	if(str[0]=='0'&&(str[1]=='x'||str[1]=='X'))
+	{
+		* data = strtol(str, endptr, 16);
+	}
+	else
+	{
+		* data = strtol(str, endptr, 10);
+	}
+
+    return endptr;
+}
+
 void Object::s_toupper(string & str)
 {
 	std::string::size_type i,len= str.length();
@@ -1424,6 +1440,42 @@ int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
 	}
 
 	return -1;
+}
+
+int Object::deal_cmd(int argc, char *argv[],Action * action, int action_count,int min_input)
+{
+	//this->list_cmd(argc, argv);//test ok
+	
+	//step1.check user input
+	if (argc < min_input)
+	{
+		this->action_help(action, action_count);
+		return -1;
+	}
+
+	//step2.init this->cmd store user input parameter
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
+
+	//step3.get silent cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
+
+	//step4.get action
+	this->action = this->get_action(action, action_count, argv[1]);
+	if (this->action == 0) this->action = atoll(argv[1]);//no name 
+	if (this->action == 0) return -1;
+
+	//step5.set action parameter
+	if(0!=this->set_action_parameter(argc, argv))
+	{
+		this->action_help(action, action_count);
+		return -1;		
+	}
+
+	//step6.do action 
+	this->do_action();
+
+	return 0;
 }
 
 int Object::deal_cmd(int argc, char *argv[])
