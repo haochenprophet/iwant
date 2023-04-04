@@ -107,6 +107,25 @@ int Cio::write(unsigned short port, unsigned long long data)
 	return 0;
 }
 
+//ISA IO read : CMOS ,EC, SIO ,
+int Cio::read(unsigned short index_port, unsigned char index, unsigned short data_port, unsigned char* data)
+{
+#if LINUX_OS
+	outb(index, index_port);
+	*data = inb(data_port);
+#endif
+	return 0;
+}
+//ISA IO write : CMOS ,EC, SIO ,
+int Cio::write(unsigned short index_port, unsigned char index, unsigned short data_port, unsigned char data)
+{
+#if LINUX_OS
+	outb(index, index_port);
+	outb(data, data_port);
+#endif
+	return 0;
+}
+
 CioHwRw::CioHwRw()
 {
 	this->my_init();
@@ -129,7 +148,7 @@ void CioHwRw::delay(int count)
 	unsigned char data;
 	do
 	{
-		this->read(0xB2, &data);//read 0xB2 io delay
+		Cio::read(0xB2, &data);//read 0xB2 io delay
 	} while (--count > 0);
 }
 //8bit access 
@@ -138,58 +157,57 @@ int CioHwRw::byte_read(hardware_register* hw_reg)
 	if (this->hw_addr_type != hw_reg->type) return -1;
 
 	//int Cio::read(unsigned short port, unsigned char* data)
-	return this->read((unsigned short)hw_reg->address, (unsigned char*)&hw_reg->read_data);
+	return Cio::read((unsigned short)hw_reg->address, (unsigned char*)&hw_reg->read_data);
 }
 //word 16 bit access 
 int CioHwRw::word_read(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
 	//int Cio::read(unsigned short port, unsigned short* data)
-	return this->read((unsigned short)hw_reg->address, (unsigned short*)&hw_reg->read_data);
+	return Cio::read((unsigned short)hw_reg->address, (unsigned short*)&hw_reg->read_data);
 }
 //double word 32 bit access 
 int CioHwRw::dword_read(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
 	//int Cio::read(unsigned short port, unsigned int * data)
-	return this->read((unsigned short)hw_reg->address, (unsigned int*)&hw_reg->read_data);
+	return Cio::read((unsigned short)hw_reg->address, (unsigned int*)&hw_reg->read_data);
 }
 //quad word sh64 bit access 
 int CioHwRw::qword_read(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
 	//int Cio::read(unsigned short port, unsigned long long * data)
-	return this->read((unsigned short)hw_reg->address, (unsigned long long*)&hw_reg->read_data);
+	return Cio::read((unsigned short)hw_reg->address, (unsigned long long*) & hw_reg->read_data);
 }
 //8bit access 
 int CioHwRw::byte_write(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
-//	int Cio::write(unsigned short port, unsigned char data)
-	return this->write((unsigned short)hw_reg->address, (unsigned char) hw_reg->write_data);
+	//	int Cio::write(unsigned short port, unsigned char data)
+	return Cio::write((unsigned short)hw_reg->address, (unsigned char)hw_reg->write_data);
 }
 //word 16 bit access 
 int CioHwRw::word_write(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
-//	int Cio::write(unsigned short port, unsigned short data)
-	return this->write((unsigned short)hw_reg->address, (unsigned short)hw_reg->write_data);
+	//	int Cio::write(unsigned short port, unsigned short data)
+	return Cio::write((unsigned short)hw_reg->address, (unsigned short)hw_reg->write_data);
 }
 //double word 32 bit access 
 int CioHwRw::dword_write(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
 	//int Cio::write(unsigned short port, unsigned int data)
-	return this->write((unsigned short)hw_reg->address, (unsigned int)hw_reg->write_data);
+	return Cio::write((unsigned short)hw_reg->address, (unsigned int)hw_reg->write_data);
 }
 //quad word sh64 bit access 
 int CioHwRw::qword_write(hardware_register* hw_reg)
 {
 	if (this->hw_addr_type != hw_reg->type) return -1;
 	//int Cio::write(unsigned short port, unsigned long long data)
-	return this->write((unsigned short)hw_reg->address, (unsigned long long)hw_reg->write_data);
+	return Cio::write((unsigned short)hw_reg->address, (unsigned long long)hw_reg->write_data);
 }
-
 #ifndef IO_TEST
 #define IO_TEST 0//1
 #endif

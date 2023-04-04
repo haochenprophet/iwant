@@ -313,6 +313,7 @@
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
+    <ClCompile Include="..\..\src\hardware\cmos.cpp" />
     <ClCompile Include="..\..\src\hardware\cpu.cpp" />
     <ClCompile Include="..\..\src\hardware\device.cpp" />
     <ClCompile Include="..\..\src\hardware\driver.cpp" />
@@ -2179,6 +2180,7 @@
     <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
+    <ClInclude Include="..\..\src\hardware\cmos.h" />
     <ClInclude Include="..\..\src\hardware\cpu.h" />
     <ClInclude Include="..\..\src\hardware\device.h" />
     <ClInclude Include="..\..\src\hardware\driver.h" />

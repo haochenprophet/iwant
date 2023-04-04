@@ -5604,6 +5604,9 @@
     <ClCompile Include="..\..\src\recognition_intel_gpio.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\hardware\cmos.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11284,6 +11287,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\recognition_intel_gpio.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\cmos.h">
+      <Filter>hardware</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

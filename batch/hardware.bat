@@ -17,6 +17,7 @@ code class block_dev
 code class gpio
 code class pin
 code class register_hw
+code class cmos
 
 code main create_main  hardware
 code main create_main  device
@@ -37,3 +38,4 @@ code main create_main block_dev
 code main create_main gpio
 code main create_main pin
 code main create_main register_hw
+code main create_main cmos
