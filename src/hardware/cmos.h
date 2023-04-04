@@ -4,6 +4,13 @@
 #include "../object.h"
 #include "io.h"
 
+#define CMOS_INDEX           0x70
+#define CMOS_DATA            0x71
+#define CMOS_INDEX_MAX       0x7F
+
+#define EXT_CMOS_INDEX   0x72
+#define EXT_CMOS_DATA    0x73
+
 namespace n_cmos {
 
 	class CcmosActionParameter

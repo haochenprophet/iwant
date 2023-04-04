@@ -34,23 +34,23 @@ Ccmos::~Ccmos()
 int Ccmos::read(unsigned char index, unsigned char* data)
 {
 //int Cio::read(unsigned short index_port, unsigned char index, unsigned short data_port, unsigned char* data)
-	if (index < 0x80) //intel PCH
+	if (index <= CMOS_INDEX_MAX) //intel PCH
 	{
-		return Cio::read((unsigned short)0x70, index, (unsigned short)0x71, data);
+		return Cio::read((unsigned short)CMOS_INDEX, index, (unsigned short)CMOS_DATA, data);
 	}
 
-	return Cio::read((unsigned short)0x80, index, (unsigned short)0x81, data);
+	return Cio::read((unsigned short)EXT_CMOS_INDEX, index, (unsigned short)EXT_CMOS_DATA, data);
 }
 //8bit access 
 int Ccmos::write(unsigned char index, unsigned char data)
 {
 //	int Cio::write(unsigned short index_port, unsigned char index, unsigned short data_port, unsigned char data)
-	if (index < 0x80) //intel PCH
+	if (index <= CMOS_INDEX_MAX) //intel PCH
 	{
-		return Cio::write((unsigned short)0x70, index, (unsigned short)0x71, data);
+		return Cio::write((unsigned short)CMOS_INDEX, index, (unsigned short)CMOS_DATA, data);
 	}
 
-	return Cio::write((unsigned short)0x80, index, (unsigned short)0x81, data);
+	return Cio::write((unsigned short)EXT_CMOS_INDEX, index, (unsigned short)EXT_CMOS_DATA, data);
 }
 
 //8bit and access 
