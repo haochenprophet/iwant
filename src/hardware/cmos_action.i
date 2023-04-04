@@ -5,13 +5,13 @@
 
 //read
 #define CMOS_READ_HELP "read <index>"
-#define CMOS_r_HELP "r <index>"
-#define CMOS_R_HELP "R <index>"
+#define CMOS_r_HELP    "r    <index>"
+#define CMOS_R_HELP    "R    <index>"
 
 //dump
 #define CMOS_DUMP_HELP "dump [start] [end]"
-#define CMOS_d_HELP "d [start] [end]"
-#define CMOS_D_HELP "D [start] [end]"
+#define CMOS_d_HELP    "d    [start] [end]"
+#define CMOS_D_HELP    "D    [start] [end]"
 
 
 //read and write
@@ -21,18 +21,18 @@
 
 //write
 #define CMOS_WRITE_HELP "write <index> <data>"
-#define CMOS_w_HELP "w <index> <data>"
-#define CMOS_W_HELP "W <index> <data>"
+#define CMOS_w_HELP     "w     <index> <data>"
+#define CMOS_W_HELP     "W     <index> <data>"
 
 //and
 #define CMOS_AND_HELP "and <index> <data>"
-#define CMOS_a_HELP "a <index> <data>"
-#define CMOS_A_HELP "A <index> <data>"
+#define CMOS_a_HELP   "a   <index> <data>"
+#define CMOS_A_HELP   "A   <index> <data>"
 
 //or
 #define CMOS_OR_HELP "or <index> <data>"
-#define CMOS_o_HELP "o <index> <data>"
-#define CMOS_O_HELP "O <index> <data>"
+#define CMOS_o_HELP  "o  <index> <data>"
+#define CMOS_O_HELP  "O  <index> <data>"
 
 Action cmos_action[] = {
 //read
