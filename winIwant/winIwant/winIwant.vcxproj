@@ -2181,6 +2181,7 @@
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
     <ClInclude Include="..\..\src\hardware\cmos.h" />
+    <ClInclude Include="..\..\src\hardware\cmos_action.h" />
     <ClInclude Include="..\..\src\hardware\cpu.h" />
     <ClInclude Include="..\..\src\hardware\device.h" />
     <ClInclude Include="..\..\src\hardware\driver.h" />
@@ -3918,6 +3919,7 @@
     <None Include="..\..\src\file_action.i" />
     <None Include="..\..\src\g_code.i" />
     <None Include="..\..\src\g_code_func.i" />
+    <None Include="..\..\src\hardware\cmos_action.i" />
     <None Include="..\..\src\instruction\Makefile" />
     <None Include="..\..\src\instruction\t.php" />
     <None Include="..\..\src\main_action.i" />

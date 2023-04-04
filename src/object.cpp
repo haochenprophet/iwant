@@ -639,11 +639,11 @@ char * Object::str2i(const char *str,int * data )
 
 	if(str[0]=='0'&&(str[1]=='x'||str[1]=='X'))
 	{
-		* data = strtol(str, endptr, 16);
+		* data = strtol(str,& endptr, 16);
 	}
 	else
 	{
-		* data = strtol(str, endptr, 10);
+		* data = strtol(str,& endptr, 10);
 	}
 
     return endptr;
@@ -1473,7 +1473,7 @@ int Object::deal_cmd(int argc, char *argv[],Action * action, int action_count,in
 	}
 
 	//step6.do action 
-	this->do_action();
+	this->do_action(action);
 
 	return 0;
 }

@@ -287,7 +287,7 @@ namespace n_object {
 		int64_t allot(int64_t old_size, void** o_addr, int64_t new_size, bool mem_cpy = false);
 		void delete_allot(void **addr);
 
-		int str2i(const char *str,int * data );
+		char * str2i(const char *str,int * data );
 		void s_toupper(string & str);
 		void set_upper_str(string & s);
 		int s_replace(string *base,string *tag,string *rep);

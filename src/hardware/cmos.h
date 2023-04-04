@@ -15,7 +15,7 @@ namespace n_cmos {
 		int data;
 		int start;//dump
 		int end;//end
-	}
+	};
 
 	class Ccmos :public Object
 	{
@@ -30,6 +30,7 @@ namespace n_cmos {
 		int write(unsigned char index, unsigned char data);//8bit access 
 		int read_cmd(unsigned char index);
 		int read_cmd();
+		int do_action(void* a = nullptr);
 		int set_action_parameter(int argc, char* argv[]);
 		int deal_cmd(int argc, char *argv[]);
 	};

@@ -11291,6 +11291,9 @@
     <ClInclude Include="..\..\src\hardware\cmos.h">
       <Filter>hardware</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\hardware\cmos_action.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -11402,6 +11405,9 @@
     </None>
     <None Include="..\..\src\file_action.i">
       <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\hardware\cmos_action.i">
+      <Filter>hardware</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
