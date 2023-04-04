@@ -1,9 +1,5 @@
 #include "io.h"
 
-#if LINUX_OS
-#include <sys/io.h>
-#endif
-
 int Cio::my_init(void *p)
 {
 	this->name = "Cio";

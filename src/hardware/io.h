@@ -4,6 +4,10 @@
 #include "../object.h"
 #include "register_hw.h"
 
+#if LINUX_OS
+#include <sys/io.h>
+#endif
+
 namespace n_io {
 	class Cio :public Object
 	{

@@ -9,8 +9,8 @@ enum class CmosAtcionClass
 	write,
 	rw,//read and write
 	dump,
-	and,
-	or,
+	_and,
+	_or,
 };
 
 enum class CmosAtcion {
@@ -31,11 +31,11 @@ enum class CmosAtcion {
 	rw,
 	RW,
 //bit and 
-	and,
+	_and,
 	a,
 	A,
 //bit OR 
-	or,
+	_or,
 	o,
 	O
 };

@@ -51,13 +51,13 @@ Action cmos_action[] = {
 	{ (int)CmosAtcionClass::dump,(ACTION_T)CmosAtcion::d, EatcionRelation::equal , nullptr ,(char *)"d",(char *)CMOS_d_HELP},
 	{ (int)CmosAtcionClass::dump,(ACTION_T)CmosAtcion::D , EatcionRelation::equal , nullptr ,(char *)"D",(char *)CMOS_D_HELP},
 //and
-	{ (int)CmosAtcionClass::and,(ACTION_T)CmosAtcion::and , EatcionRelation::equal , nullptr ,(char *)"dump",(char *)CMOS_AND_HELP},
-	{ (int)CmosAtcionClass::and,(ACTION_T)CmosAtcion::a, EatcionRelation::equal , nullptr ,(char *)"d",(char *)CMOS_a_HELP},
-	{ (int)CmosAtcionClass::and,(ACTION_T)CmosAtcion::A , EatcionRelation::equal , nullptr ,(char *)"D",(char *)CMOS_A_HELP},
+	{ (int)CmosAtcionClass::_and,(ACTION_T)CmosAtcion::_and , EatcionRelation::equal , nullptr ,(char *)"dump",(char *)CMOS_AND_HELP},
+	{ (int)CmosAtcionClass::_and,(ACTION_T)CmosAtcion::a, EatcionRelation::equal , nullptr ,(char *)"d",(char *)CMOS_a_HELP},
+	{ (int)CmosAtcionClass::_and,(ACTION_T)CmosAtcion::A , EatcionRelation::equal , nullptr ,(char *)"D",(char *)CMOS_A_HELP},
 //or
-	{ (int)CmosAtcionClass::or,(ACTION_T)CmosAtcion::or , EatcionRelation::equal , nullptr ,(char *)"or",(char *)CMOS_OR_HELP},
-	{ (int)CmosAtcionClass::or,(ACTION_T)CmosAtcion::o, EatcionRelation::equal , nullptr ,(char *)"o",(char *)CMOS_o_HELP},
-	{ (int)CmosAtcionClass::or,(ACTION_T)CmosAtcion::O, EatcionRelation::equal , nullptr ,(char *)"O",(char *)CMOS_O_HELP},
+	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::_or , EatcionRelation::equal , nullptr ,(char *)"or",(char *)CMOS_OR_HELP},
+	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::o, EatcionRelation::equal , nullptr ,(char *)"o",(char *)CMOS_o_HELP},
+	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::O, EatcionRelation::equal , nullptr ,(char *)"O",(char *)CMOS_O_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },

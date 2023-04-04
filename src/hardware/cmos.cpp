@@ -19,11 +19,16 @@ int Ccmos::my_init(void *p)
 Ccmos::Ccmos()
 {
 	this->my_init();
+#if LINUX_OS
+	iopl(3);
+#endif
 }
 
 Ccmos::~Ccmos()
 {
-
+#if LINUX_OS
+	iopl(0);
+#endif
 }
 //8bit access out to uint8_t data
 int Ccmos::read(unsigned char index, unsigned char* data)
@@ -64,7 +69,7 @@ int Ccmos::read_cmd()
 
 int Ccmos::do_action(void * a)
 {
-
+	//printf("this->action =%lld\n",this->action);//test ok
 	if (this->action == (ACTION_T)CmosAtcion::read || this->action == (ACTION_T)CmosAtcion::r ||this->action == (ACTION_T)CmosAtcion::R) this->set_main_ret(this->read_cmd());
 
 	return 0;
@@ -79,6 +84,7 @@ int Ccmos::set_action_parameter(int argc, char* argv[])//override the functions 
 		//char * Object::str2i(const char *str,int * data )
 		if (argc < 3) return -1;
 		this->str2i(argv[2],& this->cmos_action_parameter.index);
+		//printf("this->cmos_action_parameter.index=%d\n",this->cmos_action_parameter.index);//test ok
 	}
 
 	//argv[1]=dump argv[2]=[start] argv[3]=[end]"
@@ -102,8 +108,8 @@ int Ccmos::set_action_parameter(int argc, char* argv[])//override the functions 
 
 	//argv[1]=write argv[2]=<index> argv[3]=<data>"
 	if (this->action == (ACTION_T)CmosAtcion::write || this->action == (ACTION_T)CmosAtcion::w ||this->action == (ACTION_T)CmosAtcion::W ||
-		this->action == (ACTION_T)CmosAtcion::and || this->action == (ACTION_T)CmosAtcion::a ||this->action == (ACTION_T)CmosAtcion::A ||
-		this->action == (ACTION_T)CmosAtcion::or || this->action == (ACTION_T)CmosAtcion::o ||this->action == (ACTION_T)CmosAtcion::O ||
+		this->action == (ACTION_T)CmosAtcion::_and || this->action == (ACTION_T)CmosAtcion::a ||this->action == (ACTION_T)CmosAtcion::A ||
+		this->action == (ACTION_T)CmosAtcion::_or || this->action == (ACTION_T)CmosAtcion::o ||this->action == (ACTION_T)CmosAtcion::O ||
 		this->action == (ACTION_T)CmosAtcion::rw || this->action == (ACTION_T)CmosAtcion::RW 
 		)
 	{
@@ -160,7 +166,8 @@ int Ccmos::deal_cmd(int argc, char *argv[])
 int main(int argc, char *argv[])
 {
 	WHERE_I;
-
-	return 0;
+	Ccmos cmos;
+	cmos.deal_cmd(argc, argv);
+	return 	cmos.main_return_value;//this->set_main_ret
 }
 #endif
