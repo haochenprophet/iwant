@@ -53,6 +53,33 @@ int Ccmos::write(unsigned char index, unsigned char data)
 	return Cio::write((unsigned short)0x80, index, (unsigned short)0x81, data);
 }
 
+//8bit and access 
+int Ccmos::and_cmd(unsigned char index, unsigned char data)
+{
+	unsigned char register_data;
+	//int Ccmos::read(unsigned char index, unsigned char* data)
+	if (0 != this->read(index, &register_data)) return -1;
+	return this->write(index,register_data & data);
+}
+
+int Ccmos::and_cmd()
+{
+	return this->and_cmd(this->cmos_action_parameter.index,this->cmos_action_parameter.data);
+}
+//8bit or access 
+int Ccmos::or_cmd(unsigned char index, unsigned char data)
+{
+	unsigned char register_data;
+	//int Ccmos::read(unsigned char index, unsigned char* data)
+	if (0 != this->read(index, &register_data)) return -1;
+	return this->write(index, register_data | data);
+}
+
+int Ccmos::or_cmd()
+{
+	return this->or_cmd(this->cmos_action_parameter.index, this->cmos_action_parameter.data);
+}
+
 int Ccmos::read_cmd(unsigned char index)//8bit access out to uint8_t data
 {
 	int ret;
@@ -67,13 +94,28 @@ int Ccmos::read_cmd()
 	return this->read_cmd(this->cmos_action_parameter.index);
 }
 
+int Ccmos::write_cmd()
+{
+	return this->write((unsigned char) this->cmos_action_parameter.index,(unsigned char) this->cmos_action_parameter.data);
+}
+
+int Ccmos::rw_cmd()//8bit access 
+{
+	if(0!=this->read_cmd()) return -1;
+	return this->write_cmd();
+}
+
 int Ccmos::do_action(void * a)
 {
 	//printf("this->action =%lld\n",this->action);//test ok
 	if (this->action == (ACTION_T)CmosAtcion::read || this->action == (ACTION_T)CmosAtcion::r ||this->action == (ACTION_T)CmosAtcion::R) this->set_main_ret(this->read_cmd());
-
+	if (this->action == (ACTION_T)CmosAtcion::write || this->action == (ACTION_T)CmosAtcion::w || this->action == (ACTION_T)CmosAtcion::W) this->set_main_ret(this->write_cmd());
+	if (this->action == (ACTION_T)CmosAtcion::_and || this->action == (ACTION_T)CmosAtcion::a || this->action == (ACTION_T)CmosAtcion::A) this->set_main_ret(this->and_cmd());
+	if (this->action == (ACTION_T)CmosAtcion::_or || this->action == (ACTION_T)CmosAtcion::o || this->action == (ACTION_T)CmosAtcion::O) this->set_main_ret(this->or_cmd());
+	if (this->action == (ACTION_T)CmosAtcion::rw || this->action == (ACTION_T)CmosAtcion::RW) this->set_main_ret(this->rw_cmd());
 	return 0;
 }
+
 //set file action parameter from user input command line
 int Ccmos::set_action_parameter(int argc, char* argv[])//override the functions of the Objet class
 {
