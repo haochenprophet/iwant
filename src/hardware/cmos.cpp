@@ -137,10 +137,9 @@ int Ccmos::chksum_cmd()
 	unsigned char data;
 	unsigned short check_sum = 0;
 
-	for (i = 0; i < 0x100; i++)
+	for (i = 0x10; i < 0x2D; i++)
 	{
 	//	int Ccmos::read(unsigned char index, unsigned char* data)
-		if (i == 0x2E || i == 0x2F) continue;
 		if(0!=this->read((unsigned char)i, &data)) return -1;
 		check_sum += data;
 	}
