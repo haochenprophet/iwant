@@ -34,6 +34,8 @@ namespace n_file {
 		size_t f_size();
 		int f_read(char *f_name);
 		int f_read();
+		int checksum(char* f_name, unsigned int * sum = nullptr);
+		int checksum();
 		size_t f_write(char* f_name, void* addr, size_t size);
 		size_t f_write(char* f_name, uint8_t* start, uint8_t* end);
 		size_t f_write(char* f_name);//output filename

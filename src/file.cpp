@@ -138,6 +138,27 @@ int Cfile::f_read()
 	return this->f_read((char *)this->f_name.c_str());
 }
 
+int Cfile::checksum(char* f_name,unsigned int * sum)
+{
+	unsigned int check_sum = 0;
+
+	if(0!=this->f_read(f_name)) return -1;
+
+	for (size_t i = 0; i < this->size; i++)
+	{
+		check_sum += (unsigned char) this->addr[i];
+	}
+	if (sum != nullptr) * sum = check_sum;
+	printf("check_sum=0x%08X\n", check_sum);
+	return 0;
+}
+
+int Cfile::checksum()
+{
+	if (this->f_name.empty()) return -1;
+	return this->checksum((char*)this->f_name.c_str());
+}
+
 int Cfile::cat(size_t start, size_t size, DisplayType t)
 {
 	if(0!=this->f_read()) return -1;
@@ -421,7 +442,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::replace || this->action == (ACTION_T)FileAtcion::rp) this->set_main_ret((int)this->replace(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
 	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
-
+	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
 	return 0;
 }
 

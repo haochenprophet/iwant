@@ -39,6 +39,9 @@
 //insert //argv[1]=<input_file> argv[2]=<output_file> argv[3]=<instert_data> argv[4]<data_type:F:file S:string>  argv[5]=<offset/linue_number/find_data>  argv[6]<L:linue_number O:insert_offset B:find_data Before A:find_data after>
 #define FILE_INSERT_HELP   "insert   <input_file> <output_file> <instert_data> <data_type:F:file S:string> <offset/linue_number/find_data> <L:linue_number O:insert_offset B:find_data Before A:find_data after>"
 #define FILE_INS_HELP       "ins  <input_file> <output_file> <instert_data> <data_type:F:file S:string> <offset/linue_number/find_data> <L:linue_number O:insert_offset B:find_data Before A:find_data after>"
+//checksum
+#define FILE_CHECKSUM_HELP   "checksum   <FileName>"
+#define FILE_CHKSUM_HELP     "chksum  <FileName>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
@@ -76,6 +79,9 @@ Action file_action[] = {
 //insert
 	{ (int)FileAtcionClass::insert,(ACTION_T)FileAtcion::insert,      EatcionRelation::equal , nullptr ,(char*)"insert",     (char*)FILE_INSERT_HELP},
 	{ (int)FileAtcionClass::insert,(ACTION_T)FileAtcion::ins,         EatcionRelation::equal , nullptr ,(char*)"ins",         (char*)FILE_INS_HELP},
+//checksum
+	{ (int)FileAtcionClass::checksum,(ACTION_T)FileAtcion::checksum,      EatcionRelation::equal , nullptr ,(char*)"checksum",     (char*)FILE_CHECKSUM_HELP},
+	{ (int)FileAtcionClass::checksum,(ACTION_T)FileAtcion::chksum,        EatcionRelation::equal , nullptr ,(char*)"chksum",       (char*)FILE_CHKSUM_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
