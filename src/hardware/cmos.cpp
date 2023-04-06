@@ -131,6 +131,23 @@ int Ccmos::dump_cmd()
 	return  this->dump_cmd(this->cmos_action_parameter.start,this->cmos_action_parameter.end);
 }
 
+int Ccmos::chksum_cmd()
+{
+	int i;
+	unsigned char data;
+	unsigned short check_sum = 0;
+
+	for (i = 0; i < 0x100; i++)
+	{
+	//	int Ccmos::read(unsigned char index, unsigned char* data)
+		if (i == 0x2E || i == 0x2F) continue;
+		if(0!=this->read((unsigned char)i, &data)) return -1;
+		check_sum += data;
+	}
+	printf("check_sum=0x%04X\n", check_sum);
+	return 0;
+}
+
 int Ccmos::do_action(void * a)
 {
 	//printf("this->action =%lld\n",this->action);//test ok
@@ -140,6 +157,7 @@ int Ccmos::do_action(void * a)
 	if (this->action == (ACTION_T)CmosAtcion::_or || this->action == (ACTION_T)CmosAtcion::o || this->action == (ACTION_T)CmosAtcion::O) this->set_main_ret(this->or_cmd());
 	if (this->action == (ACTION_T)CmosAtcion::dump || this->action == (ACTION_T)CmosAtcion::d ||this->action == (ACTION_T)CmosAtcion::D) this->set_main_ret(this->dump_cmd());
 	if (this->action == (ACTION_T)CmosAtcion::rw || this->action == (ACTION_T)CmosAtcion::RW) this->set_main_ret(this->rw_cmd());
+	if (this->action == (ACTION_T)CmosAtcion::chksum || this->action == (ACTION_T)CmosAtcion::c || this->action == (ACTION_T)CmosAtcion::C) this->set_main_ret(this->chksum_cmd());
 	return 0;
 }
 

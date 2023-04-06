@@ -11,6 +11,7 @@ enum class CmosAtcionClass
 	dump,
 	_and,
 	_or,
+	chksum,
 };
 
 enum class CmosAtcion {
@@ -37,7 +38,11 @@ enum class CmosAtcion {
 //bit OR 
 	_or,
 	o,
-	O
+	O,
+//chksum
+	chksum,
+	C,
+	c,
 };
 
 #endif

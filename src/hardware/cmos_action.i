@@ -34,6 +34,11 @@
 #define CMOS_o_HELP  "o  <index> <data>"
 #define CMOS_O_HELP  "O  <index> <data>"
 
+//or
+#define CMOS_CHKSUM_HELP "chksum"
+#define CMOS_c_HELP  "c"
+#define CMOS_C_HELP  "C"
+
 Action cmos_action[] = {
 //read
 	{ (int)CmosAtcionClass::read,(ACTION_T)CmosAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)CMOS_READ_HELP},
@@ -58,6 +63,10 @@ Action cmos_action[] = {
 	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::_or , EatcionRelation::equal , nullptr ,(char *)"or",(char *)CMOS_OR_HELP},
 	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::o, EatcionRelation::equal , nullptr ,(char *)"o",(char *)CMOS_o_HELP},
 	{ (int)CmosAtcionClass::_or,(ACTION_T)CmosAtcion::O, EatcionRelation::equal , nullptr ,(char *)"O",(char *)CMOS_O_HELP},
+//chksum
+	{ (int)CmosAtcionClass::chksum,(ACTION_T)CmosAtcion::chksum , EatcionRelation::equal , nullptr ,(char*)"or",(char*)CMOS_CHKSUM_HELP},
+	{ (int)CmosAtcionClass::chksum,(ACTION_T)CmosAtcion::c, EatcionRelation::equal , nullptr ,(char*)"o",(char*)CMOS_c_HELP},
+	{ (int)CmosAtcionClass::chksum,(ACTION_T)CmosAtcion::C, EatcionRelation::equal , nullptr ,(char*)"O",(char*)CMOS_C_HELP},
 
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
