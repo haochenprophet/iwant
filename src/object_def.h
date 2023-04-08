@@ -17,4 +17,8 @@
 #define T_TYPE template<typename T>
 #endif
 
+#ifndef BUF_SIZE
+#define BUF_SIZE PAGE_4K
+#endif
+
 #endif //OBJECT_DEF_H

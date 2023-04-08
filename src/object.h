@@ -63,6 +63,16 @@ namespace n_object {
 		~Cparameter() { while (!this->s.empty()) this->s.pop(); }//exit clear stack
 	};
 
+	class CKeywordParam
+	{
+	public:
+		char* cp_start;
+		char* cp_current;
+		char* cp_end;
+	public:
+		CKeywordParam() { this->cp_start = nullptr; this->cp_current = nullptr; this->cp_end=nullptr; }
+	};
+
 	class CtagItem //out=temp+Temp.tag->rep
 	{
 	public:
@@ -152,6 +162,16 @@ namespace n_object {
 	};
 	typedef std::list<ObjectRelation *> LIST_OBJ_RELATION;
 
+	class Ocoord
+	{
+	public:
+		double x;
+		double y;
+		double z;
+	public:
+		Ocoord() { this->x = 0; this->y = 0; this->z = 0; }
+	};
+
 	class Osetting :public Ouuid, public Otime , public Orange //public object Collection of variables, setting ,data ,...
 	{
 	public:
@@ -173,7 +193,13 @@ namespace n_object {
 		int cin_buf_len;
 		char * cin_buf;
 		char * buf;
+		void * buf_owner;//point object this point 
 		int buf_len;
+
+		size_t row; //row 
+		size_t column;//column 
+		size_t line;//line number
+		Ocoord coord;
 
 		string package;
 		string name; //object name
@@ -185,7 +211,7 @@ namespace n_object {
 		string temp;//keyword template 
 		string s_tag;
 		string s_rep;
-		string  upper_str;
+		string upper_str;
 
 		long locate;//0 start , -1 end , n :locate value 
 		int language;
@@ -279,13 +305,14 @@ namespace n_object {
 		int execute(string fun_name,void *p=nullptr, bool new_thread = false); //execute this->ex_func 
 		int execute(ObjectFunc func, void* input = nullptr, void* output = nullptr, bool new_thread = false); //execute input func 
 		
-		int allot(int size=(O_BUF_LEN));
-		void delete_allot();
+		int allot(int size=(O_BUF_LEN),void * buf_owner=nullptr);
 		int allot(int size,void ** o_addr);
 		int64_t allot(int64_t size, void** o_addr);
 		int allot(int old_size, void ** o_addr, int new_size, bool mem_cpy=false);
 		int64_t allot(int64_t old_size, void** o_addr, int64_t new_size, bool mem_cpy = false);
-		void delete_allot(void **addr);
+
+		int delete_allot(void **addr);
+		int delete_allot(void* buf_owner = nullptr);
 
 		char * str2i(const char *str,int * data );
 		void s_toupper(string & str);

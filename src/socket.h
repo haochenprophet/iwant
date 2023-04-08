@@ -32,7 +32,10 @@ typedef int socklen_t;
 #define SD_BOTH 2	//Shutdown both send and receive operations.
 #endif
 
-#define BUF_SIZE 0x1000 //default buf size
+#ifndef BUF_SIZE
+#define BUF_SIZE 0x1000
+#endif
+
 #define DEFAULT_PORT "66666"
 namespace n_socket{
 

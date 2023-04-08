@@ -116,12 +116,16 @@ Object::Object()
 	this->cin_buf_len = 0;//O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
 	this->buf = nullptr;
 	this->buf_len = 0;
+	this->buf_owner = nullptr;
 	this->input = nullptr;
 	this->move = nullptr;
 	this->register_all_signal();
 	this->main_return_value = -1;//-1 do nothing
 	this->action_table = nullptr;
 	this->count_of_action_table = 0;
+	this->row = 0;
+	this->column = 0;
+	this->line = 1;
 #if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
@@ -614,23 +618,25 @@ int64_t Object::allot(int64_t old_size, void** o_addr, int64_t new_size, bool me
 	return new_size;
 }
 
-int Object::allot(int size)
+int Object::allot(int size, void* buf_owner)
 {
-	this->delete_allot();
+	if(0!=this->delete_allot()) return -1;
 	return this->allot(size, (void**)&this->buf);
 }
 
-void Object::delete_allot(void **addr)
+int  Object::delete_allot(void **addr)
 {
 	if (addr&&*addr) {
 		delete[](char*) (*addr);
 		*addr = nullptr;
 	}
+	return 0;
 }
 
-void Object::delete_allot()
+int  Object::delete_allot(void* buf_owner)
 {
-	this->delete_allot((void**)&this->buf);
+	if (buf_owner != nullptr && this->buf_owner != buf_owner) return -1;
+	return this->delete_allot((void**)&this->buf);
 }
 
 char * Object::str2i(const char *str,int * data )
