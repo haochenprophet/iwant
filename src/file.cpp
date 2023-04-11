@@ -150,7 +150,7 @@ int Cfile::checksum(char* f_name,unsigned int * sum)
 	}
 	if (sum != nullptr) * sum = check_sum;
 	printf("check_sum=0x%08X\n", check_sum);
-	return 0;
+	return check_sum;
 }
 
 int Cfile::checksum()
