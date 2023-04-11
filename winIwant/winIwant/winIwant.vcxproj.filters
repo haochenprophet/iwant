@@ -5607,6 +5607,9 @@
     <ClCompile Include="..\..\src\hardware\cmos.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\math\crc.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11293,6 +11296,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\hardware\cmos_action.h">
       <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\crc.h">
+      <Filter>math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

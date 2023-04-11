@@ -16,6 +16,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_copysign.where());
 	p->addMe(g_cos.where());
 	p->addMe(g_cosh.where());
+	p->addMe(g_crc.where());
 	p->addMe(g_erf.where());
 	p->addMe(g_erfc.where());
 	p->addMe(g_exp.where());

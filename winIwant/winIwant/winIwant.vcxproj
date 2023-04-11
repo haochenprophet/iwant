@@ -1566,6 +1566,7 @@
     <ClCompile Include="..\..\src\math\copysign.cpp" />
     <ClCompile Include="..\..\src\math\cos.cpp" />
     <ClCompile Include="..\..\src\math\cosh.cpp" />
+    <ClCompile Include="..\..\src\math\crc.cpp" />
     <ClCompile Include="..\..\src\math\erf.cpp" />
     <ClCompile Include="..\..\src\math\erfc.cpp" />
     <ClCompile Include="..\..\src\math\exp.cpp" />
@@ -3437,6 +3438,7 @@
     <ClInclude Include="..\..\src\math\copysign.h" />
     <ClInclude Include="..\..\src\math\cos.h" />
     <ClInclude Include="..\..\src\math\cosh.h" />
+    <ClInclude Include="..\..\src\math\crc.h" />
     <ClInclude Include="..\..\src\math\erf.h" />
     <ClInclude Include="..\..\src\math\erfc.h" />
     <ClInclude Include="..\..\src\math\exp.h" />

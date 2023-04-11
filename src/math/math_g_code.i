@@ -16,6 +16,7 @@
 	Ccopysign  g_copysign ;
 	Ccos  g_cos ;
 	Ccosh  g_cosh ;
+	Ccrc   g_crc;
 	Cerf  g_erf ;
 	Cerfc  g_erfc ;
 	Cexp  g_exp ;

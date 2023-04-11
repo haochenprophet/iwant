@@ -15,6 +15,7 @@
 #include "copysign.h" 
 #include "cos.h" 
 #include "cosh.h" 
+#include "crc.h"
 #include "erf.h" 
 #include "erfc.h" 
 #include "exp.h" 
