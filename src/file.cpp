@@ -149,7 +149,7 @@ int Cfile::checksum(char* f_name,unsigned int * sum)
 		check_sum += (unsigned char) this->addr[i];
 	}
 	if (sum != nullptr) * sum = check_sum;
-	printf("check_sum=0x%08X\n", check_sum);
+	if(this->silent==0)printf("check_sum=0x%08X\n", check_sum);
 	return check_sum;
 }
 
