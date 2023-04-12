@@ -16,6 +16,7 @@ namespace n_file {
 		std::fstream ap_fs;//for Cfile::f_append()
 		char* fname_left;//compare () file 1 default use left
 		char* fname_right;//compare ()file 2 default use right
+		char* crc_func;//for crc() cmd 
 		DisplayType display_type;
 	public:
 		Cfile();

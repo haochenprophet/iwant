@@ -18,8 +18,8 @@ Ccrc::~Ccrc()
 
 int Ccrc::execute(char* func_name, uint8_t* data, size_t length, uint32_t* crc)
 {
-    if (func_name == nullptr) return -1;
-    if (strlen(func_name) < 4) return -1; //check func_name length ; crc8 : min function 
+    if (func_name == nullptr) { *crc = (uint32_t)crc32(data, length); return 0; }
+    if (strlen(func_name) < 4) { *crc = (uint32_t)crc32(data, length); return 0; }; //check func_name length ; crc8 : min function 
 
     if (0 == strcmp(func_name, "crc4_itu")) { *crc = (uint32_t)crc4_itu(data, length); return 0; }
     if (0 == strcmp(func_name, "crc5_epc")) { *crc = (uint32_t)crc5_epc(data, length); return 0; }

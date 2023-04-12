@@ -11,6 +11,7 @@ int Cfile::my_init(void* p)
 	this->alias = "file";
 	this->fname_left = nullptr;
 	this->fname_right = nullptr;
+	this->crc_func = nullptr;
 	this->display_type = DisplayType::string;
 	return 0;
 }
@@ -474,16 +475,22 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
 	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
-	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc());
+	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc(this->crc_func));
 	return 0;
 }
 
-//set file action parameter from user input command line
+//set file action parameter from user input command line 
+//argv[0]=exe or system cmd , argv[1]=action , argv[2]= action parameter[1],  argv[3]= action parameter[2]  argv[4]= action parameter[3]  ..silent ; argc = index +1 
 int Cfile::set_action_parameter(int argc, char* argv[])//override the functions of the Objet class
 {
 	//init file action parameter; cmd:cat /cut option:  <FileName> [start] [size] [outfilename]
 	this->f_name = argv[2];
-
+	//
+	if (this->action == (ACTION_T)FileAtcion::crc)
+	{
+		if (argc > 3 && 0 != strstr(argv[3], (char*)"crc")) this->crc_func = argv[3]; //check if or not input set crc function 
+		else this->crc_func = nullptr;
+	}
 	//set file command cut parameter
 	if (this->action == (ACTION_T)FileAtcion::cut)
 	{
