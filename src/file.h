@@ -36,6 +36,8 @@ namespace n_file {
 		int f_read();
 		int checksum(char* f_name, unsigned int * sum = nullptr);
 		int checksum();
+		int crc(char* f_name, char* crc_func , unsigned int* sumchk_crc = nullptr);
+		int crc(char* crc_func =nullptr);
 		size_t f_write(char* f_name, void* addr, size_t size);
 		size_t f_write(char* f_name, uint8_t* start, uint8_t* end);
 		size_t f_write(char* f_name);//output filename

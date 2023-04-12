@@ -42,6 +42,9 @@
 //checksum
 #define FILE_CHECKSUM_HELP   "checksum   <FileName>"
 #define FILE_CHKSUM_HELP     "chksum  <FileName>"
+//crc
+#define FILE_CRC_HELP   "crc   <FileName> [math]"
+
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
@@ -82,7 +85,8 @@ Action file_action[] = {
 //checksum
 	{ (int)FileAtcionClass::checksum,(ACTION_T)FileAtcion::checksum,      EatcionRelation::equal , nullptr ,(char*)"checksum",     (char*)FILE_CHECKSUM_HELP},
 	{ (int)FileAtcionClass::checksum,(ACTION_T)FileAtcion::chksum,        EatcionRelation::equal , nullptr ,(char*)"chksum",       (char*)FILE_CHKSUM_HELP},
-
+//crc
+	{ (int)FileAtcionClass::crc,(ACTION_T)FileAtcion::crc,      EatcionRelation::equal , nullptr ,(char*)"crc",     (char*)FILE_CRC_HELP},
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };

@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "replace.h"
 #include "insert.h"
+#include "math/crc.h"
 
 int Cfile::my_init(void* p)
 {
@@ -157,6 +158,36 @@ int Cfile::checksum()
 {
 	if (this->f_name.empty()) return -1;
 	return this->checksum((char*)this->f_name.c_str());
+}
+
+int Cfile::crc(char* f_name,char * crc_func , unsigned int* chk_crc)
+{
+	unsigned int check_crc = 0;
+	int ret = -1;
+
+	if (0 != this->f_read(f_name)) return -1;
+	Ccrc crc;
+	//int Ccrc::execute(char* func_name, uint8_t * data, size_t length, uint32_t * crc)
+	if (crc_func == nullptr)
+	{
+		ret=crc.execute((char*)"crc32", (uint8_t*)this->addr, (size_t)this->size, (uint32_t*)&check_crc);
+	}
+	else
+	{
+		ret = crc.execute(crc_func, (uint8_t*)this->addr, (size_t)this->size, (uint32_t*)&check_crc);
+	}
+	
+	if (ret != 0) return ret;
+
+	if (chk_crc != nullptr) *chk_crc = check_crc;
+	if (this->silent == 0)printf("check_crc=0x%08X\n", check_crc);
+	return ret;
+}
+
+int Cfile::crc(char* crc_func)
+{
+	if (this->f_name.empty()) return -1;
+	return this->crc((char*)this->f_name.c_str(), crc_func);
 }
 
 int Cfile::cat(size_t start, size_t size, DisplayType t)
@@ -443,6 +474,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
 	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
+	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc());
 	return 0;
 }
 

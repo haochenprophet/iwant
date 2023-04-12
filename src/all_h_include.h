@@ -1293,6 +1293,7 @@
 #include "math/copysign.h"
 #include "math/cos.h"
 #include "math/cosh.h"
+#include "math/crc.h"
 #include "math/erfc.h"
 #include "math/erf.h"
 #include "math/exp2.h"

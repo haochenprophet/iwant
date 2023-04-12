@@ -16,6 +16,37 @@ Ccrc::~Ccrc()
 
 }
 
+int Ccrc::execute(char* func_name, uint8_t* data, size_t length, uint32_t* crc)
+{
+    if (func_name == nullptr) return -1;
+    if (strlen(func_name) < 4) return -1; //check func_name length ; crc8 : min function 
+
+    if (0 == strcmp(func_name, "crc4_itu")) { *crc = (uint32_t)crc4_itu(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc5_epc")) { *crc = (uint32_t)crc5_epc(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc5_itu")) { *crc = (uint32_t)crc5_itu(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc5_usb")) { *crc = (uint32_t)crc5_usb(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc6_itu")) { *crc = (uint32_t)crc6_itu(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc7_mmc")) { *crc = (uint32_t)crc7_mmc(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc8")) { *crc = (uint32_t)crc8(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc8_itu")) { *crc = (uint32_t)crc8_itu(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc8_rohc")) { *crc = (uint32_t)crc8_rohc(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc8_maxim")) { *crc = (uint32_t)crc8_maxim(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_ibm")) { *crc = (uint32_t)crc16_ibm(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_maxim")) { *crc = (uint32_t)crc16_maxim(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_usb")) { *crc = (uint32_t)crc16_usb(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_modbus")) { *crc = (uint32_t)crc16_modbus(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_ccitt")) { *crc = (uint32_t)crc16_ccitt(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_ccitt_false")) { *crc = (uint32_t)crc16_ccitt_false(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_x25")) { *crc = (uint32_t)crc16_x25(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_xmodem")) { *crc = (uint32_t)crc16_xmodem(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc16_dnp")) { *crc = (uint32_t)crc16_dnp(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc32")) { *crc = (uint32_t)crc32(data, length); return 0; }
+    if (0 == strcmp(func_name, "crc32_mpeg_2")) { *crc = (uint32_t)crc32_mpeg_2(data, length); return 0; }
+
+    printf("Ccrc::execute() not found func_name : %s\n", func_name);
+    return -1;
+}
+
 /******************************************************************************
  * Name:    CRC-4/ITU           x4+x+1
  * Poly:    0x03
@@ -25,7 +56,7 @@ Ccrc::~Ccrc()
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc4_itu(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc4_itu(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;                // Initial value
@@ -52,7 +83,7 @@ uint8_t Ccrc::crc4_itu(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc5_epc(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc5_epc(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0x48;        // Initial value: 0x48 = 0x09<<(8-5)
@@ -79,7 +110,7 @@ uint8_t Ccrc::crc5_epc(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc5_itu(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc5_itu(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;                // Initial value
@@ -106,7 +137,7 @@ uint8_t Ccrc::crc5_itu(uint8_t* data, uint16_t length)
  * Xorout:  0x1F
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc5_usb(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc5_usb(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0x1F;                // Initial value
@@ -133,7 +164,7 @@ uint8_t Ccrc::crc5_usb(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc6_itu(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc6_itu(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;         // Initial value
@@ -160,7 +191,7 @@ uint8_t Ccrc::crc6_itu(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Use:     MultiMediaCard,SD,ect.
  *****************************************************************************/
-uint8_t Ccrc::crc7_mmc(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc7_mmc(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;        // Initial value
@@ -187,7 +218,7 @@ uint8_t Ccrc::crc7_mmc(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc8(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc8(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;        // Initial value
@@ -214,7 +245,7 @@ uint8_t Ccrc::crc8(uint8_t* data, uint16_t length)
  * Xorout:  0x55
  * Alias:   CRC-8/ATM
  *****************************************************************************/
-uint8_t Ccrc::crc8_itu(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc8_itu(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;        // Initial value
@@ -241,7 +272,7 @@ uint8_t Ccrc::crc8_itu(uint8_t* data, uint16_t length)
  * Xorout:  0x00
  * Note:
  *****************************************************************************/
-uint8_t Ccrc::crc8_rohc(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc8_rohc(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0xFF;         // Initial value
@@ -269,7 +300,7 @@ uint8_t Ccrc::crc8_rohc(uint8_t* data, uint16_t length)
  * Alias:   DOW-CRC,CRC-8/IBUTTON
  * Use:     Maxim(Dallas)'s some devices,e.g. DS18B20
  *****************************************************************************/
-uint8_t Ccrc::crc8_maxim(uint8_t* data, uint16_t length)
+uint8_t Ccrc::crc8_maxim(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint8_t crc = 0;         // Initial value
@@ -296,7 +327,7 @@ uint8_t Ccrc::crc8_maxim(uint8_t* data, uint16_t length)
  * Xorout:  0x0000
  * Alias:   CRC-16,CRC-16/ARC,CRC-16/LHA
  *****************************************************************************/
-uint16_t Ccrc::crc16_ibm(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_ibm(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0;        // Initial value
@@ -323,7 +354,7 @@ uint16_t Ccrc::crc16_ibm(uint8_t* data, uint16_t length)
  * Xorout:  0xFFFF
  * Note:
  *****************************************************************************/
-uint16_t Ccrc::crc16_maxim(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_maxim(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0;        // Initial value
@@ -350,7 +381,7 @@ uint16_t Ccrc::crc16_maxim(uint8_t* data, uint16_t length)
  * Xorout:  0xFFFF
  * Note:
  *****************************************************************************/
-uint16_t Ccrc::crc16_usb(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_usb(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0xffff;        // Initial value
@@ -377,7 +408,7 @@ uint16_t Ccrc::crc16_usb(uint8_t* data, uint16_t length)
  * Xorout:  0x0000
  * Note:
  *****************************************************************************/
-uint16_t Ccrc::crc16_modbus(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_modbus(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0xffff;        // Initial value
@@ -404,7 +435,7 @@ uint16_t Ccrc::crc16_modbus(uint8_t* data, uint16_t length)
  * Xorout:  0x0000
  * Alias:   CRC-CCITT,CRC-16/CCITT-TRUE,CRC-16/KERMIT
  *****************************************************************************/
-uint16_t Ccrc::crc16_ccitt(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_ccitt(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0;        // Initial value
@@ -431,7 +462,7 @@ uint16_t Ccrc::crc16_ccitt(uint8_t* data, uint16_t length)
  * Xorout:  0x0000
  * Note:
  *****************************************************************************/
-uint16_t Ccrc::crc16_ccitt_false(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_ccitt_false(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0xffff;        //Initial value
@@ -458,7 +489,7 @@ uint16_t Ccrc::crc16_ccitt_false(uint8_t* data, uint16_t length)
  * Xorout:  0XFFFF
  * Note:
  *****************************************************************************/
-uint16_t Ccrc::crc16_x25(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_x25(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0xffff;        // Initial value
@@ -485,7 +516,7 @@ uint16_t Ccrc::crc16_x25(uint8_t* data, uint16_t length)
  * Xorout:  0x0000
  * Alias:   CRC-16/ZMODEM,CRC-16/ACORN
  *****************************************************************************/
-uint16_t Ccrc::crc16_xmodem(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_xmodem(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0;            // Initial value
@@ -512,7 +543,7 @@ uint16_t Ccrc::crc16_xmodem(uint8_t* data, uint16_t length)
  * Xorout:  0xFFFF
  * Use:     M-Bus,ect.
  *****************************************************************************/
-uint16_t Ccrc::crc16_dnp(uint8_t* data, uint16_t length)
+uint16_t Ccrc::crc16_dnp(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint16_t crc = 0;            // Initial value
@@ -540,7 +571,7 @@ uint16_t Ccrc::crc16_dnp(uint8_t* data, uint16_t length)
  * Alias:   CRC_32/ADCCP
  * Use:     WinRAR,ect.
  *****************************************************************************/
-uint32_t Ccrc::crc32(uint8_t* data, uint16_t length)
+uint32_t Ccrc::crc32(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint32_t crc = 0xffffffff;        // Initial value
@@ -567,7 +598,7 @@ uint32_t Ccrc::crc32(uint8_t* data, uint16_t length)
  * Xorout:  0x0000000
  * Note:
  *****************************************************************************/
-uint32_t Ccrc::crc32_mpeg_2(uint8_t* data, uint16_t length)
+uint32_t Ccrc::crc32_mpeg_2(uint8_t* data,size_t length)
 {
     uint8_t i;
     uint32_t crc = 0xffffffff;  // Initial value
