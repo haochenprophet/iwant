@@ -81,18 +81,20 @@ int do_mmio_action_read(volatile void *address,mmio_action * action)
 	AT_LINE
 	if(action->action <= mmio_read_action)	//mmio_read_action
 	{
-		action->data = *(mmio_data *) address;
+
 		switch(action->action)
 		{
 			case mmio_byte_read  :
-				action->data &=0xFF;
+				action->data = *(unsigned char *) address;
 				break;
 			case mmio_word_read  :
-				action->data &=0xFFFF;
+				action->data = *(unsigned short *) address;
 				break;
-			case mmio_dword_read :
+			case mmio_dword_read : 
+				action->data = *(mmio_data *) address;
 				break;
 			default:
+				action->data = *(mmio_data *) address;
 		}
 		return 0;
 	}
