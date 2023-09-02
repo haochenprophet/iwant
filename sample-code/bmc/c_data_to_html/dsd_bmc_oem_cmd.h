@@ -349,6 +349,7 @@ typedef struct {
 #pragma pack()
 
 extern SetBiosInfoReq_T  bios_info;
+extern SetBiosInfoReq_T  bios_info2;
 
 extern SetBoardInfoReq_T board_info;
 

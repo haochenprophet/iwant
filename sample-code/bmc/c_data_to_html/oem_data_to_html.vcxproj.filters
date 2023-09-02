@@ -8,6 +8,9 @@
     <Filter Include="html">
       <UniqueIdentifier>{088d5f50-c5fa-4310-b1de-fbc160c973de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="bin">
+      <UniqueIdentifier>{63af8ff9-89e5-4b51-aa36-eda8335628a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="oem_data_to_html.c">
@@ -19,12 +22,18 @@
     <ClCompile Include="dsd_bmc_oem_cmd.c">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="oem_data_to_file.c">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oem_data_to_html.h">
       <Filter>source</Filter>
     </ClInclude>
     <ClInclude Include="dsd_bmc_oem_cmd.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="oem_data_to_file.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
@@ -64,6 +73,39 @@
     </None>
     <None Include="sata_information.html">
       <Filter>html</Filter>
+    </None>
+    <None Include="bios_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="board_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="cpld_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="cpu_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="fpga_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="gpu_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="memory_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="nvme_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="pcie_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="power_info.bin">
+      <Filter>bin</Filter>
+    </None>
+    <None Include="sata_info.bin">
+      <Filter>bin</Filter>
     </None>
   </ItemGroup>
 </Project>

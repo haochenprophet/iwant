@@ -1,7 +1,7 @@
 #include "dsd_bmc_oem_cmd.h"
 
 SetBiosInfoReq_T  bios_info = { 0,{"INSYDE Corp"},{"105"},"08/18/2023"};
-
+SetBiosInfoReq_T  bios_info2 = { 0 };
 SetBoardInfoReq_T board_info = { 0,{"Decenta"},{"S22-EGS-SERVER01"},"V1.01" };
 
 SetCpldInfoReq_T  cpld_info = { 0,{"Decenta"},{"6900top_impl1_230627"} }; 

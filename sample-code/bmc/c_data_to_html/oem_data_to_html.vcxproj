@@ -130,21 +130,34 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="dsd_bmc_oem_cmd.c" />
+    <ClCompile Include="oem_data_to_file.c" />
     <ClCompile Include="oem_data_to_html.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dsd_bmc_oem_cmd.h" />
+    <ClInclude Include="oem_data_to_file.h" />
     <ClInclude Include="oem_data_to_html.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bios_info.bin" />
+    <None Include="board_info.bin" />
+    <None Include="cpld_info.bin" />
+    <None Include="cpu_info.bin" />
+    <None Include="fpga_info.bin" />
+    <None Include="gpu_info.bin" />
     <None Include="gpu_information.css" />
     <None Include="gpu_information.html" />
+    <None Include="memory_info.bin" />
     <None Include="memory_information.css" />
     <None Include="memory_information.html" />
+    <None Include="nvme_info.bin" />
     <None Include="nvme_information.css" />
     <None Include="nvme_information.html" />
+    <None Include="pcie_info.bin" />
     <None Include="pcie_information.css" />
     <None Include="pcie_information.html" />
+    <None Include="power_info.bin" />
+    <None Include="sata_info.bin" />
     <None Include="sata_information.css" />
     <None Include="sata_information.html" />
     <None Include="system_information.css" />
