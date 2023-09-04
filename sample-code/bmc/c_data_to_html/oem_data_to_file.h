@@ -1,6 +1,8 @@
 #pragma once
 
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "dsd_bmc_oem_cmd.h"
 
 #define BIOS_INFO_BIN   "bios_info.bin"

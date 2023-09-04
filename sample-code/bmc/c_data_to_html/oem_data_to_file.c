@@ -1,9 +1,65 @@
 
 #include "oem_data_to_file.h"
 
+//-1 : do nothing  0 == ,1 !=
+int copmare_file_data(char * file,unsigned char *data,int size)
+{
+	FILE* fp;
+	int n;
+	int ret_data = 0;//set default ret
+	int file_size;
+	unsigned char * file_data;
+
+	if (!(fp = fopen(file, "rb"))) {
+		printf("copmare_file_data:can not open the %s file.\n", file);
+		return -1;
+	}
+
+	fseek(fp, 0, SEEK_END);
+	file_size = ftell(fp);
+
+	do {
+		file_data = (unsigned char*)malloc(file_size);
+		if (file_data == (unsigned char*)0)
+		{
+			printf("Error:can not malloc %d memory.\n", file_size);
+			ret_data = -1;//Error 
+			break;
+		}
+
+		fseek(fp, 0, SEEK_SET);
+		fread(file_data, file_size, 1, fp);
+
+		if (file_size != size)
+		{
+			ret_data = 1; // not == 
+			break; 
+		}
+
+		for (n = 0; n < file_size; n++)
+		{
+			if (file_data[n] == data[n]) continue;
+			ret_data = 1; // not == 
+			break;
+		}
+
+	} while (0);
+
+
+	fclose(fp);
+	free(file_data);
+	return ret_data;
+}
+
 int data_info_to_file(char* file,void * data,int size)
 {
 	FILE* fp;
+	
+	if (0 == copmare_file_data(file, data, size)){
+		printf("File %s equal and saved.\n", file);
+		return 0;
+	}
+
 	if (!(fp = fopen(file, "wb+"))) {
 		printf("Error:can not open the %s file.\n", file);
 		return -1;
