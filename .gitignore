@@ -23,3 +23,5 @@ batch/*.exe
 batch/*.dll
 iwant
 src/hardware/hardware
+sample-code/bmc/c_data_to_html/.vs/
+sample-code/bmc/c_data_to_html/x64/
