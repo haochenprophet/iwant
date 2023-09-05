@@ -29,5 +29,6 @@
 
 void oem_data_to_file();
 void file_to_oem_data();
+int  file_is_exist(char* file);
 int  data_info_to_file(char* file, void* data, int size);
 int  file_to_data_info(char* file, void* data, int size);

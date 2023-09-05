@@ -423,8 +423,48 @@ int system_data_to_html(char * html_file)
 	return 0;
 }
 
+char css_info[]="table, th, td { \n\
+border - left: 1px solid black; \n\
+border - right: 1px solid black; \n\
+border - top: 1px solid black; \n\
+border - bottom: 1px solid black; \n\
+border - collapse:collapse; \n\
+}";
+
+#define CSS_INFO_SIZE (sizeof(css_info))
+
+void check_and_init_css_file()
+{
+
+	if (0 == file_is_exist((char*) SYSTEM_INFO_CSS))
+	{
+		data_info_to_file((char*)SYSTEM_INFO_CSS,(void*)css_info,(int) CSS_INFO_SIZE-1);
+	}
+	if (0 == file_is_exist((char*)MEMORY_INFO_CSS))
+	{
+		data_info_to_file((char*)MEMORY_INFO_CSS, (void*)css_info, (int)CSS_INFO_SIZE-1);
+	}
+	if (0 == file_is_exist((char*)PCIE_INFO_CSS))
+	{
+		data_info_to_file((char*)PCIE_INFO_CSS, (void*)css_info, (int)CSS_INFO_SIZE-1);
+	}
+	if (0 == file_is_exist((char*)GPU_INFO_CSS))
+	{
+		data_info_to_file((char*)GPU_INFO_CSS, (void*)css_info, (int)CSS_INFO_SIZE-1);
+	}
+	if (0 == file_is_exist((char*)NVME_INFO_CSS))
+	{
+		data_info_to_file((char*)NVME_INFO_CSS, (void*)css_info, (int)CSS_INFO_SIZE-1);
+	}
+	if (0 == file_is_exist((char*)SATA_INFO_CSS))
+	{
+		data_info_to_file((char*)SATA_INFO_CSS, (void*)css_info, (int)CSS_INFO_SIZE-1);
+	}
+}
+
 void oem_data_to_html()
 {
+	check_and_init_css_file();
 	system_data_to_html((char*)SYSTEM_INFO_HTML);
 	memory_data_to_html((char*)MEMORY_INFO_HTML);
 	pcie_data_to_html((char*)PCIE_INFO_HTML);

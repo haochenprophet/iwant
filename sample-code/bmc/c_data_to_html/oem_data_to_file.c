@@ -81,6 +81,17 @@ int file_to_data_info(char* file, void* data, int size)
 	return 0;
 }
 
+//0 not exist 1:exist
+int file_is_exist(char* file)
+{
+	FILE* fp;
+	if (!(fp = fopen(file, "rb"))) {
+		return 0;
+	}
+	fclose(fp);
+	return 1;
+}
+
 void oem_data_to_file()
 {
 	data_info_to_file((char*)BIOS_INFO_BIN, (void *) & bios_info, sizeof(bios_info));
