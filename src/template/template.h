@@ -1,7 +1,7 @@
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 
-#include "object.h"
+#include "../object.h"
 
 namespace n_template {
 	class Ctemplate :public Object

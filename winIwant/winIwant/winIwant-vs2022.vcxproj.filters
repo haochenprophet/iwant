@@ -58,6 +58,12 @@
     <Filter Include="database">
       <UniqueIdentifier>{1f76c98d-2fe3-48c4-aafa-bc3022de4d18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tree">
+      <UniqueIdentifier>{31eb0f95-84eb-4f4e-8194-37aabed8f89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="template">
+      <UniqueIdentifier>{a212be88-8740-4ebd-9ab3-1a89f4e87dd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5609,6 +5615,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\crc.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tree\tree.cpp">
+      <Filter>tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\template\template.cpp">
+      <Filter>template</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -11299,6 +11311,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\crc.h">
       <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tree\tree.h">
+      <Filter>tree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\template\template.h">
+      <Filter>template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
