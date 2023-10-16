@@ -424,11 +424,11 @@ int system_data_to_html(char * html_file)
 }
 
 char css_info[]="table, th, td { \n\
-border - left: 1px solid black; \n\
-border - right: 1px solid black; \n\
-border - top: 1px solid black; \n\
-border - bottom: 1px solid black; \n\
-border - collapse:collapse; \n\
+border-left: 1px solid black; \n\
+border-right: 1px solid black; \n\
+border-top: 1px solid black; \n\
+border-bottom: 1px solid black; \n\
+border-collapse:collapse; \n\
 }";
 
 #define CSS_INFO_SIZE (sizeof(css_info))

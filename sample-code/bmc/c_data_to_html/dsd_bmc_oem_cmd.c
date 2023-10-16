@@ -64,5 +64,3 @@ SetPowerInfoReq_T  power_info[MAX_POWER_COUNT] = {
 SetSataInfoReq_T   sata_info[MAX_SATA_COUNT];
 
 DsdOemInfo_T dsd_oem_info = { 0 }; //init all data to 0 ;
-
-
