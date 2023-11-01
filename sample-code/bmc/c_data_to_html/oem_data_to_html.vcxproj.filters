@@ -25,6 +25,9 @@
     <ClCompile Include="oem_data_to_file.c">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="dsd_pcie_black_white_device_list.c">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oem_data_to_html.h">
@@ -34,6 +37,9 @@
       <Filter>source</Filter>
     </ClInclude>
     <ClInclude Include="oem_data_to_file.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="dsd_pcie_black_white_device_list.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>

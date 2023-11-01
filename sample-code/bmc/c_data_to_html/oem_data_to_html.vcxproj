@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dsd_pcie_black_white_device_list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="dsd_bmc_oem_cmd.c" />
     <ClCompile Include="oem_data_to_file.c" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dsd_bmc_oem_cmd.h" />
+    <ClInclude Include="dsd_pcie_black_white_device_list.h" />
     <ClInclude Include="oem_data_to_file.h" />
     <ClInclude Include="oem_data_to_html.h" />
   </ItemGroup>
