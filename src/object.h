@@ -345,9 +345,9 @@ namespace n_object {
 		wstring s_ws(string * sp);
 		string ws_s(wstring* ws);
 		//system command
-		int sys_cmd(char * cmd);
-		int sys_cmd(string *cmd);
-		int sys_cmd();
+		int sys_cmd(char * cmd,int loop_count = 1);
+		int sys_cmd(string *cmd,int loop_count = 1);
+		int sys_cmd(int loop_count = 1);
 		int get_cmd(int argc, char *argv[],char *cmd);
 		int list_cmd(int argc, char *argv[]);
 		int dispatch_cmd(int argc, char *argv[]);

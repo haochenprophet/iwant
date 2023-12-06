@@ -1585,19 +1585,23 @@ string Object::ws_s(wstring* ws)
 	return s;
 }
 
-int Object::sys_cmd(char *cmd)
+int Object::sys_cmd(char *cmd,int loop_count)
 {
-	return system((char *)cmd);
+	int ret = 0;
+	do { ret = system((char*)cmd); } while (--loop_count > 0);
+	return ret;
 }
 
-int Object::sys_cmd(string *cmd)
+int Object::sys_cmd(string *cmd,int loop_count)
 {
-	return system(cmd->c_str());
+	int ret = 0;
+	do { ret = system(cmd->c_str()); } while (--loop_count > 0);
+	return ret;
 }
 
-int Object::sys_cmd()
+int Object::sys_cmd(int loop_count)
 {
-	return this->sys_cmd((string *)&this->s_cmd);
+	return this->sys_cmd((string*)&this->s_cmd, loop_count);
 }
 
 int Object::get_cmd(int argc, char *argv[], char *cmd)
