@@ -9,9 +9,42 @@
 #include "io_action.h"
 
 action_define_t io_action_table[] ={
+    {io_byte_read,(char * )"RR",(char * )"Byte  Read  :io RR 0x80"},
+    {io_byte_read,(char * )"rr",(char * )"Byte  Read  :io rr 0x80"},
     {io_byte_read,(char * )"BR",(char * )"Byte  Read  :io BR 0x80"},
     {io_byte_read,(char * )"br",(char * )"Byte  Read  :io br 0x80"},
+    {io_word_read,(char * )"WR",(char * )"Word  Read  :io WR 0x80"},
+    {io_word_read,(char * )"wr",(char * )"Word  Read  :io wr 0x80"},   
+    {io_dword_read,(char * )"DR",(char * )"Dword Read  :io DR 0x80"},
+    {io_dword_read,(char * )"dr",(char * )"Dword Read  :io dr 0x80"},      
+    
+    {io_byte_write,(char * )"WT",(char * )"Byte  Write :io WT 0x80 0xA5"},
+    {io_byte_write,(char * )"wt",(char * )"Byte  Write :io wt 0x80 0xA5"},
     {io_byte_write,(char * )"BW",(char * )"Byte  Write :io BW 0x80 0xA5"},
+    {io_byte_write,(char * )"bw",(char * )"Byte  Write :io bw 0x80 0xA5"},
+    {io_word_write,(char * )"WW",(char * )"Word  Write :io WW 0x80 0xA5"},
+    {io_word_write,(char * )"Ww",(char * )"Word  Write :io ww 0x80 0xA5"},
+    {io_dword_write,(char * )"DW",(char * )"Dword  Write :io dw 0x80 0xA5"},
+    {io_dword_write,(char * )"dw",(char * )"Dword  Write :io dw 0x80 0xA5"},  
+   
+    {io_byte_and,(char * )"BA",(char * )"Byte  And   :io BA 0x80 0xA5"}, 
+    {io_byte_and,(char * )"ba",(char * )"Byte  And   :io ba 0x80 0xA5"}, 
+    {io_word_and,(char * )"WA",(char * )"Word  And   :io WA 0x80 0xAA55"},
+    {io_word_and,(char * )"wa",(char * )"Word  And   :io wa 0x80 0xAA55"},
+    {io_dword_and,(char * )"DA",(char * )"Dword And   :io DA 0x80 0xAAAA5555"},
+    {io_dword_and,(char * )"da",(char * )"Dword And   :io da 0x80 0xAAAA5555"},
+  
+    {io_byte_or,(char * )"BO",(char * )"Byte  Or   :io BO 0x80 0xA5"}, 
+    {io_byte_or,(char * )"bo",(char * )"Byte  Or   :io bo 0x80 0xA5"}, 
+    {io_word_or,(char * )"WO",(char * )"Word  Or   :io WO 0x80 0xAA55"},
+    {io_word_or,(char * )"wo",(char * )"Word  Or   :io wo 0x80 0xAA55"},
+    {io_dword_or,(char * )"DO",(char * )"Dword Or   :io DO 0x80 0xAAAA5555"},
+    {io_dword_or,(char * )"do",(char * )"Dword Or   :io do 0x80 0xAAAA5555"},
+
+    {isa_read,(char * )"IR",(char * )"ISA   Read  :io IR 0x70 0x01 0x71"},
+    {isa_read,(char * )"ir",(char * )"ISA   Read  :io ir 0x70 0x01 0x71"},
+    {isa_write,(char * )"IW",(char * )"ISA   Write :io IW 0x2E 0x07 0x2F 0x01"},
+    {isa_write,(char * )"iw",(char * )"ISA   Write :io iw 0x2E 0x07 0x2F 0x01"},          
 };
 
 #define  IO_ACTION_COUNT  (sizeof(io_action_table)/sizeof(action_define_t))
@@ -26,7 +59,7 @@ char * io_usage = (char * ) "\
 \tByte  Dump  :io BD 0x500 \n\
 \tWord  Dump  :io WD 0x500 \n\
 \tDword Dump  :io DD 0x500 \n\
-\tWrite       :io WT 0x80 0xAAAA5555\n\
+\tWrite       :io WT 0x80 0xAA\n\
 \tByte  Write :io BW 0x80 0xA5\n\
 \tWord  Write :io WW 0x80 0xAA55\n\
 \tDword Write :io DW 0x80 0xAAAA5555\n\
@@ -44,6 +77,45 @@ char * io_usage = (char * ) "\
 \tISA   Or    :io IO 0x2E 0x30 0x2F 0x01\n\
 \tISA   Dump  :io ID 0x2E 0x30 0x2F 0x100\n\
 ";
+
+/*
+enum io_action_enum { 
+    io_byte_read=1, io_word_read,  io_dword_read, io_read_action,// read action : [io_address] to data 
+    io_byte_dump,  io_word_dump, io_dword_dump,io_dump_action,// dump action: data to <io_address>  [length]
+    io_byte_write,  io_word_write, io_dword_write,io_write_action,// write action: data to [io_address] 
+    io_byte_and,    io_word_and,   io_dword_and,  io_and_action,// write and action: data to [io_address] 
+    io_byte_or,     io_word_or,    io_dword_or,   io_or_action,// write or action: data to [io_address] 
+    isa_read,     isa_dump ,    isa_write,    isa_and,   isa_or,// write or action: data to [io_address] 
+};
+*/
+
+int check_parameters(int argc,int cmd_action)
+{
+    if(cmd_action>= io_byte_read && cmd_action<=io_dump_action && argc <3) //check io read  dump input count 
+    {
+        printf("Error:input parameters are not enough\n");
+        return -1;
+    }
+
+    if(cmd_action>= io_byte_write && cmd_action<=io_or_action && argc <4)
+    {
+        printf("Error:input parameters are not enough\n");
+        return -1;
+    }
+
+    if(cmd_action>= isa_read && cmd_action<=isa_dump && argc <5)
+    {
+        printf("Error:input parameters are not enough\n");
+        return -1;
+    }
+
+    if(cmd_action>= isa_write && cmd_action<=isa_or && argc <6)
+    {
+        printf("Error:input parameters are not enough\n");
+        return -1;
+    }
+    return 0;
+}
 
 int main(int argc,char ** argv)
 {
@@ -64,17 +136,82 @@ int main(int argc,char ** argv)
     }
 
    cmd_action= action.get_action(argv[1],io_action_table,IO_ACTION_COUNT);
-   if(-1==cmd_action) return -1;
- 
+   if(-1==cmd_action){return -1;} 
+   
+   if(0!=check_parameters(argc,cmd_action)){return -1;} 
+
    if(cmd_action==io_byte_read) 
    {
         io.read((unsigned short)cmd.buf[0],& byte_data);//byte read
         printf("byte_data=0x%02X\n",byte_data);
    }
 
+   if(cmd_action==io_word_read) 
+   {
+        io.read((unsigned short)cmd.buf[0],& word_data);//word read
+        printf("word_data=0x%04X\n",word_data);
+   }
+
+   if(cmd_action==io_dword_read) 
+   {
+        io.read((unsigned short)cmd.buf[0],& dword_data);//dword read
+        printf("dword_data=0x%08X\n",dword_data);
+   }
+
    if(cmd_action==io_byte_write) 
    {
-        io.write((unsigned short)cmd.buf[0],( unsigned char) cmd.buf[1]);//byte read
+        io.write((unsigned short)cmd.buf[0],( unsigned char) cmd.buf[1]);//byte write
+   }
+
+   if(cmd_action==io_word_write) 
+   {
+        io.write((unsigned short)cmd.buf[0],( unsigned short) cmd.buf[1]);//word write
+   }
+   
+   if(cmd_action==io_dword_write) 
+   {
+        io.write((unsigned short)cmd.buf[0],( unsigned int) cmd.buf[1]);//dword write
+   }
+   
+   if(cmd_action==io_byte_and) 
+   {
+        io._and((unsigned short)cmd.buf[0],( unsigned char) cmd.buf[1]);//byte and
+   }
+   
+   if(cmd_action==io_word_and) 
+   {
+        io._and((unsigned short)cmd.buf[0],( unsigned short) cmd.buf[1]);//byte and
+   }
+
+   if(cmd_action==io_dword_and) 
+   {
+        io._and((unsigned short)cmd.buf[0],( unsigned int) cmd.buf[1]);//byte and
+   }
+
+   if(cmd_action==io_byte_or) 
+   {
+        io._or((unsigned short)cmd.buf[0],( unsigned char) cmd.buf[1]);//byte or
+   }
+   
+   if(cmd_action==io_word_or) 
+   {
+        io._or((unsigned short)cmd.buf[0],( unsigned short) cmd.buf[1]);//byte or
+   }
+
+   if(cmd_action==io_dword_or) 
+   {
+        io._or((unsigned short)cmd.buf[0],( unsigned int) cmd.buf[1]);//byte or
+   }
+
+   if(cmd_action==isa_read)
+   {
+        io.isa((unsigned short)cmd.buf[0],(unsigned char)  cmd.buf[1],(unsigned short) cmd.buf[2],& byte_data);// isa read 
+        printf("index[%02X]=0x%02X\n",(unsigned char)  cmd.buf[1],byte_data);
+   }
+
+    if(cmd_action==isa_write)
+   {
+        io.isa((unsigned short)cmd.buf[0],(unsigned char)  cmd.buf[1],(unsigned short) cmd.buf[2],(unsigned char) cmd.buf[3]);// isa write 
    }
 
   return 0;

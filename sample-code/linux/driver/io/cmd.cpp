@@ -9,6 +9,21 @@ argv[0]  ./io
 argv[1]  action
 argv[2]  - argv [n]  int 
 */
+    Ccmd::Ccmd()
+    {
+    	this->clear_buf();
+    }
+
+    Ccmd::~Ccmd()
+    {
+
+    }
+
+    void Ccmd::clear_buf()
+    {
+    	for(int i=0;i<BUF_LEN;i++){ this->buf[i]=0;}
+    }
+
     int Ccmd::analyze(int argc,char ** argv)
     {
     	int i,n;

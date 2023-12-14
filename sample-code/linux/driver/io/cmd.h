@@ -9,6 +9,9 @@ class Ccmd
 public:
     int  buf[BUF_LEN];
 public :
+    Ccmd();
+    ~Ccmd();
+    void clear_buf();
     int analyze(int argc,char ** argv);
 };
 
