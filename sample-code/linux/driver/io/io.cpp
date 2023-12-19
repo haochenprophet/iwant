@@ -1,4 +1,5 @@
 #include "io.h"
+
 /*
   #include <sys/io.h>
 
@@ -138,5 +139,16 @@
     {
         outb(index,index_addr);
         outb(inb(data_addr)|data,data_addr);
+        return 0;
+    }
+
+    int Cio::isa_dump(unsigned short index_addr,unsigned short data_addr,unsigned int  start,unsigned int end)
+    {
+        unsigned char data;
+        for(;start<=end;start++)
+        {
+            this->isa(index_addr,(unsigned char )start,data_addr,& data);// isa read 
+            printf("[%02X]=%02X\n",start,data);
+        }
         return 0;
     }

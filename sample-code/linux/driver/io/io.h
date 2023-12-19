@@ -2,7 +2,7 @@
 #define __IO_H_
 
 #include <sys/io.h>
-
+#include <stdio.h>
 class Cio
 {
 public :
@@ -28,7 +28,7 @@ public :
     int isa(unsigned short index_addr,unsigned char  index,unsigned short data_addr,unsigned char  data);// isa write
     int isa_and(unsigned short index_addr,unsigned char  index,unsigned short data_addr,unsigned char  data);// isa and
     int isa_or(unsigned short index_addr,unsigned char  index,unsigned short data_addr,unsigned char  data);// isa or
-
+    int isa_dump(unsigned short index_addr,unsigned short data_addr,unsigned int  start=0,unsigned int end=0xFF);
 };
 
 #endif //__IO_H_
