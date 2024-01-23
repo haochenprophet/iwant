@@ -5619,7 +5619,10 @@
     <ClCompile Include="..\..\src\tree\tree.cpp">
       <Filter>tree</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\template\template.cpp">
+    <ClCompile Include="..\..\src\math\md5.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\template\template_object.cpp">
       <Filter>template</Filter>
     </ClCompile>
   </ItemGroup>
@@ -11315,7 +11318,10 @@
     <ClInclude Include="..\..\src\tree\tree.h">
       <Filter>tree</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\template\template.h">
+    <ClInclude Include="..\..\src\math\md5.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\template\template_object.h">
       <Filter>template</Filter>
     </ClInclude>
   </ItemGroup>

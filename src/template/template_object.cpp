@@ -1,17 +1,17 @@
-#include "template.h"
-int Ctemplate::my_init(void *p)
+#include "template_object.h"
+int Ctemplate_object::my_init(void *p)
 {
-	this->name = "Ctemplate";
-	this->alias = "template";
+	this->name = "Ctemplate_object";
+	this->alias = "template_object";
 	return 0;
 }
 
-Ctemplate::Ctemplate()
+Ctemplate_object::Ctemplate_object()
 {
 	this->my_init();
 }
 
-Ctemplate::~Ctemplate()
+Ctemplate_object::~Ctemplate_object()
 {
 
 }

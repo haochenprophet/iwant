@@ -138,7 +138,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D MD5_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -1594,6 +1594,7 @@
     <ClCompile Include="..\..\src\math\logb.cpp" />
     <ClCompile Include="..\..\src\math\lrint.cpp" />
     <ClCompile Include="..\..\src\math\lround.cpp" />
+    <ClCompile Include="..\..\src\math\md5.cpp" />
     <ClCompile Include="..\..\src\math\modf.cpp" />
     <ClCompile Include="..\..\src\math\nan.cpp" />
     <ClCompile Include="..\..\src\math\nearbyint.cpp" />
@@ -1991,7 +1992,7 @@
     <ClCompile Include="..\..\src\tag.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
     <ClCompile Include="..\..\src\temp.cpp" />
-    <ClCompile Include="..\..\src\template\template.cpp" />
+    <ClCompile Include="..\..\src\template\template_object.cpp" />
     <ClCompile Include="..\..\src\test.cpp" />
     <ClCompile Include="..\..\src\timeline.cpp" />
     <ClCompile Include="..\..\src\timepoint.cpp" />
@@ -3470,6 +3471,7 @@
     <ClInclude Include="..\..\src\math\lround.h" />
     <ClInclude Include="..\..\src\math\math_all_h_include.h" />
     <ClInclude Include="..\..\src\math\math_g_code.h" />
+    <ClInclude Include="..\..\src\math\md5.h" />
     <ClInclude Include="..\..\src\math\modf.h" />
     <ClInclude Include="..\..\src\math\nan.h" />
     <ClInclude Include="..\..\src\math\nearbyint.h" />
@@ -3877,7 +3879,7 @@
     <ClInclude Include="..\..\src\tag.h" />
     <ClInclude Include="..\..\src\task.h" />
     <ClInclude Include="..\..\src\temp.h" />
-    <ClInclude Include="..\..\src\template\template.h" />
+    <ClInclude Include="..\..\src\template\template_object.h" />
     <ClInclude Include="..\..\src\temp_def.h" />
     <ClInclude Include="..\..\src\test.h" />
     <ClInclude Include="..\..\src\timeline.h" />
