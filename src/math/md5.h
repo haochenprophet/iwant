@@ -63,6 +63,7 @@ namespace n_md5 {
 		void finalize(MD5Context* ctx);
 		void step(uint32_t* buffer, uint32_t* input);
 
+		int buffer(uint8_t * input, size_t input_len, uint8_t* result, int result_len);
 		int str(char* input, uint8_t* result, int len);
 		int str(char* input);
 		int file(FILE* file, uint8_t* result, int len);

@@ -137,16 +137,21 @@ void Cmd5::step(uint32_t* buffer, uint32_t* input)
     buffer[3] += md5_dd;
 }
 
-int Cmd5::str(char* input, uint8_t* result,int len)
+int Cmd5::buffer(uint8_t * input, size_t input_len, uint8_t* result, int result_len)
 {
     MD5Context ctx;
-    if(len <16 ) return -1; 
+    if (result_len < 16) return -1;
     this->init(&ctx);
-    this->update(&ctx, (uint8_t*)input, strlen(input));
+    this->update(&ctx, (uint8_t*)input, input_len);
     this->finalize(&ctx);
 
     memcpy(result, ctx.digest, 16);
     return 0;
+}
+
+int Cmd5::str(char* input, uint8_t* result,int len)
+{
+    return this->buffer((uint8_t*)input, strlen(input), result,len);
 }
 
 int Cmd5::str(char* input)
