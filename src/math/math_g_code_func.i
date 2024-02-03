@@ -44,6 +44,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_logb.where());
 	p->addMe(g_lrint.where());
 	p->addMe(g_lround.where());
+	p->addMe(g_md5.where());
 	p->addMe(g_modf.where());
 	p->addMe(g_nan.where());
 	p->addMe(g_nearbyint.where());

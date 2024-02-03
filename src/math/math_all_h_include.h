@@ -43,6 +43,7 @@
 #include "logb.h" 
 #include "lrint.h" 
 #include "lround.h" 
+#include "md5.h" 
 #include "modf.h" 
 #include "nan.h" 
 #include "nearbyint.h" 

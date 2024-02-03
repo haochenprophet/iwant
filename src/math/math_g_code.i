@@ -44,6 +44,7 @@
 	Clogb  g_logb ;
 	Clrint  g_lrint ;
 	Clround  g_lround ;
+	Cmd5  g_md5;
 	Cmodf  g_modf ;
 	Cnan  g_nan ;
 	Cnearbyint  g_nearbyint ;
