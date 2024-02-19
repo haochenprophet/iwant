@@ -25,6 +25,8 @@ Ctree::~Ctree()
 int main(int argc, char *argv[])
 {
 	WHERE_I;
+	Ctree tree;
+	std::cout << "Ctree size=" << tree.my_size() << endl;
 
 	return 0;
 }

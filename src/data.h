@@ -8,6 +8,12 @@
 
 namespace n_data {
 
+	typedef struct data_buffer_struct //data buffer form start to end memory address 
+	{
+		void* start;
+		void* end;
+	}data_buffer;
+
 	typedef union union_data
 	{
 		bool b;
@@ -41,6 +47,7 @@ namespace n_data {
 		std::string *ss;
 		std::wstring *sws;
 		void * data;//Placeholder can be used point for append other datatype memory space 
+		data_buffer buffer;
 	}u_data;
 
 	enum class UdataType{
@@ -75,6 +82,7 @@ namespace n_data {
 		double_dp,
 		std_string_ss,
 		std_wstring_sws,
+		buffer,
 	};
 
 	class CdataTypeToken
@@ -134,6 +142,9 @@ namespace n_data {
 		void set(std::wstring *sws, int len = 1);
 		void set(Udata *p, int len = 1);
 		void set(u_data *p, int len = 1);
+		void set(void * start,void * end);
+		void set(data_buffer buffer);
+		void set(data_buffer * p_buffer);
 		//operator =
 		void operator =(bool d) { this->set(d); }
 		void operator =(char d) { this->set(d); }
@@ -167,6 +178,9 @@ namespace n_data {
 		void operator =(std::wstring *d) { this->set(d); }
 		void operator =(Udata *d) { this->set(d); }
 		void operator =(u_data*d) { this->set(d); }
+		void operator =(data_buffer d) { this->set(d); }
+		void operator =(data_buffer * d) { this->set(d); }
+
 		//get data
 		int get(bool * b) { *b = this->data.b; return this->len; }
 		int get(char * c);
@@ -198,6 +212,9 @@ namespace n_data {
 		int get(double * *dp);
 		int get(std::string * *ss);
 		int get(std::wstring * *sws);
+		int get(void* * start, void* * end);
+		int get(data_buffer* p_buffer);
+
 		//compare
 		T_TYPE int cmp_t(T a, T b, int len_a=1, int len_b=1);
 		int cmp(bool b) { if (this->data.b == b) return 0; return (this->data.b > b) ? 1 : 0; }

@@ -474,6 +474,34 @@ void Udata::set(u_data *p, int len)
 	this->data = *p;
 	this->len = len;
 }
+
+void Udata::set(void* start, void* end)
+{
+	if(end>=start)
+	{
+		this->data.buffer.start = start;
+		this->data.buffer.end = end;
+		this->len = (char*)end - (char*)start; //end > start
+	}
+	else //if(end < start>  //swap start and end 
+	{
+		this->data.buffer.start = end;
+		this->data.buffer.end = start;
+		this->len = (char*)start - (char*)end; //end < start
+	}
+	this->type = UdataType::buffer;
+}
+
+void Udata::set(data_buffer buffer)
+{
+	this->set(buffer.start, buffer.end);
+}
+
+void Udata::set(data_buffer* p_buf)
+{
+	this->set(p_buf->start, p_buf->end);
+}
+
 //get
 int Udata::get(char * c)
 {
@@ -590,6 +618,20 @@ int Udata::get(std::string * *ss)
 int Udata::get(std::wstring * *sws)
 {
 	*sws = this->data.sws; return this->len;
+}
+
+int Udata::get(void** start, void** end)
+{
+	*start = this->data.buffer.start;
+	*end = this->data.buffer.end;
+	return this->len;
+}
+
+int Udata::get(data_buffer* p_buffer)
+{
+	p_buffer->start = this->data.buffer.start;
+	p_buffer->end = this->data.buffer.end;
+	return this->len;
 }
 
 int Udata::cmp(char c)
