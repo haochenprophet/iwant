@@ -21,7 +21,7 @@ Ctree::~Ctree()
 #endif
 
 #if TREE_TEST
-#include INCLUDE_ALL_H
+#include "../all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

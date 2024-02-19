@@ -138,7 +138,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D MD5_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D TREE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -1999,6 +1999,7 @@
     <ClCompile Include="..\..\src\timer.cpp" />
     <ClCompile Include="..\..\src\timetree.cpp" />
     <ClCompile Include="..\..\src\tree\tree.cpp" />
+    <ClCompile Include="..\..\src\tree\tree_node.cpp" />
     <ClCompile Include="..\..\src\uri.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\uuid.cpp" />
@@ -3887,6 +3888,7 @@
     <ClInclude Include="..\..\src\timer.h" />
     <ClInclude Include="..\..\src\timetree.h" />
     <ClInclude Include="..\..\src\tree\tree.h" />
+    <ClInclude Include="..\..\src\tree\tree_node.h" />
     <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
     <ClInclude Include="..\..\src\url_def.h" />

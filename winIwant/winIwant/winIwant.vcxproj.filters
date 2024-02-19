@@ -5625,6 +5625,9 @@
     <ClCompile Include="..\..\src\template\template_object.cpp">
       <Filter>template</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\tree\tree_node.cpp">
+      <Filter>tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11323,6 +11326,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\template\template_object.h">
       <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tree\tree_node.h">
+      <Filter>tree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
