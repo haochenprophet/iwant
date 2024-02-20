@@ -160,6 +160,7 @@
     <ClCompile Include="..\..\src\code.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\company.cpp" />
+    <ClCompile Include="..\..\src\compare.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
     <ClCompile Include="..\..\src\copy.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
@@ -2022,6 +2023,7 @@
     <ClInclude Include="..\..\src\code_action.h" />
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\company.h" />
+    <ClInclude Include="..\..\src\compare.h" />
     <ClInclude Include="..\..\src\const.h" />
     <ClInclude Include="..\..\src\copy.h" />
     <ClInclude Include="..\..\src\cout.h" />
