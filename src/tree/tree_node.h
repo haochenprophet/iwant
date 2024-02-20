@@ -12,8 +12,11 @@ namespace n_tree_node {
 	class tree_node 
 	{
 	public:
+		int node_id;
 		tree_sub_node sub_node;
 		tree_data data;
+	public:
+		tree_node();
 	public:
 		size_t sub_node_count() { return this->sub_node.size(); }
 		void add_sub_node(tree_node* node) { this->sub_node.push_back((void *)node); }

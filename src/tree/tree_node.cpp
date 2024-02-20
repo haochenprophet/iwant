@@ -1,4 +1,12 @@
 #include "tree_node.h"
+
+int total_node_id = 0;
+
+tree_node::tree_node()
+{
+	this->node_id = ++ total_node_id;
+}
+
 int Ctree_node::my_init(void *p)
 {
 	this->name = "Ctree_node";
