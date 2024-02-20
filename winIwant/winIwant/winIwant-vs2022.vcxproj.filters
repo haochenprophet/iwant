@@ -5628,6 +5628,9 @@
     <ClCompile Include="..\..\src\tree\tree_node.cpp">
       <Filter>tree</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\key_value.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11329,6 +11332,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\tree\tree_node.h">
       <Filter>tree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\key_value.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

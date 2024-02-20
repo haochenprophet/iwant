@@ -1547,6 +1547,7 @@
     <ClCompile Include="..\..\src\keywords\__virtual_inheritance.cpp" />
     <ClCompile Include="..\..\src\keywords\__w64.cpp" />
     <ClCompile Include="..\..\src\keywords\__wchar_t.cpp" />
+    <ClCompile Include="..\..\src\key_value.cpp" />
     <ClCompile Include="..\..\src\locate.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\make.cpp" />
@@ -3422,6 +3423,7 @@
     <ClInclude Include="..\..\src\keywords\__virtual_inheritance.h" />
     <ClInclude Include="..\..\src\keywords\__w64.h" />
     <ClInclude Include="..\..\src\keywords\__wchar_t.h" />
+    <ClInclude Include="..\..\src\key_value.h" />
     <ClInclude Include="..\..\src\locate.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\main_action.h" />
