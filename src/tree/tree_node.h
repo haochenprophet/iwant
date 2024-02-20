@@ -2,7 +2,6 @@
 #define TREE_NODE_H
 
 #include "../object.h"
-#include "tree_node.h"
 
 namespace n_tree_node {
 
