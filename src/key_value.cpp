@@ -16,6 +16,31 @@ Ckey_value::~Ckey_value()
 
 }
 
+key_value::key_value()
+{
+	this->my_init();
+}
+
+key_value::~key_value()
+{
+
+}
+
+void key_value::my_init()
+{
+	this->key = nullptr;
+	this->value = nullptr;
+	this->key_size = 0;
+	this->value_size = 0;
+}
+
+bool key_value::is_me(void* key, size_t size)
+{
+	if (this->key == nullptr || this->key_size == 0 || this->key_size!=size) return false;
+	if (memcmp(key, this->key, size) == 0) return true;
+	return false;
+}
+
 #ifndef KEY_VALUE_TEST
 #define KEY_VALUE_TEST 0//1
 #endif
