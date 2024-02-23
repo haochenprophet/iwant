@@ -41,6 +41,15 @@ bool key_value::is_me(void* key, size_t size)
 	return false;
 }
 
+void key_value::set(void* key, size_t k_size, void* value, size_t v_size, int type)
+{
+	this->key = key;
+	this->key_size = k_size;
+	this->value = value;
+	this->value_size = v_size;
+	this->type = type;
+}
+
 #ifndef KEY_VALUE_TEST
 #define KEY_VALUE_TEST 0//1
 #endif
