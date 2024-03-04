@@ -5634,6 +5634,9 @@
     <ClCompile Include="..\..\src\compare.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\tree\tree_func.cpp">
+      <Filter>tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -11341,6 +11344,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\compare.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tree\tree_func.h">
+      <Filter>tree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

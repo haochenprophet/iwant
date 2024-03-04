@@ -18,17 +18,15 @@ int tree_node::get_id(bool display)
 	return this->node_id;
 }
 
-int tree_node::traversal(tree_node* node)
+int tree_node::traversal(tree_node* node, Ctree_func* tree_func)
 {//	WHERE_I;
 	int node_count = 0;//root node =0
-	tree_node * sub_node;
 
-	node->get_id();
+	if (tree_func != nullptr) tree_func->runme((void*)node);
 
 	for (tree_sub_node::iterator it = node->sub_node.begin(); it != node->sub_node.end(); ++it)
 	{
-		sub_node =(tree_node*) *it;
-		sub_node->get_id();
+		if (tree_func != nullptr) tree_func->runme(*it);
 	}
 
 	return node_count;
@@ -56,7 +54,7 @@ Ctree_node::~Ctree_node()
 #endif
 
 #if TREE_NODE_TEST
-#include INCLUDE_ALL_H
+#include "../all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

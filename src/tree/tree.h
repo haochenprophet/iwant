@@ -3,6 +3,7 @@
 
 #include "../object.h"
 #include "tree_node.h"
+#include "tree_func.h"
 
 namespace n_tree {
 
@@ -18,7 +19,7 @@ namespace n_tree {
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Ctree); }
 	public:
-		int traversal(Ctree * tree);
+		int traversal(Ctree * tree,Ctree_func* tree_func = nullptr);
 		void add(tree_node* tree) { this->list.push_back(tree); }
 
 	public://operator function 

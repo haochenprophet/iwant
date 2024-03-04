@@ -2001,6 +2001,7 @@
     <ClCompile Include="..\..\src\timer.cpp" />
     <ClCompile Include="..\..\src\timetree.cpp" />
     <ClCompile Include="..\..\src\tree\tree.cpp" />
+    <ClCompile Include="..\..\src\tree\tree_func.cpp" />
     <ClCompile Include="..\..\src\tree\tree_node.cpp" />
     <ClCompile Include="..\..\src\uri.cpp" />
     <ClCompile Include="..\..\src\url.cpp" />
@@ -3892,6 +3893,7 @@
     <ClInclude Include="..\..\src\timer.h" />
     <ClInclude Include="..\..\src\timetree.h" />
     <ClInclude Include="..\..\src\tree\tree.h" />
+    <ClInclude Include="..\..\src\tree\tree_func.h" />
     <ClInclude Include="..\..\src\tree\tree_node.h" />
     <ClInclude Include="..\..\src\uri.h" />
     <ClInclude Include="..\..\src\url.h" />
