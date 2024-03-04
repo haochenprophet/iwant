@@ -16,6 +16,20 @@ Ctree::~Ctree()
 
 }
 
+int Ctree::traversal(Ctree* tree)
+{
+	int node_count = 0;//root node =0
+	tree_node* node;
+
+	for (tree_list::iterator it = tree->list.begin(); it != tree->list.end(); ++it)
+	{
+		node = (tree_node*)*it;
+		node_count+= node->traversal(node);
+	}
+
+	return node_count;
+}
+
 #ifndef TREE_TEST
 #define TREE_TEST 0//1
 #endif
@@ -27,6 +41,15 @@ int main(int argc, char *argv[])
 	WHERE_I;
 	Ctree tree;
 	std::cout << "Ctree size=" << tree.my_size() << endl;
+
+	tree_node node[5];
+
+	for (int n = 0; n < 5; n++)
+	{
+		tree += & node[n];
+	}
+
+	tree.traversal(&tree);
 
 	return 0;
 }

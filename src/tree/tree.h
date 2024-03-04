@@ -17,6 +17,12 @@ namespace n_tree {
 		~Ctree();
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Ctree); }
+	public:
+		int traversal(Ctree * tree);
+		void add(tree_node* tree) { this->list.push_back(tree); }
+
+	public://operator function 
+		void operator += (tree_node* tree) { this->add(tree); }
 	};
 }
 
