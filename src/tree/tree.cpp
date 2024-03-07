@@ -43,10 +43,12 @@ int main(int argc, char *argv[])
 	std::cout << "Ctree size=" << tree.my_size() << endl;
 
 	tree_node node[5];
+	tree_node sub_node[5];
 	Ctree_func tree_func;
 
 	for (int n = 0; n < 5; n++)
 	{
+		node[n] += & sub_node[n];
 		tree += & node[n];
 	}
 

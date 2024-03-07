@@ -64,6 +64,9 @@
     <Filter Include="template">
       <UniqueIdentifier>{a212be88-8740-4ebd-9ab3-1a89f4e87dd4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="car">
+      <UniqueIdentifier>{bda7c51e-a66a-48d3-882e-662f141086dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5636,6 +5639,456 @@
     </ClCompile>
     <ClCompile Include="..\..\src\tree\tree_func.cpp">
       <Filter>tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_about.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_abs.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_action.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_ai.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_air.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_air_conditioner.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_airbag.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_alarm.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_alerts.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_amusement.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_appearance.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_array.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_audio.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_battery.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_bluetooth.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_body.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_brake_pad.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_braking.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_broadcast.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_cable.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_camera.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_can_bus.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_carbon_dioxide.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_carbon_monoxide.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_charge.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_chassis.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_check.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_clock.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_cluth.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_colour.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_command.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_communication.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_computer.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_control.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_device.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_diagnosis.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_displayer.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_door.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_driver.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_electric_appliance.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_electric_current.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_electric_machine.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_electricity.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_engine.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_environment.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_escape.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_fan.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_financial.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_fire.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_function.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_game.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_gesture.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_glass.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_gps.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_gui.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_hardware.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_help.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_hood.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_humidness.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_impetus.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_infrared.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_key.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_language.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_laser_radar.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_learning.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_light.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_link.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_list.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_location.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_lock.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_log.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_logo.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_map.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mayday.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_medicine_box.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_message.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mileage.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mirror.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_motor.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_move.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_music.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_network.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_news.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_nitrogen.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_oil.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_operational_mode.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_os.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_oxygen.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_phone.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_plan.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_play.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_policy.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_power.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_power_off.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_power_on.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_projector.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_radar.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_refrigerator.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_region.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_register.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_repair.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_rescue.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_rotate_speed.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_safety.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_safety_belt.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_scheme.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_seat.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_sensor.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_serial_port.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_solution.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_sos.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_sound.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_speed.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_stack.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_start.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_status.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_steer.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_stock.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_stop.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_suspension.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_swerve.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_task.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_temperature.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_test.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_time.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_translate.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_tree.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_trunk.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_tyre.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_ultrasonic_radar.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_umbrella.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_usb_port.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_vector.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_video.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_voltage.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_warning.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_watchdog.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_water.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_weapons.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_wheel.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_wifi.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_work.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_pwm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_cpu.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_file.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_memory.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_ssd.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mcu.cpp">
+      <Filter>car</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -11348,6 +11801,456 @@
     <ClInclude Include="..\..\src\tree\tree_func.h">
       <Filter>tree</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\car\car.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_about.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_abs.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_action.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_ai.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_air.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_air_conditioner.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_airbag.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_alarm.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_alerts.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_amusement.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_appearance.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_array.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_audio.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_battery.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_bluetooth.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_body.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_brake_pad.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_braking.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_broadcast.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_cable.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_camera.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_can_bus.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_carbon_dioxide.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_carbon_monoxide.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_charge.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_chassis.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_check.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_clock.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_cluth.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_colour.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_command.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_communication.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_computer.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_control.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_device.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_diagnosis.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_displayer.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_door.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_driver.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_electric_appliance.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_electric_current.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_electric_machine.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_electricity.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_engine.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_environment.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_escape.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_fan.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_financial.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_fire.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_function.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_game.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_gesture.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_glass.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_gps.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_gui.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_hardware.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_help.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_hood.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_humidness.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_impetus.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_infrared.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_key.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_language.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_laser_radar.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_learning.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_light.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_link.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_list.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_location.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_lock.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_log.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_logo.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_map.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mayday.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_medicine_box.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_message.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mileage.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mirror.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_motor.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_move.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_music.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_network.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_news.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_nitrogen.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_oil.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_operational_mode.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_os.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_oxygen.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_phone.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_plan.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_play.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_policy.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_power.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_power_off.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_power_on.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_projector.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_radar.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_refrigerator.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_region.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_register.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_repair.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_rescue.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_rotate_speed.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_safety.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_safety_belt.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_scheme.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_seat.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_sensor.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_serial_port.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_solution.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_sos.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_sound.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_speed.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_stack.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_start.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_status.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_steer.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_stock.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_stop.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_suspension.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_swerve.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_task.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_temperature.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_test.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_time.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_translate.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_tree.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_trunk.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_tyre.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_ultrasonic_radar.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_umbrella.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_usb_port.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_vector.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_video.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_voltage.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_warning.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_watchdog.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_water.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_weapons.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_wheel.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_wifi.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_work.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_pwm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_cpu.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_file.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_memory.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_ssd.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mcu.h">
+      <Filter>car</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -11462,6 +12365,9 @@
     </None>
     <None Include="..\..\src\hardware\cmos_action.i">
       <Filter>hardware</Filter>
+    </None>
+    <None Include="..\..\src\car\Makefile">
+      <Filter>car</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

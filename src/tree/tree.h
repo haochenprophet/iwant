@@ -12,7 +12,7 @@ namespace n_tree {
 	class Ctree :public Object
 	{
 	public:
-		tree_list list;
+		tree_list list;//tree[n] list 
 	public:
 		Ctree();
 		~Ctree();
