@@ -6090,6 +6090,15 @@
     <ClCompile Include="..\..\src\car\car_mcu.cpp">
       <Filter>car</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\car\car_communication_4G.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_communication_6G.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_communication_5G.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -12249,6 +12258,15 @@
       <Filter>car</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\car\car_mcu.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_communication_4G.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_communication_5G.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_communication_6G.h">
       <Filter>car</Filter>
     </ClInclude>
   </ItemGroup>

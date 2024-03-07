@@ -189,6 +189,9 @@
     <ClCompile Include="..\..\src\car\car_colour.cpp" />
     <ClCompile Include="..\..\src\car\car_command.cpp" />
     <ClCompile Include="..\..\src\car\car_communication.cpp" />
+    <ClCompile Include="..\..\src\car\car_communication_4G.cpp" />
+    <ClCompile Include="..\..\src\car\car_communication_5G.cpp" />
+    <ClCompile Include="..\..\src\car\car_communication_6G.cpp" />
     <ClCompile Include="..\..\src\car\car_computer.cpp" />
     <ClCompile Include="..\..\src\car\car_control.cpp" />
     <ClCompile Include="..\..\src\car\car_cpu.cpp" />
@@ -2202,6 +2205,9 @@
     <ClInclude Include="..\..\src\car\car_colour.h" />
     <ClInclude Include="..\..\src\car\car_command.h" />
     <ClInclude Include="..\..\src\car\car_communication.h" />
+    <ClInclude Include="..\..\src\car\car_communication_4G.h" />
+    <ClInclude Include="..\..\src\car\car_communication_5G.h" />
+    <ClInclude Include="..\..\src\car\car_communication_6G.h" />
     <ClInclude Include="..\..\src\car\car_computer.h" />
     <ClInclude Include="..\..\src\car\car_control.h" />
     <ClInclude Include="..\..\src\car\car_cpu.h" />

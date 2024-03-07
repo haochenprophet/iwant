@@ -25,3 +25,5 @@ iwant
 src/hardware/hardware
 sample-code/bmc/c_data_to_html/.vs/
 sample-code/bmc/c_data_to_html/x64/
+src/car/*.exe
+src/car/*.dll

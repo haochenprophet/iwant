@@ -87,6 +87,9 @@ code class car_usb_port
 code class car_wifi
 code class car_phone
 code class car_communication
+code class car_communication_4G
+code class car_communication_5G
+code class car_communication_6G
 code class car_sensor
 code class car_voltage
 code class car_electricity
@@ -240,6 +243,9 @@ code main create_main car_usb_port
 code main create_main car_wifi
 code main create_main car_phone
 code main create_main car_communication
+code main create_main car_communication_4G
+code main create_main car_communication_5G
+code main create_main car_communication_6G
 code main create_main car_sensor
 code main create_main car_voltage
 code main create_main car_electric_current
