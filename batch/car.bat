@@ -43,6 +43,10 @@ code class car_fan
 code class car_humidness
 code class car_status
 code class car_command
+code class car_go
+code class car_back
+code class car_turn_left
+code class car_turn_right
 code class car_music
 code class car_sound
 code class car_safety
@@ -100,6 +104,12 @@ code class car_lock
 code class car_umbrella
 code class car_airbag
 code class car_mode
+code class car_mode_snow
+code class car_mode_rain
+code class car_mode_night
+code class car_mode_daytime
+code class car_mode_cold
+code class car_mode_hot
 code class car_operational_mode
 code class car_start
 code class car_stop
@@ -199,6 +209,10 @@ code main create_main car_fan
 code main create_main car_humidness
 code main create_main car_status
 code main create_main car_command
+code main create_main car_go
+code main create_main car_back
+code main create_main car_turn_left
+code main create_main car_turn_right
 code main create_main car_music
 code main create_main car_sound
 code main create_main car_safety
@@ -255,6 +269,12 @@ code main create_main car_lock
 code main create_main car_umbrella
 code main create_main car_airbag
 code main create_main car_mode
+code main create_main car_mode_snow
+code main create_main car_mode_rain
+code main create_main car_mode_night
+code main create_main car_mode_daytime
+code main create_main car_mode_cold
+code main create_main car_mode_hot
 code main create_main car_operational_mode
 code main create_main car_start
 code main create_main car_stop

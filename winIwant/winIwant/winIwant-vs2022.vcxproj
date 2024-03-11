@@ -170,6 +170,7 @@
     <ClCompile Include="..\..\src\car\car_appearance.cpp" />
     <ClCompile Include="..\..\src\car\car_array.cpp" />
     <ClCompile Include="..\..\src\car\car_audio.cpp" />
+    <ClCompile Include="..\..\src\car\car_back.cpp" />
     <ClCompile Include="..\..\src\car\car_battery.cpp" />
     <ClCompile Include="..\..\src\car\car_bluetooth.cpp" />
     <ClCompile Include="..\..\src\car\car_body.cpp" />
@@ -215,6 +216,7 @@
     <ClCompile Include="..\..\src\car\car_game.cpp" />
     <ClCompile Include="..\..\src\car\car_gesture.cpp" />
     <ClCompile Include="..\..\src\car\car_glass.cpp" />
+    <ClCompile Include="..\..\src\car\car_go.cpp" />
     <ClCompile Include="..\..\src\car\car_gps.cpp" />
     <ClCompile Include="..\..\src\car\car_gui.cpp" />
     <ClCompile Include="..\..\src\car\car_hardware.cpp" />
@@ -243,6 +245,12 @@
     <ClCompile Include="..\..\src\car\car_mileage.cpp" />
     <ClCompile Include="..\..\src\car\car_mirror.cpp" />
     <ClCompile Include="..\..\src\car\car_mode.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_cold.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_daytime.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_hot.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_night.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_rain.cpp" />
+    <ClCompile Include="..\..\src\car\car_mode_snow.cpp" />
     <ClCompile Include="..\..\src\car\car_motor.cpp" />
     <ClCompile Include="..\..\src\car\car_move.cpp" />
     <ClCompile Include="..\..\src\car\car_music.cpp" />
@@ -295,6 +303,8 @@
     <ClCompile Include="..\..\src\car\car_translate.cpp" />
     <ClCompile Include="..\..\src\car\car_tree.cpp" />
     <ClCompile Include="..\..\src\car\car_trunk.cpp" />
+    <ClCompile Include="..\..\src\car\car_turn_left.cpp" />
+    <ClCompile Include="..\..\src\car\car_turn_right.cpp" />
     <ClCompile Include="..\..\src\car\car_tyre.cpp" />
     <ClCompile Include="..\..\src\car\car_ultrasonic_radar.cpp" />
     <ClCompile Include="..\..\src\car\car_umbrella.cpp" />
@@ -2186,6 +2196,7 @@
     <ClInclude Include="..\..\src\car\car_appearance.h" />
     <ClInclude Include="..\..\src\car\car_array.h" />
     <ClInclude Include="..\..\src\car\car_audio.h" />
+    <ClInclude Include="..\..\src\car\car_back.h" />
     <ClInclude Include="..\..\src\car\car_battery.h" />
     <ClInclude Include="..\..\src\car\car_bluetooth.h" />
     <ClInclude Include="..\..\src\car\car_body.h" />
@@ -2231,6 +2242,7 @@
     <ClInclude Include="..\..\src\car\car_game.h" />
     <ClInclude Include="..\..\src\car\car_gesture.h" />
     <ClInclude Include="..\..\src\car\car_glass.h" />
+    <ClInclude Include="..\..\src\car\car_go.h" />
     <ClInclude Include="..\..\src\car\car_gps.h" />
     <ClInclude Include="..\..\src\car\car_gui.h" />
     <ClInclude Include="..\..\src\car\car_hardware.h" />
@@ -2259,6 +2271,12 @@
     <ClInclude Include="..\..\src\car\car_mileage.h" />
     <ClInclude Include="..\..\src\car\car_mirror.h" />
     <ClInclude Include="..\..\src\car\car_mode.h" />
+    <ClInclude Include="..\..\src\car\car_mode_cold.h" />
+    <ClInclude Include="..\..\src\car\car_mode_daytime.h" />
+    <ClInclude Include="..\..\src\car\car_mode_hot.h" />
+    <ClInclude Include="..\..\src\car\car_mode_night.h" />
+    <ClInclude Include="..\..\src\car\car_mode_rain.h" />
+    <ClInclude Include="..\..\src\car\car_mode_snow.h" />
     <ClInclude Include="..\..\src\car\car_motor.h" />
     <ClInclude Include="..\..\src\car\car_move.h" />
     <ClInclude Include="..\..\src\car\car_music.h" />
@@ -2311,6 +2329,8 @@
     <ClInclude Include="..\..\src\car\car_translate.h" />
     <ClInclude Include="..\..\src\car\car_tree.h" />
     <ClInclude Include="..\..\src\car\car_trunk.h" />
+    <ClInclude Include="..\..\src\car\car_turn_left.h" />
+    <ClInclude Include="..\..\src\car\car_turn_right.h" />
     <ClInclude Include="..\..\src\car\car_tyre.h" />
     <ClInclude Include="..\..\src\car\car_ultrasonic_radar.h" />
     <ClInclude Include="..\..\src\car\car_umbrella.h" />

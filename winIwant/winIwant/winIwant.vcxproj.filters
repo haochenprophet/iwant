@@ -6099,6 +6099,36 @@
     <ClCompile Include="..\..\src\car\car_communication_5G.cpp">
       <Filter>car</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\car\car_back.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_go.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_turn_left.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_turn_right.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_cold.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_daytime.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_hot.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_night.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_rain.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_mode_snow.cpp">
+      <Filter>car</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -12267,6 +12297,36 @@
       <Filter>car</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\car\car_communication_6G.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_back.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_go.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_turn_left.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_turn_right.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_cold.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_daytime.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_hot.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_night.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_rain.h">
+      <Filter>car</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_mode_snow.h">
       <Filter>car</Filter>
     </ClInclude>
   </ItemGroup>
