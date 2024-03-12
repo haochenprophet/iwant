@@ -151,6 +151,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\action.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil_leading.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil_trailing.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_broadcast.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_cabin.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_computer.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_cowling.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_cruise.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_elevator.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_engine.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_fin.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_flap.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_flight_deck.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_hold.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_lands.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_mode.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_nose.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_radar.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_rudder.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_slat.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_tail.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_take_off.cpp" />
+    <ClCompile Include="..\..\src\airplane\airplane_under_carriage.cpp" />
     <ClCompile Include="..\..\src\bits.cpp" />
     <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
@@ -2174,6 +2198,30 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
     <ClInclude Include="..\..\src\action_type.h" />
+    <ClInclude Include="..\..\src\airplane\airplane.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil_leading.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil_trailing.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_broadcast.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_cabin.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_computer.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_cowling.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_cruise.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_elevator.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_engine.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_fin.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_flap.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_flight_deck.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_hold.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_lands.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_mode.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_nose.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_radar.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_rudder.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_slat.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_tail.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_take_off.h" />
+    <ClInclude Include="..\..\src\airplane\airplane_under_carriage.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\bits.h" />
     <ClInclude Include="..\..\src\bits_def.h" />
@@ -4241,6 +4289,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="..\..\src\airplane\Makefile" />
     <None Include="..\..\src\build_action.i" />
     <None Include="..\..\src\car\Makefile" />
     <None Include="..\..\src\code_action.i" />

@@ -67,6 +67,9 @@
     <Filter Include="car">
       <UniqueIdentifier>{bda7c51e-a66a-48d3-882e-662f141086dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="airplane">
+      <UniqueIdentifier>{1f0fa7fc-639b-4957-8d9c-50b2af531f41}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -6128,6 +6131,78 @@
     </ClCompile>
     <ClCompile Include="..\..\src\car\car_mode_snow.cpp">
       <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil_leading.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_airfoil_trailing.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_broadcast.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_cabin.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_computer.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_cowling.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_cruise.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_elevator.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_engine.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_fin.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_flap.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_flight_deck.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_hold.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_lands.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_mode.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_nose.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_radar.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_rudder.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_slat.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_tail.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_take_off.cpp">
+      <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\airplane\airplane_under_carriage.cpp">
+      <Filter>airplane</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12329,6 +12404,78 @@
     <ClInclude Include="..\..\src\car\car_mode_snow.h">
       <Filter>car</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil_leading.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_airfoil_trailing.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_broadcast.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_cabin.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_computer.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_cowling.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_cruise.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_elevator.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_engine.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_fin.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_flap.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_flight_deck.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_hold.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_lands.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_mode.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_nose.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_radar.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_rudder.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_slat.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_tail.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_take_off.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\airplane\airplane_under_carriage.h">
+      <Filter>airplane</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -12446,6 +12593,9 @@
     </None>
     <None Include="..\..\src\car\Makefile">
       <Filter>car</Filter>
+    </None>
+    <None Include="..\..\src\airplane\Makefile">
+      <Filter>airplane</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
