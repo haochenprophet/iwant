@@ -73,6 +73,9 @@
     <Filter Include="warship">
       <UniqueIdentifier>{88df1437-11a2-4ba9-9149-58b9bdcb0a9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="materiel">
+      <UniqueIdentifier>{599e801a-bd5e-49e0-8332-f53817aec90f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -6272,6 +6275,108 @@
     </ClCompile>
     <ClCompile Include="..\..\src\warship\warship_torpedo.cpp">
       <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_action.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_action_buy.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_action_sell.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_build_html.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_date.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_flow.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_id.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_message.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_name.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_partial.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_serial_number.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_status.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_time.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_timeline.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_uuid.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_audio.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_create.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_delete.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_description.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_file.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_from_to.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_image.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_location.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_owner.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_price.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_request.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_select.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_statistics.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_status.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_type.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_update.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_url.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_video.cpp">
+      <Filter>materiel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12611,6 +12716,108 @@
     <ClInclude Include="..\..\src\warship\warship_torpedo.h">
       <Filter>warship</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_action.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_action_buy.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_action_sell.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_build_html.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_date.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_flow.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_id.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_message.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_name.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_partial.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_serial_number.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_status.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_time.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_timeline.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_uuid.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_audio.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_create.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_delete.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_description.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_file.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_from_to.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_image.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_location.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_owner.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_price.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_request.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_select.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_statistics.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_status.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_type.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_update.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_url.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_video.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -12734,6 +12941,9 @@
     </None>
     <None Include="..\..\src\warship\Makefile">
       <Filter>warship</Filter>
+    </None>
+    <None Include="..\..\src\materiel\Makefile">
+      <Filter>materiel</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
