@@ -6378,6 +6378,12 @@
     <ClCompile Include="..\..\src\materiel\materiel_video.cpp">
       <Filter>materiel</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_size.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\materiel\material_tree.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -12816,6 +12822,12 @@
       <Filter>materiel</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\materiel\materiel_video.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_size.h">
+      <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\material_tree.h">
       <Filter>materiel</Filter>
     </ClInclude>
   </ItemGroup>

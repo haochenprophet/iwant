@@ -1751,9 +1751,11 @@
     <ClCompile Include="..\..\src\materiel\material_name.cpp" />
     <ClCompile Include="..\..\src\materiel\material_partial.cpp" />
     <ClCompile Include="..\..\src\materiel\material_serial_number.cpp" />
+    <ClCompile Include="..\..\src\materiel\material_size.cpp" />
     <ClCompile Include="..\..\src\materiel\material_status.cpp" />
     <ClCompile Include="..\..\src\materiel\material_time.cpp" />
     <ClCompile Include="..\..\src\materiel\material_timeline.cpp" />
+    <ClCompile Include="..\..\src\materiel\material_tree.cpp" />
     <ClCompile Include="..\..\src\materiel\material_uuid.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_audio.cpp" />
@@ -3873,9 +3875,11 @@
     <ClInclude Include="..\..\src\materiel\material_name.h" />
     <ClInclude Include="..\..\src\materiel\material_partial.h" />
     <ClInclude Include="..\..\src\materiel\material_serial_number.h" />
+    <ClInclude Include="..\..\src\materiel\material_size.h" />
     <ClInclude Include="..\..\src\materiel\material_status.h" />
     <ClInclude Include="..\..\src\materiel\material_time.h" />
     <ClInclude Include="..\..\src\materiel\material_timeline.h" />
+    <ClInclude Include="..\..\src\materiel\material_tree.h" />
     <ClInclude Include="..\..\src\materiel\material_uuid.h" />
     <ClInclude Include="..\..\src\materiel\materiel.h" />
     <ClInclude Include="..\..\src\materiel\materiel_audio.h" />

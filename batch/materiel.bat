@@ -21,6 +21,8 @@ code class material_flow
 code class material_id
 code class material_uuid
 code class material_name
+code class material_tree
+code class material_size
 code class material_partial
 code class material_message
 code class material_date
@@ -56,6 +58,8 @@ code main create_main material_flow
 code main create_main material_id
 code main create_main material_uuid
 code main create_main material_name
+code main create_main material_tree
+code main create_main material_size
 code main create_main material_partial
 code main create_main material_message
 code main create_main material_date
