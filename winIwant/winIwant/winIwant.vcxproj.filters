@@ -70,6 +70,9 @@
     <Filter Include="airplane">
       <UniqueIdentifier>{1f0fa7fc-639b-4957-8d9c-50b2af531f41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="warship">
+      <UniqueIdentifier>{88df1437-11a2-4ba9-9149-58b9bdcb0a9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -6203,6 +6206,72 @@
     </ClCompile>
     <ClCompile Include="..\..\src\airplane\airplane_under_carriage.cpp">
       <Filter>airplane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_artillery.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_attack.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_cabin.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_canteen.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_commander.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_communication.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_computer.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_deck.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_defense.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_guided_missile.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_hangar.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_helicopter.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_icrane.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_information.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_power.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_radar.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_radio.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_soldier.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_sonar.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_steer.cpp">
+      <Filter>warship</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warship\warship_torpedo.cpp">
+      <Filter>warship</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12476,6 +12545,72 @@
     <ClInclude Include="..\..\src\airplane\airplane_under_carriage.h">
       <Filter>airplane</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_artillery.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_attack.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_cabin.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_canteen.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_commander.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_communication.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_computer.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_deck.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_defense.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_guided_missile.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_hangar.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_helicopter.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_icrane.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_information.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_power.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_radar.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_radio.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_soldier.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_sonar.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_steer.h">
+      <Filter>warship</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warship\warship_torpedo.h">
+      <Filter>warship</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -12596,6 +12731,9 @@
     </None>
     <None Include="..\..\src\airplane\Makefile">
       <Filter>airplane</Filter>
+    </None>
+    <None Include="..\..\src\warship\Makefile">
+      <Filter>warship</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -2194,6 +2194,28 @@
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\uuid.cpp" />
     <ClCompile Include="..\..\src\wait.cpp" />
+    <ClCompile Include="..\..\src\warship\warship.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_artillery.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_attack.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_cabin.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_canteen.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_commander.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_communication.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_computer.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_deck.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_defense.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_guided_missile.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_hangar.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_helicopter.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_icrane.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_information.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_power.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_radar.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_radio.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_soldier.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_sonar.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_steer.cpp" />
+    <ClCompile Include="..\..\src\warship\warship_torpedo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
@@ -4275,6 +4297,28 @@
     <ClInclude Include="..\..\src\uuid.h" />
     <ClInclude Include="..\..\src\uuid_class.h" />
     <ClInclude Include="..\..\src\wait.h" />
+    <ClInclude Include="..\..\src\warship\warship.h" />
+    <ClInclude Include="..\..\src\warship\warship_artillery.h" />
+    <ClInclude Include="..\..\src\warship\warship_attack.h" />
+    <ClInclude Include="..\..\src\warship\warship_cabin.h" />
+    <ClInclude Include="..\..\src\warship\warship_canteen.h" />
+    <ClInclude Include="..\..\src\warship\warship_commander.h" />
+    <ClInclude Include="..\..\src\warship\warship_communication.h" />
+    <ClInclude Include="..\..\src\warship\warship_computer.h" />
+    <ClInclude Include="..\..\src\warship\warship_deck.h" />
+    <ClInclude Include="..\..\src\warship\warship_defense.h" />
+    <ClInclude Include="..\..\src\warship\warship_guided_missile.h" />
+    <ClInclude Include="..\..\src\warship\warship_hangar.h" />
+    <ClInclude Include="..\..\src\warship\warship_helicopter.h" />
+    <ClInclude Include="..\..\src\warship\warship_icrane.h" />
+    <ClInclude Include="..\..\src\warship\warship_information.h" />
+    <ClInclude Include="..\..\src\warship\warship_power.h" />
+    <ClInclude Include="..\..\src\warship\warship_radar.h" />
+    <ClInclude Include="..\..\src\warship\warship_radio.h" />
+    <ClInclude Include="..\..\src\warship\warship_soldier.h" />
+    <ClInclude Include="..\..\src\warship\warship_sonar.h" />
+    <ClInclude Include="..\..\src\warship\warship_steer.h" />
+    <ClInclude Include="..\..\src\warship\warship_torpedo.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\common.h" />
@@ -4329,6 +4373,7 @@
     <None Include="..\..\src\organization\Makefile" />
     <None Include="..\..\src\sql\Makefile" />
     <None Include="..\..\src\stock_db_action.i" />
+    <None Include="..\..\src\warship\Makefile" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\doc\think.txt" />
