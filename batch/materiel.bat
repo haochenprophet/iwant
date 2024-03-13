@@ -1,4 +1,5 @@
 code class materiel
+code class materiel_mysql
 code class materiel_create
 code class materiel_delete
 code class materiel_select
@@ -36,6 +37,7 @@ code class material_action_sell
 code class material_build_html
 
 code main create_main materiel
+code main create_main materiel_mysql
 code main create_main materiel_create
 code main create_main materiel_delete
 code main create_main materiel_select

@@ -1766,6 +1766,7 @@
     <ClCompile Include="..\..\src\materiel\materiel_from_to.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_image.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_location.cpp" />
+    <ClCompile Include="..\..\src\materiel\materiel_mysql.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_owner.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_price.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_request.cpp" />
@@ -3890,6 +3891,7 @@
     <ClInclude Include="..\..\src\materiel\materiel_from_to.h" />
     <ClInclude Include="..\..\src\materiel\materiel_image.h" />
     <ClInclude Include="..\..\src\materiel\materiel_location.h" />
+    <ClInclude Include="..\..\src\materiel\materiel_mysql.h" />
     <ClInclude Include="..\..\src\materiel\materiel_owner.h" />
     <ClInclude Include="..\..\src\materiel\materiel_price.h" />
     <ClInclude Include="..\..\src\materiel\materiel_request.h" />
