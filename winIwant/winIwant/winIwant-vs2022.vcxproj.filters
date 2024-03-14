@@ -76,6 +76,9 @@
     <Filter Include="materiel">
       <UniqueIdentifier>{599e801a-bd5e-49e0-8332-f53817aec90f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="rocket">
+      <UniqueIdentifier>{f5383a44-2efc-4793-8f11-cca2b17bdca9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -6386,6 +6389,78 @@
     </ClCompile>
     <ClCompile Include="..\..\src\materiel\materiel_mysql.cpp">
       <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\size.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\command.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\power.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\status.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_battery.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_command.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_control.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_cowling.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_engine.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_fuel.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_guide.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_head.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_high.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_ignite.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_load.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_location.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_posture.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_size.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_speed.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_stern_room.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_struct.cpp">
+      <Filter>rocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rocket\rocket_tail.cpp">
+      <Filter>rocket</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12835,6 +12910,78 @@
     </ClInclude>
     <ClInclude Include="..\..\src\materiel\materiel_mysql.h">
       <Filter>materiel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\size.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\command.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\power.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\status.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_battery.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_command.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_control.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_cowling.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_engine.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_fuel.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_guide.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_head.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_high.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_ignite.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_load.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_location.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_posture.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_size.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_speed.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_stern_room.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_struct.h">
+      <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rocket\rocket_tail.h">
+      <Filter>rocket</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

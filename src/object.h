@@ -128,10 +128,6 @@ namespace n_object {
 		Ccmd(){argc = 0, argv = nullptr;}
 	};
 
-	class Cstatus :public Udata//status class
-	{
-	};
-	
 	class Otime //Object 's time O:Object ,timeline range
 	{
 	public://time and clock
@@ -179,7 +175,7 @@ namespace n_object {
 		Omove * move;
 		Oinput *input;//set the input point change object input Cparameter
 		Udata udata;
-		Cstatus status;
+		Udata status;
 		int silent;//can use to print or not print
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
