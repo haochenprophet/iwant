@@ -781,6 +781,11 @@ long Object::my_id()
 	return this->id;
 }
 
+char * Object::my_uuid()
+{
+	return (char *)this->uuid.c_str();
+}
+
 int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec,int tm_wday,int tm_yday)//mon/day/year/hour/min/sec/week/yday
 {
 	if(tm_mon>12||tm_mon<1\

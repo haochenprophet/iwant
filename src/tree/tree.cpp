@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 {
 	WHERE_I;
 	Ctree tree;
-	std::cout << "Ctree size=" << tree.my_size() << endl;
+	std::cout << "Ctree size=" << tree.my_size() << "-Ctree uuid=" <<tree.my_uuid()<< endl;
 
 	tree_node node[5];
 	tree_node sub_node[5];

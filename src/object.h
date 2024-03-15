@@ -268,6 +268,7 @@ namespace n_object {
 		void clear_exist();//clear me in exsit list;
 
 		long my_id();
+		char* my_uuid();
 		int my_family();//list my_family
 		int my_ex_func();//list my_ex_func
 		void my_temp();
