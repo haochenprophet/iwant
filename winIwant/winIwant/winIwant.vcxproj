@@ -1762,6 +1762,7 @@
     <ClCompile Include="..\..\src\materiel\materiel.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_audio.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_create.cpp" />
+    <ClCompile Include="..\..\src\materiel\materiel_db.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_delete.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_description.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_file.cpp" />
@@ -3911,6 +3912,7 @@
     <ClInclude Include="..\..\src\materiel\materiel.h" />
     <ClInclude Include="..\..\src\materiel\materiel_audio.h" />
     <ClInclude Include="..\..\src\materiel\materiel_create.h" />
+    <ClInclude Include="..\..\src\materiel\materiel_db.h" />
     <ClInclude Include="..\..\src\materiel\materiel_delete.h" />
     <ClInclude Include="..\..\src\materiel\materiel_description.h" />
     <ClInclude Include="..\..\src\materiel\materiel_file.h" />

@@ -6462,6 +6462,9 @@
     <ClCompile Include="..\..\src\rocket\rocket_tail.cpp">
       <Filter>rocket</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\materiel\materiel_db.cpp">
+      <Filter>materiel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -12982,6 +12985,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\rocket\rocket_tail.h">
       <Filter>rocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\materiel\materiel_db.h">
+      <Filter>materiel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
