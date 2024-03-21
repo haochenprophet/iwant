@@ -79,6 +79,9 @@
     <Filter Include="rocket">
       <UniqueIdentifier>{f5383a44-2efc-4793-8f11-cca2b17bdca9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="satellite">
+      <UniqueIdentifier>{f243f73d-73ee-4f2a-9957-4d7f818979f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -6464,6 +6467,510 @@
     </ClCompile>
     <ClCompile Include="..\..\src\materiel\materiel_db.cpp">
       <Filter>materiel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_about.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_abs.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_action.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_ai.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_air.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_air_conditioner.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_airbag.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_alarm.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_alerts.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_amusement.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_antenna.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_appearance.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_array.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_audio.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_back.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_battery.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_bluetooth.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_body.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_brake_pad.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_braking.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_broadcast.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_cable.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_camera.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_can_bus.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_charge.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_chassis.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_check.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_clock.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_cluth.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_colour.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_command.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_communication.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_communication_4G.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_communication_5G.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_communication_6G.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_computer.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_control.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_cpu.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_device.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_diagnosis.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_displayer.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_door.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_driver.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_electric_appliance.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_electric_current.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_electric_machine.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_electricity.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_engine.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_environment.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_escape.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_fan.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_file.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_financial.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_fire.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_function.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_game.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_gesture.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_glass.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_go.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_gps.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_gui.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_hardware.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_help.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_hood.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_humidness.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_impetus.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_infrared.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_key.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_language.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_laser.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_laser_radar.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_learning.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_light.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_link.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_list.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_location.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_lock.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_log.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_logo.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_map.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mayday.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mcu.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_medicine_box.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_memory.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_message.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mileage.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mirror.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_cold.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_daytime.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_hot.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_night.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_rain.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_mode_snow.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_motor.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_move.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_music.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_network.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_news.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_nitrogen.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_oil.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_operational_mode.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_os.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_oxygen.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_phone.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_phy.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_plan.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_play.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_policy.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_power.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_power_off.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_power_on.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_projector.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_pwm.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_radar.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_radio.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_refrigerator.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_region.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_register.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_repair.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_rescue.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_rotate_speed.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_safety.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_safety_belt.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_satellitebon_dioxide.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_satellitebon_monoxide.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_scheme.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_seat.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_sensor.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_serial_port.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_solution.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_sos.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_sound.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_speed.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_ssd.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_stack.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_start.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_status.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_steer.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_stock.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_stop.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_suspension.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_swerve.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_task.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_temperature.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_test.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_time.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_translate.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_tree.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_trunk.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_turn_left.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_turn_right.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_tyre.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_ultrasonic_radar.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_umbrella.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_usb_port.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_vector.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_video.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_voltage.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_warning.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_watchdog.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_water.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_weapons.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_wheel.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_wifi.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_wireless.cpp">
+      <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\satellite\satellite_work.cpp">
+      <Filter>satellite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12989,6 +13496,510 @@
     <ClInclude Include="..\..\src\materiel\materiel_db.h">
       <Filter>materiel</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_about.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_abs.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_action.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_ai.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_air.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_air_conditioner.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_airbag.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_alarm.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_alerts.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_amusement.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_antenna.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_appearance.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_array.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_audio.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_back.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_battery.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_bluetooth.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_body.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_brake_pad.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_braking.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_broadcast.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_cable.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_camera.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_can_bus.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_charge.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_chassis.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_check.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_clock.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_cluth.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_colour.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_command.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_communication.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_communication_4G.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_communication_5G.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_communication_6G.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_computer.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_control.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_cpu.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_device.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_diagnosis.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_displayer.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_door.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_driver.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_electric_appliance.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_electric_current.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_electric_machine.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_electricity.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_engine.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_environment.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_escape.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_fan.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_file.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_financial.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_fire.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_function.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_game.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_gesture.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_glass.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_go.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_gps.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_gui.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_hardware.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_help.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_hood.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_humidness.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_impetus.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_infrared.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_key.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_language.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_laser.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_laser_radar.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_learning.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_light.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_link.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_list.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_location.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_lock.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_log.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_logo.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_map.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mayday.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mcu.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_medicine_box.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_memory.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_message.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mileage.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mirror.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_cold.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_daytime.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_hot.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_night.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_rain.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_mode_snow.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_motor.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_move.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_music.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_network.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_news.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_nitrogen.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_oil.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_operational_mode.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_os.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_oxygen.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_phone.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_phy.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_plan.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_play.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_policy.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_power.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_power_off.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_power_on.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_projector.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_pwm.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_radar.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_radio.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_refrigerator.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_region.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_register.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_repair.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_rescue.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_rotate_speed.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_safety.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_safety_belt.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_satellitebon_dioxide.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_satellitebon_monoxide.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_scheme.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_seat.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_sensor.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_serial_port.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_solution.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_sos.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_sound.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_speed.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_ssd.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_stack.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_start.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_status.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_steer.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_stock.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_stop.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_suspension.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_swerve.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_task.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_temperature.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_test.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_time.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_translate.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_tree.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_trunk.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_turn_left.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_turn_right.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_tyre.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_ultrasonic_radar.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_umbrella.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_usb_port.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_vector.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_video.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_voltage.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_warning.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_watchdog.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_water.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_weapons.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_wheel.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_wifi.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_wireless.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\satellite\satellite_work.h">
+      <Filter>satellite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -13115,6 +14126,9 @@
     </None>
     <None Include="..\..\src\materiel\Makefile">
       <Filter>materiel</Filter>
+    </None>
+    <None Include="..\..\src\satellite\Makefile">
+      <Filter>satellite</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
