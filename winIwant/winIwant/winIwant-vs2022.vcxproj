@@ -483,7 +483,6 @@
     <ClCompile Include="..\..\src\ctype\wctype.cpp" />
     <ClCompile Include="..\..\src\data.cpp" />
     <ClCompile Include="..\..\src\database\database.cpp" />
-    <ClCompile Include="..\..\src\database\tree_db.cpp" />
     <ClCompile Include="..\..\src\dictionary.cpp" />
     <ClCompile Include="..\..\src\dictionary\hello.cpp" />
     <ClCompile Include="..\..\src\die.cpp" />
@@ -2418,6 +2417,7 @@
     <ClCompile Include="..\..\src\timer.cpp" />
     <ClCompile Include="..\..\src\timetree.cpp" />
     <ClCompile Include="..\..\src\tree\tree.cpp" />
+    <ClCompile Include="..\..\src\tree\tree_db.cpp" />
     <ClCompile Include="..\..\src\tree\tree_func.cpp" />
     <ClCompile Include="..\..\src\tree\tree_node.cpp" />
     <ClCompile Include="..\..\src\uri.cpp" />
@@ -2794,7 +2794,6 @@
     <ClInclude Include="..\..\src\ctype\wctype.h" />
     <ClInclude Include="..\..\src\data.h" />
     <ClInclude Include="..\..\src\database\database.h" />
-    <ClInclude Include="..\..\src\database\tree_db.h" />
     <ClInclude Include="..\..\src\data_class.h" />
     <ClInclude Include="..\..\src\dictionary.h" />
     <ClInclude Include="..\..\src\dictionary\hello.h" />
@@ -4749,6 +4748,7 @@
     <ClInclude Include="..\..\src\timer.h" />
     <ClInclude Include="..\..\src\timetree.h" />
     <ClInclude Include="..\..\src\tree\tree.h" />
+    <ClInclude Include="..\..\src\tree\tree_db.h" />
     <ClInclude Include="..\..\src\tree\tree_func.h" />
     <ClInclude Include="..\..\src\tree\tree_node.h" />
     <ClInclude Include="..\..\src\uri.h" />

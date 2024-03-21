@@ -5616,9 +5616,6 @@
     <ClCompile Include="..\..\src\math\signbit.cpp">
       <Filter>math</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\database\tree_db.cpp">
-      <Filter>dictionary</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\recognition.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -6971,6 +6968,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\satellite\satellite_work.cpp">
       <Filter>satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tree\tree_db.cpp">
+      <Filter>tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12590,9 +12590,6 @@
     <ClInclude Include="..\..\src\database\database.h">
       <Filter>database</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\database\tree_db.h">
-      <Filter>database</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\build_action.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -13999,6 +13996,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\satellite\satellite_work.h">
       <Filter>satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tree\tree_db.h">
+      <Filter>tree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
