@@ -346,6 +346,7 @@
     <ClCompile Include="..\..\src\class.cpp" />
     <ClCompile Include="..\..\src\code.cpp" />
     <ClCompile Include="..\..\src\code\code_action.cpp" />
+    <ClCompile Include="..\..\src\code\code_add.cpp" />
     <ClCompile Include="..\..\src\code\code_build.cpp" />
     <ClCompile Include="..\..\src\code\code_check.cpp" />
     <ClCompile Include="..\..\src\code\code_checksum.cpp" />
@@ -2735,6 +2736,7 @@
     <ClInclude Include="..\..\src\class.h" />
     <ClInclude Include="..\..\src\code.h" />
     <ClInclude Include="..\..\src\code\code_action.h" />
+    <ClInclude Include="..\..\src\code\code_add.h" />
     <ClInclude Include="..\..\src\code\code_build.h" />
     <ClInclude Include="..\..\src\code\code_check.h" />
     <ClInclude Include="..\..\src\code\code_checksum.h" />

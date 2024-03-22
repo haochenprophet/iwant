@@ -7239,6 +7239,9 @@
     <ClCompile Include="..\..\src\code\code_push.cpp">
       <Filter>code</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\code\code_add.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -14526,6 +14529,9 @@
       <Filter>code</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\code\code_push.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_add.h">
       <Filter>code</Filter>
     </ClInclude>
   </ItemGroup>
