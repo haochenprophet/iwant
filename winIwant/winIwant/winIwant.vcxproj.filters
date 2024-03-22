@@ -7224,6 +7224,24 @@
     <ClCompile Include="..\..\src\message\code_message.cpp">
       <Filter>message</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\code\code_fetch.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_fork.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_merge.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_patch.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_pull.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_push.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -14494,6 +14512,24 @@
     </ClInclude>
     <ClInclude Include="..\..\src\message\code_message.h">
       <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_fetch.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_fork.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_merge.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_patch.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_pull.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_push.h">
+      <Filter>code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

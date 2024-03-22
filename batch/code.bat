@@ -58,7 +58,12 @@ code class code_init
 code class code_commit
 code class code_feedback
 code class code_diff
-
+code class code_patch
+code class code_merge
+code class code_fork
+code class code_fetch
+code class code_pull
+code class code_push
 
 code main create_main code_tree
 code main create_main code_db
@@ -119,6 +124,12 @@ code main create_main code_init
 code main create_main code_commit
 code main create_main code_feedback
 code main create_main code_diff
+code main create_main code_patch
+code main create_main code_merge
+code main create_main code_fork
+code main create_main code_fetch
+code main create_main code_pull
+code main create_main code_push
 
 
 
