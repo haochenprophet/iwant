@@ -410,7 +410,6 @@
     <ClCompile Include="..\..\src\code\code_tree.cpp" />
     <ClCompile Include="..\..\src\code\code_update.cpp" />
     <ClCompile Include="..\..\src\code\code_value.cpp" />
-    <ClCompile Include="..\..\src\code\create_main.cpp" />
     <ClCompile Include="..\..\src\command.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\company.cpp" />

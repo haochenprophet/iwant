@@ -7215,9 +7215,6 @@
     <ClCompile Include="..\..\src\code\code_value.cpp">
       <Filter>code</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\code\create_main.cpp">
-      <Filter>code</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\code\code_replace.cpp">
       <Filter>code</Filter>
     </ClCompile>

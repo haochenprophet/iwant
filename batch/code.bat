@@ -71,7 +71,7 @@ code main create_main code_main
 code main create_main code_package
 code main create_main code_file
 code main create_main code_namespace
-code main create_main code_main create_main
+code main create_main code_class
 code main create_main code_command
 code main create_main code_action
 code main create_main code_function
