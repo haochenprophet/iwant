@@ -82,6 +82,12 @@
     <Filter Include="satellite">
       <UniqueIdentifier>{f243f73d-73ee-4f2a-9957-4d7f818979f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="money">
+      <UniqueIdentifier>{2a7870cb-de8e-4cc1-9162-a6689e7531c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code">
+      <UniqueIdentifier>{765c6db0-1370-4b46-8437-9b34f68fce24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -5361,9 +5367,6 @@
     <ClCompile Include="..\..\src\message\broadcast_message.cpp">
       <Filter>message</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\message\code_message.cpp">
-      <Filter>message</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\message\collect_message.cpp">
       <Filter>message</Filter>
     </ClCompile>
@@ -6971,6 +6974,255 @@
     </ClCompile>
     <ClCompile Include="..\..\src\tree\tree_db.cpp">
       <Filter>tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_amount.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_buy.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_capital_flow.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_date.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_dynasty.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_exchange_rate.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_expend.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_id.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_income.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_interest_rate.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_location.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_nation.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_owner.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_sell.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_shape.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_size.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_status.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_use.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_value.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_weight.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\money\money_digital.cpp">
+      <Filter>money</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_action.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_build.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_check.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_checksum.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_class.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_clone.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_command.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_comment.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_commit.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_copy.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_create.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_cut.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_data_type.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_db.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_define.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_delete.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_diff.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_error.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_event.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_exception.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_expression.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_feedback.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_file.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_find.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_function.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_import.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_include.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_init.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_insert.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_keyword.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_library.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_macro.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_main.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_makefile.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_info.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_method.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_move.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_namespace.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_operator.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_package.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_paste.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_property.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_remove.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_result.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_return.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_revert.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_run.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_select.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_setting.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_static.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_struct.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_syntax.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_tag.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_template.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_token.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_tree.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_update.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_value.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\create_main.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code_replace.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\message\code_message.cpp">
+      <Filter>message</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -12374,9 +12626,6 @@
     <ClInclude Include="..\..\src\message\broadcast_message.h">
       <Filter>message</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\message\code_message.h">
-      <Filter>message</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\message\collect_message.h">
       <Filter>message</Filter>
     </ClInclude>
@@ -14000,6 +14249,252 @@
     <ClInclude Include="..\..\src\tree\tree_db.h">
       <Filter>tree</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\money\money.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_amount.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_buy.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_capital_flow.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_date.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_dynasty.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_exchange_rate.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_expend.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_id.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_income.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_interest_rate.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_location.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_nation.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_owner.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_sell.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_shape.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_size.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_status.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_use.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_value.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_weight.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\money\money_digital.h">
+      <Filter>money</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_action.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_build.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_check.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_checksum.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_class.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_clone.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_command.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_comment.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_commit.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_copy.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_create.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_cut.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_data_type.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_db.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_define.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_delete.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_diff.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_error.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_event.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_exception.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_expression.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_feedback.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_file.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_find.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_function.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_import.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_include.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_init.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_insert.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_keyword.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_library.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_macro.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_main.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_makefile.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_info.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_method.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_move.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_namespace.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_operator.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_package.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_paste.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_property.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_remove.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_result.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_return.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_revert.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_run.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_select.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_setting.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_static.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_struct.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_syntax.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_tag.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_template.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_token.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_tree.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_update.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_value.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\code\code_replace.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\message\code_message.h">
+      <Filter>message</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -14129,6 +14624,12 @@
     </None>
     <None Include="..\..\src\satellite\Makefile">
       <Filter>satellite</Filter>
+    </None>
+    <None Include="..\..\src\money\Makefile">
+      <Filter>money</Filter>
+    </None>
+    <None Include="..\..\src\code\Makefile">
+      <Filter>code</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
