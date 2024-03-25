@@ -21,7 +21,7 @@ namespace n_get {
 		char * getLineX(char *src,char *dst,int dstLen);
 		char * getNextLine(char *src,char *dst,int dstLen);
 		int chkString(char string[],char *start);
-		char * strToken(char *start,char *end,char *delimit,int retStart=NULL);
+		char * strToken(char *start,char *end,char *delimit,int retStart=0);
 		void setLine(unsigned long L);
 		void clearBuf(int len=BUF_SIZE);
 		bool getToken(char *cp);

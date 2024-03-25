@@ -139,7 +139,7 @@ int Cget::chkString(char string[],char *start)// cmp string
 	
 	if(!*cp) return 1;
 	//printf("return NULL\n");
-	return NULL;
+	return 0;
 }
 
 char * Cget::strToken(char *cp,char *end,char *delimit,int retStart)//return fail:NULL,start,current
