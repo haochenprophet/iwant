@@ -1497,9 +1497,6 @@
     <ClCompile Include="..\..\src\makefile.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\math.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\my_sql.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -7242,6 +7239,9 @@
     <ClCompile Include="..\..\src\code\code_add.cpp">
       <Filter>code</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\_math.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -8682,9 +8682,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\makefile.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\math.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\myMemory.h">
@@ -14533,6 +14530,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\code\code_add.h">
       <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\_math.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

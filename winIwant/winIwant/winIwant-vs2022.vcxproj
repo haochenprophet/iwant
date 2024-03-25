@@ -1845,7 +1845,6 @@
     <ClCompile Include="..\..\src\materiel\materiel_update.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_url.cpp" />
     <ClCompile Include="..\..\src\materiel\materiel_video.cpp" />
-    <ClCompile Include="..\..\src\math.cpp" />
     <ClCompile Include="..\..\src\math\abs.cpp" />
     <ClCompile Include="..\..\src\math\acos.cpp" />
     <ClCompile Include="..\..\src\math\acosh.cpp" />
@@ -2534,6 +2533,7 @@
     <ClCompile Include="..\..\src\warship\warship_sonar.cpp" />
     <ClCompile Include="..\..\src\warship\warship_steer.cpp" />
     <ClCompile Include="..\..\src\warship\warship_torpedo.cpp" />
+    <ClCompile Include="..\..\src\_math.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
@@ -4251,7 +4251,6 @@
     <ClInclude Include="..\..\src\materiel\materiel_update.h" />
     <ClInclude Include="..\..\src\materiel\materiel_url.h" />
     <ClInclude Include="..\..\src\materiel\materiel_video.h" />
-    <ClInclude Include="..\..\src\math.h" />
     <ClInclude Include="..\..\src\math\abs.h" />
     <ClInclude Include="..\..\src\math\acos.h" />
     <ClInclude Include="..\..\src\math\acosh.h" />
@@ -4955,6 +4954,7 @@
     <ClInclude Include="..\..\src\warship\warship_sonar.h" />
     <ClInclude Include="..\..\src\warship\warship_steer.h" />
     <ClInclude Include="..\..\src\warship\warship_torpedo.h" />
+    <ClInclude Include="..\..\src\_math.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\common.h" />
