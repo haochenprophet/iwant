@@ -6,8 +6,8 @@ CFLAGS +=\
 	-DLINUX_OS -D$(main)_TEST=1 -D$(debug)_DEBUG=1 \
 	-DSTATIC_CONCPP \
 	-Wl,-Bdynamic \
-	-o $(MK_TAG) *.cpp $(src) $(sql) math/crc.cpp \
-	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz \
+	-o $(MK_TAG) *.cpp $(src) $(sql) math/*.cpp \
+	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz -lm\
 	-I./ -I $(MYSQL_CONCPP_DIR)/include
 
 all : 

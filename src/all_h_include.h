@@ -1307,7 +1307,7 @@
 #include "math/fmin.h"
 #include "math/fmod.h"
 #include "math/frexp.h"
-#include "math.h"
+#include "_math.h"
 #include "math/hypot.h"
 #include "math/ilogb.h"
 #include "math/ldexp.h"

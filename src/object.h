@@ -15,6 +15,7 @@
 #include <map>
 #include <exception>
 #include <csignal> 
+#include <math.h>
 
 #include "temp_def.h"
 #include "syntax_def.h"

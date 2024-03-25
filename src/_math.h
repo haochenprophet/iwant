@@ -2,7 +2,6 @@
 #define MATH_H
 
 #include "object.h"
-#include <math.h>
 
 #ifndef PI
 #define PI 3.1415926535898
