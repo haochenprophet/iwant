@@ -68,6 +68,8 @@ class Ctimetree: Use c++ Describe the evolution and growth and activity of anyth
 7.Standard c or libc ... c functions have overloaded function names with _c attached. 
   ie. static int printf_c(const char* format, ...);
 
+8.callback class function like runme():int Ctree_func::runme(void* node) for other class call this runme function.
+
 [Building]:
 request :Need C + + compiler
 
