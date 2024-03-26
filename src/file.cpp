@@ -4,6 +4,7 @@
 #include "replace.h"
 #include "insert.h"
 #include "math/crc.h"
+#include "math/md5.h"
 
 int Cfile::my_init(void* p)
 {
@@ -189,6 +190,20 @@ int Cfile::crc(char* crc_func)
 {
 	if (this->f_name.empty()) return -1;
 	return this->crc((char*)this->f_name.c_str(), crc_func);
+}
+
+int Cfile::md5(char* f_name)
+{
+	int ret;
+	Cmd5 md5;
+	ret=md5.file(f_name);
+	md5.display();
+	return ret;
+}
+
+int Cfile::md5()
+{
+	return this->md5((char*)this->f_name.c_str());
 }
 
 int Cfile::cat(size_t start, size_t size, DisplayType t)
@@ -476,6 +491,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
 	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc(this->crc_func));
+	if (this->action == (ACTION_T)FileAtcion::md5) this->set_main_ret((int)this->md5());
 	return 0;
 }
 

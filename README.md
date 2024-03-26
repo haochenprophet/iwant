@@ -30,7 +30,7 @@ I will with as little time as possible and the code, output as much as possible 
 
 I will recording all human history and activities .
 
-[package]:code tree: main/package/files/class/function/command/action/function/coding...  
+[package]:code tree: main|root/package/files/namespace/class/command/action/function/coding...  
 
 
 [class]:
