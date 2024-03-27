@@ -88,6 +88,9 @@
     <Filter Include="code">
       <UniqueIdentifier>{765c6db0-1370-4b46-8437-9b34f68fce24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ocean">
+      <UniqueIdentifier>{f84c7e88-dae8-42a4-abad-c1b115caeeea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -7241,6 +7244,294 @@
     </ClCompile>
     <ClCompile Include="..\..\src\_math.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_about.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_action.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_air.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_alarm.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_alerts.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_altitude.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_animal.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_array.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_audio.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_biont.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_broadcast.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_check.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_colour.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_command.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_communication.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_control.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_country.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_current.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_density.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_depth.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_depth_radar.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_direction.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_distance.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_electricity.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_environment.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_escape.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_file.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_fish.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_flow.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_function.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_gas.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_gps.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_hardware.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_help.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_humidness.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_infrared.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_island.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_latitude.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_link.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_list.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_location.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_log.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_logo.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_longitude.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_magnetic.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_map.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_mayday.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_memory.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_message.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_mode.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_move.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_news.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_nitrogen.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_oil.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_ore.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_oxygen.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_oxygen_content.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_plan.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_plant.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_policy.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_pressure.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_radar.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_region.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_rescue.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_safety.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_salinity.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_scheme.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_seabed.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_seaboard.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_seawater.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_sensor.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_ship.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_solution.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_sound.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_speed.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_stack.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_status.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_target.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_task.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_temperature.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_test.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_tide.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_time.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_timeline.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_tree.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_type.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_ultrasonic_radar.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_vector.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_video.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_voltage.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_warning.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_water.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_wave.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_wind.cpp">
+      <Filter>ocean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ocean\ocean_work.cpp">
+      <Filter>ocean</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -14534,6 +14825,294 @@
     <ClInclude Include="..\..\src\_math.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_about.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_action.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_air.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_alarm.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_alerts.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_altitude.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_animal.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_array.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_audio.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_biont.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_broadcast.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_check.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_colour.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_command.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_communication.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_control.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_country.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_current.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_density.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_depth.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_depth_radar.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_direction.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_distance.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_electricity.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_environment.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_escape.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_file.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_fish.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_flow.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_function.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_gas.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_gps.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_hardware.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_help.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_humidness.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_infrared.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_island.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_latitude.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_link.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_list.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_location.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_log.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_logo.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_longitude.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_magnetic.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_map.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_mayday.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_memory.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_message.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_mode.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_move.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_news.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_nitrogen.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_oil.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_ore.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_oxygen.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_oxygen_content.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_plan.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_plant.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_policy.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_pressure.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_radar.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_region.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_rescue.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_safety.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_salinity.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_scheme.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_seabed.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_seaboard.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_seawater.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_sensor.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_ship.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_solution.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_sound.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_speed.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_stack.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_status.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_target.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_task.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_temperature.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_test.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_tide.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_time.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_timeline.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_tree.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_type.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_ultrasonic_radar.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_vector.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_video.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_voltage.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_warning.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_water.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_wave.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_wind.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ocean\ocean_work.h">
+      <Filter>ocean</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -14669,6 +15248,9 @@
     </None>
     <None Include="..\..\src\code\Makefile">
       <Filter>code</Filter>
+    </None>
+    <None Include="..\..\src\ocean\Makefile">
+      <Filter>ocean</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
