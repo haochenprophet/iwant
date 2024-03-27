@@ -7548,6 +7548,12 @@
     <ClCompile Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\applink.c">
       <Filter>openssl\include</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\openssl\openssl_sha.cpp">
+      <Filter>openssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\sha.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -15547,6 +15553,12 @@
     </ClInclude>
     <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509v3err.h">
       <Filter>openssl\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\openssl\openssl_sha.h">
+      <Filter>openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\sha.h">
+      <Filter>math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

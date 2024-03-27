@@ -1900,6 +1900,7 @@
     <ClCompile Include="..\..\src\math\round.cpp" />
     <ClCompile Include="..\..\src\math\scalbln.cpp" />
     <ClCompile Include="..\..\src\math\scalbn.cpp" />
+    <ClCompile Include="..\..\src\math\sha.cpp" />
     <ClCompile Include="..\..\src\math\signbit.cpp" />
     <ClCompile Include="..\..\src\math\sin.cpp" />
     <ClCompile Include="..\..\src\math\sinh.cpp" />
@@ -2092,6 +2093,7 @@
     <ClCompile Include="..\..\src\ocean\ocean_wind.cpp" />
     <ClCompile Include="..\..\src\ocean\ocean_work.cpp" />
     <ClCompile Include="..\..\src\openssl\openssl.cpp" />
+    <ClCompile Include="..\..\src\openssl\openssl_sha.cpp" />
     <ClCompile Include="..\..\src\operator\addition.cpp" />
     <ClCompile Include="..\..\src\operator\address_operator.cpp" />
     <ClCompile Include="..\..\src\operator\add_assign.cpp" />
@@ -4406,6 +4408,7 @@
     <ClInclude Include="..\..\src\math\round.h" />
     <ClInclude Include="..\..\src\math\scalbln.h" />
     <ClInclude Include="..\..\src\math\scalbn.h" />
+    <ClInclude Include="..\..\src\math\sha.h" />
     <ClInclude Include="..\..\src\math\signbit.h" />
     <ClInclude Include="..\..\src\math\sin.h" />
     <ClInclude Include="..\..\src\math\sinh.h" />
@@ -4603,6 +4606,7 @@
     <ClInclude Include="..\..\src\ocean\ocean_wind.h" />
     <ClInclude Include="..\..\src\ocean\ocean_work.h" />
     <ClInclude Include="..\..\src\openssl\openssl.h" />
+    <ClInclude Include="..\..\src\openssl\openssl_sha.h" />
     <ClInclude Include="..\..\src\operator\addition.h" />
     <ClInclude Include="..\..\src\operator\address_operator.h" />
     <ClInclude Include="..\..\src\operator\add_assign.h" />
