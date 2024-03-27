@@ -1,0 +1,2385 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://wiki.openssl.org/index.php/Binaries
+Subject: Binaries - OpenSSLWiki
+Date: Wed, 27 Mar 2024 10:50:04 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----"
+
+
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: text/html
+Content-ID: <frame-D3DF524D285AB8E9DD2656A6CBD02F2E@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://wiki.openssl.org/index.php/Binaries
+
+<!DOCTYPE html><html class=3D"client-js" lang=3D"en" dir=3D"ltr"><head><met=
+a http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link =
+rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-d2b5df2a-bc85-4268-ae5=
+1-f6a1c357d8b9@mhtml.blink" />
+
+<title>Binaries - OpenSSLWiki</title>
+
+
+<link rel=3D"stylesheet" href=3D"https://wiki.openssl.org/load.php?lang=3De=
+n&amp;modules=3Djquery.tablesorter.styles%7Cmediawiki.skinning.content.exte=
+rnallinks%7Cskins.monobook.responsive&amp;only=3Dstyles&amp;skin=3Dmonobook=
+">
+
+<!--[if lt IE 9]><link rel=3D"stylesheet" href=3D"/skins/MonoBook/resources=
+/screen-desktop.css?d010f" media=3D"screen"/><![endif]-->
+<meta name=3D"generator" content=3D"MediaWiki 1.35.6">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0, user-scalable=3Dyes, minimum-scale=3D0.25, maximum-scale=3D5.0">
+<link rel=3D"alternate" type=3D"application/x-wiki" title=3D"Edit" href=3D"=
+https://wiki.openssl.org/index.php?title=3DBinaries&amp;action=3Dedit">
+<link rel=3D"edit" title=3D"Edit" href=3D"https://wiki.openssl.org/index.ph=
+p?title=3DBinaries&amp;action=3Dedit">
+<link rel=3D"shortcut icon" href=3D"https://wiki.openssl.org/favicon.ico">
+<link rel=3D"search" type=3D"application/opensearchdescription+xml" href=3D=
+"https://wiki.openssl.org/opensearch_desc.php" title=3D"OpenSSLWiki (en)">
+<link rel=3D"EditURI" type=3D"application/rsd+xml" href=3D"https://wiki.ope=
+nssl.org/api.php?action=3Drsd">
+<link rel=3D"license" href=3D"https://wiki.openssl.org/index.php/License">
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"OpenSSLWiki =
+Atom feed" href=3D"https://wiki.openssl.org/index.php?title=3DSpecial:Recen=
+tChanges&amp;feed=3Datom">
+<!--[if lt IE 9]><script src=3D"/resources/lib/html5shiv/html5shiv.js"></sc=
+ript><![endif]-->
+</head>
+<body class=3D"mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject =
+mw-editable page-Binaries rootpage-Binaries skin-monobook action-view"><div=
+ id=3D"globalWrapper"><div id=3D"column-content"><div id=3D"content" class=
+=3D"mw-body" role=3D"main"><a id=3D"top"></a><div class=3D"mw-indicators mw=
+-body-content">
+</div>
+<h1 id=3D"firstHeading" class=3D"firstHeading" lang=3D"en">Binaries</h1><di=
+v id=3D"bodyContent" class=3D"mw-body-content"><div id=3D"siteSub">From Ope=
+nSSLWiki</div><div id=3D"contentSub" lang=3D"en" dir=3D"ltr"></div><div id=
+=3D"jump-to-nav"></div><a href=3D"https://wiki.openssl.org/index.php/Binari=
+es#column-one" class=3D"mw-jump-link">Jump to navigation</a><a href=3D"http=
+s://wiki.openssl.org/index.php/Binaries#searchInput" class=3D"mw-jump-link"=
+>Jump to search</a><!-- start content --><div id=3D"mw-content-text" lang=
+=3D"en" dir=3D"ltr" class=3D"mw-content-ltr"><div class=3D"mw-parser-output=
+"><p>Some people have offered to provide OpenSSL binary distributions for s=
+elected operating systems. The condition to get a link here is that the lin=
+k is stable and can provide continued support for OpenSSL for a while.
+</p><p>Note: many Linux distributions come with pre-compiled OpenSSL packag=
+es. Those are already well-known among the users of said distributions, and=
+ will therefore not be mentioned here. If you are such a user, we ask you t=
+o get in touch with your distributor first. This service is primarily for o=
+perating systems where there are no pre-compiled OpenSSL packages.
+</p><p><b>Important Disclaimer</b>:
+<i>The listing of these third party products does not imply any endorsement=
+ by the OpenSSL project, and these organizations are not affiliated in any =
+way with OpenSSL other than by the reference to their independent web sites=
+ here.</i> <b>In particular any donations or payments to any of these organ=
+izations will not be known to, seen by, or in any way benefit the OpenSSL p=
+roject.</b>
+</p><p><b>To make a donation to the project directly go to our <a rel=3D"no=
+follow" class=3D"external text" href=3D"https://github.com/sponsors/openssl=
+">github sponsors page</a>. Alternatively consider becoming a <a rel=3D"nof=
+ollow" class=3D"external text" href=3D"https://www.openssl.org/support/dona=
+tions.html">corporate sponsor</a>.</b>
+</p><p>Use these OpenSSL derived products at your own risk; these products =
+have not been evaluated or tested by the OpenSSL project.
+</p><p><br>
+</p>
+<table class=3D"wikitable sortable jquery-tablesorter" border=3D"1">
+<caption>Third Party OpenSSL Related Binary Distributions
+</caption>
+<thead><tr>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">Product
+</th>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">Description
+</th>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">URL
+</th></tr></thead><tbody>
+<tr>
+<td>OpenSSL for Web (using WebAssembly)
+</td>
+<td>OpenSSL 3.0 ported to WebAssembly (in October 2021). Uses Emscripten an=
+d xterm.js to emulate a terminal in your browser. WASI binaries are support=
+ed too. The Wasm execution happens using WebWorkers if the browser supports=
+ them. Originally developed for the cryptology playground "CrypTool-Online"=
+. Code is open-source on GitHub.
+</td>
+<td>OpenSSL-React app: <a rel=3D"nofollow" class=3D"external free" href=3D"=
+https://github.com/cryptool-org/openssl-webterm">https://github.com/cryptoo=
+l-org/openssl-webterm</a><br>Basic Wasm terminal: <a rel=3D"nofollow" class=
+=3D"external free" href=3D"https://github.com/cryptool-org/wasm-webterm">ht=
+tps://github.com/cryptool-org/wasm-webterm</a><br>Running sample: <a rel=3D=
+"nofollow" class=3D"external free" href=3D"https://www.cryptool.org/en/cto/=
+openssl">https://www.cryptool.org/en/cto/openssl</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Windows
+</td>
+<td>Works with MSVC++, Builder 3/4/5, and MinGW. Comes in form of self-inst=
+all executables.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://slproweb.co=
+m/products/Win32OpenSSL.html">https://slproweb.com/products/Win32OpenSSL.ht=
+ml</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Windows
+</td>
+<td>Pre-compiled Win32/64 libraries without external dependencies to the Mi=
+crosoft Visual Studio Runtime DLLs, except for the system provided msvcrt.d=
+ll.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://indy.fulgan=
+.com/SSL/">https://indy.fulgan.com/SSL/</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Windows
+</td>
+<td>Reproducible builds with latest MinGW-w64, 64/32-bit, static/dynamic li=
+bs and executable.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+curl/curl-for-win">https://github.com/curl/curl-for-win</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Solaris
+</td>
+<td>Versions for Solaris 2.5 - 11 SPARC and X86
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"http://www.unixpack=
+ages.com/">http://www.unixpackages.com/</a>
+</td></tr>
+
+<tr>
+<td>OpensSSL for Windows, Linux, OSX, Android
+</td>
+<td>Pre-compiled packages at conan.io package manager:<br><i>Windows</i> x8=
+6/x86_64 (Visual Studio 10, 12, 14, 15) <br><i>Linux</i> x86/x86_64 (gcc 4.=
+6, 4.8, 4.9, 5, 6, 7) <br><i>OSx</i> (Apple clang). <br>Cross-building read=
+y recipe: Linux ARM, Android.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://www.conan.i=
+o/">https://www.conan.io</a><br><a rel=3D"nofollow" class=3D"external free"=
+ href=3D"https://conan.io/center/openssl">https://conan.io/center/openssl</=
+a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Windows
+</td>
+<td>Pre-compiled Win32/64 1.0.2, 1.1.0, 1.1.1 and 3.0 libraries without ext=
+ernal dependencies, primarily built for Fran=C3=A7ois Piette's Internet Com=
+ponent Suite (ICS) for Embarcadero (Borland) Delphi and C++ development too=
+ls, but may be used for any Windows applications.  The OpenSSL DLLs and EXE=
+ files are digitally code signed 'Open Source Developer, Fran=C3=A7ois PIET=
+TE', so applications can self verify them for corruption.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"http://wiki.overbyt=
+e.eu/wiki/index.php/ICS_Download">http://wiki.overbyte.eu/wiki/index.php/IC=
+S_Download</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for Windows
+</td>
+<td>OpenSSL 3.2, 3.1 and 3.0 LTS pre-compiled for Microsoft Windows with no=
+ external dependencies. The binary distributions can be used standalone or =
+integrated into any Windows application. Installer, EXEs and DLLs are digit=
+ally signed with 'FireDaemon Technologies Limited' Extended Validation (EV)=
+ code signing certificate.
+</td>
+<td><a rel=3D"nofollow" class=3D"external text" href=3D"https://www.firedae=
+mon.com/get-openssl">https://www.firedaemon.com/get-openssl</a>
+</td></tr>
+
+<tr>
+<td>OpenSSL for NonStop
+</td>
+<td>Pre-compiled NonStop ia64/x86 1.0.2, 1.1.1 executables and libraries fo=
+r the HPE NonStop Operating Systems. Threaded versions are included. The SP=
+T version depends on FLOSS, otherwise there are no other dependencies. 32-b=
+it versions are available. The builds are done by the ITUGLIB Technical Com=
+mittee as part of Connect.
+</td>
+<td><a rel=3D"nofollow" class=3D"external text" href=3D"https://ituglib.con=
+nect-community.org/apps/Ituglib/SrchOpenSrcLib.xhtml">https://ituglib.conne=
+ct-community.org/apps/Ituglib/SrchOpenSrcLib.xhtml</a>
+</td></tr>
+
+</tbody><tfoot></tfoot></table>
+<h1><span class=3D"mw-headline" id=3D"Engines">Engines</span><span class=3D=
+"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a href=3D"=
+https://wiki.openssl.org/index.php?title=3DBinaries&amp;action=3Dedit&amp;s=
+ection=3D1" title=3D"Edit section: Engines">edit</a><span class=3D"mw-edits=
+ection-bracket">]</span></span></h1>
+<p>Some third parties provide OpenSSL compatible engines. As for the binari=
+es above the following disclaimer applies:
+</p><p><b>Important Disclaimer</b>:
+<i>The listing of these third party products does not imply any endorsement=
+ by the OpenSSL project, and these organizations are not affiliated in any =
+way with OpenSSL other than by the reference to their independent web sites=
+ here. In particular any donations or payments to any of these organization=
+s will not be known to, seen by, or in any way benefit the OpenSSL project.=
+</i>
+</p>
+<table class=3D"wikitable sortable jquery-tablesorter" border=3D"1">
+<caption>Third Party OpenSSL compatible engines
+</caption>
+<thead><tr>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">Product
+</th>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">Description
+</th>
+<th scope=3D"col" class=3D"headerSort" tabindex=3D"0" role=3D"columnheader =
+button" title=3D"Sort ascending">URL
+</th></tr></thead><tbody>
+
+<tr>
+<td>Intel=C2=AE QuickAssist Technology engine
+</td>
+<td>Intel=C2=AE QuickAssist Technology (<a rel=3D"nofollow" class=3D"extern=
+al free" href=3D"http://www.intel.com/content/www/us/en/embedded/technology=
+/quickassist/overview.html">http://www.intel.com/content/www/us/en/embedded=
+/technology/quickassist/overview.html</a>) provides acceleration for a numb=
+er of cryptographic algorithms. QAT_engine adds support for Intel=C2=AE Qui=
+ckAssist Technology to OpenSSL-1.1.0 via the ENGINE framework. The definiti=
+ve list of algorithms exposed into OpenSSL (a subset of those supported in =
+the device) is defined on the associated github page.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+01org/QAT_Engine">https://github.com/01org/QAT_Engine</a>
+</td></tr>
+<tr>
+<td>ATECCX08 engine
+</td>
+<td>Support for the Atmel ATECC508A (<a rel=3D"nofollow" class=3D"external =
+free" href=3D"http://www.atmel.com/devices/ATECC508A.aspx">http://www.atmel=
+.com/devices/ATECC508A.aspx</a>) hardware to provide secure key storage, EC=
+C cryptographic calculations for the ECC NIST P-256 curve, and FIPS certifi=
+ed hardware Random Number Generator.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+AtmelCSO/cryptoauth-openssl-engine">https://github.com/AtmelCSO/cryptoauth-=
+openssl-engine</a>
+</td></tr>
+
+<tr>
+<td>GOST engine
+</td>
+<td>A reference implementation of the Russian GOST crypto algorithms for Op=
+enSSL. The presence of this engine also enables the built-in OpenSSL suppor=
+t for GOST TLS ciphersuites. (Note: this engine is for OpenSSL version 1.1.=
+0 and above. Previous versions of OpenSSL used a built-in GOST engine)
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+gost-engine/engine">https://github.com/gost-engine/engine</a>
+</td></tr>
+
+<tr>
+<td>ISARA Radiate Solution Suite OpenSSL Connector
+</td>
+<td>Commercially available engine and source code patch for OpenSSL 1.0.2 b=
+ranch.  The ISARA Radiate OpenSSL Connector lets you implement OpenSSL usin=
+g quantum safe algorithms. ISARA Radiate (<a rel=3D"nofollow" class=3D"exte=
+rnal free" href=3D"https://www.isara.com/isara-radiate/">https://www.isara.=
+com/isara-radiate/</a>) gives you the cryptographic building blocks to crea=
+te applications that will resist attacks by quantum computers.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://www.isara.c=
+om/openssl/1/">https://www.isara.com/openssl/1/</a>
+</td></tr>
+
+<tr>
+<td>BEE2EVP engine
+</td>
+<td>Implements the Belarusian national cryptography: symmetric and public-k=
+ey encryption, MAC, AEAD, hashing, digital signature. Encapsulates the Bee2=
+ core cryptographic library into OpenSSL using the EVP interface.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+bcrypto/bee2evp">https://github.com/bcrypto/bee2evp</a>
+</td></tr>
+
+<tr>
+<td>wolfSSL wolfEngine
+</td>
+<td>wolfSSL has an OpenSSL engine, wolfEngine. wolfEngine is structured as =
+a separate standalone library which links against wolfSSL (libwolfssl) and =
+OpenSSL. wolfEngine implements and exposes an OpenSSL engine implementation=
+ which wraps the wolfCrypt native API internally.  Algorithm support matche=
+s that as listed on the wolfCrypt FIPS 140-2 certificate #3389.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+wolfSSL/wolfEngine">https://github.com/wolfSSL/wolfEngine</a>
+</td></tr>
+
+<tr>
+<td>wolfSSL wolfProvider
+</td>
+<td>Similar to the wolfEngine above, the wolfSSL team has also created the =
+wolfProvider. The wolfProvider is structured as a separate standalone libra=
+ry which links against wolfSSL (libwolfssl) and OpenSSL 3.0.0 using the new=
+ provider API. Algorithm support matches that as listed on the wolfCrypt FI=
+PS 140-2 certificate #3389.
+</td>
+<td><a rel=3D"nofollow" class=3D"external free" href=3D"https://github.com/=
+wolfSSL/wolfProvider">https://github.com/wolfSSL/wolfProvider</a>
+</td></tr>
+
+</tbody><tfoot></tfoot></table>
+<!--=20
+NewPP limit report
+Cached time: 20240326094740
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.010 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 3/1000000
+Post=E2=80=90expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post=E2=80=90expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:600-0!canonical an=
+d timestamp 20240326094740 and revision id 3228
+ -->
+</div></div><div class=3D"printfooter">
+Retrieved from "<a dir=3D"ltr" href=3D"https://wiki.openssl.org/index.php?t=
+itle=3DBinaries&amp;oldid=3D3228">https://wiki.openssl.org/index.php?title=
+=3DBinaries&amp;oldid=3D3228</a>"</div>
+<div id=3D"catlinks" class=3D"catlinks catlinks-allhidden" data-mw=3D"inter=
+face"></div><!-- end content --><div class=3D"visualClear"></div></div></di=
+v><div class=3D"visualClear"></div></div><div id=3D"column-one" lang=3D"en"=
+ dir=3D"ltr"><h2>Navigation menu</h2><div role=3D"navigation" class=3D"port=
+let" id=3D"p-cactions" aria-labelledby=3D"p-cactions-label"><h3 id=3D"p-cac=
+tions-label" lang=3D"en" dir=3D"ltr">Page actions</h3><div class=3D"pBody">=
+<ul lang=3D"en" dir=3D"ltr"><li id=3D"ca-nstab-main" class=3D"selected"><a =
+href=3D"https://wiki.openssl.org/index.php/Binaries" title=3D"View the cont=
+ent page [alt-shift-c]" accesskey=3D"c">Page</a></li><li id=3D"ca-talk" cla=
+ss=3D"new"><a href=3D"https://wiki.openssl.org/index.php?title=3DTalk:Binar=
+ies&amp;action=3Dedit&amp;redlink=3D1" rel=3D"discussion" title=3D"Discussi=
+on about the content page (page does not exist) [alt-shift-t]" accesskey=3D=
+"t">Discussion</a></li><li id=3D"ca-edit"><a href=3D"https://wiki.openssl.o=
+rg/index.php?title=3DBinaries&amp;action=3Dedit" title=3D"Edit this page [a=
+lt-shift-e]" accesskey=3D"e">Edit</a></li><li id=3D"ca-history"><a href=3D"=
+https://wiki.openssl.org/index.php?title=3DBinaries&amp;action=3Dhistory" t=
+itle=3D"Past revisions of this page [alt-shift-h]" accesskey=3D"h">History<=
+/a></li></ul></div></div><div role=3D"navigation" class=3D"portlet" id=3D"p=
+-cactions-mobile" aria-labelledby=3D"p-cactions-mobile-label"><h3 id=3D"p-c=
+actions-mobile-label" lang=3D"en" dir=3D"ltr">Page actions</h3><div class=
+=3D"pBody"><ul lang=3D"en" dir=3D"ltr"><li id=3D"ca-nstab-main-mobile" clas=
+s=3D"selected"><a href=3D"https://wiki.openssl.org/index.php/Binaries" titl=
+e=3D"Page">Page</a></li><li id=3D"ca-talk-mobile" class=3D"new"><a href=3D"=
+https://wiki.openssl.org/index.php?title=3DTalk:Binaries&amp;action=3Dedit&=
+amp;redlink=3D1" rel=3D"discussion" title=3D" (page does not exist)">Discus=
+sion</a></li><li id=3D"ca-more"><a href=3D"https://wiki.openssl.org/index.p=
+hp/Binaries#p-cactions">More</a></li><li id=3D"ca-tools"><a href=3D"https:/=
+/wiki.openssl.org/index.php/Binaries#p-tb" title=3D"Tools">Tools</a></li><l=
+i id=3D"ca-languages"><a href=3D"https://wiki.openssl.org/index.php/Binarie=
+s#p-lang" title=3D"In other languages">In other languages</a></li></ul></di=
+v></div><div role=3D"navigation" class=3D"portlet" id=3D"p-personal" aria-l=
+abelledby=3D"p-personal-label"><h3 id=3D"p-personal-label" lang=3D"en" dir=
+=3D"ltr">Personal tools</h3><div class=3D"pBody"><ul lang=3D"en" dir=3D"ltr=
+"><li id=3D"pt-anonuserpage">Not logged in</li><li id=3D"pt-anontalk"><a hr=
+ef=3D"https://wiki.openssl.org/index.php/Special:MyTalk" title=3D"Discussio=
+n about edits from this IP address [alt-shift-n]" accesskey=3D"n">Talk</a><=
+/li><li id=3D"pt-anoncontribs"><a href=3D"https://wiki.openssl.org/index.ph=
+p/Special:MyContributions" title=3D"A list of edits made from this IP addre=
+ss [alt-shift-y]" accesskey=3D"y">Contributions</a></li><li id=3D"pt-login"=
+><a href=3D"https://wiki.openssl.org/index.php?title=3DSpecial:UserLogin&am=
+p;returnto=3DBinaries" title=3D"You are encouraged to log in; however, it i=
+s not mandatory [alt-shift-o]" accesskey=3D"o">Log in</a></li></ul></div></=
+div><div class=3D"portlet" id=3D"p-logo" role=3D"banner"><a href=3D"https:/=
+/wiki.openssl.org/index.php/Main_Page" class=3D"mw-wiki-logo" title=3D"Visi=
+t the main page"></a></div><div id=3D"sidebar"><div role=3D"navigation" cla=
+ss=3D"portlet generated-sidebar" id=3D"p-navigation" aria-labelledby=3D"p-n=
+avigation-label"><h3 id=3D"p-navigation-label" lang=3D"en" dir=3D"ltr">Navi=
+gation</h3><div class=3D"pBody"><ul lang=3D"en" dir=3D"ltr"><li id=3D"n-mai=
+npage-description"><a href=3D"https://wiki.openssl.org/index.php/Main_Page"=
+ title=3D"Visit the main page [alt-shift-z]" accesskey=3D"z">Main page</a><=
+/li><li id=3D"n-recentchanges"><a href=3D"https://wiki.openssl.org/index.ph=
+p/Special:RecentChanges" title=3D"A list of recent changes in the wiki [alt=
+-shift-r]" accesskey=3D"r">Recent changes</a></li><li id=3D"n-randompage"><=
+a href=3D"https://wiki.openssl.org/index.php/Special:Random" title=3D"Load =
+a random page [alt-shift-x]" accesskey=3D"x">Random page</a></li><li id=3D"=
+n-help-mediawiki"><a href=3D"https://www.mediawiki.org/wiki/Special:MyLangu=
+age/Help:Contents">Help about MediaWiki</a></li></ul></div></div><div role=
+=3D"search" class=3D"portlet" id=3D"p-search"><h3 id=3D"p-search-label" lan=
+g=3D"en" dir=3D"ltr"><label for=3D"searchInput">Search</label></h3><div cla=
+ss=3D"pBody" id=3D"searchBody"><form action=3D"https://wiki.openssl.org/ind=
+ex.php" id=3D"searchform"><input type=3D"search" name=3D"search" placeholde=
+r=3D"Search OpenSSLWiki" title=3D"Search OpenSSLWiki [alt-shift-f]" accessk=
+ey=3D"f" id=3D"searchInput"><input type=3D"submit" name=3D"go" value=3D"Go"=
+ title=3D"Go to a page with this exact name if it exists" id=3D"searchGoBut=
+ton" class=3D"searchButton">&nbsp; <input type=3D"submit" name=3D"fulltext"=
+ value=3D"Search" title=3D"Search the pages for this text" id=3D"mw-searchB=
+utton" class=3D"searchButton"></form></div></div><div role=3D"navigation" c=
+lass=3D"portlet" id=3D"p-tb" aria-labelledby=3D"p-tb-label"><h3 id=3D"p-tb-=
+label" lang=3D"en" dir=3D"ltr">Tools</h3><div class=3D"pBody"><ul lang=3D"e=
+n" dir=3D"ltr"><li id=3D"t-whatlinkshere"><a href=3D"https://wiki.openssl.o=
+rg/index.php/Special:WhatLinksHere/Binaries" title=3D"A list of all wiki pa=
+ges that link here [alt-shift-j]" accesskey=3D"j">What links here</a></li><=
+li id=3D"t-recentchangeslinked"><a href=3D"https://wiki.openssl.org/index.p=
+hp/Special:RecentChangesLinked/Binaries" rel=3D"nofollow" title=3D"Recent c=
+hanges in pages linked from this page [alt-shift-k]" accesskey=3D"k">Relate=
+d changes</a></li><li id=3D"t-specialpages"><a href=3D"https://wiki.openssl=
+.org/index.php/Special:SpecialPages" title=3D"A list of all special pages [=
+alt-shift-q]" accesskey=3D"q">Special pages</a></li><li id=3D"t-print"><a r=
+el=3D"alternate" title=3D"Printable version of this page [alt-shift-p]" acc=
+esskey=3D"p">Printable version</a></li><li id=3D"t-permalink"><a href=3D"ht=
+tps://wiki.openssl.org/index.php?title=3DBinaries&amp;oldid=3D3228" title=
+=3D"Permanent link to this revision of the page">Permanent link</a></li><li=
+ id=3D"t-info"><a href=3D"https://wiki.openssl.org/index.php?title=3DBinari=
+es&amp;action=3Dinfo" title=3D"More information about this page">Page infor=
+mation</a></li></ul></div></div></div><a href=3D"https://wiki.openssl.org/i=
+ndex.php/Binaries#sidebar" title=3D"navigation" class=3D"menu-toggle" id=3D=
+"sidebar-toggle"></a><a href=3D"https://wiki.openssl.org/index.php/Binaries=
+#p-personal" title=3D"user tools" class=3D"menu-toggle" id=3D"p-personal-to=
+ggle"></a><a href=3D"https://wiki.openssl.org/index.php/Binaries#globalWrap=
+per" title=3D"back to top" class=3D"menu-toggle" id=3D"globalWrapper-toggle=
+"></a></div><!-- end of the left (by default at least) column --><div class=
+=3D"visualClear"></div><div id=3D"footer" class=3D"mw-footer" role=3D"conte=
+ntinfo" lang=3D"en" dir=3D"ltr"><div id=3D"f-copyrightico" class=3D"footer-=
+icons"><a href=3D"http://www.openssl.org/source/license.html"><img src=3D"h=
+ttps://wiki.openssl.org/index.php/Binaries" alt=3D"the OpenSSL License" wid=
+th=3D"88" height=3D"31" loading=3D"lazy"></a></div><div id=3D"f-poweredbyic=
+o" class=3D"footer-icons"><a href=3D"https://www.mediawiki.org/"><img src=
+=3D"https://wiki.openssl.org/resources/assets/poweredby_mediawiki_88x31.png=
+" alt=3D"Powered by MediaWiki" width=3D"88" height=3D"31" loading=3D"lazy">=
+</a></div><ul id=3D"f-list"><li id=3D"lastmod"> This page was last edited o=
+n 1 February 2024, at 09:10.</li><li id=3D"copyright">Content is available =
+under <a href=3D"https://wiki.openssl.org/index.php/License" title=3D"Licen=
+se">the OpenSSL License</a> unless otherwise noted.</li><li id=3D"privacy">=
+<a href=3D"https://wiki.openssl.org/index.php/OpenSSLWiki:Privacy_policy" t=
+itle=3D"OpenSSLWiki:Privacy policy">Privacy policy</a></li><li id=3D"about"=
+><a href=3D"https://wiki.openssl.org/index.php/OpenSSLWiki:About" title=3D"=
+OpenSSLWiki:About">About OpenSSLWiki</a></li><li id=3D"disclaimer"><a href=
+=3D"https://wiki.openssl.org/index.php/OpenSSLWiki:General_disclaimer" titl=
+e=3D"OpenSSLWiki:General disclaimer">Disclaimers</a></li></ul></div></div>
+</body></html>
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-d2b5df2a-bc85-4268-ae51-f6a1c357d8b9@mhtml.blink
+
+@charset "utf-8";
+
+@media screen and (max-width: 550px) {
+  #sidebar .generated-sidebar, #p-search-mobilejs, #p-tb-mobilejs, #p-lang-=
+mobilejs, #t-contributions { display: none; }
+  #p-cactions, #p-personal, #p-tb, #p-lang, #sidebar-mobilejs { position: a=
+bsolute; top: -9999px; left: 0px; }
+  #p-cactions.mobile-menu-active, #p-personal.mobile-menu-active, #p-tb.mob=
+ile-menu-active, #p-lang.mobile-menu-active, #sidebar-mobilejs.mobile-menu-=
+active { top: 2em; left: 0px; }
+  .mobile-menu-active { position: absolute; z-index: 10000; background: rgb=
+(255, 255, 255); border-width: 1px 1px 1px 0px; border-top-style: solid; bo=
+rder-right-style: solid; border-bottom-style: solid; border-top-color: rgb(=
+250, 189, 35); border-right-color: rgb(250, 189, 35); border-bottom-color: =
+rgb(250, 189, 35); border-image: initial; border-left-style: initial; borde=
+r-left-color: initial; padding: 2em 2em 0px 1.5em; font-size: 125%; }
+  .mobile-menu-active [id^=3D"ca-nstab-"], .mobile-menu-active #ca-talk, .m=
+obile-menu-active #ca-edit { position: absolute; top: -9999px; left: 0px; }
+  .mobile-menu-active ul { padding-top: 1em; }
+  .mobile-menu-active li { white-space: nowrap; }
+  .mobile-menu-active a { display: block; padding: 0.65em 0px; }
+  .mobile-menu-active h3:first-child { margin-right: 2em; }
+  .mobile-menu-active .pBody { margin-bottom: 2em; }
+  .mobile-menu-active .mobile-close-button { width: 20px; height: 20px; bac=
+kground-image: linear-gradient(transparent, transparent), url("/skins/MonoB=
+ook/resources/images/icon-close.svg?a9af1"); background-position: 0px 0px; =
+background-repeat: no-repeat; position: absolute; top: 1em; right: 0.75em; =
+cursor: pointer; }
+  .menus-cover { display: none; top: 0px; left: 0px; width: 100%; height: 1=
+00%; z-index: 9999; }
+  .menus-cover.visible { display: block; }
+  #menus-cover { position: fixed; opacity: 0.45; background-color: rgb(255,=
+ 255, 255); }
+  #menus-cover-background { position: absolute; background-color: rgb(249, =
+249, 249); background-image: linear-gradient(transparent, transparent), url=
+("/skins/MonoBook/resources/images/headbg.svg?0be07"); background-position:=
+ 0px 0px; background-repeat: no-repeat; opacity: 0.55; }
+  #p-cactions-mobile li#ca-edit-mobile a { background-image: linear-gradien=
+t(transparent, transparent), url("/skins/MonoBook/resources/images/icon-edi=
+t.svg?badf7"); }
+  #p-cactions-mobile li#t-contributions-mobile a { background-image: linear=
+-gradient(transparent, transparent), url("/skins/MonoBook/resources/images/=
+icon-user.svg?9bf49"); }
+}
+
+@media screen {
+  body { margin: 0px; }
+  main { display: block; }
+  hr { box-sizing: content-box; height: 0px; overflow: visible; }
+  abbr[title] { border-bottom: 1px dotted; cursor: help; }
+  @supports (text-decoration:underline dotted) {
+  abbr[title] { border-bottom: 0px; text-decoration: underline dotted; }
+}
+  pre, code, tt, kbd, samp { font-family: monospace, monospace; }
+  sub, sup { line-height: 1; }
+  img { border: 0px; }
+  legend { color: inherit; padding: 0px; }
+  a { text-decoration: none; color: rgb(6, 69, 173); background: none; }
+  a:not([href]) { cursor: pointer; }
+  a:visited { color: rgb(11, 0, 128); }
+  a:active { color: rgb(250, 167, 0); }
+  a:hover, a:focus { text-decoration: underline; }
+  a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-d=
+ecoration: none; }
+  a.stub { color: rgb(119, 34, 51); }
+  a.new, #p-personal a.new { color: rgb(221, 51, 51); }
+  a.mw-selflink { color: inherit; font-weight: bold; text-decoration: inher=
+it; }
+  a.mw-selflink:hover { cursor: inherit; text-decoration: inherit; }
+  a.mw-selflink:active, a.mw-selflink:visited { color: inherit; }
+  a.new:visited, #p-personal a.new:visited { color: rgb(165, 88, 88); }
+  .mw-parser-output a.extiw, .mw-parser-output a.external { color: rgb(51, =
+102, 187); }
+  .mw-parser-output a.extiw:visited, .mw-parser-output a.external:visited {=
+ color: rgb(102, 51, 102); }
+  .mw-parser-output a.extiw:active, .mw-parser-output a.external:active { c=
+olor: rgb(187, 102, 51); }
+  .mw-parser-output a.external.free { overflow-wrap: break-word; }
+  img { border: 0px; vertical-align: middle; }
+  hr { height: 1px; background-color: rgb(162, 169, 177); border: 0px; marg=
+in: 0.2em 0px; }
+  h1, h2, h3, h4, h5, h6 { color: rgb(0, 0, 0); margin: 0px; padding-top: 0=
+.5em; padding-bottom: 0.17em; overflow: hidden; }
+  h1, h2 { margin-bottom: 0.6em; border-bottom: 1px solid rgb(162, 169, 177=
+); }
+  h3, h4, h5 { margin-bottom: 0.3em; }
+  h1 { font-size: 188%; font-weight: normal; }
+  h2 { font-size: 150%; font-weight: normal; }
+  h3 { font-size: 128%; }
+  h4 { font-size: 116%; }
+  h5 { font-size: 108%; }
+  h6 { font-size: 100%; }
+  p { margin: 0.4em 0px 0.5em; }
+  p img { margin: 0px; }
+  ul { margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+  ol { margin: 0.3em 0px 0px 3.2em; padding: 0px; list-style-image: none; }
+  li { margin-bottom: 0.1em; }
+  dt { font-weight: bold; margin-bottom: 0.1em; }
+  dl { margin-top: 0.2em; margin-bottom: 0.5em; }
+  dd { margin-left: 1.6em; margin-bottom: 0.1em; }
+  pre, code, tt, kbd, samp, .mw-code { font-family: monospace, monospace; }
+  code { color: rgb(0, 0, 0); background-color: rgb(248, 249, 250); border:=
+ 1px solid rgb(234, 236, 240); border-radius: 2px; padding: 1px 4px; }
+  pre, .mw-code { color: rgb(0, 0, 0); background-color: rgb(248, 249, 250)=
+; border: 1px solid rgb(234, 236, 240); padding: 1em; white-space: pre-wrap=
+; overflow-x: hidden; overflow-wrap: break-word; }
+  table { font-size: 100%; }
+  fieldset { border: 1px solid rgb(42, 75, 141); margin: 1em 0px; padding: =
+0px 1em 1em; }
+  legend { padding: 0.5em; font-size: 95%; }
+  form { border: 0px; margin: 0px; }
+  textarea { width: 100%; padding: 0.1em; display: block; box-sizing: borde=
+r-box; }
+  .center { width: 100%; text-align: center; }
+  .center * { margin-left: auto; margin-right: auto; }
+  .small { font-size: 94%; }
+  table.small { font-size: 100%; }
+  .toc, .mw-warning, .toccolours { border: 1px solid rgb(162, 169, 177); ba=
+ckground-color: rgb(248, 249, 250); padding: 5px; font-size: 95%; }
+  .toc { display: table; padding: 7px; }
+  table.toc { border-collapse: collapse; }
+  table.toc td { padding: 0px; }
+  .toc h2 { display: inline; border: 0px; padding: 0px; font-size: 100%; fo=
+nt-weight: bold; }
+  .toc .toctitle { text-align: center; }
+  .toc ul { list-style-type: none; list-style-image: none; margin-left: 0px=
+; padding: 0px; text-align: left; }
+  .toc ul ul { margin: 0px 0px 0px 2em; }
+  .tocnumber, .toctext { display: table-cell; text-decoration: inherit; }
+  .tocnumber { color: rgb(32, 33, 34); padding-left: 0px; padding-right: 0.=
+5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+  .mw-warning { margin-left: 50px; margin-right: 50px; text-align: center; =
+}
+  div.floatright, table.floatright { margin: 0px 0px 0.5em 0.5em; }
+  div.floatleft, table.floatleft { margin: 0px 0.5em 0.5em 0px; }
+  div.thumb { margin-bottom: 0.5em; width: auto; background-color: transpar=
+ent; }
+  div.thumbinner { border: 1px solid rgb(200, 204, 209); padding: 3px; back=
+ground-color: rgb(248, 249, 250); font-size: 94%; text-align: center; overf=
+low: hidden; }
+  html .thumbimage { background-color: rgb(255, 255, 255); border: 1px soli=
+d rgb(200, 204, 209); }
+  html .thumbcaption { border: 0px; line-height: 1.4em; padding: 3px; font-=
+size: 94%; text-align: left; }
+  .magnify { float: right; margin-left: 3px; }
+  .magnify a { display: block; text-indent: 15px; white-space: nowrap; over=
+flow: hidden; width: 15px; height: 11px; background-image: linear-gradient(=
+transparent, transparent), url("resources/src/mediawiki.skinning/images/mag=
+nify-clip-ltr.svg?8330e"); user-select: none; }
+  img.thumbborder { border: 1px solid rgb(234, 236, 240); }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; margin-left: 3px; margin-right: =
+0px; }
+  .mw-content-ltr .magnify a { background-image: linear-gradient(transparen=
+t, transparent), url("resources/src/mediawiki.skinning/images/magnify-clip-=
+ltr.svg?8330e"); }
+  .mw-content-rtl .thumbcaption { text-align: right; }
+  .mw-content-rtl .magnify { float: left; margin-left: 0px; margin-right: 3=
+px; }
+  .mw-content-rtl .magnify a { background-image: linear-gradient(transparen=
+t, transparent), url("resources/src/mediawiki.skinning/images/magnify-clip-=
+rtl.svg?38fd5"); }
+  div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+  div.tleft { margin: 0.5em 1.4em 1.3em 0px; }
+  body.mw-hide-empty-elt .mw-empty-elt { display: none; }
+  .catlinks { border: 1px solid rgb(162, 169, 177); background-color: rgb(2=
+48, 249, 250); padding: 5px; margin-top: 1em; clear: both; }
+  textarea { border: 1px solid rgb(200, 204, 209); }
+  .editOptions { background-color: rgb(234, 236, 240); color: rgb(32, 33, 3=
+4); border-width: 0px 1px 1px; border-right-style: solid; border-bottom-sty=
+le: solid; border-left-style: solid; border-right-color: rgb(200, 204, 209)=
+; border-bottom-color: rgb(200, 204, 209); border-left-color: rgb(200, 204,=
+ 209); border-image: initial; border-top-style: initial; border-top-color: =
+initial; padding: 1em 1em 1.5em; margin-bottom: 2em; }
+  .usermessage { background-color: rgb(255, 206, 123); border: 1px solid rg=
+b(255, 165, 0); color: rgb(0, 0, 0); font-weight: bold; margin: 2em 0px 1em=
+; padding: 0.5em 1em; vertical-align: middle; }
+  #siteNotice { position: relative; text-align: center; margin: 0px; }
+  #localNotice { margin-bottom: 0.9em; }
+  #siteSub { display: none; }
+  #contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin: 0=
+px 0px 1.4em 1em; color: rgb(84, 89, 93); width: auto; }
+  span.subpages { display: block; }
+  .client-nojs #t-print { display: none; }
+  .mw-content-ltr { direction: ltr; }
+  .mw-content-rtl { direction: rtl; }
+  .sitedir-ltr textarea, .sitedir-ltr input { direction: ltr; }
+  .sitedir-rtl textarea, .sitedir-rtl input { direction: rtl; }
+  .mw-userlink { overflow-wrap: break-word; hyphens: auto; unicode-bidi: em=
+bed; }
+  mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+  wbr { display: inline-block; }
+  input[type=3D"submit"], input[type=3D"button"], input[type=3D"reset"], in=
+put[type=3D"file"] { direction: ltr; }
+  textarea[dir=3D"ltr"], input[dir=3D"ltr"] { direction: ltr; }
+  textarea[dir=3D"rtl"], input[dir=3D"rtl"] { direction: rtl; }
+  abbr[title], .explain[title] { border-bottom: 1px dotted; cursor: help; }
+  @supports (text-decoration:underline dotted) {
+  abbr[title], .explain[title] { border-bottom: 0px; text-decoration: under=
+line dotted; }
+}
+  span.comment { font-style: italic; unicode-bidi: isolate; }
+  #editform, #toolbar, #wpTextbox1 { clear: both; }
+  #toolbar { height: 22px; }
+  .mw-underline-always a { text-decoration: underline; }
+  .mw-underline-never a { text-decoration: none; }
+  li span.deleted, span.history-deleted { text-decoration: line-through; co=
+lor: rgb(114, 119, 125); font-style: italic; }
+  .not-patrolled { background-color: rgb(255, 255, 170); }
+  .unpatrolled { font-weight: bold; color: rgb(221, 51, 51); }
+  div.patrollink { font-size: 75%; text-align: right; }
+  td.mw-label { text-align: right; vertical-align: middle; }
+  td.mw-input { text-align: left; }
+  td.mw-submit { text-align: left; white-space: nowrap; }
+  .mw-input-with-label { white-space: nowrap; display: inline-block; }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; }
+  .mw-content-rtl .thumbcaption { text-align: right; }
+  .mw-content-rtl .magnify { float: left; }
+  #catlinks { text-align: left; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: no=
+ne none; }
+  .catlinks li { display: inline-block; line-height: 1.25em; border-left: 1=
+px solid rgb(162, 169, 177); margin: 0.125em 0px; padding: 0px 0.5em; }
+  .catlinks li:first-child { padding-left: 0.25em; border-left: 0px; }
+  .catlinks li a.mw-redirect { font-style: italic; }
+  .mw-hidden-cats-hidden { display: none; }
+  .catlinks-allhidden { display: none; }
+  p.mw-protect-editreasons, p.mw-filedelete-editreasons, p.mw-delete-editre=
+asons { font-size: 90%; text-align: right; }
+  .autocomment, .autocomment a, .autocomment a:visited { color: rgb(114, 11=
+9, 125); }
+  .newpage, .minoredit, .botedit { font-weight: bold; }
+  .mw-warning-with-logexcerpt { clear: both; }
+  .mw-warning-with-logexcerpt ul li { font-size: 90%; }
+  span.mw-revdelundel-link, strong.mw-revdelundel-link { font-size: 90%; }
+  span.mw-revdelundel-hidden, input.mw-revdelundel-hidden { visibility: hid=
+den; }
+  td.mw-revdel-checkbox, th.mw-revdel-checkbox { padding-right: 10px; text-=
+align: center; }
+  a.new { color: rgb(186, 0, 0); }
+  .plainlinks a.external { background: none !important; padding: 0px !impor=
+tant; }
+  .rtl a.external.free, .rtl a.external.autonumber { direction: ltr; unicod=
+e-bidi: embed; }
+  .wikitable { background-color: rgb(248, 249, 250); color: rgb(32, 33, 34)=
+; margin: 1em 0px; border: 1px solid rgb(162, 169, 177); border-collapse: c=
+ollapse; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wi=
+kitable > * > tr > td { border: 1px solid rgb(162, 169, 177); padding: 0.2e=
+m 0.4em; }
+  .wikitable > tr > th, .wikitable > * > tr > th { background-color: rgb(23=
+4, 236, 240); text-align: center; }
+  .wikitable > caption { font-weight: bold; }
+  .error, .warning, .success { font-size: larger; }
+  .error { color: rgb(221, 51, 51); }
+  .warning { color: rgb(172, 102, 0); }
+  .success { color: rgb(20, 134, 109); }
+  .mw-infobox { border: 2px solid rgb(255, 204, 51); margin: 0.5em; clear: =
+left; overflow: hidden; }
+  .mw-infobox-left { margin: 7px; float: left; width: 35px; }
+  .mw-infobox-right { margin: 0.5em 0.5em 0.5em 49px; }
+  .previewnote { margin-bottom: 1em; }
+  .visualClear { clear: both; }
+  .mw-datatable { border: 1px solid rgb(162, 169, 177); border-collapse: co=
+llapse; }
+  .mw-datatable td, .mw-datatable th { border: 1px solid rgb(162, 169, 177)=
+; padding: 0.2em 0.4em; }
+  .mw-datatable th { background-color: rgb(234, 238, 255); }
+  .mw-datatable td { background-color: rgb(255, 255, 255); }
+  .mw-datatable tr:hover td { background-color: rgb(234, 243, 255); }
+  .mw-ajax-loader { background-image: url("resources/src/mediawiki.skinning=
+/images/ajax-loader.gif?57f34"); background-position: center center; backgr=
+ound-repeat: no-repeat; padding: 16px; position: relative; top: -16px; }
+  .mw-small-spinner { margin-right: 0.6em; background-image: url("resources=
+/src/mediawiki.skinning/images/spinner.gif?ca65b"); background-position: ce=
+nter center; background-repeat: no-repeat; padding: 10px !important; }
+  .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0p=
+x 0px 1.6em; padding: 0px; }
+  .mw-content-rtl ul, .mw-content-ltr .mw-content-rtl ul { margin: 0.3em 1.=
+6em 0px 0px; padding: 0px; }
+  .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol { margin: 0.3em 0p=
+x 0px 3.2em; padding: 0px; }
+  .mw-content-rtl ol, .mw-content-ltr .mw-content-rtl ol { margin: 0.3em 3.=
+2em 0px 0px; padding: 0px; }
+  .mw-content-ltr dd, .mw-content-rtl .mw-content-ltr dd { margin-left: 1.6=
+em; margin-right: 0px; }
+  .mw-content-rtl dd, .mw-content-ltr .mw-content-rtl dd { margin-right: 1.=
+6em; margin-left: 0px; }
+  h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(bn), h1:lan=
+g(gu), h1:lang(hi), h1:lang(kn), h1:lang(ks), h1:lang(ml), h1:lang(mr), h1:=
+lang(my), h1:lang(mai), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa)=
+, h1:lang(pi), h1:lang(sa), h1:lang(ta), h1:lang(te) { line-height: 1.6em !=
+important; }
+  h2:lang(anp), h3:lang(anp), h4:lang(anp), h5:lang(anp), h6:lang(anp), h2:=
+lang(as), h3:lang(as), h4:lang(as), h5:lang(as), h6:lang(as), h2:lang(bho),=
+ h3:lang(bho), h4:lang(bho), h5:lang(bho), h6:lang(bho), h2:lang(bh), h3:la=
+ng(bh), h4:lang(bh), h5:lang(bh), h6:lang(bh), h2:lang(bn), h3:lang(bn), h4=
+:lang(bn), h5:lang(bn), h6:lang(bn), h2:lang(gu), h3:lang(gu), h4:lang(gu),=
+ h5:lang(gu), h6:lang(gu), h2:lang(hi), h3:lang(hi), h4:lang(hi), h5:lang(h=
+i), h6:lang(hi), h2:lang(kn), h3:lang(kn), h4:lang(kn), h5:lang(kn), h6:lan=
+g(kn), h2:lang(ks), h3:lang(ks), h4:lang(ks), h5:lang(ks), h6:lang(ks), h2:=
+lang(ml), h3:lang(ml), h4:lang(ml), h5:lang(ml), h6:lang(ml), h2:lang(mr), =
+h3:lang(mr), h4:lang(mr), h5:lang(mr), h6:lang(mr), h2:lang(my), h3:lang(my=
+), h4:lang(my), h5:lang(my), h6:lang(my), h2:lang(mai), h3:lang(mai), h4:la=
+ng(mai), h5:lang(mai), h6:lang(mai), h2:lang(ne), h3:lang(ne), h4:lang(ne),=
+ h5:lang(ne), h6:lang(ne), h2:lang(new), h3:lang(new), h4:lang(new), h5:lan=
+g(new), h6:lang(new), h2:lang(or), h3:lang(or), h4:lang(or), h5:lang(or), h=
+6:lang(or), h2:lang(pa), h3:lang(pa), h4:lang(pa), h5:lang(pa), h6:lang(pa)=
+, h2:lang(pi), h3:lang(pi), h4:lang(pi), h5:lang(pi), h6:lang(pi), h2:lang(=
+sa), h3:lang(sa), h4:lang(sa), h5:lang(sa), h6:lang(sa), h2:lang(ta), h3:la=
+ng(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), h2:lang(te), h3:lang(te), h4=
+:lang(te), h5:lang(te), h6:lang(te) { line-height: 1.2em; }
+  ol:lang(azb) li, ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:la=
+ng(fa) li, ol:lang(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(l=
+uz) li, ol:lang(mzn) li { list-style-type: persian; }
+  ol:lang(ckb) li, ol:lang(sdh) li { list-style-type: arabic-indic; }
+  ol:lang(hi) li, ol:lang(mai) li, ol:lang(mr) li, ol:lang(ne) li { list-st=
+yle-type: devanagari; }
+  ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+  ol:lang(or) li { list-style-type: oriya; }
+  .toc ul { margin: 0.3em 0px; }
+  .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr .toc ul { text-a=
+lign: left; }
+  .mw-content-rtl .toc ul, .mw-content-ltr .mw-content-rtl .toc ul { text-a=
+lign: right; }
+  .mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr .toc ul ul { =
+margin: 0px 0px 0px 2em; }
+  .mw-content-rtl .toc ul ul, .mw-content-ltr .mw-content-rtl .toc ul ul { =
+margin: 0px 2em 0px 0px; }
+  .toc .toctitle { direction: ltr; }
+  #mw-clearyourcache, #mw-sitecsspreview, #mw-sitejspreview, #mw-usercsspre=
+view, #mw-userjspreview { direction: ltr; unicode-bidi: embed; }
+  #mw-revision-info, #mw-revision-info-current, #mw-revision-nav { directio=
+n: ltr; }
+  div.tright, div.floatright, table.floatright { clear: right; float: right=
+; }
+  div.tleft, div.floatleft, table.floatleft { float: left; clear: left; }
+  #mw-credits a { unicode-bidi: embed; }
+  .printfooter { display: none; }
+  .xdebug-error { position: absolute; z-index: 99; }
+  .mw-editsection { user-select: none; }
+  .mw-editsection, .mw-editsection-like { font-size: small; font-weight: no=
+rmal; margin-left: 1em; vertical-align: baseline; line-height: 1em; }
+  .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-edit=
+section { margin-left: 1em; }
+  .mw-content-rtl .mw-editsection, .mw-content-ltr .mw-content-rtl .mw-edit=
+section { margin-right: 1em; }
+  sup, sub { line-height: 1; }
+}
+
+.messagebox, .errorbox, .warningbox, .successbox { color: rgb(0, 0, 0); box=
+-sizing: border-box; margin-bottom: 16px; border: 1px solid; padding: 12px =
+24px; overflow-wrap: break-word; overflow: hidden; }
+
+.messagebox :only-child, .errorbox :only-child, .warningbox :only-child, .s=
+uccessbox :only-child { margin: 0px; }
+
+.messagebox h2, .errorbox h2, .warningbox h2, .successbox h2 { color: inher=
+it; display: inline; margin: 0px 0.5em 0px 0px; border: 0px; font-size: 1em=
+; font-weight: bold; }
+
+.messagebox { background-color: rgb(234, 236, 240); border-color: rgb(162, =
+169, 177); }
+
+.errorbox { background-color: rgb(254, 231, 230); border-color: rgb(221, 51=
+, 51); }
+
+.warningbox { background-color: rgb(254, 246, 231); border-color: rgb(255, =
+204, 51); }
+
+.successbox { background-color: rgb(213, 253, 244); border-color: rgb(20, 1=
+34, 109); }
+
+.mw-wiki-logo { background-image: url("/images/openssl-logo-135.png?5d667")=
+; }
+
+@media print {
+  .noprint, .catlinks, .magnify, .mw-cite-backlink, .mw-editsection, .mw-ed=
+itsection-like, .mw-hidden-catlinks, .mw-indicators, .mw-redirectedfrom, .p=
+atrollink, .usermessage, #column-one, #footer-places, #mw-navigation, #site=
+Notice, #f-poweredbyico, #f-copyrightico, li#about, li#disclaimer, li#mobil=
+eview, li#privacy { display: none; }
+  body { background: rgb(255, 255, 255); color: rgb(0, 0, 0); margin: 0px; =
+padding: 0px; }
+  a { background: none !important; padding: 0px !important; }
+  a, a.external, a.new, a.stub { color: inherit !important; text-decoration=
+: inherit !important; }
+  .mw-parser-output a.external.text::after, .mw-parser-output a.external.au=
+tonumber::after { content: " (" attr(href) ")"; word-break: break-all; over=
+flow-wrap: break-word; }
+  .mw-parser-output a.external.text[href^=3D"//"]::after, .mw-parser-output=
+ a.external.autonumber[href^=3D"//"]::after { content: " (https:" attr(href=
+) ")"; }
+  dt { font-weight: bold; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; break-after: avoid; break-bef=
+ore: avoid; }
+  p { margin: 1em 0px; line-height: 1.2; orphans: 3; widows: 3; }
+  img, figure, .wikitable, .thumb { break-inside: avoid; }
+  img { border: 0px; vertical-align: middle; }
+  pre, .mw-code { background: rgb(255, 255, 255); color: rgb(0, 0, 0); bord=
+er: 1pt dashed rgb(0, 0, 0); padding: 1em; font-size: 8pt; white-space: pre=
+-wrap; overflow-x: hidden; overflow-wrap: break-word; }
+  sup, sub { line-height: 1; }
+  ul { list-style-type: square; }
+  #globalWrapper { width: 100% !important; min-width: 0px !important; }
+  .mw-body { background: rgb(255, 255, 255); color: rgb(0, 0, 0); direction=
+: ltr; border: 0px !important; padding: 0px !important; margin: 0px !import=
+ant; }
+  #column-content { margin: 0px !important; }
+  #column-content .mw-body { padding: 1em; margin: 0px !important; }
+  .toc { background-color: rgb(249, 249, 249); border: 1pt solid rgb(170, 1=
+70, 170); padding: 5px; display: table; }
+  .tocnumber, .toctext { display: table-cell; }
+  .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+  table.floatright, div.floatright, div.tright { float: right; clear: right=
+; }
+  table.floatleft, div.floatleft, div.tleft { float: left; clear: left; }
+  div.tleft { margin: 0.5em 1.4em 1.3em 0px; }
+  div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+  table.floatright, div.floatright { margin: 0px 0px 0.5em 0.5em; border: 0=
+px; }
+  table.floatleft, div.floatleft { margin: 0px 0.5em 0.5em 0px; border: 0px=
+; }
+  .center { text-align: center; }
+  div.thumb { background-color: transparent; width: auto; }
+  div.thumb a { border-bottom: 0px; }
+  div.thumbinner { background-color: rgb(255, 255, 255); border: 0px; borde=
+r-radius: 2px; padding: 5px; font-size: 10pt; color: rgb(102, 102, 102); te=
+xt-align: center; overflow: hidden; min-width: 100px; }
+  html .thumbcaption { text-align: left; line-height: 1.4; padding: 3px; }
+  img.thumbborder { border: 1pt solid rgb(221, 221, 221); }
+  .wikitable, .mw_metadata { background: rgb(255, 255, 255); margin: 1em 0p=
+x; border: 1pt solid rgb(170, 170, 170); border-collapse: collapse; font-si=
+ze: 10pt; }
+  .wikitable > caption, .mw_metadata caption { padding: 5px; font-size: 10p=
+t; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wi=
+kitable > * > tr > td, .mw_metadata th, .mw_metadata td { border: 1pt solid=
+ rgb(170, 170, 170); padding: 0.4em 0.6em; background: rgb(255, 255, 255) !=
+important; color: rgb(0, 0, 0) !important; }
+  .wikitable > tr > th, .wikitable > * > tr > th, .mw_metadata th { text-al=
+ign: center; }
+  table.listing, table.listing td { border: 1pt solid rgb(0, 0, 0); border-=
+collapse: collapse; }
+  .catlinks ul { display: inline; padding: 0px; list-style: none none; }
+  .catlinks li { display: inline-block; line-height: 1.15; margin: 0.1em 0p=
+x; border-left: 1pt solid rgb(170, 170, 170); padding: 0px 0.4em; }
+  .catlinks li:first-child { border-left: 0px; padding-left: 0.2em; }
+  .printfooter { padding: 1em 0px; }
+  #footer { background: rgb(255, 255, 255); color: rgb(0, 0, 0); margin-top=
+: 1em; border-top: 1pt solid rgb(170, 170, 170); padding-top: 5px; directio=
+n: ltr; }
+}
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://wiki.openssl.org/images/openssl-logo-135.png?5d667
+
+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
+
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://wiki.openssl.org/load.php?lang=en&modules=jquery.tablesorter.styles%7Cmediawiki.skinning.content.externallinks%7Cskins.monobook.responsive&only=styles&skin=monobook
+
+@charset "utf-8";
+
+.client-js .sortable:not(.jquery-tablesorter) > * > tr:first-child > th:not=
+(.unsortable), .jquery-tablesorter th.headerSort { background-image: url("/=
+resources/src/jquery.tablesorter.styles/images/sort_both.svg?6b5ca"); curso=
+r: pointer; background-repeat: no-repeat; background-position: right center=
+; padding-right: 21px; }
+
+.jquery-tablesorter th.headerSortUp { background-image: url("/resources/src=
+/jquery.tablesorter.styles/images/sort_up.svg?dd026"); }
+
+.jquery-tablesorter th.headerSortDown { background-image: url("/resources/s=
+rc/jquery.tablesorter.styles/images/sort_down.svg?fb375"); }
+
+@media screen {
+  .mw-parser-output a.external, .link-https { background-position: right ce=
+nter; background-repeat: no-repeat; background-image: linear-gradient(trans=
+parent, transparent), url("/resources/src/mediawiki.skinning/images/externa=
+l-ltr.svg?59558"); padding-right: 13px; }
+  .mw-parser-output a.external[href^=3D"mailto:"], .link-mailto { backgroun=
+d-position: right center; background-repeat: no-repeat; background-image: l=
+inear-gradient(transparent, transparent), url("/resources/src/mediawiki.ski=
+nning/images/mail.svg?d3bb8"); padding-right: 13px; }
+  .mw-parser-output a.external[href^=3D"ftp://"], .link-ftp { background-po=
+sition: right center; background-repeat: no-repeat; background-image: linea=
+r-gradient(transparent, transparent), url("/resources/src/mediawiki.skinnin=
+g/images/ftp-ltr.svg?c5643"); padding-right: 13px; }
+  .mw-parser-output a.external[href^=3D"irc://"], .mw-parser-output a.exter=
+nal[href^=3D"ircs://"], .link-irc { background-position: right center; back=
+ground-repeat: no-repeat; background-image: linear-gradient(transparent, tr=
+ansparent), url("/resources/src/mediawiki.skinning/images/chat-ltr.svg?0108=
+a"); padding-right: 13px; }
+  .mw-parser-output a.external[href$=3D".ogg"], .mw-parser-output a.externa=
+l[href$=3D".OGG"], .mw-parser-output a.external[href$=3D".mid"], .mw-parser=
+-output a.external[href$=3D".MID"], .mw-parser-output a.external[href$=3D".=
+midi"], .mw-parser-output a.external[href$=3D".MIDI"], .mw-parser-output a.=
+external[href$=3D".mp3"], .mw-parser-output a.external[href$=3D".MP3"], .mw=
+-parser-output a.external[href$=3D".wav"], .mw-parser-output a.external[hre=
+f$=3D".WAV"], .mw-parser-output a.external[href$=3D".wma"], .mw-parser-outp=
+ut a.external[href$=3D".WMA"], .link-audio { background-position: right cen=
+ter; background-repeat: no-repeat; background-image: linear-gradient(transp=
+arent, transparent), url("/resources/src/mediawiki.skinning/images/audio-lt=
+r.svg?4c880"); padding-right: 13px; }
+  .mw-parser-output a.external[href$=3D".ogm"], .mw-parser-output a.externa=
+l[href$=3D".OGM"], .mw-parser-output a.external[href$=3D".avi"], .mw-parser=
+-output a.external[href$=3D".AVI"], .mw-parser-output a.external[href$=3D".=
+mpeg"], .mw-parser-output a.external[href$=3D".MPEG"], .mw-parser-output a.=
+external[href$=3D".mpg"], .mw-parser-output a.external[href$=3D".MPG"], .li=
+nk-video { background-position: right center; background-repeat: no-repeat;=
+ background-image: linear-gradient(transparent, transparent), url("/resourc=
+es/src/mediawiki.skinning/images/video.svg?a3758"); padding-right: 13px; }
+  .mw-parser-output a.external[href$=3D".pdf"], .mw-parser-output a.externa=
+l[href$=3D".PDF"], .mw-parser-output a.external[href*=3D".pdf#"], .mw-parse=
+r-output a.external[href*=3D".PDF#"], .mw-parser-output a.external[href*=3D=
+".pdf?"], .mw-parser-output a.external[href*=3D".PDF?"], .link-document { b=
+ackground-position: right center; background-repeat: no-repeat; background-=
+image: linear-gradient(transparent, transparent), url("/resources/src/media=
+wiki.skinning/images/document-ltr.svg?0bf90"); padding-right: 13px; }
+  .mw-parser-output a.extiw, .mw-parser-output a.extiw:active { color: rgb(=
+51, 102, 187); }
+  .mw-parser-output a.external { color: rgb(51, 102, 187); }
+}
+
+@media screen {
+  #column-content { width: 100%; margin: 0px; padding: 0px; }
+  .mw-body { padding: 1em; position: relative; z-index: 2; background: rgb(=
+255, 255, 255); color: rgb(0, 0, 0); border: 1px solid rgb(170, 170, 170); =
+line-height: 1.5em; }
+  #column-one h2 { position: absolute; top: -9999px; left: 0px; }
+  body { font-family: sans-serif; font-size: x-small; background: linear-gr=
+adient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=3D%2=
+2http://www.w3.org/2000/svg%22 xmlns:xlink=3D%22http://www.w3.org/1999/xlin=
+k%22 width=3D%221941%22 height=3D%22220%22 viewBox=3D%220 0 273.897 31.044%=
+22%3E %3Cdefs%3E %3ClinearGradient id=3D%22D%22%3E %3Cstop offset=3D%220%22=
+ stop-color=3D%22%23e5e5e5%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22=
+%23e5e5e5%22 stop-opacity=3D%220%22/%3E %3C/linearGradient%3E %3ClinearGrad=
+ient id=3D%22C%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23f9f9f9%22/=
+%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f3f3f3%22/%3E %3C/linearGra=
+dient%3E %3ClinearGradient id=3D%22B%22%3E %3Cstop offset=3D%220%22 stop-co=
+lor=3D%22%23e9e9e9%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f9f9f=
+9%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22A%22%3E %3Cstop of=
+fset=3D%220%22 stop-color=3D%22%23f2f2f2%22/%3E %3Cstop offset=3D%221%22 st=
+op-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3E %3ClinearGradient id=
+=3D%22z%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23f4f4f4%22/%3E %3C=
+stop offset=3D%221%22 stop-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3=
+E %3ClinearGradient id=3D%22y%22%3E %3Cstop offset=3D%220%22 stop-color=3D%=
+22%23efefef%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23efefef%22 st=
+op-opacity=3D%220%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22x%=
+22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23d6d6d6%22/%3E %3Cstop off=
+set=3D%221%22 stop-color=3D%22%23d6d6d6%22 stop-opacity=3D%220%22/%3E %3C/l=
+inearGradient%3E %3ClinearGradient id=3D%22w%22%3E %3Cstop offset=3D%220%22=
+ stop-color=3D%22%23f1f1f1%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22=
+%23f1f1f1%22 stop-opacity=3D%220%22/%3E %3C/linearGradient%3E %3ClinearGrad=
+ient id=3D%22v%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23f3f3f3%22/=
+%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f3f3f3%22 stop-opacity=3D%2=
+20%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22u%22%3E %3Cstop o=
+ffset=3D%220%22 stop-color=3D%22%23ededed%22/%3E %3Cstop offset=3D%221%22 s=
+top-color=3D%22%23ededed%22 stop-opacity=3D%220%22/%3E %3C/linearGradient%3=
+E %3ClinearGradient id=3D%22t%22%3E %3Cstop offset=3D%220%22 stop-color=3D%=
+22%23f0f0f0%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f0f0f0%22 st=
+op-opacity=3D%220%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22s%=
+22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23f6f6f6%22/%3E %3Cstop off=
+set=3D%221%22 stop-color=3D%22%23f5f5f5%22/%3E %3C/linearGradient%3E %3Clin=
+earGradient id=3D%22r%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23e9e=
+9e9%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f3f3f3%22/%3E %3C/li=
+nearGradient%3E %3ClinearGradient id=3D%22q%22%3E %3Cstop offset=3D%220%22 =
+stop-color=3D%22%23e0e0e0%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%=
+23e0e0e0%22 stop-opacity=3D%220%22/%3E %3C/linearGradient%3E %3ClinearGradi=
+ent id=3D%22p%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23ededed%22/%=
+3E %3Cstop offset=3D%221%22 stop-color=3D%22%23e1e1e1%22/%3E %3C/linearGrad=
+ient%3E %3ClinearGradient id=3D%22o%22%3E %3Cstop offset=3D%220%22 stop-col=
+or=3D%22%23ebebeb%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23e5e5e5=
+%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22n%22%3E %3Cstop off=
+set=3D%220%22 stop-color=3D%22%23f4f4f4%22/%3E %3Cstop offset=3D%221%22 sto=
+p-color=3D%22%23f4f4f4%22 stop-opacity=3D%22.997%22/%3E %3C/linearGradient%=
+3E %3ClinearGradient id=3D%22m%22%3E %3Cstop offset=3D%220%22 stop-color=3D=
+%22%23d0d0d0%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f9f9f9%22/%=
+3E %3C/linearGradient%3E %3ClinearGradient id=3D%22l%22%3E %3Cstop offset=
+=3D%220%22 stop-color=3D%22%23dadada%22/%3E %3Cstop offset=3D%221%22 stop-c=
+olor=3D%22%23e9e9e9%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22=
+k%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23ececec%22/%3E %3Cstop o=
+ffset=3D%22.514%22 stop-color=3D%22%23f6f6f6%22/%3E %3Cstop offset=3D%221%2=
+2 stop-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3E %3ClinearGradient =
+id=3D%22j%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23e8e8e8%22/%3E %=
+3Cstop offset=3D%221%22 stop-color=3D%22%23f3f3f3%22/%3E %3C/linearGradient=
+%3E %3ClinearGradient id=3D%22i%22%3E %3Cstop offset=3D%220%22 stop-color=
+=3D%22%23f3f3f3%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f9f9f9%2=
+2/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22h%22%3E %3Cstop offse=
+t=3D%220%22 stop-color=3D%22%23efefef%22/%3E %3Cstop offset=3D%22.396%22 st=
+op-color=3D%22%23ededed%22/%3E %3Cstop offset=3D%22.63%22 stop-color=3D%22%=
+23e8e8e8%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23dedede%22/%3E %=
+3C/linearGradient%3E %3ClinearGradient id=3D%22g%22%3E %3Cstop offset=3D%22=
+0%22 stop-color=3D%22%23cbcbcb%22/%3E %3Cstop offset=3D%22.517%22 stop-colo=
+r=3D%22%23dcdcdc%22/%3E %3Cstop offset=3D%22.865%22 stop-color=3D%22%23eee%=
+22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f0f0f0%22/%3E %3C/linear=
+Gradient%3E %3ClinearGradient id=3D%22f%22%3E %3Cstop offset=3D%220%22 stop=
+-color=3D%22%23e6e6e6%22 stop-opacity=3D%22.997%22/%3E %3Cstop offset=3D%22=
+1%22 stop-color=3D%22%23dbdbdb%22/%3E %3C/linearGradient%3E %3ClinearGradie=
+nt id=3D%22e%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23e1e1e1%22/%3=
+E %3Cstop offset=3D%22.198%22 stop-color=3D%22%23e4e4e4%22/%3E %3Cstop offs=
+et=3D%22.338%22 stop-color=3D%22%23f5f5f5%22/%3E %3Cstop offset=3D%22.551%2=
+2 stop-color=3D%22%23f4f4f4%22/%3E %3Cstop offset=3D%22.597%22 stop-color=
+=3D%22%23f2f2f2%22/%3E %3Cstop offset=3D%22.773%22 stop-color=3D%22%23f6f6f=
+6%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f9f9f9%22/%3E %3C/line=
+arGradient%3E %3ClinearGradient id=3D%22d%22%3E %3Cstop offset=3D%220%22 st=
+op-color=3D%22%23cfcfcf%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23=
+d0d0d0%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22c%22%3E %3Cst=
+op offset=3D%220%22 stop-color=3D%22%23f2f2f2%22/%3E %3Cstop offset=3D%221%=
+22 stop-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3E %3ClinearGradient=
+ id=3D%22b%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23e4e4e4%22/%3E =
+%3Cstop offset=3D%22.504%22 stop-color=3D%22%23e5e5e5%22/%3E %3Cstop offset=
+=3D%221%22 stop-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3E %3Clinear=
+Gradient id=3D%22a%22%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23e6e6e6=
+%22/%3E %3Cstop offset=3D%22.442%22 stop-color=3D%22%23e7e7e7%22/%3E %3Csto=
+p offset=3D%22.772%22 stop-color=3D%22%23f1f1f1%22/%3E %3Cstop offset=3D%22=
+1%22 stop-color=3D%22%23f9f9f9%22/%3E %3C/linearGradient%3E %3ClinearGradie=
+nt id=3D%22ah%22 x1=3D%22241.181%22 x2=3D%22241.052%22 y1=3D%22.83%22 y2=3D=
+%2229.29%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23a%22/%3=
+E %3ClinearGradient id=3D%22ai%22 x1=3D%22862.392%22 x2=3D%22864.333%22 y1=
+=3D%221.153%22 y2=3D%22114.025%22 gradientUnits=3D%22userSpaceOnUse%22 xlin=
+k:href=3D%22%23b%22/%3E %3ClinearGradient id=3D%22ag%22 x1=3D%22231.389%22 =
+x2=3D%22224.379%22 y1=3D%2213.086%22 y2=3D%2220.51%22 gradientUnits=3D%22us=
+erSpaceOnUse%22 xlink:href=3D%22%23c%22/%3E %3ClinearGradient id=3D%22aj%22=
+ x1=3D%2252.702%22 x2=3D%2252.47%22 y1=3D%2216.05%22 y2=3D%2218.382%22 grad=
+ientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23d%22/%3E %3ClinearGradi=
+ent id=3D%22O%22 x1=3D%2215.127%22 x2=3D%22103.297%22 y1=3D%2215.607%22 y2=
+=3D%2231.128%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23e%2=
+2/%3E %3ClinearGradient id=3D%22P%22 x1=3D%2235.71%22 x2=3D%2236.996%22 y1=
+=3D%2218.012%22 y2=3D%2218.177%22 gradientUnits=3D%22userSpaceOnUse%22 xlin=
+k:href=3D%22%23f%22/%3E %3ClinearGradient id=3D%22L%22 x1=3D%2245.303%22 x2=
+=3D%2245.624%22 y1=3D%2218.049%22 y2=3D%2226.029%22 gradientUnits=3D%22user=
+SpaceOnUse%22 xlink:href=3D%22%23g%22/%3E %3ClinearGradient id=3D%22M%22 x1=
+=3D%2271.064%22 x2=3D%2272.457%22 y1=3D%2224.169%22 y2=3D%2221.973%22 gradi=
+entUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23h%22/%3E %3ClinearGradie=
+nt id=3D%22ae%22 x1=3D%2266.829%22 x2=3D%22120.759%22 y1=3D%2222.094%22 y2=
+=3D%2230.56%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23i%22=
+/%3E %3ClinearGradient id=3D%22J%22 x1=3D%2265.523%22 x2=3D%2263.831%22 y1=
+=3D%2223.532%22 y2=3D%2226.451%22 gradientUnits=3D%22userSpaceOnUse%22 xlin=
+k:href=3D%22%23j%22/%3E %3ClinearGradient id=3D%22N%22 x1=3D%2295.817%22 x2=
+=3D%2295.561%22 y1=3D%2225.922%22 y2=3D%2228.296%22 gradientUnits=3D%22user=
+SpaceOnUse%22 xlink:href=3D%22%23k%22/%3E %3ClinearGradient id=3D%22K%22 x1=
+=3D%2233.045%22 x2=3D%2232.51%22 y1=3D%2215.633%22 y2=3D%2218.439%22 gradie=
+ntUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23l%22/%3E %3ClinearGradien=
+t id=3D%22F%22 x1=3D%2233.342%22 x2=3D%2233.513%22 y1=3D%2217.978%22 y2=3D%=
+2230.778%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23m%22/%3=
+E %3ClinearGradient id=3D%22G%22 x1=3D%2234.162%22 x2=3D%2233.08%22 y1=3D%2=
+218.797%22 y2=3D%2227.777%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:hre=
+f=3D%22%23m%22/%3E %3Cfilter id=3D%22H%22 width=3D%221.115%22 height=3D%221=
+.269%22 x=3D%22-.057%22 y=3D%22-.135%22 color-interpolation-filters=3D%22sR=
+GB%22%3E %3CfeGaussianBlur stdDeviation=3D%221.33%22/%3E %3C/filter%3E %3Cl=
+inearGradient id=3D%22ad%22 x1=3D%2244.713%22 x2=3D%2232.808%22 y1=3D%2213.=
+097%22 y2=3D%223.44%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%2=
+2%23n%22/%3E %3ClinearGradient id=3D%22ac%22 x1=3D%227.266%22 x2=3D%227.419=
+%22 y1=3D%2212.121%22 y2=3D%229.176%22 gradientUnits=3D%22userSpaceOnUse%22=
+ xlink:href=3D%22%23o%22/%3E %3ClinearGradient id=3D%22ab%22 x1=3D%229.677%=
+22 x2=3D%2210.488%22 y1=3D%224.024%22 y2=3D%22.745%22 gradientUnits=3D%22us=
+erSpaceOnUse%22 xlink:href=3D%22%23p%22/%3E %3ClinearGradient id=3D%22af%22=
+ x1=3D%2264.1%22 x2=3D%2262.561%22 y1=3D%223.955%22 y2=3D%22.306%22 gradien=
+tUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23q%22/%3E %3ClinearGradient=
+ id=3D%22W%22 x1=3D%2279.435%22 x2=3D%2280.522%22 y1=3D%222.238%22 y2=3D%22=
+4.488%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23r%22/%3E %=
+3ClinearGradient id=3D%22V%22 x1=3D%22216.854%22 x2=3D%22157.45%22 y1=3D%22=
+10.693%22 y2=3D%221.152%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=
+=3D%22%23s%22/%3E %3ClinearGradient id=3D%22Y%22 x1=3D%22151.682%22 x2=3D%2=
+2248.454%22 y1=3D%221.765%22 y2=3D%2213.926%22 gradientUnits=3D%22userSpace=
+OnUse%22 xlink:href=3D%22%23t%22/%3E %3ClinearGradient id=3D%22X%22 x1=3D%2=
+2155.198%22 x2=3D%22222.595%22 y1=3D%225.793%22 y2=3D%2218.882%22 gradientU=
+nits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23u%22/%3E %3ClinearGradient i=
+d=3D%22Z%22 x1=3D%22167.257%22 x2=3D%22232.504%22 y1=3D%224.057%22 y2=3D%22=
+16.124%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23v%22/%3E =
+%3ClinearGradient id=3D%22aa%22 x1=3D%22111.926%22 x2=3D%22220.942%22 y1=3D=
+%2210.932%22 y2=3D%2222.839%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:h=
+ref=3D%22%23w%22/%3E %3ClinearGradient id=3D%22S%22 x1=3D%2281.617%22 x2=3D=
+%2281.449%22 y1=3D%22-7.073%22 y2=3D%2211.636%22 gradientUnits=3D%22userSpa=
+ceOnUse%22 xlink:href=3D%22%23x%22/%3E %3ClinearGradient id=3D%22T%22 x1=3D=
+%2293.149%22 x2=3D%2292.968%22 y1=3D%2213.259%22 y2=3D%2215.017%22 gradient=
+Units=3D%22userSpaceOnUse%22 xlink:href=3D%22%23y%22/%3E %3ClinearGradient =
+id=3D%22R%22 x1=3D%22176.25%22 x2=3D%22176.742%22 y1=3D%2218.815%22 y2=3D%2=
+231.118%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23z%22/%3E=
+ %3ClinearGradient id=3D%22U%22 x1=3D%2293.015%22 x2=3D%2293.101%22 y1=3D%2=
+219.511%22 y2=3D%2228.389%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:hre=
+f=3D%22%23A%22/%3E %3ClinearGradient id=3D%22Q%22 x1=3D%2275.997%22 x2=3D%2=
+275.848%22 y1=3D%2220.433%22 y2=3D%2225.46%22 gradientUnits=3D%22userSpaceO=
+nUse%22 xlink:href=3D%22%23B%22/%3E %3ClinearGradient id=3D%22E%22 x1=3D%22=
+262.803%22 x2=3D%22263.049%22 y1=3D%2229.234%22 y2=3D%22.97%22 gradientUnit=
+s=3D%22userSpaceOnUse%22 xlink:href=3D%22%23C%22/%3E %3ClinearGradient id=
+=3D%22I%22 x1=3D%22243.28%22 x2=3D%22244.389%22 y1=3D%2210.403%22 y2=3D%221=
+0.59%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23D%22/%3E %3=
+C/defs%3E %3Cpath fill=3D%22url%28%23E%29%22 d=3D%22M0 0h273.897v31.044H0z%=
+22/%3E %3Cg fill-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22url%28%23F%29%22=
+ d=3D%22M-1.964 14.277l48.596 4.794 25.07 4.958 41.814 8.232-117.445 1.122z=
+%22/%3E %3Cpath fill=3D%22url%28%23G%29%22 d=3D%22M-2.245 12.195c.748.234 4=
+0.937 5.578 40.937 5.578l9.016 5.04-3.228 13.096s-52.618-.982-52.478-1.216c=
+.14-.234 5.753-22.498 5.753-22.498z%22 filter=3D%22url%28%23H%29%22/%3E %3C=
+path fill=3D%22url%28%23I%29%22 d=3D%22M245.302-1.003l1.753-.1-5.027 32.974=
+-1.952-.264z%22/%3E %3C/g%3E %3Cg fill-rule=3D%22evenodd%22%3E %3Cpath fill=
+=3D%22url%28%23J%29%22 d=3D%22M63.49 26.81c1.564-.958 2.958-2.241 4.243-3.6=
+04l-2.976.083z%22/%3E %3Cpath fill=3D%22url%28%23K%29%22 d=3D%22M-.538 10.4=
+65S19.2 13.41 24.976 14.16c5.777.748 10.384 1.31 12.231 2.315 1.848 1.006-.=
+187 1.193-.187 1.193s-3.59-.027-4.485.314c-.894.34-2.718.808-2.718.808l-31.=
+781-4.513z%22/%3E %3Cpath fill=3D%22url%28%23L%29%22 d=3D%22M39.055 17.48c-=
+1.497-.046-2.807.632-2.807.632s-2.806 3.905-2.455 4.49c.35.585 5.449 3.227 =
+14.265 4.14 8.817.911 14.476.374 15.318-.14.842-.515 1.006-2.854 1.006-2.85=
+4l-.398-1.427-4.724-3.46-16.604-2.41z%22/%3E %3Cpath fill=3D%22url%28%23M%2=
+9%22 d=3D%22M64.757 23.289c-.773-.968-.1-1.703-.1-1.703 1.541.158 7.268.03 =
+11.526 1.339l-4.828 2.15s-4.829-2.547-6.598-1.786z%22/%3E %3Cpath fill=3D%2=
+2url%28%23N%29%22 d=3D%22M73.819 23.173l.397-.661s24.308 3.307 29.104 4.233=
+c4.795.926 22.853 4.994 22.853 4.994l-17.495-.43c-11.327-1.566-22.968-2.748=
+-34.86-8.136z%22/%3E %3Cpath fill=3D%22url%28%23O%29%22 d=3D%22M-.561 14.62=
+7c.28.047 29.326 4.537 30.589 4.49 1.263-.046 1.75-.742 3.324-.866 1.002-.0=
+79 1.396.627 1.15.942-1.213 1.547-2.15 3.321-.078 4.555 2.727 1.623 10.236 =
+2.678 14.92 3.274 8.28 1.052 12.392.52 13.798-.047 1.613-.65.906-1.614 1.69=
+-2.62.385-.495 2.446-.827 3.43-.154.72.493 1.008 1.184 2.41 1.511.653.153 3=
+9.804 6.174 39.804 6.174l12.088 1.09c-.05.133-42.57-4.899-48.44-10.24-.861-=
+.783-1.336 2.183-3.31 1.573-1.976-.61-2.157-3.1-5.925-1.83-1.501.505-.994 2=
+.936-1.887 3.56-1.446 1.013-7.904 1.123-12.722.562-4.817-.561-14.41-2.143-1=
+5.715-3.788-.496-.624-.07-1.9.467-2.666 1.147-1.636.101-2.781-1.31-2.666-1.=
+951.158-2.808 1.22-3.975 1.075-.925-.114-32.413-4.677-32.413-4.677z%22/%3E =
+%3Cpath fill=3D%22url%28%23P%29%22 d=3D%22M34.264 21.586c1.322-2.828 4.29-3=
+.308 4.192-4.118-.1-.81-2.026-.585-2.655-.453-.716.132-2.478.429-3.406.85 0=
+ 0 1.736-.414 2.183.397.446.81-.314 3.324-.314 3.324z%22/%3E %3C/g%3E %3Cg =
+fill-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22url%28%23Q%29%22 d=3D%22M58.=
+374 13.483c-1.059.827 1.786 5.027 1.786 5.027l3.406 3.307s5.887.132 8.533.4=
+96 45.045 6.383 54.438 9.36c9.393 2.976 15.697 4.75 15.697 4.75l3.695-11.45=
+9s-82.362-14.03-87.555-11.481z%22/%3E %3Cpath fill=3D%22url%28%23R%29%22 d=
+=3D%22M222.382 20.13l2.448 16.67-40.626.41C146.56 31.804 88.95 12.102 64.62=
+4 19.8c-.916.629-1.258.465-1.24-.199-1.927.24-.602-.857-.33-1.29-1.123.427-=
+.936-.215-1.373-.347-.562-.162-1-.415-.96-1.025-2.386.44-.823-.684-.859-1.2=
+57-.945.183-.505-.511-.612-.86 0 0 4.407-8.941 26.062-14.133 21.656-5.191 8=
+6.397-.734 137.07 19.441z%22/%3E %3Cpath fill=3D%22url%28%23S%29%22 d=3D%22=
+M60.476 15.048S69.73 5.621 93.638 2.513C120.55-.985 189.4 18.557 189.399 18=
+.558c0 0-69.553-17.635-94.311-14.782C71.47 6.498 60.476 15.048 60.476 15.04=
+8z%22/%3E %3Cpath fill=3D%22%23efefef%22 d=3D%22M85.219 6.63c17.384-4.36 55=
+.57 1.9 65.154 3.928-9.226-1.908-46.83-9.643-65.154-3.929z%22/%3E %3Cpath f=
+ill=3D%22%23f1f1f1%22 d=3D%22M130.836 8.753c14.135 1.85 68.486 15.66 79.838=
+ 18.786-13.334-3.852-66.283-17.468-79.838-18.786z%22/%3E %3Cpath fill=3D%22=
+%23f5f5f5%22 d=3D%22M82.249 8.936c10.572-1.518 25.094-1.26 28.84-1.19-3.184=
+-.357-17.088-.764-28.84 1.19z%22/%3E %3Cpath fill=3D%22%23f7f7f7%22 d=3D%22=
+M187.193 24.76c-10.46-3.523-42.856-12.108-50.205-13.427 8.32 1.188 41.811 9=
+.916 50.205 13.428z%22/%3E %3Cpath fill=3D%22%23efefef%22 d=3D%22M96.771 9.=
+547c23.108.926 55.544 7.174 82.352 16.007-20.863-7.287-56.35-16.843-82.352-=
+16.007z%22/%3E %3Cpath fill=3D%22%23f0f0f0%22 d=3D%22M74.017 12.92c6.664-1.=
+521 23.058-2.31 29.7-1.984-8.503-.463-20.974-.491-29.7 1.984zm-10.252 4.102=
+c4.888-2.032 8.536-2.42 10.318-2.646-2.839.732-6.491 1.667-10.318 2.646z%22=
+/%3E %3Cpath fill=3D%22url%28%23T%29%22 d=3D%22M78.515 13.913c28.778-.404 6=
+7.141 7.028 94.324 15.478-14.251-5.307-58.585-20.163-94.324-15.478z%22/%3E =
+%3Cpath fill=3D%22%23f9f9f9%22 d=3D%22M80.542 16.124c8.207.12 22.163 1.425 =
+33.068 2.666-4.842-.841-26.127-3.07-33.068-2.666z%22/%3E %3Cpath fill=3D%22=
+%23f0f0f0%22 d=3D%22M65.481 18.37c2.714-.7 5.829-1.085 8.746-1.404-2.486.13=
+-6.631.667-8.746 1.403z%22/%3E %3Cpath fill=3D%22%23ededed%22 d=3D%22M75.25=
+6 16.03c4.552-.583 18.219.044 25.117.749-4.907-.542-18.234-1.691-25.117-.74=
+8z%22/%3E %3Cpath fill=3D%22url%28%23U%29%22 d=3D%22M154.629 31.7s-38.107-1=
+0.88-71.187-12.582c-14.577-.75-18.904 1-18.904 1-.652.55.383.628 1.356.738-=
+.308.42-.369.743.482.705.132-.297 15.931-.058 32.781 3.17 19.07 3.652 33.04=
+5 8.395 33.045 8.395z%22/%3E %3Cpath fill=3D%22%23f2f2f2%22 d=3D%22M73.538 =
+19.932c9.594.067 19.773 1.398 28.806 2.745-4.654-.908-17.209-3.246-28.806-2=
+.745z%22/%3E %3C/g%3E %3Cg fill-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22u=
+rl%28%23V%29%22 d=3D%22M122.029-.948l98.97 22.077-3.04-23.527z%22/%3E %3Cpa=
+th fill=3D%22url%28%23W%29%22 d=3D%22M59.635 13.13l-.375 1.31s9.308-8.746 2=
+4.322-12.207c15.014-3.461 31.103-3.555 52.431.935 21.329 4.49 85.443 18.682=
+ 85.443 18.682l-2.58-5.358L132.16-1.102l-45.64-.794S62.913 5.999 59.635 13.=
+13z%22/%3E %3Cpath fill=3D%22%23f8f8f8%22 d=3D%22M131.685-.696c30.86 4.82 5=
+8.639 11.489 87.838 17.306l-.234-.795c-28.318-5.697-54.562-11.6-85.126-17.0=
+72z%22/%3E %3Cpath fill=3D%22url%28%23X%29%22 d=3D%22M132.973.081c30.86 4.8=
+2 58.546 12.12 87.745 17.937l-.14-1.426c-28.318-5.696-54.562-11.6-85.126-17=
+.072z%22/%3E %3Cpath fill=3D%22url%28%23Y%29%22 d=3D%22M141.533-.854c27.55 =
+3.965 51.703 9.73 77.595 14.359l.14-2.585c-24.47-4.307-47.714-8.466-73.526-=
+12.102z%22/%3E %3Cpath fill=3D%22%23f6f6f6%22 d=3D%22M160.475-.948c16.969 3=
+.27 38.852 7.36 58.278 11.039l-.233-.754C199.04 6.007 169.885.52 160.475-.9=
+48z%22/%3E %3Cpath fill=3D%22url%28%23Z%29%22 d=3D%22M170.438-.527c16.041 2=
+.699 31.824 5.656 47.707 8.513l-.046.655-50.842-8.887z%22/%3E %3Cpath fill=
+=3D%22%23f1f1f1%22 d=3D%22M177.5-2.585c.936.28 38.4 6.361 38.4 6.361l-.046-=
+.655c-10.032-1.671-19.02-3.22-28.017-4.77l-10.617-.889z%22/%3E %3Cpath fill=
+=3D%22%23f4f4f4%22 d=3D%22M187.229-1.135c9.147.894 17.799 1.143 27.502 2.76=
+l.094-.608c-5.15-.664-10.008-1.294-14.92-1.824z%22/%3E %3Cpath fill=3D%22ur=
+l%28%23aa%29%22 d=3D%22M113.47-.433c35.796 3.976 72.668 14.5 108.464 21.515=
+l-.14 1.216c-36.046-7.417-68.99-16.951-109.868-22.497z%22/%3E %3C/g%3E %3Cg=
+ fill-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22url%28%23ab%29%22 d=3D%22M-=
+.992-.606l.132 4.365s19.38 2.613 23.614 4.002c4.234 1.39 17.86 7.871 17.86 =
+7.871l5.622-.231 7.014-2.925 4.7 3.145c.611-.051 1.486-.834 1.421-1.295l-4.=
+437-2.996-1.38-.935-1.146-.562-4.513 2.315-7.273 1.123-24.58-14.616z%22/%3E=
+ %3Cpath fill=3D%22url%28%23ac%29%22 d=3D%22M-.398 10.558l31.431 4.42s6.244=
+ 1.053 7.227 1.848c.982.795 1.146.795 1.146.795l1.052-1.871-4.935-2.923S4.3=
+26 3.847.795 5.086c-3.531 1.24-1.193 5.472-1.193 5.472z%22/%3E %3Cpath fill=
+=3D%22url%28%23ad%29%22 d=3D%22M3.142-.11C1.566-1.65 27.84 2.228 40.018 14.=
+177c.716.703 2.1 1.023 1.82.488.597.261 1.636.914 1.521-.3.939.024 3.184 1.=
+37 2.63-.815.471-.01.355-.175.71-.497.635.123 1.195.097 1.654-.133.964.276 =
+1.669.108 1.885-.892.517-.198 1.212-.056 1.323-1.026 0 0 .992.066 1.157-.39=
+7.166-.463.364-11.178.364-11.178z%22/%3E %3Cpath fill=3D%22%23f5f5f5%22 d=
+=3D%22M51.726-.342c1.482 2.673.554 11.435 1.588 11.51.543.42.954-.041 1.1-.=
+133.11.531-.1 1.503.975 1.235-.103.514 1.06 1.82 1.79 1.08.042.178.855 1.51=
+3 1.7.99-.033.263-.372.739.19.796C69.452 4.604 80.76 1.876 91.313-1.334z%22=
+/%3E %3Cpath fill=3D%22%23f4f4f4%22 d=3D%22M38.692 17.773s-1.344-1.836-8.08=
+-2.748c-6.735-.912-33.98-4.677-33.98-4.677l.538-.304s31.735 4.42 33.91 4.7c=
+2.175.281 7.425 1.687 7.881 2.206.456.519-.269.823-.269.823z%22/%3E %3Cpath=
+ fill=3D%22url%28%23ae%29%22 d=3D%22M64.89 22.479c1.526-.672 2.813-.263 5.6=
+19-.146 1.964.082 21.544 2.86 32.226 4.853 9.899 1.846 29.557 6.24 29.557 6=
+.24l1.984-.596s-22.986-4.927-31.75-6.383c-8.764-1.455-27.01-4.42-32.504-4.7=
+17-3.096-.167-5.265-.045-5.265-.045s-.893.76.132.794%22/%3E %3Cpath fill=3D=
+%22url%28%23af%29%22 d=3D%22M64.46-.276c-.806.994-4.303 6.386-8.732 11.774 =
+4.366-4.703 8.757-9.262 13.427-12.187z%22/%3E %3Cpath fill=3D%22%23efefef%2=
+2 d=3D%22M62.987-.325c-3.268 3.06-5.699 7.167-8.88 10.88C56.25 6.824 56.574=
+-1.324 56.82-.787c-.066.066 6.168.463 6.168.463z%22/%3E %3Cpath fill=3D%22%=
+23ebebeb%22 d=3D%22M54.885 11.101c.78-.31 2.04-2.435 2.1-2.678-.184.343-1.6=
+5 2.36-2.1 2.678z%22/%3E %3Cpath fill=3D%22%23dedede%22 d=3D%22M59.763 12.1=
+93C62.913 9.112 73.055 2.7 73.075 2.8c-2.652 1.207-10.037 5.438-13.312 9.39=
+3z%22/%3E %3Cpath fill=3D%22%23f3f3f3%22 d=3D%22M86.949-.176c.346-.548-8.59=
+7 1.645-15.032 5.275 3.6-2.163 8.698-4.343 13.097-5.375z%22/%3E %3Cpath fil=
+l=3D%22%23f1f1f1%22 d=3D%22M82.058-.456C78.713.56 74.483 2.715 71.421 4.818=
+c2.544-2.04 5.996-4.044 8.818-5.538z%22/%3E %3Cpath fill=3D%22%23efefef%22 =
+d=3D%22M71.14 1.064c-4.405 2.76-8.8 6.233-12.965 10.12 3.93-4.195 9.302-8.4=
+33 12.965-10.12z%22/%3E %3Cpath fill=3D%22%23f3f3f3%22 d=3D%22M-.96 2.337c4=
+.275.278 35.22 5.029 40.68 12.336.618.379.67 2.567-.743 1.631C29.515 10.03-=
+.006 6.457-2.679 7.067z%22/%3E %3Cpath fill=3D%22%23ededed%22 d=3D%22M-.728=
+ 4.884C18.171 6.24 29.203 9.922 34.098 11.96 25.325 9.39 10.562 6.627-.76 6=
+.273z%22/%3E %3Cpath fill=3D%22%23efefef%22 d=3D%22M48.716-.739c1.535 2.745=
+ 2.403 5.358 3.076 8.236-1.34-4.526-2.424-6.151-3.902-8.269z%22/%3E %3Cpath=
+ fill=3D%22%23ededed%22 d=3D%22M46.534-.904a48.533 48.533 0 0 1 4.134 9.426=
+c-2.302-3.299-4.775-6.496-8.037-9.228z%22/%3E %3Cpath fill=3D%22%23f0f0f0%2=
+2 d=3D%22M40.547-.937c3.497 3.233 6.208 6.69 9.129 10.087-3.038-3.258-5.888=
+-6.574-9.592-9.624z%22/%3E %3Cpath fill=3D%22%23efefef%22 d=3D%22M39.72 1.1=
+13c3.116 3.175 6.121 6.35 8.864 9.525.323.334-4.398-6.07-8.863-9.525z%22/%3=
+E %3Cpath fill=3D%22%23eee%22 d=3D%22M23.647-.87c6.227 3.572 12.515 7.207 1=
+8.819 12.434C34.866 5.98 28.443 2.747 21.86-.805z%22/%3E %3C/g%3E %3Cpath f=
+ill=3D%22url%28%23ag%29%22 fill-rule=3D%22evenodd%22 d=3D%22M214.31-.082l.0=
+7 1.426 1.216.912-.28 1.146.374.444-.14 1.287s.233 1.146.327 1.169c.093.023=
+.889.374.889.374l1.286 2.386-.374.818.35.304v.819l-.14.678.655.608-.608 1.2=
+4 1.029 1.566.444 1.45-.701.819.655.654-.211 1.31 1.216 1.24-.28 1.239.35.8=
+42 1.006.608-.257 2.011-.281.748.257 2.9 1.193 3.134 17.119.398 4.162-33.93=
+4-27.712 1.03z%22/%3E %3Cg fill-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22u=
+rl%28%23ah%29%22 d=3D%22M235.779 31.419l6.477-32.67 3.602.257-5.45 34.915z%=
+22/%3E %3Cpath fill=3D%22%23f3f3f3%22 d=3D%22M219.604 23.04l7.392-23.795.97=
+6-.017z%22/%3E %3Cpath fill=3D%22url%28%23ai%29%22 d=3D%22M857.938-2.854s-.=
+5 7.188.187 9.563c.688 2.375 2.562 1.375 4.625 1.812 2.062.438 2.437 2.625 =
+2.188 3.438-.25.812 2.687 7.062 2.687 7.062s4.75-18.125 4.938-20.375zm8.375=
+ 27.125L857 64.21s2.25 1.375 2.563 3c.312 1.625.5 6.937.5 6.937l1.375.25s1.=
+625-2.25 1.812-.562c.187 1.687 0 10.875 0 10.875l10.188-41s-.5-2.375-.25-4.=
+125-.063-6.438-.438-6.563-1.687 2.813-2.188 2c-.5-.812-1.5-7.875-2.125-8.43=
+7-.624-.563-2.125-2.313-2.125-2.313zm-2.836 64.05a1.407 1.407 0 0 0-.276.02=
+l-4.861 20.948s1.501 5.128 3.357 5.658c1.856.53 7.955 5.037 7.955 5.037l5.5=
+69-21.566s-1.68 1.856-2.387-.266c-.707-2.121 1.77-4.772-.617-5.39-2.387-.61=
+9-4.775-.177-5.658-1.326-.829-1.078-1.734-3.087-3.082-3.116z%22 transform=
+=3D%22scale%28.26458%29%22/%3E %3Cpath fill=3D%22%23f2f2f2%22 d=3D%22M240.0=
+76-.474l-6.118 28.343 5.49-28.442z%22/%3E %3Cpath fill=3D%22%23f6f6f6%22 d=
+=3D%22M232.536 25.488l5.787-26.26.298.133-6.284 29.203z%22/%3E %3Cpath fill=
+=3D%22%23f0f0f0%22 d=3D%22M230.684 22.743l5.754-23.912.232.199z%22/%3E %3Cp=
+ath fill=3D%22%23f7f7f7%22 d=3D%22M226.781 5.446l-6.826 24.403.244 2.32z%22=
+/%3E %3Cpath fill=3D%22%23f4f4f4%22 d=3D%22M228.534 4.917l-6.25 22.754s5.29=
+-14.519 6.25-22.754z%22/%3E %3Cpath fill=3D%22%23f7f7f7%22 d=3D%22M232.734-=
+1.565c-.132.165-2.249 8.334-2.249 8.334l1.654-7.871z%22/%3E %3Cpath fill=3D=
+%22%23f5f5f5%22 d=3D%22M216.368-.176c0 .094-.725 3.742-.725 3.742l1.52-4.02=
+3z%22/%3E %3Cpath fill=3D%22%23f7f7f7%22 d=3D%22M214.38 1.344l1.193-2.268.2=
+8.374-1.216 2.642zm4.49-1.59l-2.619 5.753.444 2.409 3.04-8.373-.958.281.14.=
+023-.093-.21z%22/%3E %3Cpath fill=3D%22%23f4f4f4%22 d=3D%22M217 8.898l.444 =
+1.847 4.91-12.044-1.215-.163z%22/%3E %3Cpath fill=3D%22%23f3f3f3%22 d=3D%22=
+M218.566 13.435l.351 3.344 7.086-18.311-.842.117z%22/%3E %3C/g%3E %3Cg fill=
+-rule=3D%22evenodd%22%3E %3Cpath fill=3D%22url%28%23aj%29%22 d=3D%22M43.326=
+ 17.146c.04 0 4.762.57 6.184.893 1.422.322 6.664 1.463 7.4 1.562.736.1 3.81=
+2.53 3.812.53l-6.086-6.301-3.067-.604z%22/%3E %3Cpath fill=3D%22%23d6d6d6%2=
+2 d=3D%22M41.308 17.832c6.312-.615 11.274 1.936 19.058 2.795l-.24-.745c-7.9=
+95-.942-11.39-2.702-17.032-2.927z%22/%3E %3Cpath fill=3D%22%23e7e7e7%22 d=
+=3D%22M51.461 14.095c.034.099.116 1.835-.248 2.083-.363.248-2.05.678-2.893.=
+81-1.042.215-2.762.463-2.762.463-1.265.112-2.55-.761-3.77-.016l-.943.628s2.=
+1-.215 2.877-.231c.778-.017 1.489.099 1.919.082.43-.016 1.752-.48 2.48-.529=
+.728-.05 3.175-.562 3.555-.975.38-.414.166-2.762.166-2.762z%22/%3E %3Cpath =
+fill=3D%22%23f4f4f4%22 d=3D%22M39.324 16.658c-.443.372-1.193 1.737-.281 1.9=
+18.297.05 1.438-.165 1.504-.265.067-.099.298-.248.298-.248.838-.006 1.35-.1=
+85 1.935-.777 0 0 .694.199.926.083 1.287-.032 2.55-.142 3.687-.893.116-.132=
+.298-.53.298-.53 1.246-.359 1.984-.616 2.58-1.256.832-.103 1.476-.096 1.868=
+-.794.378.708.793.862 1.472.76 1.181.346 3.137 2.118 3.556 2.779.325.573.85=
+5 1.244 1.703 1.687.64.987 2.579 3.19 3.191 3.274.381.506.51 1.514 1.555 1.=
+025.548-.198 1.091-.4 1.273-.942 2.036-.746.956-1.522-.694-1.952.08-.039-1.=
+407-.847-1.571-.942.013-.533-1.356-1.643-1.72-1.62-.246-.82-1.166-1.12-1.22=
+4-1.49-.246-.642-.556-1.328-.959-1.487-1.192-.642-1.581-1.155-2.447-1.44-.3=
+1-.3-.928-.577-.844-.876-.386-.352-.683-.81-1.157-1.008-.408-.206-.816-.19-=
+1.224-.182-.674-.17-1.159.272-1.637.645-.541.483-1.13.626-1.736.694-.792-.0=
+32-1.406.37-2.051.695-.917.293-2.028.079-2.762.76-.381.764-1.158.885-2.034.=
+844-.532-.294-1.277-.025-2.133-.248-.771.065-1.091.893-1.372 1.786z%22/%3E =
+%3C/g%3E %3C/svg%3E") 0px 0px no-repeat, url("data:image/svg+xml,%3Csvg xml=
+ns=3D%22http://www.w3.org/2000/svg%22 xmlns:xlink=3D%22http://www.w3.org/19=
+99/xlink%22 width=3D%225%22 height=3D%22220%22 viewBox=3D%220 0 1.323 58.20=
+8%22%3E %3Cdefs%3E %3ClinearGradient id=3D%22b%22 x1=3D%22262.803%22 x2=3D%=
+22263.049%22 y1=3D%2229.234%22 y2=3D%22.97%22 gradientTransform=3D%22transl=
+ate%28-492.003 238.792%29 scale%281.875%29%22 gradientUnits=3D%22userSpaceO=
+nUse%22 xlink:href=3D%22%23a%22/%3E %3ClinearGradient id=3D%22a%22%3E %3Cst=
+op offset=3D%220%22 stop-color=3D%22%23f9f9f9%22/%3E %3Cstop offset=3D%221%=
+22 stop-color=3D%22%23f3f3f3%22/%3E %3C/linearGradient%3E %3C/defs%3E %3Cpa=
+th fill=3D%22url%28%23b%29%22 d=3D%22M0 238.792h1.323V297H0z%22 transform=
+=3D%22translate%280 -238.792%29%22/%3E %3C/svg%3E") 0px 0px repeat-x rgb(24=
+9, 249, 249); color: rgb(0, 0, 0); direction: ltr; unicode-bidi: embed; }
+  #globalWrapper { font-size: 127%; width: 100%; margin: 0px; padding: 0px;=
+ position: relative; z-index: 0; }
+  a { color: rgb(0, 43, 184); }
+  a:visited { color: rgb(90, 54, 150); }
+  a.new, #p-personal a.new { color: rgb(204, 34, 0); }
+  ul { list-style-type: square; list-style-image: url("/skins/MonoBook/reso=
+urces/images/bullet.svg?36e03"); }
+  pre, .mw-code { line-height: 1.1em; }
+  .firstHeading { margin-top: 0.4em; margin-bottom: 0.1em; padding-top: 0px=
+; overflow: visible; }
+  .mw-indicators { float: right; line-height: 1.5em; font-size: 95%; }
+  .mw-indicator { display: inline-block; }
+  .mw-jump-link:not(:focus) { display: block; clip: rect(1px, 1px, 1px, 1px=
+); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overfl=
+ow: hidden; position: absolute !important; }
+  #siteNotice { font-size: 95%; padding: 0px 0.9em; }
+  #siteNotice p { margin: 0px; padding: 0px; }
+  #localNotice { margin: 0px; }
+  table.rimage { float: right; position: relative; margin-left: 1em; margin=
+-bottom: 1em; text-align: center; }
+  .portlet { overflow: hidden; }
+  .portlet h3 { background: transparent; display: inline; height: 1em; font=
+-size: 91%; white-space: nowrap; }
+  .portlet ul { line-height: 1.5em; font-size: 95%; }
+  .portlet li { padding: 0px; margin: 0px; }
+  .pBody { font-size: 95%; color: rgb(0, 0, 0); border-collapse: collapse; =
+}
+  .pBody::after { content: ""; clear: both; display: block; }
+  #p-logo { position: absolute; z-index: 3; overflow: visible; }
+  #p-logo a, #p-logo a:hover { display: block; background-repeat: no-repeat=
+; text-decoration: none; }
+  li#pt-anonuserpage { color: rgb(112, 112, 112); }
+  .mw-footer { background-color: rgb(255, 255, 255); border-top: 1px solid =
+rgb(250, 189, 35); border-bottom: 1px solid rgb(250, 189, 35); margin: 0.6e=
+m 0px 1em; overflow: hidden; padding: 0.4em 0px 0.3em; text-align: center; =
+font-size: 90%; }
+  .mw-footer li { display: inline; margin: 0px 1.3em; }
+  #userloginprompt, #languagelinks { font-size: 85%; }
+  #login-sectiontip { font-size: 85%; line-height: 1.2; padding-top: 2em; }
+  #pagehistory li.selected { position: relative; }
+  div.patrollink { clear: both; }
+  .sharedUploadNotice { font-style: italic; }
+  .toggle { margin-left: 2em; text-indent: -2em; }
+  input#wpSave, input#wpDiff { margin-right: 0.33em; }
+  #wpSave { font-weight: bold; }
+  div.noarticletext { border: 1px solid rgb(170, 170, 170); background: rgb=
+(255, 255, 255); padding: 0.2em 1em; color: rgb(0, 0, 0); }
+  #powersearch p { margin-top: 0px; }
+  div.multipageimagenavbox { border: 1px solid rgb(170, 170, 170); padding:=
+ 4px; margin: 1em; background: rgb(249, 249, 249); }
+  div.multipageimagenavbox div.thumb { border: 0px; margin-left: 2em; margi=
+n-right: 2em; }
+  div.multipageimagenavbox hr { margin: 6px; }
+  table.multipageimage td { text-align: center; }
+  .templatesUsed { margin-top: 1.5em; }
+  .mw-summary-preview { margin: 0.1em 0px; }
+  div.mw-lag-warn-normal, div.mw-lag-warn-high { padding: 3px; text-align: =
+center; margin: 3px auto; }
+  div.mw-lag-warn-normal { border: 1px solid rgb(255, 204, 102); background=
+-color: rgb(255, 255, 204); }
+  div.mw-lag-warn-high { font-weight: bold; border: 2px solid rgb(255, 0, 5=
+1); background-color: rgb(255, 204, 204); }
+  .MediaTransformError { background-color: rgb(170, 170, 170); padding: 0.1=
+em; }
+  .MediaTransformError td { text-align: center; vertical-align: middle; fon=
+t-size: 90%; }
+  .tipsy { font-size: 127%; }
+  body { margin: 0px; }
+  main { display: block; }
+  hr { box-sizing: content-box; height: 0px; overflow: visible; }
+  abbr[title] { border-bottom: 1px dotted; cursor: help; }
+  @supports (text-decoration:underline dotted) {
+  abbr[title] { border-bottom: 0px; text-decoration: underline dotted; }
+}
+  pre, code, tt, kbd, samp { font-family: monospace, monospace; }
+  sub, sup { line-height: 1; }
+  img { border: 0px; }
+  legend { color: inherit; padding: 0px; }
+  a { text-decoration: none; color: rgb(6, 69, 173); background: none; }
+  a:not([href]) { cursor: pointer; }
+  a:visited { color: rgb(11, 0, 128); }
+  a:active { color: rgb(250, 167, 0); }
+  a:hover, a:focus { text-decoration: underline; }
+  a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-d=
+ecoration: none; }
+  a.stub { color: rgb(119, 34, 51); }
+  a.new, #p-personal a.new { color: rgb(221, 51, 51); }
+  a.mw-selflink { color: inherit; font-weight: bold; text-decoration: inher=
+it; }
+  a.mw-selflink:hover { cursor: inherit; text-decoration: inherit; }
+  a.mw-selflink:active, a.mw-selflink:visited { color: inherit; }
+  a.new:visited, #p-personal a.new:visited { color: rgb(165, 88, 88); }
+  .mw-parser-output a.extiw, .mw-parser-output a.external { color: rgb(51, =
+102, 187); }
+  .mw-parser-output a.extiw:visited, .mw-parser-output a.external:visited {=
+ color: rgb(102, 51, 102); }
+  .mw-parser-output a.extiw:active, .mw-parser-output a.external:active { c=
+olor: rgb(187, 102, 51); }
+  .mw-parser-output a.external.free { overflow-wrap: break-word; }
+  img { border: 0px; vertical-align: middle; }
+  hr { height: 1px; background-color: rgb(162, 169, 177); border: 0px; marg=
+in: 0.2em 0px; }
+  h1, h2, h3, h4, h5, h6 { color: rgb(0, 0, 0); margin: 0px; padding-top: 0=
+.5em; padding-bottom: 0.17em; overflow: hidden; }
+  h1, h2 { margin-bottom: 0.6em; border-bottom: 1px solid rgb(162, 169, 177=
+); }
+  h3, h4, h5 { margin-bottom: 0.3em; }
+  h1 { font-size: 188%; font-weight: normal; }
+  h2 { font-size: 150%; font-weight: normal; }
+  h3 { font-size: 128%; }
+  h4 { font-size: 116%; }
+  h5 { font-size: 108%; }
+  h6 { font-size: 100%; }
+  p { margin: 0.4em 0px 0.5em; }
+  p img { margin: 0px; }
+  ul { margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+  ol { margin: 0.3em 0px 0px 3.2em; padding: 0px; list-style-image: none; }
+  li { margin-bottom: 0.1em; }
+  dt { font-weight: bold; margin-bottom: 0.1em; }
+  dl { margin-top: 0.2em; margin-bottom: 0.5em; }
+  dd { margin-left: 1.6em; margin-bottom: 0.1em; }
+  pre, code, tt, kbd, samp, .mw-code { font-family: monospace, monospace; }
+  code { color: rgb(0, 0, 0); background-color: rgb(248, 249, 250); border:=
+ 1px solid rgb(234, 236, 240); border-radius: 2px; padding: 1px 4px; }
+  pre, .mw-code { color: rgb(0, 0, 0); background-color: rgb(248, 249, 250)=
+; border: 1px solid rgb(234, 236, 240); padding: 1em; white-space: pre-wrap=
+; overflow-x: hidden; overflow-wrap: break-word; }
+  table { font-size: 100%; }
+  fieldset { border: 1px solid rgb(42, 75, 141); margin: 1em 0px; padding: =
+0px 1em 1em; }
+  legend { padding: 0.5em; font-size: 95%; }
+  form { border: 0px; margin: 0px; }
+  textarea { width: 100%; padding: 0.1em; display: block; box-sizing: borde=
+r-box; }
+  .center { width: 100%; text-align: center; }
+  .center * { margin-left: auto; margin-right: auto; }
+  .small { font-size: 94%; }
+  table.small { font-size: 100%; }
+  .toc, .mw-warning, .toccolours { border: 1px solid rgb(162, 169, 177); ba=
+ckground-color: rgb(248, 249, 250); padding: 5px; font-size: 95%; }
+  .toc { display: table; padding: 7px; }
+  table.toc { border-collapse: collapse; }
+  table.toc td { padding: 0px; }
+  .toc h2 { display: inline; border: 0px; padding: 0px; font-size: 100%; fo=
+nt-weight: bold; }
+  .toc .toctitle { text-align: center; }
+  .toc ul { list-style-type: none; list-style-image: none; margin-left: 0px=
+; padding: 0px; text-align: left; }
+  .toc ul ul { margin: 0px 0px 0px 2em; }
+  .tocnumber, .toctext { display: table-cell; text-decoration: inherit; }
+  .tocnumber { color: rgb(32, 33, 34); padding-left: 0px; padding-right: 0.=
+5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+  .mw-warning { margin-left: 50px; margin-right: 50px; text-align: center; =
+}
+  div.floatright, table.floatright { margin: 0px 0px 0.5em 0.5em; }
+  div.floatleft, table.floatleft { margin: 0px 0.5em 0.5em 0px; }
+  div.thumb { margin-bottom: 0.5em; width: auto; background-color: transpar=
+ent; }
+  div.thumbinner { border: 1px solid rgb(200, 204, 209); padding: 3px; back=
+ground-color: rgb(248, 249, 250); font-size: 94%; text-align: center; overf=
+low: hidden; }
+  html .thumbimage { background-color: rgb(255, 255, 255); border: 1px soli=
+d rgb(200, 204, 209); }
+  html .thumbcaption { border: 0px; line-height: 1.4em; padding: 3px; font-=
+size: 94%; text-align: left; }
+  .magnify { float: right; margin-left: 3px; }
+  .magnify a { display: block; text-indent: 15px; white-space: nowrap; over=
+flow: hidden; width: 15px; height: 11px; background-image: linear-gradient(=
+transparent, transparent), url("resources/src/mediawiki.skinning/images/mag=
+nify-clip-ltr.svg?8330e"); user-select: none; }
+  img.thumbborder { border: 1px solid rgb(234, 236, 240); }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; margin-left: 3px; margin-right: =
+0px; }
+  .mw-content-ltr .magnify a { background-image: linear-gradient(transparen=
+t, transparent), url("resources/src/mediawiki.skinning/images/magnify-clip-=
+ltr.svg?8330e"); }
+  .mw-content-rtl .thumbcaption { text-align: right; }
+  .mw-content-rtl .magnify { float: left; margin-left: 0px; margin-right: 3=
+px; }
+  .mw-content-rtl .magnify a { background-image: linear-gradient(transparen=
+t, transparent), url("resources/src/mediawiki.skinning/images/magnify-clip-=
+rtl.svg?38fd5"); }
+  div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+  div.tleft { margin: 0.5em 1.4em 1.3em 0px; }
+  body.mw-hide-empty-elt .mw-empty-elt { display: none; }
+  .catlinks { border: 1px solid rgb(162, 169, 177); background-color: rgb(2=
+48, 249, 250); padding: 5px; margin-top: 1em; clear: both; }
+  textarea { border: 1px solid rgb(200, 204, 209); }
+  .editOptions { background-color: rgb(234, 236, 240); color: rgb(32, 33, 3=
+4); border-width: 0px 1px 1px; border-right-style: solid; border-bottom-sty=
+le: solid; border-left-style: solid; border-right-color: rgb(200, 204, 209)=
+; border-bottom-color: rgb(200, 204, 209); border-left-color: rgb(200, 204,=
+ 209); border-image: initial; border-top-style: initial; border-top-color: =
+initial; padding: 1em 1em 1.5em; margin-bottom: 2em; }
+  .usermessage { background-color: rgb(255, 206, 123); border: 1px solid rg=
+b(255, 165, 0); color: rgb(0, 0, 0); font-weight: bold; margin: 2em 0px 1em=
+; padding: 0.5em 1em; vertical-align: middle; }
+  #siteNotice { position: relative; text-align: center; margin: 0px; }
+  #localNotice { margin-bottom: 0.9em; }
+  #siteSub { display: none; }
+  #contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin: 0=
+px 0px 1.4em 1em; color: rgb(84, 89, 93); width: auto; }
+  span.subpages { display: block; }
+  .client-nojs #t-print { display: none; }
+  .mw-content-ltr { direction: ltr; }
+  .mw-content-rtl { direction: rtl; }
+  .sitedir-ltr textarea, .sitedir-ltr input { direction: ltr; }
+  .sitedir-rtl textarea, .sitedir-rtl input { direction: rtl; }
+  .mw-userlink { overflow-wrap: break-word; hyphens: auto; unicode-bidi: em=
+bed; }
+  mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+  wbr { display: inline-block; }
+  input[type=3D"submit"], input[type=3D"button"], input[type=3D"reset"], in=
+put[type=3D"file"] { direction: ltr; }
+  textarea[dir=3D"ltr"], input[dir=3D"ltr"] { direction: ltr; }
+  textarea[dir=3D"rtl"], input[dir=3D"rtl"] { direction: rtl; }
+  abbr[title], .explain[title] { border-bottom: 1px dotted; cursor: help; }
+  @supports (text-decoration:underline dotted) {
+  abbr[title], .explain[title] { border-bottom: 0px; text-decoration: under=
+line dotted; }
+}
+  span.comment { font-style: italic; unicode-bidi: isolate; }
+  #editform, #toolbar, #wpTextbox1 { clear: both; }
+  #toolbar { height: 22px; }
+  .mw-underline-always a { text-decoration: underline; }
+  .mw-underline-never a { text-decoration: none; }
+  li span.deleted, span.history-deleted { text-decoration: line-through; co=
+lor: rgb(114, 119, 125); font-style: italic; }
+  .not-patrolled { background-color: rgb(255, 255, 170); }
+  .unpatrolled { font-weight: bold; color: rgb(221, 51, 51); }
+  div.patrollink { font-size: 75%; text-align: right; }
+  td.mw-label { text-align: right; vertical-align: middle; }
+  td.mw-input { text-align: left; }
+  td.mw-submit { text-align: left; white-space: nowrap; }
+  .mw-input-with-label { white-space: nowrap; display: inline-block; }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; }
+  .mw-content-rtl .thumbcaption { text-align: right; }
+  .mw-content-rtl .magnify { float: left; }
+  #catlinks { text-align: left; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: no=
+ne none; }
+  .catlinks li { display: inline-block; line-height: 1.25em; border-left: 1=
+px solid rgb(162, 169, 177); margin: 0.125em 0px; padding: 0px 0.5em; }
+  .catlinks li:first-child { padding-left: 0.25em; border-left: 0px; }
+  .catlinks li a.mw-redirect { font-style: italic; }
+  .mw-hidden-cats-hidden { display: none; }
+  .catlinks-allhidden { display: none; }
+  p.mw-protect-editreasons, p.mw-filedelete-editreasons, p.mw-delete-editre=
+asons { font-size: 90%; text-align: right; }
+  .autocomment, .autocomment a, .autocomment a:visited { color: rgb(114, 11=
+9, 125); }
+  .newpage, .minoredit, .botedit { font-weight: bold; }
+  .mw-warning-with-logexcerpt { clear: both; }
+  .mw-warning-with-logexcerpt ul li { font-size: 90%; }
+  span.mw-revdelundel-link, strong.mw-revdelundel-link { font-size: 90%; }
+  span.mw-revdelundel-hidden, input.mw-revdelundel-hidden { visibility: hid=
+den; }
+  td.mw-revdel-checkbox, th.mw-revdel-checkbox { padding-right: 10px; text-=
+align: center; }
+  a.new { color: rgb(186, 0, 0); }
+  .plainlinks a.external { background: none !important; padding: 0px !impor=
+tant; }
+  .rtl a.external.free, .rtl a.external.autonumber { direction: ltr; unicod=
+e-bidi: embed; }
+  .wikitable { background-color: rgb(248, 249, 250); color: rgb(32, 33, 34)=
+; margin: 1em 0px; border: 1px solid rgb(162, 169, 177); border-collapse: c=
+ollapse; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wi=
+kitable > * > tr > td { border: 1px solid rgb(162, 169, 177); padding: 0.2e=
+m 0.4em; }
+  .wikitable > tr > th, .wikitable > * > tr > th { background-color: rgb(23=
+4, 236, 240); text-align: center; }
+  .wikitable > caption { font-weight: bold; }
+  .error, .warning, .success { font-size: larger; }
+  .error { color: rgb(221, 51, 51); }
+  .warning { color: rgb(172, 102, 0); }
+  .success { color: rgb(20, 134, 109); }
+  .mw-infobox { border: 2px solid rgb(255, 204, 51); margin: 0.5em; clear: =
+left; overflow: hidden; }
+  .mw-infobox-left { margin: 7px; float: left; width: 35px; }
+  .mw-infobox-right { margin: 0.5em 0.5em 0.5em 49px; }
+  .previewnote { margin-bottom: 1em; }
+  .visualClear { clear: both; }
+  .mw-datatable { border: 1px solid rgb(162, 169, 177); border-collapse: co=
+llapse; }
+  .mw-datatable td, .mw-datatable th { border: 1px solid rgb(162, 169, 177)=
+; padding: 0.2em 0.4em; }
+  .mw-datatable th { background-color: rgb(234, 238, 255); }
+  .mw-datatable td { background-color: rgb(255, 255, 255); }
+  .mw-datatable tr:hover td { background-color: rgb(234, 243, 255); }
+  .mw-ajax-loader { background-image: url("resources/src/mediawiki.skinning=
+/images/ajax-loader.gif?57f34"); background-position: center center; backgr=
+ound-repeat: no-repeat; padding: 16px; position: relative; top: -16px; }
+  .mw-small-spinner { margin-right: 0.6em; background-image: url("resources=
+/src/mediawiki.skinning/images/spinner.gif?ca65b"); background-position: ce=
+nter center; background-repeat: no-repeat; padding: 10px !important; }
+  .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0p=
+x 0px 1.6em; padding: 0px; }
+  .mw-content-rtl ul, .mw-content-ltr .mw-content-rtl ul { margin: 0.3em 1.=
+6em 0px 0px; padding: 0px; }
+  .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol { margin: 0.3em 0p=
+x 0px 3.2em; padding: 0px; }
+  .mw-content-rtl ol, .mw-content-ltr .mw-content-rtl ol { margin: 0.3em 3.=
+2em 0px 0px; padding: 0px; }
+  .mw-content-ltr dd, .mw-content-rtl .mw-content-ltr dd { margin-left: 1.6=
+em; margin-right: 0px; }
+  .mw-content-rtl dd, .mw-content-ltr .mw-content-rtl dd { margin-right: 1.=
+6em; margin-left: 0px; }
+  h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(bn), h1:lan=
+g(gu), h1:lang(hi), h1:lang(kn), h1:lang(ks), h1:lang(ml), h1:lang(mr), h1:=
+lang(my), h1:lang(mai), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa)=
+, h1:lang(pi), h1:lang(sa), h1:lang(ta), h1:lang(te) { line-height: 1.6em !=
+important; }
+  h2:lang(anp), h3:lang(anp), h4:lang(anp), h5:lang(anp), h6:lang(anp), h2:=
+lang(as), h3:lang(as), h4:lang(as), h5:lang(as), h6:lang(as), h2:lang(bho),=
+ h3:lang(bho), h4:lang(bho), h5:lang(bho), h6:lang(bho), h2:lang(bh), h3:la=
+ng(bh), h4:lang(bh), h5:lang(bh), h6:lang(bh), h2:lang(bn), h3:lang(bn), h4=
+:lang(bn), h5:lang(bn), h6:lang(bn), h2:lang(gu), h3:lang(gu), h4:lang(gu),=
+ h5:lang(gu), h6:lang(gu), h2:lang(hi), h3:lang(hi), h4:lang(hi), h5:lang(h=
+i), h6:lang(hi), h2:lang(kn), h3:lang(kn), h4:lang(kn), h5:lang(kn), h6:lan=
+g(kn), h2:lang(ks), h3:lang(ks), h4:lang(ks), h5:lang(ks), h6:lang(ks), h2:=
+lang(ml), h3:lang(ml), h4:lang(ml), h5:lang(ml), h6:lang(ml), h2:lang(mr), =
+h3:lang(mr), h4:lang(mr), h5:lang(mr), h6:lang(mr), h2:lang(my), h3:lang(my=
+), h4:lang(my), h5:lang(my), h6:lang(my), h2:lang(mai), h3:lang(mai), h4:la=
+ng(mai), h5:lang(mai), h6:lang(mai), h2:lang(ne), h3:lang(ne), h4:lang(ne),=
+ h5:lang(ne), h6:lang(ne), h2:lang(new), h3:lang(new), h4:lang(new), h5:lan=
+g(new), h6:lang(new), h2:lang(or), h3:lang(or), h4:lang(or), h5:lang(or), h=
+6:lang(or), h2:lang(pa), h3:lang(pa), h4:lang(pa), h5:lang(pa), h6:lang(pa)=
+, h2:lang(pi), h3:lang(pi), h4:lang(pi), h5:lang(pi), h6:lang(pi), h2:lang(=
+sa), h3:lang(sa), h4:lang(sa), h5:lang(sa), h6:lang(sa), h2:lang(ta), h3:la=
+ng(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), h2:lang(te), h3:lang(te), h4=
+:lang(te), h5:lang(te), h6:lang(te) { line-height: 1.2em; }
+  ol:lang(azb) li, ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:la=
+ng(fa) li, ol:lang(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(l=
+uz) li, ol:lang(mzn) li { list-style-type: persian; }
+  ol:lang(ckb) li, ol:lang(sdh) li { list-style-type: arabic-indic; }
+  ol:lang(hi) li, ol:lang(mai) li, ol:lang(mr) li, ol:lang(ne) li { list-st=
+yle-type: devanagari; }
+  ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+  ol:lang(or) li { list-style-type: oriya; }
+  .toc ul { margin: 0.3em 0px; }
+  .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr .toc ul { text-a=
+lign: left; }
+  .mw-content-rtl .toc ul, .mw-content-ltr .mw-content-rtl .toc ul { text-a=
+lign: right; }
+  .mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr .toc ul ul { =
+margin: 0px 0px 0px 2em; }
+  .mw-content-rtl .toc ul ul, .mw-content-ltr .mw-content-rtl .toc ul ul { =
+margin: 0px 2em 0px 0px; }
+  .toc .toctitle { direction: ltr; }
+  #mw-clearyourcache, #mw-sitecsspreview, #mw-sitejspreview, #mw-usercsspre=
+view, #mw-userjspreview { direction: ltr; unicode-bidi: embed; }
+  #mw-revision-info, #mw-revision-info-current, #mw-revision-nav { directio=
+n: ltr; }
+  div.tright, div.floatright, table.floatright { clear: right; float: right=
+; }
+  div.tleft, div.floatleft, table.floatleft { float: left; clear: left; }
+  #mw-credits a { unicode-bidi: embed; }
+  .printfooter { display: none; }
+  .xdebug-error { position: absolute; z-index: 99; }
+  .mw-editsection { user-select: none; }
+  .mw-editsection, .mw-editsection-like { font-size: small; font-weight: no=
+rmal; margin-left: 1em; vertical-align: baseline; line-height: 1em; }
+  .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-edit=
+section { margin-left: 1em; }
+  .mw-content-rtl .mw-editsection, .mw-content-ltr .mw-content-rtl .mw-edit=
+section { margin-right: 1em; }
+  sup, sub { line-height: 1; }
+}
+
+@media screen and (min-width: 551px) {
+  #column-content { float: right; margin: 0px 0px 0.6em -12.2em; }
+  .mw-body { margin: 2.8em 0px 0px 12.2em; border-right: 0px; }
+  #mw-data-after-content { margin-left: 12.2em; }
+  #column-one { padding-top: 160px; }
+  .special li { line-height: 1.4em; margin: 0px; padding: 0px; }
+  .portlet { border: 0px; margin: 0px 0px 0.5em; padding: 0px; float: none;=
+ width: 11.6em; }
+  .portlet h3 { padding: 0px 1em 0px 0.5em; text-transform: lowercase; font=
+-weight: normal; }
+  .pBody { background-color: rgb(255, 255, 255); border: 1px solid rgb(170,=
+ 170, 170); padding: 0px 0.8em 0.3em 0.5em; }
+  li#pt-userpage { text-transform: none; }
+  .capitalize-all-nouns .portlet h3, .capitalize-all-nouns #p-personal ul, =
+.capitalize-all-nouns #p-cactions ul li a { text-transform: none; }
+  .no-text-transform { text-transform: none; }
+  #p-logo { top: 0px; left: 0px; height: 155px; width: 12em; }
+  #p-logo a, #p-logo a:hover { height: 155px; width: 12.2em; background-pos=
+ition: 35% 50% !important; }
+  #p-search { position: relative; z-index: 3; }
+  input.searchButton { margin-top: 1px; font-size: 95%; }
+  #searchGoButton { padding-left: 0.5em; padding-right: 0.5em; font-weight:=
+ bold; }
+  #searchInput { width: 10.9em; margin: 0px; font-size: 95%; }
+  #p-search .pBody { padding: 0.5em 0.4em 0.4em; text-align: center; }
+  #p-search #searchform div div { margin-top: 0.4em; font-size: 95%; }
+  #p-personal { position: absolute; left: 0px; top: 0px; z-index: 3; width:=
+ 100%; white-space: nowrap; padding: 0px; margin: 0px; border: 0px; backgro=
+und: none; overflow: visible; line-height: 1.2em; }
+  #p-personal h3 { position: absolute; top: -9999px; }
+  #p-personal .portlet, #p-personal .pBody { z-index: 0; padding: 0px; marg=
+in: 0px; border: 0px; overflow: visible; background: none; }
+  #p-personal ul { border: 0px; line-height: 1.4em; color: rgb(47, 111, 171=
+); padding: 0px 2em 0px 14em; margin: 0px; float: right; list-style-type: n=
+one; list-style-image: none; z-index: 0; background: none; cursor: default;=
+ text-transform: lowercase; box-sizing: border-box; max-width: 100%; }
+  #p-personal li { z-index: 0; border: 0px; padding: 0px; color: rgb(47, 11=
+1, 171); display: inline; margin-left: 1em; line-height: 1.2em; background:=
+ none; }
+  #p-personal li a { color: rgb(0, 88, 150); text-decoration: none; padding=
+-bottom: 0.2em; }
+  #p-personal li a:hover { background-color: rgb(255, 255, 255); text-decor=
+ation: none; }
+  #p-personal li.active a:hover { background-color: transparent; }
+  li#pt-userpage, li#pt-anonuserpage { background-image: linear-gradient(tr=
+ansparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=3D%22http://w=
+ww.w3.org/2000/svg%22 xmlns:xlink=3D%22http://www.w3.org/1999/xlink%22 widt=
+h=3D%2216%22 height=3D%2216%22 viewBox=3D%220 0 4.233 4.233%22%3E %3Cdefs%3=
+E %3ClinearGradient id=3D%22c%22%3E %3Cstop offset=3D%220%22 stop-color=3D%=
+22%23fbeacf%22/%3E %3Cstop offset=3D%221%22 stop-color=3D%22%23f0bf7b%22/%3=
+E %3C/linearGradient%3E %3ClinearGradient id=3D%22b%22%3E %3Cstop offset=3D=
+%220%22 stop-color=3D%22%23f9e0ba%22/%3E %3Cstop offset=3D%221%22 stop-colo=
+r=3D%22%23de8a3d%22/%3E %3C/linearGradient%3E %3ClinearGradient id=3D%22a%2=
+2%3E %3Cstop offset=3D%220%22 stop-color=3D%22%23dfedc7%22/%3E %3Cstop offs=
+et=3D%221%22 stop-color=3D%22%2389b92f%22/%3E %3C/linearGradient%3E %3Cline=
+arGradient id=3D%22d%22 x1=3D%22.794%22 x2=3D%223.175%22 y1=3D%222.778%22 y=
+2=3D%222.778%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:href=3D%22%23a%2=
+2/%3E %3ClinearGradient id=3D%22f%22 x1=3D%221.587%22 x2=3D%222.381%22 y1=
+=3D%221.058%22 y2=3D%221.587%22 gradientUnits=3D%22userSpaceOnUse%22 xlink:=
+href=3D%22%23b%22/%3E %3CradialGradient id=3D%22e%22 cx=3D%221.984%22 cy=3D=
+%222.381%22 r=3D%22.397%22 fx=3D%221.984%22 fy=3D%221.984%22 gradientTransf=
+orm=3D%22matrix%28.33333 0 0 1.30283 1.323 -.469%29%22 gradientUnits=3D%22u=
+serSpaceOnUse%22 xlink:href=3D%22%23c%22/%3E %3C/defs%3E %3Cpath fill=3D%22=
+url%28%23d%29%22 fill-rule=3D%22evenodd%22 d=3D%22M.661 3.307l.133-.661.264=
+-.265c.53-.264 1.323-.264 1.852 0l.265.265.132.661z%22/%3E %3Cpath fill=3D%=
+22url%28%23e%29%22 fill-rule=3D%22evenodd%22 d=3D%22M1.587 2.117v.264l.265.=
+265h.265l.264-.265v-.264c-.264-.265-.529-.265-.793 0z%22/%3E %3Cpath fill=
+=3D%22url%28%23f%29%22 fill-rule=3D%22evenodd%22 d=3D%22M1.323 1.058v.53l.2=
+64.264c.265.265.53.265.794 0l.265-.265v-.529L2.116.53h-.264z%22/%3E %3Cpath=
+ fill=3D%22%234e4e4e%22 d=3D%22M2.646 1.058v.53h.264v-.53zM2.38 2.117v.264h=
+.53v-.264zm.53.264v.265h.264V2.38zm.264.265v.529H.529v.265h2.91v-.795z%22/%=
+3E %3Cpath fill=3D%22%23a3a3a3%22 d=3D%22M1.058 1.058v.53h.265v-.53zm.265.5=
+3v.264h.264v-.265zm-.265.529v.264h.53v-.264zm0 .264H.794v.265h.264zm-.264.2=
+65H.529v.529h.265z%22/%3E %3Cpath fill=3D%22%23768854%22 d=3D%22M1.587 2.38=
+1v.265h.265V2.38zm.265.265v.264h.265v-.264zm.265 0h.264V2.38h-.264z%22/%3E =
+%3Cpath fill=3D%22%23a6774d%22 d=3D%22M2.381 1.587v.265h.265v-.265zm0 .265h=
+-.793v.265h.793z%22/%3E %3Cpath fill=3D%22%239a7b54%22 fill-rule=3D%22eveno=
+dd%22 d=3D%22M1.984.397v.132c0 .265-.396.794-.793.794l.132-.53.264-.264z%22=
+/%3E %3Cpath fill=3D%22%2393642b%22 fill-rule=3D%22evenodd%22 d=3D%22M1.984=
+.397v.132c0 .265.397.794.794.794l-.132-.53L2.38.53z%22/%3E %3Cpath fill=3D%=
+22%2386735c%22 d=3D%22M1.587.265v.264h.794V.265zm0 .264h-.264v.265h.264zm-.=
+264.265h-.265v.529h.265z%22/%3E %3Cpath fill=3D%22%235a4934%22 d=3D%22M2.38=
+1.53v.264h.265V.529zm.265.264v.529h.264v-.53z%22/%3E %3Cpath fill=3D%22%238=
+3b625%22 d=3D%22M1.323 2.91h.265v.265h-.265z%22/%3E %3Cpath fill=3D%22%236d=
+971f%22 d=3D%22M2.646 2.91h.265v.265h-.265z%22/%3E %3Cpath fill=3D%22%23cde=
+3a8%22 d=3D%22M1.058 2.91h.265v.265h-.265z%22/%3E %3Cpath fill=3D%22%23a9cd=
+69%22 d=3D%22M2.381 2.91h.265v.265h-.265z%22/%3E %3C/svg%3E"); background-p=
+osition: left top; background-repeat: no-repeat; padding-left: 20px; }
+  #p-lang { position: relative; z-index: 3; }
+  #p-cactions { position: absolute; top: 1.3em; left: 11.5em; margin: 0px; =
+white-space: nowrap; width: 76%; line-height: 1.1em; overflow: visible; bac=
+kground: none; border-collapse: collapse; padding-left: 1em; font-size: 95%=
+; }
+  #p-cactions h3 { position: absolute; top: -9999px; }
+  #p-cactions ul { list-style-type: none; list-style-image: none; }
+  #p-cactions li { display: inline; border-width: 1px 1px 0px; border-top-s=
+tyle: solid; border-right-style: solid; border-left-style: solid; border-to=
+p-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border=
+-left-color: rgb(170, 170, 170); border-image: initial; border-bottom-style=
+: initial; border-bottom-color: initial; margin: 0px 0.5em 0px 0px; padding=
+: 0px 0px 1em; overflow: visible; background: rgb(255, 255, 255); }
+  #p-cactions li.selected { border-color: rgb(250, 189, 35); font-weight: b=
+old; }
+  #p-cactions li.selected a { z-index: 3; background-color: rgb(255, 255, 2=
+55); }
+  #p-cactions li a { background-color: rgb(251, 251, 251); color: rgb(0, 43=
+, 184); border: 0px; padding: 0px 0.8em 0.3em; position: relative; z-index:=
+ 0; margin: 0px; text-decoration: none; text-transform: lowercase; }
+  #p-cactions li a:hover { z-index: 3; text-decoration: none; background-co=
+lor: rgb(255, 255, 255); }
+  #p-cactions li.istalk { margin-right: 0px; }
+  #p-cactions li.istalk a { padding-right: 0.5em; }
+  #p-cactions .new a { color: rgb(204, 34, 0); }
+  #p-cactions #ca-addsection a { padding-left: 0.4em; padding-right: 0.4em;=
+ }
+  #p-cactions .pBody { font-size: 1em; background-color: transparent; color=
+: inherit; border-collapse: inherit; border: 0px; padding: 0px; }
+  li#ca-talk { margin-right: 1.6em; }
+  li#ca-watch, li#ca-unwatch, li#ca-varlang-0, li#ca-print { margin-left: 1=
+.6em; }
+  #p-personal #pt-notifications, #echo-hack-badges, #p-cactions-mobile, #si=
+debar-mobilejs, .mobile-close-button, .menu-toggle, .menus-cover { display:=
+ none; }
+  #f-poweredbyico, #f-copyrightico { margin: 0px 8px; position: relative; t=
+op: -2px; }
+  #f-poweredbyico { float: right; height: 1%; }
+  #f-copyrightico { float: left; height: 1%; }
+}
+
+@media screen and (max-width: 550px) {
+  #column-content { padding-top: 6em; }
+  .mw-body { border-right: 0px; border-left: 0px; }
+  .menu-toggle { display: block; width: 35px; height: 35px; background: 50%=
+ 50% no-repeat rgb(255, 255, 255); border: 1px solid rgb(250, 189, 35); box=
+-sizing: border-box; z-index: 4; }
+  #sidebar-toggle { background-image: linear-gradient(transparent, transpar=
+ent), url("/skins/MonoBook/resources/images/icon-triangle-down.svg?2d5cf");=
+ position: absolute; top: 5px; left: 1em; }
+  #p-personal-toggle { background-image: linear-gradient(transparent, trans=
+parent), url("/skins/MonoBook/resources/images/icon-user.svg?9bf49"); posit=
+ion: absolute; top: 5px; right: 1em; }
+  #globalWrapper-toggle { background-image: linear-gradient(transparent, tr=
+ansparent), url("/skins/MonoBook/resources/images/icon-triangle-up.svg?6cbc=
+c"); margin: 1em auto; }
+  #p-search { position: absolute; z-index: 3; top: 5px; left: 0px; width: 1=
+00%; padding: 0px 55px; box-sizing: border-box; }
+  #p-search h3 { position: absolute; top: -9999px; left: 0px; }
+  #searchBody { border: 1px solid rgb(250, 189, 35); background-color: rgb(=
+255, 255, 255); height: 35px; box-sizing: border-box; }
+  #searchform { position: relative; width: 100%; padding: 3px 42px 3px 9px;=
+ box-sizing: border-box; }
+  #searchInput { width: 100%; height: 27px; border: 1px solid rgb(170, 170,=
+ 170); padding: 0px 0.25em; box-sizing: border-box; }
+  #searchGoButton { position: absolute; box-sizing: border-box; top: 1px; r=
+ight: 6px; height: 31px; width: 35px; text-indent: -99999px; border: 0px; b=
+ackground: linear-gradient(transparent, transparent) 50% 50% no-repeat, url=
+("/skins/MonoBook/resources/images/icon-search.svg?f4185"); cursor: pointer=
+; }
+  #mw-searchButton { display: none; }
+  .client-nojs #p-cactions, .client-nojs #p-personal, .client-nojs #sidebar=
+ .generated-sidebar, .client-nojs #p-tb, .client-nojs #p-lang { margin: 1em=
+; overflow: visible; }
+  .client-nojs #p-cactions .pBody, .client-nojs #p-personal .pBody, .client=
+-nojs #sidebar .generated-sidebar .pBody, .client-nojs #p-tb .pBody, .clien=
+t-nojs #p-lang .pBody { border: 1px solid rgb(170, 170, 170); background: r=
+gb(255, 255, 255); padding: 0.5em; }
+  .client-nojs #p-cactions ul, .client-nojs #p-personal ul, .client-nojs #s=
+idebar .generated-sidebar ul, .client-nojs #p-tb ul, .client-nojs #p-lang u=
+l { margin: 0px; }
+  .client-nojs #p-cactions li, .client-nojs #p-personal li, .client-nojs #s=
+idebar .generated-sidebar li, .client-nojs #p-tb li, .client-nojs #p-lang l=
+i { display: inline-block; border-left: 1px solid rgb(170, 170, 170); paddi=
+ng: 0px 0.5em; white-space: nowrap; }
+  .client-nojs #p-cactions li:first-child, .client-nojs #p-personal li:firs=
+t-child, .client-nojs #sidebar .generated-sidebar li:first-child, .client-n=
+ojs #p-tb li:first-child, .client-nojs #p-lang li:first-child { border-left=
+: 0px; padding-left: 0px; }
+  .client-nojs #p-cactions li#pt-notifications-alert, .client-nojs #p-perso=
+nal li#pt-notifications-alert, .client-nojs #sidebar .generated-sidebar li#=
+pt-notifications-alert, .client-nojs #p-tb li#pt-notifications-alert, .clie=
+nt-nojs #p-lang li#pt-notifications-alert, .client-nojs #p-cactions li#pt-n=
+otifications-notice, .client-nojs #p-personal li#pt-notifications-notice, .=
+client-nojs #sidebar .generated-sidebar li#pt-notifications-notice, .client=
+-nojs #p-tb li#pt-notifications-notice, .client-nojs #p-lang li#pt-notifica=
+tions-notice { border-left: 0px; }
+  .client-nojs #p-cactions li.selected, .client-nojs #p-personal li.selecte=
+d, .client-nojs #sidebar .generated-sidebar li.selected, .client-nojs #p-tb=
+ li.selected, .client-nojs #p-lang li.selected { font-weight: bold; }
+  .client-nojs #p-cactions li.selected a, .client-nojs #p-personal li.selec=
+ted a, .client-nojs #sidebar .generated-sidebar li.selected a, .client-nojs=
+ #p-tb li.selected a, .client-nojs #p-lang li.selected a { color: rgb(0, 0,=
+ 0); }
+  .client-nojs #p-cactions h3, .client-nojs #p-personal h3, .client-nojs #s=
+idebar .generated-sidebar h3, .client-nojs #p-tb h3, .client-nojs #p-lang h=
+3 { font-weight: normal; }
+  #p-cactions-mobile { position: absolute; top: 3.75em; left: 0px; padding:=
+ 0px 1em; width: 100%; box-sizing: border-box; }
+  #p-cactions-mobile h3 { display: none; }
+  #p-cactions-mobile ul { margin: 0px; list-style: none; }
+  #p-cactions-mobile li { display: inline-block; border-width: 1px 1px 0px;=
+ border-top-style: solid; border-right-style: solid; border-left-style: sol=
+id; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170,=
+ 170); border-left-color: rgb(170, 170, 170); border-image: initial; border=
+-bottom-style: initial; border-bottom-color: initial; margin-right: 0.5em; =
+height: 2.5em; }
+  #p-cactions-mobile li a { text-indent: -99999px; width: 1em; display: blo=
+ck; position: relative; padding: 0.5em 1em 0.75em; background-color: rgb(25=
+1, 251, 251); background-image: linear-gradient(transparent, transparent), =
+url("/skins/MonoBook/resources/images/icon-page.svg?dc315"); background-pos=
+ition: 50% 50%; background-repeat: no-repeat; text-transform: lowercase; }
+  #p-cactions-mobile li#ca-talk-mobile a { background-image: linear-gradien=
+t(transparent, transparent), url("/skins/MonoBook/resources/images/icon-cha=
+t.svg?3b739"); }
+  #p-cactions-mobile li#ca-more { border: 0px; }
+  #p-cactions-mobile li#ca-more a { background-color: transparent; backgrou=
+nd-image: linear-gradient(transparent, transparent), url("/skins/MonoBook/r=
+esources/images/icon-triangle-ltr.svg?a4976"); background-position: 100% 40=
+%; text-indent: 0px; padding-left: 0.5em; padding-right: 1.35em; width: aut=
+o; }
+  #p-cactions-mobile li#ca-languages a { background-image: linear-gradient(=
+transparent, transparent), url("/skins/MonoBook/resources/images/icon-globe=
+.svg?087e1"); }
+  #p-cactions-mobile li#ca-tools a { background-image: linear-gradient(tran=
+sparent, transparent), url("/skins/MonoBook/resources/images/icon-tools.svg=
+?b4007"); }
+  #p-cactions-mobile li.selected { border-color: rgb(250, 189, 35); font-we=
+ight: bold; }
+  #p-cactions-mobile li.selected a, #p-cactions-mobile li:hover a { z-index=
+: 3; background-color: rgb(255, 255, 255); text-decoration: none; }
+  #p-cactions-mobile li#ca-languages, #p-cactions-mobile li#ca-tools { floa=
+t: right; margin-right: 0px; margin-left: 0.5em; }
+  .mw-footer li { margin-left: 0px; }
+  #f-poweredbyico, #f-copyrightico { display: inline-block; margin: 0px 0.5=
+em 1em; }
+  div.thumb { float: none; margin: 1em auto; }
+  div.tright { margin-left: 0px; padding-left: 0px; }
+  div.tleft { margin-right: 0px; padding-right: 0px; }
+  .thumbinner { box-sizing: border-box; width: 100% !important; }
+  .mw-body-content { overflow: auto; }
+  .mw-body-content img { height: auto !important; max-width: 100% !importan=
+t; }
+  #toc, .toc, .mw-warning { width: 100%; box-sizing: border-box; }
+  .nomobile { display: none; }
+}
+
+.messagebox, .errorbox, .warningbox, .successbox { color: rgb(0, 0, 0); box=
+-sizing: border-box; margin-bottom: 16px; border: 1px solid; padding: 12px =
+24px; overflow-wrap: break-word; overflow: hidden; }
+
+.messagebox :only-child, .errorbox :only-child, .warningbox :only-child, .s=
+uccessbox :only-child { margin: 0px; }
+
+.messagebox h2, .errorbox h2, .warningbox h2, .successbox h2 { color: inher=
+it; display: inline; margin: 0px 0.5em 0px 0px; border: 0px; font-size: 1em=
+; font-weight: bold; }
+
+.messagebox { background-color: rgb(234, 236, 240); border-color: rgb(162, =
+169, 177); }
+
+.errorbox { background-color: rgb(254, 231, 230); border-color: rgb(221, 51=
+, 51); }
+
+.warningbox { background-color: rgb(254, 246, 231); border-color: rgb(255, =
+204, 51); }
+
+.successbox { background-color: rgb(213, 253, 244); border-color: rgb(20, 1=
+34, 109); }
+
+.mw-wiki-logo { background-image: url("/images/openssl-logo-135.png?5d667")=
+; }
+
+@media print {
+  .noprint, .catlinks, .magnify, .mw-cite-backlink, .mw-editsection, .mw-ed=
+itsection-like, .mw-hidden-catlinks, .mw-indicators, .mw-redirectedfrom, .p=
+atrollink, .usermessage, #column-one, #footer-places, #mw-navigation, #site=
+Notice, #f-poweredbyico, #f-copyrightico, li#about, li#disclaimer, li#mobil=
+eview, li#privacy { display: none; }
+  body { background: rgb(255, 255, 255); color: rgb(0, 0, 0); margin: 0px; =
+padding: 0px; }
+  a { background: none !important; padding: 0px !important; }
+  a, a.external, a.new, a.stub { color: inherit !important; text-decoration=
+: inherit !important; }
+  .mw-parser-output a.external.text::after, .mw-parser-output a.external.au=
+tonumber::after { content: " (" attr(href) ")"; word-break: break-all; over=
+flow-wrap: break-word; }
+  .mw-parser-output a.external.text[href^=3D"//"]::after, .mw-parser-output=
+ a.external.autonumber[href^=3D"//"]::after { content: " (https:" attr(href=
+) ")"; }
+  dt { font-weight: bold; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; break-after: avoid; break-bef=
+ore: avoid; }
+  p { margin: 1em 0px; line-height: 1.2; orphans: 3; widows: 3; }
+  img, figure, .wikitable, .thumb { break-inside: avoid; }
+  img { border: 0px; vertical-align: middle; }
+  pre, .mw-code { background: rgb(255, 255, 255); color: rgb(0, 0, 0); bord=
+er: 1pt dashed rgb(0, 0, 0); padding: 1em; font-size: 8pt; white-space: pre=
+-wrap; overflow-x: hidden; overflow-wrap: break-word; }
+  sup, sub { line-height: 1; }
+  ul { list-style-type: square; }
+  #globalWrapper { width: 100% !important; min-width: 0px !important; }
+  .mw-body { background: rgb(255, 255, 255); color: rgb(0, 0, 0); direction=
+: ltr; border: 0px !important; padding: 0px !important; margin: 0px !import=
+ant; }
+  #column-content { margin: 0px !important; }
+  #column-content .mw-body { padding: 1em; margin: 0px !important; }
+  .toc { background-color: rgb(249, 249, 249); border: 1pt solid rgb(170, 1=
+70, 170); padding: 5px; display: table; }
+  .tocnumber, .toctext { display: table-cell; }
+  .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+  table.floatright, div.floatright, div.tright { float: right; clear: right=
+; }
+  table.floatleft, div.floatleft, div.tleft { float: left; clear: left; }
+  div.tleft { margin: 0.5em 1.4em 1.3em 0px; }
+  div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+  table.floatright, div.floatright { margin: 0px 0px 0.5em 0.5em; border: 0=
+px; }
+  table.floatleft, div.floatleft { margin: 0px 0.5em 0.5em 0px; border: 0px=
+; }
+  .center { text-align: center; }
+  div.thumb { background-color: transparent; width: auto; }
+  div.thumb a { border-bottom: 0px; }
+  div.thumbinner { background-color: rgb(255, 255, 255); border: 0px; borde=
+r-radius: 2px; padding: 5px; font-size: 10pt; color: rgb(102, 102, 102); te=
+xt-align: center; overflow: hidden; min-width: 100px; }
+  html .thumbcaption { text-align: left; line-height: 1.4; padding: 3px; }
+  img.thumbborder { border: 1pt solid rgb(221, 221, 221); }
+  .wikitable, .mw_metadata { background: rgb(255, 255, 255); margin: 1em 0p=
+x; border: 1pt solid rgb(170, 170, 170); border-collapse: collapse; font-si=
+ze: 10pt; }
+  .wikitable > caption, .mw_metadata caption { padding: 5px; font-size: 10p=
+t; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wi=
+kitable > * > tr > td, .mw_metadata th, .mw_metadata td { border: 1pt solid=
+ rgb(170, 170, 170); padding: 0.4em 0.6em; background: rgb(255, 255, 255) !=
+important; color: rgb(0, 0, 0) !important; }
+  .wikitable > tr > th, .wikitable > * > tr > th, .mw_metadata th { text-al=
+ign: center; }
+  table.listing, table.listing td { border: 1pt solid rgb(0, 0, 0); border-=
+collapse: collapse; }
+  .catlinks ul { display: inline; padding: 0px; list-style: none none; }
+  .catlinks li { display: inline-block; line-height: 1.15; margin: 0.1em 0p=
+x; border-left: 1pt solid rgb(170, 170, 170); padding: 0px 0.4em; }
+  .catlinks li:first-child { border-left: 0px; padding-left: 0.2em; }
+  .printfooter { padding: 1em 0px; }
+  #footer { background: rgb(255, 255, 255); color: rgb(0, 0, 0); margin-top=
+: 1em; border-top: 1pt solid rgb(170, 170, 170); padding-top: 5px; directio=
+n: ltr; }
+}
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://wiki.openssl.org/resources/src/jquery.tablesorter.styles/images/sort_both.svg?6b5ca
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"21" height=3D"9" viewBox=
+=3D"0 0 21 9">
+	<path d=3D"M14.5 5l-4 4-4-4zm0-1l-4-4-4 4z"/>
+</svg>=0A
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://wiki.openssl.org/resources/src/mediawiki.skinning/images/external-ltr.svg?59558
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"13" height=3D"13">
+	<path fill=3D"#36b" d=3D"M5.002 1.01h7v7l-2-2-3 2v-1l3-2.25 1 1V2.01h-3.75=
+l1 1-2.25 3h-1l2-3z"/>
+	<path fill=3D"#36b" d=3D"M7.002 3.01h-5v8h8v-5h-1v4h-6v-6h4z"/>
+	<path fill=3D"#15a5ea" d=3D"M4.082 5.51c0-.621.621-.621.621-.621 1.864.621=
+ 3.107 1.864 3.728 3.728 0 0 0 .621-.62.621-1.245-1.864-1.866-2.485-3.73-3.=
+728z"/>
+</svg>=0A
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://wiki.openssl.org/skins/MonoBook/resources/images/bullet.svg?36e03
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"5" height=3D"13" viewBox=
+=3D"0 0 1.323 3.44">
+	<path fill=3D"#638c9c" d=3D"M0 1.852v1.323h1.323V1.852z"/>
+</svg>=0A
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://wiki.openssl.org/resources/assets/poweredby_mediawiki_88x31.png
+
+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
+hce8/g/ninHGJEZU9gAAAABJRU5ErkJggg==
+
+------MultipartBoundary--YZXesZ0wCx978X8uBx1N6EsiUhSCBEXmbpoPhqfTmU------
