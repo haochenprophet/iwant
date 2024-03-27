@@ -99,49 +99,49 @@ namespace n_data {
 	public:
 		UdataType type;
 		u_data data;
-		int len;//for typename bufer []or * point len
+		size_t len;//for typename bufer []or * point len
 	public:
 		Udata() { this->data.ull = 0; this->type = UdataType::none; this->len = 1; }
 		virtual int runme(void * myname, Udata *p);//
 		void set_by_type(Udata *p);
-		int get_by_type(Udata *p);
-		int cmp_by_type(Udata *p);
+		size_t get_by_type(Udata *p);
+		size_t cmp_by_type(Udata *p);
 		bool and_by_type(Udata *p);
 		bool or_by_type(Udata *p);
 		bool not_by_type(Udata *p);
 		//sets
-		void set(bool b, int len = 1) { this->data.b = b; this->type= UdataType::bool_b; this->len = len;}
-		void set(char c, int len = 1);
-		void set(unsigned char uc, int len = 1);
-		void set(wchar_t wc, int len = 1);
-		void set(short s, int len = 1);
-		void set(unsigned short us, int len = 1);
-		void set(int i, int len = 1);
-		void set(unsigned int ui, int len = 1);
-		void set(long l, int len = 1);
-		void set(unsigned long ul, int len = 1);
-		void set(long long ll, int len = 1);
-		void set(unsigned long long ull, int len = 1);
-		void set(float f, int len = 1);
-		void set(double d, int len = 1);
-		void set(void * p, int len = 1);
-		void set(char *cp, int len = 1);
-		void set(unsigned char* ucp, int len = 1);
-		void set(wchar_t *wcp, int len = 1);
-		void set(short * sp, int len = 1);
-		void set(unsigned short * usp, int len = 1);
-		void set(int *ip, int len = 1);
-		void set(unsigned int *uip, int len = 1);
-		void set(long *lp, int len = 1);
-		void set(unsigned long *ulp, int len = 1);
-		void set(long long *llp, int len = 1);
-		void set(unsigned long long *ullp, int len = 1);
-		void set(float *fp, int len = 1);
-		void set(double *dp, int len = 1);
-		void set(std::string *ss, int len = 1);
-		void set(std::wstring *sws, int len = 1);
-		void set(Udata *p, int len = 1);
-		void set(u_data *p, int len = 1);
+		void set(bool b, size_t len = 1) { this->data.b = b; this->type= UdataType::bool_b; this->len = len;}
+		void set(char c, size_t len = 1);
+		void set(unsigned char uc, size_t len = 1);
+		void set(wchar_t wc, size_t len = 1);
+		void set(short s, size_t len = 1);
+		void set(unsigned short us, size_t len = 1);
+		void set(int i, size_t len = 1);
+		void set(unsigned int ui, size_t len = 1);
+		void set(long l, size_t len = 1);
+		void set(unsigned long ul, size_t len = 1);
+		void set(long long ll, size_t len = 1);
+		void set(unsigned long long ull, size_t len = 1);
+		void set(float f, size_t len = 1);
+		void set(double d, size_t len = 1);
+		void set(void * p, size_t len = 1);
+		void set(char *cp, size_t len = 1);
+		void set(unsigned char* ucp, size_t len = 1);
+		void set(wchar_t *wcp, size_t len = 1);
+		void set(short * sp, size_t len = 1);
+		void set(unsigned short * usp, size_t len = 1);
+		void set(int *ip, size_t len = 1);
+		void set(unsigned int *uip, size_t len = 1);
+		void set(long *lp, size_t len = 1);
+		void set(unsigned long *ulp, size_t len = 1);
+		void set(long long *llp, size_t len = 1);
+		void set(unsigned long long *ullp, size_t len = 1);
+		void set(float *fp, size_t len = 1);
+		void set(double *dp, size_t len = 1);
+		void set(std::string *ss, size_t len = 1);
+		void set(std::wstring *sws, size_t len = 1);
+		void set(Udata *p, size_t len = 1);
+		void set(u_data *p, size_t len = 1);
 		void set(void * start,void * end);
 		void set(data_buffer buffer);
 		void set(data_buffer * p_buffer);
@@ -182,41 +182,41 @@ namespace n_data {
 		void operator =(data_buffer * d) { this->set(d); }
 
 		//get data
-		int get(bool * b) { *b = this->data.b; return this->len; }
-		int get(char * c);
-		int get(unsigned char * uc);
-		int get(wchar_t * wc);
-		int get(short * s);
-		int get(unsigned short * us);
-		int get(int * i);
-		int get(unsigned int * ui);
-		int get(long * l);
-		int get(unsigned long * ul);
-		int get(long long * ll);
-		int get(unsigned long long * ull);
-		int get(float * f);
-		int get(double * d);
-		int get(void * * p);
-		int get(char * *cp);
-		int get(unsigned char* * ucp);
-		int get(wchar_t * *wcp);
-		int get(short * * sp);
-		int get(unsigned short * * usp);
-		int get(int * *ip);
-		int get(unsigned int * *uip);
-		int get(long * *lp);
-		int get(unsigned long * *ulp);
-		int get(long long * *llp);
-		int get(unsigned long long * *ullp);
-		int get(float * *fp);
-		int get(double * *dp);
-		int get(std::string * *ss);
-		int get(std::wstring * *sws);
-		int get(void* * start, void* * end);
-		int get(data_buffer* p_buffer);
+		size_t get(bool * b) { *b = this->data.b; return this->len; }
+		size_t get(char * c);
+		size_t get(unsigned char * uc);
+		size_t get(wchar_t * wc);
+		size_t get(short * s);
+		size_t get(unsigned short * us);
+		size_t get(int * i);
+		size_t get(unsigned int * ui);
+		size_t get(long * l);
+		size_t get(unsigned long * ul);
+		size_t get(long long * ll);
+		size_t get(unsigned long long * ull);
+		size_t get(float * f);
+		size_t get(double * d);
+		size_t get(void * * p);
+		size_t get(char * *cp);
+		size_t get(unsigned char* * ucp);
+		size_t get(wchar_t * *wcp);
+		size_t get(short * * sp);
+		size_t get(unsigned short * * usp);
+		size_t get(int * *ip);
+		size_t get(unsigned int * *uip);
+		size_t get(long * *lp);
+		size_t get(unsigned long * *ulp);
+		size_t get(long long * *llp);
+		size_t get(unsigned long long * *ullp);
+		size_t get(float * *fp);
+		size_t get(double * *dp);
+		size_t get(std::string * *ss);
+		size_t get(std::wstring * *sws);
+		size_t get(void* * start, void* * end);
+		size_t get(data_buffer* p_buffer);
 
 		//compare
-		T_TYPE int cmp_t(T a, T b, int len_a=1, int len_b=1);
+		T_TYPE int cmp_t(T a, T b, size_t len_a=1, size_t len_b=1);
 		int cmp(bool b) { if (this->data.b == b) return 0; return (this->data.b > b) ? 1 : 0; }
 		int cmp(char c);
 		int cmp(unsigned char uc);
@@ -232,19 +232,19 @@ namespace n_data {
 		int cmp(float f);
 		int cmp(double d);
 		int cmp(void * p);
-		int cmp(char *cp,int len=1);
-		int cmp(unsigned char* ucp, int len = 1);
-		int cmp(wchar_t *wcp, int len = 1);
-		int cmp(short * sp, int len = 1);
-		int cmp(unsigned short * usp, int len = 1);
-		int cmp(int *ip, int len = 1);
-		int cmp(unsigned int *uip, int len = 1);
-		int cmp(long *lp, int len = 1);
-		int cmp(unsigned long *ulp, int len = 1);
-		int cmp(long long *llp, int len = 1);
-		int cmp(unsigned long long *ullp, int len = 1);
-		int cmp(float *fp, int len = 1);
-		int cmp(double *dp, int len = 1);
+		int cmp(char *cp, size_t len=1);
+		int cmp(unsigned char* ucp, size_t len = 1);
+		int cmp(wchar_t *wcp, size_t len = 1);
+		int cmp(short * sp, size_t len = 1);
+		int cmp(unsigned short * usp, size_t len = 1);
+		int cmp(int *ip, size_t len = 1);
+		int cmp(unsigned int *uip, size_t len = 1);
+		int cmp(long *lp, size_t len = 1);
+		int cmp(unsigned long *ulp, size_t len = 1);
+		int cmp(long long *llp, size_t len = 1);
+		int cmp(unsigned long long *ullp, size_t len = 1);
+		int cmp(float *fp, size_t len = 1);
+		int cmp(double *dp, size_t len = 1);
 		int cmp(std::string *ss);
 		int cmp(std::wstring *sws);
 		int cmp(Udata *p);
@@ -448,7 +448,7 @@ namespace n_data {
 		bool operator >=(Udata *d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
 		bool operator >=(u_data*d) { int ret = this->cmp(d); return (ret == 1 || ret == 0); }
 		//and &&
-		T_TYPE bool and_t(T a, T b, int len_a = 1, int len_b = 1);
+		T_TYPE bool and_t(T a, T b, size_t len_a = 1, size_t len_b = 1);
 		bool and_(bool b);
 		bool and_(char c);
 		bool and_(unsigned char uc);
@@ -464,19 +464,19 @@ namespace n_data {
 		bool and_(float f);
 		bool and_(double d);
 		bool and_(void * p);
-		bool and_(char *cp, int len = 1);
-		bool and_(unsigned char* ucp, int len = 1);
-		bool and_(wchar_t *wcp, int len = 1);
-		bool and_(short * sp, int len = 1);
-		bool and_(unsigned short * usp, int len = 1);
-		bool and_(int *ip, int len = 1);
-		bool and_(unsigned int *uip, int len = 1);
-		bool and_(long *lp, int len = 1);
-		bool and_(unsigned long *ulp, int len = 1);
-		bool and_(long long *llp, int len = 1);
-		bool and_(unsigned long long *ullp, int len = 1);
-		bool and_(float *fp, int len = 1);
-		bool and_(double *dp, int len = 1);
+		bool and_(char *cp, size_t len = 1);
+		bool and_(unsigned char* ucp, size_t len = 1);
+		bool and_(wchar_t *wcp, size_t len = 1);
+		bool and_(short * sp, size_t len = 1);
+		bool and_(unsigned short * usp, size_t len = 1);
+		bool and_(int *ip, size_t len = 1);
+		bool and_(unsigned int *uip, size_t len = 1);
+		bool and_(long *lp, size_t len = 1);
+		bool and_(unsigned long *ulp, size_t len = 1);
+		bool and_(long long *llp, size_t len = 1);
+		bool and_(unsigned long long *ullp, size_t len = 1);
+		bool and_(float *fp, size_t len = 1);
+		bool and_(double *dp, size_t len = 1);
 		bool and_(std::string *ss);
 		bool and_(std::wstring *sws);
 		bool and_(Udata *p);
@@ -515,7 +515,7 @@ namespace n_data {
 		bool operator &&(Udata *d) { return this-> and_ (d); }
 		bool operator &&(u_data*d) { return this-> and_ (d); }
 		//or ||
-		T_TYPE bool or_t(T a, T b, int len_a = 1, int len_b = 1);
+		T_TYPE bool or_t(T a, T b, size_t len_a = 1, size_t len_b = 1);
 		bool or_ (bool b);
 		bool or_ (char c);
 		bool or_ (unsigned char uc);
@@ -531,19 +531,19 @@ namespace n_data {
 		bool or_ (float f);
 		bool or_ (double d);
 		bool or_ (void * p);
-		bool or_ (char *cp, int len = 1);
-		bool or_ (unsigned char* ucp, int len = 1);
-		bool or_ (wchar_t *wcp, int len = 1);
-		bool or_ (short * sp, int len = 1);
-		bool or_ (unsigned short * usp, int len = 1);
-		bool or_ (int *ip, int len = 1);
-		bool or_ (unsigned int *uip, int len = 1);
-		bool or_ (long *lp, int len = 1);
-		bool or_ (unsigned long *ulp, int len = 1);
-		bool or_ (long long *llp, int len = 1);
-		bool or_ (unsigned long long *ullp, int len = 1);
-		bool or_ (float *fp, int len = 1);
-		bool or_ (double *dp, int len = 1);
+		bool or_ (char *cp, size_t len = 1);
+		bool or_ (unsigned char* ucp, size_t len = 1);
+		bool or_ (wchar_t *wcp, size_t len = 1);
+		bool or_ (short * sp, size_t len = 1);
+		bool or_ (unsigned short * usp, size_t len = 1);
+		bool or_ (int *ip, size_t len = 1);
+		bool or_ (unsigned int *uip, size_t len = 1);
+		bool or_ (long *lp, size_t len = 1);
+		bool or_ (unsigned long *ulp, size_t len = 1);
+		bool or_ (long long *llp, size_t len = 1);
+		bool or_ (unsigned long long *ullp, size_t len = 1);
+		bool or_ (float *fp, size_t len = 1);
+		bool or_ (double *dp, size_t len = 1);
 		bool or_ (std::string *ss);
 		bool or_ (std::wstring *sws);
 		bool or_ (Udata *p);
