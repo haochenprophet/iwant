@@ -69,6 +69,7 @@ class Ctimetree: Use c++ Describe the evolution and growth and activity of anyth
   ie. static int printf_c(const char* format, ...);
 
 8.callback class function like runme():int Ctree_func::runme(void* node) for other class call this runme function.
+  example: int Object::callback(void *p)  ... refer: class Object:public Osetting {...}
 
 [Building]:
 request :Need C + + compiler

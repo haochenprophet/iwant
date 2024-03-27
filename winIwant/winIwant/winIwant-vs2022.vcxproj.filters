@@ -6096,9 +6096,6 @@
     <ClCompile Include="..\..\src\car\car_work.cpp">
       <Filter>car</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\car\car_pwm.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\car\car_cpu.cpp">
       <Filter>car</Filter>
     </ClCompile>
@@ -7553,6 +7550,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\sha.cpp">
       <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\car\car_pwm.cpp">
+      <Filter>car</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -13688,9 +13688,6 @@
     <ClInclude Include="..\..\src\car\car_work.h">
       <Filter>car</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\car\car_pwm.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\car\car_cpu.h">
       <Filter>car</Filter>
     </ClInclude>
@@ -15559,6 +15556,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\sha.h">
       <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\car\car_pwm.h">
+      <Filter>car</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
