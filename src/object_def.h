@@ -21,4 +21,8 @@
 #define BUF_SIZE PAGE_4K
 #endif
 
+typedef unsigned char uint8;
+typedef unsigned int  uint32;
+typedef unsigned long long uint64;
+
 #endif //OBJECT_DEF_H
