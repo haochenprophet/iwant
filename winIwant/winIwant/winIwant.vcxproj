@@ -138,7 +138,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D FILE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D FILE_TEST=1 /I "../mysql-connector-c/include" /I "../src" /I "../src/operator" /I "../openssl-3.2.1/openssl-3/x64/include/" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -2091,6 +2091,7 @@
     <ClCompile Include="..\..\src\ocean\ocean_wave.cpp" />
     <ClCompile Include="..\..\src\ocean\ocean_wind.cpp" />
     <ClCompile Include="..\..\src\ocean\ocean_work.cpp" />
+    <ClCompile Include="..\..\src\openssl\openssl.cpp" />
     <ClCompile Include="..\..\src\operator\addition.cpp" />
     <ClCompile Include="..\..\src\operator\address_operator.cpp" />
     <ClCompile Include="..\..\src\operator\add_assign.cpp" />
@@ -2630,6 +2631,7 @@
     <ClCompile Include="..\..\src\warship\warship_steer.cpp" />
     <ClCompile Include="..\..\src\warship\warship_torpedo.cpp" />
     <ClCompile Include="..\..\src\_math.cpp" />
+    <ClCompile Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\applink.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\action.h" />
@@ -4600,6 +4602,7 @@
     <ClInclude Include="..\..\src\ocean\ocean_wave.h" />
     <ClInclude Include="..\..\src\ocean\ocean_wind.h" />
     <ClInclude Include="..\..\src\ocean\ocean_work.h" />
+    <ClInclude Include="..\..\src\openssl\openssl.h" />
     <ClInclude Include="..\..\src\operator\addition.h" />
     <ClInclude Include="..\..\src\operator\address_operator.h" />
     <ClInclude Include="..\..\src\operator\add_assign.h" />
@@ -5158,6 +5161,145 @@
     <ClInclude Include="..\mysql-connector-c++\include\mysql_common.h" />
     <ClInclude Include="..\mysql-connector-c++\include\mysql_devapi.h" />
     <ClInclude Include="..\mysql-connector-c++\include\mysql_xapi.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\aes.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\asn1.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\asn1err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\asn1t.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\asn1_mac.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\async.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\asyncerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\bio.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\bioerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\blowfish.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\bn.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\bnerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\buffer.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\buffererr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\camellia.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cast.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cmac.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cmp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cmperr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cmp_util.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cms.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cmserr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\comp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\comperr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\conf.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\conferr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\configuration.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\conftypes.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\conf_api.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\core.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\core_dispatch.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\core_names.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\core_object.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\crmf.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\crmferr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\crypto.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cryptoerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cryptoerr_legacy.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ct.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\cterr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\decoder.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\decodererr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\des.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\dh.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\dherr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\dsa.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\dsaerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\dtls1.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ebcdic.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ec.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ecdh.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ecdsa.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ecerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\encoder.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\encodererr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\engine.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\engineerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ess.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\esserr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\evp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\evperr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\e_os2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\e_ostime.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\fipskey.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\fips_names.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\hmac.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\hpke.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\http.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\httperr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\idea.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\kdf.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\kdferr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\lhash.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\macros.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\md2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\md4.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\md5.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\mdc2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\modes.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\objects.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\objectserr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\obj_mac.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ocsp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ocsperr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\opensslconf.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\opensslv.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ossl_typ.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\params.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\param_build.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pem.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pem2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pemerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pkcs12.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pkcs12err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pkcs7.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\pkcs7err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\proverr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\provider.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\prov_ssl.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\quic.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rand.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\randerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rc2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rc4.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rc5.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ripemd.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rsa.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\rsaerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\safestack.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\seed.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\self_test.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\sha.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\srp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\srtp.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ssl.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ssl2.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ssl3.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\sslerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\sslerr_legacy.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\stack.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\store.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\storeerr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\symhacks.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\thread.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\tls1.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\trace.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ts.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\tserr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\txt_db.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\types.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\ui.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\uierr.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\whrlpool.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509v3.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509v3err.h" />
+    <ClInclude Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\x509_vfy.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
@@ -5199,6 +5341,7 @@
     <None Include="..\..\src\money\Makefile" />
     <None Include="..\..\src\my_sql_action.i" />
     <None Include="..\..\src\ocean\Makefile" />
+    <None Include="..\..\src\openssl\Makefile" />
     <None Include="..\..\src\operator\Makefile" />
     <None Include="..\..\src\operator\operator_g_code.i" />
     <None Include="..\..\src\operator\operator_g_code_func.i" />
@@ -5214,6 +5357,8 @@
   <ItemGroup>
     <Library Include="..\mysql-connector-c++\lib64\vs14\mysqlcppconn2-static.lib" />
     <Library Include="..\mysql-connector-c\lib\libmysql.lib" />
+    <Library Include="..\openssl-3.2.1\openssl-3\x64\lib\libcrypto.lib" />
+    <Library Include="..\openssl-3.2.1\openssl-3\x64\lib\libssl.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
