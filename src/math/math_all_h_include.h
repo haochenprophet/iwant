@@ -55,6 +55,7 @@
 #include "rint.h" 
 #include "round.h" 
 #include "scalbln.h" 
+#include "sha.h" 
 #include "scalbn.h" 
 #include "signbit.h"
 #include "sin.h" 

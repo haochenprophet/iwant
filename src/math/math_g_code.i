@@ -57,6 +57,7 @@
 	Cround  g_round ;
 	Cscalbln  g_scalbln ;
 	Cscalbn  g_scalbn ;
+	Csha g_sha;
 	Csignbit g_signbit;
 	Csin  g_sin ;
 	Csinh  g_sinh ;

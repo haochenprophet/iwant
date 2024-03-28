@@ -57,6 +57,7 @@ void math_add_objects(Object *p)
 	p->addMe(g_round.where());
 	p->addMe(g_scalbln.where());
 	p->addMe(g_scalbn.where());
+	p->addMe(g_sha.where());
 	p->addMe(g_signbit.where());
 	p->addMe(g_sin.where());
 	p->addMe(g_sinh.where());
