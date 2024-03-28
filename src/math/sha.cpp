@@ -1,4 +1,5 @@
 #include "sha.h"
+#include "../file.h"
 
 #if 0
 #define UNROLL_LOOPS /* Enable loops unrolling */
@@ -21,24 +22,84 @@ Csha::~Csha()
 
 }
 
+void Csha::display(sha_type size)
+{
+    int i;
+    for (i = 0; i < (int)size; i++) {
+        printf("%02x",this->digest.digest_data[i]);
+    }
+}
+
+int Csha::sha224(char* filename)
+{
+    Cfile file;
+    if (0 != file.f_read(filename)) { return -1; }
+    this->sha224((const uint8*)file.addr, (uint64)file.size);
+    return 0;
+}
+
+int Csha::sha256(char* filename)
+{
+    Cfile file;
+    if (0 != file.f_read(filename)) { return -1; }
+    this->sha256((const uint8*)file.addr, (uint64)file.size);
+    return 0;
+}
+
+int Csha::sha384(char* filename)
+{
+    Cfile file;
+    if (0 != file.f_read(filename)) { return -1; }
+    this->sha384((const uint8*)file.addr, (uint64)file.size);
+    return 0;
+}
+
+int Csha::sha512(char* filename)
+{
+    Cfile file;
+    if (0 != file.f_read(filename)) { return -1; }
+    this->sha512((const uint8*)file.addr, (uint64)file.size);
+    return 0;
+}
+
 void Csha::sha224(const uint8* message, uint64 len)
 {
-    this->sha224(message,len,this->digest);
+    this->sha224(message,len,(uint8 *) &this->digest);
 }
 
 void Csha::sha256(const uint8* message, uint64 len)
 {
-    this->sha256(message, len, this->digest);
+    this->sha256(message, len, (uint8*)&this->digest);
 }
 
 void Csha::sha384(const uint8* message, uint64 len)
 {
-    this->sha384(message, len, this->digest);
+    this->sha384(message, len, (uint8*)&this->digest);
 }
 
 void Csha::sha512(const uint8* message, uint64 len)
 {
-    this->sha512(message, len, this->digest);
+    this->sha512(message, len, (uint8*)&this->digest);
+}
+
+void Csha::sha224(char* message, uint64 len)
+{
+    this->sha224((const uint8 *) message,len);
+}
+
+void Csha::sha256(char* message, uint64 len)
+{
+    this->sha256((const uint8*)message, len);
+}
+
+void Csha::sha384(char* message, uint64 len)
+{
+    this->sha384((const uint8*)message, len);
+}
+
+void Csha::sha512(char* message, uint64 len)
+{
+    this->sha512((const uint8*)message, len);
 }
 
 #define SHFR(x, n)    (x >> n)
@@ -844,6 +905,14 @@ void Csha::sha512_final(sha512_ctx *ctx, uint8 *digest)
 int main(int argc, char *argv[])
 {
 	WHERE_I;
+    char str[] = "Hello World!";
+    Csha sha;
+
+    sha.sha512(str,(uint64)strlen(str));  //void sha512(char * message, uint64 len);
+    sha.display();
+
+ //   sha.sha512((char*)"libmysql.dll");
+ //   sha.display();
 
 	return 0;
 }

@@ -32,21 +32,47 @@ namespace n_sha {
 	typedef sha512_ctx sha384_ctx;
 	typedef sha256_ctx sha224_ctx;
 
+	enum class sha_type {
+		sha224 = SHA224_DIGEST_SIZE,
+		sha256 = SHA256_DIGEST_SIZE,
+		sha384 = SHA384_DIGEST_SIZE,
+		sha512 = SHA512_DIGEST_SIZE,
+	};
+
+	typedef union union_digest
+	{
+		uint8 digest_data[SHA512_DIGEST_SIZE];
+		uint8 digest_224[SHA224_DIGEST_SIZE];
+		uint8 digest_256[SHA256_DIGEST_SIZE];
+		uint8 digest_384[SHA384_DIGEST_SIZE];
+		uint8 digest_512[SHA512_DIGEST_SIZE];
+	}u_digest;
+
 	class Csha :public Object
 	{
 	public:
-		uint8 digest[SHA512_DIGEST_SIZE];
+		u_digest digest;
 	public:
 		Csha();
 		~Csha();
 		int my_init(void *p=nullptr);
 		size_t my_size() {return sizeof(Csha); }
-
+		void display(sha_type size= sha_type::sha512);
+	public://file sha
+		int sha224(char* filename);
+		int sha256(char* filename);
+		int sha384(char* filename);
+		int sha512(char* filename);
 	public:
 		void sha224(const uint8* message, uint64 len);
 		void sha256(const uint8* message, uint64 len);
 		void sha384(const uint8* message, uint64 len);
 		void sha512(const uint8* message, uint64 len);
+
+		void sha224(char * message, uint64 len);
+		void sha256(char * message, uint64 len);
+		void sha384(char * message, uint64 len);
+		void sha512(char * message, uint64 len);
 
 	public:
 		void sha256_transf(sha256_ctx* ctx, const uint8* message, uint64 block_nb);
