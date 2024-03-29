@@ -7560,6 +7560,12 @@
     <ClCompile Include="..\..\src\algorithm\algorithm.cpp">
       <Filter>algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\math\rsa.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\sum.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -15568,6 +15574,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\algorithm\algorithm.h">
       <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\rsa.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\sum.h">
+      <Filter>math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

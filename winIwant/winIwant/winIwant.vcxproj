@@ -1899,6 +1899,7 @@
     <ClCompile Include="..\..\src\math\remquo.cpp" />
     <ClCompile Include="..\..\src\math\rint.cpp" />
     <ClCompile Include="..\..\src\math\round.cpp" />
+    <ClCompile Include="..\..\src\math\rsa.cpp" />
     <ClCompile Include="..\..\src\math\scalbln.cpp" />
     <ClCompile Include="..\..\src\math\scalbn.cpp" />
     <ClCompile Include="..\..\src\math\sha.cpp" />
@@ -1906,6 +1907,7 @@
     <ClCompile Include="..\..\src\math\sin.cpp" />
     <ClCompile Include="..\..\src\math\sinh.cpp" />
     <ClCompile Include="..\..\src\math\sqrt.cpp" />
+    <ClCompile Include="..\..\src\math\sum.cpp" />
     <ClCompile Include="..\..\src\math\tan.cpp" />
     <ClCompile Include="..\..\src\math\tanh.cpp" />
     <ClCompile Include="..\..\src\math\tgamma.cpp" />
@@ -4408,6 +4410,7 @@
     <ClInclude Include="..\..\src\math\remquo.h" />
     <ClInclude Include="..\..\src\math\rint.h" />
     <ClInclude Include="..\..\src\math\round.h" />
+    <ClInclude Include="..\..\src\math\rsa.h" />
     <ClInclude Include="..\..\src\math\scalbln.h" />
     <ClInclude Include="..\..\src\math\scalbn.h" />
     <ClInclude Include="..\..\src\math\sha.h" />
@@ -4415,6 +4418,7 @@
     <ClInclude Include="..\..\src\math\sin.h" />
     <ClInclude Include="..\..\src\math\sinh.h" />
     <ClInclude Include="..\..\src\math\sqrt.h" />
+    <ClInclude Include="..\..\src\math\sum.h" />
     <ClInclude Include="..\..\src\math\tan.h" />
     <ClInclude Include="..\..\src\math\tanh.h" />
     <ClInclude Include="..\..\src\math\tgamma.h" />
