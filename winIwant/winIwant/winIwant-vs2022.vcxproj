@@ -175,6 +175,7 @@
     <ClCompile Include="..\..\src\airplane\airplane_tail.cpp" />
     <ClCompile Include="..\..\src\airplane\airplane_take_off.cpp" />
     <ClCompile Include="..\..\src\airplane\airplane_under_carriage.cpp" />
+    <ClCompile Include="..\..\src\algorithm\algorithm.cpp" />
     <ClCompile Include="..\..\src\bits.cpp" />
     <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
@@ -2662,6 +2663,7 @@
     <ClInclude Include="..\..\src\airplane\airplane_tail.h" />
     <ClInclude Include="..\..\src\airplane\airplane_take_off.h" />
     <ClInclude Include="..\..\src\airplane\airplane_under_carriage.h" />
+    <ClInclude Include="..\..\src\algorithm\algorithm.h" />
     <ClInclude Include="..\..\src\all_h_include.h" />
     <ClInclude Include="..\..\src\bits.h" />
     <ClInclude Include="..\..\src\bits_def.h" />
@@ -5308,6 +5310,7 @@
   <ItemGroup>
     <None Include="..\..\README.md" />
     <None Include="..\..\src\airplane\Makefile" />
+    <None Include="..\..\src\algorithm\Makefile" />
     <None Include="..\..\src\build_action.i" />
     <None Include="..\..\src\car\Makefile" />
     <None Include="..\..\src\code\Makefile" />

@@ -100,6 +100,9 @@
     <Filter Include="openssl\libary">
       <UniqueIdentifier>{055eac75-64ac-4b69-8e5a-f9d1889d56ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{3244136d-f93b-49f8-91b7-3fd5e0b6b6c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -7553,6 +7556,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\car\car_pwm.cpp">
       <Filter>car</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\algorithm\algorithm.cpp">
+      <Filter>algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -15560,6 +15566,9 @@
     <ClInclude Include="..\..\src\car\car_pwm.h">
       <Filter>car</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\algorithm\algorithm.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -15701,6 +15710,9 @@
     </None>
     <None Include="..\..\src\openssl\Makefile">
       <Filter>openssl</Filter>
+    </None>
+    <None Include="..\..\src\algorithm\Makefile">
+      <Filter>algorithm</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
