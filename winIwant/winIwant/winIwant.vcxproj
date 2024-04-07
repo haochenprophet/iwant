@@ -580,6 +580,7 @@
     <ClCompile Include="..\..\src\hardware\memory.cpp" />
     <ClCompile Include="..\..\src\hardware\network.cpp" />
     <ClCompile Include="..\..\src\hardware\pcie.cpp" />
+    <ClCompile Include="..\..\src\hardware\pcie_class_code.cpp" />
     <ClCompile Include="..\..\src\hardware\pin.cpp" />
     <ClCompile Include="..\..\src\hardware\protocol.cpp" />
     <ClCompile Include="..\..\src\hardware\register_hw.cpp" />
@@ -3086,6 +3087,7 @@
     <ClInclude Include="..\..\src\hardware\memory.h" />
     <ClInclude Include="..\..\src\hardware\network.h" />
     <ClInclude Include="..\..\src\hardware\pcie.h" />
+    <ClInclude Include="..\..\src\hardware\pcie_class_code.h" />
     <ClInclude Include="..\..\src\hardware\pin.h" />
     <ClInclude Include="..\..\src\hardware\protocol.h" />
     <ClInclude Include="..\..\src\hardware\register_hw.h" />

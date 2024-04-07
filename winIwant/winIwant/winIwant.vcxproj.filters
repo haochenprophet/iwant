@@ -7566,6 +7566,9 @@
     <ClCompile Include="..\..\src\math\sum.cpp">
       <Filter>math</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\hardware\pcie_class_code.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -15580,6 +15583,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\sum.h">
       <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\pcie_class_code.h">
+      <Filter>hardware</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
