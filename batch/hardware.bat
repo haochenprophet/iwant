@@ -19,6 +19,24 @@ code class pin
 code class register_hw
 code class cmos
 
+
+code class clock_tree
+code class voltage
+code class voltage_tree
+code class reset
+code class reset_tree
+
+code class power_tree
+
+
+code main create_main clock_tree
+code main create_main voltage
+code main create_main voltage_tree
+code main create_main reset
+code main create_main reset_tree
+
+code main create_main power_tree
+
 code main create_main  hardware
 code main create_main  device
 code main create_main  driver

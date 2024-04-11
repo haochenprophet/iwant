@@ -569,6 +569,7 @@
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
+    <ClCompile Include="..\..\src\hardware\clock_tree.cpp" />
     <ClCompile Include="..\..\src\hardware\cmos.cpp" />
     <ClCompile Include="..\..\src\hardware\cpu.cpp" />
     <ClCompile Include="..\..\src\hardware\device.cpp" />
@@ -582,9 +583,14 @@
     <ClCompile Include="..\..\src\hardware\pcie.cpp" />
     <ClCompile Include="..\..\src\hardware\pcie_class_code.cpp" />
     <ClCompile Include="..\..\src\hardware\pin.cpp" />
+    <ClCompile Include="..\..\src\hardware\power_tree.cpp" />
     <ClCompile Include="..\..\src\hardware\protocol.cpp" />
     <ClCompile Include="..\..\src\hardware\register_hw.cpp" />
+    <ClCompile Include="..\..\src\hardware\reset.cpp" />
+    <ClCompile Include="..\..\src\hardware\reset_tree.cpp" />
     <ClCompile Include="..\..\src\hardware\usb.cpp" />
+    <ClCompile Include="..\..\src\hardware\voltage.cpp" />
+    <ClCompile Include="..\..\src\hardware\voltage_tree.cpp" />
     <ClCompile Include="..\..\src\home.cpp" />
     <ClCompile Include="..\..\src\http.cpp" />
     <ClCompile Include="..\..\src\input.cpp" />
@@ -3075,6 +3081,7 @@
     <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
+    <ClInclude Include="..\..\src\hardware\clock_tree.h" />
     <ClInclude Include="..\..\src\hardware\cmos.h" />
     <ClInclude Include="..\..\src\hardware\cmos_action.h" />
     <ClInclude Include="..\..\src\hardware\cpu.h" />
@@ -3089,9 +3096,14 @@
     <ClInclude Include="..\..\src\hardware\pcie.h" />
     <ClInclude Include="..\..\src\hardware\pcie_class_code.h" />
     <ClInclude Include="..\..\src\hardware\pin.h" />
+    <ClInclude Include="..\..\src\hardware\power_tree.h" />
     <ClInclude Include="..\..\src\hardware\protocol.h" />
     <ClInclude Include="..\..\src\hardware\register_hw.h" />
+    <ClInclude Include="..\..\src\hardware\reset.h" />
+    <ClInclude Include="..\..\src\hardware\reset_tree.h" />
     <ClInclude Include="..\..\src\hardware\usb.h" />
+    <ClInclude Include="..\..\src\hardware\voltage.h" />
+    <ClInclude Include="..\..\src\hardware\voltage_tree.h" />
     <ClInclude Include="..\..\src\home.h" />
     <ClInclude Include="..\..\src\http.h" />
     <ClInclude Include="..\..\src\http_def.h" />
@@ -5340,6 +5352,7 @@
     <None Include="..\..\src\g_code.i" />
     <None Include="..\..\src\g_code_func.i" />
     <None Include="..\..\src\hardware\cmos_action.i" />
+    <None Include="..\..\src\hardware\Makefile" />
     <None Include="..\..\src\instruction\Makefile" />
     <None Include="..\..\src\instruction\t.php" />
     <None Include="..\..\src\main_action.i" />

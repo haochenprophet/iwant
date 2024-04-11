@@ -7569,6 +7569,24 @@
     <ClCompile Include="..\..\src\hardware\pcie_class_code.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\hardware\clock_tree.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\power_tree.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\reset.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\reset_tree.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\voltage.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\hardware\voltage_tree.cpp">
+      <Filter>hardware</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -15587,6 +15605,24 @@
     <ClInclude Include="..\..\src\hardware\pcie_class_code.h">
       <Filter>hardware</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\hardware\clock_tree.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\power_tree.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\reset.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\reset_tree.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\voltage.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\hardware\voltage_tree.h">
+      <Filter>hardware</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -15731,6 +15767,9 @@
     </None>
     <None Include="..\..\src\algorithm\Makefile">
       <Filter>algorithm</Filter>
+    </None>
+    <None Include="..\..\src\hardware\Makefile">
+      <Filter>hardware</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
