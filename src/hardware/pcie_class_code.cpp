@@ -251,7 +251,7 @@ int main(int argc, char *argv[])
 {
 	WHERE_I;
 	Cpcie_class_code class_code;
-
+	std::cout << class_code.where() << endl;
 	std::cout << class_code.meaning(0x07, 0x00, 0x01) << endl;
 	std::cout << class_code.meaning(0xFF, 0x00, 0x00) << endl;//return nullptr will trigger => n_object::Object::rejoin_signal()
 	return 0;

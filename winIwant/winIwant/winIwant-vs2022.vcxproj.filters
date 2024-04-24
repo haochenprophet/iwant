@@ -7587,6 +7587,87 @@
     <ClCompile Include="..\..\src\hardware\voltage_tree.cpp">
       <Filter>hardware</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\life\life.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_amuse.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_birth.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_danger.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_die.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_dress.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_eat.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_game.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_go.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_health.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_help.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_ill.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_live.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_log.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_old.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_read.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_record.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_rest.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_security.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_shop.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_sos.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_sport.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_study.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_teach.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_tour.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_walk.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\life\life_work.cpp">
+      <Filter>life</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -15623,6 +15704,87 @@
     <ClInclude Include="..\..\src\hardware\voltage_tree.h">
       <Filter>hardware</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\life\life.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_amuse.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_birth.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_danger.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_die.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_dress.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_eat.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_game.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_go.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_health.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_help.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_ill.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_live.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_log.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_old.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_read.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_record.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_rest.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_security.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_shop.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_sos.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_sport.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_study.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_teach.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_tour.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_walk.h">
+      <Filter>life</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\life\life_work.h">
+      <Filter>life</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -15770,6 +15932,9 @@
     </None>
     <None Include="..\..\src\hardware\Makefile">
       <Filter>hardware</Filter>
+    </None>
+    <None Include="..\..\src\life\Makefile">
+      <Filter>life</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
