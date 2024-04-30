@@ -112,6 +112,9 @@
     <Filter Include="spaceport">
       <UniqueIdentifier>{1f5b377a-52b1-48d5-a654-38573380d041}</UniqueIdentifier>
     </Filter>
+    <Filter Include="earth">
+      <UniqueIdentifier>{1f8b1458-7ffd-4484-a433-1cfe84eb2cf2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -8009,6 +8012,156 @@
     </ClCompile>
     <ClCompile Include="..\..\src\spaceport\spaceport_work.cpp">
       <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_air.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_animal.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_biology.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_business.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_city.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_civilization.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_communication.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_country.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_develop.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_drug.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_economic.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_engineering.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_food.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_government.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_history.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_information.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_lake.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_land.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_location.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_mechanical.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_medicine.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_mountains.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_network.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_nitrogen.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_ocean.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_organization.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_oxygen.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_plant.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_politics.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_power.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_race.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_resource.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_rivers.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_road.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_science.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_season.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_struct.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_sunshine.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_technology.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_temperature.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_text.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_time.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_timeline.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_timezone.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_towns.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_vehicle.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_war.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_water.cpp">
+      <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\earth\earth_weather.cpp">
+      <Filter>earth</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -16460,6 +16613,156 @@
     <ClInclude Include="..\..\src\spaceport\spaceport_work.h">
       <Filter>spaceport</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_air.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_animal.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_biology.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_business.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_city.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_civilization.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_communication.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_country.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_develop.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_drug.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_economic.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_engineering.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_food.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_government.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_history.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_information.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_lake.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_land.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_location.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_mechanical.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_medicine.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_mountains.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_network.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_nitrogen.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_ocean.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_organization.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_oxygen.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_plant.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_politics.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_power.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_race.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_resource.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_rivers.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_road.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_science.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_season.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_struct.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_sunshine.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_technology.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_temperature.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_text.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_time.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_timeline.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_timezone.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_towns.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_vehicle.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_war.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_water.h">
+      <Filter>earth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\earth\earth_weather.h">
+      <Filter>earth</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -16616,6 +16919,9 @@
     </None>
     <None Include="..\..\src\spaceport\Makefile">
       <Filter>spaceport</Filter>
+    </None>
+    <None Include="..\..\src\earth\Makefile">
+      <Filter>earth</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
