@@ -115,6 +115,9 @@
     <Filter Include="earth">
       <UniqueIdentifier>{1f8b1458-7ffd-4484-a433-1cfe84eb2cf2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mars">
+      <UniqueIdentifier>{6172d110-3c9d-4e05-8cb6-0bbb79e80e52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -8162,6 +8165,54 @@
     </ClCompile>
     <ClCompile Include="..\..\src\earth\earth_weather.cpp">
       <Filter>earth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_audio.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_cmaterial.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_communication.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_construct.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_energy.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_image.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_location.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_machine.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_network.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_robot.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_satellite.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_temperature.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_video.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_water.cpp">
+      <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mars\mars_weather.cpp">
+      <Filter>mars</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -16763,6 +16814,54 @@
     <ClInclude Include="..\..\src\earth\earth_weather.h">
       <Filter>earth</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_audio.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_cmaterial.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_communication.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_construct.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_energy.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_image.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_location.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_machine.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_network.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_robot.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_satellite.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_temperature.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_video.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_water.h">
+      <Filter>mars</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mars\mars_weather.h">
+      <Filter>mars</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -16922,6 +17021,9 @@
     </None>
     <None Include="..\..\src\earth\Makefile">
       <Filter>earth</Filter>
+    </None>
+    <None Include="..\..\src\mars\Makefile">
+      <Filter>mars</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
