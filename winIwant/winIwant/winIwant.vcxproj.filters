@@ -106,6 +106,12 @@
     <Filter Include="life">
       <UniqueIdentifier>{35f7afd0-e79f-43d0-b974-61779c8e563d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="home">
+      <UniqueIdentifier>{92e64442-8f39-452d-ad16-21d5919af487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="spaceport">
+      <UniqueIdentifier>{1f5b377a-52b1-48d5-a654-38573380d041}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -7670,6 +7676,339 @@
     </ClCompile>
     <ClCompile Include="..\..\src\life\life_work.cpp">
       <Filter>life</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_struct.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_action.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_add.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_air.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_auto.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_back.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_bed.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_camera.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_clean.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_clothes.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_command.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_communication.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_control.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_cook.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_decorate.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_delete.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_device.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_find.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_floor.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_food.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_go.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_kitchen.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_lamp.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_live.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_location.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_manage.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_message.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_news.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_object.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_person.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_pet.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_plant.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_power.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_record.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_robot.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_room.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_search.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_seat.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_sleep.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_space.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_status.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_storeroom.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_television.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_timeline.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_totemism.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_tragedy.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_travel.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_tree.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_update.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_wall.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_waste.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_water.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home_work.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_action.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_add.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_air.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_auto.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_back.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_bed.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_camera.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_clean.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_clothes.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_co2.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_command.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_communication.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_control.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_cook.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_decorate.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_delete.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_device.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_find.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_floor.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_food.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_go.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_kitchen.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_lamp.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_live.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_location.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_manage.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_message.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_news.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_nitrogen.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_object.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_oxygen.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_person.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_pet.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_plant.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_power.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_record.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_robot.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_room.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_search.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_seat.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_sleep.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_space.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_status.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_storeroom.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_struct.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_television.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_timeline.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_totemism.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_tragedy.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_travel.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_tree.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_update.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_wall.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_waste.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_water.cpp">
+      <Filter>spaceport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\spaceport\spaceport_work.cpp">
+      <Filter>spaceport</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -15788,6 +16127,339 @@
     <ClInclude Include="..\..\src\life\life_work.h">
       <Filter>life</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\home\home_struct.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_action.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_add.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_air.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_auto.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_back.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_bed.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_camera.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_clean.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_clothes.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_command.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_communication.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_control.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_cook.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_decorate.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_delete.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_device.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_find.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_floor.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_food.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_go.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_kitchen.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_lamp.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_live.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_location.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_manage.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_message.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_news.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_object.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_person.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_pet.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_plant.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_power.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_record.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_robot.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_room.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_search.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_seat.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_sleep.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_space.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_status.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_storeroom.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_television.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_timeline.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_totemism.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_tragedy.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_travel.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_tree.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_update.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_wall.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_waste.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_water.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home_work.h">
+      <Filter>home</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_action.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_add.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_air.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_auto.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_back.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_bed.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_camera.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_clean.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_clothes.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_co2.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_command.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_communication.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_control.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_cook.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_decorate.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_delete.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_device.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_find.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_floor.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_food.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_go.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_kitchen.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_lamp.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_live.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_location.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_manage.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_message.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_news.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_nitrogen.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_object.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_oxygen.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_person.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_pet.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_plant.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_power.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_record.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_robot.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_room.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_search.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_seat.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_sleep.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_space.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_status.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_storeroom.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_struct.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_television.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_timeline.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_totemism.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_tragedy.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_travel.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_tree.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_update.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_wall.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_waste.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_water.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\spaceport\spaceport_work.h">
+      <Filter>spaceport</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -15938,6 +16610,12 @@
     </None>
     <None Include="..\..\src\life\Makefile">
       <Filter>life</Filter>
+    </None>
+    <None Include="..\..\src\home\Makefile">
+      <Filter>home</Filter>
+    </None>
+    <None Include="..\..\src\spaceport\Makefile">
+      <Filter>spaceport</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
