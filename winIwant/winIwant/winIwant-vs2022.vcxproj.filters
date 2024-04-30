@@ -118,6 +118,9 @@
     <Filter Include="mars">
       <UniqueIdentifier>{6172d110-3c9d-4e05-8cb6-0bbb79e80e52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="collect">
+      <UniqueIdentifier>{5bd0d5c9-5cae-49fb-942b-ea349dd6ab98}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -8213,6 +8216,12 @@
     </ClCompile>
     <ClCompile Include="..\..\src\mars\mars_weather.cpp">
       <Filter>mars</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\collect\collect.cpp">
+      <Filter>collect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\collect\collect_file.cpp">
+      <Filter>collect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -16862,6 +16871,12 @@
     <ClInclude Include="..\..\src\mars\mars_weather.h">
       <Filter>mars</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\collect\collect.h">
+      <Filter>collect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\collect\collect_file.h">
+      <Filter>collect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -17024,6 +17039,9 @@
     </None>
     <None Include="..\..\src\mars\Makefile">
       <Filter>mars</Filter>
+    </None>
+    <None Include="..\..\src\collect\Makefile">
+      <Filter>collect</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

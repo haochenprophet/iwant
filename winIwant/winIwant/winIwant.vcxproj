@@ -412,6 +412,8 @@
     <ClCompile Include="..\..\src\code\code_tree.cpp" />
     <ClCompile Include="..\..\src\code\code_update.cpp" />
     <ClCompile Include="..\..\src\code\code_value.cpp" />
+    <ClCompile Include="..\..\src\collect\collect.cpp" />
+    <ClCompile Include="..\..\src\collect\collect_file.cpp" />
     <ClCompile Include="..\..\src\command.cpp" />
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\company.cpp" />
@@ -3116,6 +3118,8 @@
     <ClInclude Include="..\..\src\code\code_update.h" />
     <ClInclude Include="..\..\src\code\code_value.h" />
     <ClInclude Include="..\..\src\code_action.h" />
+    <ClInclude Include="..\..\src\collect\collect.h" />
+    <ClInclude Include="..\..\src\collect\collect_file.h" />
     <ClInclude Include="..\..\src\command.h" />
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\company.h" />
@@ -5739,6 +5743,7 @@
     <None Include="..\..\src\car\Makefile" />
     <None Include="..\..\src\code\Makefile" />
     <None Include="..\..\src\code_action.i" />
+    <None Include="..\..\src\collect\Makefile" />
     <None Include="..\..\src\cstdio\cstdio_g_code.i" />
     <None Include="..\..\src\cstdio\cstdio_g_code_func.i" />
     <None Include="..\..\src\cstdio\Makefile" />
