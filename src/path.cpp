@@ -69,6 +69,26 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 #endif
 
 #if WINDOWS_OS
+
+int Cpath::push_back(dir_t * dir_name, file_t * file_name,int display)
+{
+	file_t * p_name;
+	size_t size;
+	size = 1;//for /
+	size += _tcslen(dir_name);
+	size += _tcslen(file_name);
+	size *= sizeof(DIR_T);
+	size += sizeof(DIR_T);
+
+	if (this->allot((int)size, (void**)&p_name) >= size)
+	{
+		_stprintf(p_name, TEXT("%s/%s"), dir_name, file_name);
+		this->name_list.push_back((DIR_T*)p_name);
+		if(display) _tprintf(TEXT("%s\n"), p_name);
+	}
+	return 0;
+}
+
 int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
 {
 	if (!term) return -1;
@@ -78,8 +98,6 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 	TCHAR szDir[MAX_PATH];
 	size_t length_of_arg;
 
-	DIR_T *p_name;
-	size_t size;
 	// Check that the input path plus 3 is not longer than MAX_PATH.
 	// Three characters are for the "\*" plus NULL appended below.
 
@@ -105,7 +123,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 	if (hFind == INVALID_HANDLE_VALUE) return -1;
 
 	if(display) _tprintf(TEXT("The first file found is %s\n"), ffd.cFileName);
-	this->my_clear();
+
 	do
 	{
 		if (ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
@@ -128,20 +146,13 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 
 		filesize.LowPart = ffd.nFileSizeLow;
 		filesize.HighPart = ffd.nFileSizeHigh;
-		if (display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);
+		//if (display) _tprintf(TEXT("  %s   %lld bytes\n"), ffd.cFileName, filesize.QuadPart);//display all
 
 		if(NULL==term||(term&&_tcsstr(ffd.cFileName,term)))
 		{
 			if (to_list)
 			{
-				size = _tcslen(ffd.cFileName);
-				size*= sizeof(DIR_T);
-				size += sizeof(DIR_T);
-				if(this->allot((int)size, (void **)&p_name)>=size)
-				{
-					wcscpy((DIR_T *)p_name, (DIR_T *)ffd.cFileName);
-					this->name_list.push_back((DIR_T *)p_name);
-				}
+				this->push_back(dir_name, ffd.cFileName, display);
 			}
 		}
 	} while (FindNextFile(hFind, &ffd) != 0);
@@ -213,6 +224,18 @@ int Cpath::display(void *p)
 #if LINUX_OS
 	std::cout << (DIR_T *)p << endl;	//display the name_list
 #endif
+	return 0;
+}
+
+int Cpath::display()
+{
+	if (this->name_list.empty()) return -1;
+
+	NAME_LIST::iterator it;
+	for (it = this->name_list.begin(); it != this->name_list.end(); ++it)
+	{
+		this->display((void*) * it);
+	}
 	return 0;
 }
 

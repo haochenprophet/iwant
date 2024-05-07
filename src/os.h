@@ -6,8 +6,12 @@
 #include <tchar.h>
 #include <strsafe.h>
 #include <mysql.h>
-typedef TCHAR DIR_T;//for class Cpath
 
+typedef TCHAR DIR_T;//for class Cpath
+typedef TCHAR dir_t;//for class Cpath
+
+typedef TCHAR FILE_T;//for class Cpath
+typedef TCHAR file_t;//for class Cpath
 #endif//WINDOWS_OS
 
 #if LINUX_OS
@@ -17,7 +21,13 @@ typedef TCHAR DIR_T;//for class Cpath
 #include <netdb.h>
 #include <dirent.h>
 #include <mysql/mysql.h>
+
 typedef char DIR_T;//for class Cpath
+typedef char dir_t;//for class Cpath
+
+typedef char FILE_T;//for class Cpath
+typedef char file_t;//for class Cpath
+
 #endif//LINUX_OS
 
 #include "object.h"
