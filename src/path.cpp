@@ -82,7 +82,7 @@ int Cpath::push_back(dir_t * dir_name, file_t * file_name,int display)
 
 	if (this->allot((int)size, (void**)&p_name) >= size)
 	{
-		_stprintf(p_name, TEXT("%s/%s"), dir_name, file_name);
+		_stprintf(p_name, TEXT("%s\\%s"), dir_name, file_name);
 		this->name_list.push_back((DIR_T*)p_name);
 		if(display) _tprintf(TEXT("%s\n"), p_name);
 	}
@@ -257,21 +257,14 @@ int Cpath::execute(Object *o) //execute input func
 {
 	if(this->name_list.empty()) return -1;
 	NAME_LIST::iterator it;
-	string s;
+	int ret;
 	for (it = this->name_list.begin(); it != this->name_list.end(); ++it)
 	{
-
-#if WINDOWS_OS
-		s = this->wc_s((wchar_t*)*it);
-#endif
-
-#if LINUX_OS
-		s = (char*)*it;
-#endif
 		//std::cout <<"s="<< s << endl;this->display(*it);//test ok 
-		o->execute( (void*)&s);	//execute o->func 
+		ret = o->execute( (void*)*it);	//execute o->func 
+		if (ret != 0) break;
 	}
-	return 0;
+	return ret;
 }
 
 #if PATH_TEST

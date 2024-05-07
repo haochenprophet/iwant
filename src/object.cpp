@@ -1604,6 +1604,17 @@ int Object::sys_cmd(string *cmd,int loop_count)
 	return ret;
 }
 
+int Object::sys_cmd(wchar_t* cmd, int loop_count)
+{
+	string s_cmd = this->wc_s(cmd);
+	return this->sys_cmd(&s_cmd, loop_count);
+}
+
+int Object::sys_cmd(wstring* cmd, int loop_count)
+{
+	return this->sys_cmd((wchar_t*)cmd->c_str(), loop_count);
+}
+
 int Object::sys_cmd(int loop_count)
 {
 	return this->sys_cmd((string*)&this->s_cmd, loop_count);

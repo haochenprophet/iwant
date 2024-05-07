@@ -250,6 +250,11 @@ int Cfile::copy()
 	return this->cut((char *)this->f_name.c_str(),0,-1,(char *)this->s_output_fname.c_str());
 }
 
+int Cfile::copy(char* from, char* to)
+{
+	return this->cut(from, 0, -1, to);
+}
+
 int Cfile::f_append(char * ap_str)
 {
 	if(this->f_name.empty()) return -1;
