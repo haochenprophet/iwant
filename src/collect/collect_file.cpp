@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 	Ccollect_file collect_file;
 
 #if WINDOWS_OS
-	collect_file.collect(L"..\\..\\src", L".h", L"..\\..\\src\\include");
+	collect_file.collect(L"..\\..\\src", L".h", L"..\\..\\include");
 #endif
 
 #if LINUX_OS
