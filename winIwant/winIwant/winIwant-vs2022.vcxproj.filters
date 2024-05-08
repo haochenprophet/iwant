@@ -124,6 +124,9 @@
     <Filter Include="security">
       <UniqueIdentifier>{8cf0e39a-50e9-4a5b-8762-be2b9505c98d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="radar">
+      <UniqueIdentifier>{1b395352-1d4c-47af-aca5-9a8dbc3b5f86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -8768,6 +8771,180 @@
     </ClCompile>
     <ClCompile Include="..\..\src\security\security_window.cpp">
       <Filter>security</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_action.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_altitude.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_amplitude.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_angle.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_angle_pitch.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_angle_position.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_antenna.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_calculate.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_circle.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_command.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_communication.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_computer.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_control.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_direction.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_display.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_emission.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_fire_control.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_frequency.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_hardware.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_height.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_id.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_imaging.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_length.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_location.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_lock.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_meteorology.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_name.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_off.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_on.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_power.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_process.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_quantity.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_radii.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_receive.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_recognition.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_reconnoitre.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_repair.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_scanning.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_send.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_servo.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_signal.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_size.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_slant_distance.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_sleep.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_software.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_speed.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_status.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_synchronism.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_system.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_target.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_time.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_timeline.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_track.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_type.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_volume.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_weight.cpp">
+      <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\radar\radar_width.cpp">
+      <Filter>radar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -17966,6 +18143,180 @@
     <ClInclude Include="..\..\src\security\security_window.h">
       <Filter>security</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_action.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_altitude.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_amplitude.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_angle.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_angle_pitch.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_angle_position.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_antenna.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_calculate.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_circle.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_command.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_communication.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_computer.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_control.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_direction.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_display.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_emission.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_fire_control.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_frequency.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_hardware.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_height.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_id.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_imaging.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_length.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_location.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_lock.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_meteorology.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_name.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_off.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_on.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_power.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_process.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_quantity.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_radii.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_receive.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_recognition.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_reconnoitre.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_repair.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_scanning.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_send.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_servo.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_signal.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_size.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_slant_distance.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_sleep.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_software.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_speed.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_status.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_synchronism.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_system.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_target.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_time.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_timeline.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_track.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_type.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_volume.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_weight.h">
+      <Filter>radar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\radar\radar_width.h">
+      <Filter>radar</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -18134,6 +18485,9 @@
     </None>
     <None Include="..\..\src\security\Makefile">
       <Filter>security</Filter>
+    </None>
+    <None Include="..\..\src\radar\Makefile">
+      <Filter>radar</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
