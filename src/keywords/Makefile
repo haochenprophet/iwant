@@ -1,9 +1,11 @@
-MK_TAG = dictionary
+MK_TAG = keywords
+
+source_code = *.cpp ../*.cpp ../math/*.cpp 
 
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1\
-	-o $(MK_TAG) *.cpp ../*.cpp ../math/*.cpp \
+	-o $(MK_TAG) $(source_code) \
 	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz \
 
 all : 

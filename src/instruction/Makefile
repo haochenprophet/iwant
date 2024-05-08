@@ -1,18 +1,15 @@
 MK_TAG = instruction
-MYSQL_CONCPP_DIR=../../mysql_connect
+
+source_code = *.cpp ../*.cpp ../math/*.cpp 
 
 CFLAGS +=\
 	-std=gnu++11 \
 	-DLINUX_OS -D$(main)_TEST=1\
-	-o $(MK_TAG) *.cpp ../*.cpp\
-	-lpthread \
-	-I../ -I $(MYSQL_CONCPP_DIR)/include \
-
+	-o $(MK_TAG) $(source_code) \
+	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz \
 
 all : 
 	g++ $(CFLAGS)
 
 clean :
-	rm -f $(MK_TAG) *.o *~ .*.swp
-
-
+	rm -f $(MK_TAG) *.o *~

@@ -1,4 +1,6 @@
 #include "printf.h"
+#include <stdarg.h>
+
 int Cprintf::my_init(void *p)
 {
 	this->name = "Cprintf";

@@ -1,4 +1,6 @@
 #include "scanf.h"
+#include <stdarg.h>
+
 int Cscanf::my_init(void *p)
 {
 	this->name = "Cscanf";

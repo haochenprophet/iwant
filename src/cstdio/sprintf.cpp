@@ -1,4 +1,6 @@
 #include "sprintf.h"
+#include <stdarg.h>
+
 int Csprintf::my_init(void *p)
 {
 	this->name = "Csprintf";

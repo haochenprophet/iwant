@@ -1,4 +1,6 @@
 #include "snprintf.h"
+#include <stdarg.h>
+
 int Csnprintf::my_init(void *p)
 {
 	this->name = "Csnprintf";
