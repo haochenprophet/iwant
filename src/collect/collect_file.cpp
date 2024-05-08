@@ -16,9 +16,9 @@ Ccollect_file::Ccollect_file()
 #endif
 
 #if LINUX_OS
-	this->to_dir = ".";
-	this->from_dir = ".";
-	this->term = "";
+	this->to_dir = (char *)".";
+	this->from_dir = (char *)".";
+	this->term = (char *)"";
 #endif
 }
 

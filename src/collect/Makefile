@@ -1,13 +1,16 @@
 MK_TAG = collect
 
 CFLAGS +=\
-	-std = gnu + +11 \
-	-DLINUX_OS - D$(main)_TEST=1\
-	-o $(MK_TAG) *.cpp \
-	-lpthread \
+	-std=gnu++11 \
+	-DLINUX_OS -D$(main)_TEST=1 -D$(debug)_DEBUG=1 \
+	-DSTATIC_CONCPP \
+	-Wl,-Bdynamic \
+	-o $(MK_TAG) *.cpp $(src) $(sql) ../*.cpp ../math/*.cpp \
+	-lpthread -luuid -ldl -L/usr/lib/mysql -lmysqlclient -lz -lm\
+	-I./ -I $(MYSQL_CONCPP_DIR)/include
 
-all:
-g++ $(CFLAGS)
+all : 
+	g++ $(CFLAGS)
 
-clean:
-rm -f $(MK_TAG) *.o *~
+clean :
+	rm -f $(MK_TAG) *.o *~ .*.swp
