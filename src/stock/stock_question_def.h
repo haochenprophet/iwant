@@ -1,7 +1,7 @@
 #ifndef QUESTION_DEF_H
 #define QUESTION_DEF_H
 
-#include "question.h"
+#include "stock_question.h"
 
 class Cquestion_def :public Object
 {

@@ -3,7 +3,7 @@
 
 #include "object.h"
 #include "find.h"
-#include "file.h"
+#include "file/file.h"
 
 namespace n_replace {
 

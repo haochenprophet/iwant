@@ -102,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "..\..\src" /I "..\..\src\operator" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D WINDOWS_OS=1 /D CODE_TEST=1 /I "../mysql-connector-c/include" /I "..\..\src" /I "..\..\src\operator" /I "..\openssl-3.2.1/openssl-3/x64/include/" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include;C:\OpenPower\Github\iwant\winIwant\mysql-connector-c++\include\devapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -613,8 +613,8 @@
     <ClCompile Include="..\..\src\exit.cpp" />
     <ClCompile Include="..\..\src\ex_func.cpp" />
     <ClCompile Include="..\..\src\field.cpp" />
-    <ClCompile Include="..\..\src\file.cpp" />
-    <ClCompile Include="..\..\src\fileAllot.cpp" />
+    <ClCompile Include="..\..\src\file\file.cpp" />
+    <ClCompile Include="..\..\src\file\fileAllot.cpp" />
     <ClCompile Include="..\..\src\find.cpp" />
     <ClCompile Include="..\..\src\ftp.cpp" />
     <ClCompile Include="..\..\src\func.cpp" />
@@ -643,7 +643,7 @@
     <ClCompile Include="..\..\src\hardware\usb.cpp" />
     <ClCompile Include="..\..\src\hardware\voltage.cpp" />
     <ClCompile Include="..\..\src\hardware\voltage_tree.cpp" />
-    <ClCompile Include="..\..\src\home.cpp" />
+    <ClCompile Include="..\..\src\home\home.cpp" />
     <ClCompile Include="..\..\src\home\home_struct.cpp" />
     <ClCompile Include="..\..\src\home\home_action.cpp" />
     <ClCompile Include="..\..\src\home\home_add.cpp" />
@@ -2335,8 +2335,6 @@
     <ClCompile Include="..\..\src\path.cpp" />
     <ClCompile Include="..\..\src\plan.cpp" />
     <ClCompile Include="..\..\src\power.cpp" />
-    <ClCompile Include="..\..\src\question.cpp" />
-    <ClCompile Include="..\..\src\question_def.cpp" />
     <ClCompile Include="..\..\src\radar\radar.cpp" />
     <ClCompile Include="..\..\src\radar\radar_action.cpp" />
     <ClCompile Include="..\..\src\radar\radar_altitude.cpp" />
@@ -3113,7 +3111,9 @@
     <ClCompile Include="..\..\src\sql\sql_WRITETEXT.cpp" />
     <ClCompile Include="..\..\src\status.cpp" />
     <ClCompile Include="..\..\src\step.cpp" />
-    <ClCompile Include="..\..\src\stock_db.cpp" />
+    <ClCompile Include="..\..\src\stock\stock_db.cpp" />
+    <ClCompile Include="..\..\src\stock\stock_question.cpp" />
+    <ClCompile Include="..\..\src\stock\stock_question_def.cpp" />
     <ClCompile Include="..\..\src\stratagem.cpp" />
     <ClCompile Include="..\..\src\string\memchr.cpp" />
     <ClCompile Include="..\..\src\string\memcmp.cpp" />
@@ -3660,9 +3660,9 @@
     <ClInclude Include="..\..\src\exit.h" />
     <ClInclude Include="..\..\src\ex_func.h" />
     <ClInclude Include="..\..\src\field.h" />
-    <ClInclude Include="..\..\src\file.h" />
-    <ClInclude Include="..\..\src\fileAllot.h" />
-    <ClInclude Include="..\..\src\file_action.h" />
+    <ClInclude Include="..\..\src\file\file.h" />
+    <ClInclude Include="..\..\src\file\fileAllot.h" />
+    <ClInclude Include="..\..\src\file\file_action.h" />
     <ClInclude Include="..\..\src\find.h" />
     <ClInclude Include="..\..\src\ftp.h" />
     <ClInclude Include="..\..\src\func.h" />
@@ -3693,7 +3693,7 @@
     <ClInclude Include="..\..\src\hardware\usb.h" />
     <ClInclude Include="..\..\src\hardware\voltage.h" />
     <ClInclude Include="..\..\src\hardware\voltage_tree.h" />
-    <ClInclude Include="..\..\src\home.h" />
+    <ClInclude Include="..\..\src\home\home.h" />
     <ClInclude Include="..\..\src\home\home_struct.h" />
     <ClInclude Include="..\..\src\home\home_action.h" />
     <ClInclude Include="..\..\src\home\home_add.h" />
@@ -5397,8 +5397,6 @@
     <ClInclude Include="..\..\src\path.h" />
     <ClInclude Include="..\..\src\plan.h" />
     <ClInclude Include="..\..\src\power.h" />
-    <ClInclude Include="..\..\src\question.h" />
-    <ClInclude Include="..\..\src\question_def.h" />
     <ClInclude Include="..\..\src\radar\radar.h" />
     <ClInclude Include="..\..\src\radar\radar_action.h" />
     <ClInclude Include="..\..\src\radar\radar_altitude.h" />
@@ -6170,8 +6168,10 @@
     <ClInclude Include="..\..\src\sql\sql_WRITETEXT.h" />
     <ClInclude Include="..\..\src\status.h" />
     <ClInclude Include="..\..\src\step.h" />
-    <ClInclude Include="..\..\src\stock_db.h" />
-    <ClInclude Include="..\..\src\stock_db_action.h" />
+    <ClInclude Include="..\..\src\stock\stock_db.h" />
+    <ClInclude Include="..\..\src\stock\stock_db_action.h" />
+    <ClInclude Include="..\..\src\stock\stock_question.h" />
+    <ClInclude Include="..\..\src\stock\stock_question_def.h" />
     <ClInclude Include="..\..\src\stratagem.h" />
     <ClInclude Include="..\..\src\string\memchr.h" />
     <ClInclude Include="..\..\src\string\memcmp.h" />
@@ -6418,7 +6418,8 @@
     <None Include="..\..\src\dictionary\Makefile" />
     <None Include="..\..\src\earth\Makefile" />
     <None Include="..\..\src\ex_func_class.h" />
-    <None Include="..\..\src\file_action.i" />
+    <None Include="..\..\src\file\file_action.i" />
+    <None Include="..\..\src\file\Makefile" />
     <None Include="..\..\src\g_code.i" />
     <None Include="..\..\src\g_code_func.i" />
     <None Include="..\..\src\hardware\cmos_action.i" />
@@ -6451,7 +6452,9 @@
     <None Include="..\..\src\sensor\Makefile" />
     <None Include="..\..\src\spaceport\Makefile" />
     <None Include="..\..\src\sql\Makefile" />
-    <None Include="..\..\src\stock_db_action.i" />
+    <None Include="..\..\src\stock\Makefile" />
+    <None Include="..\..\src\stock\stock_db_action.i" />
+    <None Include="..\..\src\tree\Makefile" />
     <None Include="..\..\src\warship\Makefile" />
   </ItemGroup>
   <ItemGroup>

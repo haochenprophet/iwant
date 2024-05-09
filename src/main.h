@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "file.h"
+#include "file/file.h"
 
 namespace n_main {
 	class Cmain :public Cfile

@@ -1,4 +1,4 @@
-#include "question.h"
+#include "stock_question.h"
 
 int Cquestion::q_count=0;
 int Cquestion::q_value=0;

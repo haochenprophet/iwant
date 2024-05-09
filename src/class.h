@@ -1,7 +1,7 @@
 #ifndef CLASS_H
 #define CLASS_H
 
-#include "file.h"
+#include "file/file.h"
 /*
 keyword:  class
 

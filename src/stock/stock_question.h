@@ -47,8 +47,8 @@ typedef union Uqresult_T
 }Uqresult;
 
 #include "object.h"
-#include "file.h"
-#include "question_def.h"
+#include "file/file.h"
+#include "stock_question_def.h"
 
 #define Q_BUF_LEN O_BUF_LEN
 

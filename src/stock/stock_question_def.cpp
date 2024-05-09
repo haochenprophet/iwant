@@ -1,6 +1,6 @@
 #ifndef QUESTION_DEF_CPP
 #define QUESTION_DEF_CPP
-#include "question_def.h"
+#include "stock_question_def.h"
 
 int Cquestion_def::my_init(void *p)
 {

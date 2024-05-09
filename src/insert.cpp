@@ -1,7 +1,7 @@
 #include "insert.h"
 #include "locate.h"
 #include "find.h"
-#include "file.h"
+#include "file/file.h"
 
 void CinsertParameter::init()
 {
