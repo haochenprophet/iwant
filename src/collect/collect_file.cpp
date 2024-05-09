@@ -31,7 +31,7 @@ Ccollect_file::~Ccollect_file()
 int Ccollect_file::func(void* p)
 {
 	int ret_error = 0;
-//	AT_LINE;
+//	OUT_LINE;
 	_tprintf(TEXT("%s\n"), (TCHAR*)p);
 
 	wstring file_path = (TCHAR*)p;
@@ -51,9 +51,22 @@ int Ccollect_file::func(void* p)
 #if LINUX_OS
 int Ccollect_file::func(void* p)
 {
-	AT_LINE;
+	int ret_error = 0;
+//	OUT_LINE;
+	printf(("%s\n"), (char*)p);
 
-	return 0;
+	string file_path = (char*)p;
+	string cmd = "cp \"" + file_path + "\"    \"" + this->to_dir + "/\"";
+
+	std::cout << "run command:" << cmd << endl;
+
+	if (0 != this->sys_cmd((string *) & cmd))
+	{
+		std::cout << "Error Command:" << cmd << endl;
+		ret_error++;
+	}
+
+	return ret_error;
 }
 #endif
 
@@ -66,7 +79,7 @@ int Ccollect_file::collect(dir_t* dir , file_t* term , dir_t* to_dir)
 	if (to_dir != nullptr) { this->to_dir = to_dir; }
 
 	p.list(dir, term, 0, 1, 1);	//int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
-	//p.display();//test ok
+//	p.display();//test ok
 	p.execute(this);
 	return 0;
 }
@@ -87,7 +100,7 @@ int main(int argc, char *argv[])
 #endif
 
 #if LINUX_OS
-	collect_file.collect((dir_t*)".", (file_t*)".h");
+	collect_file.collect((dir_t*)"..", (file_t*)".h",(dir_t*)"../../include");//not use / of end path, .. current dir is collect
 #endif
 
 	return 0;

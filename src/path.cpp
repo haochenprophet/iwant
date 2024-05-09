@@ -19,6 +19,27 @@ Cpath::~Cpath()
 }
 
 #if LINUX_OS
+
+int Cpath::push_back(dir_t * dir_name, file_t * file_name,int display)
+{
+	file_t * p_name;
+	size_t size;
+
+	size = 1;//for "/"
+	size += strlen(dir_name);
+	size += strlen(file_name);
+	size *= sizeof(DIR_T);
+	size += sizeof(DIR_T);//"\0"
+
+	if (this->allot((int)size, (void**)&p_name) >= size)
+	{
+		sprintf(p_name,"%s/%s", dir_name, file_name);
+		this->name_list.push_back((DIR_T*)p_name);
+		if(display) printf("%s\n", p_name);
+	}
+	return 0;
+}
+
 int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
 {
 	if (!term) return -1;
@@ -27,8 +48,10 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 	struct dirent *p_dirent;
 	int size;
 
+//	printf("dir_name=%s\n", dir_name);//test ok
+
 	if((p_dir=opendir(dir_name))==NULL) return -1;
-	this->my_clear();
+
 	while((p_dirent=readdir(p_dir)))
 	{
 		if(display) std::cout<<p_dirent->d_name<<endl;
@@ -50,16 +73,11 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 			}
 			continue;//<DIR name not add ro list>
 		}
+
 		if (term && !strstr(p_dirent->d_name, term)) continue;
-		if(to_list)
+		if (to_list)
 		{
-			size=strlen(p_dirent->d_name);
-			size+=sizeof(DIR_T);
-			if(this->allot(size,(void **)&p_name)>=size)
-			{
-				strcpy((char*)p_name,(char*)p_dirent->d_name);
-				this->name_list.push_back((char *)p_name);
-			}
+			this->push_back(dir_name, p_dirent->d_name, display);
 		}
 	}
 
@@ -74,7 +92,7 @@ int Cpath::push_back(dir_t * dir_name, file_t * file_name,int display)
 {
 	file_t * p_name;
 	size_t size;
-	size = 1;//for /
+	size = 1;//for "\\"
 	size += _tcslen(dir_name);
 	size += _tcslen(file_name);
 	size *= sizeof(DIR_T);
