@@ -127,6 +127,9 @@
     <Filter Include="radar">
       <UniqueIdentifier>{1b395352-1d4c-47af-aca5-9a8dbc3b5f86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sensor">
+      <UniqueIdentifier>{cff45861-4c51-45b2-a9ab-d63de70ac392}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -8945,6 +8948,285 @@
     </ClCompile>
     <ClCompile Include="..\..\src\radar\radar_width.cpp">
       <Filter>radar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_action.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_air_pressure.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_alarm.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_alert.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_altitude.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_amplitude.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_analysis.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_angle.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_angle_pitch.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_angle_position.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_bad.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_basic_point.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_blood_pressure.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_blood_sugar.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_brightness.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_calculate.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_circle.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_close.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_command.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_communication.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_control.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_correct.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_count.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_current.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_depth.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_detecte.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_direction.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_display.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_emi.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_error.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_flow.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_frequency.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_get.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_good.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_hardware.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_height.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_horizontal.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_id.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_imaging.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_impedance.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_input.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_length.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_level.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_location.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_lower.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_metal.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_meteorology.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_name.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_normal.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_off.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_on.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_open.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_origin.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_ouput.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_oxygen.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_power.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_pressure.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_process.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_pwm.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_quality.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_radii.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_range.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_read.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_recognition.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_repair.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_rhr.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_rpm.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_scanning.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_signal.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_size.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_slant_distance.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_sleep.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_software.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_speed.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_status.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_synchronism.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_system.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_target.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_temperature.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_time.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_timeline.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_track.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_trend.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_type.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_update.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_upper.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_voltage.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_volume.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_water_pressure.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_weight.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_width.cpp">
+      <Filter>sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sensor\sensor_write.cpp">
+      <Filter>sensor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -18317,6 +18599,267 @@
     <ClInclude Include="..\..\src\radar\radar_width.h">
       <Filter>radar</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_action.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_alarm.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_alert.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_altitude.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_amplitude.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_analysis.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_angle.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_angle_pitch.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_angle_position.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_bad.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_basic_point.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_blood_sugar.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_brightness.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_calculate.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_circle.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_close.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_command.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_communication.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_control.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_correct.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_current.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_depth.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_detecte.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_direction.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_display.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_emi.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_error.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_flow.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_frequency.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_get.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_good.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_hardware.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_height.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_id.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_imaging.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_impedance.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_input.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_length.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_level.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_location.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_lower.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_metal.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_meteorology.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_name.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_normal.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_off.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_on.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_open.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_origin.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_ouput.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_oxygen.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_power.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_process.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_pwm.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_quality.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_radii.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_range.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_read.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_recognition.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_repair.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_rhr.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_rpm.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_scanning.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_signal.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_size.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_slant_distance.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_sleep.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_software.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_speed.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_status.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_synchronism.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_system.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_target.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_temperature.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_time.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_timeline.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_track.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_trend.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_type.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_update.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_upper.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_voltage.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_volume.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_weight.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_width.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sensor\sensor_write.h">
+      <Filter>sensor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile" />
@@ -18488,6 +19031,9 @@
     </None>
     <None Include="..\..\src\radar\Makefile">
       <Filter>radar</Filter>
+    </None>
+    <None Include="..\..\src\sensor\Makefile">
+      <Filter>sensor</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

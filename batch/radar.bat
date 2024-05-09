@@ -11,7 +11,6 @@ code class radar_antenna
 code class radar_emission
 code class radar_send
 code class radar_receive
-code class radar_hardware
 code class radar_signal
 code class radar_process
 code class radar_display
@@ -71,7 +70,6 @@ code main create_main radar_antenna
 code main create_main radar_emission
 code main create_main radar_send
 code main create_main radar_receive
-code main create_main radar_hardware
 code main create_main radar_signal
 code main create_main radar_process
 code main create_main radar_display
