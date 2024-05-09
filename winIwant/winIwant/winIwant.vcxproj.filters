@@ -10,9 +10,6 @@
     <Filter Include="keywords">
       <UniqueIdentifier>{c2939745-45c6-4f97-aabe-4523049ec3c8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="lib">
-      <UniqueIdentifier>{7d3b75c3-6f24-4b86-88ca-13824af18806}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{35247b7a-9e2f-4e5e-8976-3808dbbc80d5}</UniqueIdentifier>
     </Filter>
@@ -129,6 +126,18 @@
     </Filter>
     <Filter Include="sensor">
       <UniqueIdentifier>{cff45861-4c51-45b2-a9ab-d63de70ac392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="global">
+      <UniqueIdentifier>{382ed49b-34ca-4309-80d8-b9606e2ef61b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file">
+      <UniqueIdentifier>{9997d9b8-b2f3-42d8-850b-9daeee0d1896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stock">
+      <UniqueIdentifier>{57a1f2c9-5690-460a-96d5-23b63f336ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{7d3b75c3-6f24-4b86-88ca-13824af18806}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1503,9 +1512,6 @@
     <ClCompile Include="..\..\src\exit.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\file.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ftp.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1513,9 +1519,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\get.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\home.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\http.cpp">
@@ -1558,9 +1561,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\plan.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\question.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\run.cpp">
@@ -4503,19 +4503,10 @@
     <ClCompile Include="..\..\src\bits.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\stock_db.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\block.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fileAllot.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\node.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\question_def.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\but.cpp">
@@ -9228,6 +9219,27 @@
     <ClCompile Include="..\..\src\sensor\sensor_write.cpp">
       <Filter>sensor</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\global\global_code.cpp">
+      <Filter>global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\file\file.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\file\fileAllot.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stock\stock_db.cpp">
+      <Filter>stock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stock\stock_question.cpp">
+      <Filter>stock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stock\stock_question_def.cpp">
+      <Filter>stock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\home\home.cpp">
+      <Filter>home</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -10574,12 +10586,6 @@
     <ClInclude Include="..\..\src\plan.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\question.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\question_def.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\smtp.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -10640,13 +10646,7 @@
     <ClInclude Include="..\..\src\exit.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\file.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\get.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\home.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\http.h">
@@ -13652,9 +13652,6 @@
     <ClInclude Include="..\..\src\bits.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\stock_db.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\uuid_class.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -13670,16 +13667,10 @@
     <ClInclude Include="..\..\src\code_action.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fileAllot.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\my_sql_action.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\node.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\stock_db_action.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\but.h">
@@ -14841,9 +14832,6 @@
       <Filter>database</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\build_action.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\file_action.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\replace.h">
@@ -18860,9 +18848,35 @@
     <ClInclude Include="..\..\src\sensor\sensor_write.h">
       <Filter>sensor</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\global\global_code.h">
+      <Filter>global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\file\file.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\file\file_action.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\file\fileAllot.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock\stock_db.h">
+      <Filter>stock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock\stock_db_action.h">
+      <Filter>stock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock\stock_question.h">
+      <Filter>stock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stock\stock_question_def.h">
+      <Filter>stock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\home\home.h">
+      <Filter>home</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\src\Makefile" />
     <None Include="..\..\README.md" />
     <None Include="..\..\src\sql\Makefile">
       <Filter>sql</Filter>
@@ -18889,9 +18903,6 @@
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\my_sql_action.i">
-      <Filter>src</Filter>
-    </None>
-    <None Include="..\..\src\stock_db_action.i">
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\main_action.i">
@@ -18969,9 +18980,6 @@
     <None Include="..\..\src\build_action.i">
       <Filter>src</Filter>
     </None>
-    <None Include="..\..\src\file_action.i">
-      <Filter>src</Filter>
-    </None>
     <None Include="..\..\src\hardware\cmos_action.i">
       <Filter>hardware</Filter>
     </None>
@@ -19035,6 +19043,27 @@
     <None Include="..\..\src\sensor\Makefile">
       <Filter>sensor</Filter>
     </None>
+    <None Include="..\..\src\file\file_action.i">
+      <Filter>file</Filter>
+    </None>
+    <None Include="..\..\src\stock\stock_db_action.i">
+      <Filter>stock</Filter>
+    </None>
+    <None Include="..\..\src\global\Makefile">
+      <Filter>global</Filter>
+    </None>
+    <None Include="..\..\src\file\Makefile">
+      <Filter>file</Filter>
+    </None>
+    <None Include="..\..\src\Makefile">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\src\stock\Makefile">
+      <Filter>stock</Filter>
+    </None>
+    <None Include="..\..\src\tree\Makefile">
+      <Filter>tree</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\doc\think.txt" />
@@ -19043,12 +19072,14 @@
     <Library Include="..\mysql-connector-c++\lib64\vs14\mysqlcppconn2-static.lib">
       <Filter>lib</Filter>
     </Library>
-    <Library Include="..\mysql-connector-c\lib\libmysql.lib" />
     <Library Include="..\openssl-3.2.1\openssl-3\x64\lib\libcrypto.lib">
       <Filter>openssl\libary</Filter>
     </Library>
     <Library Include="..\openssl-3.2.1\openssl-3\x64\lib\libssl.lib">
       <Filter>openssl\libary</Filter>
+    </Library>
+    <Library Include="..\mysql-connector-c\lib\libmysql.lib">
+      <Filter>lib</Filter>
     </Library>
   </ItemGroup>
 </Project>
