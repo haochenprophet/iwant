@@ -1,5 +1,5 @@
 #include "sum.h"
-#include "../file.h"
+#include "file/file.h"
 int Csum::my_init(void *p)
 {
 	this->name = "Csum";

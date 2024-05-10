@@ -345,7 +345,7 @@
     <ClCompile Include="..\..\src\car\car_wifi.cpp" />
     <ClCompile Include="..\..\src\car\car_work.cpp" />
     <ClCompile Include="..\..\src\class.cpp" />
-    <ClCompile Include="..\..\src\code.cpp" />
+    <ClCompile Include="..\..\src\code\code.cpp" />
     <ClCompile Include="..\..\src\code\code_action.cpp" />
     <ClCompile Include="..\..\src\code\code_add.cpp" />
     <ClCompile Include="..\..\src\code\code_build.cpp" />
@@ -2068,6 +2068,7 @@
     <ClCompile Include="..\..\src\math\tanh.cpp" />
     <ClCompile Include="..\..\src\math\tgamma.cpp" />
     <ClCompile Include="..\..\src\math\trunc.cpp" />
+    <ClCompile Include="..\..\src\math\_math.cpp" />
     <ClCompile Include="..\..\src\message\account_message.cpp" />
     <ClCompile Include="..\..\src\message\action_message.cpp" />
     <ClCompile Include="..\..\src\message\address_message.cpp" />
@@ -2394,9 +2395,9 @@
     <ClCompile Include="..\..\src\radar\radar_volume.cpp" />
     <ClCompile Include="..\..\src\radar\radar_weight.cpp" />
     <ClCompile Include="..\..\src\radar\radar_width.cpp" />
-    <ClCompile Include="..\..\src\recognition.cpp" />
-    <ClCompile Include="..\..\src\recognition_intel_gpio.cpp" />
-    <ClCompile Include="..\..\src\recognition_tab.cpp" />
+    <ClCompile Include="..\..\src\recognition\recognition.cpp" />
+    <ClCompile Include="..\..\src\recognition\recognition_intel_gpio.cpp" />
+    <ClCompile Include="..\..\src\recognition\recognition_tab.cpp" />
     <ClCompile Include="..\..\src\register.cpp" />
     <ClCompile Include="..\..\src\relation.cpp" />
     <ClCompile Include="..\..\src\replace.cpp" />
@@ -3139,7 +3140,7 @@
     <ClCompile Include="..\..\src\string\strtok.cpp" />
     <ClCompile Include="..\..\src\string\strxfrm.cpp" />
     <ClCompile Include="..\..\src\symbol.cpp" />
-    <ClCompile Include="..\..\src\syntax.cpp" />
+    <ClCompile Include="..\..\src\syntax\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
     <ClCompile Include="..\..\src\tag.cpp" />
     <ClCompile Include="..\..\src\task.cpp" />
@@ -3180,7 +3181,6 @@
     <ClCompile Include="..\..\src\warship\warship_sonar.cpp" />
     <ClCompile Include="..\..\src\warship\warship_steer.cpp" />
     <ClCompile Include="..\..\src\warship\warship_torpedo.cpp" />
-    <ClCompile Include="..\..\src\_math.cpp" />
     <ClCompile Include="..\openssl-3.2.1\openssl-3\x64\include\openssl\applink.c" />
   </ItemGroup>
   <ItemGroup>
@@ -3383,7 +3383,7 @@
     <ClInclude Include="..\..\src\car\car_wifi.h" />
     <ClInclude Include="..\..\src\car\car_work.h" />
     <ClInclude Include="..\..\src\class.h" />
-    <ClInclude Include="..\..\src\code.h" />
+    <ClInclude Include="..\..\src\code\code.h" />
     <ClInclude Include="..\..\src\code\code_action.h" />
     <ClInclude Include="..\..\src\code\code_add.h" />
     <ClInclude Include="..\..\src\code\code_build.h" />
@@ -3450,7 +3450,6 @@
     <ClInclude Include="..\..\src\code\code_tree.h" />
     <ClInclude Include="..\..\src\code\code_update.h" />
     <ClInclude Include="..\..\src\code\code_value.h" />
-    <ClInclude Include="..\..\src\code_action.h" />
     <ClInclude Include="..\..\src\collect\collect.h" />
     <ClInclude Include="..\..\src\collect\collect_file.h" />
     <ClInclude Include="..\..\src\command.h" />
@@ -5124,6 +5123,7 @@
     <ClInclude Include="..\..\src\math\tanh.h" />
     <ClInclude Include="..\..\src\math\tgamma.h" />
     <ClInclude Include="..\..\src\math\trunc.h" />
+    <ClInclude Include="..\..\src\math\_math.h" />
     <ClInclude Include="..\..\src\message\account_message.h" />
     <ClInclude Include="..\..\src\message\action_message.h" />
     <ClInclude Include="..\..\src\message\address_message.h" />
@@ -5457,9 +5457,9 @@
     <ClInclude Include="..\..\src\radar\radar_volume.h" />
     <ClInclude Include="..\..\src\radar\radar_weight.h" />
     <ClInclude Include="..\..\src\radar\radar_width.h" />
-    <ClInclude Include="..\..\src\recognition.h" />
-    <ClInclude Include="..\..\src\recognition_intel_gpio.h" />
-    <ClInclude Include="..\..\src\recognition_tab.h" />
+    <ClInclude Include="..\..\src\recognition\recognition.h" />
+    <ClInclude Include="..\..\src\recognition\recognition_intel_gpio.h" />
+    <ClInclude Include="..\..\src\recognition\recognition_tab.h" />
     <ClInclude Include="..\..\src\register.h" />
     <ClInclude Include="..\..\src\relation.h" />
     <ClInclude Include="..\..\src\relation_class.h" />
@@ -6198,8 +6198,8 @@
     <ClInclude Include="..\..\src\string\strtok.h" />
     <ClInclude Include="..\..\src\string\strxfrm.h" />
     <ClInclude Include="..\..\src\symbol.h" />
-    <ClInclude Include="..\..\src\syntax.h" />
-    <ClInclude Include="..\..\src\syntax_def.h" />
+    <ClInclude Include="..\..\src\syntax\syntax.h" />
+    <ClInclude Include="..\..\src\syntax\syntax_def.h" />
     <ClInclude Include="..\..\src\sys.h" />
     <ClInclude Include="..\..\src\tag.h" />
     <ClInclude Include="..\..\src\task.h" />
@@ -6243,7 +6243,6 @@
     <ClInclude Include="..\..\src\warship\warship_sonar.h" />
     <ClInclude Include="..\..\src\warship\warship_steer.h" />
     <ClInclude Include="..\..\src\warship\warship_torpedo.h" />
-    <ClInclude Include="..\..\src\_math.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collations.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\collection_crud.h" />
     <ClInclude Include="..\mysql-connector-c++\include\devapi\common.h" />
@@ -6401,8 +6400,8 @@
     <None Include="..\..\src\algorithm\Makefile" />
     <None Include="..\..\src\build_action.i" />
     <None Include="..\..\src\car\Makefile" />
+    <None Include="..\..\src\code\code_action.i" />
     <None Include="..\..\src\code\Makefile" />
-    <None Include="..\..\src\code_action.i" />
     <None Include="..\..\src\collect\Makefile" />
     <None Include="..\..\src\cstdio\cstdio_g_code.i" />
     <None Include="..\..\src\cstdio\cstdio_g_code_func.i" />
@@ -6450,6 +6449,7 @@
     <None Include="..\..\src\operator\operator_g_code_func.i" />
     <None Include="..\..\src\organization\Makefile" />
     <None Include="..\..\src\radar\Makefile" />
+    <None Include="..\..\src\recognition\Makefile" />
     <None Include="..\..\src\satellite\Makefile" />
     <None Include="..\..\src\security\Makefile" />
     <None Include="..\..\src\sensor\Makefile" />
@@ -6457,6 +6457,7 @@
     <None Include="..\..\src\sql\Makefile" />
     <None Include="..\..\src\stock\Makefile" />
     <None Include="..\..\src\stock\stock_db_action.i" />
+    <None Include="..\..\src\syntax\Makefile" />
     <None Include="..\..\src\tree\Makefile" />
     <None Include="..\..\src\warship\Makefile" />
   </ItemGroup>

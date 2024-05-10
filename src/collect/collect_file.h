@@ -3,7 +3,7 @@
 
 #include "../object.h"
 #include "../path.h"
-#include "../file.h"
+#include "file/file.h"
 
 namespace n_collect_file {
 	class Ccollect_file : public Cfile

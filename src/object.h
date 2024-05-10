@@ -18,7 +18,7 @@
 #include <math.h>
 
 #include "temp_def.h"
-#include "syntax_def.h"
+#include "syntax/syntax_def.h"
 #include "ex_func.h"
 #include "uuid.h"
 #include "bits_def.h"

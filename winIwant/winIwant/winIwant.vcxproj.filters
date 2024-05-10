@@ -139,6 +139,15 @@
     <Filter Include="lib">
       <UniqueIdentifier>{7d3b75c3-6f24-4b86-88ca-13824af18806}</UniqueIdentifier>
     </Filter>
+    <Filter Include="recognition">
+      <UniqueIdentifier>{4ca051bb-87a6-4624-a409-d605e69617f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="symbol">
+      <UniqueIdentifier>{0ebe3020-7995-4368-8a5e-841bcae62e74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="syntax">
+      <UniqueIdentifier>{71d5375a-b25b-48e0-a491-91e2f490c708}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -1585,9 +1594,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\symbol.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\syntax.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\sys.cpp">
@@ -4497,9 +4503,6 @@
     <ClCompile Include="..\..\src\instruction\XOR_I.cpp">
       <Filter>instruction</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\code.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\bits.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -5648,15 +5651,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\math\signbit.cpp">
       <Filter>math</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\recognition.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\recognition_tab.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\recognition_intel_gpio.cpp">
-      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\hardware\cmos.cpp">
       <Filter>hardware</Filter>
@@ -7269,9 +7263,6 @@
     <ClCompile Include="..\..\src\code\code_add.cpp">
       <Filter>code</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\_math.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ocean\ocean.cpp">
       <Filter>ocean</Filter>
     </ClCompile>
@@ -7844,9 +7835,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\home\home_work.cpp">
       <Filter>home</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\home.cpp">
-      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\spaceport\spaceport.cpp">
       <Filter>spaceport</Filter>
@@ -9239,6 +9227,24 @@
     </ClCompile>
     <ClCompile Include="..\..\src\home\home.cpp">
       <Filter>home</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\code\code.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\recognition\recognition.cpp">
+      <Filter>recognition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\recognition\recognition_intel_gpio.cpp">
+      <Filter>recognition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\recognition\recognition_tab.cpp">
+      <Filter>recognition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\_math.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\syntax\syntax.cpp">
+      <Filter>syntax</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -10698,12 +10704,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\symbol.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\syntax.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\syntax_def.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\sys.h">
@@ -13646,9 +13646,6 @@
     <ClInclude Include="..\..\src\instruction\XOR_I.h">
       <Filter>instruction</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\code.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\bits.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -13662,9 +13659,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\block.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\code_action.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\my_sql_action.h">
@@ -14878,15 +14872,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\math\signbit.h">
       <Filter>math</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\recognition.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\recognition_tab.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\recognition_intel_gpio.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\hardware\cmos.h">
       <Filter>hardware</Filter>
@@ -16502,9 +16487,6 @@
     <ClInclude Include="..\..\src\code\code_add.h">
       <Filter>code</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\_math.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\ocean\ocean.h">
       <Filter>ocean</Filter>
     </ClInclude>
@@ -17491,9 +17473,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\home\home_work.h">
       <Filter>home</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\home.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\spaceport\spaceport.h">
       <Filter>spaceport</Filter>
@@ -18875,6 +18854,27 @@
     <ClInclude Include="..\..\src\home\home.h">
       <Filter>home</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\code\code.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition\recognition.h">
+      <Filter>recognition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition\recognition_intel_gpio.h">
+      <Filter>recognition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\recognition\recognition_tab.h">
+      <Filter>recognition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\_math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\syntax\syntax.h">
+      <Filter>syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\syntax\syntax_def.h">
+      <Filter>syntax</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
@@ -18897,9 +18897,6 @@
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\g_code_func.i">
-      <Filter>src</Filter>
-    </None>
-    <None Include="..\..\src\code_action.i">
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\my_sql_action.i">
@@ -19063,6 +19060,15 @@
     </None>
     <None Include="..\..\src\tree\Makefile">
       <Filter>tree</Filter>
+    </None>
+    <None Include="..\..\src\code\code_action.i">
+      <Filter>code</Filter>
+    </None>
+    <None Include="..\..\src\recognition\Makefile">
+      <Filter>recognition</Filter>
+    </None>
+    <None Include="..\..\src\syntax\Makefile">
+      <Filter>syntax</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

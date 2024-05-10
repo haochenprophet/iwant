@@ -1,5 +1,5 @@
 #include "sha.h"
-#include "../file.h"
+#include "file/file.h"
 
 #if 0
 #define UNROLL_LOOPS /* Enable loops unrolling */

@@ -1,7 +1,7 @@
 #ifndef CODE_H
 #define CODE_H
 
-#include "file.h"
+#include "file/file.h"
 #include "path.h"
 #include "code_action.h"
 
