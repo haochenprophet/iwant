@@ -148,6 +148,9 @@
     <Filter Include="syntax">
       <UniqueIdentifier>{71d5375a-b25b-48e0-a491-91e2f490c708}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{ee5697ef-2ca8-4a9c-9645-6595a50302ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -9245,6 +9248,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\syntax\syntax.cpp">
       <Filter>syntax</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\gui.cpp">
+      <Filter>gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -18875,6 +18881,9 @@
     <ClInclude Include="..\..\src\syntax\syntax_def.h">
       <Filter>syntax</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\gui\gui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
@@ -19069,6 +19078,9 @@
     </None>
     <None Include="..\..\src\syntax\Makefile">
       <Filter>syntax</Filter>
+    </None>
+    <None Include="..\..\src\gui\Makefile">
+      <Filter>gui</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -620,6 +620,7 @@
     <ClCompile Include="..\..\src\func.cpp" />
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\global\global_code.cpp" />
+    <ClCompile Include="..\..\src\gui\gui.cpp" />
     <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
     <ClCompile Include="..\..\src\hardware\clock_tree.cpp" />
@@ -3668,6 +3669,7 @@
     <ClInclude Include="..\..\src\func.h" />
     <ClInclude Include="..\..\src\get.h" />
     <ClInclude Include="..\..\src\global\global_code.h" />
+    <ClInclude Include="..\..\src\gui\gui.h" />
     <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
@@ -6422,6 +6424,7 @@
     <None Include="..\..\src\file\file_action.i" />
     <None Include="..\..\src\file\Makefile" />
     <None Include="..\..\src\global\Makefile" />
+    <None Include="..\..\src\gui\Makefile" />
     <None Include="..\..\src\g_code.i" />
     <None Include="..\..\src\g_code_func.i" />
     <None Include="..\..\src\hardware\cmos_action.i" />
