@@ -621,6 +621,7 @@
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\global\global_code.cpp" />
     <ClCompile Include="..\..\src\gui\gui.cpp" />
+    <ClCompile Include="..\..\src\gui\gui_qt.cpp" />
     <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
     <ClCompile Include="..\..\src\hardware\clock_tree.cpp" />
@@ -3670,6 +3671,7 @@
     <ClInclude Include="..\..\src\get.h" />
     <ClInclude Include="..\..\src\global\global_code.h" />
     <ClInclude Include="..\..\src\gui\gui.h" />
+    <ClInclude Include="..\..\src\gui\gui_qt.h" />
     <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />

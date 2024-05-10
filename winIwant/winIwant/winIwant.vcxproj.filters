@@ -9252,6 +9252,9 @@
     <ClCompile Include="..\..\src\gui\gui.cpp">
       <Filter>gui</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\gui\gui_qt.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -18882,6 +18885,9 @@
       <Filter>syntax</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\gui\gui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\gui_qt.h">
       <Filter>gui</Filter>
     </ClInclude>
   </ItemGroup>
