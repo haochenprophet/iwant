@@ -179,7 +179,7 @@
     <ClCompile Include="..\..\src\bits.cpp" />
     <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
-    <ClCompile Include="..\..\src\build.cpp" />
+    <ClCompile Include="..\..\src\build\build.cpp" />
     <ClCompile Include="..\..\src\but.cpp" />
     <ClCompile Include="..\..\src\car\car.cpp" />
     <ClCompile Include="..\..\src\car\car_about.cpp" />
@@ -419,6 +419,7 @@
     <ClCompile Include="..\..\src\company.cpp" />
     <ClCompile Include="..\..\src\compare.cpp" />
     <ClCompile Include="..\..\src\const.cpp" />
+    <ClCompile Include="..\..\src\control.cpp" />
     <ClCompile Include="..\..\src\copy.cpp" />
     <ClCompile Include="..\..\src\cout.cpp" />
     <ClCompile Include="..\..\src\cstdio\clearerr.cpp" />
@@ -552,6 +553,7 @@
     <ClCompile Include="..\..\src\ctype\wctype.cpp" />
     <ClCompile Include="..\..\src\data.cpp" />
     <ClCompile Include="..\..\src\database\database.cpp" />
+    <ClCompile Include="..\..\src\debug.cpp" />
     <ClCompile Include="..\..\src\dictionary.cpp" />
     <ClCompile Include="..\..\src\dictionary\hello.cpp" />
     <ClCompile Include="..\..\src\die.cpp" />
@@ -608,6 +610,7 @@
     <ClCompile Include="..\..\src\earth\earth_weather.cpp" />
     <ClCompile Include="..\..\src\echo.cpp" />
     <ClCompile Include="..\..\src\engine.cpp" />
+    <ClCompile Include="..\..\src\error.cpp" />
     <ClCompile Include="..\..\src\esc.cpp" />
     <ClCompile Include="..\..\src\exec.cpp" />
     <ClCompile Include="..\..\src\exit.cpp" />
@@ -621,6 +624,7 @@
     <ClCompile Include="..\..\src\get.cpp" />
     <ClCompile Include="..\..\src\global\global_code.cpp" />
     <ClCompile Include="..\..\src\gui\gui.cpp" />
+    <ClCompile Include="..\..\src\gui\gui_qt.cpp" />
     <ClCompile Include="..\..\src\hardware\block_dev.cpp" />
     <ClCompile Include="..\..\src\hardware\bus.cpp" />
     <ClCompile Include="..\..\src\hardware\clock_tree.cpp" />
@@ -1947,8 +1951,8 @@
     <ClCompile Include="..\..\src\life\life_work.cpp" />
     <ClCompile Include="..\..\src\locate.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
-    <ClCompile Include="..\..\src\make.cpp" />
-    <ClCompile Include="..\..\src\makefile.cpp" />
+    <ClCompile Include="..\..\src\make\make.cpp" />
+    <ClCompile Include="..\..\src\make\makefile.cpp" />
     <ClCompile Include="..\..\src\mars\mars.cpp" />
     <ClCompile Include="..\..\src\mars\mars_audio.cpp" />
     <ClCompile Include="..\..\src\mars\mars_cmaterial.cpp" />
@@ -2153,7 +2157,7 @@
     <ClCompile Include="..\..\src\money\money_weight.cpp" />
     <ClCompile Include="..\..\src\move.cpp" />
     <ClCompile Include="..\..\src\myMemory.cpp" />
-    <ClCompile Include="..\..\src\my_sql.cpp" />
+    <ClCompile Include="..\..\src\my_sql\my_sql.cpp" />
     <ClCompile Include="..\..\src\net.cpp" />
     <ClCompile Include="..\..\src\node.cpp" />
     <ClCompile Include="..\..\src\object.cpp" />
@@ -3140,7 +3144,7 @@
     <ClCompile Include="..\..\src\string\strstr.cpp" />
     <ClCompile Include="..\..\src\string\strtok.cpp" />
     <ClCompile Include="..\..\src\string\strxfrm.cpp" />
-    <ClCompile Include="..\..\src\symbol.cpp" />
+    <ClCompile Include="..\..\src\symbol\symbol.cpp" />
     <ClCompile Include="..\..\src\syntax\syntax.cpp" />
     <ClCompile Include="..\..\src\sys.cpp" />
     <ClCompile Include="..\..\src\tag.cpp" />
@@ -3148,10 +3152,10 @@
     <ClCompile Include="..\..\src\temp.cpp" />
     <ClCompile Include="..\..\src\template\template_object.cpp" />
     <ClCompile Include="..\..\src\test.cpp" />
-    <ClCompile Include="..\..\src\timeline.cpp" />
-    <ClCompile Include="..\..\src\timepoint.cpp" />
-    <ClCompile Include="..\..\src\timer.cpp" />
-    <ClCompile Include="..\..\src\timetree.cpp" />
+    <ClCompile Include="..\..\src\time\timeline.cpp" />
+    <ClCompile Include="..\..\src\time\timepoint.cpp" />
+    <ClCompile Include="..\..\src\time\timer.cpp" />
+    <ClCompile Include="..\..\src\time\timetree.cpp" />
     <ClCompile Include="..\..\src\tree\tree.cpp" />
     <ClCompile Include="..\..\src\tree\tree_db.cpp" />
     <ClCompile Include="..\..\src\tree\tree_func.cpp" />
@@ -3160,6 +3164,7 @@
     <ClCompile Include="..\..\src\url.cpp" />
     <ClCompile Include="..\..\src\uuid.cpp" />
     <ClCompile Include="..\..\src\wait.cpp" />
+    <ClCompile Include="..\..\src\warning.cpp" />
     <ClCompile Include="..\..\src\warship\warship.cpp" />
     <ClCompile Include="..\..\src\warship\warship_artillery.cpp" />
     <ClCompile Include="..\..\src\warship\warship_attack.cpp" />
@@ -3217,8 +3222,8 @@
     <ClInclude Include="..\..\src\bits_def.h" />
     <ClInclude Include="..\..\src\block.h" />
     <ClInclude Include="..\..\src\brackets.h" />
-    <ClInclude Include="..\..\src\build.h" />
-    <ClInclude Include="..\..\src\build_action.h" />
+    <ClInclude Include="..\..\src\build\build.h" />
+    <ClInclude Include="..\..\src\build\build_action.h" />
     <ClInclude Include="..\..\src\but.h" />
     <ClInclude Include="..\..\src\car\car.h" />
     <ClInclude Include="..\..\src\car\car_about.h" />
@@ -3458,6 +3463,7 @@
     <ClInclude Include="..\..\src\company.h" />
     <ClInclude Include="..\..\src\compare.h" />
     <ClInclude Include="..\..\src\const.h" />
+    <ClInclude Include="..\..\src\control.h" />
     <ClInclude Include="..\..\src\copy.h" />
     <ClInclude Include="..\..\src\cout.h" />
     <ClInclude Include="..\..\src\cstdio\clearerr.h" />
@@ -3600,6 +3606,7 @@
     <ClInclude Include="..\..\src\data.h" />
     <ClInclude Include="..\..\src\database\database.h" />
     <ClInclude Include="..\..\src\data_class.h" />
+    <ClInclude Include="..\..\src\debug.h" />
     <ClInclude Include="..\..\src\dictionary.h" />
     <ClInclude Include="..\..\src\dictionary\hello.h" />
     <ClInclude Include="..\..\src\die.h" />
@@ -3656,6 +3663,7 @@
     <ClInclude Include="..\..\src\earth\earth_weather.h" />
     <ClInclude Include="..\..\src\echo.h" />
     <ClInclude Include="..\..\src\engine.h" />
+    <ClInclude Include="..\..\src\error.h" />
     <ClInclude Include="..\..\src\esc.h" />
     <ClInclude Include="..\..\src\exec.h" />
     <ClInclude Include="..\..\src\exit.h" />
@@ -3670,6 +3678,7 @@
     <ClInclude Include="..\..\src\get.h" />
     <ClInclude Include="..\..\src\global\global_code.h" />
     <ClInclude Include="..\..\src\gui\gui.h" />
+    <ClInclude Include="..\..\src\gui\gui_qt.h" />
     <ClInclude Include="..\..\src\g_code.h" />
     <ClInclude Include="..\..\src\hardware\block_dev.h" />
     <ClInclude Include="..\..\src\hardware\bus.h" />
@@ -5001,8 +5010,8 @@
     <ClInclude Include="..\..\src\locate.h" />
     <ClInclude Include="..\..\src\main.h" />
     <ClInclude Include="..\..\src\main_action.h" />
-    <ClInclude Include="..\..\src\make.h" />
-    <ClInclude Include="..\..\src\makefile.h" />
+    <ClInclude Include="..\..\src\make\make.h" />
+    <ClInclude Include="..\..\src\make\makefile.h" />
     <ClInclude Include="..\..\src\mars\mars.h" />
     <ClInclude Include="..\..\src\mars\mars_audio.h" />
     <ClInclude Include="..\..\src\mars\mars_cmaterial.h" />
@@ -5212,8 +5221,8 @@
     <ClInclude Include="..\..\src\move.h" />
     <ClInclude Include="..\..\src\move_class.h" />
     <ClInclude Include="..\..\src\myMemory.h" />
-    <ClInclude Include="..\..\src\my_sql.h" />
-    <ClInclude Include="..\..\src\my_sql_action.h" />
+    <ClInclude Include="..\..\src\my_sql\my_sql.h" />
+    <ClInclude Include="..\..\src\my_sql\my_sql_action.h" />
     <ClInclude Include="..\..\src\net.h" />
     <ClInclude Include="..\..\src\node.h" />
     <ClInclude Include="..\..\src\object.h" />
@@ -6199,7 +6208,7 @@
     <ClInclude Include="..\..\src\string\strstr.h" />
     <ClInclude Include="..\..\src\string\strtok.h" />
     <ClInclude Include="..\..\src\string\strxfrm.h" />
-    <ClInclude Include="..\..\src\symbol.h" />
+    <ClInclude Include="..\..\src\symbol\symbol.h" />
     <ClInclude Include="..\..\src\syntax\syntax.h" />
     <ClInclude Include="..\..\src\syntax\syntax_def.h" />
     <ClInclude Include="..\..\src\sys.h" />
@@ -6209,10 +6218,10 @@
     <ClInclude Include="..\..\src\template\template_object.h" />
     <ClInclude Include="..\..\src\temp_def.h" />
     <ClInclude Include="..\..\src\test.h" />
-    <ClInclude Include="..\..\src\timeline.h" />
-    <ClInclude Include="..\..\src\timepoint.h" />
-    <ClInclude Include="..\..\src\timer.h" />
-    <ClInclude Include="..\..\src\timetree.h" />
+    <ClInclude Include="..\..\src\time\timeline.h" />
+    <ClInclude Include="..\..\src\time\timepoint.h" />
+    <ClInclude Include="..\..\src\time\timer.h" />
+    <ClInclude Include="..\..\src\time\timetree.h" />
     <ClInclude Include="..\..\src\tree\tree.h" />
     <ClInclude Include="..\..\src\tree\tree_db.h" />
     <ClInclude Include="..\..\src\tree\tree_func.h" />
@@ -6223,6 +6232,7 @@
     <ClInclude Include="..\..\src\uuid.h" />
     <ClInclude Include="..\..\src\uuid_class.h" />
     <ClInclude Include="..\..\src\wait.h" />
+    <ClInclude Include="..\..\src\warning.h" />
     <ClInclude Include="..\..\src\warship\warship.h" />
     <ClInclude Include="..\..\src\warship\warship_artillery.h" />
     <ClInclude Include="..\..\src\warship\warship_attack.h" />
@@ -6400,7 +6410,8 @@
     <None Include="..\..\README.md" />
     <None Include="..\..\src\airplane\Makefile" />
     <None Include="..\..\src\algorithm\Makefile" />
-    <None Include="..\..\src\build_action.i" />
+    <None Include="..\..\src\build\build_action.i" />
+    <None Include="..\..\src\build\Makefile" />
     <None Include="..\..\src\car\Makefile" />
     <None Include="..\..\src\code\code_action.i" />
     <None Include="..\..\src\code\Makefile" />
@@ -6435,6 +6446,7 @@
     <None Include="..\..\src\life\Makefile" />
     <None Include="..\..\src\main_action.i" />
     <None Include="..\..\src\Makefile" />
+    <None Include="..\..\src\make\Makefile" />
     <None Include="..\..\src\mars\Makefile" />
     <None Include="..\..\src\materiel\Makefile" />
     <None Include="..\..\src\math\Makefile" />
@@ -6444,7 +6456,8 @@
     <None Include="..\..\src\message\message_g_code.i" />
     <None Include="..\..\src\message\message_g_code_func.i" />
     <None Include="..\..\src\money\Makefile" />
-    <None Include="..\..\src\my_sql_action.i" />
+    <None Include="..\..\src\my_sql\Makefile" />
+    <None Include="..\..\src\my_sql\my_sql_action.i" />
     <None Include="..\..\src\ocean\Makefile" />
     <None Include="..\..\src\openssl\Makefile" />
     <None Include="..\..\src\operator\Makefile" />
@@ -6460,7 +6473,9 @@
     <None Include="..\..\src\sql\Makefile" />
     <None Include="..\..\src\stock\Makefile" />
     <None Include="..\..\src\stock\stock_db_action.i" />
+    <None Include="..\..\src\symbol\Makefile" />
     <None Include="..\..\src\syntax\Makefile" />
+    <None Include="..\..\src\time\Makefile" />
     <None Include="..\..\src\tree\Makefile" />
     <None Include="..\..\src\warship\Makefile" />
   </ItemGroup>

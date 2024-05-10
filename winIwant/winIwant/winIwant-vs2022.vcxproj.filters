@@ -151,6 +151,18 @@
     <Filter Include="gui">
       <UniqueIdentifier>{ee5697ef-2ca8-4a9c-9645-6595a50302ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="build">
+      <UniqueIdentifier>{25d6402d-c7ef-4e11-af98-3ef91118c36a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="make">
+      <UniqueIdentifier>{67b51f98-049b-48e8-be3b-9de106769808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="time">
+      <UniqueIdentifier>{a170c589-3c98-4938-a900-8bc38257b37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="my_sql">
+      <UniqueIdentifier>{febc8ccd-ccd8-4b72-a048-637455bf7a0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -1488,9 +1500,6 @@
     <ClCompile Include="..\..\src\brackets.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\build.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\class.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1548,15 +1557,6 @@
     <ClCompile Include="..\..\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\make.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\makefile.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\my_sql.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\myMemory.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1596,9 +1596,6 @@
     <ClCompile Include="..\..\src\step.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\symbol.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\sys.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -1612,9 +1609,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\test.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\timer.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\uri.cpp">
@@ -4515,9 +4509,6 @@
     <ClCompile Include="..\..\src\node.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\but.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\field.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -5623,15 +5614,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\insert.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\timeline.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\timepoint.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\timetree.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\cstdio\setbuf.cpp">
@@ -9255,6 +9237,48 @@
     <ClCompile Include="..\..\src\gui\gui_qt.cpp">
       <Filter>gui</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\build\build.cpp">
+      <Filter>build</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\make\make.cpp">
+      <Filter>make</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\make\makefile.cpp">
+      <Filter>make</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\timeline.cpp">
+      <Filter>time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\timepoint.cpp">
+      <Filter>time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\timer.cpp">
+      <Filter>time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\time\timetree.cpp">
+      <Filter>time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\symbol\symbol.cpp">
+      <Filter>symbol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\my_sql\my_sql.cpp">
+      <Filter>my_sql</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\but.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\control.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\error.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\warning.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -10595,9 +10619,6 @@
     <ClInclude Include="..\..\src\istring.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\my_sql.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\plan.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -10623,9 +10644,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\brackets.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\build.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\class.h">
@@ -10679,12 +10697,6 @@
     <ClInclude Include="..\..\src\main.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\make.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\makefile.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\myMemory.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -10712,9 +10724,6 @@
     <ClInclude Include="..\..\src\sql.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\symbol.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\sys.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -10728,9 +10737,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\temp_def.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\timer.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\uri.h">
@@ -13670,9 +13676,6 @@
     <ClInclude Include="..\..\src\block.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\my_sql_action.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\node.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -14834,9 +14837,6 @@
     <ClInclude Include="..\..\src\database\database.h">
       <Filter>database</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\build_action.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\replace.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -14850,15 +14850,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\insert.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\timeline.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\timepoint.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\timetree.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cstdio\setbuf.h">
@@ -18890,6 +18881,51 @@
     <ClInclude Include="..\..\src\gui\gui_qt.h">
       <Filter>gui</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\build\build.h">
+      <Filter>build</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build\build_action.h">
+      <Filter>build</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\make\make.h">
+      <Filter>make</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\make\makefile.h">
+      <Filter>make</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\timeline.h">
+      <Filter>time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\timepoint.h">
+      <Filter>time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\timer.h">
+      <Filter>time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\time\timetree.h">
+      <Filter>time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\symbol\symbol.h">
+      <Filter>symbol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\my_sql\my_sql.h">
+      <Filter>my_sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\my_sql\my_sql_action.h">
+      <Filter>my_sql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\control.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\debug.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\error.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\warning.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
@@ -18912,9 +18948,6 @@
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\g_code_func.i">
-      <Filter>src</Filter>
-    </None>
-    <None Include="..\..\src\my_sql_action.i">
       <Filter>src</Filter>
     </None>
     <None Include="..\..\src\main_action.i">
@@ -18988,9 +19021,6 @@
     </None>
     <None Include="..\..\src\database\Makefile">
       <Filter>database</Filter>
-    </None>
-    <None Include="..\..\src\build_action.i">
-      <Filter>src</Filter>
     </None>
     <None Include="..\..\src\hardware\cmos_action.i">
       <Filter>hardware</Filter>
@@ -19087,6 +19117,27 @@
     </None>
     <None Include="..\..\src\gui\Makefile">
       <Filter>gui</Filter>
+    </None>
+    <None Include="..\..\src\build\build_action.i">
+      <Filter>build</Filter>
+    </None>
+    <None Include="..\..\src\build\Makefile">
+      <Filter>build</Filter>
+    </None>
+    <None Include="..\..\src\make\Makefile">
+      <Filter>make</Filter>
+    </None>
+    <None Include="..\..\src\time\Makefile">
+      <Filter>time</Filter>
+    </None>
+    <None Include="..\..\src\symbol\Makefile">
+      <Filter>symbol</Filter>
+    </None>
+    <None Include="..\..\src\my_sql\my_sql_action.i">
+      <Filter>my_sql</Filter>
+    </None>
+    <None Include="..\..\src\my_sql\Makefile">
+      <Filter>my_sql</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

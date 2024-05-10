@@ -1,7 +1,7 @@
 #ifndef STOCK_DB_H
 #define STOCK_DB_H
 
-#include "my_sql.h"
+#include "my_sql/my_sql.h"
 #include "stock_db_action.h"
 
 namespace n_stock_db {
