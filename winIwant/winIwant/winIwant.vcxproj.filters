@@ -9279,6 +9279,9 @@
     <ClCompile Include="..\..\src\warning.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\build\build_makefile.cpp">
+      <Filter>build</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -18925,6 +18928,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\warning.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build\build_makefile.h">
+      <Filter>build</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

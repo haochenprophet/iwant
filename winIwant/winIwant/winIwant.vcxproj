@@ -138,7 +138,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/D WINDOWS_OS=1 /D COLLECT_FILE_TEST=1 /I "../mysql-connector-c/include" /I "..\..\src" /I "..\..\operator" /I "..\openssl-3.2.1/openssl-3/x64/include/" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D BUILD_MAKEFILE_TEST=1 /D WINDOWS_OS=1  /I "../mysql-connector-c/include" /I "..\..\src" /I "..\..\operator" /I "..\openssl-3.2.1/openssl-3/x64/include/" /D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -180,6 +180,7 @@
     <ClCompile Include="..\..\src\block.cpp" />
     <ClCompile Include="..\..\src\brackets.cpp" />
     <ClCompile Include="..\..\src\build\build.cpp" />
+    <ClCompile Include="..\..\src\build\build_makefile.cpp" />
     <ClCompile Include="..\..\src\but.cpp" />
     <ClCompile Include="..\..\src\car\car.cpp" />
     <ClCompile Include="..\..\src\car\car_about.cpp" />
@@ -3224,6 +3225,7 @@
     <ClInclude Include="..\..\src\brackets.h" />
     <ClInclude Include="..\..\src\build\build.h" />
     <ClInclude Include="..\..\src\build\build_action.h" />
+    <ClInclude Include="..\..\src\build\build_makefile.h" />
     <ClInclude Include="..\..\src\but.h" />
     <ClInclude Include="..\..\src\car\car.h" />
     <ClInclude Include="..\..\src\car\car_about.h" />
