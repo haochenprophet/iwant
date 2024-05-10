@@ -2,7 +2,7 @@ MK_TAG = my_sql
 
 MYSQL_CONCPP_DIR=../../mysql_connect
 
-source_code = *.cpp ../*.cpp ../math/*.cpp 
+source_code = *.cpp ../*.cpp ../math/*.cpp ../file/*.cpp ../code/*.cpp ../stock/*.cpp ../time/*.cpp  ../symbol/*.cpp  ../make/*.cpp  ../build/*.cpp ../my_sql/*.cpp ../home/*.cpp ../syntax/*.cpp
 
 CFLAGS +=\
 	-std=gnu++11 \
@@ -18,3 +18,4 @@ all :
 
 clean :
 	rm -f $(MK_TAG) *.o *~ .*.swp
+
