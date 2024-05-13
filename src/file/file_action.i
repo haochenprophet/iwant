@@ -46,7 +46,9 @@
 #define FILE_CRC_HELP   "crc   <FileName> [math]"
 //md5
 #define FILE_MD5_HELP   "md5   <FileName>"
-
+//find
+#define FILE_FIND_HELP   "find <dir> <term>"
+#define FILE_FD_HELP   "fd <dir> <term>"
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::cat ,  EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_CAT_HELP},
@@ -90,6 +92,10 @@ Action file_action[] = {
 	{ (int)FileAtcionClass::crc,(ACTION_T)FileAtcion::crc,      EatcionRelation::equal , nullptr ,(char*)"crc",     (char*)FILE_CRC_HELP},
 //md5
 	{ (int)FileAtcionClass::md5,(ACTION_T)FileAtcion::md5,      EatcionRelation::equal , nullptr ,(char*)"md5",     (char*)FILE_MD5_HELP},
+//find
+	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::find,      EatcionRelation::equal , nullptr ,(char*)"find",     (char*)FILE_FIND_HELP},
+	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::fd,      EatcionRelation::equal , nullptr ,(char*)"fd",     (char*)FILE_FD_HELP},
+
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };

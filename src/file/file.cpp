@@ -5,6 +5,7 @@
 #include "insert.h"
 #include "math/crc.h"
 #include "math/md5.h"
+#include "path.h"
 
 int Cfile::my_init(void* p)
 {
@@ -284,6 +285,15 @@ char * Cfile::f_find(char * str,char *start)
 	return this->f_find((char *)this->f_name.c_str(),str,start);
 }
 
+int Cfile::find(char * dir, char * term)
+{
+	Cpath p;
+	printf("dir=%s\\%s\n", dir, term);
+	p.list(dir, term, 0, 1, 1);
+	p.display();//test ok
+	return 0;
+}
+
 // c/c++ function : return_type [space] <func_name> [space] (...)
 
 int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
@@ -497,6 +507,8 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
 	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc(this->crc_func));
 	if (this->action == (ACTION_T)FileAtcion::md5) this->set_main_ret((int)this->md5());
+	if (this->action == (ACTION_T)FileAtcion::find || this->action == (ACTION_T)FileAtcion::fd) this->set_main_ret((int)this->find(this->cmd.argv[2], this->cmd.argv[3]));
+
 	return 0;
 }
 

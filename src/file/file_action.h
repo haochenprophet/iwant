@@ -20,7 +20,8 @@ enum class FileAtcionClass
 	insert,
 	checksum,
 	crc,
-	md5,
+	md5,  
+	find,
 };
 
 enum class FileAtcion {
@@ -55,7 +56,9 @@ enum class FileAtcion {
 	checksum,
 	chksum,
 	crc,
-	md5
+	md5,
+	find,
+	fd,
 };
 
 #endif

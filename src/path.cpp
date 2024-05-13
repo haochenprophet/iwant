@@ -150,7 +150,7 @@ int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursi
 			if (recursive)
 			{
 				wstring w_dir = dir_name;
-				w_dir += (wchar_t *) "/";
+				w_dir += (wchar_t *) "\\";
 				w_dir += ffd.cFileName;
 				if (wcscmp((wchar_t *)".", ffd.cFileName) != 0 && wcscmp((wchar_t *)"..", ffd.cFileName) != 0)
 				{
