@@ -70,7 +70,7 @@ int Ccollect_file::func(void* p)
 }
 #endif
 
-int Ccollect_file::collect(dir_t* dir , file_t* term , dir_t* to_dir)
+int Ccollect_file::collect(dir_t* dir , file_t* term , dir_t* to_dir,Object * obj_func)
 {
 	Cpath p;
 
@@ -80,7 +80,9 @@ int Ccollect_file::collect(dir_t* dir , file_t* term , dir_t* to_dir)
 
 	p.list(dir, term, 0, 1, 1);	//int Cpath::list(DIR_T *dir_name,DIR_T *term,int display,int to_list, int recursive)
 //	p.display();//test ok
-	p.execute(this);
+	if (obj_func == nullptr) { p.execute(this); }
+	else { p.execute(obj_func); }
+
 	return 0;
 }
 

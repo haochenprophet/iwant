@@ -20,7 +20,7 @@ namespace n_collect_file {
 		size_t my_size() {return sizeof(Ccollect_file); }
 	public:
 		int func(void* p);
-		int collect(dir_t * dir = nullptr , file_t * term = nullptr , dir_t* to_dir = nullptr);
+		int collect(dir_t * dir = nullptr , file_t * term = nullptr , dir_t* to_dir = nullptr, Object* obj_fun = nullptr);
 	};
 }
 
