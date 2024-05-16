@@ -1,7 +1,7 @@
 #ifndef MATERIEL_LOCATION_H
 #define MATERIEL_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_location {
 	class Cmateriel_location :public Object

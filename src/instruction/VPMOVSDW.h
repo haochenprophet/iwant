@@ -1,7 +1,7 @@
 #ifndef VPMOVSDW_H
 #define VPMOVSDW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVSDW {
 	class CVPMOVSDW :public Object

@@ -1,7 +1,7 @@
 #ifndef MARS_LOCATION_H
 #define MARS_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_location {
 	class Cmars_location :public Object

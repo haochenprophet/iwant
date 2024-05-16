@@ -26,7 +26,7 @@ void C_Exit::_Exit_c(int status)
 #endif
 
 #if _EXIT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "_EXIT_TEST\n\n";

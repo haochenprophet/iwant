@@ -1,7 +1,7 @@
 #ifndef SQL_STATISTICS_H
 #define SQL_STATISTICS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_STATISTICS {
 	class Csql_STATISTICS :public Object

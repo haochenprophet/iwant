@@ -1,7 +1,7 @@
 #ifndef FXSAVE_H
 #define FXSAVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FXSAVE {
 	class CFXSAVE :public Object

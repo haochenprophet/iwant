@@ -26,7 +26,7 @@ int Crename::rename_c(const char* oldname, const char* newname)
 #endif
 
 #if RENAME_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "RENAME_TEST\n\n";
 

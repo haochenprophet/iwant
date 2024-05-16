@@ -1,7 +1,7 @@
 #ifndef EARTH_COUNTRY_H
 #define EARTH_COUNTRY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_country {
 	class Cearth_country :public Object

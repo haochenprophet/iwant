@@ -1,7 +1,7 @@
 #ifndef CAR_CABLE_H
 #define CAR_CABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_cable {
 	class Ccar_cable :public Object

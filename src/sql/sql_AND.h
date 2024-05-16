@@ -1,7 +1,7 @@
 #ifndef SQL_AND_H
 #define SQL_AND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_AND {
 	class Csql_AND :public Object

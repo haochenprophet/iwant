@@ -1,7 +1,7 @@
 #ifndef OCEAN_POLICY_H
 #define OCEAN_POLICY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_policy {
 	class Cocean_policy :public Object

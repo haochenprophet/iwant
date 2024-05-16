@@ -1,7 +1,7 @@
 #ifndef SATELLITE_BLUETOOTH_H
 #define SATELLITE_BLUETOOTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_bluetooth {
 	class Csatellite_bluetooth :public Object

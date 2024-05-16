@@ -1,7 +1,7 @@
 #ifndef RADAR_ANTENNA_H
 #define RADAR_ANTENNA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_antenna {
 	class Cradar_antenna :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_DIRECTION_H
 #define SECURITY_DIRECTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_direction {
 	class Csecurity_direction :public Object

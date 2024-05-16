@@ -1,7 +1,7 @@
 #ifndef CHAR_H
 #define CHAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_char {
 	class Cchar :public Object

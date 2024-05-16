@@ -1,7 +1,7 @@
 #ifndef CODE_DB_H
 #define CODE_DB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_db {
 	class Ccode_db :public Object

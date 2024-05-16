@@ -1,7 +1,7 @@
 #ifndef EARTH_WATER_H
 #define EARTH_WATER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_water {
 	class Cearth_water :public Object

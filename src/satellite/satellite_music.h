@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MUSIC_H
 #define SATELLITE_MUSIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_music {
 	class Csatellite_music :public Object

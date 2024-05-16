@@ -1,7 +1,7 @@
 #ifndef ISWPRINT_H
 #define ISWPRINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswprint {
 	class Ciswprint :public Object

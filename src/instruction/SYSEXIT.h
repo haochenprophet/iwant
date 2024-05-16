@@ -1,7 +1,7 @@
 #ifndef SYSEXIT_H
 #define SYSEXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SYSEXIT {
 	class CSYSEXIT :public Object

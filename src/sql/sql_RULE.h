@@ -1,7 +1,7 @@
 #ifndef SQL_RULE_H
 #define SQL_RULE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RULE {
 	class Csql_RULE :public Object

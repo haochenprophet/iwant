@@ -1,7 +1,7 @@
 #ifndef SECURITY_PHYSICAL_H
 #define SECURITY_PHYSICAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_physical {
 	class Csecurity_physical :public Object

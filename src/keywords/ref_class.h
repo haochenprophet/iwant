@@ -1,7 +1,7 @@
 #ifndef REF_CLASS_H
 #define REF_CLASS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ref_class {
 	class Cref_class :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_TURN_RIGHT_H
 #define CAR_TURN_RIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_turn_right {
 	class Ccar_turn_right :public Object

@@ -26,7 +26,7 @@ int Cputchar::putchar_c(int character)
 #endif
 
 #if PUTCHAR_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "PUTCHAR_TEST\n\n";
 

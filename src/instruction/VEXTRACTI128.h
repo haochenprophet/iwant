@@ -1,7 +1,7 @@
 #ifndef VEXTRACTI128_H
 #define VEXTRACTI128_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VEXTRACTI128 {
 	class CVEXTRACTI128 :public Object

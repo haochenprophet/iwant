@@ -1,7 +1,7 @@
 #ifndef SATELLITE_GLASS_H
 #define SATELLITE_GLASS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_glass {
 	class Csatellite_glass :public Object

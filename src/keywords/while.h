@@ -1,7 +1,7 @@
 #ifndef WHILE_H
 #define WHILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_while {
 	class Cwhile :public Object

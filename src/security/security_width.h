@@ -1,7 +1,7 @@
 #ifndef SECURITY_WIDTH_H
 #define SECURITY_WIDTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_width {
 	class Csecurity_width :public Object

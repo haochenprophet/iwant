@@ -1,7 +1,7 @@
 #ifndef SENSOR_LENGTH_H
 #define SENSOR_LENGTH_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_length {
 	class Csensor_length :public Object

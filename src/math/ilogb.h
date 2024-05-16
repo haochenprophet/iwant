@@ -1,7 +1,7 @@
 #ifndef ILOGB_H
 #define ILOGB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ilogb {
 	class Cilogb :public Object

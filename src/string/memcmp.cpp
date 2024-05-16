@@ -21,7 +21,7 @@ Cmemcmp::~Cmemcmp()
 #endif
 
 #if MEMCMP_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MEMCMP_TEST\n\n";

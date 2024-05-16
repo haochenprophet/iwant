@@ -1,0 +1,38 @@
+#ifndef SQL_H
+#define SQL_H
+
+#include "object/object.h"
+#include "os/os.h"
+
+namespace n_sql {
+
+	enum class SqlOperate { // record status
+		nothing,
+		select,
+		update,
+		insert,
+		create,
+		delete_,
+		alter,
+	};
+
+	class Csql :public Object
+	{
+	public:
+		SqlOperate sql_opetate;
+		char * db_name;
+		char * tab_name;
+		char * tab_field;//col_name
+		char * col_value;
+		char * sql_buf;
+		char * sql;
+		int sql_buf_len;
+	public:
+		Csql();
+		~Csql();
+	};
+
+}
+using namespace n_sql;
+
+#endif

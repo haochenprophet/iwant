@@ -1,7 +1,7 @@
 #ifndef FOREACH_H
 #define FOREACH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_foreach {
 	class Cforeach :public Object

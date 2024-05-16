@@ -1,7 +1,7 @@
 #ifndef SQL_CONTAINSTABLE_H
 #define SQL_CONTAINSTABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CONTAINSTABLE {
 	class Csql_CONTAINSTABLE :public Object

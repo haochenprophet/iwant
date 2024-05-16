@@ -1,7 +1,7 @@
 #ifndef LDS_H
 #define LDS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LDS {
 	class CLDS :public Object

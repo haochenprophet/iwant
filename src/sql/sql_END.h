@@ -1,7 +1,7 @@
 #ifndef SQL_END_H
 #define SQL_END_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_END {
 	class Csql_END :public Object

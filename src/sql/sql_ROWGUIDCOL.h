@@ -1,7 +1,7 @@
 #ifndef SQL_ROWGUIDCOL_H
 #define SQL_ROWGUIDCOL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ROWGUIDCOL {
 	class Csql_ROWGUIDCOL :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_HYPOXIA_H
 #define SECURITY_HYPOXIA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_hypoxia {
 	class Csecurity_hypoxia :public Object

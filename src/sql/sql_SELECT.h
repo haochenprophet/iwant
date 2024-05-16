@@ -1,7 +1,7 @@
 #ifndef SQL_SELECT_H
 #define SQL_SELECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SELECT {
 	class Csql_SELECT :public Object

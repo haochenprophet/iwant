@@ -1,7 +1,7 @@
 #ifndef SECURITY_STATUS_H
 #define SECURITY_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_status {
 	class Csecurity_status :public Object

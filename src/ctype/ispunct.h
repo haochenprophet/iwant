@@ -1,7 +1,7 @@
 #ifndef ISPUNCT_H
 #define ISPUNCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ispunct {
 	class Cispunct :public Object

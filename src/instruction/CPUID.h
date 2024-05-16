@@ -1,7 +1,7 @@
 #ifndef CPUID_H
 #define CPUID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CPUID {
 	class CCPUID :public Object

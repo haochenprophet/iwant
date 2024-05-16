@@ -21,7 +21,7 @@ Cmoney_nation::~Cmoney_nation()
 #endif
 
 #if MONEY_NATION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

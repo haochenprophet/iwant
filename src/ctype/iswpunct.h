@@ -1,7 +1,7 @@
 #ifndef ISWPUNCT_H
 #define ISWPUNCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswpunct {
 	class Ciswpunct :public Object

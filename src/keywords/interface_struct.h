@@ -1,7 +1,7 @@
 #ifndef INTERFACE_STRUCT_H
 #define INTERFACE_STRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_interface_struct {
 	class Cinterface_struct :public Object

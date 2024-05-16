@@ -1,7 +1,7 @@
 #ifndef MESSAGE_DB_H
 #define MESSAGE_DB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_message_db {
 	class Cmessage_db :public Object

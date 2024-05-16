@@ -1,7 +1,7 @@
 #ifndef BREAK_H
 #define BREAK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_break {
 	class Cbreak :public Object

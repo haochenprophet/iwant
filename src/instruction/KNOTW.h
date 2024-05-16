@@ -1,7 +1,7 @@
 #ifndef KNOTW_H
 #define KNOTW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KNOTW {
 	class CKNOTW :public Object

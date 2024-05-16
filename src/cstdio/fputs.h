@@ -1,7 +1,7 @@
 #ifndef FPUTS_H
 #define FPUTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fputs {
 	class Cfputs :public Object

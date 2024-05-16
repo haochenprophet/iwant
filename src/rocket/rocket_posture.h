@@ -1,7 +1,7 @@
 #ifndef ROCKET_POSTURE_H
 #define ROCKET_POSTURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_posture {
 	class Crocket_posture :public Object

@@ -1,7 +1,7 @@
 #ifndef TRANSIENT_H
 #define TRANSIENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_transient {
 	class Ctransient :public Object

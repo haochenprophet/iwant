@@ -21,7 +21,7 @@ Csatellite_electric_appliance::~Csatellite_electric_appliance()
 #endif
 
 #if SATELLITE_ELECTRIC_APPLIANCE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef AUTO_H
 #define AUTO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_auto {
 	class Cauto :public Object

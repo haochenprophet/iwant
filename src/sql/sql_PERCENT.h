@@ -1,7 +1,7 @@
 #ifndef SQL_PERCENT_H
 #define SQL_PERCENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PERCENT {
 	class Csql_PERCENT :public Object

@@ -1,7 +1,7 @@
 #ifndef ROCKET_LOCATION_H
 #define ROCKET_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_location {
 	class Crocket_location :public Object

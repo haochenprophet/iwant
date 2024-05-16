@@ -1,7 +1,7 @@
 #ifndef SQL_ADD_H
 #define SQL_ADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ADD {
 	class Csql_ADD :public Object

@@ -1,7 +1,7 @@
 #ifndef EXP2_H
 #define EXP2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_exp2 {
 	class Cexp2 :public Object

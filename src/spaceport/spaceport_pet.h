@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_PET_H
 #define SPACEPORT_PET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_pet {
 	class Cspaceport_pet :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_MEMORY_H
 #define CAR_MEMORY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_memory {
 	class Ccar_memory :public Object

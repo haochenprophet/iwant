@@ -1,7 +1,7 @@
 #ifndef SQL_READ_H
 #define SQL_READ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_READ {
 	class Csql_READ :public Object

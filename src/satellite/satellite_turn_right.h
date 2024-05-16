@@ -1,7 +1,7 @@
 #ifndef SATELLITE_TURN_RIGHT_H
 #define SATELLITE_TURN_RIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_turn_right {
 	class Csatellite_turn_right :public Object

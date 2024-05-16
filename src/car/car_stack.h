@@ -1,7 +1,7 @@
 #ifndef CAR_STACK_H
 #define CAR_STACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_stack {
 	class Ccar_stack :public Object

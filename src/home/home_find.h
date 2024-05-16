@@ -1,7 +1,7 @@
 #ifndef HOME_FIND_H
 #define HOME_FIND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_find {
 	class Chome_find :public Object

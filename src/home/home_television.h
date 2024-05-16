@@ -1,7 +1,7 @@
 #ifndef HOME_TELEVISION_H
 #define HOME_TELEVISION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_television {
 	class Chome_television :public Object

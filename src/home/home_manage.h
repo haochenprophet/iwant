@@ -1,7 +1,7 @@
 #ifndef HOME_MANAGE_H
 #define HOME_MANAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_manage {
 	class Chome_manage :public Object

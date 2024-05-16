@@ -1,7 +1,7 @@
 #ifndef ISWALPHA_H
 #define ISWALPHA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswalpha {
 	class Ciswalpha :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_ROOM_H
 #define SECURITY_ROOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_room {
 	class Csecurity_room :public Object

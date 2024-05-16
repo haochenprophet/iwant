@@ -1,7 +1,7 @@
 #ifndef IDIV_H
 #define IDIV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_IDIV {
 	class CIDIV :public Object

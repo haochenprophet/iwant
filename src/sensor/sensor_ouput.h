@@ -1,7 +1,7 @@
 #ifndef SENSOR_OUPUT_H
 #define SENSOR_OUPUT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_ouput {
 	class Csensor_ouput :public Object

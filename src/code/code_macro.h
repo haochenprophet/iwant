@@ -1,7 +1,7 @@
 #ifndef CODE_MACRO_H
 #define CODE_MACRO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_macro {
 	class Ccode_macro :public Object

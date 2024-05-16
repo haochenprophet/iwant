@@ -1,7 +1,7 @@
 #ifndef OCEAN_CURRENT_H
 #define OCEAN_CURRENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_current {
 	class Cocean_current :public Object

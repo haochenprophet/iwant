@@ -1,7 +1,7 @@
 #ifndef CAR_NITROGEN_H
 #define CAR_NITROGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_nitrogen {
 	class Ccar_nitrogen :public Object

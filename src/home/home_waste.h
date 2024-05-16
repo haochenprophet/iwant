@@ -1,7 +1,7 @@
 #ifndef HOME_WASTE_H
 #define HOME_WASTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_waste {
 	class Chome_waste :public Object

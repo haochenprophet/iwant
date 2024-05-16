@@ -1,7 +1,7 @@
 #ifndef CAR_REGION_H
 #define CAR_REGION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_region {
 	class Ccar_region :public Object

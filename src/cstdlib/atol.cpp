@@ -26,7 +26,7 @@ long int Catol::atol_c(const char* str)
 #endif
 
 #if ATOL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATOL_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef MOVNTPD_H
 #define MOVNTPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVNTPD {
 	class CMOVNTPD :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIAL_TREE_H
 #define MATERIAL_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_tree {
 	class Cmaterial_tree :public Object

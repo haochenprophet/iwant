@@ -26,7 +26,7 @@ FILE* Ctmpfile::tmpfile_c(void)
 #endif
 
 #if TMPFILE_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "TMPFILE_TEST\n\n";
 

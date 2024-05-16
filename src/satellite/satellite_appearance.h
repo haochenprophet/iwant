@@ -1,7 +1,7 @@
 #ifndef SATELLITE_APPEARANCE_H
 #define SATELLITE_APPEARANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_appearance {
 	class Csatellite_appearance :public Object

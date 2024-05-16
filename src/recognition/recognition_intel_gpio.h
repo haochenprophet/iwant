@@ -1,7 +1,7 @@
 #ifndef RECOGNITION_INTEL_GPIO_H
 #define RECOGNITION_INTEL_GPIO_H
 
-#include "object.h"
+#include "object/object.h"
 #include "recognition_tab.h"
 
 #define INTEL_SBREG_BAR             0xFD000000

@@ -21,7 +21,7 @@ Cocean_time::~Cocean_time()
 #endif
 
 #if OCEAN_TIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

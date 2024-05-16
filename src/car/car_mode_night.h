@@ -1,7 +1,7 @@
 #ifndef CAR_MODE_NIGHT_H
 #define CAR_MODE_NIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mode_night {
 	class Ccar_mode_night :public Object

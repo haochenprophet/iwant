@@ -1,7 +1,7 @@
 #ifndef SENSOR_ORIGIN_H
 #define SENSOR_ORIGIN_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_origin {
 	class Csensor_origin :public Object

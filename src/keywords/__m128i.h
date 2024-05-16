@@ -1,7 +1,7 @@
 #ifndef __M128I_H
 #define __M128I_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___m128i {
 	class C__m128i :public Object

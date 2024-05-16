@@ -1,7 +1,7 @@
 #ifndef SECURITY_REALTIME_H
 #define SECURITY_REALTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_realtime {
 	class Csecurity_realtime :public Object

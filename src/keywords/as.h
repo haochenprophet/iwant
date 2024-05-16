@@ -1,7 +1,7 @@
 #ifndef AS_H
 #define AS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_as {
 	class Cas :public Object

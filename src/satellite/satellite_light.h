@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LIGHT_H
 #define SATELLITE_LIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_light {
 	class Csatellite_light :public Object

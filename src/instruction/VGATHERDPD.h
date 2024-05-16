@@ -1,7 +1,7 @@
 #ifndef VGATHERDPD_H
 #define VGATHERDPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VGATHERDPD {
 	class CVGATHERDPD :public Object

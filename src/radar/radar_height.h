@@ -1,7 +1,7 @@
 #ifndef RADAR_HEIGHT_H
 #define RADAR_HEIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_height {
 	class Cradar_height :public Object

@@ -1,7 +1,7 @@
 #ifndef __INT32_H
 #define __INT32_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___int32 {
 	class C__int32 :public Object

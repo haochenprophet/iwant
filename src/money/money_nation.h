@@ -1,7 +1,7 @@
 #ifndef MONEY_NATION_H
 #define MONEY_NATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_nation {
 	class Cmoney_nation :public Object

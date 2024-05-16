@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LASER_H
 #define SATELLITE_LASER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_laser {
 	class Csatellite_laser :public Object

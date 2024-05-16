@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_CAMERA_H
 #define SPACEPORT_CAMERA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_camera {
 	class Cspaceport_camera :public Object

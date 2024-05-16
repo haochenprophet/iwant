@@ -1,7 +1,7 @@
 #ifndef EARTH_OCEAN_H
 #define EARTH_OCEAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_ocean {
 	class Cearth_ocean :public Object

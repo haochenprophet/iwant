@@ -1,7 +1,7 @@
 #ifndef RADAR_LENGTH_H
 #define RADAR_LENGTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_length {
 	class Cradar_length :public Object

@@ -1,7 +1,7 @@
 #ifndef RADAR_ID_H
 #define RADAR_ID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_id {
 	class Cradar_id :public Object

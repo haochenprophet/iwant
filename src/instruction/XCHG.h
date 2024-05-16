@@ -1,7 +1,7 @@
 #ifndef XCHG_H
 #define XCHG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XCHG {
 	class CXCHG :public Object

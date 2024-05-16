@@ -1,7 +1,7 @@
 #ifndef XADD_H
 #define XADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XADD {
 	class CXADD :public Object

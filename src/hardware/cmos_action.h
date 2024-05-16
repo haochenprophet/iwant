@@ -1,6 +1,6 @@
 #ifndef CMOS_ACTION_H
 #define CMOS_ACTION_H
-#include "../object.h"
+#include "object/object.h"
 
 enum class CmosAtcionClass
 {

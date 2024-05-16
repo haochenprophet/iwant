@@ -1,7 +1,7 @@
 #ifndef MONEY_STATUS_H
 #define MONEY_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_status {
 	class Cmoney_status :public Object

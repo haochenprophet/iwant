@@ -1,7 +1,7 @@
 #ifndef SQL_GROUP_H
 #define SQL_GROUP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_GROUP {
 	class Csql_GROUP :public Object

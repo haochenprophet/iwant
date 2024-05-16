@@ -1,7 +1,7 @@
 #ifndef FLOOR_H
 #define FLOOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_floor {
 	class Cfloor :public Object

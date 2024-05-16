@@ -1,7 +1,7 @@
 #ifndef SATELLITE_FIRE_H
 #define SATELLITE_FIRE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_fire {
 	class Csatellite_fire :public Object

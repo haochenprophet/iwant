@@ -1,7 +1,7 @@
 #ifndef ACOS_H
 #define ACOS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_acos {
 	class Cacos :public Object

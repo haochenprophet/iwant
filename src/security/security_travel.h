@@ -1,7 +1,7 @@
 #ifndef SECURITY_TRAVEL_H
 #define SECURITY_TRAVEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_travel {
 	class Csecurity_travel :public Object

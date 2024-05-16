@@ -1,7 +1,7 @@
 #ifndef ISALPHA_H
 #define ISALPHA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isalpha {
 	class Cisalpha :public Object

@@ -1,7 +1,7 @@
 #ifndef KANDNQ_H
 #define KANDNQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KANDNQ {
 	class CKANDNQ :public Object

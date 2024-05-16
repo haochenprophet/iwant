@@ -1,7 +1,7 @@
 #ifndef CRC32_H
 #define CRC32_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CRC32 {
 	class CCRC32 :public Object

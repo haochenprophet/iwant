@@ -1,7 +1,7 @@
 #ifndef MARS_COMMUNICATION_H
 #define MARS_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_communication {
 	class Cmars_communication :public Object

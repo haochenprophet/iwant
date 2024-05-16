@@ -1,7 +1,7 @@
 #ifndef OPENSSL_H
 #define OPENSSL_H
 
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 
 namespace n_openssl {
 	class Copenssl :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_WINDOW_H
 #define SECURITY_WINDOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_window {
 	class Csecurity_window :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_STOREROOM_H
 #define SPACEPORT_STOREROOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_storeroom {
 	class Cspaceport_storeroom :public Object

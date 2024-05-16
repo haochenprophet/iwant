@@ -1,7 +1,7 @@
 #ifndef INVLPG_H
 #define INVLPG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INVLPG {
 	class CINVLPG :public Object

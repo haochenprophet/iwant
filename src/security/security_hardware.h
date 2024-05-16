@@ -1,7 +1,7 @@
 #ifndef SECURITY_HARDWARE_H
 #define SECURITY_HARDWARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_hardware {
 	class Csecurity_hardware :public Object

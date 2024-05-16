@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TELEVISION_H
 #define SPACEPORT_TELEVISION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_television {
 	class Cspaceport_television :public Object

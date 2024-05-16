@@ -1,7 +1,7 @@
 #ifndef CRC_H
 #define CRC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_crc {
 	class Ccrc :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_THRESHOLD_H
 #define SECURITY_THRESHOLD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_threshold {
 	class Csecurity_threshold :public Object

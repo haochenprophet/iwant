@@ -1,7 +1,7 @@
 #ifndef FSTP_H
 #define FSTP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FSTP {
 	class CFSTP :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_FLOOD_H
 #define SECURITY_FLOOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_flood {
 	class Csecurity_flood :public Object

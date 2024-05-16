@@ -1,7 +1,7 @@
 #ifndef MATERIAL_SERIAL_NUMBER_H
 #define MATERIAL_SERIAL_NUMBER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_serial_number {
 	class Cmaterial_serial_number :public Object

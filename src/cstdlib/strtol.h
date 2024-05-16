@@ -1,7 +1,7 @@
 #ifndef STRTOL_H
 #define STRTOL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strtol {
 	class Cstrtol :public Object

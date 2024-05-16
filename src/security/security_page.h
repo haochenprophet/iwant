@@ -1,7 +1,7 @@
 #ifndef SECURITY_PAGE_H
 #define SECURITY_PAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_page {
 	class Csecurity_page :public Object

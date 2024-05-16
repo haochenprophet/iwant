@@ -21,7 +21,7 @@ Csatellite_can_bus::~Csatellite_can_bus()
 #endif
 
 #if SATELLITE_CAN_BUS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

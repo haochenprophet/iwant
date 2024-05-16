@@ -1,7 +1,7 @@
 #ifndef VPMOVSWB_H
 #define VPMOVSWB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVSWB {
 	class CVPMOVSWB :public Object

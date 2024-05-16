@@ -21,7 +21,7 @@ Chome_camera::~Chome_camera()
 #endif
 
 #if HOME_CAMERA_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

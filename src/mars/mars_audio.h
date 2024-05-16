@@ -1,7 +1,7 @@
 #ifndef MARS_AUDIO_H
 #define MARS_AUDIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_audio {
 	class Cmars_audio :public Object

@@ -37,7 +37,7 @@ long double Cremainder::remainderl_c(long double numer, long double denom)
 #endif
 
 #if REMAINDER_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "REMAINDER_TEST\n\n";

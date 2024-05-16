@@ -27,7 +27,7 @@ size_t Cfwrite::fwrite_c(const void* ptr, size_t size, size_t count, FILE* strea
 #endif
 
 #if FWRITE_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FWRITE_TEST\n\n";
 

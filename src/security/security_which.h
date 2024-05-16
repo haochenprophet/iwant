@@ -1,7 +1,7 @@
 #ifndef SECURITY_WHICH_H
 #define SECURITY_WHICH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_which {
 	class Csecurity_which :public Object

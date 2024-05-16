@@ -1,7 +1,7 @@
 #ifndef FADD_H
 #define FADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FADD {
 	class CFADD :public Object

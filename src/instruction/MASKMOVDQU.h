@@ -1,7 +1,7 @@
 #ifndef MASKMOVDQU_H
 #define MASKMOVDQU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MASKMOVDQU {
 	class CMASKMOVDQU :public Object

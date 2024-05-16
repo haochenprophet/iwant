@@ -1,7 +1,7 @@
 #ifndef RDPMC_H
 #define RDPMC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDPMC {
 	class CRDPMC :public Object

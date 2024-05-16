@@ -1,7 +1,7 @@
 #ifndef __PROPERTY_H
 #define __PROPERTY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___property {
 	class C__property :public Object

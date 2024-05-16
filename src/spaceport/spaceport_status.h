@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_STATUS_H
 #define SPACEPORT_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_status {
 	class Cspaceport_status :public Object

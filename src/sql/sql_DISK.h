@@ -1,7 +1,7 @@
 #ifndef SQL_DISK_H
 #define SQL_DISK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DISK {
 	class Csql_DISK :public Object

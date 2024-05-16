@@ -1,7 +1,7 @@
 #ifndef SECURITY_START_H
 #define SECURITY_START_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_start {
 	class Csecurity_start :public Object

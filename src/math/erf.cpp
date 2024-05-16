@@ -32,7 +32,7 @@ long double Cerf::erfl_c(long double x)
 #endif
 
 #if ERF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ERF_TEST\n\n";

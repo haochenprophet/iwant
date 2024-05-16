@@ -1,7 +1,7 @@
 #ifndef OCEAN_LOG_H
 #define OCEAN_LOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_log {
 	class Cocean_log :public Object

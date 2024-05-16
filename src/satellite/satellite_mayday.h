@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MAYDAY_H
 #define SATELLITE_MAYDAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mayday {
 	class Csatellite_mayday :public Object

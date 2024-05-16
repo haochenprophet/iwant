@@ -1,7 +1,7 @@
 #ifndef REPE_H
 #define REPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_REPE {
 	class CREPE :public Object

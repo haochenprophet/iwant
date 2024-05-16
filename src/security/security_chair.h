@@ -1,7 +1,7 @@
 #ifndef SECURITY_CHAIR_H
 #define SECURITY_CHAIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_chair {
 	class Csecurity_chair :public Object

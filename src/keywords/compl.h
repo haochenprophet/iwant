@@ -1,7 +1,7 @@
 #ifndef COMPL_H
 #define COMPL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_compl {
 	class Ccompl :public Object

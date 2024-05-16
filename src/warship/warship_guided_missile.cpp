@@ -21,7 +21,7 @@ Cwarship_guided_missile::~Cwarship_guided_missile()
 #endif
 
 #if WARSHIP_GUIDED_MISSILE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef CODE_FETCH_H
 #define CODE_FETCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_fetch {
 	class Ccode_fetch :public Object

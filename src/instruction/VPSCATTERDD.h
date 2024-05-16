@@ -1,7 +1,7 @@
 #ifndef VPSCATTERDD_H
 #define VPSCATTERDD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPSCATTERDD {
 	class CVPSCATTERDD :public Object

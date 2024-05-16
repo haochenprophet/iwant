@@ -21,7 +21,7 @@ Cocean_salinity::~Cocean_salinity()
 #endif
 
 #if OCEAN_SALINITY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

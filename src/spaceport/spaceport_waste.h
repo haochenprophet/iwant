@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_WASTE_H
 #define SPACEPORT_WASTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_waste {
 	class Cspaceport_waste :public Object

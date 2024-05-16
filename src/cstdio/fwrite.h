@@ -1,7 +1,7 @@
 #ifndef FWRITE_H
 #define FWRITE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fwrite {
 	class Cfwrite :public Object

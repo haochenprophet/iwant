@@ -1,7 +1,7 @@
 #ifndef RDPKRU_H
 #define RDPKRU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDPKRU {
 	class CRDPKRU :public Object

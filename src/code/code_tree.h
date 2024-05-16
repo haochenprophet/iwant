@@ -1,7 +1,7 @@
 #ifndef CODE_TREE_H
 #define CODE_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_tree {
 	class Ccode_tree :public Object

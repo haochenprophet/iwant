@@ -1,7 +1,7 @@
 #ifndef ASCTIME_H
 #define ASCTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_asctime {
 	class Casctime :public Object

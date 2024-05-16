@@ -1,7 +1,7 @@
 #ifndef RADAR_LOCK_H
 #define RADAR_LOCK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_lock {
 	class Cradar_lock :public Object

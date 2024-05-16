@@ -1,7 +1,7 @@
 #ifndef SECURITY_ILLATION_H
 #define SECURITY_ILLATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_illation {
 	class Csecurity_illation :public Object

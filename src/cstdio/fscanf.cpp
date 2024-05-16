@@ -35,7 +35,7 @@ int Cfscanf::fscanf_c(FILE* stream, const char* format, ...)
 #endif
 
 #if FSCANF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FSCANF_TEST\n\n";
 

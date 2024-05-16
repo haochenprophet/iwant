@@ -1,7 +1,7 @@
 #ifndef SECURITY_FUTURE_H
 #define SECURITY_FUTURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_future {
 	class Csecurity_future :public Object

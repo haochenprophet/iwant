@@ -1,7 +1,7 @@
 #ifndef CAR_MAP_H
 #define CAR_MAP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_map {
 	class Ccar_map :public Object

@@ -1,7 +1,7 @@
 #ifndef EARTH_MECHANICAL_H
 #define EARTH_MECHANICAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_mechanical {
 	class Cearth_mechanical :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_HOUSE_H
 #define SECURITY_HOUSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_house {
 	class Csecurity_house :public Object

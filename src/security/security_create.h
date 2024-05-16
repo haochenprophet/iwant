@@ -1,7 +1,7 @@
 #ifndef SECURITY_CREATE_H
 #define SECURITY_CREATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_create {
 	class Csecurity_create :public Object

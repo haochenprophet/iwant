@@ -1,7 +1,7 @@
 #ifndef SQL_OPEN_H
 #define SQL_OPEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OPEN {
 	class Csql_OPEN :public Object

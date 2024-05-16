@@ -1,7 +1,7 @@
 #ifndef TIMEPOINT_H
 #define TIMEPOINT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_timepoint {
 

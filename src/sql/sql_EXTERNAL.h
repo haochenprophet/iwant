@@ -1,7 +1,7 @@
 #ifndef SQL_EXTERNAL_H
 #define SQL_EXTERNAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_EXTERNAL {
 	class Csql_EXTERNAL :public Object

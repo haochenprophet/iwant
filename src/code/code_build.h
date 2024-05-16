@@ -1,7 +1,7 @@
 #ifndef CODE_BUILD_H
 #define CODE_BUILD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_build {
 	class Ccode_build :public Object

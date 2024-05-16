@@ -26,7 +26,7 @@ int Catoi::atoi_c(const char* str)
 #endif
 
 #if ATOI_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATOI_TEST\n\n";

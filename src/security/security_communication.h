@@ -1,7 +1,7 @@
 #ifndef SECURITY_COMMUNICATION_H
 #define SECURITY_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_communication {
 	class Csecurity_communication :public Object

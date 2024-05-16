@@ -1,7 +1,7 @@
 #ifndef CAR_LOG_H
 #define CAR_LOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_log {
 	class Ccar_log :public Object

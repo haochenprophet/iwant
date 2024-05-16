@@ -1,7 +1,7 @@
 #ifndef CAR_BLUETOOTH_H
 #define CAR_BLUETOOTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_bluetooth {
 	class Ccar_bluetooth :public Object

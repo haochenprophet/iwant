@@ -1,7 +1,7 @@
 #ifndef DIVSD_H
 #define DIVSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_DIVSD {
 	class CDIVSD :public Object

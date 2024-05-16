@@ -1,7 +1,7 @@
 #ifndef RESET_H
 #define RESET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_reset {
 	class Creset :public Object

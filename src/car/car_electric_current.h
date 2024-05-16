@@ -1,7 +1,7 @@
 #ifndef CAR_ELECTRIC_CURRENT_H
 #define CAR_ELECTRIC_CURRENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_electric_current {
 	class Ccar_electric_current :public Object

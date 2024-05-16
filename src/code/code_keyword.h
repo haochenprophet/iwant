@@ -1,7 +1,7 @@
 #ifndef CODE_KEYWORD_H
 #define CODE_KEYWORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_keyword {
 	class Ccode_keyword :public Object

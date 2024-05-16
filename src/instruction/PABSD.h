@@ -1,7 +1,7 @@
 #ifndef PABSD_H
 #define PABSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PABSD {
 	class CPABSD :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_CURRENT_H
 #define SQL_CURRENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CURRENT {
 	class Csql_CURRENT :public Object

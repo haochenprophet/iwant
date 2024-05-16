@@ -1,7 +1,7 @@
 #ifndef LIFE_REST_H
 #define LIFE_REST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_rest {
 	class Clife_rest :public Object

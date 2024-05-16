@@ -1,7 +1,7 @@
 #ifndef FIDIVR_H
 #define FIDIVR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FIDIVR {
 	class CFIDIVR :public Object

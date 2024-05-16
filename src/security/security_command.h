@@ -1,7 +1,7 @@
 #ifndef SECURITY_COMMAND_H
 #define SECURITY_COMMAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_command {
 	class Csecurity_command :public Object

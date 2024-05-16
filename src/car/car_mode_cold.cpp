@@ -21,7 +21,7 @@ Ccar_mode_cold::~Ccar_mode_cold()
 #endif
 
 #if CAR_MODE_COLD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

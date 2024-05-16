@@ -1,7 +1,7 @@
 #ifndef SECURITY_TAG_H
 #define SECURITY_TAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_tag {
 	class Csecurity_tag :public Object

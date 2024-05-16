@@ -1,7 +1,7 @@
 #ifndef EMMS_H
 #define EMMS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_EMMS {
 	class CEMMS :public Object

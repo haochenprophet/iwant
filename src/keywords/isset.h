@@ -1,7 +1,7 @@
 #ifndef ISSET_H
 #define ISSET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isset {
 	class Cisset :public Object

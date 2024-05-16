@@ -1,7 +1,7 @@
 #ifndef SENSOR_TIME_H
 #define SENSOR_TIME_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_time {
 	class Csensor_time :public Object

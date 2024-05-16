@@ -1,7 +1,7 @@
 #ifndef OCEAN_ORE_H
 #define OCEAN_ORE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_ore {
 	class Cocean_ore :public Object

@@ -1,7 +1,7 @@
 #ifndef FMUL_H
 #define FMUL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FMUL {
 	class CFMUL :public Object

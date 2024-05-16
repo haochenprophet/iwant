@@ -1,7 +1,7 @@
 #ifndef WARSHIP_COMPUTER_H
 #define WARSHIP_COMPUTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_computer {
 	class Cwarship_computer :public Object

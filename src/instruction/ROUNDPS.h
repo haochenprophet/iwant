@@ -1,7 +1,7 @@
 #ifndef ROUNDPS_H
 #define ROUNDPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ROUNDPS {
 	class CROUNDPS :public Object

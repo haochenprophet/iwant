@@ -21,7 +21,7 @@ Csecurity_page::~Csecurity_page()
 #endif
 
 #if SECURITY_PAGE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

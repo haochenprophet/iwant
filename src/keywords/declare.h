@@ -1,7 +1,7 @@
 #ifndef DECLARE_H
 #define DECLARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_declare {
 	class Cdeclare :public Object

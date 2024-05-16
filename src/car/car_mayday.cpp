@@ -21,7 +21,7 @@ Ccar_mayday::~Ccar_mayday()
 #endif
 
 #if CAR_MAYDAY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

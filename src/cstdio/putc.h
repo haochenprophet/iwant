@@ -1,7 +1,7 @@
 #ifndef PUTC_H
 #define PUTC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_putc {
 	class Cputc :public Object

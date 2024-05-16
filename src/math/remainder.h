@@ -1,7 +1,7 @@
 #ifndef REMAINDER_H
 #define REMAINDER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_remainder {
 	class Cremainder :public Object

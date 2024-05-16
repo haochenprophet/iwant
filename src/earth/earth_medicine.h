@@ -1,7 +1,7 @@
 #ifndef EARTH_MEDICINE_H
 #define EARTH_MEDICINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_medicine {
 	class Cearth_medicine :public Object

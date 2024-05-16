@@ -1,7 +1,7 @@
 #ifndef ATOMIC_NOEXCEPT_H
 #define ATOMIC_NOEXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atomic_noexcept {
 	class Catomic_noexcept :public Object

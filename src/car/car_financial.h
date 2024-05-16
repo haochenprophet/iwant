@@ -1,7 +1,7 @@
 #ifndef CAR_FINANCIAL_H
 #define CAR_FINANCIAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_financial {
 	class Ccar_financial :public Object

@@ -1,7 +1,7 @@
 #ifndef VEXPANDPD_H
 #define VEXPANDPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VEXPANDPD {
 	class CVEXPANDPD :public Object

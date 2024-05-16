@@ -21,7 +21,7 @@ Csatellite_lock::~Csatellite_lock()
 #endif
 
 #if SATELLITE_LOCK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

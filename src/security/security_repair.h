@@ -1,7 +1,7 @@
 #ifndef SECURITY_REPAIR_H
 #define SECURITY_REPAIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_repair {
 	class Csecurity_repair :public Object

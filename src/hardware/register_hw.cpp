@@ -302,7 +302,7 @@ int  Cregister_hw::time_action(void* timeline)//deal time function
 #endif
 
 #if REGISTER_HW_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 
 //io table //test code 
 #define REG_BASE_ADDRESS 0x500

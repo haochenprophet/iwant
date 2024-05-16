@@ -1,7 +1,7 @@
 #ifndef MATERIEL_STATISTICS_H
 #define MATERIEL_STATISTICS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_statistics {
 	class Cmateriel_statistics :public Object

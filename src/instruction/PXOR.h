@@ -1,7 +1,7 @@
 #ifndef PXOR_H
 #define PXOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PXOR {
 	class CPXOR :public Object

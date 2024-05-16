@@ -1,7 +1,7 @@
 #ifndef SQL_JOIN_H
 #define SQL_JOIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_JOIN {
 	class Csql_JOIN :public Object

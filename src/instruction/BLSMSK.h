@@ -1,7 +1,7 @@
 #ifndef BLSMSK_H
 #define BLSMSK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BLSMSK {
 	class CBLSMSK :public Object

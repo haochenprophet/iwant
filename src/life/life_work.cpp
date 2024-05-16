@@ -21,7 +21,7 @@ Clife_work::~Clife_work()
 #endif
 
 #if LIFE_WORK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

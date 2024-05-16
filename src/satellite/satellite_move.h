@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MOVE_H
 #define SATELLITE_MOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_move {
 	class Csatellite_move :public Object

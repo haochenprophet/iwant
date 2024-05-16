@@ -1,7 +1,7 @@
 #ifndef MATERIAL_ACTION_BUY_H
 #define MATERIAL_ACTION_BUY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_action_buy {
 	class Cmaterial_action_buy :public Object

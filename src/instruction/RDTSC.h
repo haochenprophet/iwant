@@ -1,7 +1,7 @@
 #ifndef RDTSC_H
 #define RDTSC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDTSC {
 	class CRDTSC :public Object

@@ -1,7 +1,7 @@
 #ifndef SETCC_H
 #define SETCC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SETcc {
 	class CSETcc :public Object

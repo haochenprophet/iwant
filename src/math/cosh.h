@@ -1,7 +1,7 @@
 #ifndef COSH_H
 #define COSH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cosh {
 	class Ccosh :public Object

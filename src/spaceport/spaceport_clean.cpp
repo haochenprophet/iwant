@@ -21,7 +21,7 @@ Cspaceport_clean::~Cspaceport_clean()
 #endif
 
 #if SPACEPORT_CLEAN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

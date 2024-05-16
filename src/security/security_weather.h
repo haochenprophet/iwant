@@ -1,7 +1,7 @@
 #ifndef SECURITY_WEATHER_H
 #define SECURITY_WEATHER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_weather {
 	class Csecurity_weather :public Object

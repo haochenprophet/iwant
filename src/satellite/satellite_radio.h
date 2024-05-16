@@ -1,7 +1,7 @@
 #ifndef SATELLITE_RADIO_H
 #define SATELLITE_RADIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_radio {
 	class Csatellite_radio :public Object

@@ -26,7 +26,7 @@ double Cpow::pow_c(double base, double exponent)
 #endif
 
 #if POW_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "POW_TEST\n\n";

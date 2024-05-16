@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ELECTRICITY_H
 #define SATELLITE_ELECTRICITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_electricity {
 	class Csatellite_electricity :public Object

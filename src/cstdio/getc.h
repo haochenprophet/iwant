@@ -1,7 +1,7 @@
 #ifndef GETC_H
 #define GETC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_getc {
 	class Cgetc :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_OXYGEN_H
 #define SPACEPORT_OXYGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_oxygen {
 	class Cspaceport_oxygen :public Object

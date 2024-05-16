@@ -1,7 +1,7 @@
 #ifndef CAR_MODE_SNOW_H
 #define CAR_MODE_SNOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mode_snow {
 	class Ccar_mode_snow :public Object

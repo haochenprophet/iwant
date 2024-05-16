@@ -1,7 +1,7 @@
 #ifndef RSQRTPS_H
 #define RSQRTPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RSQRTPS {
 	class CRSQRTPS :public Object

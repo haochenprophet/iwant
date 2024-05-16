@@ -1,7 +1,7 @@
 #ifndef LEAVE_H
 #define LEAVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LEAVE {
 	class CLEAVE :public Object

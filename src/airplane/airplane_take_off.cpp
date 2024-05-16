@@ -21,7 +21,7 @@ Cairplane_take_off::~Cairplane_take_off()
 #endif
 
 #if AIRPLANE_TAKE_OFF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

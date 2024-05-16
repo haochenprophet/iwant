@@ -1,7 +1,7 @@
 #ifndef SATELLITE_POLICY_H
 #define SATELLITE_POLICY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_policy {
 	class Csatellite_policy :public Object

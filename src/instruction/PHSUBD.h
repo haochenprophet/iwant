@@ -1,7 +1,7 @@
 #ifndef PHSUBD_H
 #define PHSUBD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PHSUBD {
 	class CPHSUBD :public Object

@@ -1,7 +1,7 @@
 #ifndef FREOPEN_H
 #define FREOPEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_freopen {
 	class Cfreopen :public Object

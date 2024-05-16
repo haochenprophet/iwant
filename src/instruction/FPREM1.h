@@ -1,7 +1,7 @@
 #ifndef FPREM1_H
 #define FPREM1_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FPREM1 {
 	class CFPREM1 :public Object

@@ -1,7 +1,7 @@
 #ifndef SENSOR_BASIC_POINT_H
 #define SENSOR_BASIC_POINT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_basic_point {
 	class Csensor_basic_point :public Object

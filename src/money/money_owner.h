@@ -1,7 +1,7 @@
 #ifndef MONEY_OWNER_H
 #define MONEY_OWNER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_owner {
 	class Cmoney_owner :public Object

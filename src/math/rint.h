@@ -1,7 +1,7 @@
 #ifndef RINT_H
 #define RINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rint {
 	class Crint :public Object

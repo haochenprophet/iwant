@@ -1,7 +1,7 @@
 #ifndef FXCH_H
 #define FXCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FXCH {
 	class CFXCH :public Object

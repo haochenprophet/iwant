@@ -1,7 +1,7 @@
 #ifndef CAR_CLUTH_H
 #define CAR_CLUTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_cluth {
 	class Ccar_cluth :public Object

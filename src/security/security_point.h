@@ -1,7 +1,7 @@
 #ifndef SECURITY_POINT_H
 #define SECURITY_POINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_point {
 	class Csecurity_point :public Object

@@ -1,7 +1,7 @@
 #ifndef KXORD_H
 #define KXORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KXORD {
 	class CKXORD :public Object

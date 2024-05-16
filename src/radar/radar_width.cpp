@@ -21,7 +21,7 @@ Cradar_width::~Cradar_width()
 #endif
 
 #if RADAR_WIDTH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

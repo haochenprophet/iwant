@@ -1,7 +1,7 @@
 #ifndef CAR_WEAPONS_H
 #define CAR_WEAPONS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_weapons {
 	class Ccar_weapons :public Object

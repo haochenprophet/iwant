@@ -1,7 +1,7 @@
 #ifndef CPU_H
 #define CPU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cpu {
 	class Ccpu :public Object

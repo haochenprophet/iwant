@@ -21,7 +21,7 @@ Cradar_emission::~Cradar_emission()
 #endif
 
 #if RADAR_EMISSION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

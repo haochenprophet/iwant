@@ -1,7 +1,7 @@
 #ifndef VSPRINTF_H
 #define VSPRINTF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_vsprintf {
 	class Cvsprintf :public Object

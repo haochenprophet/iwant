@@ -1,7 +1,7 @@
 #ifndef SENSOR_WRITE_H
 #define SENSOR_WRITE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_write {
 	class Csensor_write :public Object

@@ -1,7 +1,7 @@
 #ifndef _EXIT_H
 #define _EXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__Exit {
 	class C_Exit :public Object

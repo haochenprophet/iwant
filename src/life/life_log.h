@@ -1,7 +1,7 @@
 #ifndef LIFE_LOG_H
 #define LIFE_LOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_log {
 	class Clife_log :public Object

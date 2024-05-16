@@ -1,7 +1,7 @@
 #ifndef BNDCU_H
 #define BNDCU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BNDCU {
 	class CBNDCU :public Object

@@ -1,7 +1,7 @@
 #ifndef SENSOR_COMMUNICATION_H
 #define SENSOR_COMMUNICATION_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_communication {
 	class Csensor_communication :public Object

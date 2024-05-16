@@ -1,7 +1,7 @@
 #ifndef HOME_DECORATE_H
 #define HOME_DECORATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_decorate {
 	class Chome_decorate :public Object

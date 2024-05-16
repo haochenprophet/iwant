@@ -1,7 +1,7 @@
 #ifndef SATELLITE_PROJECTOR_H
 #define SATELLITE_PROJECTOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_projector {
 	class Csatellite_projector :public Object

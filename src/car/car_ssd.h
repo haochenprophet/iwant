@@ -1,7 +1,7 @@
 #ifndef CAR_SSD_H
 #define CAR_SSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_ssd {
 	class Ccar_ssd :public Object

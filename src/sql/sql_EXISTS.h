@@ -1,7 +1,7 @@
 #ifndef SQL_EXISTS_H
 #define SQL_EXISTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_EXISTS {
 	class Csql_EXISTS :public Object

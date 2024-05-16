@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_ROBOT_H
 #define SPACEPORT_ROBOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_robot {
 	class Cspaceport_robot :public Object

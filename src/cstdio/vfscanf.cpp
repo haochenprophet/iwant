@@ -26,7 +26,7 @@ int Cvfscanf::vfscanf_c(FILE* stream, const char* format, va_list arg)
 #endif
 
 #if VFSCANF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "VFSCANF_TEST\n\n";
 

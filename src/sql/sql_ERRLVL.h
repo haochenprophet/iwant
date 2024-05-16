@@ -1,7 +1,7 @@
 #ifndef SQL_ERRLVL_H
 #define SQL_ERRLVL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ERRLVL {
 	class Csql_ERRLVL :public Object

@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_ELEVATOR_H
 #define AIRPLANE_ELEVATOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_elevator {
 	class Cairplane_elevator :public Object

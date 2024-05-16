@@ -21,7 +21,7 @@ Cwarship_commander::~Cwarship_commander()
 #endif
 
 #if WARSHIP_COMMANDER_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

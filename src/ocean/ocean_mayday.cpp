@@ -21,7 +21,7 @@ Cocean_mayday::~Cocean_mayday()
 #endif
 
 #if OCEAN_MAYDAY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef MAXPD_H
 #define MAXPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MAXPD {
 	class CMAXPD :public Object

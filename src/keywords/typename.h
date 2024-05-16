@@ -1,7 +1,7 @@
 #ifndef TYPENAME_H
 #define TYPENAME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_typename {
 	class Ctypename :public Object

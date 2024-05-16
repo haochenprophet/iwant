@@ -1,7 +1,7 @@
 #ifndef SATELLITE_AI_H
 #define SATELLITE_AI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_ai {
 	class Csatellite_ai :public Object

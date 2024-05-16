@@ -1,7 +1,7 @@
 #ifndef CAR_MIRROR_H
 #define CAR_MIRROR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mirror {
 	class Ccar_mirror :public Object

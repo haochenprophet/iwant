@@ -1,7 +1,7 @@
 #ifndef OBJECT_HOME_H
 #define OBJECT_HOME_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_home {
 	class Chome:public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_WHERE_H
 #define SQL_WHERE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WHERE {
 	class Csql_WHERE :public Object

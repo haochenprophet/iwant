@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_COWLING_H
 #define AIRPLANE_COWLING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_cowling {
 	class Cairplane_cowling :public Object

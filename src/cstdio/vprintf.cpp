@@ -26,7 +26,7 @@ int Cvprintf::vprintf_c(const char* format, va_list arg)
 #endif
 
 #if VPRINTF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "VPRINTF_TEST\n\n";

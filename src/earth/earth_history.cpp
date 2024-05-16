@@ -21,7 +21,7 @@ Cearth_history::~Cearth_history()
 #endif
 
 #if EARTH_HISTORY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

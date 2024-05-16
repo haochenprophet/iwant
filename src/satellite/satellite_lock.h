@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LOCK_H
 #define SATELLITE_LOCK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_lock {
 	class Csatellite_lock :public Object

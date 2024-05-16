@@ -1,7 +1,7 @@
 #ifndef CODE_PACKAGE_H
 #define CODE_PACKAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_package {
 	class Ccode_package :public Object

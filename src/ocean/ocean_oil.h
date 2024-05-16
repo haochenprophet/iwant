@@ -1,7 +1,7 @@
 #ifndef OCEAN_OIL_H
 #define OCEAN_OIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_oil {
 	class Cocean_oil :public Object

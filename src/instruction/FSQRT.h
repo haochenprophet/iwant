@@ -1,7 +1,7 @@
 #ifndef FSQRT_H
 #define FSQRT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FSQRT {
 	class CFSQRT :public Object

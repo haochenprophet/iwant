@@ -1,7 +1,7 @@
 #ifndef VRANGEPD_H
 #define VRANGEPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VRANGEPD {
 	class CVRANGEPD :public Object

@@ -21,7 +21,7 @@ Csatellite_ai::~Csatellite_ai()
 #endif
 
 #if SATELLITE_AI_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef HOME_TREE_H
 #define HOME_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_tree {
 	class Chome_tree :public Object

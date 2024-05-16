@@ -1,7 +1,7 @@
 #ifndef MONEY_SHAPE_H
 #define MONEY_SHAPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_shape {
 	class Cmoney_shape :public Object

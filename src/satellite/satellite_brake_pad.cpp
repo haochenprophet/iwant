@@ -21,7 +21,7 @@ Csatellite_brake_pad::~Csatellite_brake_pad()
 #endif
 
 #if SATELLITE_BRAKE_PAD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

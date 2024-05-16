@@ -1,7 +1,7 @@
 #ifndef FPRINTF_H
 #define FPRINTF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fprintf {
 	class Cfprintf :public Object

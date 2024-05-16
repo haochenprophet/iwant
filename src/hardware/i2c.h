@@ -1,7 +1,7 @@
 #ifndef I2C_H
 #define I2C_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_i2c {
 	class Ci2c :public Object

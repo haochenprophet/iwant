@@ -1,7 +1,7 @@
 #ifndef ISXDIGIT_H
 #define ISXDIGIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isxdigit {
 	class Cisxdigit :public Object

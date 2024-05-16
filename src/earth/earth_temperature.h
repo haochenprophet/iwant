@@ -1,7 +1,7 @@
 #ifndef EARTH_TEMPERATURE_H
 #define EARTH_TEMPERATURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_temperature {
 	class Cearth_temperature :public Object

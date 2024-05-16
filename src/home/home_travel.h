@@ -1,7 +1,7 @@
 #ifndef HOME_TRAVEL_H
 #define HOME_TRAVEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_travel {
 	class Chome_travel :public Object

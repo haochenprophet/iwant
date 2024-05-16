@@ -1,7 +1,7 @@
 #ifndef KADDW_H
 #define KADDW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KADDW {
 	class CKADDW :public Object

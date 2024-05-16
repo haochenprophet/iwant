@@ -24,7 +24,7 @@ float Cstrtof::strtof_c(const char* str, char** endptr)
 #endif
 
 #if STRTOF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRTOF_TEST\n\n";

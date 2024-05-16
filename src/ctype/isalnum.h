@@ -1,7 +1,7 @@
 #ifndef ISALNUM_H
 #define ISALNUM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isalnum {
 	class Cisalnum :public Object

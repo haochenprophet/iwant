@@ -1,7 +1,7 @@
 #ifndef PRINTF_H
 #define PRINTF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_printf {
 	class Cprintf :public Object

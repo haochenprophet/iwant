@@ -1,7 +1,7 @@
 #ifndef CAR_MESSAGE_H
 #define CAR_MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_message {
 	class Ccar_message :public Object

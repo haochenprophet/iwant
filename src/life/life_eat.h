@@ -1,7 +1,7 @@
 #ifndef LIFE_EAT_H
 #define LIFE_EAT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_eat {
 	class Clife_eat :public Object

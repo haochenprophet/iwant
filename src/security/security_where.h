@@ -1,7 +1,7 @@
 #ifndef SECURITY_WHERE_H
 #define SECURITY_WHERE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_where {
 	class Csecurity_where :public Object

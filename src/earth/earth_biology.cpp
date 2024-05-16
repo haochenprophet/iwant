@@ -21,7 +21,7 @@ Cearth_biology::~Cearth_biology()
 #endif
 
 #if EARTH_BIOLOGY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

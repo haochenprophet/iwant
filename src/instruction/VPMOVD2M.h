@@ -1,7 +1,7 @@
 #ifndef VPMOVD2M_H
 #define VPMOVD2M_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVD2M {
 	class CVPMOVD2M :public Object

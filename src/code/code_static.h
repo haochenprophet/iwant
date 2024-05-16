@@ -1,7 +1,7 @@
 #ifndef CODE_STATIC_H
 #define CODE_STATIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_static {
 	class Ccode_static :public Object

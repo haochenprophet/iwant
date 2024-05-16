@@ -1,7 +1,7 @@
 #ifndef MATERIEL_SELECT_H
 #define MATERIEL_SELECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_select {
 	class Cmateriel_select :public Object

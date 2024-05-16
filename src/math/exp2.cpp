@@ -33,7 +33,7 @@ long double Cexp2::exp2l_c(long double x)
 #endif
 
 #if EXP2_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "EXP2_TEST\n\n";

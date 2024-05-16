@@ -1,7 +1,7 @@
 #ifndef CAR_MCU_H
 #define CAR_MCU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mcu {
 	class Ccar_mcu :public Object

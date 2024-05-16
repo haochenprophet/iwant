@@ -1,7 +1,7 @@
 #ifndef STRCHR_H
 #define STRCHR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strchr {
 	class Cstrchr :public Object

@@ -1,7 +1,7 @@
 #ifndef HOME_TIMELINE_H
 #define HOME_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_timeline {
 	class Chome_timeline :public Object

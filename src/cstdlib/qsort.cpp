@@ -25,7 +25,7 @@ void Cqsort::qsort_c(void* base, size_t num, size_t size, int (*compar)(const vo
 #endif
 
 #if QSORT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "QSORT_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef CODE_REMOVE_H
 #define CODE_REMOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_remove {
 	class Ccode_remove :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_GESTURE_H
 #define CAR_GESTURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_gesture {
 	class Ccar_gesture :public Object

@@ -1,7 +1,7 @@
 #ifndef REMOVE_H
 #define REMOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_remove {
 	class Cremove :public Object

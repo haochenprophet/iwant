@@ -1,7 +1,7 @@
 #ifndef CAR_VOLTAGE_H
 #define CAR_VOLTAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_voltage {
 	class Ccar_voltage :public Object

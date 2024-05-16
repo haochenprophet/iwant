@@ -1,7 +1,7 @@
 #ifndef DIFFTIME_H
 #define DIFFTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_difftime {
 	class Cdifftime :public Object

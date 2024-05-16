@@ -1,7 +1,7 @@
 #ifndef SECURITY_RIGHT_H
 #define SECURITY_RIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_right {
 	class Csecurity_right :public Object

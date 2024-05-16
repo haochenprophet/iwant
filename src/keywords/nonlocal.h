@@ -1,7 +1,7 @@
 #ifndef NONLOCAL_H
 #define NONLOCAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_nonlocal {
 	class Cnonlocal :public Object

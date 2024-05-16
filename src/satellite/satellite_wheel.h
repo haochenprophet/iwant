@@ -1,7 +1,7 @@
 #ifndef SATELLITE_WHEEL_H
 #define SATELLITE_WHEEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_wheel {
 	class Csatellite_wheel :public Object

@@ -34,7 +34,7 @@ long double Cfdim::fdiml_c(long double x, long double y)
 #endif
 
 #if FDIM_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FDIM_TEST\n\n";

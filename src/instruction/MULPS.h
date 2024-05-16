@@ -1,7 +1,7 @@
 #ifndef MULPS_H
 #define MULPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MULPS {
 	class CMULPS :public Object

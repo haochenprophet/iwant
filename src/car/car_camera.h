@@ -1,7 +1,7 @@
 #ifndef CAR_CAMERA_H
 #define CAR_CAMERA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_camera {
 	class Ccar_camera :public Object

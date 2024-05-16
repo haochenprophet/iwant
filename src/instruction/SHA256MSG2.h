@@ -1,7 +1,7 @@
 #ifndef SHA256MSG2_H
 #define SHA256MSG2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SHA256MSG2 {
 	class CSHA256MSG2 :public Object

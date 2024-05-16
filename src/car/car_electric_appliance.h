@@ -1,7 +1,7 @@
 #ifndef CAR_ELECTRIC_APPLIANCE_H
 #define CAR_ELECTRIC_APPLIANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_electric_appliance {
 	class Ccar_electric_appliance :public Object

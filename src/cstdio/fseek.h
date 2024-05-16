@@ -1,7 +1,7 @@
 #ifndef FSEEK_H
 #define FSEEK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fseek {
 	class Cfseek :public Object

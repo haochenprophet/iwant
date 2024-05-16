@@ -21,7 +21,7 @@ Csecurity_ui::~Csecurity_ui()
 #endif
 
 #if SECURITY_UI_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

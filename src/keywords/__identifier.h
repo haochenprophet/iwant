@@ -1,7 +1,7 @@
 #ifndef __IDENTIFIER_H
 #define __IDENTIFIER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___identifier {
 	class C__identifier :public Object

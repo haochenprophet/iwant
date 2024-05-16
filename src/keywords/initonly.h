@@ -1,7 +1,7 @@
 #ifndef INITONLY_H
 #define INITONLY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_initonly {
 	class Cinitonly :public Object

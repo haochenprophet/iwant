@@ -1,7 +1,7 @@
 #ifndef SYSENTER_H
 #define SYSENTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SYSENTER {
 	class CSYSENTER :public Object

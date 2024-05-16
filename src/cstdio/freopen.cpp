@@ -26,7 +26,7 @@ FILE* Cfreopen::freopen_c(const char* filename, const char* mode, FILE* stream)
 #endif
 
 #if FREOPEN_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FREOPEN_TEST\n\n";
 

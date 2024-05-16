@@ -1,7 +1,7 @@
 #ifndef SQL_NONCLUSTERED_H
 #define SQL_NONCLUSTERED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_NONCLUSTERED {
 	class Csql_NONCLUSTERED :public Object

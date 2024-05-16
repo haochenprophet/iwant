@@ -1,7 +1,7 @@
 #ifndef EARTH_ORGANIZATION_H
 #define EARTH_ORGANIZATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_organization {
 	class Cearth_organization :public Object

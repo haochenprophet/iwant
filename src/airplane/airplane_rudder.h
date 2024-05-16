@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_RUDDER_H
 #define AIRPLANE_RUDDER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_rudder {
 	class Cairplane_rudder :public Object

@@ -1,7 +1,7 @@
 #ifndef SYNCHRONIZED_H
 #define SYNCHRONIZED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_synchronized {
 	class Csynchronized :public Object

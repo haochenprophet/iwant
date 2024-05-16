@@ -1,7 +1,7 @@
 #ifndef SQL_LIKE_H
 #define SQL_LIKE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_LIKE {
 	class Csql_LIKE :public Object

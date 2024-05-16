@@ -1,7 +1,7 @@
 #ifndef HOME_CAMERA_H
 #define HOME_CAMERA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_camera {
 	class Chome_camera :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_BROWSE_H
 #define SQL_BROWSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_BROWSE {
 	class Csql_BROWSE :public Object

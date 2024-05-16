@@ -1,7 +1,7 @@
 #ifndef SIZEOF_H
 #define SIZEOF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sizeof {
 	class Csizeof :public Object

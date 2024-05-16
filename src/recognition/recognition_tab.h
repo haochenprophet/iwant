@@ -1,7 +1,7 @@
 #ifndef RECOGNITION_TAB_H
 #define RECOGNITION_TAB_H
 
-#include "object.h"
+#include "object/object.h"
 #include "recognition.h"
 
 namespace n_recognition_tab {

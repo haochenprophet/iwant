@@ -21,7 +21,7 @@ Csecurity_which::~Csecurity_which()
 #endif
 
 #if SECURITY_WHICH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

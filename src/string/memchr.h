@@ -1,7 +1,7 @@
 #ifndef MEMCHR_H
 #define MEMCHR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memchr {
 	class Cmemchr :public Object

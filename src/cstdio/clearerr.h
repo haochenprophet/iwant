@@ -1,7 +1,7 @@
 #ifndef CLEARERR_H
 #define CLEARERR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_clearerr {
 	class Cclearerr :public Object

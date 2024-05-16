@@ -21,7 +21,7 @@ Csatellite_diagnosis::~Csatellite_diagnosis()
 #endif
 
 #if SATELLITE_DIAGNOSIS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

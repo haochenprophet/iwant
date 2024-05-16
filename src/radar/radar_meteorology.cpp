@@ -21,7 +21,7 @@ Cradar_meteorology::~Cradar_meteorology()
 #endif
 
 #if RADAR_METEOROLOGY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

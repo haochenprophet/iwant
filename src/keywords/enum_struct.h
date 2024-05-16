@@ -1,7 +1,7 @@
 #ifndef ENUM_STRUCT_H
 #define ENUM_STRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_enum_struct {
 	class Cenum_struct :public Object

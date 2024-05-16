@@ -1,7 +1,7 @@
 #ifndef SQL_SAVE_H
 #define SQL_SAVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SAVE {
 	class Csql_SAVE :public Object

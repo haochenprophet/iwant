@@ -1,7 +1,7 @@
 #ifndef LAHF_H
 #define LAHF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LAHF {
 	class CLAHF :public Object

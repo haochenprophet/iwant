@@ -1,7 +1,7 @@
 #ifndef PROTOCOL_H
 #define PROTOCOL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_protocol {
 	class Cprotocol :public Object

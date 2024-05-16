@@ -1,7 +1,7 @@
 #ifndef PSUBQ_H
 #define PSUBQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSUBQ {
 	class CPSUBQ :public Object

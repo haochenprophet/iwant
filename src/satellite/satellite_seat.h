@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SEAT_H
 #define SATELLITE_SEAT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_seat {
 	class Csatellite_seat :public Object

@@ -1,7 +1,7 @@
 #ifndef MFENCE_H
 #define MFENCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MFENCE {
 	class CMFENCE :public Object

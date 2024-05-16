@@ -1,7 +1,7 @@
 #ifndef MWAIT_H
 #define MWAIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MWAIT {
 	class CMWAIT :public Object

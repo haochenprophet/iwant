@@ -1,7 +1,7 @@
 #ifndef PSIGND_H
 #define PSIGND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSIGND {
 	class CPSIGND :public Object

@@ -1,7 +1,7 @@
 #ifndef __UNHOOK_H
 #define __UNHOOK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___unhook {
 	class C__unhook :public Object

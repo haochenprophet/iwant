@@ -1,7 +1,7 @@
 #ifndef MEMMOVE_H
 #define MEMMOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memmove {
 	class Cmemmove :public Object

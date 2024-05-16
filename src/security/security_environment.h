@@ -1,7 +1,7 @@
 #ifndef SECURITY_ENVIRONMENT_H
 #define SECURITY_ENVIRONMENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_environment {
 	class Csecurity_environment :public Object

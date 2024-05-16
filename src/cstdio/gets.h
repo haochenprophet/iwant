@@ -1,7 +1,7 @@
 #ifndef GETS_H
 #define GETS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_gets {
 	class Cgets :public Object

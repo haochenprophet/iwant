@@ -26,7 +26,7 @@ FILE* Cfopen::fopen_c(const char* filename, const char* mode)
 #endif
 
 #if FOPEN_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FOPEN_TEST\n\n";
 

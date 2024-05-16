@@ -1,7 +1,7 @@
 #ifndef REP_H
 #define REP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_REP {
 	class CREP :public Object

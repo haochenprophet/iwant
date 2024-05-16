@@ -1,7 +1,7 @@
 #ifndef INSTEADOF_H
 #define INSTEADOF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_insteadof {
 	class Cinsteadof :public Object

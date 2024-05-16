@@ -1,7 +1,7 @@
 #ifndef CAR_POLICY_H
 #define CAR_POLICY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_policy {
 	class Ccar_policy :public Object

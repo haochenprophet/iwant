@@ -1,7 +1,7 @@
 #ifndef SATELLITE_BRAKING_H
 #define SATELLITE_BRAKING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_braking {
 	class Csatellite_braking :public Object

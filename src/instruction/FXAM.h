@@ -1,7 +1,7 @@
 #ifndef FXAM_H
 #define FXAM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FXAM {
 	class CFXAM :public Object

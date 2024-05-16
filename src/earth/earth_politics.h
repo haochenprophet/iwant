@@ -1,7 +1,7 @@
 #ifndef EARTH_POLITICS_H
 #define EARTH_POLITICS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_politics {
 	class Cearth_politics :public Object

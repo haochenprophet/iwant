@@ -1,7 +1,7 @@
 #ifndef ATAN_H
 #define ATAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atan {
 	class Catan :public Object

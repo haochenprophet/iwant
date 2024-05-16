@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_AIRFOIL_TRAILING_H
 #define AIRPLANE_AIRFOIL_TRAILING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_airfoil_trailing {
 	class Cairplane_airfoil_trailing :public Object

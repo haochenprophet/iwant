@@ -1,7 +1,7 @@
 #ifndef VPCMPW_H
 #define VPCMPW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPCMPW {
 	class CVPCMPW :public Object

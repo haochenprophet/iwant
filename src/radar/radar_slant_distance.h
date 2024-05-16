@@ -1,7 +1,7 @@
 #ifndef RADAR_SLANT_DISTANCE_H
 #define RADAR_SLANT_DISTANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_slant_distance {
 	class Cradar_slant_distance :public Object

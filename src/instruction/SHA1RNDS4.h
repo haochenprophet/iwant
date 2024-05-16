@@ -1,7 +1,7 @@
 #ifndef SHA1RNDS4_H
 #define SHA1RNDS4_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SHA1RNDS4 {
 	class CSHA1RNDS4 :public Object

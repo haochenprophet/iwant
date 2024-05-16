@@ -1,7 +1,7 @@
 #ifndef SQL_OPTION_H
 #define SQL_OPTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OPTION {
 	class Csql_OPTION :public Object

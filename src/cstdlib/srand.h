@@ -1,7 +1,7 @@
 #ifndef SRAND_H
 #define SRAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_srand {
 	class Csrand :public Object

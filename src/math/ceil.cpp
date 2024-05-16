@@ -24,7 +24,7 @@ double Cceil::ceil_c(double x)
 #endif
 
 #if CEIL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "CEIL_TEST\n\n";

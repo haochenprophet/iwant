@@ -21,7 +21,7 @@ Csecurity_information::~Csecurity_information()
 #endif
 
 #if SECURITY_INFORMATION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

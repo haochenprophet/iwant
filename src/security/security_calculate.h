@@ -1,7 +1,7 @@
 #ifndef SECURITY_CALCULATE_H
 #define SECURITY_CALCULATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_calculate {
 	class Csecurity_calculate :public Object

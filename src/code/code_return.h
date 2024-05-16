@@ -1,7 +1,7 @@
 #ifndef CODE_RETURN_H
 #define CODE_RETURN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_return {
 	class Ccode_return :public Object

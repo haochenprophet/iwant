@@ -1,7 +1,7 @@
 #ifndef SATELLITE_DISPLAYER_H
 #define SATELLITE_DISPLAYER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_displayer {
 	class Csatellite_displayer :public Object

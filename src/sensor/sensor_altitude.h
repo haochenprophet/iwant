@@ -1,7 +1,7 @@
 #ifndef SENSOR_ALTITUDE_H
 #define SENSOR_ALTITUDE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_altitude {
 	class Csensor_altitude :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_BRAKE_PAD_H
 #define SATELLITE_BRAKE_PAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_brake_pad {
 	class Csatellite_brake_pad :public Object

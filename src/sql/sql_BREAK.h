@@ -1,7 +1,7 @@
 #ifndef SQL_BREAK_H
 #define SQL_BREAK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_BREAK {
 	class Csql_BREAK :public Object

@@ -1,7 +1,7 @@
 #ifndef __INT16_H
 #define __INT16_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___int16 {
 	class C__int16 :public Object

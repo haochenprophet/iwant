@@ -1,7 +1,7 @@
 #ifndef WCSTOMBS_H
 #define WCSTOMBS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_wcstombs {
 	class Cwcstombs :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_TRIGGER_H
 #define SQL_TRIGGER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TRIGGER {
 	class Csql_TRIGGER :public Object

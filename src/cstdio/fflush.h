@@ -1,7 +1,7 @@
 #ifndef FFLUSH_H
 #define FFLUSH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fflush {
 	class Cfflush :public Object

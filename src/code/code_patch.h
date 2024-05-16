@@ -1,7 +1,7 @@
 #ifndef CODE_PATCH_H
 #define CODE_PATCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_patch {
 	class Ccode_patch :public Object

@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_TAKE_OFF_H
 #define AIRPLANE_TAKE_OFF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_take_off {
 	class Cairplane_take_off :public Object

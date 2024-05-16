@@ -1,7 +1,7 @@
 #ifndef ADCX_H
 #define ADCX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ADCX {
 	class CADCX :public Object

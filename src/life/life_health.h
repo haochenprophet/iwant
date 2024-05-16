@@ -1,7 +1,7 @@
 #ifndef LIFE_HEALTH_H
 #define LIFE_HEALTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_health {
 	class Clife_health :public Object

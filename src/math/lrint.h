@@ -1,7 +1,7 @@
 #ifndef LRINT_H
 #define LRINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_lrint {
 	class Clrint :public Object

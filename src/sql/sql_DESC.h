@@ -1,7 +1,7 @@
 #ifndef SQL_DESC_H
 #define SQL_DESC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DESC {
 	class Csql_DESC :public Object

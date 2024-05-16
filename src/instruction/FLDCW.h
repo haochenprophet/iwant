@@ -1,7 +1,7 @@
 #ifndef FLDCW_H
 #define FLDCW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FLDCW {
 	class CFLDCW :public Object

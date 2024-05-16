@@ -1,7 +1,7 @@
 #ifndef SPRINTF_H
 #define SPRINTF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sprintf {
 	class Csprintf :public Object

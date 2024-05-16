@@ -1,7 +1,7 @@
 #ifndef SECURITY_FLOATING_H
 #define SECURITY_FLOATING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_floating {
 	class Csecurity_floating :public Object

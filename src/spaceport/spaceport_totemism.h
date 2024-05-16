@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TOTEMISM_H
 #define SPACEPORT_TOTEMISM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_totemism {
 	class Cspaceport_totemism :public Object

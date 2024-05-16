@@ -1,7 +1,7 @@
 #ifndef WITH_H
 #define WITH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_with {
 	class Cwith :public Object

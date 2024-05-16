@@ -21,7 +21,7 @@ Cispunct::~Cispunct()
 #endif
 
 #if ISPUNCT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ISPUNCT_TEST\n\n";

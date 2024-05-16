@@ -21,7 +21,7 @@ Ccar_plan::~Ccar_plan()
 #endif
 
 #if CAR_PLAN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

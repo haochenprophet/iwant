@@ -1,7 +1,7 @@
 #ifndef DPPD_H
 #define DPPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_DPPD {
 	class CDPPD :public Object

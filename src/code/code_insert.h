@@ -1,7 +1,7 @@
 #ifndef CODE_INSERT_H
 #define CODE_INSERT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_insert {
 	class Ccode_insert :public Object

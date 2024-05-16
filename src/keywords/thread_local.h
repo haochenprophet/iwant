@@ -1,7 +1,7 @@
 #ifndef THREAD_LOCAL_H
 #define THREAD_LOCAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_thread_local {
 	class Cthread_local :public Object

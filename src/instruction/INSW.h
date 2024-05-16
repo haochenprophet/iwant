@@ -1,7 +1,7 @@
 #ifndef INSW_H
 #define INSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INSW {
 	class CINSW :public Object

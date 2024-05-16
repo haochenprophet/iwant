@@ -1,7 +1,7 @@
 #ifndef SECURITY_CONDITION_H
 #define SECURITY_CONDITION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_condition {
 	class Csecurity_condition :public Object

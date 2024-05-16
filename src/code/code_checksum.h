@@ -1,7 +1,7 @@
 #ifndef CODE_CHECKSUM_H
 #define CODE_CHECKSUM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_checksum {
 	class Ccode_checksum :public Object

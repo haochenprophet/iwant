@@ -1,7 +1,7 @@
 #ifndef OCEAN_OXYGEN_CONTENT_H
 #define OCEAN_OXYGEN_CONTENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_oxygen_content {
 	class Cocean_oxygen_content :public Object

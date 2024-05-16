@@ -1,7 +1,7 @@
 #ifndef SECURITY_BIOLOGICAL_H
 #define SECURITY_BIOLOGICAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_biological {
 	class Csecurity_biological :public Object

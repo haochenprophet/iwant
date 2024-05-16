@@ -1,7 +1,7 @@
 #ifndef TOWUPPER_H
 #define TOWUPPER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_towupper {
 	class Ctowupper :public Object

@@ -1,7 +1,7 @@
 #ifndef DEL_H
 #define DEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_del {
 	class Cdel :public Object

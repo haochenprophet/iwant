@@ -21,7 +21,7 @@ Csecurity_endtime::~Csecurity_endtime()
 #endif
 
 #if SECURITY_ENDTIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

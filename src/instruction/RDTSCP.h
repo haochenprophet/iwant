@@ -1,7 +1,7 @@
 #ifndef RDTSCP_H
 #define RDTSCP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDTSCP {
 	class CRDTSCP :public Object

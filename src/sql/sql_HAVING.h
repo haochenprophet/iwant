@@ -1,7 +1,7 @@
 #ifndef SQL_HAVING_H
 #define SQL_HAVING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_HAVING {
 	class Csql_HAVING :public Object

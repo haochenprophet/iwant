@@ -1,7 +1,7 @@
 #ifndef HYPOT_H
 #define HYPOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_hypot {
 	class Chypot :public Object

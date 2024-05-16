@@ -1,7 +1,7 @@
 #ifndef SINH_H
 #define SINH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sinh {
 	class Csinh :public Object

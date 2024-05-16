@@ -1,7 +1,7 @@
 #ifndef SENSOR_ANGLE_PITCH_H
 #define SENSOR_ANGLE_PITCH_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_angle_pitch {
 	class Csensor_angle_pitch :public Object

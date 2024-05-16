@@ -1,7 +1,7 @@
 #ifndef CODE_ERROR_H
 #define CODE_ERROR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_error {
 	class Ccode_error :public Object

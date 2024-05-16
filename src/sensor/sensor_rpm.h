@@ -1,7 +1,7 @@
 #ifndef SENSOR_RPM_H
 #define SENSOR_RPM_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_rpm {
 	class Csensor_rpm :public Object

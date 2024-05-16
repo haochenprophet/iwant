@@ -21,7 +21,7 @@ Crocket_tail::~Crocket_tail()
 #endif
 
 #if ROCKET_TAIL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

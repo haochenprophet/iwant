@@ -1,7 +1,7 @@
 #ifndef KMOVQ_H
 #define KMOVQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KMOVQ {
 	class CKMOVQ :public Object

@@ -1,7 +1,7 @@
 #ifndef HOME_SEARCH_H
 #define HOME_SEARCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_search {
 	class Chome_search :public Object

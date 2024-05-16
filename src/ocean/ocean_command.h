@@ -1,7 +1,7 @@
 #ifndef OCEAN_COMMAND_H
 #define OCEAN_COMMAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_command {
 	class Cocean_command :public Object

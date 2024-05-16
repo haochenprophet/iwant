@@ -21,7 +21,7 @@ Cearth_business::~Cearth_business()
 #endif
 
 #if EARTH_BUSINESS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef EARTH_FOOD_H
 #define EARTH_FOOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_food {
 	class Cearth_food :public Object

@@ -1,7 +1,7 @@
 #ifndef VOLTAGE_H
 #define VOLTAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_voltage {
 	class Cvoltage :public Object

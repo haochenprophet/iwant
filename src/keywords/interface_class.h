@@ -1,7 +1,7 @@
 #ifndef INTERFACE_CLASS_H
 #define INTERFACE_CLASS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_interface_class {
 	class Cinterface_class :public Object

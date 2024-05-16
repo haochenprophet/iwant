@@ -1,7 +1,7 @@
 #ifndef SIGNBIT_H
 #define SIGNBIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_signbit {
 	class Csignbit :public Object

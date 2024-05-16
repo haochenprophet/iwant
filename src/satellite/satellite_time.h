@@ -1,7 +1,7 @@
 #ifndef SATELLITE_TIME_H
 #define SATELLITE_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_time {
 	class Csatellite_time :public Object

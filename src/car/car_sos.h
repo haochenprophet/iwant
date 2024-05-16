@@ -1,7 +1,7 @@
 #ifndef CAR_SOS_H
 #define CAR_SOS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_sos {
 	class Ccar_sos :public Object

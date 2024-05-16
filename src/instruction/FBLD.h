@@ -1,7 +1,7 @@
 #ifndef FBLD_H
 #define FBLD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FBLD {
 	class CFBLD :public Object

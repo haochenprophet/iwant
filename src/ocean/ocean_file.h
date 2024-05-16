@@ -1,7 +1,7 @@
 #ifndef OCEAN_FILE_H
 #define OCEAN_FILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_file {
 	class Cocean_file :public Object

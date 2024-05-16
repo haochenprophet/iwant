@@ -26,7 +26,7 @@ int Cfsetpos::fsetpos_c(FILE* stream, const fpos_t* pos)
 #endif
 
 #if FSETPOS_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FSETPOS_TEST\n\n";
 

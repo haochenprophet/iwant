@@ -21,7 +21,7 @@ Csecurity_belt::~Csecurity_belt()
 #endif
 
 #if SECURITY_BELT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

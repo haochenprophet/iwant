@@ -1,7 +1,7 @@
 #ifndef MATERIAL_ACTION_H
 #define MATERIAL_ACTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_action {
 	class Cmaterial_action :public Object

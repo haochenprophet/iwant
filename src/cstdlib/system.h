@@ -1,7 +1,7 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_system {
 	class Csystem :public Object

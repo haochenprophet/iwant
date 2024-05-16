@@ -1,7 +1,7 @@
 #ifndef CAR_MODE_HOT_H
 #define CAR_MODE_HOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mode_hot {
 	class Ccar_mode_hot :public Object

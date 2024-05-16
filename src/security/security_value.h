@@ -1,7 +1,7 @@
 #ifndef SECURITY_VALUE_H
 #define SECURITY_VALUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_value {
 	class Csecurity_value :public Object

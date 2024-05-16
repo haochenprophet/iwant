@@ -1,7 +1,7 @@
 #ifndef EARTH_TIME_H
 #define EARTH_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_time {
 	class Cearth_time :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_ABSTRACT_H
 #define SECURITY_ABSTRACT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_abstract {
 	class Csecurity_abstract :public Object

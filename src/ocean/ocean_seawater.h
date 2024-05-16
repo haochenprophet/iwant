@@ -1,7 +1,7 @@
 #ifndef OCEAN_SEAWATER_H
 #define OCEAN_SEAWATER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_seawater {
 	class Cocean_seawater :public Object

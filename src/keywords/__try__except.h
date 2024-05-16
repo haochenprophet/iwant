@@ -1,7 +1,7 @@
 #ifndef __TRY__EXCEPT_H
 #define __TRY__EXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___try__except {
 	class C__try__except :public Object

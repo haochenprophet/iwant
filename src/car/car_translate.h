@@ -1,7 +1,7 @@
 #ifndef CAR_TRANSLATE_H
 #define CAR_TRANSLATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_translate {
 	class Ccar_translate :public Object

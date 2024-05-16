@@ -1,7 +1,7 @@
 #ifndef CODE_DELETE_H
 #define CODE_DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_delete {
 	class Ccode_delete :public Object

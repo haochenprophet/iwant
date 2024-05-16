@@ -25,7 +25,7 @@ long int Clabs::labs_c(long int n)
 #endif
 
 #if LABS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LABS_TEST\n\n";

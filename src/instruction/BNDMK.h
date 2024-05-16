@@ -1,7 +1,7 @@
 #ifndef BNDMK_H
 #define BNDMK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BNDMK {
 	class CBNDMK :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_ESCAPE_H
 #define CAR_ESCAPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_escape {
 	class Ccar_escape :public Object

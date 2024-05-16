@@ -1,7 +1,7 @@
 #ifndef SQL_ALTER_H
 #define SQL_ALTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ALTER {
 	class Csql_ALTER :public Object

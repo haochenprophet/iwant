@@ -1,7 +1,7 @@
 #ifndef VFPCLASSSS_H
 #define VFPCLASSSS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VFPCLASSSS {
 	class CVFPCLASSSS :public Object

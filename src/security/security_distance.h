@@ -1,7 +1,7 @@
 #ifndef SECURITY_DISTANCE_H
 #define SECURITY_DISTANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_distance {
 	class Csecurity_distance :public Object

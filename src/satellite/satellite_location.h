@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LOCATION_H
 #define SATELLITE_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_location {
 	class Csatellite_location :public Object

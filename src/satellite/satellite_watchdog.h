@@ -1,7 +1,7 @@
 #ifndef SATELLITE_WATCHDOG_H
 #define SATELLITE_WATCHDOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_watchdog {
 	class Csatellite_watchdog :public Object

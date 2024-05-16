@@ -1,7 +1,7 @@
 #ifndef VPEXPANDQ_H
 #define VPEXPANDQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPEXPANDQ {
 	class CVPEXPANDQ :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_LOGO_H
 #define OCEAN_LOGO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_logo {
 	class Cocean_logo :public Object

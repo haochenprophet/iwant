@@ -1,7 +1,7 @@
 #ifndef SQL_TO_H
 #define SQL_TO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TO {
 	class Csql_TO :public Object

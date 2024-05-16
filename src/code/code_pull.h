@@ -1,7 +1,7 @@
 #ifndef CODE_PULL_H
 #define CODE_PULL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_pull {
 	class Ccode_pull :public Object

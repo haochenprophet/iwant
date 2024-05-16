@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MOTOR_H
 #define SATELLITE_MOTOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_motor {
 	class Csatellite_motor :public Object

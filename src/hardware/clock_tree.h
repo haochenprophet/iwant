@@ -1,7 +1,7 @@
 #ifndef CLOCK_TREE_H
 #define CLOCK_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_clock_tree {
 	class Cclock_tree :public Object

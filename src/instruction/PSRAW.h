@@ -1,7 +1,7 @@
 #ifndef PSRAW_H
 #define PSRAW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSRAW {
 	class CPSRAW :public Object

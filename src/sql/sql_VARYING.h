@@ -1,7 +1,7 @@
 #ifndef SQL_VARYING_H
 #define SQL_VARYING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_VARYING {
 	class Csql_VARYING :public Object

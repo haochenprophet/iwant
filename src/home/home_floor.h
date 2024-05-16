@@ -1,7 +1,7 @@
 #ifndef HOME_FLOOR_H
 #define HOME_FLOOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_floor {
 	class Chome_floor :public Object

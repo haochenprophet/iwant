@@ -1,7 +1,7 @@
 #ifndef NOT_EQ_H
 #define NOT_EQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_not_eq {
 	class Cnot_eq :public Object

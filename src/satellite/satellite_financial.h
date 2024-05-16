@@ -1,7 +1,7 @@
 #ifndef SATELLITE_FINANCIAL_H
 #define SATELLITE_FINANCIAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_financial {
 	class Csatellite_financial :public Object

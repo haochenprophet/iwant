@@ -1,7 +1,7 @@
 #ifndef LONG_H
 #define LONG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_long {
 	class Clong :public Object

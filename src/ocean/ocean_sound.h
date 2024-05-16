@@ -1,7 +1,7 @@
 #ifndef OCEAN_SOUND_H
 #define OCEAN_SOUND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_sound {
 	class Cocean_sound :public Object

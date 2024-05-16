@@ -1,7 +1,7 @@
 #ifndef EARTH_TIMEZONE_H
 #define EARTH_TIMEZONE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_timezone {
 	class Cearth_timezone :public Object

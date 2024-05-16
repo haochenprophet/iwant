@@ -1,7 +1,7 @@
 #ifndef CAR_WARNING_H
 #define CAR_WARNING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_warning {
 	class Ccar_warning :public Object

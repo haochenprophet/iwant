@@ -1,7 +1,7 @@
 #ifndef SHA_H
 #define SHA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 #define SHA224_DIGEST_SIZE ( 224 / 8)
 #define SHA256_DIGEST_SIZE ( 256 / 8)

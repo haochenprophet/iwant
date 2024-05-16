@@ -1,11 +1,11 @@
 #include "file.h"
 #include "file_action.i" //action_tab
 #include <stdio.h>
-#include "replace.h"
-#include "insert.h"
+#include "algorithm/replace.h"
+#include "algorithm/insert.h"
 #include "math/crc.h"
 #include "math/md5.h"
-#include "path.h"
+#include "path/path.h"
 
 int Cfile::my_init(void* p)
 {

@@ -1,7 +1,7 @@
 #ifndef SAFECAST_H
 #define SAFECAST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_safecast {
 	class Csafecast :public Object

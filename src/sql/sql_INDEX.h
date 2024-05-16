@@ -1,7 +1,7 @@
 #ifndef SQL_INDEX_H
 #define SQL_INDEX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_INDEX {
 	class Csql_INDEX :public Object

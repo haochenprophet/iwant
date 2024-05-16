@@ -1,7 +1,7 @@
 #ifndef NEXTTOWARD_H
 #define NEXTTOWARD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_nexttoward {
 	class Cnexttoward :public Object

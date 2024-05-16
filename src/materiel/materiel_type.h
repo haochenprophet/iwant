@@ -1,7 +1,7 @@
 #ifndef MATERIEL_TYPE_H
 #define MATERIEL_TYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_type {
 	class Cmateriel_type :public Object

@@ -1,7 +1,7 @@
 #ifndef SENSOR_QUALITY_H
 #define SENSOR_QUALITY_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_quality {
 	class Csensor_quality :public Object

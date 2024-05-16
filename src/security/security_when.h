@@ -1,7 +1,7 @@
 #ifndef SECURITY_WHEN_H
 #define SECURITY_WHEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_when {
 	class Csecurity_when :public Object

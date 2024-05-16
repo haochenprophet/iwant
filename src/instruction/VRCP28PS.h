@@ -1,7 +1,7 @@
 #ifndef VRCP28PS_H
 #define VRCP28PS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VRCP28PS {
 	class CVRCP28PS :public Object

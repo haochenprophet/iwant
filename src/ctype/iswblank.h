@@ -1,7 +1,7 @@
 #ifndef ISWBLANK_H
 #define ISWBLANK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswblank {
 	class Ciswblank :public Object

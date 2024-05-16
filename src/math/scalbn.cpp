@@ -36,7 +36,7 @@ long double Cscalbn::scalbnl_c(long double x, int n)
 #endif
 
 #if SCALBN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "SCALBN_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef SQL_DEALLOCATE_H
 #define SQL_DEALLOCATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DEALLOCATE {
 	class Csql_DEALLOCATE :public Object

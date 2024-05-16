@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_COMMUNICATION_H
 #define SPACEPORT_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_communication {
 	class Cspaceport_communication :public Object

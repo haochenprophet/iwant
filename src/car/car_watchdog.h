@@ -1,7 +1,7 @@
 #ifndef CAR_WATCHDOG_H
 #define CAR_WATCHDOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_watchdog {
 	class Ccar_watchdog :public Object

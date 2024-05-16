@@ -1,7 +1,7 @@
 #ifndef SECURITY_LOCK_H
 #define SECURITY_LOCK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_lock {
 	class Csecurity_lock :public Object

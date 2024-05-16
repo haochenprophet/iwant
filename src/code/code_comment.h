@@ -1,7 +1,7 @@
 #ifndef CODE_COMMENT_H
 #define CODE_COMMENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_comment {
 	class Ccode_comment :public Object

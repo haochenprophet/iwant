@@ -21,7 +21,7 @@ Csatellite_turn_right::~Csatellite_turn_right()
 #endif
 
 #if SATELLITE_TURN_RIGHT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

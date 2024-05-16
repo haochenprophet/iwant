@@ -1,7 +1,7 @@
 #ifndef OCEAN_DENSITY_H
 #define OCEAN_DENSITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_density {
 	class Cocean_density :public Object

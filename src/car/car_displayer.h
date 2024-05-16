@@ -1,7 +1,7 @@
 #ifndef CAR_DISPLAYER_H
 #define CAR_DISPLAYER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_displayer {
 	class Ccar_displayer :public Object

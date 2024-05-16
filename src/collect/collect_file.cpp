@@ -91,7 +91,7 @@ int Ccollect_file::collect(dir_t* dir , file_t* term , dir_t* to_dir,Object * ob
 #endif
 
 #if COLLECT_FILE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

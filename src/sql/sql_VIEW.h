@@ -1,7 +1,7 @@
 #ifndef SQL_VIEW_H
 #define SQL_VIEW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_VIEW {
 	class Csql_VIEW :public Object

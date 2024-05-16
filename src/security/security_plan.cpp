@@ -21,7 +21,7 @@ Csecurity_plan::~Csecurity_plan()
 #endif
 
 #if SECURITY_PLAN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ELECTRIC_MACHINE_H
 #define SATELLITE_ELECTRIC_MACHINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_electric_machine {
 	class Csatellite_electric_machine :public Object

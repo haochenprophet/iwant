@@ -1,7 +1,7 @@
 #ifndef CMOS_H
 #define CMOS_H
 
-#include "../object.h"
+#include "object/object.h"
 #include "io.h"
 
 #define CMOS_INDEX           0x70

@@ -1,7 +1,7 @@
 #ifndef STRCPY_H
 #define STRCPY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strcpy {
 	class Cstrcpy :public Object

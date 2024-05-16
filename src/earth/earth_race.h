@@ -1,7 +1,7 @@
 #ifndef EARTH_RACE_H
 #define EARTH_RACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_race {
 	class Cearth_race :public Object

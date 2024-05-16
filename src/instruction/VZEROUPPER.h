@@ -1,7 +1,7 @@
 #ifndef VZEROUPPER_H
 #define VZEROUPPER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VZEROUPPER {
 	class CVZEROUPPER :public Object

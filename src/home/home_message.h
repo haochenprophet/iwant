@@ -1,7 +1,7 @@
 #ifndef HOME_MESSAGE_H
 #define HOME_MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_message {
 	class Chome_message :public Object

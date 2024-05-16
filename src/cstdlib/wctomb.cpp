@@ -26,7 +26,7 @@ int Cwctomb::wctomb_c(char* pmb, wchar_t wc)
 #endif
 
 #if WCTOMB_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "WCTOMB_TEST\n\n";

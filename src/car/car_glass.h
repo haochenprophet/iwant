@@ -1,7 +1,7 @@
 #ifndef CAR_GLASS_H
 #define CAR_GLASS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_glass {
 	class Ccar_glass :public Object

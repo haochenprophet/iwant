@@ -1,7 +1,7 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memory {
 	class Cmemory :public Object

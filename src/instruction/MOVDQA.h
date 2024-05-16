@@ -1,7 +1,7 @@
 #ifndef MOVDQA_H
 #define MOVDQA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVDQA {
 	class CMOVDQA :public Object

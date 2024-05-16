@@ -1,7 +1,7 @@
 #ifndef NOEXCEPT_H
 #define NOEXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_noexcept {
 	class Cnoexcept :public Object

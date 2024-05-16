@@ -1,7 +1,7 @@
 #ifndef OCEAN_DIRECTION_H
 #define OCEAN_DIRECTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_direction {
 	class Cocean_direction :public Object

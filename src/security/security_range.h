@@ -1,7 +1,7 @@
 #ifndef SECURITY_RANGE_H
 #define SECURITY_RANGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_range {
 	class Csecurity_range :public Object

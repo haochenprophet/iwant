@@ -24,7 +24,7 @@ size_t Cmbstowcs:: mbstowcs_c(wchar_t* dest, const char* src, size_t max)
 #endif
 
 #if MBSTOWCS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MBSTOWCS_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef SQL_TOP_H
 #define SQL_TOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TOP {
 	class Csql_TOP :public Object

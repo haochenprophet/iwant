@@ -1,7 +1,7 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_global {
 	class Cglobal :public Object

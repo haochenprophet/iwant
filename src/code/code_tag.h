@@ -1,7 +1,7 @@
 #ifndef CODE_TAG_H
 #define CODE_TAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_tag {
 	class Ccode_tag :public Object

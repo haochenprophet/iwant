@@ -1,7 +1,7 @@
 #ifndef SECURITY_HANDLE_H
 #define SECURITY_HANDLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_handle {
 	class Csecurity_handle :public Object

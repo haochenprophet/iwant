@@ -1,7 +1,7 @@
 #ifndef MOVSW_H
 #define MOVSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVSW {
 	class CMOVSW :public Object

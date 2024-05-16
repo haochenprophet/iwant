@@ -1,7 +1,7 @@
 #ifndef CODE_FIND_H
 #define CODE_FIND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_find {
 	class Ccode_find :public Object

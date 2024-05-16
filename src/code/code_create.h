@@ -1,7 +1,7 @@
 #ifndef CODE_CREATE_H
 #define CODE_CREATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_create {
 	class Ccode_create :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_POLICY_H
 #define SECURITY_POLICY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_policy {
 	class Csecurity_policy :public Object

@@ -1,7 +1,7 @@
 #ifndef MARS_WEATHER_H
 #define MARS_WEATHER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_weather {
 	class Cmars_weather :public Object

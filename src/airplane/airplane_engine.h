@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_ENGINE_H
 #define AIRPLANE_ENGINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_engine {
 	class Cairplane_engine :public Object

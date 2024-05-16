@@ -1,7 +1,7 @@
 #ifndef OCEAN_INFRARED_H
 #define OCEAN_INFRARED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_infrared {
 	class Cocean_infrared :public Object

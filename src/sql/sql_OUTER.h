@@ -1,7 +1,7 @@
 #ifndef SQL_OUTER_H
 #define SQL_OUTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OUTER {
 	class Csql_OUTER :public Object

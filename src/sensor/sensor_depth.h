@@ -1,7 +1,7 @@
 #ifndef SENSOR_DEPTH_H
 #define SENSOR_DEPTH_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_depth {
 	class Csensor_depth :public Object

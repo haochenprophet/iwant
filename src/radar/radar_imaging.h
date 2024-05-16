@@ -1,7 +1,7 @@
 #ifndef RADAR_IMAGING_H
 #define RADAR_IMAGING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_imaging {
 	class Cradar_imaging :public Object

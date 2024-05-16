@@ -1,7 +1,7 @@
 #ifndef MOVDDUP_H
 #define MOVDDUP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVDDUP {
 	class CMOVDDUP :public Object

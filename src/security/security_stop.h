@@ -1,7 +1,7 @@
 #ifndef SECURITY_STOP_H
 #define SECURITY_STOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_stop {
 	class Csecurity_stop :public Object

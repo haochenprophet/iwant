@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_MESSAGE_H
 #define SPACEPORT_MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_message {
 	class Cspaceport_message :public Object

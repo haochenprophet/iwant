@@ -1,7 +1,7 @@
 #ifndef XEND_H
 #define XEND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XEND {
 	class CXEND :public Object

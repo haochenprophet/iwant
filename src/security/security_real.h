@@ -1,7 +1,7 @@
 #ifndef SECURITY_REAL_H
 #define SECURITY_REAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_real {
 	class Csecurity_real :public Object

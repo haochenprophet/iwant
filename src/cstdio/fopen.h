@@ -1,7 +1,7 @@
 #ifndef FOPEN_H
 #define FOPEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fopen {
 	class Cfopen :public Object

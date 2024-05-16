@@ -1,7 +1,7 @@
 #ifndef KXORQ_H
 #define KXORQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KXORQ {
 	class CKXORQ :public Object

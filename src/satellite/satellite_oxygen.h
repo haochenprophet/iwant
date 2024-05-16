@@ -1,7 +1,7 @@
 #ifndef SATELLITE_OXYGEN_H
 #define SATELLITE_OXYGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_oxygen {
 	class Csatellite_oxygen :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_SPEED_H
 #define OCEAN_SPEED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_speed {
 	class Cocean_speed :public Object

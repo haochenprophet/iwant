@@ -1,7 +1,7 @@
 #ifndef SECURITY_IMAGE_H
 #define SECURITY_IMAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_image {
 	class Csecurity_image :public Object

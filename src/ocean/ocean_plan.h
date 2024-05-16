@@ -1,7 +1,7 @@
 #ifndef OCEAN_PLAN_H
 #define OCEAN_PLAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_plan {
 	class Cocean_plan :public Object

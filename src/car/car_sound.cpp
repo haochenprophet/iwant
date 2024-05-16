@@ -21,7 +21,7 @@ Ccar_sound::~Ccar_sound()
 #endif
 
 #if CAR_SOUND_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

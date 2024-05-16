@@ -1,7 +1,7 @@
 #ifndef LLDIV_H
 #define LLDIV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_lldiv {
 	class Clldiv :public Object

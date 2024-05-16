@@ -26,7 +26,7 @@ char* Cgetenv::getenv_c(const char* name)
 #endif
 
 #if GETENV_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "GETENV_TEST\n\n";

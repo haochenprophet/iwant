@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_RADAR_H
 #define AIRPLANE_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_radar {
 	class Cairplane_radar :public Object

@@ -35,7 +35,7 @@ int Csnprintf::snprintf_c(char* s, size_t n, const char* format, ...)
 #endif
 
 #if SNPRINTF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "SNPRINTF_TEST\n\n";
 

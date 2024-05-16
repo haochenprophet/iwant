@@ -1,7 +1,7 @@
 #ifndef SQL_AS_H
 #define SQL_AS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_AS {
 	class Csql_AS :public Object

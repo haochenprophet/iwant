@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SATELLITEBON_DIOXIDE_H
 #define SATELLITE_SATELLITEBON_DIOXIDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_satellitebon_dioxide {
 	class Csatellite_satellitebon_dioxide :public Object

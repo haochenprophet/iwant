@@ -1,7 +1,7 @@
 #ifndef RADAR_POWER_H
 #define RADAR_POWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_power {
 	class Cradar_power :public Object

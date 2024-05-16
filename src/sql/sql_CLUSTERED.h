@@ -1,7 +1,7 @@
 #ifndef SQL_CLUSTERED_H
 #define SQL_CLUSTERED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CLUSTERED {
 	class Csql_CLUSTERED :public Object

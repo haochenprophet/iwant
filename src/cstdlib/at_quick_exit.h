@@ -1,7 +1,7 @@
 #ifndef AT_QUICK_EXIT_H
 #define AT_QUICK_EXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_at_quick_exit {
 	class Cat_quick_exit :public Object

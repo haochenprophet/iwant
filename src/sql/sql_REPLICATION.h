@@ -1,7 +1,7 @@
 #ifndef SQL_REPLICATION_H
 #define SQL_REPLICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_REPLICATION {
 	class Csql_REPLICATION :public Object

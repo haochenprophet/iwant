@@ -1,7 +1,7 @@
 #ifndef ISUPPER_H
 #define ISUPPER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isupper {
 	class Cisupper :public Object

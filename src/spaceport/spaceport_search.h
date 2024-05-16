@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_SEARCH_H
 #define SPACEPORT_SEARCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_search {
 	class Cspaceport_search :public Object

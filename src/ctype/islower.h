@@ -1,7 +1,7 @@
 #ifndef ISLOWER_H
 #define ISLOWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_islower {
 	class Cislower :public Object

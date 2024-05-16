@@ -1,7 +1,7 @@
 #ifndef SQL_CHECK_H
 #define SQL_CHECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CHECK {
 	class Csql_CHECK :public Object

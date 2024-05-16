@@ -1,7 +1,7 @@
 #ifndef CODE_FEEDBACK_H
 #define CODE_FEEDBACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_feedback {
 	class Ccode_feedback :public Object

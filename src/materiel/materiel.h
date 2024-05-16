@@ -1,7 +1,7 @@
 #ifndef MATERIEL_H
 #define MATERIEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel {
 	class Cmateriel :public Object

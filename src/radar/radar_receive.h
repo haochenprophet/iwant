@@ -1,7 +1,7 @@
 #ifndef RADAR_RECEIVE_H
 #define RADAR_RECEIVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_receive {
 	class Cradar_receive :public Object

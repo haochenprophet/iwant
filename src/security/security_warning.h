@@ -1,7 +1,7 @@
 #ifndef SECURITY_WARNING_H
 #define SECURITY_WARNING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_warning {
 	class Csecurity_warning :public Object

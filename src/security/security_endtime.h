@@ -1,7 +1,7 @@
 #ifndef SECURITY_ENDTIME_H
 #define SECURITY_ENDTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_endtime {
 	class Csecurity_endtime :public Object

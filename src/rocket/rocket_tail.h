@@ -1,7 +1,7 @@
 #ifndef ROCKET_TAIL_H
 #define ROCKET_TAIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_tail {
 	class Crocket_tail :public Object

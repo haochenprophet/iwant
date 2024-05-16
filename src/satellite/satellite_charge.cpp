@@ -21,7 +21,7 @@ Csatellite_charge::~Csatellite_charge()
 #endif
 
 #if SATELLITE_CHARGE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

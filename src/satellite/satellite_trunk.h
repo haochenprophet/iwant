@@ -1,7 +1,7 @@
 #ifndef SATELLITE_TRUNK_H
 #define SATELLITE_TRUNK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_trunk {
 	class Csatellite_trunk :public Object

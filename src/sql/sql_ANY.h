@@ -1,7 +1,7 @@
 #ifndef SQL_ANY_H
 #define SQL_ANY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ANY {
 	class Csql_ANY :public Object

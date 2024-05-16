@@ -1,7 +1,7 @@
 #ifndef HOME_PET_H
 #define HOME_PET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_pet {
 	class Chome_pet :public Object

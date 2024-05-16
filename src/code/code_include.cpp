@@ -21,7 +21,7 @@ Ccode_include::~Ccode_include()
 #endif
 
 #if CODE_INCLUDE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

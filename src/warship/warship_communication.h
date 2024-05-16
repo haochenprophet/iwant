@@ -1,7 +1,7 @@
 #ifndef WARSHIP_COMMUNICATION_H
 #define WARSHIP_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_communication {
 	class Cwarship_communication :public Object

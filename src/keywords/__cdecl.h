@@ -1,7 +1,7 @@
 #ifndef __CDECL_H
 #define __CDECL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___cdecl {
 	class C__cdecl :public Object

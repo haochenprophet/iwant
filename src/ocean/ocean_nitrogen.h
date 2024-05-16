@@ -1,7 +1,7 @@
 #ifndef OCEAN_NITROGEN_H
 #define OCEAN_NITROGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_nitrogen {
 	class Cocean_nitrogen :public Object

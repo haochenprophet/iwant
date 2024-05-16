@@ -1,7 +1,7 @@
 #ifndef STRXFRM_H
 #define STRXFRM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strxfrm {
 	class Cstrxfrm :public Object

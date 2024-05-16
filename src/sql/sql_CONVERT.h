@@ -1,7 +1,7 @@
 #ifndef SQL_CONVERT_H
 #define SQL_CONVERT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CONVERT {
 	class Csql_CONVERT :public Object

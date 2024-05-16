@@ -1,7 +1,7 @@
 #ifndef TREE_NODE_H
 #define TREE_NODE_H
 
-#include "../object.h"
+#include "object/object.h"
 #include "tree_func.h"
 
 namespace n_tree_node {

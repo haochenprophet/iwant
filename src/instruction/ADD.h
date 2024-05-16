@@ -1,7 +1,7 @@
 #ifndef ADD_H
 #define ADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ADD {
 	class CADD :public Object

@@ -21,7 +21,7 @@ Ccar_environment::~Ccar_environment()
 #endif
 
 #if CAR_ENVIRONMENT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

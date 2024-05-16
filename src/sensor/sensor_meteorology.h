@@ -1,7 +1,7 @@
 #ifndef SENSOR_METEOROLOGY_H
 #define SENSOR_METEOROLOGY_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_meteorology {
 	class Csensor_meteorology :public Object

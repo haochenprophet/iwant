@@ -1,7 +1,7 @@
 #ifndef SATELLITE_WATER_H
 #define SATELLITE_WATER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_water {
 	class Csatellite_water :public Object

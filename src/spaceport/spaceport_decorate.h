@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_DECORATE_H
 #define SPACEPORT_DECORATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_decorate {
 	class Cspaceport_decorate :public Object

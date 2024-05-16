@@ -1,7 +1,7 @@
 #ifndef RSM_H
 #define RSM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RSM {
 	class CRSM :public Object

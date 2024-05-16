@@ -1,7 +1,7 @@
 #ifndef WCTRANS_H
 #define WCTRANS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_wctrans {
 	class Cwctrans :public Object

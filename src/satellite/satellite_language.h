@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LANGUAGE_H
 #define SATELLITE_LANGUAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_language {
 	class Csatellite_language :public Object

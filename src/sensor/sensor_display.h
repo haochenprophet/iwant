@@ -1,7 +1,7 @@
 #ifndef SENSOR_DISPLAY_H
 #define SENSOR_DISPLAY_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_display {
 	class Csensor_display :public Object

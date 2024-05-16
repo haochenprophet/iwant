@@ -1,7 +1,7 @@
 #ifndef STRLEN_H
 #define STRLEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strlen {
 	class Cstrlen :public Object

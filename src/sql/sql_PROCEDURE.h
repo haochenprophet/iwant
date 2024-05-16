@@ -1,7 +1,7 @@
 #ifndef SQL_PROCEDURE_H
 #define SQL_PROCEDURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PROCEDURE {
 	class Csql_PROCEDURE :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_SET_H
 #define SQL_SET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SET {
 	class Csql_SET :public Object

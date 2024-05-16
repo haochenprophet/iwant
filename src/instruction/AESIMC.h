@@ -1,7 +1,7 @@
 #ifndef AESIMC_H
 #define AESIMC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_AESIMC {
 	class CAESIMC :public Object

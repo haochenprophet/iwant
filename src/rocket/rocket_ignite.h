@@ -1,7 +1,7 @@
 #ifndef ROCKET_IGNITE_H
 #define ROCKET_IGNITE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_ignite {
 	class Crocket_ignite :public Object

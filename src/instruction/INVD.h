@@ -1,7 +1,7 @@
 #ifndef INVD_H
 #define INVD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INVD {
 	class CINVD :public Object

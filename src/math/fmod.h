@@ -1,7 +1,7 @@
 #ifndef FMOD_H
 #define FMOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fmod {
 	class Cfmod :public Object

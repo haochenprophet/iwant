@@ -1,7 +1,7 @@
 #ifndef SECURITY_ID_H
 #define SECURITY_ID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_id {
 	class Csecurity_id :public Object

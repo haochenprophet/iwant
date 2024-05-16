@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ENGINE_H
 #define SATELLITE_ENGINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_engine {
 	class Csatellite_engine :public Object

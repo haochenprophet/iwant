@@ -1,7 +1,7 @@
 #ifndef FLDLN2_H
 #define FLDLN2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FLDLN2 {
 	class CFLDLN2 :public Object

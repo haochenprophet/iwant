@@ -1,7 +1,7 @@
 #ifndef SENSOR_CURRENT_H
 #define SENSOR_CURRENT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_current {
 	class Csensor_current :public Object

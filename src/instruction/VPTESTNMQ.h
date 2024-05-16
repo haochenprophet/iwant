@@ -1,7 +1,7 @@
 #ifndef VPTESTNMQ_H
 #define VPTESTNMQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPTESTNMQ {
 	class CVPTESTNMQ :public Object

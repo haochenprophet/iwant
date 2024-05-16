@@ -1,7 +1,7 @@
 #ifndef SQL_OR_H
 #define SQL_OR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OR {
 	class Csql_OR :public Object

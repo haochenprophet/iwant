@@ -1,7 +1,7 @@
 #ifndef SENSOR_REPAIR_H
 #define SENSOR_REPAIR_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_repair {
 	class Csensor_repair :public Object

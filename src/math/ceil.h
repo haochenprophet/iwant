@@ -1,7 +1,7 @@
 #ifndef CEIL_H
 #define CEIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ceil {
 	class Cceil :public Object

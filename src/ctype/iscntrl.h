@@ -1,7 +1,7 @@
 #ifndef ISCNTRL_H
 #define ISCNTRL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iscntrl {
 	class Ciscntrl :public Object

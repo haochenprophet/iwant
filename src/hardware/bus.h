@@ -1,7 +1,7 @@
 #ifndef BUS_H
 #define BUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_bus {
 	class Cbus :public Object

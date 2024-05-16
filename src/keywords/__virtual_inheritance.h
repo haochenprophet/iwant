@@ -1,7 +1,7 @@
 #ifndef __VIRTUAL_INHERITANCE_H
 #define __VIRTUAL_INHERITANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___virtual_inheritance {
 	class C__virtual_inheritance :public Object

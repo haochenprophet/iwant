@@ -1,7 +1,7 @@
 #ifndef CAR_SUSPENSION_H
 #define CAR_SUSPENSION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_suspension {
 	class Ccar_suspension :public Object

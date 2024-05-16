@@ -1,7 +1,7 @@
 #ifndef HOME_WALL_H
 #define HOME_WALL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_wall {
 	class Chome_wall :public Object

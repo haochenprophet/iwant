@@ -1,7 +1,7 @@
 #ifndef SQL_COMPUTE_H
 #define SQL_COMPUTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_COMPUTE {
 	class Csql_COMPUTE :public Object

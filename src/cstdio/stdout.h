@@ -1,7 +1,7 @@
 #ifndef STDOUT_H
 #define STDOUT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_stdout {
 	class Cstdout :public Object

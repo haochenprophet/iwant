@@ -1,7 +1,7 @@
 #ifndef HOME_NEWS_H
 #define HOME_NEWS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_news {
 	class Chome_news :public Object

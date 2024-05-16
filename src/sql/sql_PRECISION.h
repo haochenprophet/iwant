@@ -1,7 +1,7 @@
 #ifndef SQL_PRECISION_H
 #define SQL_PRECISION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PRECISION {
 	class Csql_PRECISION :public Object

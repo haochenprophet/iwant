@@ -1,7 +1,7 @@
 #ifndef NEARBYINT_H
 #define NEARBYINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_nearbyint {
 	class Cnearbyint :public Object

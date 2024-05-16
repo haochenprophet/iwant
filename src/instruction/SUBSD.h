@@ -1,7 +1,7 @@
 #ifndef SUBSD_H
 #define SUBSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SUBSD {
 	class CSUBSD :public Object

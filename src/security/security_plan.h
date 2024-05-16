@@ -1,7 +1,7 @@
 #ifndef SECURITY_PLAN_H
 #define SECURITY_PLAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_plan {
 	class Csecurity_plan :public Object

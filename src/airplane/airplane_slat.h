@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_SLAT_H
 #define AIRPLANE_SLAT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_slat {
 	class Cairplane_slat :public Object

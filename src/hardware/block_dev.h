@@ -1,7 +1,7 @@
 #ifndef BLOCK_DEV_H
 #define BLOCK_DEV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_block_dev {
 	class Cblock_dev :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_RIGHT_H
 #define SQL_RIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RIGHT {
 	class Csql_RIGHT :public Object

@@ -1,7 +1,7 @@
 #ifndef BOUND_H
 #define BOUND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BOUND {
 	class CBOUND :public Object

@@ -1,7 +1,7 @@
 #ifndef BLENDPS_H
 #define BLENDPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BLENDPS {
 	class CBLENDPS :public Object

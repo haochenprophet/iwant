@@ -1,7 +1,7 @@
 #ifndef FSUBP_H
 #define FSUBP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FSUBP {
 	class CFSUBP :public Object

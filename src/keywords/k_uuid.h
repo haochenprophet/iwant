@@ -1,7 +1,7 @@
 #ifndef K_UUID_H
 #define K_UUID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_k_uuid {
 	class CKuuid :public Object

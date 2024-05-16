@@ -1,7 +1,7 @@
 #ifndef MARS_CMATERIAL_H
 #define MARS_CMATERIAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_cmaterial {
 	class Cmars_cmaterial :public Object

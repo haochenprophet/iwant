@@ -1,7 +1,7 @@
 #ifndef CAR_GUI_H
 #define CAR_GUI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_gui {
 	class Ccar_gui :public Object

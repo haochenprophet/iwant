@@ -1,7 +1,7 @@
 #ifndef VPMASKMOV_H
 #define VPMASKMOV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMASKMOV {
 	class CVPMASKMOV :public Object

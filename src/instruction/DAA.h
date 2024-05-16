@@ -1,7 +1,7 @@
 #ifndef DAA_H
 #define DAA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_DAA {
 	class CDAA :public Object

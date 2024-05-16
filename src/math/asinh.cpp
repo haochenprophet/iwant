@@ -33,7 +33,7 @@ long double Casinh::asinhl_c(long double x)
 #endif
 
 #if ASINH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ASINH_TEST\n\n";

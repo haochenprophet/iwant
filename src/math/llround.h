@@ -1,7 +1,7 @@
 #ifndef LLROUND_H
 #define LLROUND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_llround {
 	class Cllround :public Object

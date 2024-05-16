@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_FOOD_H
 #define SPACEPORT_FOOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_food {
 	class Cspaceport_food :public Object

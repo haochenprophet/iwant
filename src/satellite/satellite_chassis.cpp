@@ -21,7 +21,7 @@ Csatellite_chassis::~Csatellite_chassis()
 #endif
 
 #if SATELLITE_CHASSIS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

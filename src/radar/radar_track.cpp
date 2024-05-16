@@ -21,7 +21,7 @@ Cradar_track::~Cradar_track()
 #endif
 
 #if RADAR_TRACK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

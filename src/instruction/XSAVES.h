@@ -1,7 +1,7 @@
 #ifndef XSAVES_H
 #define XSAVES_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XSAVES {
 	class CXSAVES :public Object

@@ -21,7 +21,7 @@ Cmoney_dynasty::~Cmoney_dynasty()
 #endif
 
 #if MONEY_DYNASTY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

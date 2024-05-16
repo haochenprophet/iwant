@@ -1,7 +1,7 @@
 #ifndef SENSOR_WEIGHT_H
 #define SENSOR_WEIGHT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_weight {
 	class Csensor_weight :public Object

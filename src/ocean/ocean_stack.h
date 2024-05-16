@@ -1,7 +1,7 @@
 #ifndef OCEAN_STACK_H
 #define OCEAN_STACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_stack {
 	class Cocean_stack :public Object

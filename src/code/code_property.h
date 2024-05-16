@@ -1,7 +1,7 @@
 #ifndef CODE_PROPERTY_H
 #define CODE_PROPERTY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_property {
 	class Ccode_property :public Object

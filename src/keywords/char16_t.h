@@ -1,7 +1,7 @@
 #ifndef CHAR16_T_H
 #define CHAR16_T_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_char16_t {
 	class Cchar16_t :public Object

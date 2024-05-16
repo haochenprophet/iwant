@@ -1,7 +1,7 @@
 #ifndef MINPD_H
 #define MINPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MINPD {
 	class CMINPD :public Object

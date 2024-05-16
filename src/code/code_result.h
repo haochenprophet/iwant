@@ -1,7 +1,7 @@
 #ifndef CODE_RESULT_H
 #define CODE_RESULT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_result {
 	class Ccode_result :public Object

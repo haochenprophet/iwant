@@ -1,7 +1,7 @@
 #ifndef SECURITY_CRUISE_H
 #define SECURITY_CRUISE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_cruise {
 	class Csecurity_cruise :public Object

@@ -1,7 +1,7 @@
 #ifndef MBTOWC_H
 #define MBTOWC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mbtowc {
 	class Cmbtowc :public Object

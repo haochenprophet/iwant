@@ -1,7 +1,7 @@
 #ifndef OUTSD_H
 #define OUTSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_OUTSD {
 	class COUTSD :public Object

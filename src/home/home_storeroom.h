@@ -1,7 +1,7 @@
 #ifndef HOME_STOREROOM_H
 #define HOME_STOREROOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_storeroom {
 	class Chome_storeroom :public Object

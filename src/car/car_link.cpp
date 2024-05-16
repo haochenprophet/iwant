@@ -21,7 +21,7 @@ Ccar_link::~Ccar_link()
 #endif
 
 #if CAR_LINK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef MONEY_CAPITAL_FLOW_H
 #define MONEY_CAPITAL_FLOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_capital_flow {
 	class Cmoney_capital_flow :public Object

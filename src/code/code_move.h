@@ -1,7 +1,7 @@
 #ifndef CODE_MOVE_H
 #define CODE_MOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_move {
 	class Ccode_move :public Object

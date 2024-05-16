@@ -1,7 +1,7 @@
 #ifndef SATELLITE_DIAGNOSIS_H
 #define SATELLITE_DIAGNOSIS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_diagnosis {
 	class Csatellite_diagnosis :public Object

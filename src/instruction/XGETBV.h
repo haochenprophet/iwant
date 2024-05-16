@@ -1,7 +1,7 @@
 #ifndef XGETBV_H
 #define XGETBV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XGETBV {
 	class CXGETBV :public Object

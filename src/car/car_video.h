@@ -1,7 +1,7 @@
 #ifndef CAR_VIDEO_H
 #define CAR_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_video {
 	class Ccar_video :public Object

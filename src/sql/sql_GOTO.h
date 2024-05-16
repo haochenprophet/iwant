@@ -1,7 +1,7 @@
 #ifndef SQL_GOTO_H
 #define SQL_GOTO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_GOTO {
 	class Csql_GOTO :public Object

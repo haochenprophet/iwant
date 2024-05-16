@@ -1,7 +1,7 @@
 #ifndef ROCKET_COWLING_H
 #define ROCKET_COWLING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_cowling {
 	class Crocket_cowling :public Object

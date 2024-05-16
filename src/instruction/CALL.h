@@ -1,7 +1,7 @@
 #ifndef CALL_H
 #define CALL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CALL {
 	class CCALL :public Object

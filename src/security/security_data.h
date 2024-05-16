@@ -1,7 +1,7 @@
 #ifndef SECURITY_DATA_H
 #define SECURITY_DATA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_data {
 	class Csecurity_data :public Object

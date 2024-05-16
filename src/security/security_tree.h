@@ -1,7 +1,7 @@
 #ifndef SECURITY_TREE_H
 #define SECURITY_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_tree {
 	class Csecurity_tree :public Object

@@ -1,7 +1,7 @@
 #ifndef __HOOK_H
 #define __HOOK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___hook {
 	class C__hook :public Object

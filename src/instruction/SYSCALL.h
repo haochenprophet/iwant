@@ -1,7 +1,7 @@
 #ifndef SYSCALL_H
 #define SYSCALL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SYSCALL {
 	class CSYSCALL :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_NETWORK_H
 #define CAR_NETWORK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_network {
 	class Ccar_network :public Object

@@ -1,7 +1,7 @@
 #ifndef PSRLW_H
 #define PSRLW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSRLW {
 	class CPSRLW :public Object

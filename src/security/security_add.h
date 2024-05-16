@@ -1,7 +1,7 @@
 #ifndef SECURITY_ADD_H
 #define SECURITY_ADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_add {
 	class Csecurity_add :public Object

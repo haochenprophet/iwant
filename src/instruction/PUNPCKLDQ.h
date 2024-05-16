@@ -1,7 +1,7 @@
 #ifndef PUNPCKLDQ_H
 #define PUNPCKLDQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PUNPCKLDQ {
 	class CPUNPCKLDQ :public Object

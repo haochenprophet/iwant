@@ -1,7 +1,7 @@
 #ifndef HADDPS_H
 #define HADDPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_HADDPS {
 	class CHADDPS :public Object

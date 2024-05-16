@@ -1,7 +1,7 @@
 #ifndef MONEY_DYNASTY_H
 #define MONEY_DYNASTY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_dynasty {
 	class Cmoney_dynasty :public Object

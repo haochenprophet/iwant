@@ -1,7 +1,7 @@
 #ifndef MBLEN_H
 #define MBLEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mblen {
 	class Cmblen :public Object

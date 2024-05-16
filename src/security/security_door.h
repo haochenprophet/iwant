@@ -1,7 +1,7 @@
 #ifndef SECURITY_DOOR_H
 #define SECURITY_DOOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_door {
 	class Csecurity_door :public Object

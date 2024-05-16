@@ -1,7 +1,7 @@
 #ifndef SQL_CASE_H
 #define SQL_CASE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CASE {
 	class Csql_CASE :public Object

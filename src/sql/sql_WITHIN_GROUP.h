@@ -1,7 +1,7 @@
 #ifndef SQL_WITHIN_GROUP_H
 #define SQL_WITHIN_GROUP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WITHIN_GROUP {
 	class Csql_WITHIN_GROUP :public Object

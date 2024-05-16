@@ -21,7 +21,7 @@ Ccar_electric_machine::~Ccar_electric_machine()
 #endif
 
 #if CAR_ELECTRIC_MACHINE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef INT_H
 #define INT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INT {
 	class CINT :public Object

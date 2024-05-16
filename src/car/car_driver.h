@@ -1,7 +1,7 @@
 #ifndef CAR_DRIVER_H
 #define CAR_DRIVER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_driver {
 	class Ccar_driver :public Object

@@ -26,7 +26,7 @@ lldiv_t Clldiv::lldiv_c(long long int numer, long long int denom)
 #endif
 
 #if LLDIV_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LLDIV_TEST\n\n";

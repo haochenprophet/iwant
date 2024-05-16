@@ -1,7 +1,7 @@
 #ifndef VPMOVSQD_H
 #define VPMOVSQD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVSQD {
 	class CVPMOVSQD :public Object

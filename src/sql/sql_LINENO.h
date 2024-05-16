@@ -1,7 +1,7 @@
 #ifndef SQL_LINENO_H
 #define SQL_LINENO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_LINENO {
 	class Csql_LINENO :public Object

@@ -26,7 +26,7 @@ int Cfflush::fflush_c(FILE* stream)
 #endif
 
 #if FFLUSH_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FFLUSH_TEST\n\n";
 

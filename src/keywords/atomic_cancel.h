@@ -1,7 +1,7 @@
 #ifndef ATOMIC_CANCEL_H
 #define ATOMIC_CANCEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atomic_cancel {
 	class Catomic_cancel :public Object

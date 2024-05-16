@@ -26,7 +26,7 @@ void Crewind:: rewind_c(FILE* stream)
 #endif
 
 #if REWIND_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "REWIND_TEST\n\n";
 

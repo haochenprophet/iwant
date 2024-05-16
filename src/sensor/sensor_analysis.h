@@ -1,7 +1,7 @@
 #ifndef SENSOR_ANALYSIS_H
 #define SENSOR_ANALYSIS_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_analysis {
 	class Csensor_analysis :public Object

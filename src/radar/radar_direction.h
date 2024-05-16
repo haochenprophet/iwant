@@ -1,7 +1,7 @@
 #ifndef RADAR_DIRECTION_H
 #define RADAR_DIRECTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_direction {
 	class Cradar_direction :public Object

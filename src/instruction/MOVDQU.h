@@ -1,7 +1,7 @@
 #ifndef MOVDQU_H
 #define MOVDQU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVDQU {
 	class CMOVDQU :public Object

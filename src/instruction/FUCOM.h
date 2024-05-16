@@ -1,7 +1,7 @@
 #ifndef FUCOM_H
 #define FUCOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FUCOM {
 	class CFUCOM :public Object

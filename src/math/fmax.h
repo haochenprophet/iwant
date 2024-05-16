@@ -1,7 +1,7 @@
 #ifndef FMAX_H
 #define FMAX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fmax {
 	class Cfmax :public Object

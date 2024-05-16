@@ -1,7 +1,7 @@
 #ifndef FMULP_H
 #define FMULP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FMULP {
 	class CFMULP :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_OF_H
 #define SQL_OF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OF {
 	class Csql_OF :public Object

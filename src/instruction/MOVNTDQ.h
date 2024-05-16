@@ -1,7 +1,7 @@
 #ifndef MOVNTDQ_H
 #define MOVNTDQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVNTDQ {
 	class CMOVNTDQ :public Object

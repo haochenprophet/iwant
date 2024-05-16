@@ -1,7 +1,7 @@
 #ifndef SECURITY_MEASURE_H
 #define SECURITY_MEASURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_measure {
 	class Csecurity_measure :public Object

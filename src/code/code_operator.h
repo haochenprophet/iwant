@@ -1,7 +1,7 @@
 #ifndef CODE_OPERATOR_H
 #define CODE_OPERATOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_operator {
 	class Ccode_operator :public Object

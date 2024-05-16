@@ -1,7 +1,7 @@
 #ifndef MATERIEL_CREATE_H
 #define MATERIEL_CREATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_create {
 	class Cmateriel_create :public Object

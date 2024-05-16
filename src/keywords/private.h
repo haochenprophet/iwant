@@ -1,7 +1,7 @@
 #ifndef PRIVATE_H
 #define PRIVATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_private {
 	class Cprivate :public Object

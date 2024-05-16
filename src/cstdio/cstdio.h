@@ -1,7 +1,7 @@
 #ifndef CSTDIO_H
 #define CSTDIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cstdio {
 	//class Ccstdio is the cstdio package master class

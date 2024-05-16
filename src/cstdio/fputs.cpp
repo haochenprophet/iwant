@@ -26,7 +26,7 @@ int Cfputs::fputs_c(const char* str, FILE* stream)
 #endif
 
 #if FPUTS_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FPUTS_TEST\n\n";
 

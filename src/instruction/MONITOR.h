@@ -1,7 +1,7 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MONITOR {
 	class CMONITOR :public Object

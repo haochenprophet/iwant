@@ -1,7 +1,7 @@
 #ifndef XTEST_H
 #define XTEST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XTEST {
 	class CXTEST :public Object

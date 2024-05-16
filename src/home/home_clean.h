@@ -1,7 +1,7 @@
 #ifndef HOME_CLEAN_H
 #define HOME_CLEAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_clean {
 	class Chome_clean :public Object

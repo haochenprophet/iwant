@@ -1,7 +1,7 @@
 #ifndef ATOL_H
 #define ATOL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atol {
 	class Catol :public Object

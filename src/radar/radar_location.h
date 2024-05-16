@@ -1,7 +1,7 @@
 #ifndef RADAR_LOCATION_H
 #define RADAR_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_location {
 	class Cradar_location :public Object

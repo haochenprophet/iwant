@@ -32,7 +32,7 @@ long double Cexpm1::expm1l_c(long double x)
 #endif
 
 #if EXPM1_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "EXPM1_TEST\n\n";

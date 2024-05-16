@@ -1,7 +1,7 @@
 #ifndef PANDN_H
 #define PANDN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PANDN {
 	class CPANDN :public Object

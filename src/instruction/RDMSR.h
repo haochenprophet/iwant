@@ -1,7 +1,7 @@
 #ifndef RDMSR_H
 #define RDMSR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDMSR {
 	class CRDMSR :public Object

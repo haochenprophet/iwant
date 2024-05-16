@@ -1,7 +1,7 @@
 #ifndef ELSE_H
 #define ELSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_else {
 	class Celse :public Object

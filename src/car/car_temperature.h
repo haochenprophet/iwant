@@ -1,7 +1,7 @@
 #ifndef CAR_TEMPERATURE_H
 #define CAR_TEMPERATURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_temperature {
 	class Ccar_temperature :public Object

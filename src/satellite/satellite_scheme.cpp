@@ -21,7 +21,7 @@ Csatellite_scheme::~Csatellite_scheme()
 #endif
 
 #if SATELLITE_SCHEME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

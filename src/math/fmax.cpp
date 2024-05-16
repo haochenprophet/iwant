@@ -32,7 +32,7 @@ long double Cfmax::fmaxl_c(long double x, long double y)
 #endif
 
 #if FMAX_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FMAX_TEST\n\n";

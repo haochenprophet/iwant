@@ -1,7 +1,7 @@
 #ifndef UCOMISD_H
 #define UCOMISD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_UCOMISD {
 	class CUCOMISD :public Object

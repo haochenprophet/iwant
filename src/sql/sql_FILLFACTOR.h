@@ -1,7 +1,7 @@
 #ifndef SQL_FILLFACTOR_H
 #define SQL_FILLFACTOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FILLFACTOR {
 	class Csql_FILLFACTOR :public Object

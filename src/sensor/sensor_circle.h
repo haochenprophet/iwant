@@ -1,7 +1,7 @@
 #ifndef SENSOR_CIRCLE_H
 #define SENSOR_CIRCLE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_circle {
 	class Csensor_circle :public Object

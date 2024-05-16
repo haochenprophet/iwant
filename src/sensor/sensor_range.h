@@ -1,7 +1,7 @@
 #ifndef SENSOR_RANGE_H
 #define SENSOR_RANGE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_range {
 	class Csensor_range :public Object

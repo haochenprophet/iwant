@@ -1,7 +1,7 @@
 #ifndef SENSOR_VOLUME_H
 #define SENSOR_VOLUME_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_volume {
 	class Csensor_volume :public Object

@@ -33,7 +33,7 @@ long double Ctgamma::tgammal_c(long double x)
 #endif
 
 #if TGAMMA_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "TGAMMA_TEST\n\n";

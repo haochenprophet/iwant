@@ -1,7 +1,7 @@
 #ifndef ISWSPACE_H
 #define ISWSPACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswspace {
 	class Ciswspace :public Object

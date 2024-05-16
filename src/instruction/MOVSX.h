@@ -1,7 +1,7 @@
 #ifndef MOVSX_H
 #define MOVSX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVSX {
 	class CMOVSX :public Object

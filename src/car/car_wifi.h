@@ -1,7 +1,7 @@
 #ifndef CAR_WIFI_H
 #define CAR_WIFI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_wifi {
 	class Ccar_wifi :public Object

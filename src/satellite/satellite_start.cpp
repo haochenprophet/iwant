@@ -21,7 +21,7 @@ Csatellite_start::~Csatellite_start()
 #endif
 
 #if SATELLITE_START_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

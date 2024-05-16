@@ -1,7 +1,7 @@
 #ifndef TYPEID_H
 #define TYPEID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_typeid {
 	class Ctypeid :public Object

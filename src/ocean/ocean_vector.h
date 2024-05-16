@@ -1,7 +1,7 @@
 #ifndef OCEAN_VECTOR_H
 #define OCEAN_VECTOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_vector {
 	class Cocean_vector :public Object

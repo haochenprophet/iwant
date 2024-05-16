@@ -1,7 +1,7 @@
 #ifndef CAR_USB_PORT_H
 #define CAR_USB_PORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_usb_port {
 	class Ccar_usb_port :public Object

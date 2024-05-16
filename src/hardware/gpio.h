@@ -1,7 +1,7 @@
 #ifndef GPIO_H
 #define GPIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_gpio {
 	class Cgpio :public Object

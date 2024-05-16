@@ -1,7 +1,7 @@
 #ifndef CSTDLIB_H
 #define CSTDLIB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cstdlib {
 	class Ccstdlib :public Object

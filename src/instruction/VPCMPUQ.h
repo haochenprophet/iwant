@@ -1,7 +1,7 @@
 #ifndef VPCMPUQ_H
 #define VPCMPUQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPCMPUQ {
 	class CVPCMPUQ :public Object

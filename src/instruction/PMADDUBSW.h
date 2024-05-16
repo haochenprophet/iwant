@@ -1,7 +1,7 @@
 #ifndef PMADDUBSW_H
 #define PMADDUBSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMADDUBSW {
 	class CPMADDUBSW :public Object

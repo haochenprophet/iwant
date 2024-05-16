@@ -26,7 +26,7 @@ double Catof::atof_c(const char* str)
 #endif
 
 #if ATOF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATOF_TEST\n\n";

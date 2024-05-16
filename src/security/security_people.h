@@ -1,7 +1,7 @@
 #ifndef SECURITY_PEOPLE_H
 #define SECURITY_PEOPLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_people {
 	class Csecurity_people :public Object

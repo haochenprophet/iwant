@@ -26,7 +26,7 @@ long int Cftell::ftell_c(FILE* stream)
 #endif
 
 #if FTELL_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FTELL_TEST\n\n";
 

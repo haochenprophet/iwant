@@ -1,7 +1,7 @@
 #ifndef PSUBD_H
 #define PSUBD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSUBD {
 	class CPSUBD :public Object

@@ -26,7 +26,7 @@ void* Cbsearch::bsearch_c(const void* key, const void* base, size_t num, size_t 
 #endif
 
 #if BSEARCH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "BSEARCH_TEST\n\n";

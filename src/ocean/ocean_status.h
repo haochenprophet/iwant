@@ -1,7 +1,7 @@
 #ifndef OCEAN_STATUS_H
 #define OCEAN_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_status {
 	class Cocean_status :public Object

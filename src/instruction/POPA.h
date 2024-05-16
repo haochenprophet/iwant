@@ -1,7 +1,7 @@
 #ifndef POPA_H
 #define POPA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_POPA {
 	class CPOPA :public Object

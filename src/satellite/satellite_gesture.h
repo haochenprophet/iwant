@@ -1,7 +1,7 @@
 #ifndef SATELLITE_GESTURE_H
 #define SATELLITE_GESTURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_gesture {
 	class Csatellite_gesture :public Object

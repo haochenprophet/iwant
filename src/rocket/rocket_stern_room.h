@@ -1,7 +1,7 @@
 #ifndef ROCKET_STERN_ROOM_H
 #define ROCKET_STERN_ROOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_stern_room {
 	class Crocket_stern_room :public Object

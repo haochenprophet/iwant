@@ -1,7 +1,7 @@
 #ifndef HOME_RECORD_H
 #define HOME_RECORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_record {
 	class Chome_record :public Object

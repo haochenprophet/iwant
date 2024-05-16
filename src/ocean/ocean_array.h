@@ -1,7 +1,7 @@
 #ifndef OCEAN_ARRAY_H
 #define OCEAN_ARRAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_array {
 	class Cocean_array :public Object

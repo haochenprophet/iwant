@@ -1,7 +1,7 @@
 #ifndef CAR_STEER_H
 #define CAR_STEER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_steer {
 	class Ccar_steer :public Object

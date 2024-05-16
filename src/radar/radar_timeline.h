@@ -1,7 +1,7 @@
 #ifndef RADAR_TIMELINE_H
 #define RADAR_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_timeline {
 	class Cradar_timeline :public Object

@@ -1,7 +1,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_timer {
 	class Ctimer :public Object

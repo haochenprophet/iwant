@@ -1,7 +1,7 @@
 #ifndef CAR_MILEAGE_H
 #define CAR_MILEAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mileage {
 	class Ccar_mileage :public Object

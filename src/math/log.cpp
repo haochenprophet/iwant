@@ -25,7 +25,7 @@ double Clog::log_c(double x)
 #endif
 
 #if LOG_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOG_TEST\n\n";

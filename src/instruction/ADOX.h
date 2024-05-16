@@ -1,7 +1,7 @@
 #ifndef ADOX_H
 #define ADOX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ADOX {
 	class CADOX :public Object

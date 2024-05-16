@@ -1,7 +1,7 @@
 #ifndef CAR_WATER_H
 #define CAR_WATER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_water {
 	class Ccar_water :public Object

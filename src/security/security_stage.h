@@ -1,7 +1,7 @@
 #ifndef SECURITY_STAGE_H
 #define SECURITY_STAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_stage {
 	class Csecurity_stage :public Object

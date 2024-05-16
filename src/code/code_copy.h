@@ -1,7 +1,7 @@
 #ifndef CODE_COPY_H
 #define CODE_COPY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_copy {
 	class Ccode_copy :public Object

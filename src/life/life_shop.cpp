@@ -21,7 +21,7 @@ Clife_shop::~Clife_shop()
 #endif
 
 #if LIFE_SHOP_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

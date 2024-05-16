@@ -1,7 +1,7 @@
 #ifndef RAND_H
 #define RAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rand {
 	class Crand :public Object

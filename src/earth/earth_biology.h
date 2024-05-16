@@ -1,7 +1,7 @@
 #ifndef EARTH_BIOLOGY_H
 #define EARTH_BIOLOGY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_biology {
 	class Cearth_biology :public Object

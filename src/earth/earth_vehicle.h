@@ -1,7 +1,7 @@
 #ifndef EARTH_VEHICLE_H
 #define EARTH_VEHICLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_vehicle {
 	class Cearth_vehicle :public Object

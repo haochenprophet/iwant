@@ -1,7 +1,7 @@
 #ifndef MATERIEL_MYSQL_H
 #define MATERIEL_MYSQL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_mysql {
 	class Cmateriel_mysql :public Object

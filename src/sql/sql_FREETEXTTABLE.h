@@ -1,7 +1,7 @@
 #ifndef SQL_FREETEXTTABLE_H
 #define SQL_FREETEXTTABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FREETEXTTABLE {
 	class Csql_FREETEXTTABLE :public Object

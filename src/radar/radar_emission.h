@@ -1,7 +1,7 @@
 #ifndef RADAR_EMISSION_H
 #define RADAR_EMISSION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_emission {
 	class Cradar_emission :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIAL_STATUS_H
 #define MATERIAL_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_status {
 	class Cmaterial_status :public Object

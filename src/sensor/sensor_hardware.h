@@ -1,7 +1,7 @@
 #ifndef SENSOR_HARDWARE_H
 #define SENSOR_HARDWARE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_hardware {
 	class Csensor_hardware :public Object

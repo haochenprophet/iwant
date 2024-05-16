@@ -1,7 +1,7 @@
 #ifndef SQL_PRIMARY_H
 #define SQL_PRIMARY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PRIMARY {
 	class Csql_PRIMARY :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_SEABED_H
 #define OCEAN_SEABED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_seabed {
 	class Cocean_seabed :public Object

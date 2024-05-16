@@ -1,7 +1,7 @@
 #ifndef HLT_H
 #define HLT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_HLT {
 	class CHLT :public Object

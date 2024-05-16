@@ -1,7 +1,7 @@
 #ifndef SENSOR_COMMAND_H
 #define SENSOR_COMMAND_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_command {
 	class Csensor_command :public Object

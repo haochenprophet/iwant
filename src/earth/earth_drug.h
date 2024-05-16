@@ -1,7 +1,7 @@
 #ifndef EARTH_DRUG_H
 #define EARTH_DRUG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_drug {
 	class Cearth_drug :public Object

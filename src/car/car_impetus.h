@@ -1,7 +1,7 @@
 #ifndef CAR_IMPETUS_H
 #define CAR_IMPETUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_impetus {
 	class Ccar_impetus :public Object

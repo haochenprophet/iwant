@@ -1,7 +1,7 @@
 #ifndef MONEY_DIGITAL_H
 #define MONEY_DIGITAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_digital {
 	class Cmoney_digital :public Object

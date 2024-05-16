@@ -1,7 +1,7 @@
 #ifndef EARTH_NITROGEN_H
 #define EARTH_NITROGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_nitrogen {
 	class Cearth_nitrogen :public Object

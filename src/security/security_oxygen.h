@@ -1,7 +1,7 @@
 #ifndef SECURITY_OXYGEN_H
 #define SECURITY_OXYGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_oxygen {
 	class Csecurity_oxygen :public Object

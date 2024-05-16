@@ -26,7 +26,7 @@ struct tm* Cgmtime::gmtime_c(const time_t* timer)
 #endif
 
 #if GMTIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "GMTIME_TEST\n\n";

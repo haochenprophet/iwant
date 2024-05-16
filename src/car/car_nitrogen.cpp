@@ -21,7 +21,7 @@ Ccar_nitrogen::~Ccar_nitrogen()
 #endif
 
 #if CAR_NITROGEN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

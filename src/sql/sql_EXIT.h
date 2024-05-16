@@ -1,7 +1,7 @@
 #ifndef SQL_EXIT_H
 #define SQL_EXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_EXIT {
 	class Csql_EXIT :public Object

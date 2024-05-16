@@ -1,7 +1,7 @@
 #ifndef CAR_BRAKE_PAD_H
 #define CAR_BRAKE_PAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_brake_pad {
 	class Ccar_brake_pad :public Object

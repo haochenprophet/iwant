@@ -1,7 +1,7 @@
 #ifndef CODE_MAIN_H
 #define CODE_MAIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_main {
 	class Ccode_main :public Object

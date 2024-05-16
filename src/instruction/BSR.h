@@ -1,7 +1,7 @@
 #ifndef BSR_H
 #define BSR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BSR {
 	class CBSR :public Object

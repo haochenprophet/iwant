@@ -1,7 +1,7 @@
 #ifndef SQL_OPENQUERY_H
 #define SQL_OPENQUERY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OPENQUERY {
 	class Csql_OPENQUERY :public Object

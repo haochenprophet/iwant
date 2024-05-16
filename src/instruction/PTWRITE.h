@@ -1,7 +1,7 @@
 #ifndef PTWRITE_H
 #define PTWRITE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PTWRITE {
 	class CPTWRITE :public Object

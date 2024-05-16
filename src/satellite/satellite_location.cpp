@@ -21,7 +21,7 @@ Csatellite_location::~Csatellite_location()
 #endif
 
 #if SATELLITE_LOCATION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

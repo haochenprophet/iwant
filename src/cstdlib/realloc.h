@@ -1,7 +1,7 @@
 #ifndef REALLOC_H
 #define REALLOC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_realloc {
 	class Crealloc :public Object

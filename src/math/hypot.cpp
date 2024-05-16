@@ -36,7 +36,7 @@ long double Chypot::hypotl_c(long double x, long double y)
 #endif
 
 #if HYPOT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "HYPOT_TEST\n\n";

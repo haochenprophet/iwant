@@ -1,7 +1,7 @@
 #ifndef BSEARCH_H
 #define BSEARCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_bsearch {
 	class Cbsearch :public Object

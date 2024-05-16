@@ -1,7 +1,7 @@
 #ifndef CODE_EXPRESSION_H
 #define CODE_EXPRESSION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_expression {
 	class Ccode_expression :public Object

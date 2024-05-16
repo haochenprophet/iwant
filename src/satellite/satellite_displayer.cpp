@@ -21,7 +21,7 @@ Csatellite_displayer::~Csatellite_displayer()
 #endif
 
 #if SATELLITE_DISPLAYER_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

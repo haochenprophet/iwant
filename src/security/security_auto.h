@@ -1,7 +1,7 @@
 #ifndef SECURITY_AUTO_H
 #define SECURITY_AUTO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_auto {
 	class Csecurity_auto :public Object

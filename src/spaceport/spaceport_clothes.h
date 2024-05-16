@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_CLOTHES_H
 #define SPACEPORT_CLOTHES_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_clothes {
 	class Cspaceport_clothes :public Object

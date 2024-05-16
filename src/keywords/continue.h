@@ -1,7 +1,7 @@
 #ifndef CONTINUE_H
 #define CONTINUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_continue {
 	class Ccontinue :public Object

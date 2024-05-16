@@ -1,7 +1,7 @@
 #ifndef SATELLITE_HOOD_H
 #define SATELLITE_HOOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_hood {
 	class Csatellite_hood :public Object

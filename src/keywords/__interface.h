@@ -1,7 +1,7 @@
 #ifndef __INTERFACE_H
 #define __INTERFACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___interface {
 	class C__interface :public Object

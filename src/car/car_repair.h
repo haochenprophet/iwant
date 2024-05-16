@@ -1,7 +1,7 @@
 #ifndef CAR_REPAIR_H
 #define CAR_REPAIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_repair {
 	class Ccar_repair :public Object

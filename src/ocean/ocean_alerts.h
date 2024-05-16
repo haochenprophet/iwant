@@ -1,7 +1,7 @@
 #ifndef OCEAN_ALERTS_H
 #define OCEAN_ALERTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_alerts {
 	class Cocean_alerts :public Object

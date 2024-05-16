@@ -1,7 +1,7 @@
 #ifndef MATERIEL_DB_H
 #define MATERIEL_DB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_db {
 	class Cmateriel_db :public Object

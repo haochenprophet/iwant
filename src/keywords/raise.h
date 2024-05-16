@@ -1,7 +1,7 @@
 #ifndef RAISE_H
 #define RAISE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_raise {
 	class Craise :public Object

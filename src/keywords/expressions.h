@@ -1,7 +1,7 @@
 #ifndef EXPRESSIONS_H
 #define EXPRESSIONS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_expressions {
 	class Cexpressions :public Object

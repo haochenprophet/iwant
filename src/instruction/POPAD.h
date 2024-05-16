@@ -1,7 +1,7 @@
 #ifndef POPAD_H
 #define POPAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_POPAD {
 	class CPOPAD :public Object

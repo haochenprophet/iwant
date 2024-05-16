@@ -1,7 +1,7 @@
 #ifndef MOVS_H
 #define MOVS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVS {
 	class CMOVS :public Object

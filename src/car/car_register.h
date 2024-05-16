@@ -1,7 +1,7 @@
 #ifndef CAR_REGISTER_H
 #define CAR_REGISTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_register {
 	class Ccar_register :public Object

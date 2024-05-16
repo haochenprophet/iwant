@@ -1,7 +1,7 @@
 #ifndef HOME_CONTROL_H
 #define HOME_CONTROL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_control {
 	class Chome_control :public Object

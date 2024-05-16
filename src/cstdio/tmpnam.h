@@ -1,7 +1,7 @@
 #ifndef TMPNAM_H
 #define TMPNAM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_tmpnam {
 	class Ctmpnam :public Object

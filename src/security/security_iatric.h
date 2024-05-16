@@ -1,7 +1,7 @@
 #ifndef SECURITY_IATRIC_H
 #define SECURITY_IATRIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_iatric {
 	class Csecurity_iatric :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_REGISTER_H
 #define SATELLITE_REGISTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_register {
 	class Csatellite_register :public Object

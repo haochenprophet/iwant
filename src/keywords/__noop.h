@@ -1,7 +1,7 @@
 #ifndef __NOOP_H
 #define __NOOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___noop {
 	class C__noop :public Object

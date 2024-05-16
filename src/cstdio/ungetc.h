@@ -1,7 +1,7 @@
 #ifndef UNGETC_H
 #define UNGETC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ungetc {
 	class Cungetc :public Object

@@ -24,7 +24,7 @@ long int Cstrtol::strtol_c(const char* str, char** endptr, int base)
 #endif
 
 #if STRTOL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRTOL_TEST\n\n";

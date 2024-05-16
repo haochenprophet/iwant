@@ -1,7 +1,7 @@
 #ifndef SECURITY_INFORMATION_H
 #define SECURITY_INFORMATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_information {
 	class Csecurity_information :public Object

@@ -1,7 +1,7 @@
 #ifndef XORPD_H
 #define XORPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XORPD {
 	class CXORPD :public Object

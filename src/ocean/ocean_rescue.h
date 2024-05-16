@@ -1,7 +1,7 @@
 #ifndef OCEAN_RESCUE_H
 #define OCEAN_RESCUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_rescue {
 	class Cocean_rescue :public Object

@@ -1,7 +1,7 @@
 #ifndef TIMETREE_H
 #define TIMETREE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_timetree {
 	class Ctimetree :public Object

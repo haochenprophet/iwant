@@ -1,7 +1,7 @@
 #ifndef CAR_MODE_H
 #define CAR_MODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mode {
 	class Ccar_mode :public Object

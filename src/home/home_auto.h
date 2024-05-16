@@ -1,7 +1,7 @@
 #ifndef HOME_AUTO_H
 #define HOME_AUTO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_auto {
 	class Chome_auto :public Object

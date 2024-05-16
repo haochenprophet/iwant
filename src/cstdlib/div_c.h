@@ -1,7 +1,7 @@
 #ifndef DIV_C_H
 #define DIV_C_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_div_c {
 	class Cdiv_c :public Object

@@ -21,7 +21,7 @@ Cocean_warning::~Cocean_warning()
 #endif
 
 #if OCEAN_WARNING_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

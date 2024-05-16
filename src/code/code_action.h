@@ -1,8 +1,8 @@
 #ifndef CODE_ACTION_H
 #define CODE_ACTION_H
 
-#include "bits_def.h"
-#include "action_type.h"
+#include "bit/bits_def.h"
+#include "action/action_type.h"
 
 enum class CodeAtcionClass
 {
@@ -17,7 +17,7 @@ enum class CodeAtcion {
 	set_package = BIT3,
 };
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_action {
 	class Ccode_action :public Object

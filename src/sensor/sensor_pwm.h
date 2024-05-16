@@ -1,7 +1,7 @@
 #ifndef SENSOR_PWM_H
 #define SENSOR_PWM_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_pwm {
 	class Csensor_pwm :public Object

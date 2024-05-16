@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_COOK_H
 #define SPACEPORT_COOK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_cook {
 	class Cspaceport_cook :public Object

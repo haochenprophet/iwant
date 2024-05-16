@@ -1,7 +1,7 @@
 #ifndef SATELLITE_AIRBAG_H
 #define SATELLITE_AIRBAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_airbag {
 	class Csatellite_airbag :public Object

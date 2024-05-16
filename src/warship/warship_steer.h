@@ -1,7 +1,7 @@
 #ifndef WARSHIP_STEER_H
 #define WARSHIP_STEER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_steer {
 	class Cwarship_steer :public Object

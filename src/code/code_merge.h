@@ -1,7 +1,7 @@
 #ifndef CODE_MERGE_H
 #define CODE_MERGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_merge {
 	class Ccode_merge :public Object

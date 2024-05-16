@@ -1,7 +1,7 @@
 #ifndef SECURITY_FIRE_H
 #define SECURITY_FIRE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_fire {
 	class Csecurity_fire :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_PLAN_H
 #define SQL_PLAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PLAN {
 	class Csql_PLAN :public Object

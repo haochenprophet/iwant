@@ -1,7 +1,7 @@
 #ifndef BUILD_H
 #define BUILD_H
 
-#include "object.h"
+#include "object/object.h"
 #include "build_action.h"
 
 namespace n_build {

@@ -1,7 +1,7 @@
 #ifndef LES_H
 #define LES_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LES {
 	class CLES :public Object

@@ -1,7 +1,7 @@
 #ifndef MONEY_WEIGHT_H
 #define MONEY_WEIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_weight {
 	class Cmoney_weight :public Object

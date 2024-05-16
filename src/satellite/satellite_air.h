@@ -1,7 +1,7 @@
 #ifndef SATELLITE_AIR_H
 #define SATELLITE_AIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_air {
 	class Csatellite_air :public Object

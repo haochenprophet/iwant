@@ -1,7 +1,7 @@
 #ifndef ROUND_H
 #define ROUND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_round {
 	class Cround :public Object

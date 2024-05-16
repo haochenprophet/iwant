@@ -1,7 +1,7 @@
 #ifndef OCEAN_MOVE_H
 #define OCEAN_MOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_move {
 	class Cocean_move :public Object

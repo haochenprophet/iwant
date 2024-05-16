@@ -1,7 +1,7 @@
 #ifndef ISBLANK_H
 #define ISBLANK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isblank {
 	class Cisblank :public Object

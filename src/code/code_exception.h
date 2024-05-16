@@ -1,7 +1,7 @@
 #ifndef CODE_EXCEPTION_H
 #define CODE_EXCEPTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_exception {
 	class Ccode_exception :public Object

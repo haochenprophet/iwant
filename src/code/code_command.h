@@ -1,7 +1,7 @@
 #ifndef CODE_COMMAND_H
 #define CODE_COMMAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_command {
 	class Ccode_command :public Object

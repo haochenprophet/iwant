@@ -1,7 +1,7 @@
 #ifndef VPCOMPRESSQ_H
 #define VPCOMPRESSQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPCOMPRESSQ {
 	class CVPCOMPRESSQ :public Object

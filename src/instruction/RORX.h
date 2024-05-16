@@ -1,7 +1,7 @@
 #ifndef RORX_H
 #define RORX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RORX {
 	class CRORX :public Object

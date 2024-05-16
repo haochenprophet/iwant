@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LEARNING_H
 #define SATELLITE_LEARNING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_learning {
 	class Csatellite_learning :public Object

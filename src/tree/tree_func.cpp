@@ -29,7 +29,7 @@ int Ctree_func::runme(void* node)
 #endif
 
 #if TREE_FUNC_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

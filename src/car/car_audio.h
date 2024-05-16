@@ -1,7 +1,7 @@
 #ifndef CAR_AUDIO_H
 #define CAR_AUDIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_audio {
 	class Ccar_audio :public Object

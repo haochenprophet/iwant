@@ -1,7 +1,7 @@
 #ifndef SENSOR_STATUS_H
 #define SENSOR_STATUS_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_status {
 	class Csensor_status :public Object

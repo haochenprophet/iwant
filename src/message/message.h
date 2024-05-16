@@ -1,7 +1,7 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_message {
 	class Cmessage :public Object

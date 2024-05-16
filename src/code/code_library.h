@@ -1,7 +1,7 @@
 #ifndef CODE_LIBRARY_H
 #define CODE_LIBRARY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_library {
 	class Ccode_library :public Object

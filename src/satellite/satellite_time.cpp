@@ -21,7 +21,7 @@ Csatellite_time::~Csatellite_time()
 #endif
 
 #if SATELLITE_TIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

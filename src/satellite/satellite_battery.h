@@ -1,7 +1,7 @@
 #ifndef SATELLITE_BATTERY_H
 #define SATELLITE_BATTERY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_battery {
 	class Csatellite_battery :public Object

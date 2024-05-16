@@ -1,7 +1,7 @@
 #ifndef OCEAN_REGION_H
 #define OCEAN_REGION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_region {
 	class Cocean_region :public Object

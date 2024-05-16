@@ -1,7 +1,7 @@
 #ifndef CAR_OIL_H
 #define CAR_OIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_oil {
 	class Ccar_oil :public Object

@@ -1,7 +1,7 @@
 #ifndef WARSHIP_CANTEEN_H
 #define WARSHIP_CANTEEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_canteen {
 	class Cwarship_canteen :public Object

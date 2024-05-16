@@ -1,7 +1,7 @@
 #ifndef MOVMSKPD_H
 #define MOVMSKPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVMSKPD {
 	class CMOVMSKPD :public Object

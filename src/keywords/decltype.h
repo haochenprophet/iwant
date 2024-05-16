@@ -1,7 +1,7 @@
 #ifndef DECLTYPE_H
 #define DECLTYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_decltype {
 	class Cdecltype :public Object

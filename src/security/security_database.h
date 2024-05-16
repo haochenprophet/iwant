@@ -1,7 +1,7 @@
 #ifndef SECURITY_DATABASE_H
 #define SECURITY_DATABASE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_database {
 	class Csecurity_database :public Object

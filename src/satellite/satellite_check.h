@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CHECK_H
 #define SATELLITE_CHECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_check {
 	class Csatellite_check :public Object

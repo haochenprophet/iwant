@@ -1,7 +1,7 @@
 #ifndef SECURITY_AIRBAG_H
 #define SECURITY_AIRBAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_airbag {
 	class Csecurity_airbag :public Object

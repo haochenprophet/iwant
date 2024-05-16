@@ -1,7 +1,7 @@
 #ifndef VRSQRT28SD_H
 #define VRSQRT28SD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VRSQRT28SD {
 	class CVRSQRT28SD :public Object

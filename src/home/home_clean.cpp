@@ -21,7 +21,7 @@ Chome_clean::~Chome_clean()
 #endif
 
 #if HOME_CLEAN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

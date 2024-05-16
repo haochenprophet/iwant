@@ -1,7 +1,7 @@
 #ifndef ORGANIZATION_DB_H
 #define ORGANIZATION_DB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_organization_db {
 	class Corganization_db :public Object

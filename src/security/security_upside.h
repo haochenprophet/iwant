@@ -1,7 +1,7 @@
 #ifndef SECURITY_UPSIDE_H
 #define SECURITY_UPSIDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_upside {
 	class Csecurity_upside :public Object

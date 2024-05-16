@@ -1,0 +1,1639 @@
+#include "object.h"
+#include "global/g_code.i"//for Object::add_global_objects()
+
+#ifndef OBJECT_TEST
+#define OBJECT_TEST 0//1
+#endif
+
+#ifndef OBJECT_DEBUG
+#define OBJECT_DEBUG 0//1
+#endif
+
+CtagItem::CtagItem()
+{
+	this->status = 0;
+}
+
+CtagItem::CtagItem(string tag,string temp,string replace)
+{
+	this->tag=tag;this->temp=temp;this->replace=replace;	this->status = 0;
+}
+
+CtagItem::CtagItem(char* tag,char* temp,char* replace)
+{
+	this->tag=tag;this->temp=temp;this->replace=replace;	this->status = 0;
+}
+
+Cmyfunc::Cmyfunc(string fun_name, MyFunc  func)
+{
+	this->name = fun_name;
+	this->alias = this->name;
+	this->p_func = func;
+	this->priority = 0;
+}
+
+int Cmyfunc::isMe(char *identifier)
+{
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Cmyfunc::isMe(string * identifier)
+{
+	if (this->name == *identifier) return (int)this->name.length();
+	if (this->alias == *identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Cmyfunc::isMe(string identifier)
+{
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Cmyfunc::runMe(void *p, bool new_thread)
+{
+	if (!this->p_func)	return -1;
+	this->priority++;
+	if (new_thread == false)
+		return this->p_func(p);
+	//std::cout << "Cmyfunc::runMe->thread\n"; //test ok
+	std::thread(this->p_func, p).detach();
+	return 0;
+}
+
+int object_func(void *p)//this ext function for object class
+{
+	if (!p) return -1;
+	char *cp =(char *) p;
+	std::cout << "object_func:"<<cp<<endl;//test
+	return 0;
+}
+
+Otime::Otime()
+{
+	time(&this->at_time);
+	this->start_time = this->at_time;
+	this->end_time = this->at_time;
+	this->tm_start = localtime(&this->start_time);//init tm
+	this->tm_at = localtime(&this->at_time);
+	this->tm_end = localtime(&this->end_time);
+
+	this->at_clock = clock();
+	this->start_clock = at_clock;
+	this->end_clock = at_clock;
+}
+
+long object_id = 0;
+Object::Object()
+{
+	this->id = ++object_id;
+	this->silent =0;
+	this->priority = 0;
+	this->action=0;
+	this->error=0;
+	this->locate = -1;
+	this->package = "";
+	this->name = "Object";
+	this->alias = this->name;
+	this->symbol = this->name;
+	this->s_tag="[tag]";
+	this->name += std::to_string(object_id);//change name for nam +=id
+	this->description=this->name;
+	this->add_ex_func("objec_func", object_func);
+	this->add_ex_func("runcmd", runcmd);
+	//this->addMe();//remove add this to family list
+
+	this->language=EnglishLanguage;
+	this->count=0;
+	this->execute_count = 0;
+	this->direction=0;
+	this->value=0;
+	this->velocity=0;
+	this->cin_buf=nullptr;
+	this->cin_buf_len = 0;//O_BUF_LEN;//defatult =O_BUF_LEN for allot buf
+	this->buf = nullptr;
+	this->buf_len = 0;
+	this->buf_owner = nullptr;
+	this->input = nullptr;
+	this->move = nullptr;
+	this->register_all_signal();
+	this->main_return_value = -1;//-1 do nothing
+	this->action_table = nullptr;
+	this->count_of_action_table = 0;
+	this->row = 0;
+	this->column = 0;
+	this->line = 1;
+#if OBJECT_DEBUG >2
+	AT_LINE this->myName();
+#endif
+}
+
+Object::~Object()
+{
+#if OBJECT_DEBUG >2
+	AT_LINE this->myName();
+#endif
+	this->family.clear();
+	this->ex_func.clear();
+	this->l_tag_rule.clear();
+	this->l_audio.clear();
+	this->l_image.clear();
+	this->l_url.clear();
+	this->l_style.clear();
+	//this->remove_exist_family();// error exception !!
+	this->exist_family.clear();
+	this->clear_my_memory();//clear my memory
+	this->clear_relation();
+	this->my_mem.clear();
+	this->clear_exist();
+	this->exist_list.clear();
+	if(this->cin_buf) delete[] this->cin_buf;
+	if (this->buf) delete[] this->buf;
+}
+
+int Cobject::my_init(void *p)
+{
+	this->name = "Cobject";
+	this->alias = "object";
+	return 0;
+}
+
+Cobject::Cobject()
+{
+	this->my_init();
+}
+
+void Object::myName(Object *o)
+{
+	if(o)
+	{
+		std::cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id <<" uuid:"<<o->uuid<<" at:"<<o->where()<< endl;
+		return;
+	}
+	std::cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
+}
+
+int Object::add_relation(Object *o, Orelation * r)//add obj relation to object relation list
+{
+	if (!(o&&r))	return -1;//check not nullptr
+	try {
+		ObjectRelation * obj_r = new ObjectRelation();
+		this->l_relation.push_back(obj_r);
+		return 0;
+	}
+	catch (...)
+	{
+		OUT_ERROR;
+	}
+	return -1;
+}
+
+int Object::clear_relation()
+{
+#if OBJECT_DEBUG>2
+	AT_LINE
+#endif
+	ObjectRelation * obj_r;
+	while (!this->l_relation.empty())
+	{
+		obj_r = this->l_relation.back();
+		try {
+			delete obj_r;//del  new ObjectRelation();
+		}
+		catch(...){
+			OUT_ERROR;
+		}
+		this->l_relation.pop_back();
+	}
+	return 0;
+}
+
+void Object::addMe(Object * o)
+{
+	if (o&&o!=this) {//other object address add to my family list
+		this->family.push_back(o);
+		o->exist_family.push_back(this);//notice other object exist in my family list
+	}
+	else this->family.push_back(this);
+}
+
+void Object::add_global_objects(Object *p) //call g_code_func.i-> void add_objects(Object *p) for global object 
+{
+	add_objects(p);
+}
+
+void Object::add_global_objects()
+{
+	this->add_global_objects(this);
+}
+
+void Object::removeMe(void * item)
+{
+	this->family.remove(item);
+}
+
+void Object::remove_exist_family()
+{
+	Object *o;
+#if OBJECT_DEBUG
+	AT_LINE this->myName();
+#endif
+	while (!this->exist_family.empty())
+	{
+		o=(Object *)this->exist_family.back();
+		o->removeMe(this);
+		this->exist_family.pop_back();
+	}
+}
+
+int Object::sort_family(void *p) 
+{
+	int count = 0;
+	LIST_FAMILY::iterator it;
+	Object *op;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		op = (Object *)*it;
+		std::cout << this->name << ":" << ++count << ":" << op->name << ":" << op->where() << endl;
+	}
+	std::cout << this->name << " my_family count : " << count << endl;
+	return count;
+}
+
+int Object::isMe(char *identifier)
+{
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Object::isMe(string * identifier)
+{
+	if (this->name ==* identifier) return (int)this->name.length();
+	if (this->alias == *identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Object::isMe(string identifier)
+{
+	if (this->name == identifier) return (int)this->name.length();
+	if (this->alias == identifier) return (int)this->alias.length();
+	return 0;
+}
+
+int Object::isMe(int id)
+{
+	if (this->id == id) return (int)this->name.length();
+	return 0;
+}
+
+bool Object::add_ex_func(string fun_name, MyFunc func)
+{
+	Cmyfunc f(fun_name, func);
+	this->ex_func.push_back(f);
+	return true;
+}
+
+void Object::add_memory(Object *m)
+{
+	this->my_mem.push_back(m);
+	m->exist_list.push_back(this);//this Object 
+}
+
+void Object::clear_my_memory(Object *m)
+{
+	if (m)
+	{
+		m->exist_list.remove(this);
+		this->my_mem.remove(m);
+		return;
+	}
+
+	Object *p;
+	while (!this->my_mem.empty())
+	{
+		p=(Object *)this->my_mem.back();
+		p->exist_list.remove(this);
+		this->my_mem.pop_back();
+	}
+}
+
+void Object::clear_exist()
+{
+	Object *o;
+	while (!this->exist_list.empty())
+	{
+		o = (Object *)this->exist_list.back();
+		o->my_mem.remove(this);
+		this->exist_list.pop_back();
+	}
+}
+
+int Object::my_family()
+{
+	int count = 0;
+	LIST_FAMILY::iterator it;
+	Object *op;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		op = (Object *)*it;
+		std::cout << "[" << ++count << "] "; op->myName();
+	}
+	std::cout << this->name << " my_family count : " << count << endl;
+	return count;
+}
+
+int Object::my_ex_func()
+{
+	int count = 0;
+	LIST_CMYFUNC::iterator it;
+	for (it = this->ex_func.begin(); it != this->ex_func.end(); ++it)
+	{
+		std::cout <<this->name<<":"<<++count << ":" << it->name << it->p_func << endl;
+	}
+	std::cout << this->name << " my_ex_func count : " << count << endl;
+	return count;
+}
+
+void Object::my_temp()
+{
+	if (this->temp.length())	std::cout << this->temp << endl;
+}
+
+int Object::inc_error()
+{
+	return this->error++;
+}
+
+int Object::is_error()
+{
+	return this->error;
+}
+
+int Object::get_error()
+{
+	return this->error;
+}
+
+int Object::set_count(int ct)
+{
+	this->count=ct;
+	return this->count;
+}
+
+int Object::get_count()
+{
+	return this->count;
+}
+
+bool Object::get_s(char ** s ,int size)
+{
+	if(size<1) return false;
+	if(*s==nullptr)
+	{
+		if(size!=this->allot(size,(void **)s)) return false;
+	}
+	std::cin.get(*s,size);
+	return std::cin.good();
+}
+
+bool Object::wait_cin(int size)
+{
+	if(size <1) return false;
+	if(size>this->cin_buf_len)
+	{
+		if(this->cin_buf)
+		{
+			size=this->allot(this->cin_buf_len, (void **) &this->cin_buf,size,false);
+		}
+
+		this->cin_buf_len=size;
+	}
+
+	return this->get_s(&this->cin_buf,this->cin_buf_len);
+}
+
+char * Object::at_cin_buf(char * str)
+{
+	if(!this->cin_buf) return nullptr;
+	return strstr(this->cin_buf,str);
+}
+
+void Object::my_syntax()
+{
+	if (this->syntax.length())std::cout << this->syntax << endl;
+}
+
+int Object::execute()
+{
+#if OBJECT_DEBUG
+	AT_LINE this->myName();
+#endif
+	return -1;//return -1 do nothing.
+}
+
+int Object::execute(Object *o)
+{
+	if (!o) return -1;
+	return o->execute();
+}
+
+int Object::execute(Object *o, string obj_name, string fun_name, void * p, bool new_thread)
+{
+	return this->execute(o, &obj_name, &fun_name, p, new_thread);
+}
+
+int Object::execute(Object *o, string *obj_name, string * fun_name, void * p, bool new_thread)
+{
+	int ret = -1;
+	if (!o) return this->execute();
+	if (o->family.empty()) return -1;
+
+	LIST_FAMILY::iterator it;
+	Object *op;
+
+	for (it = o->family.begin(); it != o->family.end(); ++it)
+	{
+		op = (Object *)*it;
+
+		if (obj_name&&obj_name->empty() == false&& op->isMe(obj_name)) 
+		{
+			if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
+			else ret = op->execute();
+		}
+		else
+		{
+			if (obj_name&&obj_name->empty())//no object name check fun name
+			{
+				if (fun_name&&fun_name->empty() == false) ret = op->execute(fun_name, p, new_thread);
+				//else ret = op->execute();
+			}
+		}
+	}
+	if (ret == -1 && fun_name&&fun_name->empty() == false) ret = this->execute((char*)"runcmd", (void *)fun_name->c_str(), new_thread); //auto run extern commant
+	return ret;
+}
+
+int Object::execute(Object *o, char *obj_name , char * fun_name , void * p, bool new_thread)
+{
+	string s_obj, s_fun;
+	if(obj_name) s_obj=obj_name;
+	if(fun_name)s_fun=fun_name;	
+	return this->execute(o, s_obj, s_fun,p,new_thread);
+}
+
+int Object::execute(void *p)
+{
+	return this->func(p);
+}
+
+int Object::execute(void *p1,void *p2)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;
+}
+
+int Object::execute(void *p1,void *p2,void *p3)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;	
+}
+
+int Object::execute(Object *o, void *p)//o->execute(void *p)
+{
+	if (!o) return -1;
+	return o->execute(p);
+}
+
+//if new_thread==true  run function on new thread .
+int Object::execute(MyFunc func, void * p, bool new_thread) //execute input func 
+{
+	//AT_LINE
+	if (!func) return -1;
+	if (new_thread == false) return func(p);
+
+	std::thread(func, p).detach();
+
+	return 0;
+}
+ 
+int Object::execute(ObjectFunc func, void* input, void* output, bool new_thread) //execute input func 
+{
+	if (!func) return -1;
+	if (new_thread == false) return func(input, output);
+	std::thread(func, input, output).detach();
+	return 0;
+}
+
+int Object::execute(string *fun_name, void * p, bool new_thread) //execute this->ex_func 
+{
+	return this->execute(fun_name->data(), p, new_thread);
+}
+
+int Object::execute(char* fun_name, void * p, bool new_thread)
+{
+	string s = fun_name;
+#if OBJECT_TEST
+	std::cout << "int Object::execute->"<<s << endl;//test ok
+#endif
+	return this->execute(s, p, new_thread);
+}
+
+int Object::execute(string fun_name, void * p, bool new_thread) //execute this->ex_func 
+{
+	int ret=-1;
+	if (this->ex_func.empty()) return -1;
+	LIST_CMYFUNC::iterator it;
+
+	for (it = this->ex_func.begin(); it != this->ex_func.end(); ++it)
+	{
+		if (it->isMe(fun_name))
+		{
+			ret = it->runMe(p, new_thread);
+		}
+	}
+	return ret;
+}
+
+int Object::allot(int size,void * *o_addr)
+{
+	if (size) {
+		try {
+			*o_addr = new char[size];//
+		}
+		catch (...)//fail
+		{
+			std::cout<< "error:Object::allot size=" << size << endl;
+			return 0;
+		}
+	}
+
+	return size;
+}
+
+int64_t Object::allot(int64_t size, void** o_addr)
+{
+	if (size) {
+		try {
+			*o_addr = new char[size];//
+		}
+		catch (...)//fail
+		{
+			std::cout << "error:Object::allot size=" << size << endl;
+			return 0;
+		}
+	}
+
+	return size;
+}
+
+int Object::allot(int old_size, void ** o_addr, int new_size, bool mem_cpy)
+{
+	void * n_addr=nullptr;
+	if (old_size >= new_size) return old_size;
+	new_size=this->allot(new_size,(void **)&n_addr);
+	if (!n_addr||new_size<=old_size) return old_size;
+	if(mem_cpy&&*o_addr) memcpy(n_addr, *o_addr, old_size);
+	this->delete_allot(o_addr);//free  old o_addr memory
+	*o_addr = n_addr;
+	return new_size;
+}
+
+int64_t Object::allot(int64_t old_size, void** o_addr, int64_t new_size, bool mem_cpy)
+{
+	void* n_addr = nullptr;
+	if (old_size >= new_size) return old_size;
+	new_size = this->allot(new_size, (void**)&n_addr);
+	if (!n_addr || new_size <= old_size) return old_size;
+	if (mem_cpy && *o_addr) memcpy(n_addr, *o_addr, old_size);
+	this->delete_allot(o_addr);//free  old o_addr memory
+	*o_addr = n_addr;
+	return new_size;
+}
+
+int Object::allot(int size, void* buf_owner)
+{
+	if(0!=this->delete_allot()) return -1;
+	return this->allot(size, (void**)&this->buf);
+}
+
+int  Object::delete_allot(void **addr)
+{
+	if (addr&&*addr) {
+		delete[](char*) (*addr);
+		*addr = nullptr;
+	}
+	return 0;
+}
+
+int  Object::delete_allot(void* buf_owner)
+{
+	if (buf_owner != nullptr && this->buf_owner != buf_owner) return -1;
+	return this->delete_allot((void**)&this->buf);
+}
+
+char * Object::str2i(const char *str,int * data )
+{
+    char *endptr;
+
+	if(str[0]=='0'&&(str[1]=='x'||str[1]=='X'))
+	{
+		* data = strtol(str,& endptr, 16);
+	}
+	else
+	{
+		* data = strtol(str,& endptr, 10);
+	}
+
+    return endptr;
+}
+
+void Object::s_toupper(string & str)
+{
+	std::string::size_type i,len= str.length();
+	for ( i=0; i<len; ++i)
+		str[i]=toupper(str[i]);
+}
+
+void Object::set_upper_str(string & s)
+{
+	this->upper_str = s;
+	this->s_toupper(this->upper_str);
+}
+
+int Object::s_replace(string *base,string *tag,string *rep)
+{
+	if(base->empty()||tag->empty()||rep->empty()) return -1;//check empty
+
+	std::string::size_type found=0;
+	std::string::size_type tag_len=tag->length();
+	std::string::size_type rep_len=rep->length();
+
+	const char * t =tag->data();
+	const char * r =rep->data();
+
+	while(1)
+	{
+		found = base->find(t,found);
+		if (found==std::string::npos) break;
+		base->replace(found,tag_len,r);
+		found+=rep_len;
+	}
+
+	return 0;
+}
+
+int Object::s_replace(string *base, char *tag, char *rep)
+{
+	string s_tag = tag, s_rep = rep;
+	return this->s_replace(base, &s_tag, &s_rep);
+}
+
+int Object::s_replace(string *base)
+{
+	return this->s_replace(base, &this->s_tag, &this->s_rep);
+}
+
+int Object::toupper_replace(string *base,string *tag,string *rep)
+{
+	string us_tag=tag->data();
+	string us_rep=rep->data();
+	this->s_toupper(us_tag);
+	this->s_toupper(us_rep);
+
+	//std::cout<<"toupper_replace:"<<us_tag<<"="<<us_rep<<endl;//test ok
+	this->s_replace(base,&us_tag,&us_rep);
+	return 0;
+}
+
+int Object::replace_syntax(string *tag,string *rep)
+{
+	return this->s_replace(&this->syntax,tag,rep);
+}
+
+int Object::replace_temp(string *tag,string *rep)
+{
+	return this->s_replace(&this->temp,tag,rep);
+}
+
+int Object::replace_syntax(int upper_s)
+{
+	if(upper_s) this->toupper_replace(&this->syntax,&this->s_tag,&this->s_rep);
+	return this->s_replace(&this->syntax,&this->s_tag,&this->s_rep);
+}
+
+int Object::replace_temp(int upper_s)
+{
+	if(upper_s) this->toupper_replace(&this->temp,&this->s_tag,&this->s_rep);
+	return this->s_replace(&this->temp,&this->s_tag,&this->s_rep);
+}
+
+int Object::tag_temp(char *tag_value,int upper_s)
+{
+	if (!tag_value) return -1;
+	this->my_init();
+	this->s_rep=tag_value;
+	this->replace_temp(upper_s);
+	return 0;
+}
+
+int Object::add_tag_rule(CtagItem i)
+{
+	this->l_tag_rule.push_back(i);
+	return 0;
+}
+
+int Object::add_tag_rule(string tag, string temp, string replace)
+{
+	CtagItem i(tag, temp, replace);
+	this->l_tag_rule.push_back(i);
+	return 0;
+}
+
+int Object::add_tag_rule(char* tag, char* temp, char* replace)
+{
+	CtagItem i(tag, temp, replace);
+	this->l_tag_rule.push_back(i); //try catch ??
+	return 0;
+}
+
+int Object::my_tag_rule()
+{
+	int count = 0;
+	LIST_TAGITEM::iterator it;
+	for (it = this->l_tag_rule.begin(); it != this->l_tag_rule.end(); ++it)
+	{
+		std::cout << this->name << ":" << ++count << ":" << it->tag << it->replace << endl;
+	}
+	std::cout << this->name << " my_tag_rule  count : " << count << endl;
+	return count;
+}
+
+long Object::my_id()
+{
+	return this->id;
+}
+
+char * Object::my_uuid()
+{
+	return (char *)this->uuid.c_str();
+}
+
+int Object::set_time(struct tm *t,int tm_mon,int tm_mday,int tm_year,int tm_hour,int tm_min,int tm_sec,int tm_wday,int tm_yday)//mon/day/year/hour/min/sec/week/yday
+{
+	if(tm_mon>12||tm_mon<1\
+	|| tm_mday>31||tm_mday<1\
+	|| tm_hour>23||tm_hour<0\
+	|| tm_min>59||tm_min<0\
+	|| tm_sec>60||tm_sec<0||tm_year<1900)   return -1;
+
+	if(tm_mday) t->tm_year = tm_year - 1900;
+	t->tm_mon = tm_mon - 1;
+	t->tm_mday = tm_mday;
+	t->tm_hour=tm_hour;
+	t->tm_min=tm_min;
+	t->tm_sec=tm_sec;
+
+	if(tm_wday<8&&tm_wday>0)
+	{
+		if(tm_wday==7) t->tm_wday=0;
+		else t->tm_wday=tm_wday;
+	}
+
+	if(tm_yday>=0&&tm_yday<366) t->tm_yday=tm_yday;
+	
+	mktime(t);  // call mktime: tm_wday will be set 
+	return 0;
+}
+
+int Object::cmp_time(struct tm *t1,struct tm *t2) //t1>t2 return 1 , t1==t2 return 0 ,t1<t2 return -1 
+{
+	if(t1->tm_year>t2->tm_year) return 1;
+	if(t1->tm_year<t2->tm_year) return -1;
+
+	if(t1->tm_mon>t2->tm_mon) return 1;
+	if(t1->tm_mon<t2->tm_mon) return -1;
+
+	if(t1->tm_mday>t2->tm_mday) return 1;
+	if(t1->tm_mday<t2->tm_mday) return -1;
+
+	if(t1->tm_hour>t2->tm_hour) return 1;
+	if(t1->tm_hour<t2->tm_hour) return -1;
+
+	if(t1->tm_min>t2->tm_min) return 1;
+	if(t1->tm_min<t2->tm_min) return -1;
+
+	if(t1->tm_sec>t2->tm_sec) return 1;
+	if(t1->tm_sec<t2->tm_sec) return -1;
+
+	return 0;
+}
+
+void Object::delay_clock(clock_t count)
+{
+	clock_t t= clock();
+	while((clock()-t)<count);
+}
+
+void Object::delay(clock_t count)
+{
+	return this->delay_clock(count);
+}
+//object action:
+bool Object::set_action(Action* a, int count)
+{
+	if (a == nullptr || count < 1) return false;
+	this->action_table = a;
+	this->count_of_action_table = count;
+	return true;
+}
+
+void Object::clear_action()
+{
+	this->action_table = nullptr;
+	this->count_of_action_table = 0;
+}
+
+bool Object::is_action(ACTION_T a, ACTION_T t, EatcionRelation r)
+{
+	if (r == EatcionRelation::none) return false;	//0,
+	if (r == EatcionRelation::equal) return (a == t);	//==
+	if (r == EatcionRelation::large) return (a >t);	//>
+	if (r == EatcionRelation::large_equal) return (a >= t);	//>=
+	if (r == EatcionRelation::small_) return (a < t);	//< small
+	if (r == EatcionRelation::small_equal) return (a <= t);	//<=
+	if (r == EatcionRelation::and_)	 return (a && t);//&&
+	if (r == EatcionRelation:: or_ ) return (a || t);//||
+	if (r == EatcionRelation::not_) return (!a);//	!
+	if (r == EatcionRelation::bit_and) return (a & t)?true:false;	//&
+	if (r == EatcionRelation::bit_or)	 return (a | t)?true:false;//|
+	if (r == EatcionRelation::bit_not) return (~a)?true:false;	//~
+	if (r == EatcionRelation::bit_xor) return (a ^ t)?true:false;	//^
+	if (r == EatcionRelation::not_and) return (~a & t)?true:false;	//~&
+	if (r == EatcionRelation::not_or) return (~a | t)?true:false;	//~|
+	return false; //other is none action 
+}
+
+int Object::deal_action(Action * a, int count, Object * o)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (a[i].t == 0) break;
+		if (!this->is_action(this->action, a[i].t, a[i].r)) continue;
+		if (a[i].action == nullptr) continue;
+		if (o == nullptr) this->do_action(a[i].action);
+		else o->do_action(a[i].action);
+	}
+	return 0;
+}
+//action parameter can from input command,or memory data ... 
+int Object::set_action_parameter(int argc, char* argv[])
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return 0;
+}
+
+int Object::do_action(void * a)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return 0;
+}
+
+bool Object::is_action_end(Action * a)
+{
+	if(a->t==0&&a->action_class==0&&a->name==nullptr) return true;
+	return false;
+}
+
+int Object::action_help(Action * a, int count)
+{
+	printf("[action]:\n");
+	for (int i = 0; i < count; i++)
+	{
+		if (is_action_end(&a[i])) break;
+		if (a[i].name) printf("%d %s", (int)a[i].t, a[i].name);
+		if (a[i].help) printf(" :%s ", a[i].help);
+		printf("\n");
+	}
+	return 0;
+}
+
+ACTION_T Object::get_action(Action * a, int count, char * name)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (is_action_end(&a[i])) break;
+		if (0 == strcmp(a[i].name, name)) return a[i].t;
+	}
+	return (ACTION_T)0;//not find return  none_action 
+}
+
+ACTION_T Object::get_action(char* name)
+{
+	if(this->action_table==nullptr) return (ACTION_T)0;//not find return  none_action 
+	do
+	{
+		if (is_action_end(this->action_table)) break;
+		if (0 == strcmp(this->action_table->name, name)) return this->action_table->t;
+		this->action_table++;
+	} while (1);
+
+	return (ACTION_T)0;//not find return  none_action 
+}
+
+bool Object::get_action(Action * a, int count, char * name, ACTION_T * out)
+{
+	for (int i = 0; i < count; i++)
+	{
+		if (is_action_end(&a[i])) break;
+		if (0 == strcmp(a[i].name, name))
+		{
+			* out=a[i].t;
+			 return  true;//find return true
+		}
+	}
+	return false;//not find return false
+}
+
+bool Object::get_action(char* name, ACTION_T * out)
+{
+	if (this->action_table == nullptr) return (ACTION_T)0;//not find return  none_action 
+	do
+	{
+		if (is_action_end(this->action_table)) break;
+		if (0 == strcmp(this->action_table->name, name)) { * out = this->action_table->t; return true; }
+		this->action_table++;
+	} while (1);
+	return false;//not find return false
+}
+
+Object * Object::get_class()//object address
+{
+	return this;	
+}
+
+Object * Object::where()
+{
+	return this;
+}
+
+Object * Object::who()
+{
+	this->myName();
+	return this;
+}
+
+time_t * Object::when()
+{
+	return &this->start_time;
+}
+
+int Object::how()
+{
+	return this->status.data.i; //normal, success, OK ,Pass!  and so on
+}
+
+size_t Object::my_size()
+{
+	return sizeof(Object);
+}
+
+int Object::func(void *p)
+{
+	std::cout << this->name << "Object::func\n";
+	return 0;
+}
+
+int Object::url(void *p)//execute object url if exist
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;//do nothing
+}
+
+int Object::style(void *p)//execute object style
+{
+	return -1;//do nothing
+}
+
+int Object::image(void *p)//execute object image if exist
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;//do nothing
+}
+
+int Object::audio(void *p)//execute object audio if exist
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;//do nothing
+}
+
+int Object::video(void *p)//execute object vedio if exist
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;//do nothing
+}
+
+int Object::get(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;
+}
+int Object::help(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;
+}
+
+int Object::ui(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::event(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::task(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::transaction(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::commit(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::interrupt(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::callback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::exception(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::message(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::feedback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//The object's  past function, Related to time, action, and condition
+int Object::past(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::rollback(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::previous(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//The object's  future function, 
+int Object::future(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::next(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//A object's future callback function, called at a certain time, location, event, condition ....of the object's future
+int Object::reservation(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::current(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::secure(void *p) //Verify and return to a safe state
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+//The object's  condition function, 
+int Object::condition(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::depend(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::environment(void *p) 
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::context(void *p) 
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+int Object::go(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+		return -1;
+}
+
+int Object::register_all_signal(int signum)
+{
+	//SIGINT , SIGILL ,SIGFPE, SIGSEGV,SIGTERM , SIGBREAK , SIGABRT  SIGABRT_COMPAT  
+	this->register_signal(SIGINT);
+	this->register_signal(SIGILL);
+	this->register_signal(SIGFPE);
+	this->register_signal(SIGSEGV);
+	this->register_signal(SIGTERM);
+	this->register_signal(SIGABRT);
+#ifdef WINDOWS_OS
+	this->register_signal(SIGBREAK);
+	this->register_signal(SIGABRT_COMPAT);
+#endif
+	return 0;
+}
+
+Object object_global;
+void signal_handler(int signum)
+{
+	object_global.rejoin_signal(signum);
+	switch (signum)
+	{
+	case SIGILL:
+	case SIGFPE:
+	case SIGSEGV:
+	case SIGTERM:
+	case SIGABRT:
+#ifdef WINDOWS_OS
+	case SIGBREAK:
+	case SIGABRT_COMPAT:
+#endif
+		exit(signum);
+	case SIGINT:
+		//...
+	default:
+		break;
+	}
+}
+
+int Object::register_signal(int signum)
+{
+	signal(signum, signal_handler);
+	return 0;
+}
+
+int Object::rejoin_signal(int signum)
+{
+	OUT_LINE_N(signum);
+	return -1;
+}
+
+int64_t Object::copy(uint8_t* source, uint8_t* dest, int64_t size)
+{
+	int64_t i;
+	for (i = 0; i < size; i++) dest[i] = source[i];
+	return i;
+}
+
+int64_t Object::copy(uint8_t* source, uint8_t* dest, uint8_t* source_end)
+{
+	return this->copy(source, dest, (int64_t)(source_end - source));
+}
+//return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
+int Object::dispatch_runme(void * myname, void *p)
+{
+	int ret = 0;
+	ret=this->runme(myname, p);
+	if (ret != -1) return ret;//has find and execute function and return dispatch
+	if (this->family.empty()) return -2;//check family list is empty
+
+	Object *o;
+	LIST_FAMILY::iterator it;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		o = (Object *)*it;
+#if OBJECT_DEBUG
+		AT_LINE o->myName();
+#endif
+		ret = o->dispatch_runme(myname, p);
+		if (ret == -1) continue;//do-nothing or not find , find next object runme()
+		return ret; //ret >=0  
+	}
+	return -1;
+}
+
+int Object::transfer(void * myname, void *p, Object *o)
+{
+	if (o) return o->runme(myname, p);
+	return this->runme(myname, p);
+}
+int Object::runme(void * myname, void *p) //p:parameter
+{
+//	if (strcmp((char *)myname, (char *)"transfer") == 0) return this->transfer(p);
+	if (strcmp((char *)myname, (char *)"go") == 0) return this->go(p);
+	if (strcmp((char *)myname, (char *)"past") == 0) return this->past(p);
+	if (strcmp((char *)myname, (char *)"rollback") == 0) return this->rollback(p);
+	if (strcmp((char *)myname, (char *)"previous") == 0) return this->previous(p);
+	if (strcmp((char *)myname, (char *)"future") == 0) return this->future(p);
+	if (strcmp((char *)myname, (char *)"next") == 0) return this->next(p);
+	if (strcmp((char *)myname, (char *)"condition") == 0) return this->condition(p);
+	if (strcmp((char *)myname, (char *)"depend") == 0) return this->depend(p);
+	if (strcmp((char *)myname, (char *)"current") == 0) return this->current(p);
+	if (strcmp((char *)myname, (char *)"environment") == 0) return this->environment(p);
+	if (strcmp((char *)myname, (char *)"context") == 0) return this->context(p);
+	if (strcmp((char *)myname, (char *)"secure") == 0) return this->secure(p);
+	if (strcmp((char *)myname, (char *)"reservation") == 0) return this->reservation(p);
+	if (strcmp((char *)myname, (char *)"feedback") == 0) return this->feedback(p);
+	if (strcmp((char *)myname, (char *)"message") == 0) return this->message(p);
+	if (strcmp((char *)myname, (char *)"exception") == 0) return this->exception(p);
+	if (strcmp((char *)myname, (char *)"callback") == 0) return this->callback(p);
+	if (strcmp((char *)myname, (char *)"interrupt") == 0) return this->interrupt(p);
+	if (strcmp((char *)myname, (char *)"event") == 0) return this->event(p);
+	if (strcmp((char *)myname, (char *)"task") == 0) return this->task(p);
+	if (strcmp((char *)myname, (char *)"transaction") == 0) return this->transaction(p);
+	if (strcmp((char *)myname, (char *)"commit") == 0) return this->commit(p);
+	if (strcmp((char *)myname, (char *)"help") == 0) return this->help(p);
+	if (strcmp((char *)myname, (char *)"ui") == 0) return this->ui(p);
+	if (strcmp((char *)myname, (char *)"get") == 0) return this->get(p);
+	if (strcmp((char *)myname, (char *)"video") == 0) return this->video(p);
+	if (strcmp((char *)myname, (char *)"audio") == 0) return this->audio(p);
+	if (strcmp((char *)myname, (char *)"image") == 0) return this->image(p);
+	if (strcmp((char *)myname, (char *)"style") == 0) return this->style(p);
+	if (strcmp((char *)myname, (char *)"url") == 0) return this->url(p);
+	if (strcmp((char *)myname, (char *)"func") == 0) return this->func(p);
+	if (strcmp((char *)myname, (char *)"do_action") == 0) return this->do_action(p);
+	if (strcmp((char *)myname, (char *)"who") == 0) { this->who(); return 0; }
+	if (strcmp((char *)myname, (char *)"question") == 0) return this->question(p);
+	if (strcmp((char *)myname, (char *)"display") == 0) return this->display(p);
+	if (strcmp((char *)myname, (char *)"execute") == 0)//support two excute function
+	{
+		if (p) return this->execute(p);
+		else return this->execute();
+	}
+
+	if (strcmp((char *)myname, (char *)"system") == 0)
+	{
+		if(p) return system((char *)p);AT_LINE;
+		return -1;
+	}
+	return -1;
+}
+
+int Object::create(void *p)
+{
+	return -1;//do nothing
+}
+int Object::my_init(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;
+}
+
+int Object::my_exit(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return 0;
+}
+
+int Object::my_clear(void *p)
+{	
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return 0;
+}
+
+int Object::clear(void *p)
+{
+	return this->my_clear(p);
+}
+
+int Object::list_cmd(int argc, char *argv[])
+{
+#if OBJECT_DEBUG
+	AT_LINE; std::cout << "argc=" << argc << endl;//debug log
+#endif
+	do {
+		argc--;
+		std::cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
+	} while (argc>0);
+	return 0;
+}
+
+int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
+{
+	int ret = 0;
+	if (argc < 2) return ++ret;//return error 1
+	if (argc > 2&&strcmp(argv[1], (char *)"runme") == 0) return 	this->dispatch_runme(argv[2], &this->cmd);//!!magical
+
+	if (this->isMe(argv[1]))
+	{
+#if OBJECT_DEBUG
+		AT_LINE this->myName();
+#endif
+		this->deal_cmd(argc - 1, &argv[1]);
+		return 0;
+	}
+
+	if (this->family.empty()) return -1;
+
+	Object *o;
+	LIST_FAMILY::iterator it;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		o = (Object *)*it;
+#if OBJECT_DEBUG
+		AT_LINE this->myName();
+#endif
+		ret= o->dispatch_cmd(argc, argv);
+		if (ret) continue;
+		break;
+	}
+
+	return -1;
+}
+
+int Object::deal_cmd(int argc, char *argv[],Action * action, int action_count,int min_input)
+{
+	//this->list_cmd(argc, argv);//test ok
+	
+	//step1.check user input
+	if (argc < min_input)
+	{
+		this->action_help(action, action_count);
+		return -1;
+	}
+
+	//step2.init this->cmd store user input parameter
+	this->cmd.argc = argc;//store user input parameter
+	this->cmd.argv = argv;
+
+	//step3.get silent cmd
+	if (this->get_cmd(argc, argv, (char*)"silent") > 0) this->silent = 1;
+
+	//step4.get action
+	this->action = this->get_action(action, action_count, argv[1]);
+	if (this->action == 0) this->action = atoll(argv[1]);//no name 
+	if (this->action == 0) return -1;
+
+	//step5.set action parameter
+	if(0!=this->set_action_parameter(argc, argv))
+	{
+		this->action_help(action, action_count);
+		return -1;		
+	}
+
+	//step6.do action 
+	this->do_action(action);
+
+	return 0;
+}
+
+int Object::deal_cmd(int argc, char *argv[])
+{
+	this->cmd.argc = argc;
+	this->cmd.argv = argv;
+	do{
+		argc--;
+		AT_LINE std::cout<<"argv["<<argc<<"]="<<argv[argc]<<endl;//list all command line
+	}while(argc>0);
+	return -1;
+}
+int Object::display(void *p)
+{
+	if (p)
+	{
+		std::cout << p << endl;
+		return 0;
+	}
+
+	std::cout<<this->name<<","<<this->alias<<","<<"id="<<this->id<<":"<<this->description<<endl;
+	return 0;
+}
+//virtual int display(Object* o = nullptr);
+int Object::display(Object* o)
+{
+	if (o == nullptr)
+	{
+		std::cout << this->name << "," << this->alias << "," << "id=" << this->id << ":" << this->description << endl;
+		return 0;
+	}
+
+	std::cout << o->name << "," << o->alias << "," << "id=" << o->id << ":" << o->description << endl;
+	return 0;
+}
+
+int Object::vray(void* p)//Display the UI interface
+{
+	WHERE_I;
+	return 0;
+}
+
+int Object::question(void * p)
+{
+	return 0;
+}
+
+//str[0]={_,a-z,A-z},str[n>0]={0-9,a-z,A-Z,_}
+bool Object::is_identifier(char *str,void ** o_addr)
+{
+	int n;
+	if(!(str[0]=='_'||str[0]>='A'&&str[0]<='Z'||str[0]>='a'&&str[0]<='z')) return false;
+	for(n=1;str[n]!='\0';n++)
+	{
+		if(!(str[n]=='_'||str[n]>='A'&&str[n]<='Z'||str[n]>='a'&&str[n]<='z'||str[n]>='0'&&str[n]<='9')) return false;
+	}
+	return true;
+}
+
+bool Object::is_path(char *str,void ** o_addr)
+{
+	if(strstr(str,"/")) return true;
+
+#if WINDOWS_OS
+	if(strstr(str,"\\")) return true;
+#endif//WINDOWS_OS
+
+	return false;
+}
+
+bool Object::is_definable(char *s)
+{
+	if(s==nullptr) return false;
+	if(false==this->is_identifier(s)) //check s 
+	{
+		if(false==this->is_path(s))	return false;//check s is path
+		s=strrchr(s,'/');
+		if(!s) s=strrchr(s,'\\');
+		if(!s) return false;
+		s++ ; //skip '/' or '\'
+ 	}
+ 	return true;
+}	
+
+string Object::wc_s(wchar_t* wc)
+{
+	wstring ws(wc);
+	string s(ws.begin(), ws.end());
+	return s;
+}
+
+wstring Object::s_ws(string * sp)
+{
+	wstring ws = wstring(sp->begin(), sp->end());
+	return ws;
+}
+
+string Object::ws_s(wstring* ws)
+{
+	string s(ws->begin(), ws->end());
+	return s;
+}
+
+int Object::sys_cmd(char *cmd,int loop_count)
+{
+	int ret = 0;
+	do { ret = system((char*)cmd); } while (--loop_count > 0);
+	return ret;
+}
+
+int Object::sys_cmd(string *cmd,int loop_count)
+{
+	int ret = 0;
+	do { ret = system(cmd->c_str()); } while (--loop_count > 0);
+	return ret;
+}
+
+int Object::sys_cmd(wchar_t* cmd, int loop_count)
+{
+	string s_cmd = this->wc_s(cmd);
+	return this->sys_cmd(&s_cmd, loop_count);
+}
+
+int Object::sys_cmd(wstring* cmd, int loop_count)
+{
+	return this->sys_cmd((wchar_t*)cmd->c_str(), loop_count);
+}
+
+int Object::sys_cmd(int loop_count)
+{
+	return this->sys_cmd((string*)&this->s_cmd, loop_count);
+}
+
+int Object::get_cmd(int argc, char *argv[], char *cmd)
+{
+	while (argc > 0)
+	{
+		argc--;
+		if (0 == strcmp(argv[argc], cmd)) return argc;
+	}
+	return -1;
+}
+
+#if OBJECT_TEST
+int main()
+{
+	std::cout << "Object main !\n";
+	return 0;
+}
+#endif

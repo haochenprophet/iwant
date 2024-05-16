@@ -1,7 +1,7 @@
 #ifndef ISSPACE_H
 #define ISSPACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isspace {
 	class Cisspace :public Object

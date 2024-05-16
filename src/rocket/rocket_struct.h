@@ -1,7 +1,7 @@
 #ifndef ROCKET_STRUCT_H
 #define ROCKET_STRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_struct {
 	class Crocket_struct :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_WRITETEXT_H
 #define SQL_WRITETEXT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WRITETEXT {
 	class Csql_WRITETEXT :public Object

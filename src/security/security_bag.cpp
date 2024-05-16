@@ -21,7 +21,7 @@ Csecurity_bag::~Csecurity_bag()
 #endif
 
 #if SECURITY_BAG_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef EARTH_COMMUNICATION_H
 #define EARTH_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_communication {
 	class Cearth_communication :public Object

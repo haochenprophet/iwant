@@ -1,7 +1,7 @@
 #ifndef SECURITY_SOFTWARE_H
 #define SECURITY_SOFTWARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_software {
 	class Csecurity_software :public Object

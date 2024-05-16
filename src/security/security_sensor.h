@@ -1,7 +1,7 @@
 #ifndef SECURITY_SENSOR_H
 #define SECURITY_SENSOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_sensor {
 	class Csecurity_sensor :public Object

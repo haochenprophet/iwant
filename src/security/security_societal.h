@@ -1,7 +1,7 @@
 #ifndef SECURITY_SOCIETAL_H
 #define SECURITY_SOCIETAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_societal {
 	class Csecurity_societal :public Object

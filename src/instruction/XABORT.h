@@ -1,7 +1,7 @@
 #ifndef XABORT_H
 #define XABORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XABORT {
 	class CXABORT :public Object

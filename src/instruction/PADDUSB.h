@@ -1,7 +1,7 @@
 #ifndef PADDUSB_H
 #define PADDUSB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PADDUSB {
 	class CPADDUSB :public Object

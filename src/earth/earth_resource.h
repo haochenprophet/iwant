@@ -1,7 +1,7 @@
 #ifndef EARTH_RESOURCE_H
 #define EARTH_RESOURCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_resource {
 	class Cearth_resource :public Object

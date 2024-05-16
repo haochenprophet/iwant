@@ -1,7 +1,7 @@
 #ifndef SECURITY_DRIVING_H
 #define SECURITY_DRIVING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_driving {
 	class Csecurity_driving :public Object

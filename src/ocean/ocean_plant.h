@@ -1,7 +1,7 @@
 #ifndef OCEAN_PLANT_H
 #define OCEAN_PLANT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_plant {
 	class Cocean_plant :public Object

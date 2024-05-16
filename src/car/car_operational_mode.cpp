@@ -21,7 +21,7 @@ Ccar_operational_mode::~Ccar_operational_mode()
 #endif
 
 #if CAR_OPERATIONAL_MODE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

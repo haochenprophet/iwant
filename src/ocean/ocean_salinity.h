@@ -1,7 +1,7 @@
 #ifndef OCEAN_SALINITY_H
 #define OCEAN_SALINITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_salinity {
 	class Cocean_salinity :public Object

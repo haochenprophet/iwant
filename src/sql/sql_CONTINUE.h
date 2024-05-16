@@ -1,7 +1,7 @@
 #ifndef SQL_CONTINUE_H
 #define SQL_CONTINUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CONTINUE {
 	class Csql_CONTINUE :public Object

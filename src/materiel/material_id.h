@@ -1,7 +1,7 @@
 #ifndef MATERIAL_ID_H
 #define MATERIAL_ID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_id {
 	class Cmaterial_id :public Object

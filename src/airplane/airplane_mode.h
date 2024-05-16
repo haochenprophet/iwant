@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_MODE_H
 #define AIRPLANE_MODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_mode {
 	class Cairplane_mode :public Object

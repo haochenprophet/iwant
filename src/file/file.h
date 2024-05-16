@@ -1,9 +1,9 @@
 #ifndef FILE_H
 #define FILE_H
 
-#include "myMemory.h"
-#include "search.h"
-#include "display.h"
+#include "memory/myMemory.h"
+#include "algorithm/search.h"
+#include "output/display.h"
 
 #define CFILE_FILE_OUT "cfile.out"
 namespace n_file {

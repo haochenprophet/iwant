@@ -1,7 +1,7 @@
 #ifndef CAR_TEST_H
 #define CAR_TEST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_test {
 	class Ccar_test :public Object

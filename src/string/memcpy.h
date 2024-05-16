@@ -1,7 +1,7 @@
 #ifndef MEMCPY_H
 #define MEMCPY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memcpy {
 	class Cmemcpy :public Object

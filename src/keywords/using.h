@@ -1,7 +1,7 @@
 #ifndef USING_H
 #define USING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_using {
 	class Cusing :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MODE_NIGHT_H
 #define SATELLITE_MODE_NIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mode_night {
 	class Csatellite_mode_night :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_UNPIVOT_H
 #define SQL_UNPIVOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_UNPIVOT {
 	class Csql_UNPIVOT :public Object

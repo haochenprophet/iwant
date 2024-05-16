@@ -1,7 +1,7 @@
 #ifndef OCEAN_MEMORY_H
 #define OCEAN_MEMORY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_memory {
 	class Cocean_memory :public Object

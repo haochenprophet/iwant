@@ -1,7 +1,7 @@
 #ifndef SQL_USE_H
 #define SQL_USE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_USE {
 	class Csql_USE :public Object

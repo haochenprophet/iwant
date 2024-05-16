@@ -1,7 +1,7 @@
 #ifndef CAR_SAFETY_BELT_H
 #define CAR_SAFETY_BELT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_safety_belt {
 	class Ccar_safety_belt :public Object

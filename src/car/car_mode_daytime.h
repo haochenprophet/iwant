@@ -1,7 +1,7 @@
 #ifndef CAR_MODE_DAYTIME_H
 #define CAR_MODE_DAYTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_mode_daytime {
 	class Ccar_mode_daytime :public Object

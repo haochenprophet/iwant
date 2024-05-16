@@ -1,7 +1,7 @@
 #ifndef HARDWARE_H
 #define HARDWARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_hardware {
 	class Chardware :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIEL_FROM_TO_H
 #define MATERIEL_FROM_TO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_from_to {
 	class Cmateriel_from_to :public Object

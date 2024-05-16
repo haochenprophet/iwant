@@ -1,7 +1,7 @@
 #ifndef FSTSW_H
 #define FSTSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FSTSW {
 	class CFSTSW :public Object

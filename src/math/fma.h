@@ -1,7 +1,7 @@
 #ifndef FMA_H
 #define FMA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fma {
 	class Cfma :public Object

@@ -1,7 +1,7 @@
 #ifndef PMOVSX_H
 #define PMOVSX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMOVSX {
 	class CPMOVSX :public Object

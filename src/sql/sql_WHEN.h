@@ -1,7 +1,7 @@
 #ifndef SQL_WHEN_H
 #define SQL_WHEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WHEN {
 	class Csql_WHEN :public Object

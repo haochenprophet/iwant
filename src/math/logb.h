@@ -1,7 +1,7 @@
 #ifndef LOGB_H
 #define LOGB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_logb {
 	class Clogb :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_POWER_H
 #define SPACEPORT_POWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_power {
 	class Cspaceport_power :public Object

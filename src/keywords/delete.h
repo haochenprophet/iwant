@@ -1,7 +1,7 @@
 #ifndef DELETE_H
 #define DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_delete {
 	class Cdelete :public Object

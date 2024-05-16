@@ -21,7 +21,7 @@ Cmateriel_request::~Cmateriel_request()
 #endif
 
 #if MATERIEL_REQUEST_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

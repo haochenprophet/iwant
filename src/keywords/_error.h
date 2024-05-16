@@ -1,7 +1,7 @@
 #ifndef _ERROR_H
 #define _ERROR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__error {
 	class C_error :public Object

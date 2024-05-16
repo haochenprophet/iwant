@@ -1,7 +1,7 @@
 #ifndef OCEAN_ALTITUDE_H
 #define OCEAN_ALTITUDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_altitude {
 	class Cocean_altitude :public Object

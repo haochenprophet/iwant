@@ -1,7 +1,7 @@
 #ifndef MONEY_EXCHANGE_RATE_H
 #define MONEY_EXCHANGE_RATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_exchange_rate {
 	class Cmoney_exchange_rate :public Object

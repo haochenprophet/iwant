@@ -1,7 +1,7 @@
 #ifndef BTS_H
 #define BTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BTS {
 	class CBTS :public Object

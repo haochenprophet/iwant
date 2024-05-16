@@ -1,7 +1,7 @@
 #ifndef SHA1NEXTE_H
 #define SHA1NEXTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SHA1NEXTE {
 	class CSHA1NEXTE :public Object

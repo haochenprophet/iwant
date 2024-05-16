@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ESCAPE_H
 #define SATELLITE_ESCAPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_escape {
 	class Csatellite_escape :public Object

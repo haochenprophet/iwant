@@ -1,7 +1,7 @@
 #ifndef __EXCEPT_H
 #define __EXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___except {
 	class C__except :public Object

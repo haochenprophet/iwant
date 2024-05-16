@@ -21,7 +21,7 @@ Cocean_rescue::~Cocean_rescue()
 #endif
 
 #if OCEAN_RESCUE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

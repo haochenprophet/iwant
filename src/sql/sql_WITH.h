@@ -1,7 +1,7 @@
 #ifndef SQL_WITH_H
 #define SQL_WITH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WITH {
 	class Csql_WITH :public Object

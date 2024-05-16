@@ -1,7 +1,7 @@
 #ifndef SATELLITE_PLAY_H
 #define SATELLITE_PLAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_play {
 	class Csatellite_play :public Object

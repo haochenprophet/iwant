@@ -1,7 +1,7 @@
 #ifndef CAR_AIRBAG_H
 #define CAR_AIRBAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_airbag {
 	class Ccar_airbag :public Object

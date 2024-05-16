@@ -1,7 +1,7 @@
 #ifndef SQL_UNIQUE_H
 #define SQL_UNIQUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_UNIQUE {
 	class Csql_UNIQUE :public Object

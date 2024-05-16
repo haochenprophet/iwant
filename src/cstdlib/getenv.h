@@ -1,7 +1,7 @@
 #ifndef GETENV_H
 #define GETENV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_getenv {
 	class Cgetenv :public Object

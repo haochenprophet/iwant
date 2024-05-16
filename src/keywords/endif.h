@@ -1,7 +1,7 @@
 #ifndef ENDIF_H
 #define ENDIF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_endif {
 	class Cendif :public Object

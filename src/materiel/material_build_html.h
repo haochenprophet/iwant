@@ -1,7 +1,7 @@
 #ifndef MATERIAL_BUILD_HTML_H
 #define MATERIAL_BUILD_HTML_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_build_html {
 	class Cmaterial_build_html :public Object

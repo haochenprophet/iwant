@@ -1,7 +1,7 @@
 #ifndef STRTOF_H
 #define STRTOF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strtof {
 	class Cstrtof :public Object

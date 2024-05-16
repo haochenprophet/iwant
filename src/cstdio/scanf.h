@@ -1,7 +1,7 @@
 #ifndef SCANF_H
 #define SCANF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_scanf {
 	class Cscanf :public Object

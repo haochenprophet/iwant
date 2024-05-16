@@ -26,7 +26,7 @@ time_t Ctime::time_c(time_t* timer)
 #endif
 
 #if TIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "TIME_TEST\n\n";

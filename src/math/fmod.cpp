@@ -26,7 +26,7 @@ double Cfmod::fmod_c(double numer, double denom)
 #endif
 
 #if FMOD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FMOD_TEST\n\n";

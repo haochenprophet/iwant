@@ -25,7 +25,7 @@ double Cstrtod::strtod_c(const char* str, char** endptr)
 #endif
 
 #if STRTOD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRTOD_TEST\n\n";

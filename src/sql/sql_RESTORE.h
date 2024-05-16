@@ -1,7 +1,7 @@
 #ifndef SQL_RESTORE_H
 #define SQL_RESTORE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RESTORE {
 	class Csql_RESTORE :public Object

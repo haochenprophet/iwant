@@ -1,7 +1,7 @@
 #ifndef OCEAN_TREE_H
 #define OCEAN_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_tree {
 	class Cocean_tree :public Object

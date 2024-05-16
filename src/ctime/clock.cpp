@@ -26,7 +26,7 @@ clock_t Cclock::clock_c(void)
 #endif
 
 #if CLOCK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "CLOCK_TEST\n\n";

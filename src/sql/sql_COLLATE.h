@@ -1,7 +1,7 @@
 #ifndef SQL_COLLATE_H
 #define SQL_COLLATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_COLLATE {
 	class Csql_COLLATE :public Object

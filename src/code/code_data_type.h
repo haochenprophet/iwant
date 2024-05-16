@@ -1,7 +1,7 @@
 #ifndef CODE_DATA_TYPE_H
 #define CODE_DATA_TYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_data_type {
 	class Ccode_data_type :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_CONTROL_H
 #define OCEAN_CONTROL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_control {
 	class Cocean_control :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SERIAL_PORT_H
 #define SATELLITE_SERIAL_PORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_serial_port {
 	class Csatellite_serial_port :public Object

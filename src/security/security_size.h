@@ -1,7 +1,7 @@
 #ifndef SECURITY_SIZE_H
 #define SECURITY_SIZE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_size {
 	class Csecurity_size :public Object

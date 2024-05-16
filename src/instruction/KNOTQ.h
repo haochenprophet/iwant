@@ -1,7 +1,7 @@
 #ifndef KNOTQ_H
 #define KNOTQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KNOTQ {
 	class CKNOTQ :public Object

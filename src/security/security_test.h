@@ -1,7 +1,7 @@
 #ifndef SECURITY_TEST_H
 #define SECURITY_TEST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_test {
 	class Csecurity_test :public Object

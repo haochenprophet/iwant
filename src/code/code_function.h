@@ -1,7 +1,7 @@
 #ifndef CODE_FUNCTION_H
 #define CODE_FUNCTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_function {
 	class Ccode_function :public Object

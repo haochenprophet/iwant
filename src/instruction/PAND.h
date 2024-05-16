@@ -1,7 +1,7 @@
 #ifndef PAND_H
 #define PAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PAND {
 	class CPAND :public Object

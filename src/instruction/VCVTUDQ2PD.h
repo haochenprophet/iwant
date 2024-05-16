@@ -1,7 +1,7 @@
 #ifndef VCVTUDQ2PD_H
 #define VCVTUDQ2PD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VCVTUDQ2PD {
 	class CVCVTUDQ2PD :public Object

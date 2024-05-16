@@ -1,7 +1,7 @@
 #ifndef _UNDEF_H
 #define _UNDEF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__undef {
 	class C_undef :public Object

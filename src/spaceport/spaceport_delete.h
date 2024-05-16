@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_DELETE_H
 #define SPACEPORT_DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_delete {
 	class Cspaceport_delete :public Object

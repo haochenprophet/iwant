@@ -1,7 +1,7 @@
 #ifndef MBSTOWCS_H
 #define MBSTOWCS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mbstowcs {
 	class Cmbstowcs :public Object

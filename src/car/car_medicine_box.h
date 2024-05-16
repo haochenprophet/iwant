@@ -1,7 +1,7 @@
 #ifndef CAR_MEDICINE_BOX_H
 #define CAR_MEDICINE_BOX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_medicine_box {
 	class Ccar_medicine_box :public Object

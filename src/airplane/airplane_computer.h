@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_COMPUTER_H
 #define AIRPLANE_COMPUTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_computer {
 	class Cairplane_computer :public Object

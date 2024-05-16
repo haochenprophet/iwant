@@ -1,7 +1,7 @@
 #ifndef CAR_STATUS_H
 #define CAR_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_status {
 	class Ccar_status :public Object

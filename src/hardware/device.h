@@ -1,7 +1,7 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_device {
 	class Cdevice :public Object

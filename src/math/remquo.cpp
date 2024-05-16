@@ -34,7 +34,7 @@ long double Cremquo::remquol_c(long double numer, long double denom, int* quot)
 #endif
 
 #if REMQUO_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "REMQUO_TEST\n\n";

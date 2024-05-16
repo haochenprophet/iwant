@@ -1,7 +1,7 @@
 #ifndef VPCONFLICTD_H
 #define VPCONFLICTD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPCONFLICTD {
 	class CVPCONFLICTD :public Object

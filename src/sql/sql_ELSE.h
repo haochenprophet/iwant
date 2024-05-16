@@ -1,7 +1,7 @@
 #ifndef SQL_ELSE_H
 #define SQL_ELSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ELSE {
 	class Csql_ELSE :public Object

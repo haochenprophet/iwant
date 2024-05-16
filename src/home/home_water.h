@@ -1,7 +1,7 @@
 #ifndef HOME_WATER_H
 #define HOME_WATER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_water {
 	class Chome_water :public Object

@@ -1,7 +1,7 @@
 #ifndef LGS_H
 #define LGS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LGS {
 	class CLGS :public Object

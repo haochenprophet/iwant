@@ -1,7 +1,7 @@
 #ifndef HOME_TRAGEDY_H
 #define HOME_TRAGEDY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_tragedy {
 	class Chome_tragedy :public Object

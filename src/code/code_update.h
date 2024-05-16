@@ -1,7 +1,7 @@
 #ifndef CODE_UPDATE_H
 #define CODE_UPDATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_update {
 	class Ccode_update :public Object

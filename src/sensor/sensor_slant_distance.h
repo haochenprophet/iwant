@@ -1,7 +1,7 @@
 #ifndef SENSOR_SLANT_DISTANCE_H
 #define SENSOR_SLANT_DISTANCE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_slant_distance {
 	class Csensor_slant_distance :public Object

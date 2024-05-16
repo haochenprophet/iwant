@@ -1,7 +1,7 @@
 #ifndef REPNE_H
 #define REPNE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_REPNE {
 	class CREPNE :public Object

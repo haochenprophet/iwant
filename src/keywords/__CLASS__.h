@@ -1,7 +1,7 @@
 #ifndef __CLASS___H
 #define __CLASS___H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___CLASS__ {
 	class C__CLASS__ :public Object

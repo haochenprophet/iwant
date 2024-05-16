@@ -1,7 +1,7 @@
 #ifndef MATERIEL_OWNER_H
 #define MATERIEL_OWNER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_owner {
 	class Cmateriel_owner :public Object

@@ -1,7 +1,7 @@
 #ifndef FISTP_H
 #define FISTP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FISTP {
 	class CFISTP :public Object

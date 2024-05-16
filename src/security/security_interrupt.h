@@ -1,7 +1,7 @@
 #ifndef SECURITY_INTERRUPT_H
 #define SECURITY_INTERRUPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_interrupt {
 	class Csecurity_interrupt :public Object

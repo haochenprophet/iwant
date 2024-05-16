@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_FLIGHT_DECK_H
 #define AIRPLANE_FLIGHT_DECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_flight_deck {
 	class Cairplane_flight_deck :public Object

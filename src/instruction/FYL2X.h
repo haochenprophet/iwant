@@ -1,7 +1,7 @@
 #ifndef FYL2X_H
 #define FYL2X_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FYL2X {
 	class CFYL2X :public Object

@@ -1,7 +1,7 @@
 #ifndef __HALT_COMPILER_H
 #define __HALT_COMPILER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___halt_compiler {
 	class C__halt_compiler :public Object

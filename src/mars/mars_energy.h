@@ -1,7 +1,7 @@
 #ifndef MARS_ENERGY_H
 #define MARS_ENERGY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_energy {
 	class Cmars_energy :public Object

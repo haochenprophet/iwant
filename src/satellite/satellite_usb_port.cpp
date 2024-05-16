@@ -21,7 +21,7 @@ Csatellite_usb_port::~Csatellite_usb_port()
 #endif
 
 #if SATELLITE_USB_PORT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

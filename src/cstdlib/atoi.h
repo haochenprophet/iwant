@@ -1,7 +1,7 @@
 #ifndef ATOI_H
 #define ATOI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atoi {
 	class Catoi :public Object

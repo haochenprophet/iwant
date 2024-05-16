@@ -1,7 +1,7 @@
 #ifndef SYSRET_H
 #define SYSRET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SYSRET {
 	class CSYSRET :public Object

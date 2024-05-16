@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ELECTRIC_CURRENT_H
 #define SATELLITE_ELECTRIC_CURRENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_electric_current {
 	class Csatellite_electric_current :public Object

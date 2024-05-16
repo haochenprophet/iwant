@@ -1,7 +1,7 @@
 #ifndef SQL_RESTRICT_H
 #define SQL_RESTRICT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RESTRICT {
 	class Csql_RESTRICT :public Object

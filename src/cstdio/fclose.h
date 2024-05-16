@@ -1,7 +1,7 @@
 #ifndef FCLOSE_H
 #define FCLOSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fclose {
 	class Cfclose :public Object

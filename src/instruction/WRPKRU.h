@@ -1,7 +1,7 @@
 #ifndef WRPKRU_H
 #define WRPKRU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_WRPKRU {
 	class CWRPKRU :public Object

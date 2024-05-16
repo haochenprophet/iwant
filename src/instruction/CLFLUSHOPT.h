@@ -1,7 +1,7 @@
 #ifndef CLFLUSHOPT_H
 #define CLFLUSHOPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CLFLUSHOPT {
 	class CCLFLUSHOPT :public Object

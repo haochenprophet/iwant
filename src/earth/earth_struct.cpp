@@ -21,7 +21,7 @@ Cearth_struct::~Cearth_struct()
 #endif
 
 #if EARTH_STRUCT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

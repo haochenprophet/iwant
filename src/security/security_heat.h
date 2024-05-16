@@ -1,7 +1,7 @@
 #ifndef SECURITY_HEAT_H
 #define SECURITY_HEAT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_heat {
 	class Csecurity_heat :public Object

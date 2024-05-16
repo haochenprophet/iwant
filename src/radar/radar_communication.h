@@ -1,7 +1,7 @@
 #ifndef RADAR_COMMUNICATION_H
 #define RADAR_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_communication {
 	class Cradar_communication :public Object

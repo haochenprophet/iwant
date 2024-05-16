@@ -1,7 +1,7 @@
 #ifndef NETWORK_H
 #define NETWORK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_network {
 	class Cnetwork :public Object

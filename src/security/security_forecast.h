@@ -1,7 +1,7 @@
 #ifndef SECURITY_FORECAST_H
 #define SECURITY_FORECAST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_forecast {
 	class Csecurity_forecast :public Object

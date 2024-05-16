@@ -1,7 +1,7 @@
 #ifndef SQL_BACKUP_H
 #define SQL_BACKUP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_BACKUP {
 	class Csql_BACKUP :public Object

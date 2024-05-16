@@ -21,7 +21,7 @@ Crocket_location::~Crocket_location()
 #endif
 
 #if ROCKET_LOCATION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

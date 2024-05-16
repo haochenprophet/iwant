@@ -1,7 +1,7 @@
 #ifndef CAR_COMMUNICATION_H
 #define CAR_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_communication {
 	class Ccar_communication :public Object

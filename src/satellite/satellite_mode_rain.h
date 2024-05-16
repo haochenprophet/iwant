@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MODE_RAIN_H
 #define SATELLITE_MODE_RAIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mode_rain {
 	class Csatellite_mode_rain :public Object

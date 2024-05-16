@@ -1,7 +1,7 @@
 #ifndef CLAC_H
 #define CLAC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CLAC {
 	class CCLAC :public Object

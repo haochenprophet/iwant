@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ROTATE_SPEED_H
 #define SATELLITE_ROTATE_SPEED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_rotate_speed {
 	class Csatellite_rotate_speed :public Object

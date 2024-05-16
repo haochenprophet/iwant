@@ -1,7 +1,7 @@
 #ifndef OCEAN_MAGNETIC_H
 #define OCEAN_MAGNETIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_magnetic {
 	class Cocean_magnetic :public Object

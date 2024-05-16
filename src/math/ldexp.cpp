@@ -25,7 +25,7 @@ double Cldexp::ldexp_c(double x, int exp)
 #endif
 
 #if LDEXP_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LDEXP_TEST\n\n";

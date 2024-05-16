@@ -1,7 +1,7 @@
 #ifndef WARSHIP_ICRANE_H
 #define WARSHIP_ICRANE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_icrane {
 	class Cwarship_icrane :public Object

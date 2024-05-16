@@ -1,7 +1,7 @@
 #ifndef CAR_LOGO_H
 #define CAR_LOGO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_logo {
 	class Ccar_logo :public Object

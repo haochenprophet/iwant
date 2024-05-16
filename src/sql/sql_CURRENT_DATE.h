@@ -1,7 +1,7 @@
 #ifndef SQL_CURRENT_DATE_H
 #define SQL_CURRENT_DATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CURRENT_DATE {
 	class Csql_CURRENT_DATE :public Object

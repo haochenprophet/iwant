@@ -1,7 +1,7 @@
 #ifndef CODE_PUSH_H
 #define CODE_PUSH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_push {
 	class Ccode_push :public Object

@@ -1,7 +1,7 @@
 #ifndef QUICK_EXIT_H
 #define QUICK_EXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_quick_exit {
 	class Cquick_exit :public Object

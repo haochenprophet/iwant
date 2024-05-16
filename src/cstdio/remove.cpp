@@ -26,7 +26,7 @@ int Cremove::remove_c(const char* filename)
 #endif
 
 #if REMOVE_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "REMOVE_TEST\n\n";
 

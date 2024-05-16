@@ -1,7 +1,7 @@
 #ifndef POPCNT_H
 #define POPCNT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_POPCNT {
 	class CPOPCNT :public Object

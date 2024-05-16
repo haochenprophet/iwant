@@ -21,7 +21,7 @@ Chome_travel::~Chome_travel()
 #endif
 
 #if HOME_TRAVEL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

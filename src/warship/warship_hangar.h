@@ -1,7 +1,7 @@
 #ifndef WARSHIP_HANGAR_H
 #define WARSHIP_HANGAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_hangar {
 	class Cwarship_hangar :public Object

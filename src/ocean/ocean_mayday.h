@@ -1,7 +1,7 @@
 #ifndef OCEAN_MAYDAY_H
 #define OCEAN_MAYDAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_mayday {
 	class Cocean_mayday :public Object

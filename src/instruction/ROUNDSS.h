@@ -1,7 +1,7 @@
 #ifndef ROUNDSS_H
 #define ROUNDSS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ROUNDSS {
 	class CROUNDSS :public Object

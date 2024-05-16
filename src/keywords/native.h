@@ -1,7 +1,7 @@
 #ifndef NATIVE_H
 #define NATIVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_native {
 	class Cnative :public Object

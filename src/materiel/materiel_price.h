@@ -1,7 +1,7 @@
 #ifndef MATERIEL_PRICE_H
 #define MATERIEL_PRICE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_price {
 	class Cmateriel_price :public Object

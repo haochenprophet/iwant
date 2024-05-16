@@ -1,7 +1,7 @@
 #ifndef RET_H
 #define RET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RET {
 	class CRET :public Object

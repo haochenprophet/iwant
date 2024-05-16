@@ -1,7 +1,7 @@
 #ifndef CMPSW_H
 #define CMPSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CMPSW {
 	class CCMPSW :public Object

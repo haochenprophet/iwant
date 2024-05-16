@@ -1,7 +1,7 @@
 #ifndef SCAS_H
 #define SCAS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SCAS {
 	class CSCAS :public Object

@@ -1,7 +1,7 @@
 #ifndef PMOVZX_H
 #define PMOVZX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMOVZX {
 	class CPMOVZX :public Object

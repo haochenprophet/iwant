@@ -1,7 +1,7 @@
 #ifndef CAR_TREE_H
 #define CAR_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_tree {
 	class Ccar_tree :public Object

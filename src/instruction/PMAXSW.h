@@ -1,7 +1,7 @@
 #ifndef PMAXSW_H
 #define PMAXSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMAXSW {
 	class CPMAXSW :public Object

@@ -21,7 +21,7 @@ Csatellite_serial_port::~Csatellite_serial_port()
 #endif
 
 #if SATELLITE_SERIAL_PORT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

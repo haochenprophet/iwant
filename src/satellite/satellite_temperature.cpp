@@ -21,7 +21,7 @@ Csatellite_temperature::~Csatellite_temperature()
 #endif
 
 #if SATELLITE_TEMPERATURE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

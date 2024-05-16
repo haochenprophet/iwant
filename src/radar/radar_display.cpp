@@ -21,7 +21,7 @@ Cradar_display::~Cradar_display()
 #endif
 
 #if RADAR_DISPLAY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

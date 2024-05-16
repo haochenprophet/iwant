@@ -1,7 +1,7 @@
 #ifndef LIFE_SHOP_H
 #define LIFE_SHOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_shop {
 	class Clife_shop :public Object

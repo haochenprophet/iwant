@@ -1,7 +1,7 @@
 #ifndef SECURITY_CHECK_H
 #define SECURITY_CHECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_check {
 	class Csecurity_check :public Object

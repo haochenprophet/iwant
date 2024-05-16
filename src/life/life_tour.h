@@ -1,7 +1,7 @@
 #ifndef LIFE_TOUR_H
 #define LIFE_TOUR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_tour {
 	class Clife_tour :public Object

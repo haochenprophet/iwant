@@ -21,7 +21,7 @@ Cmaterial_build_html::~Cmaterial_build_html()
 #endif
 
 #if MATERIAL_BUILD_HTML_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef CALLOC_H
 #define CALLOC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_calloc {
 	class Ccalloc :public Object

@@ -1,7 +1,7 @@
 #ifndef LIFE_RECORD_H
 #define LIFE_RECORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_record {
 	class Clife_record :public Object

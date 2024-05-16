@@ -1,7 +1,7 @@
 #ifndef SATELLITE_RADAR_H
 #define SATELLITE_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_radar {
 	class Csatellite_radar :public Object

@@ -1,7 +1,7 @@
 #ifndef HOME_LIVE_H
 #define HOME_LIVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_live {
 	class Chome_live :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_BREAK_H
 #define SECURITY_BREAK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_break {
 	class Csecurity_break :public Object

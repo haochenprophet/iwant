@@ -1,7 +1,7 @@
 #ifndef SECURITY_LOG_H
 #define SECURITY_LOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_log {
 	class Csecurity_log :public Object

@@ -1,7 +1,7 @@
 #ifndef ROCKET_HIGH_H
 #define ROCKET_HIGH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_high {
 	class Crocket_high :public Object

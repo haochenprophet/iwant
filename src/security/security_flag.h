@@ -1,7 +1,7 @@
 #ifndef SECURITY_FLAG_H
 #define SECURITY_FLAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_flag {
 	class Csecurity_flag :public Object

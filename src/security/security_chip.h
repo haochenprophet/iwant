@@ -1,7 +1,7 @@
 #ifndef SECURITY_CHIP_H
 #define SECURITY_CHIP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_chip {
 	class Csecurity_chip :public Object

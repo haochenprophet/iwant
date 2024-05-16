@@ -21,7 +21,7 @@ Ccar_braking::~Ccar_braking()
 #endif
 
 #if CAR_BRAKING_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

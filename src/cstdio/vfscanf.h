@@ -1,7 +1,7 @@
 #ifndef VFSCANF_H
 #define VFSCANF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_vfscanf {
 	class Cvfscanf :public Object

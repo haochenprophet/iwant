@@ -26,7 +26,7 @@ int Cputc::puts_c(const char* str)
 #endif
 
 #if PUTC_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "PUTC_TEST\n\n";
 

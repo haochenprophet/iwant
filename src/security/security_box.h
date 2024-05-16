@@ -1,7 +1,7 @@
 #ifndef SECURITY_BOX_H
 #define SECURITY_BOX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_box {
 	class Csecurity_box :public Object

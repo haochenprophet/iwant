@@ -1,7 +1,7 @@
 #ifndef STRFTIME_H
 #define STRFTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strftime {
 	class Cstrftime :public Object

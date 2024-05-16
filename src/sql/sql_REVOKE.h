@@ -1,7 +1,7 @@
 #ifndef SQL_REVOKE_H
 #define SQL_REVOKE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_REVOKE {
 	class Csql_REVOKE :public Object

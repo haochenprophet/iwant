@@ -1,7 +1,7 @@
 #ifndef EXPLICIT_H
 #define EXPLICIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_explicit {
 	class Cexplicit :public Object

@@ -1,7 +1,7 @@
 #ifndef EARTH_WAR_H
 #define EARTH_WAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_war {
 	class Cearth_war :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_ESCAPE_H
 #define OCEAN_ESCAPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_escape {
 	class Cocean_escape :public Object

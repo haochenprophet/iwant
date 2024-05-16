@@ -1,7 +1,7 @@
 #ifndef WRGSBASE_H
 #define WRGSBASE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_WRGSBASE {
 	class CWRGSBASE :public Object

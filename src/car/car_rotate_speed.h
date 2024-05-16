@@ -1,7 +1,7 @@
 #ifndef CAR_ROTATE_SPEED_H
 #define CAR_ROTATE_SPEED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_rotate_speed {
 	class Ccar_rotate_speed :public Object

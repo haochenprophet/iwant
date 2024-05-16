@@ -1,7 +1,7 @@
 #ifndef MATERIAL_PARTIAL_H
 #define MATERIAL_PARTIAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_partial {
 	class Cmaterial_partial :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_FAN_H
 #define SATELLITE_FAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_fan {
 	class Csatellite_fan :public Object

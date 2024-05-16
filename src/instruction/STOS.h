@@ -1,7 +1,7 @@
 #ifndef STOS_H
 #define STOS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_STOS {
 	class CSTOS :public Object

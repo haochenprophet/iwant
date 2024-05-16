@@ -1,7 +1,7 @@
 #ifndef KSHIFTLQ_H
 #define KSHIFTLQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KSHIFTLQ {
 	class CKSHIFTLQ :public Object

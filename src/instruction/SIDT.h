@@ -1,7 +1,7 @@
 #ifndef SIDT_H
 #define SIDT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SIDT {
 	class CSIDT :public Object

@@ -1,7 +1,7 @@
 #ifndef EARTH_ECONOMIC_H
 #define EARTH_ECONOMIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_economic {
 	class Cearth_economic :public Object

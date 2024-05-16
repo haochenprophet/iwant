@@ -26,7 +26,7 @@ struct tm* Clocaltime::localtime_c(const time_t* timer)
 #endif
 
 #if LOCALTIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOCALTIME_TEST\n\n";

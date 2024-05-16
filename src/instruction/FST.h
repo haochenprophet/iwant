@@ -1,7 +1,7 @@
 #ifndef FST_H
 #define FST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FST {
 	class CFST :public Object

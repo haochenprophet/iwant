@@ -1,7 +1,7 @@
 #ifndef _PRAGMA_H
 #define _PRAGMA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__pragma {
 	class C_pragma :public Object

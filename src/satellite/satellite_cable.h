@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CABLE_H
 #define SATELLITE_CABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_cable {
 	class Csatellite_cable :public Object

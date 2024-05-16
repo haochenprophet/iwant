@@ -1,7 +1,7 @@
 #ifndef CAR_DIAGNOSIS_H
 #define CAR_DIAGNOSIS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_diagnosis {
 	class Ccar_diagnosis :public Object

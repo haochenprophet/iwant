@@ -1,7 +1,7 @@
 #ifndef SENSOR_OPEN_H
 #define SENSOR_OPEN_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_open {
 	class Csensor_open :public Object

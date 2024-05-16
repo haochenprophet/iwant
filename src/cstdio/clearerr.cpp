@@ -26,7 +26,7 @@ void Cclearerr::clearerr_c(FILE* stream)
 #endif
 
 #if CLEARERR_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "CLEARERR_TEST\n\n";
 

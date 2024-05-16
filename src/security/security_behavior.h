@@ -1,7 +1,7 @@
 #ifndef SECURITY_BEHAVIOR_H
 #define SECURITY_BEHAVIOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_behavior {
 	class Csecurity_behavior :public Object

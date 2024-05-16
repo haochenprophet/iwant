@@ -1,7 +1,7 @@
 #ifndef SQL_SETUSER_H
 #define SQL_SETUSER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SETUSER {
 	class Csql_SETUSER :public Object

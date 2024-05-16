@@ -1,7 +1,7 @@
 #ifndef SECURITY_CURRENT_H
 #define SECURITY_CURRENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_current {
 	class Csecurity_current :public Object

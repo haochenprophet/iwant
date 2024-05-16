@@ -1,7 +1,7 @@
 #ifndef CODE_STRUCT_H
 #define CODE_STRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_struct {
 	class Ccode_struct :public Object

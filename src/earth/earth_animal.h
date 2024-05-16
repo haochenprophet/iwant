@@ -1,7 +1,7 @@
 #ifndef EARTH_ANIMAL_H
 #define EARTH_ANIMAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_animal {
 	class Cearth_animal :public Object

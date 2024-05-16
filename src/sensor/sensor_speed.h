@@ -1,7 +1,7 @@
 #ifndef SENSOR_SPEED_H
 #define SENSOR_SPEED_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_speed {
 	class Csensor_speed :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MODE_H
 #define SATELLITE_MODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mode {
 	class Csatellite_mode :public Object

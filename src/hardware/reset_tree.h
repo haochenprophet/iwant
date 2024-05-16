@@ -1,7 +1,7 @@
 #ifndef RESET_TREE_H
 #define RESET_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_reset_tree {
 	class Creset_tree :public Object

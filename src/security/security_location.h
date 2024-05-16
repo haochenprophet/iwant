@@ -1,7 +1,7 @@
 #ifndef SECURITY_LOCATION_H
 #define SECURITY_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_location {
 	class Csecurity_location :public Object

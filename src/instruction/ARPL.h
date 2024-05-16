@@ -1,7 +1,7 @@
 #ifndef ARPL_H
 #define ARPL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ARPL {
 	class CARPL :public Object

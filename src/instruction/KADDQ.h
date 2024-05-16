@@ -1,7 +1,7 @@
 #ifndef KADDQ_H
 #define KADDQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KADDQ {
 	class CKADDQ :public Object

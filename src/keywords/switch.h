@@ -1,7 +1,7 @@
 #ifndef SWITCH_H
 #define SWITCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_switch {
 	class Cswitch :public Object

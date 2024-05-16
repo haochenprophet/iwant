@@ -1,7 +1,7 @@
 #ifndef SWAPGS_H
 #define SWAPGS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SWAPGS {
 	class CSWAPGS :public Object

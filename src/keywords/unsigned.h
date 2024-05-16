@@ -1,7 +1,7 @@
 #ifndef UNSIGNED_H
 #define UNSIGNED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_unsigned {
 	class Cunsigned :public Object

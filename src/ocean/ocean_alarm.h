@@ -1,7 +1,7 @@
 #ifndef OCEAN_ALARM_H
 #define OCEAN_ALARM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_alarm {
 	class Cocean_alarm :public Object

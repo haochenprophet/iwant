@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MODE_DAYTIME_H
 #define SATELLITE_MODE_DAYTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mode_daytime {
 	class Csatellite_mode_daytime :public Object

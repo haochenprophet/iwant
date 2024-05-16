@@ -1,7 +1,7 @@
 #ifndef HOME_ROOM_H
 #define HOME_ROOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_room {
 	class Chome_room :public Object

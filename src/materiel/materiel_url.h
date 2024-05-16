@@ -1,7 +1,7 @@
 #ifndef MATERIEL_URL_H
 #define MATERIEL_URL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_url {
 	class Cmateriel_url :public Object

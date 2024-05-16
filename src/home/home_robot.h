@@ -1,7 +1,7 @@
 #ifndef HOME_ROBOT_H
 #define HOME_ROBOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_robot {
 	class Chome_robot :public Object

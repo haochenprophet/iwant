@@ -21,7 +21,7 @@ Cradar_slant_distance::~Cradar_slant_distance()
 #endif
 
 #if RADAR_SLANT_DISTANCE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

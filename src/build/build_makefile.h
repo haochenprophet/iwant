@@ -1,7 +1,7 @@
 #ifndef BUILD_MAKEFILE_H
 #define BUILD_MAKEFILE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_build_makefile {
 

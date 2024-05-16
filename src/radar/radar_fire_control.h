@@ -1,7 +1,7 @@
 #ifndef RADAR_FIRE_CONTROL_H
 #define RADAR_FIRE_CONTROL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_fire_control {
 	class Cradar_fire_control :public Object

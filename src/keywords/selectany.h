@@ -1,7 +1,7 @@
 #ifndef SELECTANY_H
 #define SELECTANY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_selectany {
 	class Cselectany :public Object

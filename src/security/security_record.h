@@ -1,7 +1,7 @@
 #ifndef SECURITY_RECORD_H
 #define SECURITY_RECORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_record {
 	class Csecurity_record :public Object

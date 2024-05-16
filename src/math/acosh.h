@@ -1,7 +1,7 @@
 #ifndef ACOSH_H
 #define ACOSH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_acosh {
 	class Cacosh :public Object

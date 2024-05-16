@@ -1,7 +1,7 @@
 #ifndef RADAR_REPAIR_H
 #define RADAR_REPAIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_repair {
 	class Cradar_repair :public Object

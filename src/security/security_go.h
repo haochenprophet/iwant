@@ -1,7 +1,7 @@
 #ifndef SECURITY_GO_H
 #define SECURITY_GO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_go {
 	class Csecurity_go :public Object

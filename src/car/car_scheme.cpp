@@ -21,7 +21,7 @@ Ccar_scheme::~Ccar_scheme()
 #endif
 
 #if CAR_SCHEME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

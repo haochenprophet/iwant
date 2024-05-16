@@ -1,7 +1,7 @@
 #ifndef MATH_H
 #define MATH_H
 
-#include "object.h"
+#include "object/object.h"
 
 #ifndef PI
 #define PI 3.1415926535898

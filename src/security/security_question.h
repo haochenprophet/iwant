@@ -1,7 +1,7 @@
 #ifndef SECURITY_QUESTION_H
 #define SECURITY_QUESTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_question {
 	class Csecurity_question :public Object

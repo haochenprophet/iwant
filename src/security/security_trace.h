@@ -1,7 +1,7 @@
 #ifndef SECURITY_TRACE_H
 #define SECURITY_TRACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_trace {
 	class Csecurity_trace :public Object

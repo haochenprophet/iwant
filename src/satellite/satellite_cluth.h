@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CLUTH_H
 #define SATELLITE_CLUTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_cluth {
 	class Csatellite_cluth :public Object

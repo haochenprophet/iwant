@@ -35,7 +35,7 @@ int Csscanf::sscanf_c(const char* s, const char* format, ...)
 #endif
 
 #if SSCANF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "SSCANF_TEST\n\n";
 

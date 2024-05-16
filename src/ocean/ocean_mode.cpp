@@ -21,7 +21,7 @@ Cocean_mode::~Cocean_mode()
 #endif
 
 #if OCEAN_MODE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

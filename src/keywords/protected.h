@@ -1,7 +1,7 @@
 #ifndef PROTECTED_H
 #define PROTECTED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_protected {
 	class Cprotected :public Object

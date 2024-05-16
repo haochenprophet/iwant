@@ -1,7 +1,7 @@
 #ifndef MARS_SATELLITE_H
 #define MARS_SATELLITE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_satellite {
 	class Cmars_satellite :public Object

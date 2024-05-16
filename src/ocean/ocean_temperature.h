@@ -1,7 +1,7 @@
 #ifndef OCEAN_TEMPERATURE_H
 #define OCEAN_TEMPERATURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_temperature {
 	class Cocean_temperature :public Object

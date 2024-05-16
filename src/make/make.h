@@ -1,7 +1,7 @@
 #ifndef MAKE_H
 #define MAKE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_make {
 	class Cmake :public Object

@@ -1,7 +1,7 @@
 #ifndef PEXTRQ_H
 #define PEXTRQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PEXTRQ {
 	class CPEXTRQ :public Object

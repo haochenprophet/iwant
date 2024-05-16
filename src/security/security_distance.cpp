@@ -21,7 +21,7 @@ Csecurity_distance::~Csecurity_distance()
 #endif
 
 #if SECURITY_DISTANCE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

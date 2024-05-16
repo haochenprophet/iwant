@@ -1,7 +1,7 @@
 #ifndef CAR_OS_H
 #define CAR_OS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_os {
 	class Ccar_os :public Object

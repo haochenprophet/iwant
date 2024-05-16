@@ -1,7 +1,7 @@
 #ifndef SQL_DENY_H
 #define SQL_DENY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DENY {
 	class Csql_DENY :public Object

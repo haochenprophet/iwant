@@ -1,7 +1,7 @@
 #ifndef __GC_H
 #define __GC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___gc {
 	class C__gc :public Object

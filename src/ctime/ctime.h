@@ -1,7 +1,7 @@
 #ifndef CTIME_H
 #define CTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ctime {
 	class Cctime :public Object

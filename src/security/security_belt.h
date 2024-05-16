@@ -1,7 +1,7 @@
 #ifndef SECURITY_BELT_H
 #define SECURITY_BELT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_belt {
 	class Csecurity_belt :public Object

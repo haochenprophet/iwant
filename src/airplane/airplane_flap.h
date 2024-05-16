@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_FLAP_H
 #define AIRPLANE_FLAP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_flap {
 	class Cairplane_flap :public Object

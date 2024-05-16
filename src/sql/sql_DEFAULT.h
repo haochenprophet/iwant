@@ -1,7 +1,7 @@
 #ifndef SQL_DEFAULT_H
 #define SQL_DEFAULT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DEFAULT {
 	class Csql_DEFAULT :public Object

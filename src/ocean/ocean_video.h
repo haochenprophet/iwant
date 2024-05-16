@@ -1,7 +1,7 @@
 #ifndef OCEAN_VIDEO_H
 #define OCEAN_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_video {
 	class Cocean_video :public Object

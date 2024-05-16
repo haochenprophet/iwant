@@ -1,7 +1,7 @@
 #ifndef HOME_TOTEMISM_H
 #define HOME_TOTEMISM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_totemism {
 	class Chome_totemism :public Object

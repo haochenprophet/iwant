@@ -1,7 +1,7 @@
 #ifndef ISDIGIT_H
 #define ISDIGIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isdigit {
 	class Cisdigit :public Object

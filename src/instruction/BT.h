@@ -1,7 +1,7 @@
 #ifndef BT_H
 #define BT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BT {
 	class CBT :public Object

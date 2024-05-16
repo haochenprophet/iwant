@@ -1,7 +1,7 @@
 #ifndef TREE_FUNC_H
 #define TREE_FUNC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_tree_func {
 	class Ctree_func :public Object

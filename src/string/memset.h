@@ -1,7 +1,7 @@
 #ifndef MEMSET_H
 #define MEMSET_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memset {
 	class Cmemset :public Object

@@ -26,7 +26,7 @@ double Cmodf:: modf(double x, double* intpart)
 #endif
 
 #if MODF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MODF_TEST\n\n";

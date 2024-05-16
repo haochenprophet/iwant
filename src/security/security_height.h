@@ -1,7 +1,7 @@
 #ifndef SECURITY_HEIGHT_H
 #define SECURITY_HEIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_height {
 	class Csecurity_height :public Object

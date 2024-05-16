@@ -1,7 +1,7 @@
 #ifndef ALGORITHM_H
 #define ALGORITHM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_algorithm {
 	class Calgorithm :public Object

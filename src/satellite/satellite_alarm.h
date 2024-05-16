@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ALARM_H
 #define SATELLITE_ALARM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_alarm {
 	class Csatellite_alarm :public Object

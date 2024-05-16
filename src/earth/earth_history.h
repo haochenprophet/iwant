@@ -1,7 +1,7 @@
 #ifndef EARTH_HISTORY_H
 #define EARTH_HISTORY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_history {
 	class Cearth_history :public Object

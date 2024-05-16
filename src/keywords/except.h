@@ -1,7 +1,7 @@
 #ifndef EXCEPT_H
 #define EXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_except {
 	class Cexcept :public Object

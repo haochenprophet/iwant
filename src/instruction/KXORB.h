@@ -1,7 +1,7 @@
 #ifndef KXORB_H
 #define KXORB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KXORB {
 	class CKXORB :public Object

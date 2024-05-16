@@ -1,7 +1,7 @@
 #ifndef EARTH_MOUNTAINS_H
 #define EARTH_MOUNTAINS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_mountains {
 	class Cearth_mountains :public Object

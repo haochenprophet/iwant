@@ -1,7 +1,7 @@
 #ifndef EARTH_BUSINESS_H
 #define EARTH_BUSINESS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_business {
 	class Cearth_business :public Object

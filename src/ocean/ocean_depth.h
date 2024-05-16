@@ -1,7 +1,7 @@
 #ifndef OCEAN_DEPTH_H
 #define OCEAN_DEPTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_depth {
 	class Cocean_depth :public Object

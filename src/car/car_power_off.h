@@ -1,7 +1,7 @@
 #ifndef CAR_POWER_OFF_H
 #define CAR_POWER_OFF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_power_off {
 	class Ccar_power_off :public Object

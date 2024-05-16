@@ -1,7 +1,7 @@
 #ifndef SECURITY_DELETE_H
 #define SECURITY_DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_delete {
 	class Csecurity_delete :public Object

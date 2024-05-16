@@ -1,7 +1,7 @@
 #ifndef ROCKET_ENGINE_H
 #define ROCKET_ENGINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_engine {
 	class Crocket_engine :public Object

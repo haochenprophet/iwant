@@ -1,7 +1,7 @@
 #ifndef SECURITY_SPACE_H
 #define SECURITY_SPACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_space {
 	class Csecurity_space :public Object

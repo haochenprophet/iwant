@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MILEAGE_H
 #define SATELLITE_MILEAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mileage {
 	class Csatellite_mileage :public Object

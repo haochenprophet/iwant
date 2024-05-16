@@ -1,7 +1,7 @@
 #ifndef CAR_TIME_H
 #define CAR_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_time {
 	class Ccar_time :public Object

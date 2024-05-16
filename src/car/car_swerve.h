@@ -1,7 +1,7 @@
 #ifndef CAR_SWERVE_H
 #define CAR_SWERVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_swerve {
 	class Ccar_swerve :public Object

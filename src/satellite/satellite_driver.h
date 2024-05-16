@@ -1,7 +1,7 @@
 #ifndef SATELLITE_DRIVER_H
 #define SATELLITE_DRIVER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_driver {
 	class Csatellite_driver :public Object

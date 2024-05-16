@@ -1,7 +1,7 @@
 #ifndef OCEAN_WAVE_H
 #define OCEAN_WAVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_wave {
 	class Cocean_wave :public Object

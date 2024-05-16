@@ -26,7 +26,7 @@ int Cgetc::getc_c(FILE* stream)
 #endif
 
 #if GETC_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "GETC_TEST\n\n";
 

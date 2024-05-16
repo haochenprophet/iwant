@@ -1,7 +1,7 @@
 #ifndef HOME_CLOTHES_H
 #define HOME_CLOTHES_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_clothes {
 	class Chome_clothes :public Object

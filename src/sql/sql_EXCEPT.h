@@ -1,7 +1,7 @@
 #ifndef SQL_EXCEPT_H
 #define SQL_EXCEPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_EXCEPT {
 	class Csql_EXCEPT :public Object

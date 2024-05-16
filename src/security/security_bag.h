@@ -1,7 +1,7 @@
 #ifndef SECURITY_BAG_H
 #define SECURITY_BAG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_bag {
 	class Csecurity_bag :public Object

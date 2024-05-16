@@ -1,7 +1,7 @@
 #ifndef CAR_LANGUAGE_H
 #define CAR_LANGUAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_language {
 	class Ccar_language :public Object

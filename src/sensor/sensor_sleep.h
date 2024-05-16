@@ -1,7 +1,7 @@
 #ifndef SENSOR_SLEEP_H
 #define SENSOR_SLEEP_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_sleep {
 	class Csensor_sleep :public Object

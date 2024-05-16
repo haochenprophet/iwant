@@ -1,7 +1,7 @@
 #ifndef MOVAPS_H
 #define MOVAPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVAPS {
 	class CMOVAPS :public Object

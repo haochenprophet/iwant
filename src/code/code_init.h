@@ -1,7 +1,7 @@
 #ifndef CODE_INIT_H
 #define CODE_INIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_init {
 	class Ccode_init :public Object

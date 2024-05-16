@@ -1,7 +1,7 @@
 #ifndef TRUNC_H
 #define TRUNC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_trunc {
 	class Ctrunc :public Object

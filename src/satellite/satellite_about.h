@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ABOUT_H
 #define SATELLITE_ABOUT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_about {
 	class Csatellite_about :public Object

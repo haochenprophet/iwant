@@ -1,7 +1,7 @@
 #ifndef SENSOR_FREQUENCY_H
 #define SENSOR_FREQUENCY_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_frequency {
 	class Csensor_frequency :public Object

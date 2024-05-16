@@ -1,7 +1,7 @@
 #ifndef SECURITY_QUIT_H
 #define SECURITY_QUIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_quit {
 	class Csecurity_quit :public Object

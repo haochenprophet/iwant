@@ -1,7 +1,7 @@
 #ifndef PSUBSW_H
 #define PSUBSW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSUBSW {
 	class CPSUBSW :public Object

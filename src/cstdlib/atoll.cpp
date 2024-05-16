@@ -26,7 +26,7 @@ long long int Catoll::atoll_c(const char* str)
 #endif
 
 #if ATOLL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATOLL_TEST\n\n";

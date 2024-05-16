@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_PLANT_H
 #define SPACEPORT_PLANT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_plant {
 	class Cspaceport_plant :public Object

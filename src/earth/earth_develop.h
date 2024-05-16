@@ -1,7 +1,7 @@
 #ifndef EARTH_DEVELOP_H
 #define EARTH_DEVELOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_develop {
 	class Cearth_develop :public Object

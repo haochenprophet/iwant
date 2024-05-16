@@ -1,7 +1,7 @@
 #ifndef PDEP_H
 #define PDEP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PDEP {
 	class CPDEP :public Object

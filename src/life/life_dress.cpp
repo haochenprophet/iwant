@@ -21,7 +21,7 @@ Clife_dress::~Clife_dress()
 #endif
 
 #if LIFE_DRESS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -21,7 +21,7 @@ Csatellite_ultrasonic_radar::~Csatellite_ultrasonic_radar()
 #endif
 
 #if SATELLITE_ULTRASONIC_RADAR_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef __ASSUME_H
 #define __ASSUME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___assume {
 	class C__assume :public Object

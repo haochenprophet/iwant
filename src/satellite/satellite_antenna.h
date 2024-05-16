@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ANTENNA_H
 #define SATELLITE_ANTENNA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_antenna {
 	class Csatellite_antenna :public Object

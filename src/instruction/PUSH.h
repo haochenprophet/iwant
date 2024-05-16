@@ -1,7 +1,7 @@
 #ifndef PUSH_H
 #define PUSH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PUSH {
 	class CPUSH :public Object

@@ -1,7 +1,7 @@
 #ifndef LIFE_DRESS_H
 #define LIFE_DRESS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_dress {
 	class Clife_dress :public Object

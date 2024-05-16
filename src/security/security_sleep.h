@@ -1,7 +1,7 @@
 #ifndef SECURITY_SLEEP_H
 #define SECURITY_SLEEP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_sleep {
 	class Csecurity_sleep :public Object

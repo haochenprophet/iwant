@@ -1,7 +1,7 @@
 #ifndef RADAR_STATUS_H
 #define RADAR_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_status {
 	class Cradar_status :public Object

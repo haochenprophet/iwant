@@ -1,7 +1,7 @@
 #ifndef CODE_RUN_H
 #define CODE_RUN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_run {
 	class Ccode_run :public Object

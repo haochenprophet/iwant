@@ -1,7 +1,7 @@
 #ifndef ORPS_H
 #define ORPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ORPS {
 	class CORPS :public Object

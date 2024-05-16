@@ -1,7 +1,7 @@
 #ifndef SQL_DECLARE_H
 #define SQL_DECLARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DECLARE {
 	class Csql_DECLARE :public Object

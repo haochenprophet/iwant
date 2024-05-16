@@ -1,7 +1,7 @@
 #ifndef SQL_NULL_H
 #define SQL_NULL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_NULL {
 	class Csql_NULL :public Object

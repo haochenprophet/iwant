@@ -26,7 +26,7 @@ int Csetvbuf::setvbuf_c(FILE* stream, char* buffer, int mode, size_t size)
 #endif
 
 #if SETVBUF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "SETVBUF_TEST\n\n";
 

@@ -21,7 +21,7 @@ Cmaterial_size::~Cmaterial_size()
 #endif
 
 #if MATERIAL_SIZE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

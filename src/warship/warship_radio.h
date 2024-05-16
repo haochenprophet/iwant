@@ -1,7 +1,7 @@
 #ifndef WARSHIP_RADIO_H
 #define WARSHIP_RADIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_radio {
 	class Cwarship_radio :public Object

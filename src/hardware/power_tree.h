@@ -1,7 +1,7 @@
 #ifndef POWER_TREE_H
 #define POWER_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_power_tree {
 	class Cpower_tree :public Object

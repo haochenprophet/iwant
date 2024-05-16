@@ -1,7 +1,7 @@
 #ifndef HSUBPS_H
 #define HSUBPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_HSUBPS {
 	class CHSUBPS :public Object

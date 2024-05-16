@@ -1,7 +1,7 @@
 #ifndef MOVMSKPS_H
 #define MOVMSKPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVMSKPS {
 	class CMOVMSKPS :public Object

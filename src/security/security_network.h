@@ -1,7 +1,7 @@
 #ifndef SECURITY_NETWORK_H
 #define SECURITY_NETWORK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_network {
 	class Csecurity_network :public Object

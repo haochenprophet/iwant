@@ -1,7 +1,7 @@
 #ifndef FABS_H_
 #define FABS_H_
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fabs {
 	class Cfabs :public Object

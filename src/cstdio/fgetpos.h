@@ -1,7 +1,7 @@
 #ifndef FGETPOS_H
 #define FGETPOS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fgetpos {
 	class Cfgetpos :public Object

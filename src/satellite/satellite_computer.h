@@ -1,7 +1,7 @@
 #ifndef SATELLITE_COMPUTER_H
 #define SATELLITE_COMPUTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_computer {
 	class Csatellite_computer :public Object

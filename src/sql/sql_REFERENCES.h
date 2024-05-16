@@ -1,7 +1,7 @@
 #ifndef SQL_REFERENCES_H
 #define SQL_REFERENCES_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_REFERENCES {
 	class Csql_REFERENCES :public Object

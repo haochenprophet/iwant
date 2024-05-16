@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LOG_H
 #define SATELLITE_LOG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_log {
 	class Csatellite_log :public Object

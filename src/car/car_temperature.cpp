@@ -21,7 +21,7 @@ Ccar_temperature::~Ccar_temperature()
 #endif
 
 #if CAR_TEMPERATURE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

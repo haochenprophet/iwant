@@ -36,7 +36,7 @@ long long int llroundl_c(long double x)
 #endif
 
 #if LLROUND_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LLROUND_TEST\n\n";

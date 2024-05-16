@@ -1,7 +1,7 @@
 #ifndef PSUBUSB_H
 #define PSUBUSB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PSUBUSB {
 	class CPSUBUSB :public Object

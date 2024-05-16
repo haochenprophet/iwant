@@ -1,7 +1,7 @@
 #ifndef ENUM_CLASS_H
 #define ENUM_CLASS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_enum_class {
 	class Cenum_class :public Object

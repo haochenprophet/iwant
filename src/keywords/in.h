@@ -1,7 +1,7 @@
 #ifndef IN_H
 #define IN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_in {
 	class Cin :public Object

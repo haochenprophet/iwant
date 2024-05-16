@@ -1,7 +1,7 @@
 #ifndef VCVTTSS2USI_H
 #define VCVTTSS2USI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VCVTTSS2USI {
 	class CVCVTTSS2USI :public Object

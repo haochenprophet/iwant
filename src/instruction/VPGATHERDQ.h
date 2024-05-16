@@ -1,7 +1,7 @@
 #ifndef VPGATHERDQ_H
 #define VPGATHERDQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPGATHERDQ {
 	class CVPGATHERDQ :public Object

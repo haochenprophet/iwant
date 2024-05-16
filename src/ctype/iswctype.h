@@ -1,7 +1,7 @@
 #ifndef ISWCTYPE_H
 #define ISWCTYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswctype {
 	class Ciswctype :public Object

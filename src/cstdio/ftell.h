@@ -1,7 +1,7 @@
 #ifndef FTELL_H
 #define FTELL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ftell {
 	class Cftell :public Object

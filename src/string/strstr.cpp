@@ -21,7 +21,7 @@ Cstrstr::~Cstrstr()
 #endif
 
 #if STRSTR_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRSTR_TEST\n\n";

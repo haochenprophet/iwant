@@ -1,7 +1,7 @@
 #ifndef COS_H
 #define COS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cos {
 	class Ccos :public Object

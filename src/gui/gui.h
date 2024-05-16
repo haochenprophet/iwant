@@ -1,7 +1,7 @@
 #ifndef GUI_H
 #define GUI_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_gui {
 	class Cgui :public Object

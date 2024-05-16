@@ -1,7 +1,7 @@
 #ifndef CMATH_H
 #define CMATH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cmath {
 	class Ccmath :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_WIFI_H
 #define SATELLITE_WIFI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_wifi {
 	class Csatellite_wifi :public Object

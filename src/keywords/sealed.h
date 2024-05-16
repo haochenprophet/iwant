@@ -1,7 +1,7 @@
 #ifndef SEALED_H
 #define SEALED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sealed {
 	class Csealed :public Object

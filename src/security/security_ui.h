@@ -1,7 +1,7 @@
 #ifndef SECURITY_UI_H
 #define SECURITY_UI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_ui {
 	class Csecurity_ui :public Object

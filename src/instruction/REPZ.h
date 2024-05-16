@@ -1,7 +1,7 @@
 #ifndef REPZ_H
 #define REPZ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_REPZ {
 	class CREPZ :public Object

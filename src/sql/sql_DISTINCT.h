@@ -1,7 +1,7 @@
 #ifndef SQL_DISTINCT_H
 #define SQL_DISTINCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DISTINCT {
 	class Csql_DISTINCT :public Object

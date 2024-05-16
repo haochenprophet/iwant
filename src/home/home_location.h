@@ -1,7 +1,7 @@
 #ifndef HOME_LOCATION_H
 #define HOME_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_location {
 	class Chome_location :public Object

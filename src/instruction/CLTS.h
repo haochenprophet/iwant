@@ -1,7 +1,7 @@
 #ifndef CLTS_H
 #define CLTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CLTS {
 	class CCLTS :public Object

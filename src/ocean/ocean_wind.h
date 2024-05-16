@@ -1,7 +1,7 @@
 #ifndef OCEAN_WIND_H
 #define OCEAN_WIND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_wind {
 	class Cocean_wind :public Object

@@ -26,7 +26,7 @@ double Cfrexp::frexp_c(double x, int* exp)
 #endif
 
 #if FREXP_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FREXP_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef BYTE_H
 #define BYTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_byte {
 	class Cbyte :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIAL_TIME_H
 #define MATERIAL_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_time {
 	class Cmaterial_time :public Object

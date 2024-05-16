@@ -1,7 +1,7 @@
 #ifndef ISWCNTRL_H
 #define ISWCNTRL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswcntrl {
 	class Ciswcntrl :public Object

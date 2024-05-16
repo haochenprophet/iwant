@@ -1,7 +1,7 @@
 #ifndef SATELLITE_STATUS_H
 #define SATELLITE_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_status {
 	class Csatellite_status :public Object

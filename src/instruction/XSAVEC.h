@@ -1,7 +1,7 @@
 #ifndef XSAVEC_H
 #define XSAVEC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XSAVEC {
 	class CXSAVEC :public Object

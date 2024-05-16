@@ -1,7 +1,7 @@
 #ifndef OCEAN_RADAR_H
 #define OCEAN_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_radar {
 	class Cocean_radar :public Object

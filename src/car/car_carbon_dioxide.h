@@ -1,7 +1,7 @@
 #ifndef CAR_CARBON_DIOXIDE_H
 #define CAR_CARBON_DIOXIDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_carbon_dioxide {
 	class Ccar_carbon_dioxide :public Object

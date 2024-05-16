@@ -1,7 +1,7 @@
 #ifndef HOME_SPACE_H
 #define HOME_SPACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_space {
 	class Chome_space :public Object

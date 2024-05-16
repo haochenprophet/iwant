@@ -1,7 +1,7 @@
 #ifndef SATELLITE_PLAN_H
 #define SATELLITE_PLAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_plan {
 	class Csatellite_plan :public Object

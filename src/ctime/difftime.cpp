@@ -26,7 +26,7 @@ double Cdifftime::difftime_c(time_t end, time_t beginning)
 #endif
 
 #if DIFFTIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "DIFFTIME_TEST\n\n";

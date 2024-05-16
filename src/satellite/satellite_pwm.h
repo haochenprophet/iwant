@@ -1,7 +1,7 @@
 #ifndef SATELLITE_PWM_H
 #define SATELLITE_PWM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_pwm {
 	class Csatellite_pwm :public Object

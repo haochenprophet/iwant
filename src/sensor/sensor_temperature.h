@@ -1,7 +1,7 @@
 #ifndef SENSOR_TEMPERATURE_H
 #define SENSOR_TEMPERATURE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_temperature {
 	class Csensor_temperature :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_PRIORITY_H
 #define SECURITY_PRIORITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_priority {
 	class Csecurity_priority :public Object

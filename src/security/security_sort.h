@@ -1,7 +1,7 @@
 #ifndef SECURITY_SORT_H
 #define SECURITY_SORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_sort {
 	class Csecurity_sort :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_CREATE_H
 #define SQL_CREATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CREATE {
 	class Csql_CREATE :public Object

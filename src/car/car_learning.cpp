@@ -21,7 +21,7 @@ Ccar_learning::~Ccar_learning()
 #endif
 
 #if CAR_LEARNING_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

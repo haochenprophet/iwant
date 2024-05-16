@@ -1,7 +1,7 @@
 #ifndef GMTIME_H
 #define GMTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_gmtime {
 	class Cgmtime :public Object

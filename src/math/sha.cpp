@@ -901,7 +901,7 @@ void Csha::sha512_final(sha512_ctx *ctx, uint8 *digest)
 #endif
 
 #if SHA_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

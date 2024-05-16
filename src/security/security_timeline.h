@@ -1,7 +1,7 @@
 #ifndef SECURITY_TIMELINE_H
 #define SECURITY_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_timeline {
 	class Csecurity_timeline :public Object

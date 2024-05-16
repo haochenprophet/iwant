@@ -1,7 +1,7 @@
 #ifndef SYNTAX_H
 #define SYNTAX_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_syntax {
 	class Csyntax :public Object

@@ -1,7 +1,7 @@
 #ifndef MY_SQL_H
 #define MY_SQL_H
 
-#include "sql.h"
+#include "public/sql.h"
 #include "my_sql_action.h"
 
 namespace n_my_sql {

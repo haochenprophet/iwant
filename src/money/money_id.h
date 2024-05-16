@@ -1,7 +1,7 @@
 #ifndef MONEY_ID_H
 #define MONEY_ID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_id {
 	class Cmoney_id :public Object

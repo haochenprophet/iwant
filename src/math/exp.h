@@ -1,7 +1,7 @@
 #ifndef EXP_H
 #define EXP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_exp {
 	class Cexp :public Object

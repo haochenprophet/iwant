@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CHARGE_H
 #define SATELLITE_CHARGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_charge {
 	class Csatellite_charge :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TRAGEDY_H
 #define SPACEPORT_TRAGEDY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_tragedy {
 	class Cspaceport_tragedy :public Object

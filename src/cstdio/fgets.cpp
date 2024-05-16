@@ -26,7 +26,7 @@ char* Cfgets::fgets_c(char* str, int num, FILE* stream)
 #endif
 
 #if FGETS_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FGETS_TEST\n\n";
 

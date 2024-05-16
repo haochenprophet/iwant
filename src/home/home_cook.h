@@ -1,7 +1,7 @@
 #ifndef HOME_COOK_H
 #define HOME_COOK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_cook {
 	class Chome_cook :public Object

@@ -1,7 +1,7 @@
 #ifndef CODE_REVERT_H
 #define CODE_REVERT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_revert {
 	class Ccode_revert :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_OVER_H
 #define SQL_OVER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OVER {
 	class Csql_OVER :public Object

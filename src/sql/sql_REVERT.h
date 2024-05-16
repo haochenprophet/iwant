@@ -1,7 +1,7 @@
 #ifndef SQL_REVERT_H
 #define SQL_REVERT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_REVERT {
 	class Csql_REVERT :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_TABLE_H
 #define SQL_TABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TABLE {
 	class Csql_TABLE :public Object

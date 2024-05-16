@@ -21,7 +21,7 @@ Ccode_diff::~Ccode_diff()
 #endif
 
 #if CODE_DIFF_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

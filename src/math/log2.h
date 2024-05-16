@@ -1,7 +1,7 @@
 #ifndef LOG2_H
 #define LOG2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_log2 {
 	class Clog2 :public Object

@@ -1,7 +1,7 @@
 #ifndef STRPBRK_H
 #define STRPBRK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strpbrk {
 	class Cstrpbrk :public Object

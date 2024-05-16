@@ -1,7 +1,7 @@
 #ifndef LODSQ_H
 #define LODSQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LODSQ {
 	class CLODSQ :public Object

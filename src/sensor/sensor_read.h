@@ -1,7 +1,7 @@
 #ifndef SENSOR_READ_H
 #define SENSOR_READ_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_read {
 	class Csensor_read :public Object

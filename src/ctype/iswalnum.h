@@ -1,7 +1,7 @@
 #ifndef ISWALNUM_H
 #define ISWALNUM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswalnum {
 	class Ciswalnum :public Object

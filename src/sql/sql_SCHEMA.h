@@ -1,7 +1,7 @@
 #ifndef SQL_SCHEMA_H
 #define SQL_SCHEMA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SCHEMA {
 	class Csql_SCHEMA :public Object

@@ -26,7 +26,7 @@ int Cfgetpos::fgetpos_c(FILE* stream, fpos_t* pos)
 #endif
 
 #if FGETPOS_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FGETPOS_TEST\n\n";
 

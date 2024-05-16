@@ -1,7 +1,7 @@
 #ifndef PUTCHAR_H
 #define PUTCHAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_putchar {
 	class Cputchar :public Object

@@ -1,7 +1,7 @@
 #ifndef EARTH_SUNSHINE_H
 #define EARTH_SUNSHINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_sunshine {
 	class Cearth_sunshine :public Object

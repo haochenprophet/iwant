@@ -1,7 +1,7 @@
 #ifndef MATERIEL_AUDIO_H
 #define MATERIEL_AUDIO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_audio {
 	class Cmateriel_audio :public Object

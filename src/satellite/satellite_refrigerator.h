@@ -1,7 +1,7 @@
 #ifndef SATELLITE_REFRIGERATOR_H
 #define SATELLITE_REFRIGERATOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_refrigerator {
 	class Csatellite_refrigerator :public Object

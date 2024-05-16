@@ -1,7 +1,7 @@
 #ifndef SECURITY_TYPE_H
 #define SECURITY_TYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_type {
 	class Csecurity_type :public Object

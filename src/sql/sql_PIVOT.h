@@ -1,7 +1,7 @@
 #ifndef SQL_PIVOT_H
 #define SQL_PIVOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_PIVOT {
 	class Csql_PIVOT :public Object

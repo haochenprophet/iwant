@@ -21,7 +21,7 @@ Ccode_commit::~Ccode_commit()
 #endif
 
 #if CODE_COMMIT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

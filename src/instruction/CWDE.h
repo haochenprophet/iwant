@@ -1,7 +1,7 @@
 #ifndef CWDE_H
 #define CWDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CWDE {
 	class CCWDE :public Object

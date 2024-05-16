@@ -1,7 +1,7 @@
 #ifndef CODE_CHECK_H
 #define CODE_CHECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_check {
 	class Ccode_check :public Object

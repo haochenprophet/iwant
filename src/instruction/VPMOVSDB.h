@@ -1,7 +1,7 @@
 #ifndef VPMOVSDB_H
 #define VPMOVSDB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVSDB {
 	class CVPMOVSDB :public Object

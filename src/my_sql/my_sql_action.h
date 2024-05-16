@@ -1,7 +1,7 @@
 #ifndef MY_SQL_ACTION_H
 #define MY_SQL_ACTION_H
 
-#include "action_type.h"
+#include "action/action_type.h"
 
 enum class MySqlActionClass
 {

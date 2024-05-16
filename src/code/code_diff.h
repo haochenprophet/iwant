@@ -1,7 +1,7 @@
 #ifndef CODE_DIFF_H
 #define CODE_DIFF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_diff {
 	class Ccode_diff :public Object

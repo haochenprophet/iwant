@@ -1,7 +1,7 @@
 #ifndef CODE_DEFINE_H
 #define CODE_DEFINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_define {
 	class Ccode_define :public Object

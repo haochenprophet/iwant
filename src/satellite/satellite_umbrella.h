@@ -1,7 +1,7 @@
 #ifndef SATELLITE_UMBRELLA_H
 #define SATELLITE_UMBRELLA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_umbrella {
 	class Csatellite_umbrella :public Object

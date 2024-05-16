@@ -1,7 +1,7 @@
 #ifndef SENSOR_VOLTAGE_H
 #define SENSOR_VOLTAGE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_voltage {
 	class Csensor_voltage :public Object

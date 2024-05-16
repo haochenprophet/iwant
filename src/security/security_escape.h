@@ -1,7 +1,7 @@
 #ifndef SECURITY_ESCAPE_H
 #define SECURITY_ESCAPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_escape {
 	class Csecurity_escape :public Object

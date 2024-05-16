@@ -24,7 +24,7 @@ unsigned long int Cstrtoul::strtoul_c(const char* str, char** endptr, int base)
 #endif
 
 #if STRTOUL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRTOUL_TEST\n\n";

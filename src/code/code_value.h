@@ -1,7 +1,7 @@
 #ifndef CODE_VALUE_H
 #define CODE_VALUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_value {
 	class Ccode_value :public Object

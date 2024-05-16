@@ -1,7 +1,7 @@
 #ifndef SIN_H
 #define SIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sin {
 	class Csin :public Object

@@ -1,7 +1,7 @@
 #ifndef NOVTABLE_H
 #define NOVTABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_novtable {
 	class Cnovtable :public Object

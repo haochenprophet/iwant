@@ -1,7 +1,7 @@
 #ifndef PADDB_H
 #define PADDB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PADDB {
 	class CPADDB :public Object

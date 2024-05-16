@@ -1,7 +1,7 @@
 #ifndef SENSOR_IMPEDANCE_H
 #define SENSOR_IMPEDANCE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_impedance {
 	class Csensor_impedance :public Object

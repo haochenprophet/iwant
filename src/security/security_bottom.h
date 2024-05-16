@@ -1,7 +1,7 @@
 #ifndef SECURITY_BOTTOM_H
 #define SECURITY_BOTTOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_bottom {
 	class Csecurity_bottom :public Object

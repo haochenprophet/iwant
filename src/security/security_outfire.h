@@ -1,7 +1,7 @@
 #ifndef SECURITY_OUTFIRE_H
 #define SECURITY_OUTFIRE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_outfire {
 	class Csecurity_outfire :public Object

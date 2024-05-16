@@ -1,7 +1,7 @@
 #ifndef IO_H
 #define IO_H
 
-#include "../object.h"
+#include "object/object.h"
 #include "register_hw.h"
 
 #if LINUX_OS

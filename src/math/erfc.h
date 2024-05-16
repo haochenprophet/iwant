@@ -1,7 +1,7 @@
 #ifndef ERFC_H
 #define ERFC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_erfc {
 	class Cerfc :public Object

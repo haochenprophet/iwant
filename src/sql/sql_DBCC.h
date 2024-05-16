@@ -1,7 +1,7 @@
 #ifndef SQL_DBCC_H
 #define SQL_DBCC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DBCC {
 	class Csql_DBCC :public Object

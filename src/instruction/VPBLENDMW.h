@@ -1,7 +1,7 @@
 #ifndef VPBLENDMW_H
 #define VPBLENDMW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPBLENDMW {
 	class CVPBLENDMW :public Object

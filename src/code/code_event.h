@@ -1,7 +1,7 @@
 #ifndef CODE_EVENT_H
 #define CODE_EVENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_event {
 	class Ccode_event :public Object

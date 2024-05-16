@@ -1,7 +1,7 @@
 #ifndef SATELLITE_IMPETUS_H
 #define SATELLITE_IMPETUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_impetus {
 	class Csatellite_impetus :public Object

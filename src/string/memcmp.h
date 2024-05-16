@@ -1,7 +1,7 @@
 #ifndef MEMCMP_H
 #define MEMCMP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_memcmp {
 	class Cmemcmp :public Object

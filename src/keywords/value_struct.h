@@ -1,7 +1,7 @@
 #ifndef VALUE_STRUCT_H
 #define VALUE_STRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_value_struct {
 	class Cvalue_struct :public Object

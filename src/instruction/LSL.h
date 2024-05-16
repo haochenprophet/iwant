@@ -1,7 +1,7 @@
 #ifndef LSL_H
 #define LSL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LSL {
 	class CLSL :public Object

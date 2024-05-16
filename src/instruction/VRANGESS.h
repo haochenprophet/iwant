@@ -1,7 +1,7 @@
 #ifndef VRANGESS_H
 #define VRANGESS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VRANGESS {
 	class CVRANGESS :public Object

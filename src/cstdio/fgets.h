@@ -1,7 +1,7 @@
 #ifndef FGETS_H
 #define FGETS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fgets {
 	class Cfgets :public Object

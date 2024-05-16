@@ -1,7 +1,7 @@
 #ifndef HOME_ACTION_H
 #define HOME_ACTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_action {
 	class Chome_action :public Object

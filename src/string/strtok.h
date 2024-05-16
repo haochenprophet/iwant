@@ -1,7 +1,7 @@
 #ifndef STRTOK_H
 #define STRTOK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strtok {
 	class Cstrtok :public Object

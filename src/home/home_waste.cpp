@@ -21,7 +21,7 @@ Chome_waste::~Chome_waste()
 #endif
 
 #if HOME_WASTE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

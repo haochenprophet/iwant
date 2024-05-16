@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_FIND_H
 #define SPACEPORT_FIND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_find {
 	class Cspaceport_find :public Object

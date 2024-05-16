@@ -1,7 +1,7 @@
 #ifndef WARSHIP_HELICOPTER_H
 #define WARSHIP_HELICOPTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_helicopter {
 	class Cwarship_helicopter :public Object

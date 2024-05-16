@@ -1,7 +1,7 @@
 #ifndef OCEAN_ELECTRICITY_H
 #define OCEAN_ELECTRICITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_electricity {
 	class Cocean_electricity :public Object

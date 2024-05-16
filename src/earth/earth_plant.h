@@ -1,7 +1,7 @@
 #ifndef EARTH_PLANT_H
 #define EARTH_PLANT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_plant {
 	class Cearth_plant :public Object

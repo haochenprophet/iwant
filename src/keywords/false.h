@@ -1,7 +1,7 @@
 #ifndef FALSE_H
 #define FALSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_false {
 	class Cfalse :public Object

@@ -1,7 +1,7 @@
 #ifndef XSAVEOPT_H
 #define XSAVEOPT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XSAVEOPT {
 	class CXSAVEOPT :public Object

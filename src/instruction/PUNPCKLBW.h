@@ -1,7 +1,7 @@
 #ifndef PUNPCKLBW_H
 #define PUNPCKLBW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PUNPCKLBW {
 	class CPUNPCKLBW :public Object

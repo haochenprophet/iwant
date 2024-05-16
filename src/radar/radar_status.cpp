@@ -21,7 +21,7 @@ Cradar_status::~Cradar_status()
 #endif
 
 #if RADAR_STATUS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

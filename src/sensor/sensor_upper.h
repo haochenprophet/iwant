@@ -1,7 +1,7 @@
 #ifndef SENSOR_UPPER_H
 #define SENSOR_UPPER_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_upper {
 	class Csensor_upper :public Object

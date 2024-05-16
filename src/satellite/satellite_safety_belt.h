@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SAFETY_BELT_H
 #define SATELLITE_SAFETY_BELT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_safety_belt {
 	class Csatellite_safety_belt :public Object

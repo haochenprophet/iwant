@@ -1,7 +1,7 @@
 #ifndef OCEAN_VOLTAGE_H
 #define OCEAN_VOLTAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_voltage {
 	class Cocean_voltage :public Object

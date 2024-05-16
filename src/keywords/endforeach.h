@@ -1,7 +1,7 @@
 #ifndef ENDFOREACH_H
 #define ENDFOREACH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_endforeach {
 	class Cendforeach :public Object

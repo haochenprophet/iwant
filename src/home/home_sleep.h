@@ -1,7 +1,7 @@
 #ifndef HOME_SLEEP_H
 #define HOME_SLEEP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_sleep {
 	class Chome_sleep :public Object

@@ -1,7 +1,7 @@
 #ifndef NEXTAFTER_H
 #define NEXTAFTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_nextafter {
 	class Cnextafter :public Object

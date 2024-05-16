@@ -1,7 +1,7 @@
 #ifndef HOME_BACK_H
 #define HOME_BACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_back {
 	class Chome_back :public Object

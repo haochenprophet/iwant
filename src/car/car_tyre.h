@@ -1,7 +1,7 @@
 #ifndef CAR_TYRE_H
 #define CAR_TYRE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_tyre {
 	class Ccar_tyre :public Object

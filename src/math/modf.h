@@ -1,7 +1,7 @@
 #ifndef MODF_H
 #define MODF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_modf {
 	class Cmodf :public Object

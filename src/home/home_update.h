@@ -1,7 +1,7 @@
 #ifndef HOME_UPDATE_H
 #define HOME_UPDATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_update {
 	class Chome_update :public Object

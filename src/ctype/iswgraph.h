@@ -1,7 +1,7 @@
 #ifndef ISWGRAPH_H
 #define ISWGRAPH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswgraph {
 	class Ciswgraph :public Object

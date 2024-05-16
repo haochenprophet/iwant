@@ -1,7 +1,7 @@
 #ifndef SQL_WHILE_H
 #define SQL_WHILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_WHILE {
 	class Csql_WHILE :public Object

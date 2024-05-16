@@ -1,7 +1,7 @@
 #ifndef SECURITY_RULE_H
 #define SECURITY_RULE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_rule {
 	class Csecurity_rule :public Object

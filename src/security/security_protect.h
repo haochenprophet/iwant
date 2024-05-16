@@ -1,7 +1,7 @@
 #ifndef SECURITY_PROTECT_H
 #define SECURITY_PROTECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_protect {
 	class Csecurity_protect :public Object

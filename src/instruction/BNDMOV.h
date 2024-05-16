@@ -1,7 +1,7 @@
 #ifndef BNDMOV_H
 #define BNDMOV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_BNDMOV {
 	class CBNDMOV :public Object

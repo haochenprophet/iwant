@@ -21,7 +21,7 @@ Cmars_temperature::~Cmars_temperature()
 #endif
 
 #if MARS_TEMPERATURE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

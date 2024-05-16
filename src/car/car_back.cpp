@@ -21,7 +21,7 @@ Ccar_back::~Ccar_back()
 #endif
 
 #if CAR_BACK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

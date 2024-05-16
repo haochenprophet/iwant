@@ -1,7 +1,7 @@
 #ifndef STAC_H
 #define STAC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_STAC {
 	class CSTAC :public Object

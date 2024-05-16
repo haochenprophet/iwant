@@ -1,7 +1,7 @@
 #ifndef VOLTAGE_TREE_H
 #define VOLTAGE_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_voltage_tree {
 	class Cvoltage_tree :public Object

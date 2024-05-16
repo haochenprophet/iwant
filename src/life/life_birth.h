@@ -1,7 +1,7 @@
 #ifndef LIFE_BIRTH_H
 #define LIFE_BIRTH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_birth {
 	class Clife_birth :public Object

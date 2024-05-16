@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CPU_H
 #define SATELLITE_CPU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_cpu {
 	class Csatellite_cpu :public Object

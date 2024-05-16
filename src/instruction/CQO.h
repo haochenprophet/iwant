@@ -1,7 +1,7 @@
 #ifndef CQO_H
 #define CQO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CQO {
 	class CCQO :public Object

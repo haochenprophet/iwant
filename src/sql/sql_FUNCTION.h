@@ -1,7 +1,7 @@
 #ifndef SQL_FUNCTION_H
 #define SQL_FUNCTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FUNCTION {
 	class Csql_FUNCTION :public Object

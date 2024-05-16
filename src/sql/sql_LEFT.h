@@ -1,7 +1,7 @@
 #ifndef SQL_LEFT_H
 #define SQL_LEFT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_LEFT {
 	class Csql_LEFT :public Object

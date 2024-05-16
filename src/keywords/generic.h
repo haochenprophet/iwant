@@ -1,7 +1,7 @@
 #ifndef GENERIC_H
 #define GENERIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_generic {
 	class Cgeneric :public Object

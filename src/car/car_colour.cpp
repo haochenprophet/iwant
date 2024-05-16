@@ -21,7 +21,7 @@ Ccar_colour::~Ccar_colour()
 #endif
 
 #if CAR_COLOUR_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

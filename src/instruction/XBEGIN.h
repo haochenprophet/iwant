@@ -1,7 +1,7 @@
 #ifndef XBEGIN_H
 #define XBEGIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XBEGIN {
 	class CXBEGIN :public Object

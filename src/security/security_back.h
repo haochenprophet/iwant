@@ -1,7 +1,7 @@
 #ifndef SECURITY_BACK_H
 #define SECURITY_BACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_back {
 	class Csecurity_back :public Object

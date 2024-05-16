@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_KITCHEN_H
 #define SPACEPORT_KITCHEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_kitchen {
 	class Cspaceport_kitchen :public Object

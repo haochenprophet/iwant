@@ -21,7 +21,7 @@ Csecurity_heat::~Csecurity_heat()
 #endif
 
 #if SECURITY_HEAT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

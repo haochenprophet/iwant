@@ -1,7 +1,7 @@
 #ifndef SECURITY_ISSUE_H
 #define SECURITY_ISSUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_issue {
 	class Csecurity_issue :public Object

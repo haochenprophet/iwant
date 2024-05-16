@@ -1,7 +1,7 @@
 #ifndef MULPD_H
 #define MULPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MULPD {
 	class CMULPD :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_VIDEO_H
 #define SECURITY_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_video {
 	class Csecurity_video :public Object

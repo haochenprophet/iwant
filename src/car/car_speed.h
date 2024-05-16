@@ -1,7 +1,7 @@
 #ifndef CAR_SPEED_H
 #define CAR_SPEED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_speed {
 	class Ccar_speed :public Object

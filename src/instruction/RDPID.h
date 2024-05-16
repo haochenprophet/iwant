@@ -1,7 +1,7 @@
 #ifndef RDPID_H
 #define RDPID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDPID {
 	class CRDPID :public Object

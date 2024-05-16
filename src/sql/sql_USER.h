@@ -1,7 +1,7 @@
 #ifndef SQL_USER_H
 #define SQL_USER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_USER {
 	class Csql_USER :public Object

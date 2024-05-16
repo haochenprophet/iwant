@@ -1,7 +1,7 @@
 #ifndef SQL_UPDATE_H
 #define SQL_UPDATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_UPDATE {
 	class Csql_UPDATE :public Object

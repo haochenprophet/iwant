@@ -1,7 +1,7 @@
 #ifndef CMPSB_H
 #define CMPSB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CMPSB {
 	class CCMPSB :public Object

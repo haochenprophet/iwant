@@ -1,7 +1,7 @@
 #ifndef CAR_LEARNING_H
 #define CAR_LEARNING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_learning {
 	class Ccar_learning :public Object

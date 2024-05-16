@@ -1,7 +1,7 @@
 #ifndef SQL_READTEXT_H
 #define SQL_READTEXT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_READTEXT {
 	class Csql_READTEXT :public Object

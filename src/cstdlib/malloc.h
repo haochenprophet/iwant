@@ -1,7 +1,7 @@
 #ifndef MALLOC_H
 #define MALLOC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_malloc {
 	class Cmalloc :public Object

@@ -1,7 +1,7 @@
 #ifndef PMINUD_H
 #define PMINUD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMINUD {
 	class CPMINUD :public Object

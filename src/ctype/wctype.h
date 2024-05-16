@@ -1,7 +1,7 @@
 #ifndef WCTYPE_H
 #define WCTYPE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_wctype {
 	class Cwctype :public Object

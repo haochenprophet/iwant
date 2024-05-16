@@ -1,7 +1,7 @@
 #ifndef SECURITY_CHEMICAL_H
 #define SECURITY_CHEMICAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_chemical {
 	class Csecurity_chemical :public Object

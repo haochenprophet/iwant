@@ -1,7 +1,7 @@
 #ifndef SECURITY_PSYCHIC_H
 #define SECURITY_PSYCHIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_psychic {
 	class Csecurity_psychic :public Object

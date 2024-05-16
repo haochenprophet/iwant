@@ -1,7 +1,7 @@
 #ifndef SNPRINTF_H
 #define SNPRINTF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_snprintf {
 	class Csnprintf :public Object

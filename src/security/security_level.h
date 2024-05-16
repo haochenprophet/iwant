@@ -1,7 +1,7 @@
 #ifndef SECURITY_LEVEL_H
 #define SECURITY_LEVEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_level {
 	class Csecurity_level :public Object

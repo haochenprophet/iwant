@@ -1,7 +1,7 @@
 #ifndef ATOF_H
 #define ATOF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atof {
 	class Catof :public Object

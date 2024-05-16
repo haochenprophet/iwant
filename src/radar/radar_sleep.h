@@ -1,7 +1,7 @@
 #ifndef RADAR_SLEEP_H
 #define RADAR_SLEEP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_sleep {
 	class Cradar_sleep :public Object

@@ -1,7 +1,7 @@
 #ifndef RADAR_ANGLE_POSITION_H
 #define RADAR_ANGLE_POSITION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_angle_position {
 	class Cradar_angle_position :public Object

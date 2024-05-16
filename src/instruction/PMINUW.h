@@ -1,7 +1,7 @@
 #ifndef PMINUW_H
 #define PMINUW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMINUW {
 	class CPMINUW :public Object

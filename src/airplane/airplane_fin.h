@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_FIN_H
 #define AIRPLANE_FIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_fin {
 	class Cairplane_fin :public Object

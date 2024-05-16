@@ -1,7 +1,7 @@
 #ifndef FADDP_H
 #define FADDP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FADDP {
 	class CFADDP :public Object

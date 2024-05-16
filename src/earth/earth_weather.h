@@ -1,7 +1,7 @@
 #ifndef EARTH_WEATHER_H
 #define EARTH_WEATHER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_weather {
 	class Cearth_weather :public Object

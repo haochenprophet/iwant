@@ -1,7 +1,7 @@
 #ifndef SECURITY_TIME_H
 #define SECURITY_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_time {
 	class Csecurity_time :public Object

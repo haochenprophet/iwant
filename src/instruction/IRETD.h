@@ -1,7 +1,7 @@
 #ifndef IRETD_H
 #define IRETD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_IRETD {
 	class CIRETD :public Object

@@ -1,7 +1,7 @@
 #ifndef SENSOR_OXYGEN_H
 #define SENSOR_OXYGEN_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_oxygen {
 	class Csensor_oxygen :public Object

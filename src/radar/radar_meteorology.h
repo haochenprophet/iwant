@@ -1,7 +1,7 @@
 #ifndef RADAR_METEOROLOGY_H
 #define RADAR_METEOROLOGY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_meteorology {
 	class Cradar_meteorology :public Object

@@ -24,7 +24,7 @@ size_t Cwcstombs::wcstombs_c(char* dest, const wchar_t* src, size_t max)
 #endif
 
 #if WCSTOMBS_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "WCSTOMBS_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef DELEGATE_H
 #define DELEGATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_delegate {
 	class Cdelegate :public Object

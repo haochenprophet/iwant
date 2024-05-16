@@ -1,7 +1,7 @@
 #ifndef MOVZX_H
 #define MOVZX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVZX {
 	class CMOVZX :public Object

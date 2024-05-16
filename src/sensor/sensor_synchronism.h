@@ -1,7 +1,7 @@
 #ifndef SENSOR_SYNCHRONISM_H
 #define SENSOR_SYNCHRONISM_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_synchronism {
 	class Csensor_synchronism :public Object

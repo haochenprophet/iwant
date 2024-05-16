@@ -1,7 +1,7 @@
 #ifndef STDIN_H
 #define STDIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_stdin {
 	class Cstdin :public Object

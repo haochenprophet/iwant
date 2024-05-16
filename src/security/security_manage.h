@@ -1,7 +1,7 @@
 #ifndef SECURITY_MANAGE_H
 #define SECURITY_MANAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_manage {
 	class Csecurity_manage :public Object

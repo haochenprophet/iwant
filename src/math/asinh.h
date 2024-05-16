@@ -1,7 +1,7 @@
 #ifndef ASINH_H
 #define ASINH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_asinh {
 	class Casinh :public Object

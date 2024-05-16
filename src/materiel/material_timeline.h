@@ -1,7 +1,7 @@
 #ifndef MATERIAL_TIMELINE_H
 #define MATERIAL_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_timeline {
 	class Cmaterial_timeline :public Object

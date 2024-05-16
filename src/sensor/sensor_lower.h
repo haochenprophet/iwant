@@ -1,7 +1,7 @@
 #ifndef SENSOR_LOWER_H
 #define SENSOR_LOWER_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_lower {
 	class Csensor_lower :public Object

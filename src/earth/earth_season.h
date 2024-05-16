@@ -1,7 +1,7 @@
 #ifndef EARTH_SEASON_H
 #define EARTH_SEASON_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_season {
 	class Cearth_season :public Object

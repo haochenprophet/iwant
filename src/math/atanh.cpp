@@ -32,7 +32,7 @@ long double Catanh::atanhl_c(long double x)
 #endif
 
 #if ATANH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATANH_TEST\n\n";

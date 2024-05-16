@@ -1,7 +1,7 @@
 #ifndef VEXTRACTI32X8_H
 #define VEXTRACTI32X8_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VEXTRACTI32x8 {
 	class CVEXTRACTI32x8 :public Object

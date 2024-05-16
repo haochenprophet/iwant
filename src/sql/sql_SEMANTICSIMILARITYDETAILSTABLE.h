@@ -1,7 +1,7 @@
 #ifndef SQL_SEMANTICSIMILARITYDETAILSTABLE_H
 #define SQL_SEMANTICSIMILARITYDETAILSTABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SEMANTICSIMILARITYDETAILSTABLE {
 	class Csql_SEMANTICSIMILARITYDETAILSTABLE :public Object

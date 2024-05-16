@@ -1,7 +1,7 @@
 #ifndef SQL_FETCH_H
 #define SQL_FETCH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FETCH {
 	class Csql_FETCH :public Object

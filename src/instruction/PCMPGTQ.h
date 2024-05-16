@@ -1,7 +1,7 @@
 #ifndef PCMPGTQ_H
 #define PCMPGTQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PCMPGTQ {
 	class CPCMPGTQ :public Object

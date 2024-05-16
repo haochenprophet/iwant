@@ -1,7 +1,7 @@
 #ifndef SATELLITE_TEMPERATURE_H
 #define SATELLITE_TEMPERATURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_temperature {
 	class Csatellite_temperature :public Object

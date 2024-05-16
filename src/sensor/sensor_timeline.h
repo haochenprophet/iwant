@@ -1,7 +1,7 @@
 #ifndef SENSOR_TIMELINE_H
 #define SENSOR_TIMELINE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_timeline {
 	class Csensor_timeline :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_GRANT_H
 #define SQL_GRANT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_GRANT {
 	class Csql_GRANT :public Object

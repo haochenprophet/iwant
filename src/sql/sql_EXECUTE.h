@@ -1,7 +1,7 @@
 #ifndef SQL_EXECUTE_H
 #define SQL_EXECUTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_EXECUTE {
 	class Csql_EXECUTE :public Object

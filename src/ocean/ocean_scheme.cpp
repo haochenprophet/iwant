@@ -21,7 +21,7 @@ Cocean_scheme::~Cocean_scheme()
 #endif
 
 #if OCEAN_SCHEME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

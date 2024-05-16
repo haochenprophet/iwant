@@ -1,7 +1,7 @@
 #ifndef ROCKET_SPEED_H
 #define ROCKET_SPEED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_speed {
 	class Crocket_speed :public Object

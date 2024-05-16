@@ -1,7 +1,7 @@
 #ifndef POW_H
 #define POW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_pow {
 	class Cpow :public Object

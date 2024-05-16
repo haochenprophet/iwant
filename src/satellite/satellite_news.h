@@ -1,7 +1,7 @@
 #ifndef SATELLITE_NEWS_H
 #define SATELLITE_NEWS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_news {
 	class Csatellite_news :public Object

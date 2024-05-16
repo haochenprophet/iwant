@@ -1,7 +1,7 @@
 #ifndef HOME_PLANT_H
 #define HOME_PLANT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_plant {
 	class Chome_plant :public Object

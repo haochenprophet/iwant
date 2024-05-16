@@ -1,7 +1,7 @@
 #ifndef FOR_EACH_IN_H
 #define FOR_EACH_IN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_for_each_in {
 	class Cfor_each_in :public Object

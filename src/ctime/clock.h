@@ -1,7 +1,7 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_clock {
 	class Cclock :public Object

@@ -1,7 +1,7 @@
 #ifndef HOME_AIR_H
 #define HOME_AIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_air {
 	class Chome_air :public Object

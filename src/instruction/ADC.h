@@ -1,7 +1,7 @@
 #ifndef ADC_H
 #define ADC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ADC {
 	class CADC :public Object

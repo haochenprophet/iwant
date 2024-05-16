@@ -1,7 +1,7 @@
 #ifndef SQRTSS_H
 #define SQRTSS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SQRTSS {
 	class CSQRTSS :public Object

@@ -1,7 +1,7 @@
 #ifndef FIMUL_H
 #define FIMUL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FIMUL {
 	class CFIMUL :public Object

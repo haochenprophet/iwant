@@ -21,7 +21,7 @@ Cradar_reconnoitre::~Cradar_reconnoitre()
 #endif
 
 #if RADAR_RECONNOITRE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

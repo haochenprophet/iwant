@@ -26,7 +26,7 @@ int Cvsscanf::vsscanf_c(const char* s, const char* format, va_list arg)
 #endif
 
 #if VSSCANF_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "VSSCANF_TEST\n\n";
 

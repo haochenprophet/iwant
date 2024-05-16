@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ACTION_H
 #define SATELLITE_ACTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_action {
 	class Csatellite_action :public Object

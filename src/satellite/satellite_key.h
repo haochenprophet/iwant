@@ -1,7 +1,7 @@
 #ifndef SATELLITE_KEY_H
 #define SATELLITE_KEY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_key {
 	class Csatellite_key :public Object

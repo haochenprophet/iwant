@@ -1,7 +1,7 @@
 #ifndef UCOMISS_H
 #define UCOMISS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_UCOMISS {
 	class CUCOMISS :public Object

@@ -1,7 +1,7 @@
 #ifndef STRTOULL_H
 #define STRTOULL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strtoull {
 	class Cstrtoull :public Object

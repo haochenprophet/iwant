@@ -1,7 +1,7 @@
 #ifndef INVPCID_H
 #define INVPCID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INVPCID {
 	class CINVPCID :public Object

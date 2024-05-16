@@ -1,7 +1,7 @@
 #ifndef ISGRAPH_H
 #define ISGRAPH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isgraph {
 	class Cisgraph :public Object

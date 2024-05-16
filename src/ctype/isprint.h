@@ -1,7 +1,7 @@
 #ifndef ISPRINT_H
 #define ISPRINT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_isprint {
 	class Cisprint :public Object

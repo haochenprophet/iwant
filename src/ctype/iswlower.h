@@ -1,7 +1,7 @@
 #ifndef ISWLOWER_H
 #define ISWLOWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswlower {
 	class Ciswlower :public Object

@@ -2,7 +2,7 @@
 #define CODE_H
 
 #include "file/file.h"
-#include "path.h"
+#include "path/path.h"
 #include "code_action.h"
 
 #define GLOBAL_CLASS "global_class"

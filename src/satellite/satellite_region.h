@@ -1,7 +1,7 @@
 #ifndef SATELLITE_REGION_H
 #define SATELLITE_REGION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_region {
 	class Csatellite_region :public Object

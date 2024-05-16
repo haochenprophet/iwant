@@ -1,7 +1,7 @@
 #ifndef FSUB_H
 #define FSUB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FSUB {
 	class CFSUB :public Object

@@ -26,7 +26,7 @@ int Cfseek::fseek_c(FILE* stream, long int offset, int origin)
 #endif
 
 #if FSEEK_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FSEEK_TEST\n\n";
 

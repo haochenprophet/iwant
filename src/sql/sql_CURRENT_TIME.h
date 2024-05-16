@@ -1,7 +1,7 @@
 #ifndef SQL_CURRENT_TIME_H
 #define SQL_CURRENT_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CURRENT_TIME {
 	class Csql_CURRENT_TIME :public Object

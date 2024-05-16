@@ -1,7 +1,7 @@
 #ifndef TYPEDEF_H
 #define TYPEDEF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_typedef {
 	class Ctypedef :public Object

@@ -21,7 +21,7 @@ Cairplane_airfoil_trailing::~Cairplane_airfoil_trailing()
 #endif
 
 #if AIRPLANE_AIRFOIL_TRAILING_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

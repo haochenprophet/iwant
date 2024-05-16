@@ -1,7 +1,7 @@
 #ifndef CHAR32_T_H
 #define CHAR32_T_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_char32_t {
 	class Cchar32_t :public Object

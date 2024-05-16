@@ -1,7 +1,7 @@
 #ifndef RADAR_TIME_H
 #define RADAR_TIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_time {
 	class Cradar_time :public Object

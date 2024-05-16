@@ -1,7 +1,7 @@
 #ifndef FGETC_H
 #define FGETC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fgetc {
 	class Cfgetc :public Object

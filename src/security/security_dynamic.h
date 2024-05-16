@@ -1,7 +1,7 @@
 #ifndef SECURITY_DYNAMIC_H
 #define SECURITY_DYNAMIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_dynamic {
 	class Csecurity_dynamic :public Object

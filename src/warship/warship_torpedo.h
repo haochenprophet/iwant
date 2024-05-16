@@ -1,7 +1,7 @@
 #ifndef WARSHIP_TORPEDO_H
 #define WARSHIP_TORPEDO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_torpedo {
 	class Cwarship_torpedo :public Object

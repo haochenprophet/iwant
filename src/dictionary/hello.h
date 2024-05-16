@@ -1,7 +1,7 @@
 #ifndef HELLO_H
 #define HELLO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_hello {
 	class Chello :public Object

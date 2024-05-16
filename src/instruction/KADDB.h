@@ -1,7 +1,7 @@
 #ifndef KADDB_H
 #define KADDB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KADDB {
 	class CKADDB :public Object

@@ -1,8 +1,8 @@
 #ifndef COLLECT_FILE_H
 #define COLLECT_FILE_H
 
-#include "../object.h"
-#include "../path.h"
+#include "object/object.h"
+#include "path/path.h"
 #include "file/file.h"
 
 namespace n_collect_file {

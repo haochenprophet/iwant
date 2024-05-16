@@ -1,7 +1,7 @@
 #ifndef SQL_DUMP_H
 #define SQL_DUMP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DUMP {
 	class Csql_DUMP :public Object

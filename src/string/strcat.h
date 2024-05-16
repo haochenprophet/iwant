@@ -1,7 +1,7 @@
 #ifndef STRCAT_H
 #define STRCAT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strcat {
 	class Cstrcat :public Object

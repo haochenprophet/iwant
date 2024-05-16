@@ -21,7 +21,7 @@ Cstrcmp::~Cstrcmp()
 #endif
 
 #if STRCMP_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRCMP_TEST\n\n";

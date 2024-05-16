@@ -1,7 +1,7 @@
 #ifndef SQL_CLOSE_H
 #define SQL_CLOSE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CLOSE {
 	class Csql_CLOSE :public Object

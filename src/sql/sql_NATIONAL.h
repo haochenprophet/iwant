@@ -1,7 +1,7 @@
 #ifndef SQL_NATIONAL_H
 #define SQL_NATIONAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_NATIONAL {
 	class Csql_NATIONAL :public Object

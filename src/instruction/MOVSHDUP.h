@@ -1,7 +1,7 @@
 #ifndef MOVSHDUP_H
 #define MOVSHDUP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVSHDUP {
 	class CMOVSHDUP :public Object

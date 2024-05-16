@@ -1,7 +1,7 @@
 #ifndef TMPFILE_H
 #define TMPFILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_tmpfile {
 	class Ctmpfile :public Object

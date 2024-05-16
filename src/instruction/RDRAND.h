@@ -1,7 +1,7 @@
 #ifndef RDRAND_H
 #define RDRAND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_RDRAND {
 	class CRDRAND :public Object

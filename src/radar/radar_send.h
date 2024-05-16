@@ -1,7 +1,7 @@
 #ifndef RADAR_SEND_H
 #define RADAR_SEND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_send {
 	class Cradar_send :public Object

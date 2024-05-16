@@ -1,7 +1,7 @@
 #ifndef SQL_INTO_H
 #define SQL_INTO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_INTO {
 	class Csql_INTO :public Object

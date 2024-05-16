@@ -1,7 +1,7 @@
 #ifndef OCEAN_SEABOARD_H
 #define OCEAN_SEABOARD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_seaboard {
 	class Cocean_seaboard :public Object

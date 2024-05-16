@@ -1,7 +1,7 @@
 #ifndef COPYSIGN_H
 #define COPYSIGN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_copysign {
 	class Ccopysign :public Object

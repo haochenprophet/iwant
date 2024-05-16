@@ -1,7 +1,7 @@
 #ifndef FCLEX_H
 #define FCLEX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FCLEX {
 	class CFCLEX :public Object

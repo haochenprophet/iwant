@@ -1,7 +1,7 @@
 #ifndef _IFNDEF_H
 #define _IFNDEF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__ifndef {
 	class C_ifndef :public Object

@@ -1,7 +1,7 @@
 #ifndef SLDT_H
 #define SLDT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SLDT {
 	class CSLDT :public Object

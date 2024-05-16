@@ -1,7 +1,7 @@
 #ifndef SQL_OPENDATASOURCE_H
 #define SQL_OPENDATASOURCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OPENDATASOURCE {
 	class Csql_OPENDATASOURCE :public Object

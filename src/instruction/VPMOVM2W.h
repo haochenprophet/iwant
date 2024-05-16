@@ -1,7 +1,7 @@
 #ifndef VPMOVM2W_H
 #define VPMOVM2W_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPMOVM2W {
 	class CVPMOVM2W :public Object

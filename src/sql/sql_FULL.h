@@ -1,7 +1,7 @@
 #ifndef SQL_FULL_H
 #define SQL_FULL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FULL {
 	class Csql_FULL :public Object

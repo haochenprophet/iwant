@@ -36,7 +36,7 @@ long double Clogb::logbl_c(long double x)
 #endif
 
 #if LOGB_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOGB_TEST\n\n";

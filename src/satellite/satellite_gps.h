@@ -1,7 +1,7 @@
 #ifndef SATELLITE_GPS_H
 #define SATELLITE_GPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_gps {
 	class Csatellite_gps :public Object

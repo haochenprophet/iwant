@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ULTRASONIC_RADAR_H
 #define SATELLITE_ULTRASONIC_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_ultrasonic_radar {
 	class Csatellite_ultrasonic_radar :public Object

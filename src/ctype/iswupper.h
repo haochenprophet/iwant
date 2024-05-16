@@ -1,7 +1,7 @@
 #ifndef ISWUPPER_H
 #define ISWUPPER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_iswupper {
 	class Ciswupper :public Object

@@ -21,7 +21,7 @@ Ccar_mode_rain::~Ccar_mode_rain()
 #endif
 
 #if CAR_MODE_RAIN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

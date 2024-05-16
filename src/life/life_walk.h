@@ -1,7 +1,7 @@
 #ifndef LIFE_WALK_H
 #define LIFE_WALK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_walk {
 	class Clife_walk :public Object

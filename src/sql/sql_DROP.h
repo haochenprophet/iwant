@@ -1,7 +1,7 @@
 #ifndef SQL_DROP_H
 #define SQL_DROP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DROP {
 	class Csql_DROP :public Object

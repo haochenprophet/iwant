@@ -46,7 +46,7 @@ typedef union Uqresult_T
         int  i_abcd;  
 }Uqresult;
 
-#include "object.h"
+#include "object/object.h"
 #include "file/file.h"
 #include "stock_question_def.h"
 

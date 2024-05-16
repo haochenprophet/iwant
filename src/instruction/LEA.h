@@ -1,7 +1,7 @@
 #ifndef LEA_H
 #define LEA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LEA {
 	class CLEA :public Object

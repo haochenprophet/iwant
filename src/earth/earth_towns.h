@@ -1,7 +1,7 @@
 #ifndef EARTH_TOWNS_H
 #define EARTH_TOWNS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_towns {
 	class Cearth_towns :public Object

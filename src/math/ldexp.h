@@ -1,7 +1,7 @@
 #ifndef LDEXP_H
 #define LDEXP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ldexp {
 	class Cldexp :public Object

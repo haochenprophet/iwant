@@ -1,7 +1,7 @@
 #ifndef CODE_SYNTAX_H
 #define CODE_SYNTAX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_syntax {
 	class Ccode_syntax :public Object

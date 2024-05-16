@@ -21,7 +21,7 @@ Ciscntrl::~Ciscntrl()
 #endif
 
 #if ISCNTRL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ISCNTRL_TEST\n\n";

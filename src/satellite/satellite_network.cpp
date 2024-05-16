@@ -21,7 +21,7 @@ Csatellite_network::~Csatellite_network()
 #endif
 
 #if SATELLITE_NETWORK_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

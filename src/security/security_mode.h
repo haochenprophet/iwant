@@ -1,7 +1,7 @@
 #ifndef SECURITY_MODE_H
 #define SECURITY_MODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_mode {
 	class Csecurity_mode :public Object

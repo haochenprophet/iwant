@@ -1,7 +1,7 @@
 #ifndef CAR_ARRAY_H
 #define CAR_ARRAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_array {
 	class Ccar_array :public Object

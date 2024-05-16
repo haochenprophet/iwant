@@ -1,7 +1,7 @@
 #ifndef OCEAN_TEST_H
 #define OCEAN_TEST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_test {
 	class Cocean_test :public Object

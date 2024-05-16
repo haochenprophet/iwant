@@ -1,7 +1,7 @@
 #ifndef EARTH_TIMELINE_H
 #define EARTH_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_timeline {
 	class Cearth_timeline :public Object

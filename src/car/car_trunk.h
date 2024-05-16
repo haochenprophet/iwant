@@ -1,7 +1,7 @@
 #ifndef CAR_TRUNK_H
 #define CAR_TRUNK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_trunk {
 	class Ccar_trunk :public Object

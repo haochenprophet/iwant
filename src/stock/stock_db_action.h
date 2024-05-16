@@ -1,7 +1,7 @@
 #ifndef STOCK_DB_ACTION_H
 #define STOCK_DB_ACTION_H
 
-#include "action_type.h"
+#include "action/action_type.h"
 enum class StockActionClass 
 {
 	none ,

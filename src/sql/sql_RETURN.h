@@ -1,7 +1,7 @@
 #ifndef SQL_RETURN_H
 #define SQL_RETURN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RETURN {
 	class Csql_RETURN :public Object

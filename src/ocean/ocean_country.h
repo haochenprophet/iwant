@@ -1,7 +1,7 @@
 #ifndef OCEAN_COUNTRY_H
 #define OCEAN_COUNTRY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_country {
 	class Cocean_country :public Object

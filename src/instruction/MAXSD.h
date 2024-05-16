@@ -1,7 +1,7 @@
 #ifndef MAXSD_H
 #define MAXSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MAXSD {
 	class CMAXSD :public Object

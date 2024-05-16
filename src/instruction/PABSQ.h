@@ -1,7 +1,7 @@
 #ifndef PABSQ_H
 #define PABSQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PABSQ {
 	class CPABSQ :public Object

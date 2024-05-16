@@ -1,7 +1,7 @@
 #ifndef OCEAN_TIMELINE_H
 #define OCEAN_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_timeline {
 	class Cocean_timeline :public Object

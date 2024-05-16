@@ -1,7 +1,7 @@
 #ifndef SARX_H
 #define SARX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SARX {
 	class CSARX :public Object

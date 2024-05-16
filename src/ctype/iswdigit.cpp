@@ -21,7 +21,7 @@ Ciswdigit::~Ciswdigit()
 #endif
 
 #if ISWDIGIT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ISWDIGIT_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef OCEAN_COLOUR_H
 #define OCEAN_COLOUR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_colour {
 	class Cocean_colour :public Object

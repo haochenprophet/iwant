@@ -1,7 +1,7 @@
 #ifndef INSTANCEOF_H
 #define INSTANCEOF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_instanceof {
 	class Cinstanceof :public Object

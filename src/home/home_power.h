@@ -1,7 +1,7 @@
 #ifndef HOME_POWER_H
 #define HOME_POWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_power {
 	class Chome_power :public Object

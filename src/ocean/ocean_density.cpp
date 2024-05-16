@@ -21,7 +21,7 @@ Cocean_density::~Cocean_density()
 #endif
 
 #if OCEAN_DENSITY_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

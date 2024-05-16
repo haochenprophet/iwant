@@ -1,7 +1,7 @@
 #ifndef PCIE_H
 #define PCIE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_pcie {
 	class Cpcie :public Object

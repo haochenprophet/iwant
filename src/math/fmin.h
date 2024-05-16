@@ -1,7 +1,7 @@
 #ifndef FMIN_H
 #define FMIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fmin {
 	class Cfmin :public Object

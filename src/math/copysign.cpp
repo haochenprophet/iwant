@@ -36,7 +36,7 @@ long double copysignl_c(long double x, long double y)
 #endif
 
 #if COPYSIGN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "COPYSIGN_TEST\n\n";

@@ -21,7 +21,7 @@ Ciswalnum::~Ciswalnum()
 #endif
 
 #if ISWALNUM_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ISWALNUM_TEST\n\n";

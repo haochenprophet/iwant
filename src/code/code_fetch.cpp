@@ -21,7 +21,7 @@ Ccode_fetch::~Ccode_fetch()
 #endif
 
 #if CODE_FETCH_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

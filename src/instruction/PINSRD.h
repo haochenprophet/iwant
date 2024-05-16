@@ -1,7 +1,7 @@
 #ifndef PINSRD_H
 #define PINSRD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PINSRD {
 	class CPINSRD :public Object

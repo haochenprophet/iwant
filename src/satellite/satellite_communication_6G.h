@@ -1,7 +1,7 @@
 #ifndef SATELLITE_COMMUNICATION_6G_H
 #define SATELLITE_COMMUNICATION_6G_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_communication_6G {
 	class Csatellite_communication_6G :public Object

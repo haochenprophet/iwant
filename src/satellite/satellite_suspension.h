@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SUSPENSION_H
 #define SATELLITE_SUSPENSION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_suspension {
 	class Csatellite_suspension :public Object

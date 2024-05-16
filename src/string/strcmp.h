@@ -1,7 +1,7 @@
 #ifndef STRCMP_H
 #define STRCMP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strcmp {
 	class Cstrcmp :public Object

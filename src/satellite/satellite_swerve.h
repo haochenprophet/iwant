@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SWERVE_H
 #define SATELLITE_SWERVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_swerve {
 	class Csatellite_swerve :public Object

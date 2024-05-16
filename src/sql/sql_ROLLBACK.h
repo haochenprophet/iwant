@@ -1,7 +1,7 @@
 #ifndef SQL_ROLLBACK_H
 #define SQL_ROLLBACK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ROLLBACK {
 	class Csql_ROLLBACK :public Object

@@ -1,7 +1,7 @@
 #ifndef MD5_H_H_
 #define MD5_H_H_
 
-#include "../object.h"
+#include "object/object.h"
 
 #define MD5_INPUT_LEN 64
 

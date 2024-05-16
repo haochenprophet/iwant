@@ -1,7 +1,7 @@
 #ifndef OCEAN_FUNCTION_H
 #define OCEAN_FUNCTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_function {
 	class Cocean_function :public Object

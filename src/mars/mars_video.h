@@ -1,7 +1,7 @@
 #ifndef MARS_VIDEO_H
 #define MARS_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_video {
 	class Cmars_video :public Object

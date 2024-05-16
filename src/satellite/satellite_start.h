@@ -1,7 +1,7 @@
 #ifndef SATELLITE_START_H
 #define SATELLITE_START_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_start {
 	class Csatellite_start :public Object

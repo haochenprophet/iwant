@@ -1,7 +1,7 @@
 #ifndef SECURITY_ANGLE_H
 #define SECURITY_ANGLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_angle {
 	class Csecurity_angle :public Object

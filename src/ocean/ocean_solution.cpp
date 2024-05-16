@@ -21,7 +21,7 @@ Cocean_solution::~Cocean_solution()
 #endif
 
 #if OCEAN_SOLUTION_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

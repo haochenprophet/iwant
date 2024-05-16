@@ -21,7 +21,7 @@ Cairplane_hold::~Cairplane_hold()
 #endif
 
 #if AIRPLANE_HOLD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

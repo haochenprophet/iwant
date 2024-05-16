@@ -1,7 +1,7 @@
 #ifndef FPCLASSIFY_H
 #define FPCLASSIFY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fpclassify {
 	class Cfpclassify :public Object

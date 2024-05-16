@@ -1,7 +1,7 @@
 #ifndef CAR_COLOUR_H
 #define CAR_COLOUR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_colour {
 	class Ccar_colour :public Object

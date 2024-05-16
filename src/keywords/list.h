@@ -1,7 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_list {
 	class Clist :public Object

@@ -1,7 +1,7 @@
 #ifndef HOME_LAMP_H
 #define HOME_LAMP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_lamp {
 	class Chome_lamp :public Object

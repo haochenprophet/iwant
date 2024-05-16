@@ -1,7 +1,7 @@
 #ifndef CODE_NAMESPACE_H
 #define CODE_NAMESPACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_namespace {
 	class Ccode_namespace :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_HOW_H
 #define SECURITY_HOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_how {
 	class Csecurity_how :public Object

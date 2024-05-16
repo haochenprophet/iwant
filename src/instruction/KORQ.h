@@ -1,7 +1,7 @@
 #ifndef KORQ_H
 #define KORQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KORQ {
 	class CKORQ :public Object

@@ -1,7 +1,7 @@
 #ifndef EARTH_ROAD_H
 #define EARTH_ROAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_road {
 	class Cearth_road :public Object

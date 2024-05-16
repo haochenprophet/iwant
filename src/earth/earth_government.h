@@ -1,7 +1,7 @@
 #ifndef EARTH_GOVERNMENT_H
 #define EARTH_GOVERNMENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_government {
 	class Cearth_government :public Object

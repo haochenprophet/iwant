@@ -1,7 +1,7 @@
 #ifndef SATELLITE_RESCUE_H
 #define SATELLITE_RESCUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_rescue {
 	class Csatellite_rescue :public Object

@@ -1,7 +1,7 @@
 #ifndef MARS_ROBOT_H
 #define MARS_ROBOT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_robot {
 	class Cmars_robot :public Object

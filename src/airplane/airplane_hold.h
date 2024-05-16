@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_HOLD_H
 #define AIRPLANE_HOLD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_hold {
 	class Cairplane_hold :public Object

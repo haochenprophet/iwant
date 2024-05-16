@@ -1,7 +1,7 @@
 #ifndef CAR_OXYGEN_H
 #define CAR_OXYGEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_oxygen {
 	class Ccar_oxygen :public Object

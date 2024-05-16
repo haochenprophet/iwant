@@ -1,7 +1,7 @@
 #ifndef SECURITY_SNOW_H
 #define SECURITY_SNOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_snow {
 	class Csecurity_snow :public Object

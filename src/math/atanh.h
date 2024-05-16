@@ -1,7 +1,7 @@
 #ifndef ATANH_H
 #define ATANH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atanh {
 	class Catanh :public Object

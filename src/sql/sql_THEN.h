@@ -1,7 +1,7 @@
 #ifndef SQL_THEN_H
 #define SQL_THEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_THEN {
 	class Csql_THEN :public Object

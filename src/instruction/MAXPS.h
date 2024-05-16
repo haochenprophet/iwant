@@ -1,7 +1,7 @@
 #ifndef MAXPS_H
 #define MAXPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MAXPS {
 	class CMAXPS :public Object

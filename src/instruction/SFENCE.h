@@ -1,7 +1,7 @@
 #ifndef SFENCE_H
 #define SFENCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SFENCE {
 	class CSFENCE :public Object

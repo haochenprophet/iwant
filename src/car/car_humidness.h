@@ -1,7 +1,7 @@
 #ifndef CAR_HUMIDNESS_H
 #define CAR_HUMIDNESS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_humidness {
 	class Ccar_humidness :public Object

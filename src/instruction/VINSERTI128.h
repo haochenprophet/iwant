@@ -1,7 +1,7 @@
 #ifndef VINSERTI128_H
 #define VINSERTI128_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VINSERTI128 {
 	class CVINSERTI128 :public Object

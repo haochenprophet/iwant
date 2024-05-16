@@ -1,7 +1,7 @@
 #ifndef SENSOR_BRIGHTNESS_H
 #define SENSOR_BRIGHTNESS_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_brightness {
 	class Csensor_brightness :public Object

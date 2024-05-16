@@ -1,7 +1,7 @@
 #ifndef ABS_H
 #define ABS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_abs {
 	class Cabs :public Object

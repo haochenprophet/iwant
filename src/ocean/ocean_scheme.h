@@ -1,7 +1,7 @@
 #ifndef OCEAN_SCHEME_H
 #define OCEAN_SCHEME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_scheme {
 	class Cocean_scheme :public Object

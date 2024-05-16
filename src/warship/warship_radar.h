@@ -1,7 +1,7 @@
 #ifndef WARSHIP_RADAR_H
 #define WARSHIP_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_radar {
 	class Cwarship_radar :public Object

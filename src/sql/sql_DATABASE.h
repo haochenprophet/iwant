@@ -1,7 +1,7 @@
 #ifndef SQL_DATABASE_H
 #define SQL_DATABASE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DATABASE {
 	class Csql_DATABASE :public Object

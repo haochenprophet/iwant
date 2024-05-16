@@ -1,7 +1,7 @@
 #ifndef VSCALEFPS_H
 #define VSCALEFPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VSCALEFPS {
 	class CVSCALEFPS :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_MODE_H
 #define OCEAN_MODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_mode {
 	class Cocean_mode :public Object

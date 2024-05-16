@@ -1,7 +1,7 @@
 #ifndef OCEAN_DISTANCE_H
 #define OCEAN_DISTANCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_distance {
 	class Cocean_distance :public Object

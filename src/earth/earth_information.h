@@ -1,7 +1,7 @@
 #ifndef EARTH_INFORMATION_H
 #define EARTH_INFORMATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_information {
 	class Cearth_information :public Object

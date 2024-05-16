@@ -1,7 +1,7 @@
 #ifndef SECURITY_RAIN_H
 #define SECURITY_RAIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_rain {
 	class Csecurity_rain :public Object

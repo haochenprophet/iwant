@@ -1,7 +1,7 @@
 #ifndef STRERROR_H
 #define STRERROR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strerror {
 	class Cstrerror :public Object

@@ -1,7 +1,7 @@
 #ifndef FLDPI_H
 #define FLDPI_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FLDPI {
 	class CFLDPI :public Object

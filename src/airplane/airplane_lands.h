@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_LANDS_H
 #define AIRPLANE_LANDS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_lands {
 	class Cairplane_lands :public Object

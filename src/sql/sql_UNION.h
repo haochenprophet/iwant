@@ -1,7 +1,7 @@
 #ifndef SQL_UNION_H
 #define SQL_UNION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_UNION {
 	class Csql_UNION :public Object

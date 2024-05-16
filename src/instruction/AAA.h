@@ -1,7 +1,7 @@
 #ifndef AAA_H
 #define AAA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_AAA {
 	class CAAA :public Object

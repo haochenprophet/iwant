@@ -1,7 +1,7 @@
 #ifndef LDIV_H
 #define LDIV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ldiv {
 	class Cldiv :public Object

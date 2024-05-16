@@ -1,7 +1,7 @@
 #ifndef SUPER_H
 #define SUPER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_super {
 	class Csuper :public Object

@@ -1,7 +1,7 @@
 #ifndef VSHUFF64X2_H
 #define VSHUFF64X2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VSHUFF64x2 {
 	class CVSHUFF64x2 :public Object

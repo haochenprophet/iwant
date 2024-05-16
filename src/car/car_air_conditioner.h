@@ -1,7 +1,7 @@
 #ifndef CAR_AIR_CONDITIONER_H
 #define CAR_AIR_CONDITIONER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_air_conditioner {
 	class Ccar_air_conditioner :public Object

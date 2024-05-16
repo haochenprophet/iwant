@@ -1,7 +1,7 @@
 #ifndef EARTH_LAKE_H
 #define EARTH_LAKE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_lake {
 	class Cearth_lake :public Object

@@ -1,7 +1,7 @@
 #ifndef LIFE_READ_H
 #define LIFE_READ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_read {
 	class Clife_read :public Object

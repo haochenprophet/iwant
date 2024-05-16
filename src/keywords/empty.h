@@ -1,7 +1,7 @@
 #ifndef EMPTY_H
 #define EMPTY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_empty {
 	class Cempty :public Object

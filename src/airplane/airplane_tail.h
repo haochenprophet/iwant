@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_TAIL_H
 #define AIRPLANE_TAIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_tail {
 	class Cairplane_tail :public Object

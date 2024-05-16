@@ -1,7 +1,7 @@
 #ifndef RSA_H
 #define RSA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rsa {
 	class Crsa :public Object

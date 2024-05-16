@@ -1,7 +1,7 @@
 #ifndef VREDUCEPD_H
 #define VREDUCEPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VREDUCEPD {
 	class CVREDUCEPD :public Object

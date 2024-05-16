@@ -1,7 +1,7 @@
 #ifndef SATELLITE_OIL_H
 #define SATELLITE_OIL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_oil {
 	class Csatellite_oil :public Object

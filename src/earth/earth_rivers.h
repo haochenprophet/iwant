@@ -1,7 +1,7 @@
 #ifndef EARTH_RIVERS_H
 #define EARTH_RIVERS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_rivers {
 	class Cearth_rivers :public Object

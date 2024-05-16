@@ -1,7 +1,7 @@
 #ifndef CAR_BROADCAST_H
 #define CAR_BROADCAST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_broadcast {
 	class Ccar_broadcast :public Object

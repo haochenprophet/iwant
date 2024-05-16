@@ -1,7 +1,7 @@
 #ifndef VGETMANTSD_H
 #define VGETMANTSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VGETMANTSD {
 	class CVGETMANTSD :public Object

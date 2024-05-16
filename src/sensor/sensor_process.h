@@ -1,7 +1,7 @@
 #ifndef SENSOR_PROCESS_H
 #define SENSOR_PROCESS_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_process {
 	class Csensor_process :public Object

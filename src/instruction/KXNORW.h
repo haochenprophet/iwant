@@ -1,7 +1,7 @@
 #ifndef KXNORW_H
 #define KXNORW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KXNORW {
 	class CKXNORW :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIEL_DELETE_H
 #define MATERIEL_DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_delete {
 	class Cmateriel_delete :public Object

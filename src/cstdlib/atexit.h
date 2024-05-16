@@ -1,7 +1,7 @@
 #ifndef ATEXIT_H
 #define ATEXIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atexit {
 	class Catexit :public Object

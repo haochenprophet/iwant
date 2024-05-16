@@ -1,7 +1,7 @@
 #ifndef SQRTSD_H
 #define SQRTSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SQRTSD {
 	class CSQRTSD :public Object

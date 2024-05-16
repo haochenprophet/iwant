@@ -1,7 +1,7 @@
 #ifndef EARTH_SCIENCE_H
 #define EARTH_SCIENCE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_science {
 	class Cearth_science :public Object

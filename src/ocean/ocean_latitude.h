@@ -1,7 +1,7 @@
 #ifndef OCEAN_LATITUDE_H
 #define OCEAN_LATITUDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_latitude {
 	class Cocean_latitude :public Object

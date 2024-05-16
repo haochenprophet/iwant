@@ -1,7 +1,7 @@
 #ifndef SECURITY_EXCEPTION_H
 #define SECURITY_EXCEPTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_exception {
 	class Csecurity_exception :public Object

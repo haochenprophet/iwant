@@ -1,7 +1,7 @@
 #ifndef PREFETCHH_H
 #define PREFETCHH_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PREFETCHh {
 	class CPREFETCHh :public Object

@@ -1,7 +1,7 @@
 #ifndef MARS_CONSTRUCT_H
 #define MARS_CONSTRUCT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_construct {
 	class Cmars_construct :public Object

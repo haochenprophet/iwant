@@ -1,7 +1,7 @@
 #ifndef EARTH_NETWORK_H
 #define EARTH_NETWORK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_network {
 	class Cearth_network :public Object

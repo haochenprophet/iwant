@@ -1,7 +1,7 @@
 #ifndef MATERIAL_DATE_H
 #define MATERIAL_DATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_date {
 	class Cmaterial_date :public Object

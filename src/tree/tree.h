@@ -1,7 +1,7 @@
 #ifndef TREE_H
 #define TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 #include "tree_node.h"
 #include "tree_func.h"
 

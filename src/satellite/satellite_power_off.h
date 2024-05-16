@@ -1,7 +1,7 @@
 #ifndef SATELLITE_POWER_OFF_H
 #define SATELLITE_POWER_OFF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_power_off {
 	class Csatellite_power_off :public Object

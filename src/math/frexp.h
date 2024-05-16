@@ -1,7 +1,7 @@
 #ifndef FREXP_H
 #define FREXP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_frexp {
 	class Cfrexp :public Object

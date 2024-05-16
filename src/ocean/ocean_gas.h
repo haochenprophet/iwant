@@ -1,7 +1,7 @@
 #ifndef OCEAN_GAS_H
 #define OCEAN_GAS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_gas {
 	class Cocean_gas :public Object

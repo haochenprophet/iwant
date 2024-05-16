@@ -1,7 +1,7 @@
 #ifndef HOME_COMMUNICATION_H
 #define HOME_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_communication {
 	class Chome_communication :public Object

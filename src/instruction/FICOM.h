@@ -1,7 +1,7 @@
 #ifndef FICOM_H
 #define FICOM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FICOM {
 	class CFICOM :public Object

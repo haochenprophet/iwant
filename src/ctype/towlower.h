@@ -1,7 +1,7 @@
 #ifndef TOWLOWER_H
 #define TOWLOWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_towlower {
 	class Ctowlower :public Object

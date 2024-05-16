@@ -1,7 +1,7 @@
 #ifndef RADAR_RECOGNITION_H
 #define RADAR_RECOGNITION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_recognition {
 	class Cradar_recognition :public Object

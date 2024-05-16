@@ -1,7 +1,7 @@
 #ifndef WARSHIP_GUIDED_MISSILE_H
 #define WARSHIP_GUIDED_MISSILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_guided_missile {
 	class Cwarship_guided_missile :public Object

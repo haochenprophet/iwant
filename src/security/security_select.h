@@ -1,7 +1,7 @@
 #ifndef SECURITY_SELECT_H
 #define SECURITY_SELECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_select {
 	class Csecurity_select :public Object

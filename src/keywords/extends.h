@@ -1,7 +1,7 @@
 #ifndef EXTENDS_H
 #define EXTENDS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_extends {
 	class Cextends :public Object

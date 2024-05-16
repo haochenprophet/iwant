@@ -26,7 +26,7 @@ int Cat_quick_exit::at_quick_exit_c(void (*func)(void))
 #endif
 
 #if AT_QUICK_EXIT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "AT_QUICK_EXIT_TEST\n\n";

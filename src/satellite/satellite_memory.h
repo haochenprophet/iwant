@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MEMORY_H
 #define SATELLITE_MEMORY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_memory {
 	class Csatellite_memory :public Object

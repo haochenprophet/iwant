@@ -1,7 +1,7 @@
 #ifndef SENSOR_ALERT_H
 #define SENSOR_ALERT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_alert {
 	class Csensor_alert :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_VECTOR_H
 #define CAR_VECTOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_vector {
 	class Ccar_vector :public Object

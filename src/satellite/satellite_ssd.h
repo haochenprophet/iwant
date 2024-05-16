@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SSD_H
 #define SATELLITE_SSD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_ssd {
 	class Csatellite_ssd :public Object

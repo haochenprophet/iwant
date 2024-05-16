@@ -1,7 +1,7 @@
 #ifndef SQL_OFFSETS_H
 #define SQL_OFFSETS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_OFFSETS {
 	class Csql_OFFSETS :public Object

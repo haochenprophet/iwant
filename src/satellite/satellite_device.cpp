@@ -21,7 +21,7 @@ Csatellite_device::~Csatellite_device()
 #endif
 
 #if SATELLITE_DEVICE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

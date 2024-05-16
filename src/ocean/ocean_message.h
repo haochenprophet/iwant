@@ -1,7 +1,7 @@
 #ifndef OCEAN_MESSAGE_H
 #define OCEAN_MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_message {
 	class Cocean_message :public Object

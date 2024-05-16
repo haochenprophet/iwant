@@ -1,7 +1,7 @@
 #ifndef CAR_RADAR_H
 #define CAR_RADAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_radar {
 	class Ccar_radar :public Object

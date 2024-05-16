@@ -1,7 +1,7 @@
 #ifndef FFREE_H
 #define FFREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FFREE {
 	class CFFREE :public Object

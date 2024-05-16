@@ -1,7 +1,7 @@
 #ifndef KANDB_H
 #define KANDB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KANDB {
 	class CKANDB :public Object

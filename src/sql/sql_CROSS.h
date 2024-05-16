@@ -1,7 +1,7 @@
 #ifndef SQL_CROSS_H
 #define SQL_CROSS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CROSS {
 	class Csql_CROSS :public Object

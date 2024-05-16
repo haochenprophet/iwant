@@ -1,7 +1,7 @@
 #ifndef CAR_FAN_H
 #define CAR_FAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_fan {
 	class Ccar_fan :public Object

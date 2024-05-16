@@ -1,7 +1,7 @@
 #ifndef LGAMMA_H
 #define LGAMMA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_lgamma {
 	class Clgamma :public Object

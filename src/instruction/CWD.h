@@ -1,7 +1,7 @@
 #ifndef CWD_H
 #define CWD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_CWD {
 	class CCWD :public Object

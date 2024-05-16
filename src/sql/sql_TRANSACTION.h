@@ -1,7 +1,7 @@
 #ifndef SQL_TRANSACTION_H
 #define SQL_TRANSACTION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TRANSACTION {
 	class Csql_TRANSACTION :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_INFRARED_H
 #define SATELLITE_INFRARED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_infrared {
 	class Csatellite_infrared :public Object

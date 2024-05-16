@@ -1,7 +1,7 @@
 #ifndef FDIV_H
 #define FDIV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FDIV {
 	class CFDIV :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_BODY_H
 #define SATELLITE_BODY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_body {
 	class Csatellite_body :public Object

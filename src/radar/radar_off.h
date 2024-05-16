@@ -1,7 +1,7 @@
 #ifndef RADAR_OFF_H
 #define RADAR_OFF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_off {
 	class Cradar_off :public Object

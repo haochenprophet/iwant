@@ -1,7 +1,7 @@
 #ifndef PCMPGTB_H
 #define PCMPGTB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PCMPGTB {
 	class CPCMPGTB :public Object

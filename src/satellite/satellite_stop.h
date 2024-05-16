@@ -1,7 +1,7 @@
 #ifndef SATELLITE_STOP_H
 #define SATELLITE_STOP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_stop {
 	class Csatellite_stop :public Object

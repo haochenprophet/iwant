@@ -1,7 +1,7 @@
 #ifndef MATERIAL_MESSAGE_H
 #define MATERIAL_MESSAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_message {
 	class Cmaterial_message :public Object

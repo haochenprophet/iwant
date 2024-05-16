@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_CRUISE_H
 #define AIRPLANE_CRUISE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_cruise {
 	class Cairplane_cruise :public Object

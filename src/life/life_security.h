@@ -1,7 +1,7 @@
 #ifndef LIFE_SECURITY_H
 #define LIFE_SECURITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_security {
 	class Clife_security :public Object

@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_AIRFOIL_LEADING_H
 #define AIRPLANE_AIRFOIL_LEADING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_airfoil_leading {
 	class Cairplane_airfoil_leading :public Object

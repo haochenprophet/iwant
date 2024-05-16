@@ -1,7 +1,7 @@
 #ifndef __BASED_H
 #define __BASED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___based {
 	class C__based :public Object

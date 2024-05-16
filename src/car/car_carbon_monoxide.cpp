@@ -21,7 +21,7 @@ Ccar_carbon_monoxide::~Ccar_carbon_monoxide()
 #endif
 
 #if CAR_CARBON_MONOXIDE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

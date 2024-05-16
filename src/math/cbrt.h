@@ -1,7 +1,7 @@
 #ifndef CBRT_H
 #define CBRT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_cbrt {
 	class Ccbrt :public Object

@@ -24,7 +24,7 @@ long double Cstrtold::strtold_c(const char* str, char** endptr)
 #endif
 
 #if STRTOLD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRTOLD_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef SECURITY_URL_H
 #define SECURITY_URL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_url {
 	class Csecurity_url :public Object

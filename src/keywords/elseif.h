@@ -1,7 +1,7 @@
 #ifndef ELSEIF_H
 #define ELSEIF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_elseif {
 	class Celseif :public Object

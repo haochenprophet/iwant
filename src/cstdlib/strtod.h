@@ -1,7 +1,7 @@
 #ifndef STRTOD_H
 #define STRTOD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strtod {
 	class Cstrtod :public Object

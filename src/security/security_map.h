@@ -1,7 +1,7 @@
 #ifndef SECURITY_MAP_H
 #define SECURITY_MAP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_map {
 	class Csecurity_map :public Object

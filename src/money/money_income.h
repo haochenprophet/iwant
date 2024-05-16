@@ -1,7 +1,7 @@
 #ifndef MONEY_INCOME_H
 #define MONEY_INCOME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_income {
 	class Cmoney_income :public Object

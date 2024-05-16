@@ -1,7 +1,7 @@
 #ifndef SECURITY_UNMANNED_H
 #define SECURITY_UNMANNED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_unmanned {
 	class Csecurity_unmanned :public Object

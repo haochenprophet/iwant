@@ -1,7 +1,7 @@
 #ifndef SQL_SEMANTICKEYPHRASETABLE_H
 #define SQL_SEMANTICKEYPHRASETABLE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SEMANTICKEYPHRASETABLE {
 	class Csql_SEMANTICKEYPHRASETABLE :public Object

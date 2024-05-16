@@ -1,7 +1,7 @@
 #ifndef SQL_IF_H
 #define SQL_IF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_IF {
 	class Csql_IF :public Object

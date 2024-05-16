@@ -1,7 +1,7 @@
 #ifndef OCEAN_BROADCAST_H
 #define OCEAN_BROADCAST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_broadcast {
 	class Cocean_broadcast :public Object

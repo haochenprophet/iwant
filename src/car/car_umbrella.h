@@ -1,7 +1,7 @@
 #ifndef CAR_UMBRELLA_H
 #define CAR_UMBRELLA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_umbrella {
 	class Ccar_umbrella :public Object

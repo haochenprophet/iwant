@@ -1,7 +1,7 @@
 #ifndef SENSOR_AMPLITUDE_H
 #define SENSOR_AMPLITUDE_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_amplitude {
 	class Csensor_amplitude :public Object

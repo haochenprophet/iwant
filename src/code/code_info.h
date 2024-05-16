@@ -1,7 +1,7 @@
 #ifndef CODE_INFO_H
 #define CODE_INFO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_info {
 	class Ccode_info :public Object

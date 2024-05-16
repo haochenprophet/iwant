@@ -1,7 +1,7 @@
 #ifndef RADAR_SYNCHRONISM_H
 #define RADAR_SYNCHRONISM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_synchronism {
 	class Cradar_synchronism :public Object

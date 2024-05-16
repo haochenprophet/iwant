@@ -1,7 +1,7 @@
 #ifndef KORTESTD_H
 #define KORTESTD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KORTESTD {
 	class CKORTESTD :public Object

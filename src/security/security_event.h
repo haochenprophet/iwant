@@ -1,7 +1,7 @@
 #ifndef SECURITY_EVENT_H
 #define SECURITY_EVENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_event {
 	class Csecurity_event :public Object

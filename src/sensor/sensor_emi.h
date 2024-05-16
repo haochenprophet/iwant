@@ -1,7 +1,7 @@
 #ifndef SENSOR_EMI_H
 #define SENSOR_EMI_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_emi {
 	class Csensor_emi :public Object

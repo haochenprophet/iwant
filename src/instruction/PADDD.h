@@ -1,7 +1,7 @@
 #ifndef PADDD_H
 #define PADDD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PADDD {
 	class CPADDD :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_RECONFIGURE_H
 #define SQL_RECONFIGURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_RECONFIGURE {
 	class Csql_RECONFIGURE :public Object

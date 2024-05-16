@@ -1,7 +1,7 @@
 #ifndef SQL_TSEQUAL_H
 #define SQL_TSEQUAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TSEQUAL {
 	class Csql_TSEQUAL :public Object

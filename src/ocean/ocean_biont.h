@@ -1,7 +1,7 @@
 #ifndef OCEAN_BIONT_H
 #define OCEAN_BIONT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_biont {
 	class Cocean_biont :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_ENVIRONMENT_H
 #define OCEAN_ENVIRONMENT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_environment {
 	class Cocean_environment :public Object

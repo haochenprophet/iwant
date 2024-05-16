@@ -1,7 +1,7 @@
 #ifndef OCEAN_HARDWARE_H
 #define OCEAN_HARDWARE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_hardware {
 	class Cocean_hardware :public Object

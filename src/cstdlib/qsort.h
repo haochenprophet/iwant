@@ -1,7 +1,7 @@
 #ifndef QSORT_H
 #define QSORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_qsort {
 	class Cqsort :public Object

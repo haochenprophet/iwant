@@ -1,7 +1,7 @@
 #ifndef AIRPLANE_BROADCAST_H
 #define AIRPLANE_BROADCAST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_airplane_broadcast {
 	class Cairplane_broadcast :public Object

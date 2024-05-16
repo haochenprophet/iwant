@@ -1,7 +1,7 @@
 #ifndef CLONE_H
 #define CLONE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_clone {
 	class Cclone :public Object

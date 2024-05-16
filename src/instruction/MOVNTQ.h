@@ -1,7 +1,7 @@
 #ifndef MOVNTQ_H
 #define MOVNTQ_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVNTQ {
 	class CMOVNTQ :public Object

@@ -21,7 +21,7 @@ Ccar_laser_radar::~Ccar_laser_radar()
 #endif
 
 #if CAR_LASER_RADAR_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

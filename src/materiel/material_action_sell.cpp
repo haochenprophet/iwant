@@ -21,7 +21,7 @@ Cmaterial_action_sell::~Cmaterial_action_sell()
 #endif
 
 #if MATERIAL_ACTION_SELL_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_REPAIR_H
 #define SATELLITE_REPAIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_repair {
 	class Csatellite_repair :public Object

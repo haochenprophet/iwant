@@ -1,7 +1,7 @@
 #ifndef SECURITY_UPDATE_H
 #define SECURITY_UPDATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_update {
 	class Csecurity_update :public Object

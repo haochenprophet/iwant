@@ -1,7 +1,7 @@
 #ifndef SECURITY_RUN_H
 #define SECURITY_RUN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_run {
 	class Csecurity_run :public Object

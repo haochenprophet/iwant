@@ -21,7 +21,7 @@ Csatellite_communication_4G::~Csatellite_communication_4G()
 #endif
 
 #if SATELLITE_COMMUNICATION_4G_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

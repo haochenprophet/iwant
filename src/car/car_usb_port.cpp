@@ -21,7 +21,7 @@ Ccar_usb_port::~Ccar_usb_port()
 #endif
 
 #if CAR_USB_PORT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

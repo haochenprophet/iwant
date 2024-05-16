@@ -26,7 +26,7 @@ size_t Cstrftime::strftime_c(char* ptr, size_t maxsize, const char* format, cons
 #endif
 
 #if STRFTIME_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "STRFTIME_TEST\n\n";

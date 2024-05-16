@@ -1,7 +1,7 @@
 #ifndef SQL_KILL_H
 #define SQL_KILL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_KILL {
 	class Csql_KILL :public Object

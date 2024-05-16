@@ -1,7 +1,7 @@
 #ifndef RADAR_WEIGHT_H
 #define RADAR_WEIGHT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_weight {
 	class Cradar_weight :public Object

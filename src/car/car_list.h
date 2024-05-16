@@ -1,7 +1,7 @@
 #ifndef CAR_LIST_H
 #define CAR_LIST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_list {
 	class Ccar_list :public Object

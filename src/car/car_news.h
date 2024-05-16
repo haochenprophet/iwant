@@ -1,7 +1,7 @@
 #ifndef CAR_NEWS_H
 #define CAR_NEWS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_news {
 	class Ccar_news :public Object

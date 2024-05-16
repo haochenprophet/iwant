@@ -1,7 +1,7 @@
 #ifndef SECURITY_BUG_H
 #define SECURITY_BUG_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_bug {
 	class Csecurity_bug :public Object

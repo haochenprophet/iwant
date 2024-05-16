@@ -1,7 +1,7 @@
 #ifndef INS_H
 #define INS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_INS {
 	class CINS :public Object

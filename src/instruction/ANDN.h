@@ -1,7 +1,7 @@
 #ifndef ANDN_H
 #define ANDN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ANDN {
 	class CANDN :public Object

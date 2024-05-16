@@ -1,7 +1,7 @@
 #ifndef MATERIEL_REQUEST_H
 #define MATERIEL_REQUEST_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_request {
 	class Cmateriel_request :public Object

@@ -1,7 +1,7 @@
 #ifndef CAR_INFRARED_H
 #define CAR_INFRARED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_infrared {
 	class Ccar_infrared :public Object

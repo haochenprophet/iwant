@@ -1,7 +1,7 @@
 #ifndef SUM_H
 #define SUM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sum {
 	class Csum :public Object

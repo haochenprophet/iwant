@@ -1,7 +1,7 @@
 #ifndef PMULHUW_H
 #define PMULHUW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PMULHUW {
 	class CPMULHUW :public Object

@@ -1,7 +1,7 @@
 #ifndef SHA1MSG2_H
 #define SHA1MSG2_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SHA1MSG2 {
 	class CSHA1MSG2 :public Object

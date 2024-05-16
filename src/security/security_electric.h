@@ -1,7 +1,7 @@
 #ifndef SECURITY_ELECTRIC_H
 #define SECURITY_ELECTRIC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_electric {
 	class Csecurity_electric :public Object

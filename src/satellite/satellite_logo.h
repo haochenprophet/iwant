@@ -1,7 +1,7 @@
 #ifndef SATELLITE_LOGO_H
 #define SATELLITE_LOGO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_logo {
 	class Csatellite_logo :public Object

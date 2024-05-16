@@ -1,7 +1,7 @@
 #ifndef SATELLITE_COLOUR_H
 #define SATELLITE_COLOUR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_colour {
 	class Csatellite_colour :public Object

@@ -1,7 +1,7 @@
 #ifndef XACQUIRE_H
 #define XACQUIRE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XACQUIRE {
 	class CXACQUIRE :public Object

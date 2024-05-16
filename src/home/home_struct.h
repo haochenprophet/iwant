@@ -1,7 +1,7 @@
 #ifndef HOME_H
 #define HOME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_struct {
 	class Chome_struct :public Object

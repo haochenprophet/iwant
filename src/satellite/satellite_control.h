@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CONTROL_H
 #define SATELLITE_CONTROL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_control {
 	class Csatellite_control :public Object

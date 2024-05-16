@@ -1,7 +1,7 @@
 #ifndef SQL_CURSOR_H
 #define SQL_CURSOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CURSOR {
 	class Csql_CURSOR :public Object

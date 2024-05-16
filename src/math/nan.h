@@ -1,7 +1,7 @@
 #ifndef NAN_H
 #define NAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_nan {
 	class Cnan :public Object

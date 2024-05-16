@@ -1,7 +1,7 @@
 #ifndef ROCKET_SIZE_H
 #define ROCKET_SIZE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_size {
 	class Crocket_size :public Object

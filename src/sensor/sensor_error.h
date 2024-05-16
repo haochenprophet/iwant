@@ -1,7 +1,7 @@
 #ifndef SENSOR_ERROR_H
 #define SENSOR_ERROR_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_error {
 	class Csensor_error :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_OBJECT_H
 #define SPACEPORT_OBJECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_object {
 	class Cspaceport_object :public Object

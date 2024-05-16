@@ -1,7 +1,7 @@
 #ifndef __PIN_H
 #define __PIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n___pin {
 	class C__pin :public Object

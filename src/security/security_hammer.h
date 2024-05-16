@@ -1,7 +1,7 @@
 #ifndef SECURITY_HAMMER_H
 #define SECURITY_HAMMER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_hammer {
 	class Csecurity_hammer :public Object

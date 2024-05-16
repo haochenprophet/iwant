@@ -1,7 +1,7 @@
 #ifndef SATELLITE_STOCK_H
 #define SATELLITE_STOCK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_stock {
 	class Csatellite_stock :public Object

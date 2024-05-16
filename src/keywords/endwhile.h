@@ -1,7 +1,7 @@
 #ifndef ENDWHILE_H
 #define ENDWHILE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_endwhile {
 	class Cendwhile :public Object

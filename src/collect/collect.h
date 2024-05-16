@@ -1,7 +1,7 @@
 #ifndef COLLECT_H
 #define COLLECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_collect {
 	class Ccollect :public Object

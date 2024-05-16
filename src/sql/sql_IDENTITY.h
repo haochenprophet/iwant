@@ -1,7 +1,7 @@
 #ifndef SQL_IDENTITY_H
 #define SQL_IDENTITY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_IDENTITY {
 	class Csql_IDENTITY :public Object

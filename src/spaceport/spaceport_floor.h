@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_FLOOR_H
 #define SPACEPORT_FLOOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_floor {
 	class Cspaceport_floor :public Object

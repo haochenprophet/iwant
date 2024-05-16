@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MIRROR_H
 #define SATELLITE_MIRROR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_mirror {
 	class Csatellite_mirror :public Object

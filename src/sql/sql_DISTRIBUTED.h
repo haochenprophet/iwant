@@ -1,7 +1,7 @@
 #ifndef SQL_DISTRIBUTED_H
 #define SQL_DISTRIBUTED_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_DISTRIBUTED {
 	class Csql_DISTRIBUTED :public Object

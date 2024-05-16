@@ -1,7 +1,7 @@
 #ifndef SQL_BY_H
 #define SQL_BY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_BY {
 	class Csql_BY :public Object

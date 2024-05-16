@@ -1,7 +1,7 @@
 #ifndef SECURITY_SQL_H
 #define SECURITY_SQL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_sql {
 	class Csecurity_sql :public Object

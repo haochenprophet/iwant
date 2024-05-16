@@ -21,7 +21,7 @@ Csatellite_satellitebon_monoxide::~Csatellite_satellitebon_monoxide()
 #endif
 
 #if SATELLITE_SATELLITEBON_MONOXIDE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

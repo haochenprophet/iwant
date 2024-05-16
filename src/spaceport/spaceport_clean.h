@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_CLEAN_H
 #define SPACEPORT_CLEAN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_clean {
 	class Cspaceport_clean :public Object

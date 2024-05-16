@@ -26,7 +26,7 @@ double Catan2::atan2_c(double y, double x)
 #endif
 
 #if ATAN2_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATAN2_TEST\n\n";

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TIMELINE_H
 #define SPACEPORT_TIMELINE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_timeline {
 	class Cspaceport_timeline :public Object

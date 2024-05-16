@@ -1,7 +1,7 @@
 #ifndef PUTS_H
 #define PUTS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_puts {
 	class Cputs :public Object

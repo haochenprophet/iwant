@@ -1,7 +1,7 @@
 #ifndef SATELLITE_COMMUNICATION_4G_H
 #define SATELLITE_COMMUNICATION_4G_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_communication_4G {
 	class Csatellite_communication_4G :public Object

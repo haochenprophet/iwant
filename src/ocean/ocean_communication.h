@@ -1,7 +1,7 @@
 #ifndef OCEAN_COMMUNICATION_H
 #define OCEAN_COMMUNICATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_communication {
 	class Cocean_communication :public Object

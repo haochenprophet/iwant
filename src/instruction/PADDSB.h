@@ -1,7 +1,7 @@
 #ifndef PADDSB_H
 #define PADDSB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PADDSB {
 	class CPADDSB :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_USB_PORT_H
 #define SATELLITE_USB_PORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_usb_port {
 	class Csatellite_usb_port :public Object

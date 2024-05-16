@@ -1,7 +1,7 @@
 #ifndef MOVUPS_H
 #define MOVUPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_MOVUPS {
 	class CMOVUPS :public Object

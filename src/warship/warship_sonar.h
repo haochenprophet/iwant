@@ -1,7 +1,7 @@
 #ifndef WARSHIP_SONAR_H
 #define WARSHIP_SONAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_sonar {
 	class Cwarship_sonar :public Object

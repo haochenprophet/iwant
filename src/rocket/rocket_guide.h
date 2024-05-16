@@ -1,7 +1,7 @@
 #ifndef ROCKET_GUIDE_H
 #define ROCKET_GUIDE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_guide {
 	class Crocket_guide :public Object

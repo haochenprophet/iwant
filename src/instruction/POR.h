@@ -1,7 +1,7 @@
 #ifndef POR_H
 #define POR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_POR {
 	class CPOR :public Object

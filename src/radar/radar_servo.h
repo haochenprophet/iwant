@@ -1,7 +1,7 @@
 #ifndef RADAR_SERVO_H
 #define RADAR_SERVO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_servo {
 	class Cradar_servo :public Object

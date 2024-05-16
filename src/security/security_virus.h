@@ -1,7 +1,7 @@
 #ifndef SECURITY_VIRUS_H
 #define SECURITY_VIRUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_virus {
 	class Csecurity_virus :public Object

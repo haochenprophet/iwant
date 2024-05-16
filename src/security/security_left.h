@@ -1,7 +1,7 @@
 #ifndef SECURITY_LEFT_H
 #define SECURITY_LEFT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_left {
 	class Csecurity_left :public Object

@@ -1,7 +1,7 @@
 #ifndef MATERIAL_FLOW_H
 #define MATERIAL_FLOW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_flow {
 	class Cmaterial_flow :public Object

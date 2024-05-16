@@ -1,7 +1,7 @@
 #ifndef RENAME_H
 #define RENAME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rename {
 	class Crename :public Object

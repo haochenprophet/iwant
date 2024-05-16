@@ -36,7 +36,7 @@ long double Cfma::fmal_c(long double x, long double y, long double z)
 #endif
 
 #if FMA_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "FMA_TEST\n\n";

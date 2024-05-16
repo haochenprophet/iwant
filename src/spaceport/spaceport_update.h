@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_UPDATE_H
 #define SPACEPORT_UPDATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_update {
 	class Cspaceport_update :public Object

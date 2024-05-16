@@ -1,7 +1,7 @@
 #ifndef VPERMI2Q_H
 #define VPERMI2Q_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPERMI2Q {
 	class CVPERMI2Q :public Object

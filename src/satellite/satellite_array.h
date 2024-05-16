@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ARRAY_H
 #define SATELLITE_ARRAY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_array {
 	class Csatellite_array :public Object

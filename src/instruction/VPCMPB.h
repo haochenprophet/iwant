@@ -1,7 +1,7 @@
 #ifndef VPCMPB_H
 #define VPCMPB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPCMPB {
 	class CVPCMPB :public Object

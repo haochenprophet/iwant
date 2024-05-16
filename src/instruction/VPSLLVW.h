@@ -1,7 +1,7 @@
 #ifndef VPSLLVW_H
 #define VPSLLVW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPSLLVW {
 	class CVPSLLVW :public Object

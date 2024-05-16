@@ -25,7 +25,7 @@ double Clog10::log10_c(double x)
 #endif
 
 #if LOG10_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOG10_TEST\n\n";

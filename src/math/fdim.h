@@ -1,7 +1,7 @@
 #ifndef FDIM_H
 #define FDIM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fdim {
 	class Cfdim :public Object

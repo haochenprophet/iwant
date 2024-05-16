@@ -1,7 +1,7 @@
 #ifndef FILE_ACTION_H
 #define FILE_ACTION_H
-#include "bits_def.h"
-#include "action_type.h"
+#include "bit/bits_def.h"
+#include "action/action_type.h"
 
 enum class FileAtcionClass
 {

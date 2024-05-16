@@ -1,7 +1,7 @@
 #ifndef SENSOR_IMAGING_H
 #define SENSOR_IMAGING_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_imaging {
 	class Csensor_imaging :public Object

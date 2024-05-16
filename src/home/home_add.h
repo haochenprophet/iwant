@@ -1,7 +1,7 @@
 #ifndef HOME_ADD_H
 #define HOME_ADD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_add {
 	class Chome_add :public Object

@@ -1,7 +1,7 @@
 #ifndef OCEAN_HUMIDNESS_H
 #define OCEAN_HUMIDNESS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_humidness {
 	class Cocean_humidness :public Object

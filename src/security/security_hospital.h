@@ -1,7 +1,7 @@
 #ifndef SECURITY_HOSPITAL_H
 #define SECURITY_HOSPITAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_hospital {
 	class Csecurity_hospital :public Object

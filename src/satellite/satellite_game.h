@@ -1,7 +1,7 @@
 #ifndef SATELLITE_GAME_H
 #define SATELLITE_GAME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_game {
 	class Csatellite_game :public Object

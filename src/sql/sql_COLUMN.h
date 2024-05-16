@@ -1,7 +1,7 @@
 #ifndef SQL_COLUMN_H
 #define SQL_COLUMN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_COLUMN {
 	class Csql_COLUMN :public Object

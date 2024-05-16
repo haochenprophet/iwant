@@ -21,7 +21,7 @@ Csatellite_cable::~Csatellite_cable()
 #endif
 
 #if SATELLITE_CABLE_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

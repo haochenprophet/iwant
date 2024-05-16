@@ -1,7 +1,7 @@
 #ifndef MONEY_EXPEND_H
 #define MONEY_EXPEND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_money_expend {
 	class Cmoney_expend :public Object

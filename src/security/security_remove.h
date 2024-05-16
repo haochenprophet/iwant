@@ -1,7 +1,7 @@
 #ifndef SECURITY_REMOVE_H
 #define SECURITY_REMOVE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_remove {
 	class Csecurity_remove :public Object

@@ -1,7 +1,7 @@
 #ifndef LIFE_GAME_H
 #define LIFE_GAME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_life_game {
 	class Clife_game :public Object

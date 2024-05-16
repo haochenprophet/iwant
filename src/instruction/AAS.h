@@ -1,7 +1,7 @@
 #ifndef AAS_H
 #define AAS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_AAS {
 	class CAAS :public Object

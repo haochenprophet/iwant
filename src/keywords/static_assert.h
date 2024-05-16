@@ -1,7 +1,7 @@
 #ifndef STATIC_ASSERT_H
 #define STATIC_ASSERT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_static_assert {
 	class Cstatic_assert :public Object

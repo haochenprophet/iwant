@@ -1,7 +1,7 @@
 #ifndef SENSOR_BAD_H
 #define SENSOR_BAD_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_bad {
 	class Csensor_bad :public Object

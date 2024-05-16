@@ -1,7 +1,7 @@
 #ifndef VMOVDQU16_H
 #define VMOVDQU16_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VMOVDQU16 {
 	class CVMOVDQU16 :public Object

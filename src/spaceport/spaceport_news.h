@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_NEWS_H
 #define SPACEPORT_NEWS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_news {
 	class Cspaceport_news :public Object

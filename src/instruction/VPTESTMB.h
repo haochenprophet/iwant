@@ -1,7 +1,7 @@
 #ifndef VPTESTMB_H
 #define VPTESTMB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPTESTMB {
 	class CVPTESTMB :public Object

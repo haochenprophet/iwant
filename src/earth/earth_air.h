@@ -1,7 +1,7 @@
 #ifndef EARTH_AIR_H
 #define EARTH_AIR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_air {
 	class Cearth_air :public Object

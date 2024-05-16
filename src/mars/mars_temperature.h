@@ -1,7 +1,7 @@
 #ifndef MARS_TEMPERATURE_H
 #define MARS_TEMPERATURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mars_temperature {
 	class Cmars_temperature :public Object

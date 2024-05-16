@@ -1,7 +1,7 @@
 #ifndef SENSOR_TRACK_H
 #define SENSOR_TRACK_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_track {
 	class Csensor_track :public Object

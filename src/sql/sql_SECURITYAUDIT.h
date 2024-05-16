@@ -1,7 +1,7 @@
 #ifndef SQL_SECURITYAUDIT_H
 #define SQL_SECURITYAUDIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SECURITYAUDIT {
 	class Csql_SECURITYAUDIT :public Object

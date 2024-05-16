@@ -1,7 +1,7 @@
 #ifndef SATELLITE_MEDICINE_BOX_H
 #define SATELLITE_MEDICINE_BOX_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_medicine_box {
 	class Csatellite_medicine_box :public Object

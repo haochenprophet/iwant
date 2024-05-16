@@ -1,7 +1,7 @@
 #ifndef MKTIME_H
 #define MKTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_mktime {
 	class Cmktime :public Object

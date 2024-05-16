@@ -1,7 +1,7 @@
 #ifndef CODE_SETTING_H
 #define CODE_SETTING_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_setting {
 	class Ccode_setting :public Object

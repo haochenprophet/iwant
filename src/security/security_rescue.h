@@ -1,7 +1,7 @@
 #ifndef SECURITY_RESCUE_H
 #define SECURITY_RESCUE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_rescue {
 	class Csecurity_rescue :public Object

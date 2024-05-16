@@ -1,7 +1,7 @@
 #ifndef MATERIAL_UUID_H
 #define MATERIAL_UUID_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_material_uuid {
 	class Cmaterial_uuid :public Object

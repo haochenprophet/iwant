@@ -1,7 +1,7 @@
 #ifndef OCEAN_CHECK_H
 #define OCEAN_CHECK_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_check {
 	class Cocean_check :public Object

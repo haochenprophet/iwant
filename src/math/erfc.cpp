@@ -34,7 +34,7 @@ long double Cerfc::erfcl_c(long double x)
 #endif
 
 #if ERFC_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ERFC_TEST\n\n";

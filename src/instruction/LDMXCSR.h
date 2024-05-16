@@ -1,7 +1,7 @@
 #ifndef LDMXCSR_H
 #define LDMXCSR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_LDMXCSR {
 	class CLDMXCSR :public Object

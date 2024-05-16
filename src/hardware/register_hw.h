@@ -1,7 +1,7 @@
 #ifndef REGISTER_HW_H
 #define REGISTER_HW_H
 
-#include "../object.h"
+#include "object/object.h"
 
 #define AND_DATA_NONE -1
 #define OR_DATA_NONE 0

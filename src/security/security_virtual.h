@@ -1,7 +1,7 @@
 #ifndef SECURITY_VIRTUAL_H
 #define SECURITY_VIRTUAL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_virtual {
 	class Csecurity_virtual :public Object

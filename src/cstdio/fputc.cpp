@@ -26,7 +26,7 @@ int Cfputc::fputc_c(int character, FILE* stream)
 #endif
 
 #if FPUTC_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FPUTC_TEST\n\n";
 

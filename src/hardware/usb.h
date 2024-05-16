@@ -1,7 +1,7 @@
 #ifndef USB_H
 #define USB_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_usb {
 	class Cusb :public Object

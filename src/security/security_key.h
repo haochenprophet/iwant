@@ -1,7 +1,7 @@
 #ifndef SECURITY_KEY_H
 #define SECURITY_KEY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_key {
 	class Csecurity_key :public Object

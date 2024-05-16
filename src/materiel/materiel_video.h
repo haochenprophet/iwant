@@ -1,7 +1,7 @@
 #ifndef MATERIEL_VIDEO_H
 #define MATERIEL_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_materiel_video {
 	class Cmateriel_video :public Object

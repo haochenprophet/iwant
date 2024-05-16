@@ -21,7 +21,7 @@ Ccar_turn_right::~Ccar_turn_right()
 #endif
 
 #if CAR_TURN_RIGHT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

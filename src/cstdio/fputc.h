@@ -1,7 +1,7 @@
 #ifndef FPUTC_H
 #define FPUTC_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fputc {
 	class Cfputc :public Object

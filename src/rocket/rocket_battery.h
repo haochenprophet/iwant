@@ -1,7 +1,7 @@
 #ifndef ROCKET_BATTERY_H
 #define ROCKET_BATTERY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_battery {
 	class Crocket_battery :public Object

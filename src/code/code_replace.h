@@ -1,7 +1,7 @@
 #ifndef CODE_REPLACE_H
 #define CODE_REPLACE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_replace {
 	class Ccode_replace :public Object

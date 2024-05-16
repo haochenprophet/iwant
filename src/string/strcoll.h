@@ -1,7 +1,7 @@
 #ifndef STRCOLL_H
 #define STRCOLL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strcoll {
 	class Cstrcoll :public Object

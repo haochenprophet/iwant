@@ -1,7 +1,7 @@
 #ifndef CAR_GPS_H
 #define CAR_GPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_gps {
 	class Ccar_gps :public Object

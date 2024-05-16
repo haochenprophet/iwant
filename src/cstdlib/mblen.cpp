@@ -24,7 +24,7 @@ int Cmblen::mblen_c(const char* pmb, size_t max)
 #endif
 
 #if MBLEN_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "MBLEN_TEST\n\n";

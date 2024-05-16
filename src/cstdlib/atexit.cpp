@@ -26,7 +26,7 @@ int Catexit::atexit_c(void (*func)(void))
 #endif
 
 #if ATEXIT_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "ATEXIT_TEST\n\n";

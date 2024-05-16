@@ -36,7 +36,7 @@ long double Clog1p::log1pl_c(long double x)
 #endif
 
 #if LOG1P_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "LOG1P_TEST\n\n";

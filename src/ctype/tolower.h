@@ -1,7 +1,7 @@
 #ifndef TOLOWER_H
 #define TOLOWER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_tolower {
 	class Ctolower :public Object

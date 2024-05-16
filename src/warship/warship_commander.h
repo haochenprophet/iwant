@@ -1,7 +1,7 @@
 #ifndef WARSHIP_COMMANDER_H
 #define WARSHIP_COMMANDER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_warship_commander {
 	class Cwarship_commander :public Object

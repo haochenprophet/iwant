@@ -1,7 +1,7 @@
 #ifndef OPENSSL_SHA_H
 #define OPENSSL_SHA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_openssl_sha {
 	class Copenssl_sha :public Object

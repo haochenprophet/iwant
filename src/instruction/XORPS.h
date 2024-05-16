@@ -1,7 +1,7 @@
 #ifndef XORPS_H
 #define XORPS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_XORPS {
 	class CXORPS :public Object

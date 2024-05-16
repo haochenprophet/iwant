@@ -1,7 +1,7 @@
 #ifndef ATOMIC_COMMIT_H
 #define ATOMIC_COMMIT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_atomic_commit {
 	class Catomic_commit :public Object

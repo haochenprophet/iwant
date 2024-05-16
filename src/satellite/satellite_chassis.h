@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CHASSIS_H
 #define SATELLITE_CHASSIS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_chassis {
 	class Csatellite_chassis :public Object

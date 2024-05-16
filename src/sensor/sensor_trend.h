@@ -1,7 +1,7 @@
 #ifndef SENSOR_TREND_H
 #define SENSOR_TREND_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_trend {
 	class Csensor_trend :public Object

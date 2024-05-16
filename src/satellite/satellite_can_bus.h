@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CAN_BUS_H
 #define SATELLITE_CAN_BUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_can_bus {
 	class Csatellite_can_bus :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_WEAPONS_H
 #define SATELLITE_WEAPONS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_weapons {
 	class Csatellite_weapons :public Object

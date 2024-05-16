@@ -21,7 +21,7 @@ Cspaceport_co2::~Cspaceport_co2()
 #endif
 
 #if SPACEPORT_CO2_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

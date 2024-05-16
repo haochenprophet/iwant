@@ -1,7 +1,7 @@
 #ifndef SATELLITE_CAMERA_H
 #define SATELLITE_CAMERA_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_camera {
 	class Csatellite_camera :public Object

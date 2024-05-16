@@ -1,7 +1,7 @@
 #ifndef FUCOMP_H
 #define FUCOMP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FUCOMP {
 	class CFUCOMP :public Object

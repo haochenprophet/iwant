@@ -1,7 +1,7 @@
 #ifndef ASIN_H
 #define ASIN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_asin {
 	class Casin :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_INNER_H
 #define SQL_INNER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_INNER {
 	class Csql_INNER :public Object

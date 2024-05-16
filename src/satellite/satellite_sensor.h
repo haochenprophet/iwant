@@ -1,7 +1,7 @@
 #ifndef SATELLITE_SENSOR_H
 #define SATELLITE_SENSOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_sensor {
 	class Csatellite_sensor :public Object

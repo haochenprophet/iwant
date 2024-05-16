@@ -1,7 +1,7 @@
 #ifndef SQL_ORDER_H
 #define SQL_ORDER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_ORDER {
 	class Csql_ORDER :public Object

@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TREE_H
 #define SPACEPORT_TREE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_tree {
 	class Cspaceport_tree :public Object

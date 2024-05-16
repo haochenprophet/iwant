@@ -1,7 +1,7 @@
 #ifndef LOCALTIME_H
 #define LOCALTIME_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_localtime {
 	class Clocaltime :public Object

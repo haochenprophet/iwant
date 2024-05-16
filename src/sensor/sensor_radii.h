@@ -1,7 +1,7 @@
 #ifndef SENSOR_RADII_H
 #define SENSOR_RADII_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_radii {
 	class Csensor_radii :public Object

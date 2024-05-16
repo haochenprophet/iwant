@@ -1,7 +1,7 @@
 #ifndef SQL_FROM_H
 #define SQL_FROM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_FROM {
 	class Csql_FROM :public Object

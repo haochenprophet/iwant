@@ -1,7 +1,7 @@
 #ifndef CODE_PASTE_H
 #define CODE_PASTE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_paste {
 	class Ccode_paste :public Object

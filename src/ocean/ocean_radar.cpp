@@ -21,7 +21,7 @@ Cocean_radar::~Cocean_radar()
 #endif
 
 #if OCEAN_RADAR_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	WHERE_I;

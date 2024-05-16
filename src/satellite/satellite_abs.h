@@ -1,7 +1,7 @@
 #ifndef SATELLITE_ABS_H
 #define SATELLITE_ABS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_abs {
 	class Csatellite_abs :public Object

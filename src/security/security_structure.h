@@ -1,7 +1,7 @@
 #ifndef SECURITY_STRUCTURE_H
 #define SECURITY_STRUCTURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_structure {
 	class Csecurity_structure :public Object

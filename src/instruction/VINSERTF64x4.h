@@ -1,7 +1,7 @@
 #ifndef VINSERTF64X4_H
 #define VINSERTF64X4_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VINSERTF64x4 {
 	class CVINSERTF64x4 :public Object

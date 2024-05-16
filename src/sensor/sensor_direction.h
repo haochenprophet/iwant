@@ -1,7 +1,7 @@
 #ifndef SENSOR_DIRECTION_H
 #define SENSOR_DIRECTION_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_sensor_direction {
 	class Csensor_direction :public Object

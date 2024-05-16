@@ -1,7 +1,7 @@
 #ifndef FREAD_H
 #define FREAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fread {
 	class Cfread :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_VOLTAGE_H
 #define SATELLITE_VOLTAGE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_voltage {
 	class Csatellite_voltage :public Object

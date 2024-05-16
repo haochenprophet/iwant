@@ -1,7 +1,7 @@
 #ifndef SQL_CONTAINS_H
 #define SQL_CONTAINS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_CONTAINS {
 	class Csql_CONTAINS :public Object

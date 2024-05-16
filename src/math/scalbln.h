@@ -1,7 +1,7 @@
 #ifndef SCALBLN_H
 #define SCALBLN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_scalbln {
 	class Cscalbln :public Object

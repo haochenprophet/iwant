@@ -1,7 +1,7 @@
 #ifndef SPACEPORT_TRAVEL_H
 #define SPACEPORT_TRAVEL_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_spaceport_travel {
 	class Cspaceport_travel :public Object

@@ -1,7 +1,7 @@
 #ifndef PCIE_CLASS_CODE_H
 #define PCIE_CLASS_CODE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_pcie_class_code {
 	class Cclass_code

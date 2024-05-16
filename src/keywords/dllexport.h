@@ -1,7 +1,7 @@
 #ifndef DLLEXPORT_H
 #define DLLEXPORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_dllexport {
 	class Cdllexport :public Object

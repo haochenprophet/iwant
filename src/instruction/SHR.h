@@ -1,7 +1,7 @@
 #ifndef SHR_H
 #define SHR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SHR {
 	class CSHR :public Object

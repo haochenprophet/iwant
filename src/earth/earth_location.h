@@ -1,7 +1,7 @@
 #ifndef EARTH_LOCATION_H
 #define EARTH_LOCATION_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_earth_location {
 	class Cearth_location :public Object

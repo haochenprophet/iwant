@@ -1,7 +1,7 @@
 #ifndef SQL_INTERSECT_H
 #define SQL_INTERSECT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_INTERSECT {
 	class Csql_INTERSECT :public Object

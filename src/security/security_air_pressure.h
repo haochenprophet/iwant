@@ -1,7 +1,7 @@
 #ifndef SECURITY_AIR_PRESSURE_H
 #define SECURITY_AIR_PRESSURE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_air_pressure {
 	class Csecurity_air_pressure :public Object

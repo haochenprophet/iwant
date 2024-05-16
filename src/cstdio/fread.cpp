@@ -26,7 +26,7 @@ size_t Cfread::fread_c(void* ptr, size_t size, size_t count, FILE* stream)
 #endif
 
 #if FREAD_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "FREAD_TEST\n\n";
 

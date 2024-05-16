@@ -1,7 +1,7 @@
 #ifndef SYMBOL_H
 #define SYMBOL_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_symbol {
 	class Csymbol :public Object

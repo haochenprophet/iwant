@@ -35,7 +35,7 @@ long double nexttowardl_c(long double x, long double y)
 #endif
 
 #if NEXTTOWARD_TEST
-#include "../all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	std::cout << "NEXTTOWARD_TEST\n\n";

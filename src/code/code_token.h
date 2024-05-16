@@ -1,7 +1,7 @@
 #ifndef CODE_TOKEN_H
 #define CODE_TOKEN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_code_token {
 	class Ccode_token :public Object

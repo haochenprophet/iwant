@@ -1,7 +1,7 @@
 #ifndef FLDENV_H
 #define FLDENV_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_FLDENV {
 	class CFLDENV :public Object

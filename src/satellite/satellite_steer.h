@@ -1,7 +1,7 @@
 #ifndef SATELLITE_STEER_H
 #define SATELLITE_STEER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_steer {
 	class Csatellite_steer :public Object

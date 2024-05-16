@@ -1,7 +1,7 @@
 #ifndef FSETPOS_H
 #define FSETPOS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_fsetpos {
 	class Cfsetpos :public Object

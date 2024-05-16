@@ -1,7 +1,7 @@
 #ifndef VPGATHERDD_H
 #define VPGATHERDD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VPGATHERDD {
 	class CVPGATHERDD :public Object

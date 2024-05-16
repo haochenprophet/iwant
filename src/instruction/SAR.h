@@ -1,7 +1,7 @@
 #ifndef SAR_H
 #define SAR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SAR {
 	class CSAR :public Object

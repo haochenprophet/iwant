@@ -1,7 +1,7 @@
 #ifndef _REGISTER_H
 #define _REGISTER_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n__register {
 	class C_register :public Object

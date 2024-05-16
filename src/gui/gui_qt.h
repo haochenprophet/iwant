@@ -1,7 +1,7 @@
 #ifndef GUI_QT_H
 #define GUI_QT_H
 
-#include "object.h"
+#include "object/object.h"
 
 namespace n_gui_qt {
 	class Cgui_qt :public Object

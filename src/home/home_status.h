@@ -1,7 +1,7 @@
 #ifndef HOME_STATUS_H
 #define HOME_STATUS_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_status {
 	class Chome_status :public Object

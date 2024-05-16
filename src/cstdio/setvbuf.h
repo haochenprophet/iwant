@@ -1,7 +1,7 @@
 #ifndef SETVBUF_H
 #define SETVBUF_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_setvbuf {
 	class Csetvbuf :public Object

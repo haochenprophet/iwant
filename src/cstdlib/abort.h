@@ -1,7 +1,7 @@
 #ifndef ABORT_H
 #define ABORT_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_abort {
 	class Cabort :public Object

@@ -1,7 +1,7 @@
 #ifndef SATELLITE_VIDEO_H
 #define SATELLITE_VIDEO_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_satellite_video {
 	class Csatellite_video :public Object

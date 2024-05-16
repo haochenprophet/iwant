@@ -1,7 +1,7 @@
 #ifndef SUBPD_H
 #define SUBPD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_SUBPD {
 	class CSUBPD :public Object

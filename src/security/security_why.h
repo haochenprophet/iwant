@@ -1,7 +1,7 @@
 #ifndef SECURITY_WHY_H
 #define SECURITY_WHY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_why {
 	class Csecurity_why :public Object

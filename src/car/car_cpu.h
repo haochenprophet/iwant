@@ -1,7 +1,7 @@
 #ifndef CAR_CPU_H
 #define CAR_CPU_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_cpu {
 	class Ccar_cpu :public Object

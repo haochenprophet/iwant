@@ -1,7 +1,7 @@
 #ifndef OCEAN_MAP_H
 #define OCEAN_MAP_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_ocean_map {
 	class Cocean_map :public Object

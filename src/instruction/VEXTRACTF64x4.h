@@ -1,7 +1,7 @@
 #ifndef VEXTRACTF64X4_H
 #define VEXTRACTF64X4_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_VEXTRACTF64x4 {
 	class CVEXTRACTF64x4 :public Object

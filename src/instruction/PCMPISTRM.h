@@ -1,7 +1,7 @@
 #ifndef PCMPISTRM_H
 #define PCMPISTRM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_PCMPISTRM {
 	class CPCMPISTRM :public Object

@@ -1,7 +1,7 @@
 #ifndef SQL_SHUTDOWN_H
 #define SQL_SHUTDOWN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_SHUTDOWN {
 	class Csql_SHUTDOWN :public Object

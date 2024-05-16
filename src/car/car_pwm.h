@@ -1,7 +1,7 @@
 #ifndef CAR_PWM_H
 #define CAR_PWM_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_pwm {
 	class Ccar_pwm :public Object

@@ -1,7 +1,7 @@
 #ifndef SECURITY_MODIFY_H
 #define SECURITY_MODIFY_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_modify {
 	class Csecurity_modify :public Object

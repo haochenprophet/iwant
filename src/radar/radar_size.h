@@ -1,7 +1,7 @@
 #ifndef RADAR_SIZE_H
 #define RADAR_SIZE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_radar_size {
 	class Cradar_size :public Object

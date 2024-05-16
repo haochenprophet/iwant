@@ -1,7 +1,7 @@
 #ifndef HOME_DELETE_H
 #define HOME_DELETE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_home_delete {
 	class Chome_delete :public Object

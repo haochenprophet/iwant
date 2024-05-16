@@ -1,7 +1,7 @@
 #ifndef KORD_H
 #define KORD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_KORD {
 	class CKORD :public Object

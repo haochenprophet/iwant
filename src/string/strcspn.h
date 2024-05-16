@@ -1,7 +1,7 @@
 #ifndef STRCSPN_H
 #define STRCSPN_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_strcspn {
 	class Cstrcspn :public Object

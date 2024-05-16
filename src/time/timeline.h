@@ -1,7 +1,7 @@
 #ifndef TIMELINE_H_H
 #define TIMELINE_H_H
 
-#include "object.h"
+#include "object/object.h"
 #include "timepoint.h"
 
 namespace n_timeline {

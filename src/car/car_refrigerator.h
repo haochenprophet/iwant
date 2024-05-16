@@ -1,7 +1,7 @@
 #ifndef CAR_REFRIGERATOR_H
 #define CAR_REFRIGERATOR_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_car_refrigerator {
 	class Ccar_refrigerator :public Object

@@ -26,7 +26,7 @@ int Cgetchar::getchar_c(void)
 #endif
 
 #if GETCHAR_TEST
-#include "../all_h_include.h"int main(int argc, char *argv[])
+#include "all/all_h_include.h"int main(int argc, char *argv[])
 {
 	std::cout << "GETCHAR_TEST\n\n";
 

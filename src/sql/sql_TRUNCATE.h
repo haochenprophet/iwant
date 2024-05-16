@@ -1,7 +1,7 @@
 #ifndef SQL_TRUNCATE_H
 #define SQL_TRUNCATE_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_sql_TRUNCATE {
 	class Csql_TRUNCATE :public Object

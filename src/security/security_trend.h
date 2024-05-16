@@ -1,7 +1,7 @@
 #ifndef SECURITY_TREND_H
 #define SECURITY_TREND_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_security_trend {
 	class Csecurity_trend :public Object

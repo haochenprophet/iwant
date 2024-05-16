@@ -1,7 +1,7 @@
 #ifndef ROCKET_LOAD_H
 #define ROCKET_LOAD_H
 
-#include "../object.h"
+#include "object/object.h"
 
 namespace n_rocket_load {
 	class Crocket_load :public Object
