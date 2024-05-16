@@ -294,6 +294,16 @@ int Cfile::find(char * dir, char * term)
 	return 0;
 }
 
+int Cfile::find_relpace(char* dir, char* term,char * find,char* target)
+{
+	Cpath p;
+	printf("dir=%s\\%s\n", dir, term);
+	p.list(dir, term, 0, 1, 1);
+//	p.display();//test ok
+	p.execute(this);
+	return 0;
+}
+
 // c/c++ function : return_type [space] <func_name> [space] (...)
 
 int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
@@ -324,7 +334,28 @@ int Cfile::is_exist_func(char *f_name,char *func_name,int dispaly)
 int Cfile::func(void *p)
 {
 	if(!p) return -1;
-	return this->f_read((char *) p);
+
+	if (this->action == (ACTION_T)FileAtcion::fr|| this->action == (ACTION_T)FileAtcion::find_replace)
+	{
+	//	OUT_LINE;//test ok
+		Creplace r;
+		//argv[0]=exe ,[1]=fr [2]=dir,[3]=term,[4]=find string ,[5]=target string 
+	#if WINDOWS_OS
+		r.replace((wchar_t*) p, (wchar_t*) p, (char*)this->cmd.argv[4], (char*)this->cmd.argv[5]);
+	#endif
+
+	#if LINUX_OS
+		r.replace((char*)p, (char*)p, (char*)this->cmd.argv[4], (char*)this->cmd.argv[5]);
+	#endif
+		return 0;
+	}
+
+	if (this->action == (ACTION_T)FileAtcion::read || this->action == (ACTION_T)FileAtcion::cat)
+	{
+		return this->f_read((char*)p);
+	}
+	return 0;
+
 }
 
 int Cfile::create(void *p)
@@ -508,7 +539,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc(this->crc_func));
 	if (this->action == (ACTION_T)FileAtcion::md5) this->set_main_ret((int)this->md5());
 	if (this->action == (ACTION_T)FileAtcion::find || this->action == (ACTION_T)FileAtcion::fd) this->set_main_ret((int)this->find(this->cmd.argv[2], this->cmd.argv[3]));
-
+	if (this->action == (ACTION_T)FileAtcion::fr || this->action == (ACTION_T)FileAtcion::find_replace) this->set_main_ret((int)this->find_relpace(this->cmd.argv[2], this->cmd.argv[3], this->cmd.argv[4], this->cmd.argv[5]));
 	return 0;
 }
 
@@ -579,7 +610,26 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
 		}
 	}
+	
+	//command:file.exe find  <dir> <term> 
+	if (this->action == (ACTION_T)FileAtcion::find_replace || this->action == (ACTION_T)FileAtcion::fr)
+	{
+		if (argc > 3) { //uset out file for right 
+		}
+		else {// input error return 
+			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
+		}
+	}
 
+	//command:file.exe fr   <dir> <term> <find string> <target string>
+	if (this->action == (ACTION_T)FileAtcion::find_replace || this->action == (ACTION_T)FileAtcion::fr)
+	{
+		if (argc > 5) { //uset out file for right 
+		}
+		else {// input error return 
+			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
+		}
+	}
 	return 0;
 }
 
@@ -607,7 +657,7 @@ int Cfile::deal_cmd(int argc, char *argv[])
 	if (this->action == 0) return -1;
 
 	//step5.set action parameter
-	this->set_action_parameter(argc, argv);
+	if(0!=this->set_action_parameter(argc, argv)) return -1;
 
 	//step6.do action 
 	this->do_action();

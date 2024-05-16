@@ -59,6 +59,8 @@ enum class FileAtcion {
 	md5,
 	find,
 	fd,
+	find_replace,
+	fr,
 };
 
 #endif

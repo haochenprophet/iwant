@@ -49,6 +49,11 @@
 //find
 #define FILE_FIND_HELP   "find <dir> <term>"
 #define FILE_FD_HELP   "fd <dir> <term>"
+//find and relpace
+#define FILE_FIND_RELPACE_HELP   "find_relpace <dir> <term> <find_string> <target_strring>"
+#define FILE_FR_HELP   "fr <dir> <term> <find_string> <target_strring>"
+
+
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::cat ,  EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_CAT_HELP},
@@ -95,7 +100,9 @@ Action file_action[] = {
 //find
 	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::find,      EatcionRelation::equal , nullptr ,(char*)"find",     (char*)FILE_FIND_HELP},
 	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::fd,      EatcionRelation::equal , nullptr ,(char*)"fd",     (char*)FILE_FD_HELP},
-
+//find and relpace
+	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::find_replace,      EatcionRelation::equal , nullptr ,(char*)"find_relpace",     (char*)FILE_FIND_RELPACE_HELP},
+	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::fr,      EatcionRelation::equal , nullptr ,(char*)"fr",     (char*)FILE_FR_HELP},
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };

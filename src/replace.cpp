@@ -349,6 +349,14 @@ int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* r
 	return this->replace(inputfile, outputfile, (uint8_t*)find_str, strlen(find_str) , (uint8_t*)replace_str, strlen(replace_str),end_find_data, end_find_size);
 }
 
+int Creplace::replace(wchar_t* inputfile, wchar_t* outputfile, char* find_str, char* replace_str, uint8_t* end_find_data, size_t end_find_size)
+{
+	string input = this->wc_s(inputfile);
+	string output = this->wc_s(outputfile);
+	//int Creplace::replace(char* inputfile, char* outputfile, char* find_str, char* replace_str, uint8_t * end_find_data, size_t end_find_size)
+	return this->replace((char*)input.c_str(), (char*) output.c_str(), find_str, replace_str, end_find_data, end_find_size);
+}
+
 int Creplace::replace(char* inputfile, char* outputfile, char* find_file, char* replace_file, int type,uint8_t* end_find_data, size_t end_find_size)//type for C++ overloaded replace() functions
 {
 	Cfile find, replace;
