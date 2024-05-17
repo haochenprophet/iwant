@@ -294,6 +294,11 @@ int Cfile::find(char * dir, char * term)
 	return 0;
 }
 
+int Cfile::list(char* dir, char* term)
+{
+	return this->find(dir, term);
+}
+
 int Cfile::find_relpace(char* dir, char* term,char * find,char* target)
 {
 	Cpath p;
@@ -540,6 +545,8 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::md5) this->set_main_ret((int)this->md5());
 	if (this->action == (ACTION_T)FileAtcion::find || this->action == (ACTION_T)FileAtcion::fd) this->set_main_ret((int)this->find(this->cmd.argv[2], this->cmd.argv[3]));
 	if (this->action == (ACTION_T)FileAtcion::fr || this->action == (ACTION_T)FileAtcion::find_replace) this->set_main_ret((int)this->find_relpace(this->cmd.argv[2], this->cmd.argv[3], this->cmd.argv[4], this->cmd.argv[5]));
+	if (this->action == (ACTION_T)FileAtcion::list || this->action == (ACTION_T)FileAtcion::dir || this->action == (ACTION_T)FileAtcion::ll || this->action == (ACTION_T)FileAtcion::ls) this->set_main_ret((int)this->list (this->cmd.argv[2], this->cmd.argv[3]));
+
 	return 0;
 }
 

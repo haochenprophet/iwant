@@ -1523,6 +1523,12 @@ int Object::display(Object* o)
 	return 0;
 }
 
+int Object::deploy(void* p)
+{
+	WHERE_I;
+	return 0;
+}
+
 int Object::vray(void* p)//Display the UI interface
 {
 	WHERE_I;

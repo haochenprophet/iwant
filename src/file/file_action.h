@@ -22,6 +22,7 @@ enum class FileAtcionClass
 	crc,
 	md5,  
 	find,
+	list,
 };
 
 enum class FileAtcion {
@@ -61,6 +62,10 @@ enum class FileAtcion {
 	fd,
 	find_replace,
 	fr,
+	list,
+	ls,
+	dir,
+	ll,
 };
 
 #endif

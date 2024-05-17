@@ -52,6 +52,11 @@
 //find and relpace
 #define FILE_FIND_RELPACE_HELP   "find_relpace <dir> <term> <find_string> <target_strring>"
 #define FILE_FR_HELP   "fr <dir> <term> <find_string> <target_strring>"
+//list ,ll ,ls,dir
+#define FILE_LIST_HELP   "list <dir> <term>"
+#define FILE_DIR_HELP    "dir <dir> <term>"
+#define FILE_LS_HELP    "ls <dir> <term>"
+#define FILE_LL_HELP    "ll <dir> <term>"
 
 
 Action file_action[] = {
@@ -103,6 +108,11 @@ Action file_action[] = {
 //find and relpace
 	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::find_replace,      EatcionRelation::equal , nullptr ,(char*)"find_relpace",     (char*)FILE_FIND_RELPACE_HELP},
 	{ (int)FileAtcionClass::find,(ACTION_T)FileAtcion::fr,      EatcionRelation::equal , nullptr ,(char*)"fr",     (char*)FILE_FR_HELP},
+//list ,ll ,ls,dir
+	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::list,      EatcionRelation::equal , nullptr ,(char*)"list",     (char*)FILE_LIST_HELP},
+	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::dir,      EatcionRelation::equal , nullptr ,(char*)"dir",     (char*)FILE_DIR_HELP},
+	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::ll,      EatcionRelation::equal , nullptr ,(char*)"ll",     (char*)FILE_LL_HELP},
+	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::ls,      EatcionRelation::equal , nullptr ,(char*)"ls",     (char*)FILE_LS_HELP},
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };

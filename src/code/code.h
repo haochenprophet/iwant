@@ -16,7 +16,7 @@
 #define G_CODE_H_DEFINE "#ifndef G_CODE_H\n#define G_CODE_H\n"
 #define G_CODE_I_DEFINE "#ifndef G_CODE_I\n#define G_CODE_I\n"
 #define G_CODE_FUNC_I_DEFINE "#ifndef G_CODE_FUNC_I\n#define G_CODE_FUNC_I\n"
-#define G_CODE_ALL_H "\t#include \"all_h_include.h\"\n"
+#define G_CODE_ALL_H "\t#include \"all/all_h_include.h\"\n"
 #define G_CODE_ADD_OBJECT "void add_objects(Object *p)\n{\n"
 #define G_CODE_ADD_OBJECT_H "\tvoid add_objects(Object *p);\n"
 //set_package

@@ -51,6 +51,7 @@ namespace n_file {
 		int copy(char * from,char *to);
 		char * f_find(char *f_name,char * str,char *start);
 		char * f_find(char * str,char *start);
+		int list(char* dir, char* term);
 		int find(char* dir, char* term);
 		int find_relpace(char* dir, char* term, char* find, char* target);
 		int is_exist_func(char *f_name,char *func_name,int dispaly=0);//[space] <func_name> [space] (
