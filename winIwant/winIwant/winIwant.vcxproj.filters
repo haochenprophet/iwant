@@ -9489,6 +9489,75 @@
     <ClCompile Include="..\..\src\deploy\deploy_website.cpp">
       <Filter>deploy</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_aircraft.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_app.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_army.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_camera.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_car.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_dll.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_driver.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_drone.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_exe.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_gun.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_ko.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_lib.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_list.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_location.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_manpower.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_missile.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_money.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_radar.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_satellite.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_so.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_sys.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_tree.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_warship.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -19188,6 +19257,75 @@
       <Filter>deploy</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\deploy\deploy_website.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_aircraft.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_app.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_army.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_camera.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_car.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_dll.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_driver.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_drone.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_exe.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_gun.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_ko.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_lib.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_list.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_location.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_manpower.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_missile.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_money.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_radar.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_satellite.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_so.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_sys.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_tree.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_warship.h">
       <Filter>deploy</Filter>
     </ClInclude>
   </ItemGroup>
