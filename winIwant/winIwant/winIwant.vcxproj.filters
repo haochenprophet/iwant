@@ -316,6 +316,9 @@
     <Filter Include="memory">
       <UniqueIdentifier>{bcb24868-5d77-4e47-b5ad-ac4ed983b137}</UniqueIdentifier>
     </Filter>
+    <Filter Include="deploy">
+      <UniqueIdentifier>{9d517ecc-9633-45ea-8489-91048f2860e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -9434,6 +9437,57 @@
     </ClCompile>
     <ClCompile Include="..\..\src\dictionary\dictionary.cpp">
       <Filter>dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_audio.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_bin.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_code.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_data.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_define.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_device.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_doc.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_file.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_goods.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_image.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_makefile.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_message.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_object.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_source.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_video.cpp">
+      <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\deploy\deploy_website.cpp">
+      <Filter>deploy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -19084,6 +19138,57 @@
     </ClInclude>
     <ClInclude Include="..\..\src\dictionary\dictionary.h">
       <Filter>dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_audio.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_bin.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_code.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_data.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_define.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_device.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_doc.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_file.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_goods.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_image.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_makefile.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_message.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_object.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_source.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_video.h">
+      <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\deploy\deploy_website.h">
+      <Filter>deploy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
