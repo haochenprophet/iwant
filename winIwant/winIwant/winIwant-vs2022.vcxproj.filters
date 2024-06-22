@@ -319,6 +319,9 @@
     <Filter Include="deploy">
       <UniqueIdentifier>{9d517ecc-9633-45ea-8489-91048f2860e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="text">
+      <UniqueIdentifier>{b70b7d8d-7f60-4ccc-87e5-a800d5286f42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\sql\sql_ADD.cpp">
@@ -9557,6 +9560,15 @@
     </ClCompile>
     <ClCompile Include="..\..\src\deploy\deploy_warship.cpp">
       <Filter>deploy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text_split.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text_line.cpp">
+      <Filter>text</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -19327,6 +19339,15 @@
     </ClInclude>
     <ClInclude Include="..\..\src\deploy\deploy_warship.h">
       <Filter>deploy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_split.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_line.h">
+      <Filter>text</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

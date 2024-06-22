@@ -61,6 +61,8 @@ namespace n_file {
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
 		int compare(char* fname_left, char* fname_right);// compare 
 		int compare();// compare 
+		int different(char* fname_left, char* fname_right);
+		int different();
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
 		int insert(int argc, char* argv[]);

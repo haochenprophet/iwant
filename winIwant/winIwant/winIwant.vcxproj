@@ -3193,6 +3193,9 @@
     <ClCompile Include="..\..\src\template\temp.cpp" />
     <ClCompile Include="..\..\src\template\template_object.cpp" />
     <ClCompile Include="..\..\src\test\test.cpp" />
+    <ClCompile Include="..\..\src\text\text.cpp" />
+    <ClCompile Include="..\..\src\text\text_line.cpp" />
+    <ClCompile Include="..\..\src\text\text_split.cpp" />
     <ClCompile Include="..\..\src\time\timeline.cpp" />
     <ClCompile Include="..\..\src\time\timepoint.cpp" />
     <ClCompile Include="..\..\src\time\timer.cpp" />
@@ -6300,6 +6303,9 @@
     <ClInclude Include="..\..\src\template\template_object.h" />
     <ClInclude Include="..\..\src\template\temp_def.h" />
     <ClInclude Include="..\..\src\test\test.h" />
+    <ClInclude Include="..\..\src\text\text.h" />
+    <ClInclude Include="..\..\src\text\text_line.h" />
+    <ClInclude Include="..\..\src\text\text_split.h" />
     <ClInclude Include="..\..\src\time\timeline.h" />
     <ClInclude Include="..\..\src\time\timepoint.h" />
     <ClInclude Include="..\..\src\time\timer.h" />

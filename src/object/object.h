@@ -384,6 +384,7 @@ namespace n_object {
 		virtual int display(void *p=nullptr);
 		virtual int display(Object* o = nullptr);
 		virtual int deploy(void* p = nullptr);
+		virtual int different(void* p = nullptr);//code diff,file diff ,time diff ,image diff ..
 		virtual int question(void *p=nullptr);
 		virtual int url(void *p=nullptr);//execute object url if exist
 	    virtual int vray(void* p = nullptr);//Display the UI interface

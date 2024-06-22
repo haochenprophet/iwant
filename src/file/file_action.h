@@ -23,6 +23,7 @@ enum class FileAtcionClass
 	md5,  
 	find,
 	list,
+	diff,
 };
 
 enum class FileAtcion {
@@ -66,6 +67,8 @@ enum class FileAtcion {
 	ls,
 	dir,
 	ll,
+	different,
+	diff,
 };
 
 #endif

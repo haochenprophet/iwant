@@ -1529,6 +1529,12 @@ int Object::deploy(void* p)
 	return 0;
 }
 
+int Object::different(void* p)
+{
+	WHERE_I;
+	return -1;
+}
+
 int Object::vray(void* p)//Display the UI interface
 {
 	WHERE_I;

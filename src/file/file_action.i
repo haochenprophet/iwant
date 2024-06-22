@@ -58,6 +58,9 @@
 #define FILE_LS_HELP    "ls <dir> <term>"
 #define FILE_LL_HELP    "ll <dir> <term>"
 
+//different
+#define FILE_DIFFERENT_HELP   "different   <FileName1> <FileName2>"
+#define FILE_DIFF_HELP        "diff  <FileName1> <FileName2>"
 
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
@@ -113,6 +116,9 @@ Action file_action[] = {
 	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::dir,      EatcionRelation::equal , nullptr ,(char*)"dir",     (char*)FILE_DIR_HELP},
 	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::ll,      EatcionRelation::equal , nullptr ,(char*)"ll",     (char*)FILE_LL_HELP},
 	{ (int)FileAtcionClass::list,(ACTION_T)FileAtcion::ls,      EatcionRelation::equal , nullptr ,(char*)"ls",     (char*)FILE_LS_HELP},
+//different
+	{ (int)FileAtcionClass::diff,(ACTION_T)FileAtcion::different,      EatcionRelation::equal , nullptr ,(char *)"different",     (char *)FILE_DIFFERENT_HELP},
+	{ (int)FileAtcionClass::diff,(ACTION_T)FileAtcion::diff,           EatcionRelation::equal , nullptr ,(char *)"diff",         (char *)FILE_DIFF_HELP},
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };
