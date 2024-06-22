@@ -6,6 +6,7 @@
 #include "math/crc.h"
 #include "math/md5.h"
 #include "path/path.h"
+#include "text/text_line.h"
 
 int Cfile::my_init(void* p)
 {
@@ -439,10 +440,33 @@ int Cfile::compare()// compare
 
 int Cfile::different(char* fname_left, char* fname_right)
 {
+	int ret = 0;
 	Cfile left(fname_left);//file 1
 	Cfile right(fname_right);//file 2
 
-	return 0;
+	Ctext_line text_line_left;
+	Ctext_line text_line_right;
+
+	text_line_left.split_line(left.addr, left.addr + left.size);
+	text_line_right.split_line(right.addr, right.addr + right.size);
+
+//	text_line_left.display();//test
+//	text_line_right.display(); //test
+// 
+	if (left.size == right.size)
+	{
+		for (size_t i = 0; i < left.size; i++)
+		{
+			if (left.addr[i] != right.addr[i]) { ret = 1; break; }
+		}
+
+		if (ret == 0) return 0; //file 1 == file 2
+	}
+
+	//file 1 != file 2 continue diff file 1 and file 2
+
+
+	return ret;
 }
 
 int Cfile::different()

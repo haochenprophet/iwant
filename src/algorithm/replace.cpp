@@ -45,6 +45,7 @@ CreplaceParameter::CreplaceParameter()
 CreplaceParameter::~CreplaceParameter()
 {
 	this->location_list.clear();
+	this->location_range_list.clear();
 }
 
 int Creplace::my_init(void* p)
