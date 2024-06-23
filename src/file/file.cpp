@@ -464,7 +464,11 @@ int Cfile::different(char* fname_left, char* fname_right)
 	}
 
 	//file 1 != file 2 continue diff file 1 and file 2
+	printf("%s vs %s\n", this->fname_left, this->fname_right);
+	ret=text_line_left.diff(&text_line_right);
 
+//	printf("%s vs %s\n", this->fname_right, this->fname_left);
+//	text_line_right.diff(&text_line_left);
 
 	return ret;
 }

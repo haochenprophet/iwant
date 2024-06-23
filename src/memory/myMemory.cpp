@@ -30,6 +30,16 @@ CmyMemory::~CmyMemory()
 	this->delete_me();
 }
 
+char* CmyMemory::begin()
+{
+	return this->addr;
+}
+
+char * CmyMemory::end()
+{
+	return this->addr + this->size;
+}
+
 void * CmyMemory::allot(size_t size, int type,int re_allot)
 {
 	if (size<1) return nullptr;

@@ -54,6 +54,11 @@ int Cfind::find(uint8_t* source, uint8_t* source_end, uint8_t* target, uint8_t* 
 	return  Cfind::find(source, (int64_t)(source_end - source), target, (int64_t)(target_end- target), output);
 }
 
+int Cfind::find(char* source, char* source_end, char* target, char* target_end, char** output)
+{
+	return Cfind::find( (uint8_t *) source, (uint8_t *) source_end, (uint8_t *) target, (uint8_t *)target_end, (uint8_t **) output);
+}
+
 int Cfind::find_to_list(uint8_t* source, int64_t source_size, uint8_t* target, int64_t target_size)//result push to found_list
 {
 	uint8_t * output,*end;

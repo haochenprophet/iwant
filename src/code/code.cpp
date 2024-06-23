@@ -259,7 +259,7 @@ int Ccode::help(void *p)
 
 int main(int argc, char *argv[])
 {
-	WHERE_I;
+	if (argc < 2) {WHERE_I;}
 	Ccode c;
 	c.add_global_objects();
 	if (argc < 2) { c.my_family(); return -1; }

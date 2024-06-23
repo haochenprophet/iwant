@@ -16,6 +16,8 @@ namespace n_text_line {
 		Cline_range();
 		size_t set_size(size_t size = 0);
 		int display();
+		int compare(Cline_range* range);
+		int compare(char* start,char* end , size_t size);
 	};
 
 	class Ctext_line :public Object
@@ -30,7 +32,7 @@ namespace n_text_line {
 	public:
 		int display();
 		size_t split_line(char* start, char* end); //return endline number
-		int diff(char* start, char* end);
+		int diff(Ctext_line * text_line);
 	};
 }
 

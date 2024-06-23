@@ -30,6 +30,8 @@ namespace n_my_memory {
 		void delete_me();
 		int set_addr(char *start,char *end,int type=0);
 		int set_addr(char *start,int size,int type=0);
+		char * begin();
+		char * end();
 	};
 }
 using namespace n_my_memory;

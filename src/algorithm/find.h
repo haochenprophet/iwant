@@ -16,6 +16,7 @@ namespace n_find {
 		static int find(uint8_t* source, int64_t source_size, uint8_t* target, int64_t target_size, uint8_t** output);
 		static int find(uint8_t* source, uint8_t* source_end, uint8_t* target, int64_t target_size, uint8_t** output);
 		static int find(uint8_t* source, uint8_t* source_end, uint8_t* target, uint8_t* target_end, uint8_t** output);
+		static int find(char * source, char * source_end, char * target, char* target_end, char ** output);
 		int find_to_list(uint8_t* source, int64_t source_size, uint8_t* target, int64_t target_size);//result push to found_list
 	};
 }

@@ -1,5 +1,6 @@
 #include "text_line.h"
 #include "text_split.h"
+#include "algorithm/find.h"
 
 Cline_range::Cline_range()
 {
@@ -18,7 +19,32 @@ int Cline_range::display()
 	{
 		std::cout << this->start[n];
 	}
-	std::cout << endl;
+//	std::cout << endl;
+	return 0;
+}
+
+//-1 :error 0:== 1: !=
+int Cline_range::compare(Cline_range * range)
+{
+	if (this->start == nullptr || this->end == nullptr || this->size == 0) { return -1; }// error
+	if (range->start == nullptr || range->end == nullptr || range->size == 0) { return -1; }// error
+	if (this->size != range->size) { return 1; } //!=
+	for (size_t i = 0; i < this->size; i++)
+	{
+		if (this->start[i] != range->start[i]) return 1;
+	}
+	return 0;
+}
+
+int Cline_range::compare(char* start, char* end, size_t size)
+{
+	if (this->start == nullptr || this->end == nullptr || this->size == 0) { return -1; }// error
+	if (start == nullptr || end == nullptr || size == 0) { return -1; }// error
+	if (this->size != size) { return 1; } //!=
+	for (size_t i = 0; i < this->size; i++)
+	{
+		if (this->start[i] != start[i]) return 1;
+	}
 	return 0;
 }
 
@@ -84,12 +110,31 @@ int Ctext_line::display()
 	return 0;
 }
 
-int Ctext_line::diff(char* start, char* end)
+int Ctext_line::diff(Ctext_line* text_line)
 {
+	int ret = 0;
+	int found = -1;
+
 	for (std::list<Cline_range>::iterator it = this->line_range_list.begin(); it != this->line_range_list.end(); ++it)
 	{
-		it->display();
+		found = 0;
+		for (std::list<Cline_range>::iterator it_text_line = text_line->line_range_list.begin(); it_text_line != text_line->line_range_list.end(); ++it_text_line)
+		{
+			if (0 == it->compare(it_text_line->start, it_text_line->end, it_text_line->size))
+			{
+				found = 1;
+				break;
+			}
+		}
+
+		if (found == 0) //not found
+		{
+			it->display();
+			ret = 1;
+		}
 	}
+
+	return ret;
 }
 
 #ifndef TEXT_LINE_TEST
