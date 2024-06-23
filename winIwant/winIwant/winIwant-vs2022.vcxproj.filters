@@ -9570,6 +9570,18 @@
     <ClCompile Include="..\..\src\text\text_line.cpp">
       <Filter>text</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\text\text_action.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text_attribute.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text_status.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\text\text_type.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -19349,6 +19361,18 @@
     <ClInclude Include="..\..\src\text\text_line.h">
       <Filter>text</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\text\text_action.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_attribute.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_status.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_type.h">
+      <Filter>text</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
@@ -19555,6 +19579,9 @@
     </None>
     <None Include="..\..\src\keywords\Makefile">
       <Filter>keywords</Filter>
+    </None>
+    <None Include="..\..\src\text\Makefile">
+      <Filter>text</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -3194,8 +3194,12 @@
     <ClCompile Include="..\..\src\template\template_object.cpp" />
     <ClCompile Include="..\..\src\test\test.cpp" />
     <ClCompile Include="..\..\src\text\text.cpp" />
+    <ClCompile Include="..\..\src\text\text_action.cpp" />
+    <ClCompile Include="..\..\src\text\text_attribute.cpp" />
     <ClCompile Include="..\..\src\text\text_line.cpp" />
     <ClCompile Include="..\..\src\text\text_split.cpp" />
+    <ClCompile Include="..\..\src\text\text_status.cpp" />
+    <ClCompile Include="..\..\src\text\text_type.cpp" />
     <ClCompile Include="..\..\src\time\timeline.cpp" />
     <ClCompile Include="..\..\src\time\timepoint.cpp" />
     <ClCompile Include="..\..\src\time\timer.cpp" />
@@ -6304,8 +6308,12 @@
     <ClInclude Include="..\..\src\template\temp_def.h" />
     <ClInclude Include="..\..\src\test\test.h" />
     <ClInclude Include="..\..\src\text\text.h" />
+    <ClInclude Include="..\..\src\text\text_action.h" />
+    <ClInclude Include="..\..\src\text\text_attribute.h" />
     <ClInclude Include="..\..\src\text\text_line.h" />
     <ClInclude Include="..\..\src\text\text_split.h" />
+    <ClInclude Include="..\..\src\text\text_status.h" />
+    <ClInclude Include="..\..\src\text\text_type.h" />
     <ClInclude Include="..\..\src\time\timeline.h" />
     <ClInclude Include="..\..\src\time\timepoint.h" />
     <ClInclude Include="..\..\src\time\timer.h" />
@@ -6561,6 +6569,7 @@
     <None Include="..\..\src\stock\stock_db_action.i" />
     <None Include="..\..\src\symbol\Makefile" />
     <None Include="..\..\src\syntax\Makefile" />
+    <None Include="..\..\src\text\Makefile" />
     <None Include="..\..\src\time\Makefile" />
     <None Include="..\..\src\tree\Makefile" />
     <None Include="..\..\src\warship\Makefile" />
