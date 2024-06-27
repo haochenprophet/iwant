@@ -9582,6 +9582,9 @@
     <ClCompile Include="..\..\src\text\text_type.cpp">
       <Filter>text</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\text\text_encode.cpp">
+      <Filter>text</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\sql\sql_ADD.h">
@@ -19371,6 +19374,9 @@
       <Filter>text</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\text\text_type.h">
+      <Filter>text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\text\text_encode.h">
       <Filter>text</Filter>
     </ClInclude>
   </ItemGroup>

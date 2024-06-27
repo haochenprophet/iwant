@@ -8,6 +8,9 @@ Cline_range::Cline_range()
 	this->end = nullptr;
 	this->size = 0;
 	this->number = 1; //init 1 
+	this->attribute = 0;
+	this->status = 0;
+	this->type = 0;
 }
 
 int Cline_range::display()

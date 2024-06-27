@@ -3196,6 +3196,7 @@
     <ClCompile Include="..\..\src\text\text.cpp" />
     <ClCompile Include="..\..\src\text\text_action.cpp" />
     <ClCompile Include="..\..\src\text\text_attribute.cpp" />
+    <ClCompile Include="..\..\src\text\text_encode.cpp" />
     <ClCompile Include="..\..\src\text\text_line.cpp" />
     <ClCompile Include="..\..\src\text\text_split.cpp" />
     <ClCompile Include="..\..\src\text\text_status.cpp" />
@@ -6310,6 +6311,7 @@
     <ClInclude Include="..\..\src\text\text.h" />
     <ClInclude Include="..\..\src\text\text_action.h" />
     <ClInclude Include="..\..\src\text\text_attribute.h" />
+    <ClInclude Include="..\..\src\text\text_encode.h" />
     <ClInclude Include="..\..\src\text\text_line.h" />
     <ClInclude Include="..\..\src\text\text_split.h" />
     <ClInclude Include="..\..\src\text\text_status.h" />

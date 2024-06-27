@@ -12,6 +12,9 @@ namespace n_text_line {
 		char * end;
 		size_t number;//line number
 		size_t size;//start_to_end_size;
+		int status;
+		int type;
+		int attribute;
 	public:
 		Cline_range();
 		size_t set_size(size_t size = 0);
