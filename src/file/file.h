@@ -16,6 +16,7 @@ namespace n_file {
 		std::fstream ap_fs;//for Cfile::f_append()
 		char* fname_left;//compare () file 1 default use left
 		char* fname_right;//compare ()file 2 default use right
+		char* diff_file;//out put diff to diff file 
 		char* crc_func;//for crc() cmd 
 		DisplayType display_type;
 	public:
@@ -61,8 +62,8 @@ namespace n_file {
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
 		int compare(char* fname_left, char* fname_right);// compare 
 		int compare();// compare 
-		int different(char* fname_left, char* fname_right);
-		int different();
+		int different(char* fname_left, char* fname_right ,char * diff_log_file="diff.log");
+		int different(char* diff_log_file = "diff.log");
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
 		int insert(int argc, char* argv[]);

@@ -113,10 +113,17 @@ int Ctext_line::display()
 	return 0;
 }
 
-int Ctext_line::diff(Ctext_line* text_line)
+int Ctext_line::diff(Ctext_line* text_line, char* out_file)
 {
 	int ret = 0;
 	int found = -1;
+
+	FILE* fp;
+
+	if (!(fp = fopen(out_file, "wb+"))) {
+		printf("Error:can not create the %s file.\n", out_file);
+		return -1;
+	}
 
 	for (std::list<Cline_range>::iterator it = this->line_range_list.begin(); it != this->line_range_list.end(); ++it)
 	{
@@ -130,12 +137,15 @@ int Ctext_line::diff(Ctext_line* text_line)
 			}
 		}
 
-		if (found == 0) //not found
+		if (found == 0) //not found is different
 		{
+			fwrite(it->start,1,it->size, fp);//out diff to log file
 			it->display();
 			ret = 1;
 		}
 	}
+
+	fclose(fp);
 
 	return ret;
 }

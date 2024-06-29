@@ -15,6 +15,7 @@ namespace n_text_line {
 		int status;
 		int type;
 		int attribute;
+		int action;
 	public:
 		Cline_range();
 		size_t set_size(size_t size = 0);
@@ -35,7 +36,7 @@ namespace n_text_line {
 	public:
 		int display();
 		size_t split_line(char* start, char* end); //return endline number
-		int diff(Ctext_line * text_line);
+		int diff(Ctext_line * text_line,char * out_file=(char*) "diff.log");
 	};
 }
 

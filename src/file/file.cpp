@@ -14,6 +14,7 @@ int Cfile::my_init(void* p)
 	this->alias = "file";
 	this->fname_left = nullptr;
 	this->fname_right = nullptr;
+	this->diff_file = (char * )"diff.log";
 	this->crc_func = nullptr;
 	this->display_type = DisplayType::string;
 	return 0;
@@ -438,7 +439,7 @@ int Cfile::compare()// compare
 	return ret;
 }
 
-int Cfile::different(char* fname_left, char* fname_right)
+int Cfile::different(char * fname_left, char * fname_right, char * diff_log_file)
 {
 	int ret = 0;
 	Cfile left(fname_left);//file 1
@@ -465,7 +466,7 @@ int Cfile::different(char* fname_left, char* fname_right)
 
 	//file 1 != file 2 continue diff file 1 and file 2
 	printf("%s vs %s\n", this->fname_left, this->fname_right);
-	ret=text_line_left.diff(&text_line_right);
+	ret=text_line_left.diff(&text_line_right, diff_log_file);
 
 //	printf("%s vs %s\n", this->fname_right, this->fname_left);
 //	text_line_right.diff(&text_line_left);
@@ -473,11 +474,11 @@ int Cfile::different(char* fname_left, char* fname_right)
 	return ret;
 }
 
-int Cfile::different()
+int Cfile::different(char* diff_log_file)
 {
 	if (this->fname_left == nullptr || this->fname_right == nullptr) return -1;
 	//int Cfile::compare(char* fname_left, char* fname_right)
-	int ret = this->different(this->fname_left, this->fname_right);
+	int ret = this->different(this->fname_left, this->fname_right,diff_log_file);
 	if (ret == 0)  printf("file : %s == %s\n", this->fname_left, this->fname_right);
 	if (ret == 1)  printf("file : %s != %s\n", this->fname_left, this->fname_right);
 	if (ret == -1) printf("Error occur when compare file : %s and %s\n", this->fname_left, this->fname_right);
@@ -586,7 +587,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::merge || this->action == (ACTION_T)FileAtcion::merge_op) this->set_main_ret((int)this->merge(this->cmd.argc-1,&this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::replace || this->action == (ACTION_T)FileAtcion::rp) this->set_main_ret((int)this->replace(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::compare || this->action == (ACTION_T)FileAtcion::fc) this->set_main_ret((int)this->compare());
-	if (this->action == (ACTION_T)FileAtcion::different || this->action == (ACTION_T)FileAtcion::diff) this->set_main_ret((int)this->different());
+	if (this->action == (ACTION_T)FileAtcion::different || this->action == (ACTION_T)FileAtcion::diff) this->set_main_ret((int)this->different(this->diff_file));
 	if (this->action == (ACTION_T)FileAtcion::insert || this->action == (ACTION_T)FileAtcion::ins) this->set_main_ret((int)this->insert(this->cmd.argc - 1, &this->cmd.argv[1]));
 	if (this->action == (ACTION_T)FileAtcion::checksum || this->action == (ACTION_T)FileAtcion::chksum) this->set_main_ret((int)this->checksum());
 	if (this->action == (ACTION_T)FileAtcion::crc) this->set_main_ret((int)this->crc(this->crc_func));
@@ -662,6 +663,7 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 		if (argc > 3) { //uset out file for right 
 			this->fname_left = argv[2];//FileName1
 			this->fname_right = argv[3]; //FileName2
+			if (argc > 4) { this->diff_file = argv[4]; }//set diff out log file
 		}
 		else {// input error return 
 			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
