@@ -37,6 +37,7 @@ namespace n_my_sql {
 		int execute(char * sql,Object *o=nullptr); 
 		int execute(string * sql, Object *o= nullptr);
 		int execute(void *p1,void *p2,void *p3);
+		MYSQL_RES * store_result(void * mysql);//MYSQL_RES* STDCALL mysql_store_result(MYSQL* mysql);
 		int output(void *p1, void *p2, void *p3);
 		int func(void *p=nullptr);
 		int deal_cmd(int argc, char *argv[]);

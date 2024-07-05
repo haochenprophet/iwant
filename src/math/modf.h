@@ -11,7 +11,7 @@ namespace n_modf {
 		~Cmodf();
 		int my_init(void *p=nullptr);
 		size_t my_size() { return sizeof(Cmodf); }
-		static double modf(double x, double* intpart);
+		static double modf_c(double x, double* intpart);
 
 	};
 }

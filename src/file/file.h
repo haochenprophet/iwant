@@ -62,8 +62,8 @@ namespace n_file {
 		int rn(char * oldname =nullptr, char * newname =nullptr);// rename 
 		int compare(char* fname_left, char* fname_right);// compare 
 		int compare();// compare 
-		int different(char* fname_left, char* fname_right ,char * diff_log_file="diff.log");
-		int different(char* diff_log_file = "diff.log");
+		int different(char* fname_left, char* fname_right ,char * diff_log_file=(char *)"diff.log");
+		int different(char* diff_log_file = (char *)"diff.log");
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
 		int insert(int argc, char* argv[]);

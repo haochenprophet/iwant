@@ -16,7 +16,7 @@ Cmodf::~Cmodf()
 
 }
 
-double Cmodf:: modf(double x, double* intpart)
+double Cmodf:: modf_c(double x, double* intpart)
 {
 	return modf( x,  intpart);
 }

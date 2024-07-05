@@ -5,6 +5,10 @@
 #define MY_SQL_TEST 0//1
 #endif
 
+#ifndef MYSQL_LIB_SUPPORT
+#define MYSQL_LIB_SUPPORT 1
+#endif
+
 #ifndef MYSQL_INIT_IN_CONSTRUCTOR
 	#if MY_SQL_TEST
 		#define MYSQL_INIT_IN_CONSTRUCTOR  1
@@ -63,7 +67,7 @@ Cmy_sql::~Cmy_sql()
 #endif
 }
 
-
+#if MYSQL_LIB_SUPPORT
 int Cmy_sql::connect()
 {
 	int ret=0;
@@ -89,7 +93,14 @@ int Cmy_sql::connect()
 	this->is_connect=true;
 	return 0;
 }
+#else
+int Cmy_sql::connect()
+{
+	return -1;
+}
+#endif
 
+#if MYSQL_LIB_SUPPORT
 int Cmy_sql::query(char *sql)
 {
 	if(this->is_error()) return -1;
@@ -101,6 +112,12 @@ int Cmy_sql::query(char *sql)
 	}
 	return 0;//pass
 }
+#else
+int Cmy_sql::query(char* sql)
+{
+	return 1;
+}
+#endif
 
 int Cmy_sql::query()
 {
@@ -108,6 +125,7 @@ int Cmy_sql::query()
 	return this->query(this->sql);
 }
 
+#if MYSQL_LIB_SUPPORT
 int Cmy_sql::get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show)
 {
 	if(!result) return -1;
@@ -128,6 +146,12 @@ int Cmy_sql::get(MYSQL_RES *result,MYSQL_FIELD *fields,bool show)
 	}
 	return 0;
 }
+#else
+int Cmy_sql::get(MYSQL_RES* result, MYSQL_FIELD* fields, bool show)
+{
+	return 1;
+}
+#endif
 
 int Cmy_sql::get(MYSQL_FIELD *fields,bool show)
 {
@@ -151,6 +175,7 @@ int Cmy_sql::output(void *p1, void *p2, void *p3)
 	return 0;
 }
 
+#if MYSQL_LIB_SUPPORT
 int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row,Object *o)
 {
 	unsigned int num_fields;
@@ -180,6 +205,12 @@ int Cmy_sql::get(MYSQL_RES *result,	MYSQL_ROW row,Object *o)
 	}
 	return 0;
 }
+#else
+int Cmy_sql::get(MYSQL_RES* result, MYSQL_ROW row, Object* o)
+{
+	return -1;
+}
+#endif
 
 int Cmy_sql::get(MYSQL_RES *result,Object *o)//get row
 {
@@ -192,7 +223,7 @@ int Cmy_sql::get(void *p,Object *o)//get row
 }
 
 
-
+#if MYSQL_LIB_SUPPORT
 int Cmy_sql::execute(Object *o)
 {
 	if(this->is_error()) return -1;
@@ -208,6 +239,13 @@ int Cmy_sql::execute(Object *o)
 	} while (!mysql_next_result(this->mysql));
 	return 0;
 }
+#else
+int Cmy_sql::execute(Object* o)
+{
+	return -1;
+}
+#endif
+
 
 int Cmy_sql::execute()
 {
@@ -430,6 +468,19 @@ int Cmy_sql::execute(void *p1, void *p2, void *p3)
 
 	return 0;
 }
+
+#if MYSQL_LIB_SUPPORT
+MYSQL_RES * Cmy_sql::store_result(void* mysql)//MYSQL_RES* STDCALL mysql_store_result(MYSQL* mysql);
+{
+	return mysql_store_result((MYSQL*)mysql);
+}
+#else
+MYSQL_RES * Cmy_sql::store_result(void* mysql)//MYSQL_RES* STDCALL mysql_store_result(MYSQL* mysql);
+{
+	return nullptr;
+}
+#endif
+
 
 int Cmy_sql::func(void *p)// callback function
 {

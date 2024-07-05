@@ -26,7 +26,7 @@ float Cnan::nanf_c(const char* tagp)
 	return nanf(tagp);
 }
 
-float Cnan::nanl(const char* tagp)
+double Cnan::nanl_c(const char* tagp)
 {
 	return nanl(tagp);
 }

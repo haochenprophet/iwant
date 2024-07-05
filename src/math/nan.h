@@ -13,7 +13,7 @@ namespace n_nan {
 		size_t my_size() { return sizeof(Cnan); }
 		static double nan_c(const char* tagp);
 		static float nanf_c(const char* tagp);
-		static float nanl(const char* tagp);
+		static double nanl_c(const char* tagp);
 
 
 

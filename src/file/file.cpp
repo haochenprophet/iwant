@@ -729,7 +729,7 @@ int Cfile::deal_cmd(int argc, char *argv[])
 #endif
 
 #if FILE_TEST
-#include "all_h_include.h"
+#include "all/all_h_include.h"
 int main(int argc, char *argv[])
 {
 	Cfile f;
