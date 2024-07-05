@@ -30,3 +30,4 @@ src/car/*.dll
 src/car/car.bat
 src.7z
 file.exe
+.vs
