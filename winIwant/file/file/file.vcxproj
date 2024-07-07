@@ -121,6 +121,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/D FILE_TEST=1 /D WINDOWS_OS=1 /D MYSQL_LIB_SUPPORT=0  /D _CRT_SECURE_NO_WARNINGS  /I "../../mysql-connector-c/include" /I "..\..\..\src" %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
