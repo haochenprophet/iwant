@@ -192,7 +192,8 @@ namespace n_object {
 		char * buf;
 		void * buf_owner;//point object this point 
 		int buf_len;
-
+		void * before;//object before: can use action before data or func, 
+		void * after;//object after: can use action after data or func, 
 		size_t row; //row 
 		size_t column;//column 
 		size_t line;//line number
@@ -423,6 +424,8 @@ namespace n_object {
 		virtual int rejoin_signal(int signum);
 		virtual int64_t copy(uint8_t* source, uint8_t* dest, int64_t size);
 		virtual int64_t copy(uint8_t* source, uint8_t* dest, uint8_t* source_end);
+		virtual int before_object(void* p = nullptr);//can use for object action before action list or sequence
+		virtual int after_object(void* p = nullptr);//can use for object action after action list or sequence
 		int register_all_signal(int signum=-1);
 		//Arithmetic Operators
 		void  operator+(Object *o) { this->addMe(o); }

@@ -42,6 +42,8 @@ namespace n_file {
 		int crc(char* crc_func =nullptr);
 		int md5(char* f_name);
 		int md5();
+		int before_md5(void* p = nullptr);
+		int after_md5(void* p = nullptr);
 		size_t f_write(char* f_name, void* addr, size_t size);
 		size_t f_write(char* f_name, uint8_t* start, uint8_t* end);
 		size_t f_write(char* f_name);//output filename
@@ -70,6 +72,7 @@ namespace n_file {
 		int do_action(void * a= nullptr);
 		int set_action_parameter(int argc, char* argv[]);//override the functions of the Objet class
 		int deal_cmd(int argc, char *argv[]);
+
 	};
 
 }

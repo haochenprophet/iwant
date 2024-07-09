@@ -71,8 +71,8 @@ namespace n_md5 {
 		int file(char* filename, uint8_t* result, int len);
 		int file(char* filename);
 
-		void display(uint8_t* p, int len); 
-		void display(); 
+		void display(uint8_t* p, int len, bool cr_lf = true);
+		void display(bool cr_lf = true);
 	};
 }
 

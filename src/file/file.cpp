@@ -199,14 +199,32 @@ int Cfile::md5(char* f_name)
 {
 	int ret;
 	Cmd5 md5;
+	this->before_md5(); //check before display information
 	ret=md5.file(f_name);
-	md5.display();
+	md5.display(false);
+	if (0 != this->after_md5()) { printf("\n"); }//check after display information
 	return ret;
 }
 
 int Cfile::md5()
 {
 	return this->md5((char*)this->f_name.c_str());
+}
+
+int Cfile::before_md5(void * p)
+{
+	if (this->before == nullptr && p == nullptr) { return -1; }
+	if (p != nullptr) { printf("%s", (char*)p); }
+	if (this->before != nullptr) { printf("%s", (char*)this->before); }
+	return 0;
+}
+
+int Cfile::after_md5(void* p)
+{
+	if (this->after == nullptr && p == nullptr) { return -1; }
+	if (p != nullptr) { printf("%s\n", (char*)p); }
+	if (this->after != nullptr) { printf("%s\n", (char*)this->after); }
+	return 0;
 }
 
 int Cfile::cat(size_t start, size_t size, DisplayType t)
@@ -687,6 +705,18 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 		}
 		else {// input error return 
 			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
+		}
+	}
+
+	//command:file.exe md5 <FileName> [before_print] [after_print]
+	if (this->action == (ACTION_T)FileAtcion::md5 )
+	{
+		if (argc > 3) { //uset before print string
+			this->before = argv[3]; //store to before point 
+		}
+
+		if (argc > 4) { //uset after print string
+			this->after = argv[4];
 		}
 	}
 	return 0;

@@ -206,17 +206,17 @@ int Cmd5::file(char* filename)
     return this->file(filename,this->md5_result,16);    
 }
 
-void Cmd5::display(uint8_t* p, int len)
+void Cmd5::display(uint8_t* p, int len,bool cr_lf)
 {
     for (int i = 0; i < len; ++i) {
         printf("%02X", p[i]);
     }
-    printf("\n");
+    if (cr_lf) { printf("\n"); }
 }
 
-void Cmd5::display()
+void Cmd5::display(bool cr_lf)
 {
-    this->display(this->md5_result,16);
+    this->display(this->md5_result,16, cr_lf);
 }
 
 #ifndef MD5_TEST

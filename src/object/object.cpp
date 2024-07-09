@@ -126,6 +126,8 @@ Object::Object()
 	this->row = 0;
 	this->column = 0;
 	this->line = 1;
+	this->before = nullptr;
+	this->after = nullptr;
 #if OBJECT_DEBUG >2
 	AT_LINE this->myName();
 #endif
@@ -1295,6 +1297,18 @@ int64_t Object::copy(uint8_t* source, uint8_t* dest, uint8_t* source_end)
 {
 	return this->copy(source, dest, (int64_t)(source_end - source));
 }
+
+int Object::before_object(void* p)
+{
+	OUT_LINE;
+	return 0;
+}
+int Object::after_object(void* p)
+{
+	OUT_LINE;
+	return 0;
+}
+
 //return{<0 do nothing -1:nofind -2 empty ;  =0 pass ; >0 error}
 int Object::dispatch_runme(void * myname, void *p)
 {

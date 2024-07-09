@@ -45,7 +45,7 @@
 //crc
 #define FILE_CRC_HELP   "crc   <FileName> [math]"
 //md5
-#define FILE_MD5_HELP   "md5   <FileName>"
+#define FILE_MD5_HELP   "md5   <FileName> [before_print] [after_print]"
 //find
 #define FILE_FIND_HELP   "find <dir> <term>"
 #define FILE_FD_HELP   "fd <dir> <term>"
