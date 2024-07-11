@@ -23,8 +23,8 @@ namespace n_text_encode {
 	public :
 		bool isMe(TextEncodeID id);
 		bool isMe(int id);
-		int set_name(TextEncodeID id);
-		char * my_name();
+		char* my_name();
+		int set_encode(TextEncodeID id);
 	};
 
 	class Ctext_encode :public Object

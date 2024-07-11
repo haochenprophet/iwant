@@ -27,7 +27,7 @@ char * TextEncode:: my_name()
 	return this->name;
 }
 
-int TextEncode::set_name(TextEncodeID id)
+int TextEncode::set_encode(TextEncodeID id)
 {
 	int n = 0;
 	for (; n < TEXT_ENCODE_COUNT; n++)
@@ -35,6 +35,7 @@ int TextEncode::set_name(TextEncodeID id)
 		if (text_encode_tab[n].isMe(id))
 		{
 			this->name = text_encode_tab[n].my_name();
+			this->id = id;
 			return 0;
 		}
 	}
