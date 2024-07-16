@@ -11,13 +11,16 @@ namespace n_file {
 	class Cfile :public CmyMemory
 	{
 	public:
-		string f_name;
-		string s_output_fname;//output file name
+		string f_name; //target file 
+		string s_output_fname;//output file name ..swap out
 		std::fstream ap_fs;//for Cfile::f_append()
+		char* src_file;//source file for swap
+		char* target_file;//source file for swap
 		char* fname_left;//compare () file 1 default use left
 		char* fname_right;//compare ()file 2 default use right
 		char* diff_file;//out put diff to diff file 
 		char* crc_func;//for crc() cmd 
+		size_t swap_start, swap_size;
 		DisplayType display_type;
 	public:
 		Cfile();
@@ -69,10 +72,11 @@ namespace n_file {
 		int merge(int argc, char* argv[]);//add file[1]...file[n] outfile
 		int replace(int argc, char* argv[]);
 		int insert(int argc, char* argv[]);
+		int swap(char* source_file, char* target_file, long start = 0, long size = -1, char* out_file = (char*)"out"); //src ==> target   to out_file
+		int swap();
 		int do_action(void * a= nullptr);
 		int set_action_parameter(int argc, char* argv[]);//override the functions of the Objet class
 		int deal_cmd(int argc, char *argv[]);
-
 	};
 
 }

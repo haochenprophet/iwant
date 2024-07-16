@@ -24,6 +24,7 @@ enum class FileAtcionClass
 	find,
 	list,
 	diff,
+	swap,
 };
 
 enum class FileAtcion {
@@ -69,6 +70,8 @@ enum class FileAtcion {
 	ll,
 	different,
 	diff,
+	swap,
+	sw
 };
 
 #endif

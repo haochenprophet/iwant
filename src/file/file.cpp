@@ -12,11 +12,16 @@ int Cfile::my_init(void* p)
 {
 	this->name = "Cfile";
 	this->alias = "file";
+	this->src_file = nullptr;//swap command
+	this->target_file = nullptr;//swap command
 	this->fname_left = nullptr;
 	this->fname_right = nullptr;
 	this->diff_file = (char * )"diff.log";
 	this->crc_func = nullptr;
 	this->display_type = DisplayType::string;
+	this->swap_start = 0;
+	this->swap_size = 0;
+	this->s_output_fname = (char*)"out_file";
 	return 0;
 }
 
@@ -239,6 +244,8 @@ int Cfile::cat(size_t start, size_t size, DisplayType t)
 
 int Cfile::cut(char *f_name,long start ,long size,char *out_file)
 {
+	if (!this->silent) { printf("cut file:%s from=0x%08lX size=0x%08lX out=%s\n", f_name, start, size, out_file); }
+
 	this->f_read(f_name); 
 
 	if(start >this->size)
@@ -587,6 +594,48 @@ int Cfile::insert(int argc, char* argv[])
 	return i.insert(argc, argv);
 }
 
+int Cfile::swap(char* source_file, char* target_file, long start, long size, char* out_file) //src ==> target   to out_file
+{
+	Cfile src;
+	Cfile target;
+
+	if (0 != src.f_read(source_file)) { return -1; }
+	if (0 != target.f_read(target_file)) { return -1; }
+
+	if (start > target.size ) { return -1; }
+
+	FILE* fp;
+	size_t ret;
+	if (!(fp = fopen(out_file, "wb"))) { 	//step 1 create outfile
+		printf("Error:can not create the %s file.\n", out_file);
+		return -1;
+	}
+	
+	size_t write_size = (size_t) start;
+	ret = fwrite(target.addr, 1, write_size, fp);//step 2 write : [taget[0] , target[start])
+
+	write_size = size;
+	if (size == -1) { write_size = src.size; }
+	ret = fwrite(src.addr, 1, write_size, fp);//step 3 write : [src[0] , src[size])
+
+
+	if (start + size < target.size)
+	{
+		write_size = target.size - start - size;
+		ret = fwrite(&target.addr[start+ size], 1, write_size, fp);//write : [target[start+src.size] , target[size])
+	}
+
+	fclose(fp);
+	return 0;
+
+}
+
+int Cfile::swap()
+{
+	if (this->src_file == nullptr || this->target_file == nullptr) { return -1; }
+	return this->swap(this->src_file, this->target_file, (long)this->swap_start, (long)this->swap_size, (char *)this->s_output_fname.c_str());
+}
+
 int Cfile::do_action(void * a)
 {
 	if (this->action == (ACTION_T)FileAtcion::read) this->set_main_ret(this->cat());
@@ -613,7 +662,7 @@ int Cfile::do_action(void * a)
 	if (this->action == (ACTION_T)FileAtcion::find || this->action == (ACTION_T)FileAtcion::fd) this->set_main_ret((int)this->find(this->cmd.argv[2], this->cmd.argv[3]));
 	if (this->action == (ACTION_T)FileAtcion::fr || this->action == (ACTION_T)FileAtcion::find_replace) this->set_main_ret((int)this->find_relpace(this->cmd.argv[2], this->cmd.argv[3], this->cmd.argv[4], this->cmd.argv[5]));
 	if (this->action == (ACTION_T)FileAtcion::list || this->action == (ACTION_T)FileAtcion::dir || this->action == (ACTION_T)FileAtcion::ll || this->action == (ACTION_T)FileAtcion::ls) this->set_main_ret((int)this->list (this->cmd.argv[2], this->cmd.argv[3]));
-
+	if (this->action == (ACTION_T)FileAtcion::swap||this->action == (ACTION_T)FileAtcion::sw) this->set_main_ret((int)this->swap());
 	return 0;
 }
 
@@ -623,6 +672,7 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 {
 	//init file action parameter; cmd:cat /cut option:  <FileName> [start] [size] [outfilename]
 	this->f_name = argv[2];
+	char * endptr;
 	//
 	if (this->action == (ACTION_T)FileAtcion::crc)
 	{
@@ -633,10 +683,10 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 	if (this->action == (ACTION_T)FileAtcion::cut)
 	{
 		//[start] ,this->range_amount.data.l,(char *)this->s_output_fname.c_str());
-		if (argc > 3) { this->range_start.data.l = (long)atoll(argv[3]); }
+		if (argc > 3) { this->range_start.data.l = (long)strtoll(argv[3],&endptr,0); }
 		else { this->range_start.data.l = 0; }
 		//[size]
-		if (argc > 4) { this->range_amount.data.l = (long)atoll(argv[4]); }
+		if (argc > 4) { this->range_amount.data.l = (long)strtoll(argv[4], &endptr, 0); }
 		else { this->range_amount.data.l = -1; }
 		//[outfilename]
 		if (argc > 5) { this->s_output_fname = argv[5]; }
@@ -646,10 +696,10 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 	//set file command cat parameter
 	if (this->action == (ACTION_T)FileAtcion::cat)
 	{
-		if (argc > 3) { this->range_start.data.l = (long)atoll(argv[3]); }
+		if (argc > 3) { this->range_start.data.l = (long)strtoll(argv[3], &endptr, 0); }
 		else { this->range_start.data.l = 0; }//default min
 		//[size]
-		if (argc > 4) { this->range_amount.data.l = (long)atoll(argv[4]); }
+		if (argc > 4) { this->range_amount.data.l = (long)strtoll(argv[4], &endptr, 0); }
 		else { this->range_amount.data.l = -1; }//default max
 		//[DisplayType={string,hex,hex_offset}
 		if (argc > 5) {
@@ -719,6 +769,21 @@ int Cfile::set_action_parameter(int argc, char* argv[])//override the functions 
 			this->after = argv[4];
 		}
 	}
+
+	//command:file.exe swap   <source_file> <target_file> <start_offset> <size> [out_file]
+	if (this->action == (ACTION_T)FileAtcion::swap|| this->action == (ACTION_T)FileAtcion::sw)
+	{
+		if (argc < 6 ) {
+			this->action_help(file_action, (int)FILE_ACTION_COUNT); return -1;
+		}
+
+		this->src_file = argv[2];
+		this->target_file = argv[3];
+		this->swap_start = (size_t)strtoll(argv[4], &endptr, 0);
+		this->swap_size = (size_t)strtoll(argv[5], &endptr, 0);
+		if (argc > 6) { this->s_output_fname = argv[6]; }
+	}
+
 	return 0;
 }
 

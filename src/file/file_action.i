@@ -62,6 +62,10 @@
 #define FILE_DIFFERENT_HELP   "different   <FileName1> <FileName2>"
 #define FILE_DIFF_HELP        "diff  <FileName1> <FileName2>"
 
+//char* source_file, char* target_file, long start = 0, long size = -1, char* out_file = (char*)"out"
+#define FILE_SWAP_HELP   "swap   <source_file> <target_file> <start_offset> <size> [out_file]"
+#define FILE_SW_HELP     "sw     <source_file> <target_file> <start_offset> <size> [out_file]"
+
 Action file_action[] = {
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::read , EatcionRelation::equal , nullptr ,(char *)"read",(char *)FILE_READ_HELP},
 	{ (int)FileAtcionClass::read,(ACTION_T)FileAtcion::cat ,  EatcionRelation::equal , nullptr ,(char *)"cat",(char *)FILE_CAT_HELP},
@@ -119,6 +123,9 @@ Action file_action[] = {
 //different
 	{ (int)FileAtcionClass::diff,(ACTION_T)FileAtcion::different,      EatcionRelation::equal , nullptr ,(char *)"different",     (char *)FILE_DIFFERENT_HELP},
 	{ (int)FileAtcionClass::diff,(ACTION_T)FileAtcion::diff,           EatcionRelation::equal , nullptr ,(char *)"diff",         (char *)FILE_DIFF_HELP},
+//swap
+	{ (int)FileAtcionClass::swap,(ACTION_T)FileAtcion::swap,      EatcionRelation::equal , nullptr ,(char*)"swap",     (char*)FILE_SWAP_HELP},
+	{ (int)FileAtcionClass::swap,(ACTION_T)FileAtcion::sw,        EatcionRelation::equal , nullptr ,(char*)"sw",       (char*)FILE_SW_HELP},
 	//end:0 is the table end anchor
 	{ 0,0,EatcionRelation::none,nullptr },
 };
