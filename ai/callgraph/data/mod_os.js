@@ -1,0 +1,1 @@
+window.CG.mod_os = {"f":[["Cos","Cos","os/os.h",36,"ctor","Cos()"],["init_winsock","Cos","os/os.h",36,"method","int init_winsock()"],["exit_winsock","Cos","os/os.h",36,"method","void exit_winsock()"],["~Cos","Cos","os/os.h",36,"dtor","Cos::~Cos()"]],"e":[[0,1,"this",1,"this"],[3,2,"this",1,"this"]],"x":[],"xi":[]};

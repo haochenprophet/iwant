@@ -1,0 +1,1 @@
+window.CG.mod_stratagem = {"f":[["Cstratagem","Cstratagem","stratagem/stratagem.h",7,"ctor","Cstratagem()"],["my_init","Cstratagem","stratagem/stratagem.h",7,"method","int my_init(void *p=nullptr)"],["~Cstratagem","Cstratagem","stratagem/stratagem.h",7,"dtor","Cstratagem::~Cstratagem()"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

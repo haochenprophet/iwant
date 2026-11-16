@@ -1,0 +1,1 @@
+window.CG.mod_uri = {"f":[["Curi","Curi","uri/uri.h",20,"ctor","Curi()"],["func","Curi","uri/uri.h",20,"method","int func(void *p=nullptr)"],["Curl","Curl","uri/url.h",8,"ctor","Curl()"]],"e":[],"x":[],"xi":[]};

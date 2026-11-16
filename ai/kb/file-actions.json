@@ -1,0 +1,550 @@
+{
+  "package": "file",
+  "source": "src/file",
+  "generated": "2026-11-16",
+  "package_root_class": "Cfile",
+  "namespace": "n_file",
+  "hierarchy": [
+    "package",
+    "namespace",
+    "class",
+    "command",
+    "action"
+  ],
+  "files": {
+    "file.h": "Cfile 声明：26 个参数槽 + 43 个方法 + 协议三件",
+    "file.cpp": "Cfile 实现：do_action / set_action_parameter / deal_cmd + 业务方法",
+    "file_action.h": "两个 enum：FileAtcionClass（13 个处理器）+ FileAtcion（44 个动作，含 none）",
+    "file_action.i": "43 条 HELP 宏 + Action file_action[] + FILE_ACTION_COUNT",
+    "fileAllot.h": "CfileAllot（worker）+ CfileMem（POD）",
+    "fileAllot.cpp": "整文件读入 malloc / freeMe / token",
+    "Makefile": "MK_TAG=file"
+  },
+  "counts": {
+    "actions": 43,
+    "classes": 3,
+    "command_objects": 1,
+    "workers": 2
+  },
+  "action_value_style": "ordinal (none,read,cat,...) — 不是 BITn 位掩码",
+  "actions": [
+    {
+      "enum_id": "read",
+      "action_class": "read",
+      "relation": "equal",
+      "command": "read",
+      "help_macro": "FILE_READ_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "cat",
+      "action_class": "read",
+      "relation": "equal",
+      "command": "cat",
+      "help_macro": "FILE_CAT_HELP",
+      "argv": [
+        "file",
+        "start",
+        "size",
+        "display_type"
+      ]
+    },
+    {
+      "enum_id": "cut",
+      "action_class": "rd_wr",
+      "relation": "equal",
+      "command": "cut",
+      "help_macro": "FILE_CUT_HELP",
+      "argv": [
+        "file",
+        "start",
+        "size",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "copy",
+      "action_class": "rd_wr",
+      "relation": "equal",
+      "command": "copy",
+      "help_macro": "FILE_COPY_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "cp",
+      "action_class": "rd_wr",
+      "relation": "equal",
+      "command": "cp",
+      "help_macro": "FILE_CP_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "create",
+      "action_class": "create",
+      "relation": "equal",
+      "command": "create",
+      "help_macro": "FILE_CREATE_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "add",
+      "action_class": "create",
+      "relation": "equal",
+      "command": "add",
+      "help_macro": "FILE_ADD_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "remove",
+      "action_class": "remove",
+      "relation": "equal",
+      "command": "remove",
+      "help_macro": "FILE_REMOVE_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "rm",
+      "action_class": "remove",
+      "relation": "equal",
+      "command": "rm",
+      "help_macro": "FILE_RM_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "_delete",
+      "action_class": "remove",
+      "relation": "equal",
+      "command": "delete",
+      "help_macro": "FILE_DELETE_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "del",
+      "action_class": "remove",
+      "relation": "equal",
+      "command": "del",
+      "help_macro": "FILE_DEL_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "rename",
+      "action_class": "rename",
+      "relation": "equal",
+      "command": "rename",
+      "help_macro": "FILE_RENAME_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "rn",
+      "action_class": "rename",
+      "relation": "equal",
+      "command": "rn",
+      "help_macro": "FILE_RN_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "move",
+      "action_class": "rename",
+      "relation": "equal",
+      "command": "move",
+      "help_macro": "FILE_MOVE_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "mv",
+      "action_class": "rename",
+      "relation": "equal",
+      "command": "mv",
+      "help_macro": "FILE_MV_HELP",
+      "argv": [
+        "file",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "exist",
+      "action_class": "exist",
+      "relation": "equal",
+      "command": "exist",
+      "help_macro": "FILE_EXIST_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "ex",
+      "action_class": "exist",
+      "relation": "equal",
+      "command": "ex",
+      "help_macro": "FILE_EX_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "size",
+      "action_class": "size",
+      "relation": "equal",
+      "command": "size",
+      "help_macro": "FILE_SIZE_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "sz",
+      "action_class": "size",
+      "relation": "equal",
+      "command": "sz",
+      "help_macro": "FILE_SZ_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "merge",
+      "action_class": "merge",
+      "relation": "equal",
+      "command": "merge",
+      "help_macro": "FILE_MERGE_HELP",
+      "argv": [
+        "file...",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "merge_op",
+      "action_class": "merge",
+      "relation": "equal",
+      "command": "+",
+      "help_macro": "FILE_MERGE_OP_HELP",
+      "argv": [
+        "file...",
+        "out_file"
+      ]
+    },
+    {
+      "enum_id": "replace",
+      "action_class": "replace",
+      "relation": "equal",
+      "command": "replace",
+      "help_macro": "FILE_REPLACE_HELP",
+      "argv": [
+        "in",
+        "out",
+        "find",
+        "replace",
+        "type(S|F)",
+        "end_find?",
+        "1/0?"
+      ]
+    },
+    {
+      "enum_id": "rp",
+      "action_class": "replace",
+      "relation": "equal",
+      "command": "rp",
+      "help_macro": "FILE_RP_HELP",
+      "argv": [
+        "in",
+        "out",
+        "find",
+        "replace",
+        "type(S|F)",
+        "end_find?",
+        "1/0?"
+      ]
+    },
+    {
+      "enum_id": "compare",
+      "action_class": "compare",
+      "relation": "equal",
+      "command": "compare",
+      "help_macro": "FILE_COMPARE_HELP",
+      "argv": [
+        "file1",
+        "file2"
+      ]
+    },
+    {
+      "enum_id": "fc",
+      "action_class": "compare",
+      "relation": "equal",
+      "command": "fc",
+      "help_macro": "FILE_FC_HELP",
+      "argv": [
+        "file1",
+        "file2"
+      ]
+    },
+    {
+      "enum_id": "insert",
+      "action_class": "insert",
+      "relation": "equal",
+      "command": "insert",
+      "help_macro": "FILE_INSERT_HELP",
+      "argv": [
+        "in",
+        "out",
+        "data",
+        "type(F|S)",
+        "offset/line/find",
+        "mode(L|O|B|A)"
+      ]
+    },
+    {
+      "enum_id": "ins",
+      "action_class": "insert",
+      "relation": "equal",
+      "command": "ins",
+      "help_macro": "FILE_INS_HELP",
+      "argv": [
+        "in",
+        "out",
+        "data",
+        "type(F|S)",
+        "offset/line/find",
+        "mode(L|O|B|A)"
+      ]
+    },
+    {
+      "enum_id": "checksum",
+      "action_class": "checksum",
+      "relation": "equal",
+      "command": "checksum",
+      "help_macro": "FILE_CHECKSUM_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "chksum",
+      "action_class": "checksum",
+      "relation": "equal",
+      "command": "chksum",
+      "help_macro": "FILE_CHKSUM_HELP",
+      "argv": [
+        "file"
+      ]
+    },
+    {
+      "enum_id": "crc",
+      "action_class": "crc",
+      "relation": "equal",
+      "command": "crc",
+      "help_macro": "FILE_CRC_HELP",
+      "argv": [
+        "file",
+        "crc_func?"
+      ]
+    },
+    {
+      "enum_id": "md5",
+      "action_class": "md5",
+      "relation": "equal",
+      "command": "md5",
+      "help_macro": "FILE_MD5_HELP",
+      "argv": [
+        "file",
+        "before?",
+        "after?"
+      ]
+    },
+    {
+      "enum_id": "find",
+      "action_class": "find",
+      "relation": "equal",
+      "command": "find",
+      "help_macro": "FILE_FIND_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "fd",
+      "action_class": "find",
+      "relation": "equal",
+      "command": "fd",
+      "help_macro": "FILE_FD_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "find_replace",
+      "action_class": "find",
+      "relation": "equal",
+      "command": "find_relpace",
+      "help_macro": "FILE_FIND_RELPACE_HELP",
+      "argv": [
+        "dir",
+        "term",
+        "find",
+        "target"
+      ]
+    },
+    {
+      "enum_id": "fr",
+      "action_class": "find",
+      "relation": "equal",
+      "command": "fr",
+      "help_macro": "FILE_FR_HELP",
+      "argv": [
+        "dir",
+        "term",
+        "find",
+        "target"
+      ]
+    },
+    {
+      "enum_id": "list",
+      "action_class": "list",
+      "relation": "equal",
+      "command": "list",
+      "help_macro": "FILE_LIST_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "dir",
+      "action_class": "list",
+      "relation": "equal",
+      "command": "dir",
+      "help_macro": "FILE_DIR_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "ll",
+      "action_class": "list",
+      "relation": "equal",
+      "command": "ll",
+      "help_macro": "FILE_LL_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "ls",
+      "action_class": "list",
+      "relation": "equal",
+      "command": "ls",
+      "help_macro": "FILE_LS_HELP",
+      "argv": [
+        "dir",
+        "term"
+      ]
+    },
+    {
+      "enum_id": "different",
+      "action_class": "diff",
+      "relation": "equal",
+      "command": "different",
+      "help_macro": "FILE_DIFFERENT_HELP",
+      "argv": [
+        "file1",
+        "file2",
+        "diff_log?"
+      ]
+    },
+    {
+      "enum_id": "diff",
+      "action_class": "diff",
+      "relation": "equal",
+      "command": "diff",
+      "help_macro": "FILE_DIFF_HELP",
+      "argv": [
+        "file1",
+        "file2",
+        "diff_log?"
+      ]
+    },
+    {
+      "enum_id": "swap",
+      "action_class": "swap",
+      "relation": "equal",
+      "command": "swap",
+      "help_macro": "FILE_SWAP_HELP",
+      "argv": [
+        "src",
+        "target",
+        "start",
+        "size",
+        "out_file?"
+      ]
+    },
+    {
+      "enum_id": "sw",
+      "action_class": "swap",
+      "relation": "equal",
+      "command": "sw",
+      "help_macro": "FILE_SW_HELP",
+      "argv": [
+        "src",
+        "target",
+        "start",
+        "size",
+        "out_file?"
+      ]
+    }
+  ],
+  "argv_layout": {
+    "argv[0]": "对象名（deal_cmd 后为 file）",
+    "argv[1]": "动作词",
+    "argv[2..n]": "动作参数，见每条 actions[].argv"
+  },
+  "depends_on": [
+    "object(经 memory)",
+    "memory(myMemory)",
+    "output(display)",
+    "algorithm(replace/insert/search)",
+    "math(crc/md5)",
+    "path(Cpath)",
+    "text(text_line)"
+  ],
+  "used_by": [
+    "class",
+    "collect",
+    "algorithm(replace/insert)",
+    "code",
+    "stock",
+    "main",
+    "math(sha/sum)"
+  ]
+}

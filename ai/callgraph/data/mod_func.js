@@ -1,0 +1,1 @@
+window.CG.mod_func = {"f":[["Cfunc","Cfunc","func/func.h",7,"ctor","Cfunc()"],["my_init","Cfunc","func/func.h",7,"method","int my_init(void *p=nullptr)"],["~Cfunc","Cfunc","func/func.h",7,"dtor","Cfunc::~Cfunc()"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

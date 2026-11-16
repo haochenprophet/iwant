@@ -1,0 +1,1 @@
+window.CG.mod_company = {"f":[["Ccompany","Ccompany","company/company.h",7,"ctor","Ccompany()"],["my_init","Ccompany","company/company.h",7,"method","int my_init(void *p=nullptr)"],["~Ccompany","Ccompany","company/company.h",7,"dtor","Ccompany::~Ccompany()"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

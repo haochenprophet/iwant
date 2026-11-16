@@ -1,0 +1,1 @@
+window.CG.mod_test = {"f":[["Ctest","Ctest","test/test.h",7,"ctor","Ctest()"],["my_init","Ctest","test/test.h",7,"method","int my_init(void *p=nullptr)"],["~Ctest","Ctest","test/test.h",7,"dtor","Ctest::~Ctest()"],["main","","test/test.cpp",26,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[[3,"global",1,"free"],[3,"object",1,"cross_class"]],"xi":[]};

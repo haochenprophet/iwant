@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "project": "iwant",
+    "root": "E:/github/iwant",
+    "generated": "2026-11-12",
+    "measured": {
+      "srcFiles": 6201,
+      "srcLines": 122667,
+      "classes": 3117,
+      "packages": 101
+    },
+    "lastCommit": {
+      "hash": "cd156655",
+      "date": "2024-07-16",
+      "message": "Add Cfile::swap()"
+    },
+    "commits": 797
+  },
+  "layers": {
+    "L0_core": [
+      "object",
+      "action",
+      "bit",
+      "data",
+      "global",
+      "all"
+    ],
+    "L1_language": [
+      "keywords",
+      "instruction",
+      "operator",
+      "cstdio",
+      "cstdlib",
+      "ctime",
+      "ctype",
+      "math",
+      "sql",
+      "code"
+    ],
+    "L2_infra": [
+      "file",
+      "path",
+      "text",
+      "string",
+      "tree",
+      "time",
+      "uuid",
+      "memory",
+      "os",
+      "syntax",
+      "template",
+      "symbol",
+      "message",
+      "socket",
+      "http",
+      "smtp",
+      "ftp",
+      "openssl",
+      "my_sql",
+      "public",
+      "error",
+      "debug",
+      "test",
+      "task",
+      "input",
+      "output"
+    ],
+    "L3_domain": [
+      "car",
+      "satellite",
+      "airplane",
+      "warship",
+      "rocket",
+      "mars",
+      "ocean",
+      "home",
+      "spaceport",
+      "materiel",
+      "life",
+      "money",
+      "organization",
+      "company",
+      "sensor",
+      "radar",
+      "security",
+      "recognition",
+      "hardware",
+      "gui",
+      "algorithm",
+      "stock",
+      "deploy",
+      "earth",
+      "power",
+      "plan",
+      "status",
+      "size",
+      "step",
+      "wait",
+      "warning",
+      "die",
+      "locate",
+      "engine",
+      "control",
+      "command",
+      "collect",
+      "stratagem",
+      "but",
+      "block",
+      "key_value",
+      "node",
+      "relation",
+      "register",
+      "source",
+      "field",
+      "func",
+      "make",
+      "system",
+      "dictionary",
+      "database",
+      "deploy"
+    ],
+    "L4_toolchain": [
+      "code",
+      "class",
+      "main",
+      "build",
+      "make",
+      "deploy"
+    ]
+  },
+  "core": {
+    "rootClass": "Object",
+    "bases": [
+      "Osetting",
+      "Ouuid",
+      "Otime",
+      "Orange"
+    ],
+    "dispatch": "src/object/object.cpp:1437 Object::dispatch_cmd",
+    "dealCmd": "src/object/object.cpp:1470 Object::deal_cmd",
+    "actionType": "src/action/action_type.h",
+    "actionBits": 64,
+    "globalRegistry": {
+      "header": "src/all/all_h_include.h",
+      "instances": "src/global/g_code.i",
+      "mount": "src/global/g_code_func.i",
+      "packagesWithGCode": [
+        "cstdio",
+        "cstdlib",
+        "ctime",
+        "ctype",
+        "math",
+        "message",
+        "operator"
+      ]
+    }
+  },
+  "codegen": {
+    "templates": "src/template/temp_def.h",
+    "entry": "src/code/code.cpp (main under #if CODE_TEST)",
+    "commands": [
+      {
+        "cmd": "code class <tag>",
+        "impl": "Cclass::create",
+        "effect": "生成 <tag>.h/.cpp 骨架"
+      },
+      {
+        "cmd": "code main create_main <tag>",
+        "impl": "Cmain::create_main_cmd",
+        "effect": "补 #if TAG_TEST 测试 main"
+      },
+      {
+        "cmd": "code <src_path> <pkg> <action>",
+        "impl": "Ccode::deal_cmd",
+        "effect": "生成 <pkg>_g_code.h/.i/_func.i"
+      }
+    ],
+    "staleAction": "create_all_h 已声明未实现（src/build/build_action.i vs build.cpp）"
+  },
+  "build": {
+    "linux": {
+      "makefile": "src/Makefile",
+      "script": "build.sh",
+      "entryMacro": "-D$(main)_TEST=1",
+      "output": "src/iwant -> ./iwant"
+    },
+    "windows": {
+      "solutions": [
+        "winIwant/winIwant.sln",
+        "winIwant/winIwant-vs2022.sln"
+      ],
+      "runtimeDeps": [
+        "libmysql.dll"
+      ]
+    },
+    "compiledPackages": [
+      "<src root>",
+      "math",
+      "file",
+      "code",
+      "stock",
+      "time",
+      "symbol",
+      "make",
+      "build",
+      "my_sql",
+      "home",
+      "syntax"
+    ]
+  },
+  "storage": {
+    "schema": "database/organization.sql",
+    "table": "organization",
+    "abstraction": "src/public/sql.h Csql",
+    "implementation": "src/my_sql/my_sql.h Cmy_sql",
+    "api": "libmysqlclient (MYSQL/MYSQL_RES/MYSQL_ROW)"
+  },
+  "packages": {
+    "object": {
+      "files": 6,
+      "lines": 2106,
+      "classes": 16,
+      "role": "内核：Object/Osetting/家族/action/内存/模板替换"
+    },
+    "code": {
+      "files": 134,
+      "lines": 2951,
+      "classes": 67,
+      "role": "代码生成器词汇表"
+    },
+    "class": {
+      "files": 2,
+      "lines": 136,
+      "classes": 1,
+      "role": "元类：造 .h/.cpp"
+    },
+    "main": {
+      "files": 3,
+      "lines": 118,
+      "classes": 1,
+      "role": "元类：补测试 main"
+    },
+    "instruction": {
+      "files": 1902,
+      "lines": 26628,
+      "classes": 951,
+      "role": "x86/AVX 指令词条"
+    },
+    "keywords": {
+      "files": 524,
+      "lines": 6330,
+      "classes": 262,
+      "role": "多语言关键字词条"
+    },
+    "car": {
+      "files": 326,
+      "lines": 6509,
+      "classes": 163,
+      "role": "汽车域词条"
+    },
+    "satellite": {
+      "files": 336,
+      "lines": 6709,
+      "classes": 168,
+      "role": "卫星域词条"
+    },
+    "security": {
+      "files": 362,
+      "lines": 7240,
+      "classes": 181,
+      "role": "安全域词条"
+    },
+    "sql": {
+      "files": 370,
+      "lines": 4440,
+      "classes": 185,
+      "role": "SQL 关键字词条"
+    },
+    "math": {
+      "files": 136,
+      "lines": 5055,
+      "classes": 67,
+      "role": "数学函数对象（已注册）"
+    },
+    "my_sql": {
+      "files": 3,
+      "lines": 650,
+      "classes": 1,
+      "role": "MySQL 封装"
+    },
+    "file": {
+      "files": 5,
+      "lines": 1053,
+      "classes": 3,
+      "role": "文件读写"
+    },
+    "path": {
+      "files": 2,
+      "lines": 287,
+      "classes": 1,
+      "role": "路径/URL 解析"
+    }
+  },
+  "pitfalls": [
+    "P1 include/ 是 2024-05 过期扁平镜像，勿用",
+    "P2 all_h_include.h 3067 条 include 全为反斜杠，Linux/GCC 不可用",
+    "P3 all_h_include.h 缺 deploy 与 text 两个包",
+    "P4 忘记 main= 会链接失败（无 main）",
+    "P5 code build create_all_h 是空动作，实际靠 batch 脚本；该 .bat 有 tree_math.log 拼写 bug",
+    "P6 Ccode 4KB 固定缓冲，分配失败即 exit(-1)，包名过长 sprintf 溢出",
+    "P7 信号注册是全局假象（object_global + 空 rejoin_signal）",
+    "P8 name 被追加自增 id，alias 不变",
+    "P9 -L/usr/lib/mysql 硬编码",
+    "P10 工作区 14.9GB 未跟踪产物，全量扫描必须先排除 x64/Debug/Release",
+    "P11 中文 md 是 UTF-8，PowerShell 默认 ANSI 会乱码",
+    "P12 dispatch_cmd 全树线性遍历 O(n)",
+    "P13 ai/ 未被 git 跟踪",
+    "P14 根目录 file.exe/file.7z 易误提交"
+  ]
+}

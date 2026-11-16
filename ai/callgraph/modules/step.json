@@ -1,0 +1,1 @@
+{"module":"step","stats":{"functions":2,"intra":1,"out":0,"in":0,"unresolved":0,"external":0,"indirect":0,"macro":0,"callsites":1},"functions":["M|step|Cstep|Cstep","M|step|Cstep|my_init"],"edges":[{"s":"M|step|Cstep|Cstep","t":"M|step|Cstep|my_init","type":"this","n":1}],"cross_in":{},"cross_out":{},"unresolved_count":0,"external_count":0,"indirect_count":0}

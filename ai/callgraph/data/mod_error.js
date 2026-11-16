@@ -1,0 +1,1 @@
+window.CG.mod_error = {"f":[["Cerror","Cerror","error/error.h",7,"ctor","Cerror()"],["my_init","Cerror","error/error.h",7,"method","int my_init(void *p=nullptr)"],["~Cerror","Cerror","error/error.h",7,"dtor","Cerror::~Cerror()"],["main","","error/error.cpp",25,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

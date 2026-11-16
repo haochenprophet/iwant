@@ -1,0 +1,695 @@
+# src/data
+
+> 统计: 3 文件 / 1692 行 / 5 类 / 469 方法 / 174 自由函数 / 39 成员变量 / 1 全局变量 / 3 宏 / 2 typedef / 1 枚举
+
+## data/data.cpp (1084 行)
+
+### 宏 #define (1)
+- `data_type_token_count` = (sizeof(data_type_token)/sizeof(CdataTypeToken))  `L41`
+
+### 函数 (174)
+- `CdataTypeToken::isme()` — 定义  `L43`
+- `Cdata::Cdata()` — 定义  `L61`
+- `Cdata::Cdata()` — 定义  `L67`
+- `Udata::runme()` — 定义  `L71`
+- `Udata::set_by_type()` — 定义  `L82`
+- `Udata::get_by_type()` — 定义  `L117`
+- `Udata::cmp_by_type()` — 定义  `L152`
+- `Udata::and_by_type()` — 定义  `L187`
+- `Udata::or_by_type()` — 定义  `L222`
+- `Udata::not_by_type()` — 定义  `L257`
+- `Udata::set()` — 定义  `L292`
+- `Udata::set()` — 定义  `L298`
+- `Udata::set()` — 定义  `L304`
+- `Udata::set()` — 定义  `L310`
+- `Udata::set()` — 定义  `L316`
+- `Udata::set()` — 定义  `L322`
+- `Udata::set()` — 定义  `L328`
+- `Udata::set()` — 定义  `L334`
+- `Udata::set()` — 定义  `L340`
+- `Udata::set()` — 定义  `L346`
+- `Udata::set()` — 定义  `L352`
+- `Udata::set()` — 定义  `L358`
+- `Udata::set()` — 定义  `L364`
+- `Udata::set()` — 定义  `L370`
+- `Udata::set()` — 定义  `L376`
+- `Udata::set()` — 定义  `L382`
+- `Udata::set()` — 定义  `L388`
+- `Udata::set()` — 定义  `L394`
+- `Udata::set()` — 定义  `L400`
+- `Udata::set()` — 定义  `L406`
+- `Udata::set()` — 定义  `L412`
+- `Udata::set()` — 定义  `L418`
+- `Udata::set()` — 定义  `L424`
+- `Udata::set()` — 定义  `L430`
+- `Udata::set()` — 定义  `L436`
+- `Udata::set()` — 定义  `L442`
+- `Udata::set()` — 定义  `L448`
+- `Udata::set()` — 定义  `L454`
+- `Udata::set()` — 定义  `L460`
+- `Udata::set()` — 定义  `L466`
+- `Udata::set()` — 定义  `L472`
+- `Udata::set()` — 定义  `L478`
+- `Udata::set()` — 定义  `L495`
+- `Udata::set()` — 定义  `L500`
+- `Udata::get()` — 定义  `L506`
+- `Udata::get()` — 定义  `L510`
+- `Udata::get()` — 定义  `L514`
+- `Udata::get()` — 定义  `L518`
+- `Udata::get()` — 定义  `L522`
+- `Udata::get()` — 定义  `L526`
+- `Udata::get()` — 定义  `L530`
+- `Udata::get()` — 定义  `L534`
+- `Udata::get()` — 定义  `L538`
+- `Udata::get()` — 定义  `L542`
+- `Udata::get()` — 定义  `L546`
+- `Udata::get()` — 定义  `L550`
+- `Udata::get()` — 定义  `L554`
+- `Udata::get()` — 定义  `L558`
+- `Udata::get()` — 定义  `L562`
+- `Udata::get()` — 定义  `L566`
+- `Udata::get()` — 定义  `L570`
+- `Udata::get()` — 定义  `L574`
+- `Udata::get()` — 定义  `L578`
+- `Udata::get()` — 定义  `L582`
+- `Udata::get()` — 定义  `L586`
+- `Udata::get()` — 定义  `L590`
+- `Udata::get()` — 定义  `L594`
+- `Udata::get()` — 定义  `L598`
+- `Udata::get()` — 定义  `L602`
+- `Udata::get()` — 定义  `L606`
+- `Udata::get()` — 定义  `L610`
+- `Udata::get()` — 定义  `L614`
+- `Udata::get()` — 定义  `L618`
+- `Udata::get()` — 定义  `L623`
+- `Udata::get()` — 定义  `L630`
+- `Udata::cmp()` — 定义  `L637`
+- `Udata::cmp()` — 定义  `L642`
+- `Udata::cmp()` — 定义  `L647`
+- `Udata::cmp()` — 定义  `L652`
+- `Udata::cmp()` — 定义  `L657`
+- `Udata::cmp()` — 定义  `L662`
+- `Udata::cmp()` — 定义  `L667`
+- `Udata::cmp()` — 定义  `L672`
+- `Udata::cmp()` — 定义  `L677`
+- `Udata::cmp()` — 定义  `L682`
+- `Udata::cmp()` — 定义  `L687`
+- `Udata::cmp()` — 定义  `L692`
+- `Udata::cmp()` — 定义  `L697`
+- `Udata::cmp()` — 定义  `L702`
+- `Udata::cmp_t()` — 定义  `L708`
+- `Udata::cmp()` — 定义  `L721`
+- `Udata::cmp()` — 定义  `L725`
+- `Udata::cmp()` — 定义  `L729`
+- `Udata::cmp()` — 定义  `L733`
+- `Udata::cmp()` — 定义  `L737`
+- `Udata::cmp()` — 定义  `L741`
+- `Udata::cmp()` — 定义  `L745`
+- `Udata::cmp()` — 定义  `L749`
+- `Udata::cmp()` — 定义  `L753`
+- `Udata::cmp()` — 定义  `L757`
+- `Udata::cmp()` — 定义  `L761`
+- `Udata::cmp()` — 定义  `L765`
+- `Udata::cmp()` — 定义  `L769`
+- `Udata::cmp()` — 定义  `L773`
+- `Udata::cmp()` — 定义  `L778`
+- `Udata::cmp()` — 定义  `L783`
+- `Udata::cmp()` — 定义  `L787`
+- `Udata::and_t()` — 定义  `L792`
+- `and_()` — 定义  `L804`
+- `and_()` — 定义  `L808`
+- `and_()` — 定义  `L812`
+- `and_()` — 定义  `L816`
+- `and_()` — 定义  `L820`
+- `and_()` — 定义  `L824`
+- `and_()` — 定义  `L828`
+- `and_()` — 定义  `L832`
+- `and_()` — 定义  `L836`
+- `and_()` — 定义  `L840`
+- `and_()` — 定义  `L844`
+- `and_()` — 定义  `L848`
+- `and_()` — 定义  `L852`
+- `and_()` — 定义  `L856`
+- `and_()` — 定义  `L860`
+- `and_()` — 定义  `L864`
+- `and_()` — 定义  `L868`
+- `and_()` — 定义  `L872`
+- `and_()` — 定义  `L876`
+- `and_()` — 定义  `L880`
+- `and_()` — 定义  `L884`
+- `and_()` — 定义  `L888`
+- `and_()` — 定义  `L892`
+- `and_()` — 定义  `L896`
+- `and_()` — 定义  `L900`
+- `and_()` — 定义  `L904`
+- `and_()` — 定义  `L908`
+- `and_()` — 定义  `L912`
+- `and_()` — 定义  `L916`
+- `and_()` — 定义  `L920`
+- `and_()` — 定义  `L924`
+- `and_()` — 定义  `L928`
+- `Udata::or_t()` — 定义  `L932`
+- `or_()` — 定义  `L944`
+- `or_()` — 定义  `L948`
+- `or_()` — 定义  `L952`
+- `or_()` — 定义  `L956`
+- `or_()` — 定义  `L960`
+- `or_()` — 定义  `L964`
+- `or_()` — 定义  `L968`
+- `or_()` — 定义  `L972`
+- `or_()` — 定义  `L976`
+- `or_()` — 定义  `L980`
+- `or_()` — 定义  `L984`
+- `or_()` — 定义  `L988`
+- `or_()` — 定义  `L992`
+- `or_()` — 定义  `L996`
+- `or_()` — 定义  `L1000`
+- `or_()` — 定义  `L1004`
+- `or_()` — 定义  `L1008`
+- `or_()` — 定义  `L1012`
+- `or_()` — 定义  `L1016`
+- `or_()` — 定义  `L1020`
+- `or_()` — 定义  `L1024`
+- `or_()` — 定义  `L1028`
+- `or_()` — 定义  `L1032`
+- `or_()` — 定义  `L1036`
+- `or_()` — 定义  `L1040`
+- `or_()` — 定义  `L1044`
+- `or_()` — 定义  `L1048`
+- `or_()` — 定义  `L1052`
+- `or_()` — 定义  `L1056`
+- `or_()` — 定义  `L1060`
+- `or_()` — 定义  `L1064`
+- `or_()` — 定义  `L1068`
+- `main()` — 定义  `L1074`
+
+> 完整签名见 JSON。
+
+### 全局变量 (1)
+- `CdataTypeToken data_type_token`  `L4`
+
+## data/data.h (592 行)
+
+### 宏 #define (1)
+- `DATA_H`（无值，通常为头文件守卫）  `L2`
+
+### 枚举 enum class UdataType   `L53`
+- 共 32 个枚举常量（详情见 JSON）
+
+### typedef / using (2)
+- `typedef struct data_buffer;`  `L15`
+- `typedef union u_data;`  `L51`
+
+### 类 (4)
+#### n_data::data_buffer_struct (typedef 别名 `data_buffer`)  `L11`  `struct`
+- 成员变量 (2): `void* start`、`void* end`
+
+#### n_data::union_data (typedef 别名 `u_data`)  `L17`  `union`
+- 成员变量 (32): `bool b`、`char c`、`char uc`、`wchar_t wc`、`short s`、`short us`、`int i`、`int ui`、`long l`、`long ul`、`long long ll`、`long long ull`、`float f`、`double d`、`void * p`、`char * cp`、`char* ucp`、`wchar_t * wcp`、`short * sp`、`short * usp`、`int * ip`、`int * uip`、`long * lp`、`long * ulp`、`long long * llp`、`long long * ullp`、`float * fp`、`double * dp`、`std::string * ss`、`std::wstring * sws`、`void * data`、`data_buffer buffer`
+
+#### n_data::CdataTypeToken  `L88`  `class`
+- 成员变量 (2): `UdataType type`、`char * token`
+- 方法 (1):
+  - `UdataType isme(char * token=nullptr)` （声明） `L93`
+
+#### n_data::Udata  `L97`  `class`
+- 成员变量 (3): `UdataType type`、`u_data data`、`size_t len`
+- 方法 (466):
+  - `public: Udata()` （定义） `L103`
+  - `virtual int runme(void * myname, Udata *p)` （声明） `L105`
+  - `void set_by_type(Udata *p)` （声明） `L106`
+  - `size_t get_by_type(Udata *p)` （声明） `L107`
+  - `size_t cmp_by_type(Udata *p)` （声明） `L108`
+  - `bool and_by_type(Udata *p)` （声明） `L109`
+  - `bool or_by_type(Udata *p)` （声明） `L110`
+  - `bool not_by_type(Udata *p)` （声明） `L111`
+  - `void set(bool b, size_t len = 1)` （定义） `L113`
+  - `void set(char c, size_t len = 1)` （声明） `L114`
+  - `void set(unsigned char uc, size_t len = 1)` （声明） `L115`
+  - `void set(wchar_t wc, size_t len = 1)` （声明） `L116`
+  - `void set(short s, size_t len = 1)` （声明） `L117`
+  - `void set(unsigned short us, size_t len = 1)` （声明） `L118`
+  - `void set(int i, size_t len = 1)` （声明） `L119`
+  - `void set(unsigned int ui, size_t len = 1)` （声明） `L120`
+  - `void set(long l, size_t len = 1)` （声明） `L121`
+  - `void set(unsigned long ul, size_t len = 1)` （声明） `L122`
+  - `void set(long long ll, size_t len = 1)` （声明） `L123`
+  - `void set(unsigned long long ull, size_t len = 1)` （声明） `L124`
+  - `void set(float f, size_t len = 1)` （声明） `L125`
+  - `void set(double d, size_t len = 1)` （声明） `L126`
+  - `void set(void * p, size_t len = 1)` （声明） `L127`
+  - `void set(char *cp, size_t len = 1)` （声明） `L128`
+  - `void set(unsigned char* ucp, size_t len = 1)` （声明） `L129`
+  - `void set(wchar_t *wcp, size_t len = 1)` （声明） `L130`
+  - `void set(short * sp, size_t len = 1)` （声明） `L131`
+  - `void set(unsigned short * usp, size_t len = 1)` （声明） `L132`
+  - `void set(int *ip, size_t len = 1)` （声明） `L133`
+  - `void set(unsigned int *uip, size_t len = 1)` （声明） `L134`
+  - `void set(long *lp, size_t len = 1)` （声明） `L135`
+  - `void set(unsigned long *ulp, size_t len = 1)` （声明） `L136`
+  - `void set(long long *llp, size_t len = 1)` （声明） `L137`
+  - `void set(unsigned long long *ullp, size_t len = 1)` （声明） `L138`
+  - `void set(float *fp, size_t len = 1)` （声明） `L139`
+  - `void set(double *dp, size_t len = 1)` （声明） `L140`
+  - `void set(std::string *ss, size_t len = 1)` （声明） `L141`
+  - `void set(std::wstring *sws, size_t len = 1)` （声明） `L142`
+  - `void set(Udata *p, size_t len = 1)` （声明） `L143`
+  - `void set(u_data *p, size_t len = 1)` （声明） `L144`
+  - `void set(void * start,void * end)` （声明） `L145`
+  - `void set(data_buffer buffer)` （声明） `L146`
+  - `void set(data_buffer * p_buffer)` （声明） `L147`
+  - `void operator =(bool d)` （定义） `L149`
+  - `void operator =(char d)` （定义） `L150`
+  - `void operator =(unsigned char d)` （定义） `L151`
+  - `void operator =(wchar_t d)` （定义） `L152`
+  - `void operator =(short d)` （定义） `L153`
+  - `void operator =(unsigned short d)` （定义） `L154`
+  - `void operator =(int d)` （定义） `L155`
+  - `void operator =(unsigned int d)` （定义） `L156`
+  - `void operator =(long d)` （定义） `L157`
+  - `void operator =(unsigned long d)` （定义） `L158`
+  - `void operator =(long long d)` （定义） `L159`
+  - `void operator =(unsigned long long d)` （定义） `L160`
+  - `void operator =(float d)` （定义） `L161`
+  - `void operator =(double d)` （定义） `L162`
+  - `void operator =(void * d)` （定义） `L163`
+  - `void operator =(char *d)` （定义） `L164`
+  - `void operator =(unsigned char* d)` （定义） `L165`
+  - `void operator =(wchar_t *d)` （定义） `L166`
+  - `void operator =(short * d)` （定义） `L167`
+  - `void operator =(unsigned short * d)` （定义） `L168`
+  - `void operator =(int *d)` （定义） `L169`
+  - `void operator =(unsigned int *d)` （定义） `L170`
+  - `void operator =(long *d)` （定义） `L171`
+  - `void operator =(unsigned long *d)` （定义） `L172`
+  - `void operator =(long long *d)` （定义） `L173`
+  - `void operator =(unsigned long long *d)` （定义） `L174`
+  - `void operator =(float *d)` （定义） `L175`
+  - `void operator =(double *d)` （定义） `L176`
+  - `void operator =(std::string *d)` （定义） `L177`
+  - `void operator =(std::wstring *d)` （定义） `L178`
+  - `void operator =(Udata *d)` （定义） `L179`
+  - `void operator =(u_data*d)` （定义） `L180`
+  - `void operator =(data_buffer d)` （定义） `L181`
+  - `void operator =(data_buffer * d)` （定义） `L182`
+  - `size_t get(bool * b)` （定义） `L185`
+  - `size_t get(char * c)` （声明） `L186`
+  - `size_t get(unsigned char * uc)` （声明） `L187`
+  - `size_t get(wchar_t * wc)` （声明） `L188`
+  - `size_t get(short * s)` （声明） `L189`
+  - `size_t get(unsigned short * us)` （声明） `L190`
+  - `size_t get(int * i)` （声明） `L191`
+  - `size_t get(unsigned int * ui)` （声明） `L192`
+  - `size_t get(long * l)` （声明） `L193`
+  - `size_t get(unsigned long * ul)` （声明） `L194`
+  - `size_t get(long long * ll)` （声明） `L195`
+  - `size_t get(unsigned long long * ull)` （声明） `L196`
+  - `size_t get(float * f)` （声明） `L197`
+  - `size_t get(double * d)` （声明） `L198`
+  - `size_t get(void * * p)` （声明） `L199`
+  - `size_t get(char * *cp)` （声明） `L200`
+  - `size_t get(unsigned char* * ucp)` （声明） `L201`
+  - `size_t get(wchar_t * *wcp)` （声明） `L202`
+  - `size_t get(short * * sp)` （声明） `L203`
+  - `size_t get(unsigned short * * usp)` （声明） `L204`
+  - `size_t get(int * *ip)` （声明） `L205`
+  - `size_t get(unsigned int * *uip)` （声明） `L206`
+  - `size_t get(long * *lp)` （声明） `L207`
+  - `size_t get(unsigned long * *ulp)` （声明） `L208`
+  - `size_t get(long long * *llp)` （声明） `L209`
+  - `size_t get(unsigned long long * *ullp)` （声明） `L210`
+  - `size_t get(float * *fp)` （声明） `L211`
+  - `size_t get(double * *dp)` （声明） `L212`
+  - `size_t get(std::string * *ss)` （声明） `L213`
+  - `size_t get(std::wstring * *sws)` （声明） `L214`
+  - `size_t get(void* * start, void* * end)` （声明） `L215`
+  - `size_t get(data_buffer* p_buffer)` （声明） `L216`
+  - `T_TYPE int cmp_t(T a, T b, size_t len_a=1, size_t len_b=1)` （声明） `L219`
+  - `int cmp(bool b)` （定义） `L220`
+  - `int cmp(char c)` （声明） `L221`
+  - `int cmp(unsigned char uc)` （声明） `L222`
+  - `int cmp(wchar_t wc)` （声明） `L223`
+  - `int cmp(short s)` （声明） `L224`
+  - `int cmp(unsigned short us)` （声明） `L225`
+  - `int cmp(int i)` （声明） `L226`
+  - `int cmp(unsigned int ui)` （声明） `L227`
+  - `int cmp(long l)` （声明） `L228`
+  - `int cmp(unsigned long ul)` （声明） `L229`
+  - `int cmp(long long ll)` （声明） `L230`
+  - `int cmp(unsigned long long ull)` （声明） `L231`
+  - `int cmp(float f)` （声明） `L232`
+  - `int cmp(double d)` （声明） `L233`
+  - `int cmp(void * p)` （声明） `L234`
+  - `int cmp(char *cp, size_t len=1)` （声明） `L235`
+  - `int cmp(unsigned char* ucp, size_t len = 1)` （声明） `L236`
+  - `int cmp(wchar_t *wcp, size_t len = 1)` （声明） `L237`
+  - `int cmp(short * sp, size_t len = 1)` （声明） `L238`
+  - `int cmp(unsigned short * usp, size_t len = 1)` （声明） `L239`
+  - `int cmp(int *ip, size_t len = 1)` （声明） `L240`
+  - `int cmp(unsigned int *uip, size_t len = 1)` （声明） `L241`
+  - `int cmp(long *lp, size_t len = 1)` （声明） `L242`
+  - `int cmp(unsigned long *ulp, size_t len = 1)` （声明） `L243`
+  - `int cmp(long long *llp, size_t len = 1)` （声明） `L244`
+  - `int cmp(unsigned long long *ullp, size_t len = 1)` （声明） `L245`
+  - `int cmp(float *fp, size_t len = 1)` （声明） `L246`
+  - `int cmp(double *dp, size_t len = 1)` （声明） `L247`
+  - `int cmp(std::string *ss)` （声明） `L248`
+  - `int cmp(std::wstring *sws)` （声明） `L249`
+  - `int cmp(Udata *p)` （声明） `L250`
+  - `int cmp(u_data *p)` （声明） `L251`
+  - `bool operator ==(bool d)` （定义） `L253`
+  - `bool operator ==(char d)` （定义） `L254`
+  - `bool operator ==(unsigned char d)` （定义） `L255`
+  - `bool operator ==(wchar_t d)` （定义） `L256`
+  - `bool operator ==(short d)` （定义） `L257`
+  - `bool operator ==(unsigned short d)` （定义） `L258`
+  - `bool operator ==(int d)` （定义） `L259`
+  - `bool operator ==(unsigned int d)` （定义） `L260`
+  - `bool operator ==(long d)` （定义） `L261`
+  - `bool operator ==(unsigned long d)` （定义） `L262`
+  - `bool operator ==(long long d)` （定义） `L263`
+  - `bool operator ==(unsigned long long d)` （定义） `L264`
+  - `bool operator ==(float d)` （定义） `L265`
+  - `bool operator ==(double d)` （定义） `L266`
+  - `bool operator ==(void * d)` （定义） `L267`
+  - `bool operator ==(char *d)` （定义） `L268`
+  - `bool operator ==(unsigned char* d)` （定义） `L269`
+  - `bool operator ==(wchar_t *d)` （定义） `L270`
+  - `bool operator ==(short * d)` （定义） `L271`
+  - `bool operator ==(unsigned short * d)` （定义） `L272`
+  - `bool operator ==(int *d)` （定义） `L273`
+  - `bool operator ==(unsigned int *d)` （定义） `L274`
+  - `bool operator ==(long *d)` （定义） `L275`
+  - `bool operator ==(unsigned long *d)` （定义） `L276`
+  - `bool operator ==(long long *d)` （定义） `L277`
+  - `bool operator ==(unsigned long long *d)` （定义） `L278`
+  - `bool operator ==(float *d)` （定义） `L279`
+  - `bool operator ==(double *d)` （定义） `L280`
+  - `bool operator ==(std::string *d)` （定义） `L281`
+  - `bool operator ==(std::wstring *d)` （定义） `L282`
+  - `bool operator ==(Udata *d)` （定义） `L283`
+  - `bool operator ==(u_data*d)` （定义） `L284`
+  - `bool operator !=(bool d)` （定义） `L286`
+  - `bool operator !=(char d)` （定义） `L287`
+  - `bool operator !=(unsigned char d)` （定义） `L288`
+  - `bool operator !=(wchar_t d)` （定义） `L289`
+  - `bool operator !=(short d)` （定义） `L290`
+  - `bool operator !=(unsigned short d)` （定义） `L291`
+  - `bool operator !=(int d)` （定义） `L292`
+  - `bool operator !=(unsigned int d)` （定义） `L293`
+  - `bool operator !=(long d)` （定义） `L294`
+  - `bool operator !=(unsigned long d)` （定义） `L295`
+  - `bool operator !=(long long d)` （定义） `L296`
+  - `bool operator !=(unsigned long long d)` （定义） `L297`
+  - `bool operator !=(float d)` （定义） `L298`
+  - `bool operator !=(double d)` （定义） `L299`
+  - `bool operator !=(void * d)` （定义） `L300`
+  - `bool operator !=(char *d)` （定义） `L301`
+  - `bool operator !=(unsigned char* d)` （定义） `L302`
+  - `bool operator !=(wchar_t *d)` （定义） `L303`
+  - `bool operator !=(short * d)` （定义） `L304`
+  - `bool operator !=(unsigned short * d)` （定义） `L305`
+  - `bool operator !=(int *d)` （定义） `L306`
+  - `bool operator !=(unsigned int *d)` （定义） `L307`
+  - `bool operator !=(long *d)` （定义） `L308`
+  - `bool operator !=(unsigned long *d)` （定义） `L309`
+  - `bool operator !=(long long *d)` （定义） `L310`
+  - `bool operator !=(unsigned long long *d)` （定义） `L311`
+  - `bool operator !=(float *d)` （定义） `L312`
+  - `bool operator !=(double *d)` （定义） `L313`
+  - `bool operator !=(std::string *d)` （定义） `L314`
+  - `bool operator !=(std::wstring *d)` （定义） `L315`
+  - `bool operator !=(Udata *d)` （定义） `L316`
+  - `bool operator !=(u_data*d)` （定义） `L317`
+  - `bool operator <(bool d)` （定义） `L319`
+  - `bool operator <(char d)` （定义） `L320`
+  - `bool operator <(unsigned char d)` （定义） `L321`
+  - `bool operator <(wchar_t d)` （定义） `L322`
+  - `bool operator <(short d)` （定义） `L323`
+  - `bool operator <(unsigned short d)` （定义） `L324`
+  - `bool operator <(int d)` （定义） `L325`
+  - `bool operator <(unsigned int d)` （定义） `L326`
+  - `bool operator <(long d)` （定义） `L327`
+  - `bool operator <(unsigned long d)` （定义） `L328`
+  - `bool operator <(long long d)` （定义） `L329`
+  - `bool operator <(unsigned long long d)` （定义） `L330`
+  - `bool operator <(float d)` （定义） `L331`
+  - `bool operator <(double d)` （定义） `L332`
+  - `bool operator <(void * d)` （定义） `L333`
+  - `bool operator <(char *d)` （定义） `L334`
+  - `bool operator <(unsigned char* d)` （定义） `L335`
+  - `bool operator <(wchar_t *d)` （定义） `L336`
+  - `bool operator <(short * d)` （定义） `L337`
+  - `bool operator <(unsigned short * d)` （定义） `L338`
+  - `bool operator <(int *d)` （定义） `L339`
+  - `bool operator <(unsigned int *d)` （定义） `L340`
+  - `bool operator <(long *d)` （定义） `L341`
+  - `bool operator <(unsigned long *d)` （定义） `L342`
+  - `bool operator <(long long *d)` （定义） `L343`
+  - `bool operator <(unsigned long long *d)` （定义） `L344`
+  - `bool operator <(float *d)` （定义） `L345`
+  - `bool operator <(double *d)` （定义） `L346`
+  - `bool operator <(std::string *d)` （定义） `L347`
+  - `bool operator <(std::wstring *d)` （定义） `L348`
+  - `bool operator <(Udata *d)` （定义） `L349`
+  - `bool operator <(u_data*d)` （定义） `L350`
+  - `bool operator <=(bool d)` （定义） `L352`
+  - `bool operator <=(char d)` （定义） `L353`
+  - `bool operator <=(unsigned char d)` （定义） `L354`
+  - `bool operator <=(wchar_t d)` （定义） `L355`
+  - `bool operator <=(short d)` （定义） `L356`
+  - `bool operator <=(unsigned short d)` （定义） `L357`
+  - `bool operator <=(int d)` （定义） `L358`
+  - `bool operator <=(unsigned int d)` （定义） `L359`
+  - `bool operator <=(long d)` （定义） `L360`
+  - `bool operator <=(unsigned long d)` （定义） `L361`
+  - `bool operator <=(long long d)` （定义） `L362`
+  - `bool operator <=(unsigned long long d)` （定义） `L363`
+  - `bool operator <=(float d)` （定义） `L364`
+  - `bool operator <=(double d)` （定义） `L365`
+  - `bool operator <=(void * d)` （定义） `L366`
+  - `bool operator <=(char *d)` （定义） `L367`
+  - `bool operator <=(unsigned char* d)` （定义） `L368`
+  - `bool operator <=(wchar_t *d)` （定义） `L369`
+  - `bool operator <=(short * d)` （定义） `L370`
+  - `bool operator <=(unsigned short * d)` （定义） `L371`
+  - `bool operator <=(int *d)` （定义） `L372`
+  - `bool operator <=(unsigned int *d)` （定义） `L373`
+  - `bool operator <=(long *d)` （定义） `L374`
+  - `bool operator <=(unsigned long *d)` （定义） `L375`
+  - `bool operator <=(long long *d)` （定义） `L376`
+  - `bool operator <=(unsigned long long *d)` （定义） `L377`
+  - `bool operator <=(float *d)` （定义） `L378`
+  - `bool operator <=(double *d)` （定义） `L379`
+  - `bool operator <=(std::string *d)` （定义） `L380`
+  - `bool operator <=(std::wstring *d)` （定义） `L381`
+  - `bool operator <=(Udata *d)` （定义） `L382`
+  - `bool operator <=(u_data*d)` （定义） `L383`
+  - `bool operator >(bool d)` （定义） `L385`
+  - `bool operator >(char d)` （定义） `L386`
+  - `bool operator >(unsigned char d)` （定义） `L387`
+  - `bool operator >(wchar_t d)` （定义） `L388`
+  - `bool operator >(short d)` （定义） `L389`
+  - `bool operator >(unsigned short d)` （定义） `L390`
+  - `bool operator >(int d)` （定义） `L391`
+  - `bool operator >(unsigned int d)` （定义） `L392`
+  - `bool operator >(long d)` （定义） `L393`
+  - `bool operator >(unsigned long d)` （定义） `L394`
+  - `bool operator >(long long d)` （定义） `L395`
+  - `bool operator >(unsigned long long d)` （定义） `L396`
+  - `bool operator >(float d)` （定义） `L397`
+  - `bool operator >(double d)` （定义） `L398`
+  - `bool operator >(void * d)` （定义） `L399`
+  - `bool operator >(char *d)` （定义） `L400`
+  - `bool operator >(unsigned char* d)` （定义） `L401`
+  - `bool operator >(wchar_t *d)` （定义） `L402`
+  - `bool operator >(short * d)` （定义） `L403`
+  - `bool operator >(unsigned short * d)` （定义） `L404`
+  - `bool operator >(int *d)` （定义） `L405`
+  - `bool operator >(unsigned int *d)` （定义） `L406`
+  - `bool operator >(long *d)` （定义） `L407`
+  - `bool operator >(unsigned long *d)` （定义） `L408`
+  - `bool operator >(long long *d)` （定义） `L409`
+  - `bool operator >(unsigned long long *d)` （定义） `L410`
+  - `bool operator >(float *d)` （定义） `L411`
+  - `bool operator >(double *d)` （定义） `L412`
+  - `bool operator >(std::string *d)` （定义） `L413`
+  - `bool operator >(std::wstring *d)` （定义） `L414`
+  - `bool operator >(Udata *d)` （定义） `L415`
+  - `bool operator >(u_data*d)` （定义） `L416`
+  - `bool operator >=(bool d)` （定义） `L418`
+  - `bool operator >=(char d)` （定义） `L419`
+  - `bool operator >=(unsigned char d)` （定义） `L420`
+  - `bool operator >=(wchar_t d)` （定义） `L421`
+  - `bool operator >=(short d)` （定义） `L422`
+  - `bool operator >=(unsigned short d)` （定义） `L423`
+  - `bool operator >=(int d)` （定义） `L424`
+  - `bool operator >=(unsigned int d)` （定义） `L425`
+  - `bool operator >=(long d)` （定义） `L426`
+  - `bool operator >=(unsigned long d)` （定义） `L427`
+  - `bool operator >=(long long d)` （定义） `L428`
+  - `bool operator >=(unsigned long long d)` （定义） `L429`
+  - `bool operator >=(float d)` （定义） `L430`
+  - `bool operator >=(double d)` （定义） `L431`
+  - `bool operator >=(void * d)` （定义） `L432`
+  - `bool operator >=(char *d)` （定义） `L433`
+  - `bool operator >=(unsigned char* d)` （定义） `L434`
+  - `bool operator >=(wchar_t *d)` （定义） `L435`
+  - `bool operator >=(short * d)` （定义） `L436`
+  - `bool operator >=(unsigned short * d)` （定义） `L437`
+  - `bool operator >=(int *d)` （定义） `L438`
+  - `bool operator >=(unsigned int *d)` （定义） `L439`
+  - `bool operator >=(long *d)` （定义） `L440`
+  - `bool operator >=(unsigned long *d)` （定义） `L441`
+  - `bool operator >=(long long *d)` （定义） `L442`
+  - `bool operator >=(unsigned long long *d)` （定义） `L443`
+  - `bool operator >=(float *d)` （定义） `L444`
+  - `bool operator >=(double *d)` （定义） `L445`
+  - `bool operator >=(std::string *d)` （定义） `L446`
+  - `bool operator >=(std::wstring *d)` （定义） `L447`
+  - `bool operator >=(Udata *d)` （定义） `L448`
+  - `bool operator >=(u_data*d)` （定义） `L449`
+  - `T_TYPE bool and_t(T a, T b, size_t len_a = 1, size_t len_b = 1)` （声明） `L451`
+  - `bool and_(bool b)` （声明） `L452`
+  - `bool and_(char c)` （声明） `L453`
+  - `bool and_(unsigned char uc)` （声明） `L454`
+  - `bool and_(wchar_t wc)` （声明） `L455`
+  - `bool and_(short s)` （声明） `L456`
+  - `bool and_(unsigned short us)` （声明） `L457`
+  - `bool and_(int i)` （声明） `L458`
+  - `bool and_(unsigned int ui)` （声明） `L459`
+  - `bool and_(long l)` （声明） `L460`
+  - `bool and_(unsigned long ul)` （声明） `L461`
+  - `bool and_(long long ll)` （声明） `L462`
+  - `bool and_(unsigned long long ull)` （声明） `L463`
+  - `bool and_(float f)` （声明） `L464`
+  - `bool and_(double d)` （声明） `L465`
+  - `bool and_(void * p)` （声明） `L466`
+  - `bool and_(char *cp, size_t len = 1)` （声明） `L467`
+  - `bool and_(unsigned char* ucp, size_t len = 1)` （声明） `L468`
+  - `bool and_(wchar_t *wcp, size_t len = 1)` （声明） `L469`
+  - `bool and_(short * sp, size_t len = 1)` （声明） `L470`
+  - `bool and_(unsigned short * usp, size_t len = 1)` （声明） `L471`
+  - `bool and_(int *ip, size_t len = 1)` （声明） `L472`
+  - `bool and_(unsigned int *uip, size_t len = 1)` （声明） `L473`
+  - `bool and_(long *lp, size_t len = 1)` （声明） `L474`
+  - `bool and_(unsigned long *ulp, size_t len = 1)` （声明） `L475`
+  - `bool and_(long long *llp, size_t len = 1)` （声明） `L476`
+  - `bool and_(unsigned long long *ullp, size_t len = 1)` （声明） `L477`
+  - `bool and_(float *fp, size_t len = 1)` （声明） `L478`
+  - `bool and_(double *dp, size_t len = 1)` （声明） `L479`
+  - `bool and_(std::string *ss)` （声明） `L480`
+  - `bool and_(std::wstring *sws)` （声明） `L481`
+  - `bool and_(Udata *p)` （声明） `L482`
+  - `bool and_(u_data *p)` （声明） `L483`
+  - `bool operator &&(bool d)` （定义） `L485`
+  - `bool operator &&(char d)` （定义） `L486`
+  - `bool operator &&(unsigned char d)` （定义） `L487`
+  - `bool operator &&(wchar_t d)` （定义） `L488`
+  - `bool operator &&(short d)` （定义） `L489`
+  - `bool operator &&(unsigned short d)` （定义） `L490`
+  - `bool operator &&(int d)` （定义） `L491`
+  - `bool operator &&(unsigned int d)` （定义） `L492`
+  - `bool operator &&(long d)` （定义） `L493`
+  - `bool operator &&(unsigned long d)` （定义） `L494`
+  - `bool operator &&(long long d)` （定义） `L495`
+  - `bool operator &&(unsigned long long d)` （定义） `L496`
+  - `bool operator &&(float d)` （定义） `L497`
+  - `bool operator &&(double d)` （定义） `L498`
+  - `bool operator &&(void * d)` （定义） `L499`
+  - `bool operator &&(char *d)` （定义） `L500`
+  - `bool operator &&(unsigned char* d)` （定义） `L501`
+  - `bool operator &&(wchar_t *d)` （定义） `L502`
+  - `bool operator &&(short * d)` （定义） `L503`
+  - `bool operator &&(unsigned short * d)` （定义） `L504`
+  - `bool operator &&(int *d)` （定义） `L505`
+  - `bool operator &&(unsigned int *d)` （定义） `L506`
+  - `bool operator &&(long *d)` （定义） `L507`
+  - `bool operator &&(unsigned long *d)` （定义） `L508`
+  - `bool operator &&(long long *d)` （定义） `L509`
+  - `bool operator &&(unsigned long long *d)` （定义） `L510`
+  - `bool operator &&(float *d)` （定义） `L511`
+  - `bool operator &&(double *d)` （定义） `L512`
+  - `bool operator &&(std::string *d)` （定义） `L513`
+  - `bool operator &&(std::wstring *d)` （定义） `L514`
+  - `bool operator &&(Udata *d)` （定义） `L515`
+  - `bool operator &&(u_data*d)` （定义） `L516`
+  - `T_TYPE bool or_t(T a, T b, size_t len_a = 1, size_t len_b = 1)` （声明） `L518`
+  - `bool or_ (bool b)` （声明） `L519`
+  - `bool or_ (char c)` （声明） `L520`
+  - `bool or_ (unsigned char uc)` （声明） `L521`
+  - `bool or_ (wchar_t wc)` （声明） `L522`
+  - `bool or_ (short s)` （声明） `L523`
+  - `bool or_ (unsigned short us)` （声明） `L524`
+  - `bool or_ (int i)` （声明） `L525`
+  - `bool or_ (unsigned int ui)` （声明） `L526`
+  - `bool or_ (long l)` （声明） `L527`
+  - `bool or_ (unsigned long ul)` （声明） `L528`
+  - `bool or_ (long long ll)` （声明） `L529`
+  - `bool or_ (unsigned long long ull)` （声明） `L530`
+  - `bool or_ (float f)` （声明） `L531`
+  - `bool or_ (double d)` （声明） `L532`
+  - `bool or_ (void * p)` （声明） `L533`
+  - `bool or_ (char *cp, size_t len = 1)` （声明） `L534`
+  - `bool or_ (unsigned char* ucp, size_t len = 1)` （声明） `L535`
+  - `bool or_ (wchar_t *wcp, size_t len = 1)` （声明） `L536`
+  - `bool or_ (short * sp, size_t len = 1)` （声明） `L537`
+  - `bool or_ (unsigned short * usp, size_t len = 1)` （声明） `L538`
+  - `bool or_ (int *ip, size_t len = 1)` （声明） `L539`
+  - `bool or_ (unsigned int *uip, size_t len = 1)` （声明） `L540`
+  - `bool or_ (long *lp, size_t len = 1)` （声明） `L541`
+  - `bool or_ (unsigned long *ulp, size_t len = 1)` （声明） `L542`
+  - `bool or_ (long long *llp, size_t len = 1)` （声明） `L543`
+  - `bool or_ (unsigned long long *ullp, size_t len = 1)` （声明） `L544`
+  - `bool or_ (float *fp, size_t len = 1)` （声明） `L545`
+  - `bool or_ (double *dp, size_t len = 1)` （声明） `L546`
+  - `bool or_ (std::string *ss)` （声明） `L547`
+  - `bool or_ (std::wstring *sws)` （声明） `L548`
+  - `bool or_ (Udata *p)` （声明） `L549`
+  - `bool or_ (u_data *p)` （声明） `L550`
+  - `bool operator ||(bool d)` （定义） `L552`
+  - `bool operator ||(char d)` （定义） `L553`
+  - `bool operator ||(unsigned char d)` （定义） `L554`
+  - `bool operator ||(wchar_t d)` （定义） `L555`
+  - `bool operator ||(short d)` （定义） `L556`
+  - `bool operator ||(unsigned short d)` （定义） `L557`
+  - `bool operator ||(int d)` （定义） `L558`
+  - `bool operator ||(unsigned int d)` （定义） `L559`
+  - `bool operator ||(long d)` （定义） `L560`
+  - `bool operator ||(unsigned long d)` （定义） `L561`
+  - `bool operator ||(long long d)` （定义） `L562`
+  - `bool operator ||(unsigned long long d)` （定义） `L563`
+  - `bool operator ||(float d)` （定义） `L564`
+  - `bool operator ||(double d)` （定义） `L565`
+  - `bool operator ||(void * d)` （定义） `L566`
+  - `bool operator ||(char *d)` （定义） `L567`
+  - `bool operator ||(unsigned char* d)` （定义） `L568`
+  - `bool operator ||(wchar_t *d)` （定义） `L569`
+  - `bool operator ||(short * d)` （定义） `L570`
+  - `bool operator ||(unsigned short * d)` （定义） `L571`
+  - `bool operator ||(int *d)` （定义） `L572`
+  - `bool operator ||(unsigned int *d)` （定义） `L573`
+  - `bool operator ||(long *d)` （定义） `L574`
+  - `bool operator ||(unsigned long *d)` （定义） `L575`
+  - `bool operator ||(long long *d)` （定义） `L576`
+  - `bool operator ||(unsigned long long *d)` （定义） `L577`
+  - `bool operator ||(float *d)` （定义） `L578`
+  - `bool operator ||(double *d)` （定义） `L579`
+  - `bool operator ||(std::string *d)` （定义） `L580`
+  - `bool operator ||(std::wstring *d)` （定义） `L581`
+  - `bool operator ||(Udata *d)` （定义） `L582`
+  - `bool operator ||(u_data*d)` （定义） `L583`
+  - `bool not_()` （定义） `L585`
+  - `bool operator !()` （定义） `L586`
+
+## data/data_class.h (16 行)
+
+### 宏 #define (1)
+- `DATA_CLASS_H`（无值，通常为头文件守卫）  `L2`
+
+### 类 (1)
+#### n_data::Cdata  `L7`  `class`
+- 继承: `Object`
+- 方法 (2):
+  - `Cdata()` （声明） `L9`
+  - `~Cdata()` （声明） `L11`

@@ -1,0 +1,1 @@
+window.CG.mod_plan = {"f":[["Cplan","Cplan","plan/plan.h",7,"ctor","Cplan()"],["my_init","Cplan","plan/plan.h",7,"method","int my_init(void *p=nullptr)"],["~Cplan","Cplan","plan/plan.h",7,"dtor","Cplan::~Cplan()"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

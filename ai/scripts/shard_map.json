@@ -1,0 +1,313 @@
+﻿{
+    "s01":  {
+                "modules":  [
+
+                            ],
+                "counts":  {
+                               "instruction[%s off=%d limit=%d]":  951
+                           },
+                "note":  "instruction A-M 前半",
+                "special":  [
+                                {
+                                    "module":  "instruction",
+                                    "offset":  0,
+                                    "limit":  951
+                                }
+                            ],
+                "total":  951
+            },
+    "s02":  {
+                "modules":  [
+
+                            ],
+                "counts":  {
+                               "instruction[%s off=%d limit=%d]":  951
+                           },
+                "note":  "instruction N-Z 后半",
+                "special":  [
+                                {
+                                    "module":  "instruction",
+                                    "offset":  951,
+                                    "limit":  951
+                                }
+                            ],
+                "total":  951
+            },
+    "s03":  {
+                "modules":  [
+                                "keywords",
+                                "cstdio",
+                                "cstdlib",
+                                "ctype",
+                                "ctime"
+                            ],
+                "counts":  {
+                               "keywords":  524,
+                               "cstdio":  102,
+                               "cstdlib":  76,
+                               "ctype":  68,
+                               "ctime":  20
+                           },
+                "note":  "libc 包装 + 关键字",
+                "special":  [
+                                null
+                            ],
+                "total":  790
+            },
+    "s04":  {
+                "modules":  [
+                                "sql",
+                                "security"
+                            ],
+                "counts":  {
+                               "sql":  370,
+                               "security":  362
+                           },
+                "note":  "SQL + 安全",
+                "special":  [
+                                null
+                            ],
+                "total":  732
+            },
+    "s05":  {
+                "modules":  [
+                                "satellite",
+                                "car"
+                            ],
+                "counts":  {
+                               "satellite":  336,
+                               "car":  326
+                           },
+                "note":  "卫星 + 汽车",
+                "special":  [
+                                null
+                            ],
+                "total":  662
+            },
+    "s06":  {
+                "modules":  [
+                                "ocean",
+                                "sensor",
+                                "operator",
+                                "math"
+                            ],
+                "counts":  {
+                               "ocean":  192,
+                               "sensor":  180,
+                               "operator":  156,
+                               "math":  136
+                           },
+                "note":  "海洋/传感/算子/数学",
+                "special":  [
+                                null
+                            ],
+                "total":  664
+            },
+    "s07":  {
+                "modules":  [
+                                "code",
+                                "message",
+                                "radar",
+                                "spaceport",
+                                "home",
+                                "earth"
+                            ],
+                "counts":  {
+                               "code":  134,
+                               "message":  120,
+                               "radar":  116,
+                               "spaceport":  114,
+                               "home":  108,
+                               "earth":  100
+                           },
+                "note":  "编码/消息/雷达/航天/家/地球",
+                "special":  [
+                                null
+                            ],
+                "total":  692
+            },
+    "s08":  {
+                "modules":  [
+                                "deploy",
+                                "materiel",
+                                "life",
+                                "hardware",
+                                "airplane",
+                                "money",
+                                "warship",
+                                "string",
+                                "rocket",
+                                "mars",
+                                "algorithm",
+                                "text"
+                            ],
+                "counts":  {
+                               "deploy":  80,
+                               "materiel":  76,
+                               "life":  54,
+                               "hardware":  49,
+                               "airplane":  48,
+                               "money":  44,
+                               "warship":  44,
+                               "string":  44,
+                               "rocket":  38,
+                               "mars":  32,
+                               "algorithm":  18,
+                               "text":  16
+                           },
+                "note":  "部署/物资/生活/硬件/航空/金融/军工/火星",
+                "special":  [
+                                null
+                            ],
+                "total":  543
+            },
+    "s09":  {
+                "modules":  [
+                                "command",
+                                "tree",
+                                "time",
+                                "stock",
+                                "object",
+                                "output",
+                                "symbol",
+                                "recognition",
+                                "file",
+                                "build",
+                                "template",
+                                "uri",
+                                "make",
+                                "dictionary",
+                                "organization",
+                                "collect",
+                                "public",
+                                "openssl",
+                                "gui",
+                                "uuid",
+                                "syntax",
+                                "relation",
+                                "bit",
+                                "global",
+                                "http",
+                                "data",
+                                "ex_func",
+                                "my_sql",
+                                "input",
+                                "main",
+                                "action",
+                                "control",
+                                "system",
+                                "step",
+                                "status",
+                                "debug",
+                                "database",
+                                "stratagem",
+                                "tag",
+                                "block",
+                                "but",
+                                "warning",
+                                "wait",
+                                "class",
+                                "memory",
+                                "task",
+                                "test",
+                                "company",
+                                "die",
+                                "path",
+                                "iwant",
+                                "power",
+                                "plan",
+                                "os",
+                                "node",
+                                "net",
+                                "key_value",
+                                "locate",
+                                "register",
+                                "socket",
+                                "smtp",
+                                "engine",
+                                "source",
+                                "size",
+                                "ftp",
+                                "func",
+                                "field",
+                                "error",
+                                "all"
+                            ],
+                "counts":  {
+                               "command":  10,
+                               "tree":  8,
+                               "time":  8,
+                               "stock":  7,
+                               "object":  6,
+                               "output":  6,
+                               "symbol":  6,
+                               "recognition":  6,
+                               "file":  5,
+                               "build":  5,
+                               "template":  5,
+                               "uri":  5,
+                               "make":  4,
+                               "dictionary":  4,
+                               "organization":  4,
+                               "collect":  4,
+                               "public":  4,
+                               "openssl":  4,
+                               "gui":  4,
+                               "uuid":  3,
+                               "syntax":  3,
+                               "relation":  3,
+                               "bit":  3,
+                               "global":  3,
+                               "http":  3,
+                               "data":  3,
+                               "ex_func":  3,
+                               "my_sql":  3,
+                               "input":  3,
+                               "main":  3,
+                               "action":  3,
+                               "control":  2,
+                               "system":  2,
+                               "step":  2,
+                               "status":  2,
+                               "debug":  2,
+                               "database":  2,
+                               "stratagem":  2,
+                               "tag":  2,
+                               "block":  2,
+                               "but":  2,
+                               "warning":  2,
+                               "wait":  2,
+                               "class":  2,
+                               "memory":  2,
+                               "task":  2,
+                               "test":  2,
+                               "company":  2,
+                               "die":  2,
+                               "path":  2,
+                               "iwant":  2,
+                               "power":  2,
+                               "plan":  2,
+                               "os":  2,
+                               "node":  2,
+                               "net":  2,
+                               "key_value":  2,
+                               "locate":  2,
+                               "register":  2,
+                               "socket":  2,
+                               "smtp":  2,
+                               "engine":  2,
+                               "source":  2,
+                               "size":  2,
+                               "ftp":  2,
+                               "func":  2,
+                               "field":  2,
+                               "error":  2,
+                               "all":  1
+                           },
+                "note":  "其余小型模块",
+                "special":  [
+                                null
+                            ],
+                "total":  216
+            }
+}

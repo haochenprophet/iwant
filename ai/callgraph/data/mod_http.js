@@ -1,0 +1,1 @@
+window.CG.mod_http = {"f":[["Chttp","Chttp","http/http.h",9,"ctor","Chttp()"],["my_init","Chttp","http/http.h",9,"method","int my_init(void *p=nullptr)"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

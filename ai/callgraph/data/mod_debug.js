@@ -1,0 +1,1 @@
+window.CG.mod_debug = {"f":[["Cdebug","Cdebug","debug/debug.h",7,"ctor","Cdebug()"],["my_init","Cdebug","debug/debug.h",7,"method","int my_init(void *p=nullptr)"],["~Cdebug","Cdebug","debug/debug.h",7,"dtor","Cdebug::~Cdebug()"],["main","","debug/debug.cpp",25,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

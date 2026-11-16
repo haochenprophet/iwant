@@ -1,0 +1,1 @@
+{"module":"smtp","stats":{"functions":2,"intra":1,"out":0,"in":0,"unresolved":0,"external":0,"indirect":0,"macro":0,"callsites":1},"functions":["M|smtp|Csmtp|Csmtp","M|smtp|Csmtp|my_init"],"edges":[{"s":"M|smtp|Csmtp|Csmtp","t":"M|smtp|Csmtp|my_init","type":"this","n":1}],"cross_in":{},"cross_out":{},"unresolved_count":0,"external_count":0,"indirect_count":0}

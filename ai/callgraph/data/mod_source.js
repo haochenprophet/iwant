@@ -1,0 +1,1 @@
+window.CG.mod_source = {"f":[["Csource","Csource","source/source.h",7,"ctor","Csource()"],["my_init","Csource","source/source.h",7,"method","int my_init(void *p=nullptr)"],["~Csource","Csource","source/source.h",7,"dtor","Csource::~Csource()"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

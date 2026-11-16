@@ -1,0 +1,1 @@
+window.CG.mod_action = {"f":[["Caction","Caction","action/action.h",7,"ctor","Caction()"],["my_init","Caction","action/action.h",7,"method","int my_init(void *p=nullptr)"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

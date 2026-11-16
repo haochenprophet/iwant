@@ -1,0 +1,1 @@
+window.CG.mod_block = {"f":[["Cblock","Cblock","block/block.h",7,"ctor","Cblock()"],["my_init","Cblock","block/block.h",7,"method","int my_init(void *p=nullptr)"],["main","","block/block.cpp",20,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

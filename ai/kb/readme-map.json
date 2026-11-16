@@ -1,0 +1,274 @@
+{
+  "source": "README.md",
+  "root": "E:/github/iwant",
+  "lines": 98,
+  "generated": "2026-11-14",
+  "sections": [
+    {
+      "id": "thinker",
+      "lines": "7-31",
+      "title": "[Thinker]",
+      "kind": "design-declaration",
+      "constraints": [
+        {
+          "claim": "everything is Object",
+          "evidence": "src/object/object.h Object"
+        },
+        {
+          "claim": "object has time and space",
+          "evidence": "Osetting : Ouuid, Otime, Orange"
+        },
+        {
+          "claim": "program creates itself",
+          "evidence": "src/class, src/code, src/make, batch/*.bat"
+        },
+        {
+          "claim": "past/present/future",
+          "evidence": "Otime(start/at/end), Otimeline(now/past/future)"
+        },
+        {
+          "claim": "records all history",
+          "evidence": "database/organization.sql, src/my_sql"
+        }
+      ]
+    },
+    {
+      "id": "package",
+      "lines": "33",
+      "title": "[package] code tree",
+      "tokens": [
+        {
+          "token": "main",
+          "evidence": "src/main"
+        },
+        {
+          "token": "root/package",
+          "evidence": "src/<pkg> (101 dirs)"
+        },
+        {
+          "token": "files",
+          "evidence": "<pkg>_<noun>.h/.cpp"
+        },
+        {
+          "token": "namespace",
+          "evidence": "n_<pkg>"
+        },
+        {
+          "token": "class",
+          "evidence": "C<file>"
+        },
+        {
+          "token": "command",
+          "evidence": "<pkg>_action.h / .i"
+        },
+        {
+          "token": "action",
+          "evidence": "ACTION_T + Action[] + EatcionRelation"
+        },
+        {
+          "token": "function",
+          "evidence": "my_init/func/do_action/runme"
+        },
+        {
+          "token": "coding",
+          "evidence": "batch/*.bat -> code.exe"
+        }
+      ]
+    },
+    {
+      "id": "class",
+      "lines": "36-41",
+      "title": "[class]",
+      "items": [
+        {
+          "name": "Ctimeline",
+          "file": "src/time/timeline.h/.cpp",
+          "status": "implemented-partial",
+          "note": "TimePoint origin + list + add()/adjust_status()"
+        },
+        {
+          "name": "Ctimetree",
+          "file": "src/time/timetree.h/.cpp",
+          "status": "stub",
+          "note": "only my_init + my_size, no algorithm"
+        },
+        {
+          "name": "timetree.jpg",
+          "file": "doc/timetree.jpg",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "id": "get-code",
+      "lines": "43",
+      "title": "[Get code]",
+      "claim": "git clone --recursive",
+      "status": "stale",
+      "note": "no .gitmodules; mysql connector libs are vendored"
+    },
+    {
+      "id": "coding-rule",
+      "lines": "46-72",
+      "title": "[Coding rule] (8)",
+      "rules": [
+        {
+          "n": 1,
+          "text": "<0 do nothing, ==0 success, >0 fail",
+          "evidence": "MyFunc typedef comment; deal_cmd returns 0/-1",
+          "status": "mostly",
+          "violation": "6 exit() calls in library code"
+        },
+        {
+          "n": 2,
+          "text": "callback signature int(*MyFunc)(void *p)",
+          "evidence": "object.h typedef; ObjectFunc variant",
+          "status": "ok"
+        },
+        {
+          "n": 3,
+          "text": "inherit Object; ctor sets name and alias; id auto",
+          "evidence": "3117 classes; object.cpp id=++object_id; name+=id",
+          "status": "ok-with-doc-diff",
+          "note": "README example alias=name, real code alias=tag without C"
+        },
+        {
+          "n": 4,
+          "text": "class name = cpp file name + C",
+          "evidence": "car_door.cpp <-> Ccar_door",
+          "status": "ok"
+        },
+        {
+          "n": 5,
+          "text": "O prefix / n_ namespace / U union",
+          "evidence": "Osetting, n_car, Udata",
+          "status": "ok"
+        },
+        {
+          "n": 6,
+          "text": "abstract string definitions out",
+          "evidence": "temp_def.h, syntax_def.h, *_action.i help macros, G_CODE_*",
+          "status": "partial",
+          "note": "671 cout/printf literals remain"
+        },
+        {
+          "n": 7,
+          "text": "libc functions as _c suffixed overloads",
+          "evidence": "Cprintf::printf_c static member; 78 _c( matches; 46 in cstdio headers",
+          "status": "ok",
+          "note": "implemented as static member functions"
+        },
+        {
+          "n": 8,
+          "text": "callback class func runme(void*), e.g. Ctree_func::runme",
+          "evidence": "src/tree/tree_func.h:15, tree_func.cpp:21",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "building",
+      "lines": "74-95",
+      "title": "[Building]",
+      "linux": {
+        "deps": [
+          "uuid-dev",
+          "make",
+          "g++",
+          "libmysqlclient-dev"
+        ],
+        "documented": "cd src && make",
+        "actual": "make main=<NAME>  (plain make has no main -> link error)",
+        "verified_examples": [
+          "sh ../batch/build_control_class.sh",
+          "cd collect && make main=COLLECT_FILE"
+        ]
+      },
+      "windows": {
+        "documented": "VS2015+ open winIwant.sln",
+        "actual": [
+          "winIwant/winIwant.sln (VS14)",
+          "winIwant/winIwant-vs2022.sln"
+        ],
+        "runtime": "libmysql.dll next to exe"
+      }
+    },
+    {
+      "id": "sample-code",
+      "lines": "97-98",
+      "title": "[sample-code]",
+      "claim": "for learning/reference/testing only",
+      "stats": {
+        "files": 338,
+        "largest": {
+          "rsa": 129,
+          "math": 69,
+          "bmc": 58
+        }
+      }
+    }
+  ],
+  "deviations": [
+    {
+      "id": "D1",
+      "readme": "cd src; make",
+      "reality": "make main=<NAME> required",
+      "impact": "first build fails"
+    },
+    {
+      "id": "D2",
+      "readme": "git clone --recursive",
+      "reality": "no .gitmodules",
+      "impact": "harmless"
+    },
+    {
+      "id": "D3",
+      "readme": "alias = this->name",
+      "reality": "alias = tag without C prefix",
+      "impact": "isMe('car') fails if copied literally"
+    },
+    {
+      "id": "D4",
+      "readme": "open winIwant.sln",
+      "reality": "winIwant/winIwant.sln",
+      "impact": "cannot find solution"
+    },
+    {
+      "id": "D5",
+      "readme": "Ctimetree describes evolution",
+      "reality": "empty stub class",
+      "impact": "over-estimates capability"
+    }
+  ],
+  "crossref": {
+    "thinker": [
+      "01-overview.md",
+      "03-object-model.md"
+    ],
+    "package": [
+      "02-architecture.md",
+      "05-modules.md"
+    ],
+    "class": [
+      "05-modules.md"
+    ],
+    "get-code": [
+      "06-build-run.md"
+    ],
+    "coding-rule": [
+      "08-conventions.md"
+    ],
+    "building": [
+      "06-build-run.md",
+      "10-pitfalls.md"
+    ],
+    "sample-code": [
+      "01-overview.md"
+    ],
+    "beyond_readme": [
+      "13-defects.md",
+      "14-cli-roadmap.md",
+      "15-cli-construction.md"
+    ]
+  }
+}

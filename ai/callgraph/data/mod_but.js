@@ -1,0 +1,1 @@
+window.CG.mod_but = {"f":[["Cbut","Cbut","but/but.h",7,"ctor","Cbut()"],["my_init","Cbut","but/but.h",7,"method","int my_init(void *p=nullptr)"],["~Cbut","Cbut","but/but.h",7,"dtor","Cbut::~Cbut()"],["main","","but/but.cpp",25,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

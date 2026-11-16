@@ -1,0 +1,1 @@
+window.CG.mod_make = {"f":[["Cmake","Cmake","make/make.h",7,"ctor","Cmake()"],["Cmakefile","Cmakefile","make/makefile.h",7,"ctor","Cmakefile()"],["my_init","Cmakefile","make/makefile.h",7,"method","int my_init(void *p=nullptr)"],["main","","make/makefile.cpp",20,"free","int main(int argc, char *argv[])"]],"e":[[1,2,"this",1,"this"]],"x":[],"xi":[]};

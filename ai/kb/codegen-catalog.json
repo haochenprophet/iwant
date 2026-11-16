@@ -1,0 +1,278 @@
+{
+  "source": "E:/github/iwant/batch + src/{code,class,main,template}",
+  "generated": "2026-11-16",
+  "binary": {
+    "path": "batch/code.exe",
+    "bytes": 479232,
+    "modified": "2024-05-17",
+    "built_from": "D:\\github\\iwant (seen in WHERE_I output)"
+  },
+  "dialects": [
+    {
+      "id": "A",
+      "name": "dispatch",
+      "build": "make main=CODE -> iwant / prebuilt code.exe",
+      "call": "code class <tag>",
+      "argv": [
+        "code",
+        "class",
+        "<tag>"
+      ],
+      "entry": "Ccode::main -> dispatch_cmd -> Cclass::deal_cmd"
+    },
+    {
+      "id": "B",
+      "name": "dedicated",
+      "build": "make main=CLASS -> iwant",
+      "call": "./iwant <tag>",
+      "argv": [
+        "iwant",
+        "<tag>"
+      ],
+      "entry": "class.cpp main -> Cclass::deal_cmd",
+      "status": "makefile-missing-class-cpp"
+    },
+    {
+      "id": "C",
+      "name": "registry",
+      "build": "same as A",
+      "call": "code Ccode ./ <pkg>",
+      "argv": [
+        "code",
+        "Ccode",
+        "./",
+        "<pkg>"
+      ],
+      "entry": "Ccode::deal_cmd -> create_cmd",
+      "status": "segfault"
+    }
+  ],
+  "commands": [
+    {
+      "form": "code class <tag>",
+      "impl": "Cclass::create + f_append",
+      "outputs": [
+        "<tag>.h",
+        "<tag>.cpp"
+      ],
+      "cwd": true,
+      "idempotent": true,
+      "exit_code": 0
+    },
+    {
+      "form": "code main create_main <tag>",
+      "impl": "Cmain::create_main_cmd",
+      "outputs": [
+        "<tag>.cpp (append MAIN_TEMP)"
+      ],
+      "cwd": true,
+      "idempotent": true,
+      "exit_code": 0
+    },
+    {
+      "form": "code Ccode <path> <pkg>",
+      "impl": "Ccode::create_cmd",
+      "outputs": [
+        "<pkg>_g_code.h",
+        "<pkg>_g_code.i",
+        "<pkg>_g_code_func.i"
+      ],
+      "cwd": true,
+      "status": "SIGSEGV after writing empty skeletons"
+    }
+  ],
+  "templates": {
+    "CLASS_H_TEMP": "#ifndef [TAG]_H\n#define [TAG]_H\n\n#include \"object/object.h\"\n\nnamespace n_[tag] {\n\tclass C[tag] :public Object\n\t{\n\tpublic:\n\t\tC[tag]();\n\t\t~C[tag]();\n\t\tint my_init(void *p=nullptr);\n\t\tsize_t my_size() {return sizeof(C[tag]); }\n\t};\n}\n\nusing namespace n_[tag];\n\n#endif\n",
+    "CLASS_CPP_TEMP": "#include \"[tag].h\"\nint C[tag]::my_init(void *p)\n{\n\tthis->name = \"C[tag]\";\n\tthis->alias = \"[tag]\";\n\treturn 0;\n}\n\nC[tag]::C[tag]()\n{\n\tthis->my_init();\n}\n\nC[tag]::~C[tag]()\n{\n\n}\n",
+    "MAIN_TEMP": "\n#ifndef [TAG]_TEST\n#define [TAG]_TEST 0//1\n#endif\n\n#if [TAG]_TEST\n#include INCLUDE_ALL_H\nint main(int argc, char *argv[])\n{\n\tif (argc < 2) {WHERE_I;}\n\n\treturn 0;\n}\n#endif\n"
+  },
+  "replacement": {
+    "order": "[TAG] then [tag]",
+    "upper": "toupper_replace",
+    "lower": "s_replace",
+    "reset_between_tags": false
+  },
+  "script_families": [
+    {
+      "kind": "package-generator",
+      "count": 65,
+      "examples": {
+        "security.bat": 181,
+        "satellite.bat": 169,
+        "car.bat": 164,
+        "ocean.bat": 96,
+        "sensor.bat": 87,
+        "operator.bat": 77,
+        "code.bat": 66,
+        "message.bat": 59
+      },
+      "pattern": "code class X ... then code main create_main X ..."
+    },
+    {
+      "kind": "single-class",
+      "examples": [
+        "insert.bat",
+        "replace.bat",
+        "copy.bat",
+        "find.bat",
+        "md5.bat",
+        "crc.bat"
+      ],
+      "pattern": "2 lines per class"
+    },
+    {
+      "kind": "keyword-batch-sh",
+      "examples": [
+        "build_c_class_keyword.sh",
+        "build_sql_keyword.sh",
+        "build_instructions_keyword.sh",
+        "build_vc++_keyword.sh"
+      ],
+      "pattern": "make main=CLASS + one ./iwant <word> per line"
+    },
+    {
+      "kind": "postprocess",
+      "examples": [
+        "mv_keywords.sh(260 mv)",
+        "build-all_h_include.sh",
+        "b_src_h.sh",
+        "message_all_h_include.bat"
+      ],
+      "purpose": "move outputs / rebuild all_h_include"
+    },
+    {
+      "kind": "build-driver",
+      "examples": [
+        "make_class.sh",
+        "make_main.sh",
+        "build_control_class.sh",
+        "build_debug_class.sh",
+        "build_g_class.sh"
+      ]
+    }
+  ],
+  "totals": {
+    "bat_with_class": 65,
+    "class_cmds": 1559,
+    "main_cmds": 1565,
+    "other_object_cmds": 1,
+    "batch_files": 100
+  },
+  "probes": [
+    {
+      "cmd": "code.exe",
+      "result": "prints WHERE_I + 62 globals",
+      "exit": -1
+    },
+    {
+      "cmd": "code class probe_a",
+      "result": "probe_a.h(299B)+probe_a.cpp(208B), template-exact",
+      "exit": 0
+    },
+    {
+      "cmd": "code main create_main probe_a",
+      "result": "append MAIN_TEMP, 208->384B",
+      "exit": 0
+    },
+    {
+      "cmd": "code class probe_a (again)",
+      "result": "is_exist=1 twice, no change",
+      "exit": 0
+    },
+    {
+      "cmd": "code main create_main probe_a (again)",
+      "result": "skipped, 31 lines",
+      "exit": 0
+    },
+    {
+      "cmd": "code class probe_b probe_c",
+      "result": "probe_b.h contains class Cprobe_c",
+      "exit": 0
+    },
+    {
+      "cmd": "code class sub/probe_d",
+      "result": "file in sub/, class Csub/probe_d (invalid)",
+      "exit": 0
+    },
+    {
+      "cmd": "code class help",
+      "result": "creates help.h + help.cpp",
+      "exit": 0
+    },
+    {
+      "cmd": "code class 123abc",
+      "result": "silently skipped",
+      "exit": 0
+    },
+    {
+      "cmd": "code main create_main ghost",
+      "result": "creates ghost.cpp with only main block",
+      "exit": 0
+    },
+    {
+      "cmd": "code nosuch",
+      "result": "no message",
+      "exit": 0
+    },
+    {
+      "cmd": "code Ccode ./ demo",
+      "result": "SIGSEGV, 3 empty skeletons",
+      "exit": 11
+    }
+  ],
+  "defects": [
+    {
+      "id": "G1",
+      "title": "multi-tag state leak",
+      "loc": "class.cpp:40-49",
+      "effect": "all files get last tag's class"
+    },
+    {
+      "id": "G2",
+      "title": "path used as class name",
+      "loc": "class.cpp:40-49",
+      "effect": "invalid C++"
+    },
+    {
+      "id": "G3",
+      "title": "unknown word creates files",
+      "loc": "class.cpp:51-77",
+      "effect": "code class help creates help.*"
+    },
+    {
+      "id": "G4",
+      "title": "exit code always 0",
+      "loc": "code.cpp:262-270"
+    },
+    {
+      "id": "G5",
+      "title": "Ccode segfault",
+      "loc": "code.cpp create_action (char* as string*)"
+    },
+    {
+      "id": "G6",
+      "title": "f_append ignores is_open",
+      "loc": "file.cpp:63-75"
+    },
+    {
+      "id": "G7",
+      "title": "is_exist prints",
+      "loc": "file.cpp:53"
+    },
+    {
+      "id": "G8",
+      "title": "build_g_class.sh stale",
+      "loc": "batch/build_g_class.sh"
+    },
+    {
+      "id": "G9",
+      "title": "dialect B build gap",
+      "loc": "src/Makefile source_code"
+    },
+    {
+      "id": "G10",
+      "title": "insert-my_size.bat empty",
+      "loc": "batch/insert-my_size.bat"
+    }
+  ]
+}

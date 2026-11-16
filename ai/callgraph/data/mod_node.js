@@ -1,0 +1,1 @@
+window.CG.mod_node = {"f":[["Cnode","Cnode","node/node.h",7,"ctor","Cnode()"],["my_init","Cnode","node/node.h",7,"method","int my_init(void *p=nullptr)"],["main","","node/node.cpp",20,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};

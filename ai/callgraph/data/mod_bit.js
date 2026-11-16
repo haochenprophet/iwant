@@ -1,0 +1,1 @@
+window.CG.mod_bit = {"f":[["Cbits","Cbits","bit/bits.h",7,"ctor","Cbits()"],["my_init","Cbits","bit/bits.h",7,"method","int my_init(void *p=nullptr)"],["main","","bit/bits.cpp",21,"free","int main(int argc, char *argv[])"]],"e":[[0,1,"this",1,"this"]],"x":[],"xi":[]};
