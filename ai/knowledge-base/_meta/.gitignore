@@ -1,0 +1,9 @@
+# 抓取缓存（可删，重新 fetch 即可）
+.cache/
+
+# 构建中间产物
+tools/build.json
+
+# Python
+__pycache__/
+*.pyc
