@@ -1,0 +1,60 @@
+﻿id,phase,area,title,type,files,estimate_d,depends,acceptance
+P0-01,P0,构建,固定工具链与 preset（Linux g++/cmake/ninja，Windows VS2022+LLVM）,新增,CMakePresets.json;docs/toolchain.md,2,-,cmake --version; g++ --version; cmake --preset linux-debug 成功
+P0-02,P0,构建,根 CMakeLists：iwant_core + iwant 单入口（先编现有 13 目录）,新增,CMakeLists.txt;src/main/main.cpp,4,P0-01,cmake --build build -j 产出 build/iwant；./build/iwant --version 退出 0
+P0-03,P0,构建,iwant_add_package() 统一包注册/包含路径/宏,新增,cmake/IwantPackage.cmake;cmake/IwantOptions.cmake,2,P0-02,新增一个空包只加一行 add_subdirectory 即可编译
+P0-04,P0,构建,第三方接入空跑：SQLite amalgamation、Lua 源码、libclang 探测,新增,third_party/;cmake/ThirdParty.cmake;cmake/FindLibClang.cmake,4,P0-01,生成 sqlite3/lua 目标；libclang 可用时 IWANT_WITH_CLANG=ON 配置成功
+P0-05,P0,测试,测试 harness + 5 个冒烟测试 + ctest,新增,tests/harness.h;tests/test_smoke.cpp;tests/CMakeLists.txt,2,P0-02,ctest --test-dir build --output-on-failure 5/5
+P0-06,P0,CI,GitHub Actions：Ubuntu+Windows 矩阵、缓存 LLVM、跑 ctest,新增,.github/workflows/ci.yml,2,P0-02,PR 上双平台 CI 绿；失败能定位到具体 ctest 用例
+P0-07,P0,内核,修 dispatch_cmd 返回值 + 注册索引 + 移除库层 exit(),修改,src/object/object.cpp;src/object/object.h;src/code/code.cpp;src/algorithm/search.cpp;src/ex_func/ex_func.cpp,4,P0-02,iwant nosuchcmd 退出 2 且不产生文件；已知命令退出 0
+P0-08,P0,构建,处置过期 include/ 镜像（删除或 legacy 隔离）,删除,include/（3068 个头）,1,P0-02,git grep 无构建引用 include/；全量构建仍通过
+P0-09,P0,构建,48 个包 Makefile 改 shim（make -> cmake --build），保留 batch 兼容,修改,src/*/Makefile;build.sh,2,P0-02,batch/build_control_class.sh 仍可运行（或明确改走 CMake）
+P0-10,P0,发布,LICENSE/NOTICE/版本注入 --version,新增/修改,LICENSE;NOTICE;CMakeLists.txt;src/iwant/iwant.cpp,2,P0-02,iwant --version 输出 git describe + 构建时间；NOTICE 列出第三方
+P1-01,P1,语言核心,Csource：file/stdin/string、UTF-8/BOM/CRLF、行索引、span 换算,新增,src/language_core/source.h;src/language_core/source.cpp,3,P0-05,单测：BOM/CRLF/空文件/超限文件；line/column 对齐编辑器
+P1-02,P1,语言核心,Cdiagnostic/Cfixit/Cdiagnostic_list + JSON,新增,src/language_core/diagnostic.h;src/language_core/diagnostic.cpp,2,P1-01,快照测试：severity/code/message/file/line/column 完整输出
+P1-03,P1,语言核心,Ctoken/TokenKind/stream + tools/gen_tokens.py（keyword/sql 词表 -> inc）,新增,src/language_core/token.h;src/language_core/token.cpp;tools/gen_tokens.py;src/language_core/language_tokens.inc,3,P1-01,生成 262+185 词条；冲突报告列出 class/operator/register；重复运行幂等
+P1-04,P1,语言核心,Cast_node/AstKind/visitor + JSON/sexp 输出,新增,src/language_core/ast.h;src/language_core/ast.cpp,5,P1-02,固定小程序的 AST 快照（JSON+sexp）稳定；子节点内存无泄漏（ASAN）
+P1-05,P1,语言核心,Cvalue（null/bool/int/real/string/array/object）+ 转换,新增,src/language_core/value.h;src/language_core/value.cpp,3,P1-01,单测：类型转换/JSON 往返/大整数边界
+P1-06,P1,语言核心,Cresult/ExecStatus + JSON 信封 + 退出码映射,新增,src/language_core/result.h;src/language_core/result.cpp;src/language_core/json.h,2,P1-05,"CLI 输出 {ok,object,action,data,error}；退出码 0/1/2/3/4/5/6/7/8/9 有测试"
+P1-07,P1,语言门面,Clanguage + Clanguage_registry（id/扩展名查找）+ 全局注册,新增,src/language/language.h;src/language/language.cpp;src/language/language_registry.h;src/language/language_registry.cpp;src/language/language_g_code.i;src/language/language_g_code_func.i,6,P1-06,iwant language list --json 返回 c/cpp；registry 查找 O(1)
+P1-08,P1,CLI,language 动作表 + list/info 实现 + help,新增,src/language/language_action.h;src/language/language_action.i;src/language/language.cpp,3,P1-07,iwant language list/info/help 退出 0；未知语言退出 2
+P1-09,P1,C 前端,libclang 适配：index/TU/参数/缓存/线程安全,新增,src/language_c/c_libclang.h;src/language_c/c_libclang.cpp;src/language_c/language_c.cpp,6,P1-07,解析 hello.c 成功；TU 缓存命中；并发 parse 不崩
+P1-10,P1,C 前端,C 诊断映射（severity/位置/fixit/参数 -std/-I/-D）,新增,src/language_c/c_diagnostic.h;src/language_c/c_diagnostic.cpp,4,P1-09,broken.c 至少 1 条 error，行列与 clang 一致；fixit 可输出
+P1-11,P1,C 前端,C AST 映射（cursor -> Cast_node，USR/type/spelling）,新增,src/language_c/c_ast_map.h;src/language_c/c_ast_map.cpp,6,P1-09,函数/变量/语句/表达式节点计数与 clang -ast-dump 抽样一致
+P1-12,P1,测试,C 夹具 40 例 + 诊断快照 10 例,新增,tests/fixtures/c/;tests/test_language_c.cpp,5,P1-10,ctest 中 40 例全过；快照 diff 为空
+P2-01,P2,内核,Cprocess：spawn/管道/超时/退出码/输出上限/资源限制/Windows Job Object,新增,src/language_core/process.h;src/language_core/process.cpp,4,P0-05,单测：正常/超时/崩溃/大输出/不存在程序；Windows+Linux 均过
+P2-02,P2,C 执行,c_build：编译器探测、-std、临时目录、链接、产物清理,新增,src/language_c/c_build.h;src/language_c/c_build.cpp,4,P2-01;P1-11,编译 hello.c 并运行输出 hello；失败返回 build_error 且 stderr 完整
+P2-03,P2,CLI,language run/build 动作 + --allow-run/--timeout/-- 参数传递,新增,src/language/language.cpp;src/language/language_action.i,3,P2-02,无 --allow-run 退出 4 且不创建子进程；带开关输出正确
+P2-04,P2,C++ 前端,C++ 驱动：-x c++、-fms-extensions、能力矩阵、C++ 诊断,新增,src/language_cpp/language_cpp.h;src/language_cpp/language_cpp.cpp,3,P2-02,解析/校验 30 个 C++ 夹具；模板/命名空间/异常用例通过
+P2-05,P2,C++ 前端,compile_commands.json 读取与参数合并,新增,src/language_c/c_compile_db.h;src/language_c/c_compile_db.cpp,3,P1-09,读取 build/compile_commands.json 解析 src/object/object.cpp 无 fatal error
+P2-06,P2,测试,dogfood：libclang 解析 src/ 全量头，统计成功率/崩溃/耗时,新增,tests/dogfood_cpp.cpp;tests/dogfood/README.md,3,P2-05,3114 个头零崩溃；失败清单可复现；耗时记录到 CI artifact
+P2-07,P2,C 前端,多文件/头文件上下文/fixit 应用（可选）,新增,src/language_c/c_libclang.cpp,2,P2-05,include 缺失时诊断指向正确 include 行
+P2-08,P2,测试,执行夹具：C 25、C++ 20（含超时/崩溃/拒绝）,新增,tests/fixtures/c/;tests/fixtures/cpp/;tests/test_run_c.cpp,4,P2-03,stdout/退出码逐例匹配；超时用例退出 8
+P2-09,P2,安全,执行安全基线：默认关闭、临时目录、输出上限、禁网尽力而为,新增,src/language/language.cpp;docs/language/security.md,2,P2-03,安全用例：无开关拒绝、超时杀进程、输出截断、临时目录清理
+P3-01,P3,SQL,Isql_engine/Csql_statement/Csql_result 抽象,新增,src/language_sql/sql_engine.h;src/language_sql/sql_engine.cpp;src/language_sql/sql_result.h,4,P1-06,接口可被 sqlite/mysql 两实现替换；无 MYSQL_* 泄漏到头文件
+P3-02,P3,SQL,SQLite 引擎：open/prepare/bind/step/columns/authorizer/limit/progress,新增,src/language_sql/sql_sqlite.h;src/language_sql/sql_sqlite.cpp,6,P3-01;P0-04,select/create/insert/update/delete/join/事务 均通过；错误码映射正确
+P3-03,P3,SQL,MySQL 引擎：Cmy_sql RAII + prepared statements + 事务 + 错误码,新增/修改,src/language_sql/sql_mysql.h;src/language_sql/sql_mysql.cpp;src/my_sql/my_sql.cpp;src/my_sql/my_sql.h,6,P3-01,连续 1000 次查询无泄漏（ASAN/valgrind）；参数绑定防注入用例通过
+P3-04,P3,SQL,方言 profile（sqlite/mysql）与能力矩阵/明确报错,新增,src/language_sql/sql_dialect.h;src/language_sql/sql_dialect.cpp,3,P3-02,不支持的语法返回明确 diagnostic，不静默失败
+P3-05,P3,CLI,language exec --lang sqlite|mysql --db/--sql/--file/--allow-write,新增,src/language/language.cpp;src/language/language_action.i,2,P3-02,select 1 输出 [[1]]；写操作无 --allow-write 退出 4
+P3-06,P3,SQL,结果集 -> Cvalue/Cresult；行数/字节上限；多语句策略,新增,src/language_sql/sql_result.cpp,3,P3-02,10k 行结果 JSON 正确；超限报错；多语句默认拒绝
+P3-07,P3,测试,SQLite 夹具 50 条（DDL/DML/类型/NULL/事务/错误）,新增,tests/fixtures/sql/sqlite/;tests/test_sql_sqlite.cpp,3,P3-02,50/50 通过；错误用例断言 sqlite 错误码
+P3-08,P3,测试,MySQL 夹具 20 条（可选 CI service，缺服务端 skip）,新增,tests/fixtures/sql/mysql/;tests/test_sql_mysql.cpp,3,P3-03,有 MySQL 时 20/20；无服务端时 skip 且 CI 标记
+P4-01,P4,Lua,vendor Lua 5.4.x + CMake 目标 + 版本/SHA 记录,新增,third_party/lua/;cmake/ThirdParty.cmake;third_party/README.md,2,P0-04,lua 静态库编出；select 1 冒烟通过
+P4-02,P4,Lua,沙箱：仅 base/string/table/math/utf8，禁 io/os/package/debug,新增,src/language_lua/lua_sandbox.h;src/language_lua/lua_sandbox.cpp,3,P4-01,os.execute/io.open/require 用例全部 denied
+P4-03,P4,Lua,执行/REPL/错误回溯/count hook 限时/内存上限,新增,src/language_lua/language_lua.h;src/language_lua/language_lua.cpp;src/language_lua/lua_repl.cpp,4,P4-02,fib(10)=55；死循环超时退出 8；traceback 含行号
+P4-04,P4,Lua,Lua 值 <-> Cvalue；stdout/错误映射,新增,src/language_lua/lua_value.h;src/language_lua/lua_value.cpp,2,P4-03,table/array/nil/number/string 往返一致
+P4-05,P4,测试,Lua 夹具 30 例 + 沙箱拒绝 5 例,新增,tests/fixtures/lua/;tests/test_language_lua.cpp,3,P4-03,30/30 + 5/5；ctest 稳定
+P4-06,P4,Lua,REPL 体验：多行/历史/退出码,新增,src/language_lua/lua_repl.cpp,1,P4-03,交互输入 2+2 输出 4；Ctrl-D 退出 0
+P5-01,P5,Python,CPython 稳定 ABI 嵌入（PyConfig 隔离、site_import=0、GIL）,新增,src/language_python/python_embed.h;src/language_python/python_embed.cpp,6,P4-03,嵌入模式跑通 fib.py；重复初始化/终止无崩溃
+P5-02,P5,Python,子进程回退（python -I，JSON 线协议）,新增,src/language_python/python_process.h;src/language_python/python_process.cpp,3,P5-01,无 dev 库时自动回退；结果与嵌入模式一致
+P5-03,P5,Python,值/异常/traceback/stdout 映射 + 超时,新增,src/language_python/python_value.h;src/language_python/python_value.cpp,3,P5-01,int/float/str/list/dict/None 往返；异常含 traceback
+P5-04,P5,CLI,language run/exec --lang python + info 显示 backend,新增,src/language/language.cpp;src/language_python/language_python.cpp,2,P5-02,fib.py 10 输出 55；info --json 显示 embedded|subprocess
+P5-05,P5,测试,Python 夹具 30 例（计算/字符串/异常/超时）,新增,tests/fixtures/python/;tests/test_language_python.cpp,3,P5-03,30/30；超时/异常用例稳定
+P5-06,P5,文档,Windows/macOS Python 运行说明（python3.dll/stdlib/venv）,新增,docs/language/python.md,1,P5-02,按文档在干净 Windows 机器跑通
+P6-01,P6,质量,一致性套件接夜间：c-testsuite/chibicc、sqllogictest 子集、Lua tests、CPython 子集,新增,tests/conformance/;.github/workflows/nightly.yml,6,P3-07;P4-05;P5-05,夜间任务绿；失败用例归档并去重
+P6-02,P6,质量,ASAN/UBSAN/Valgrind + 超时/泄漏检查,修改,CMakePresets.json;.github/workflows/ci.yml,3,P2-08,ASAN 0 error；Valgrind 0 definitely lost（核心路径）
+P6-03,P6,质量,性能基线：启动/解析 1k 行/dogfood/10k 行 SQL/脚本调用,新增,tests/perf/;docs/language/performance.md,3,P2-06;P3-06,达到 8.4 节预算 ±30%；回归有对比报告
+P6-04,P6,文档,设计/CLI/安全/迁移文档 + README 更新 + ai/kb 增补,新增/修改,doc/language/;README.md;ai/kb/,3,P5-04,新人按文档 30 分钟内跑通 parse/check/run 三例
+P6-05,P6,发布,cmake --install / make install / 版本与许可证打包,新增,CMakeLists.txt;cmake/;LICENSE;NOTICE,2,P0-10,安装到 /tmp/iwant 后 bin/iwant --version 可用
+P6-06,P6,发布,发布检查单与回滚方案（关闭语言特性仍可构建）,新增,docs/language/release-checklist.md,1,P6-05,-DIWANT_WITH_CLANG=OFF 等全部关闭时仍能构建核心 iwant
+P6-07,P6,安全,安全评审：RCE 风险、沙箱绕过、SQL 注入、路径穿越,审查,docs/language/security.md,2,P3-05;P4-03;P5-02,评审记录 + 5 个攻击用例全部被拒绝
+P6-08,P6,质量,冻结 keyword/sql 词表类并记录决策（ADR）,文档,doc/language/adr-0002-vocabulary-freeze.md,1,P1-03,ADR 通过；后续 PR 不再向 keyword/sql 类加解析逻辑
